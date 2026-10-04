@@ -84,6 +84,20 @@ def test_exact_single_process_resume(tmp_path):
         )
 
 
+def test_resume_recovers_selection_after_interrupted_evaluation(tmp_path):
+    cache = create(tmp_path / "cache")
+    output = tmp_path / "run"
+    saved = train(cache, output, 2)
+    # Simulate interruption after best.pt is replaced but before last.pt can be.
+    saved["best_success"] = 0.75
+    torch.save(saved, output / "best.pt")
+    resumed = train(cache, output, 3, [f"resume={output / 'last.pt'}"])
+    assert resumed["best_success"] == 0.75
+    selected = torch.load(output / "best.pt", map_location="cpu", weights_only=False)
+    assert selected["step"] == 2
+    assert selected["best_success"] == 0.75
+
+
 @pytest.mark.distributed
 def test_two_process_ddp_training_and_resume(tmp_path):
     cache = create(tmp_path / "cache")

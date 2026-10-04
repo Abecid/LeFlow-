@@ -1,10 +1,11 @@
 import h5py
+from datetime import timedelta
 import numpy as np
 import pytest
 import torch
 
 from btm_jepa.data import LatentSegments, atomic_json, episode_split
-from btm_jepa.distributed import EvalShard
+from btm_jepa.distributed import EvalShard, initialize
 from btm_jepa.models import PathModel, PlannerTrainingModel, btm_loss, sample_paths
 from btm_jepa.runtime import SubgoalRuntime
 
@@ -75,6 +76,23 @@ def test_episode_split_and_nonduplicated_validation():
     assert split == episode_split(source)
     indices = [i for rank in range(4) for i in EvalShard(7, rank, 4)]
     assert sorted(indices) == list(range(7))
+
+
+@pytest.mark.parametrize("evaluation_seconds, expected", [(0, 7200), (10800, 11400)])
+def test_collective_wait_covers_sequential_evaluation(
+    monkeypatch, evaluation_seconds, expected
+):
+    calls = []
+    monkeypatch.setenv("WORLD_SIZE", "2")
+    monkeypatch.setenv("RANK", "0")
+    monkeypatch.setenv("LOCAL_RANK", "0")
+    monkeypatch.setattr(
+        torch.distributed,
+        "init_process_group",
+        lambda backend, timeout: calls.append((backend, timeout)),
+    )
+    initialize("cpu", evaluation_timeout_seconds=evaluation_seconds)
+    assert calls == [("gloo", timedelta(seconds=expected))]
 
 
 def test_cache_action_blocks_and_physical_spacing(tmp_path):

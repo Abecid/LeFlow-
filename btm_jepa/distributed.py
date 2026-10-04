@@ -8,7 +8,7 @@ import torch.distributed as dist
 from torch.utils.data import Sampler
 
 
-def initialize(device="cuda"):
+def initialize(device="cuda", *, evaluation_timeout_seconds=0):
     world_size = int(os.environ.get("WORLD_SIZE", "1"))
     rank, local_rank = (
         int(os.environ.get("RANK", "0")),
@@ -26,9 +26,11 @@ def initialize(device="cuda"):
     else:
         dev = torch.device(device)
     if world_size > 1:
-        # Rank zero can spend several minutes doing actual environment evaluation.
+        # Peers wait while rank zero evaluates every configured offset in sequence.
+        # Leave time for process startup and result/checkpoint I/O as well.
         dist.init_process_group(
-            "nccl" if dev.type == "cuda" else "gloo", timeout=timedelta(hours=2)
+            "nccl" if dev.type == "cuda" else "gloo",
+            timeout=timedelta(seconds=max(7200, evaluation_timeout_seconds + 600)),
         )
     return rank, world_size, dev
 

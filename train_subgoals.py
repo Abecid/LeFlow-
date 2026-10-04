@@ -71,6 +71,29 @@ def restore_random(state, device):
         torch.cuda.set_rng_state(state["cuda"].cpu(), device)
 
 
+def resume_best_success(payload, checkpoint):
+    """Recover selection state if evaluation finished after the last save."""
+    best = payload.get("best_success", -float("inf"))
+    best_path = Path(checkpoint).expanduser().resolve().with_name("best.pt")
+    if best_path.exists():
+        selected = torch.load(best_path, map_location="cpu", weights_only=False)
+        for key in ("manifest_sha256", "arch", "world_size"):
+            if selected[key] != payload[key]:
+                raise ValueError(f"Best checkpoint changed {key} from resumed run")
+        for key in (
+            "seed",
+            "method",
+            "data",
+            "loss",
+            "global_batch_size",
+            "micro_batch_size",
+        ):
+            if selected["config"][key] != payload["config"][key]:
+                raise ValueError(f"Best checkpoint changed {key} from resumed run")
+        best = max(best, selected.get("best_success", -float("inf")))
+    return best
+
+
 def move_batch(batch, device):
     return {
         k: v.to(device, non_blocking=True) if torch.is_tensor(v) else v
@@ -230,7 +253,14 @@ def closed_loop(cfg, checkpoint, step, run_dir):
 
 @hydra.main(version_base=None, config_path="config/train", config_name="subgoals")
 def run(cfg):
-    rank, world, device = initialize(cfg.device)
+    evaluation_window = (
+        len(cfg.evaluation.goal_offsets) * cfg.evaluation.timeout_seconds
+        if cfg.evaluation.enabled
+        else 0
+    )
+    rank, world, device = initialize(
+        cfg.device, evaluation_timeout_seconds=evaluation_window
+    )
     if cfg.precision != "fp32":
         raise ValueError(
             "Use precision=fp32: the BTM JVP and stopped-target update are validated in float32"
@@ -351,7 +381,7 @@ def run(cfg):
             payload["next_batch"],
             payload["step"],
         )
-        best = payload.get("best_success", best)
+        best = resume_best_success(payload, cfg.resume)
     wrapped = (
         DDP(model, device_ids=[device.index] if device.type == "cuda" else None)
         if world > 1
@@ -459,7 +489,9 @@ def run(cfg):
         metrics = main_process_call(
             lambda: closed_loop(cfg, run_dir / "last.pt", step, run_dir), rank
         )
-        if rank == 0:
+
+        def record_evaluation():
+            nonlocal best
             log(metrics)
             if metrics["eval/mean_success_rate"] > best:
                 best = metrics["eval/mean_success_rate"]
@@ -468,6 +500,9 @@ def run(cfg):
                 )
                 ckpt["best_success"] = best
                 atomic_checkpoint(run_dir / "best.pt", ckpt)
+                atomic_checkpoint(run_dir / "last.pt", ckpt)
+
+        main_process_call(record_evaluation, rank)
         if world > 1:
             obj = [best]
             dist.broadcast_object_list(obj, src=0)
