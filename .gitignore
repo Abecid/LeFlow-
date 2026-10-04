@@ -11,3 +11,12 @@ wandb/
 *.tar
 *.tar.zst
 *.zip
+.venv*/
+data/
+runs/
+*.hdf5
+*.partial
+.env
+.netrc
+.pytest_cache/
+.ruff_cache/
