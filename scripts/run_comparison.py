@@ -27,6 +27,9 @@ def make_plan(args):
         raise ValueError("Use letters, digits, underscore, or hyphen for --name")
     if len(set(args.seeds)) != len(args.seeds) or min(args.seeds) < 0:
         raise ValueError("Training seeds must be distinct nonnegative integers")
+    method_order = tuple(getattr(args, "method_order", METHODS))
+    if len(method_order) != len(METHODS) or set(method_order) != set(METHODS):
+        raise ValueError("Method order must contain flow and btm exactly once each")
     for value in args.overrides:
         key = value.split("=", 1)[0].split(".", 1)[0]
         if key in PROTECTED:
@@ -55,7 +58,7 @@ def make_plan(args):
     out = Path(os.environ["STABLEWM_HOME"]).expanduser().resolve() / "runs" / args.name
     jobs = []
     for seed in args.seeds:
-        for method in METHODS:
+        for method in method_order:
             job = OmegaConf.create(OmegaConf.to_container(cfg, resolve=False))
             job.method, job.seed = method, seed
             job.run_dir = str(out / f"{method}_{seed}")
@@ -70,6 +73,7 @@ def make_plan(args):
         gpus=args.gpus,
         cuda_visible_devices=os.environ.get("CUDA_VISIBLE_DEVICES"),
         seeds=args.seeds,
+        method_order=list(method_order),
         git_commit=subprocess.check_output(
             ["git", "rev-parse", "HEAD"], cwd=ROOT, text=True
         ).strip(),
@@ -203,6 +207,13 @@ def main():
     parser.add_argument("--name", required=True)
     parser.add_argument("--gpus", type=int, choices=range(1, 5), default=4)
     parser.add_argument("--seeds", type=int, nargs="+", default=[3072])
+    parser.add_argument(
+        "--method-order",
+        nargs=2,
+        choices=METHODS,
+        default=METHODS,
+        help="Run both methods once per seed in this order (default: flow btm)",
+    )
     parser.add_argument("--port", type=int, default=29500)
     parser.add_argument("--resume", action="store_true")
     parser.add_argument("--dry-run", action="store_true")

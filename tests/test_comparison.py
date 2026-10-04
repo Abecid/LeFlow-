@@ -18,8 +18,9 @@ def load_script(name):
     return module
 
 
+@pytest.mark.parametrize("method_order", [None, ["btm", "flow"]])
 def test_campaign_uses_identical_training_except_method_and_run_labels(
-    tmp_path, monkeypatch
+    tmp_path, monkeypatch, method_order
 ):
     monkeypatch.setenv("STABLEWM_HOME", str(tmp_path))
     manifest = tmp_path / "latents/pusht/manifest.json"
@@ -33,9 +34,13 @@ def test_campaign_uses_identical_training_except_method_and_run_labels(
         )
     )
     args = Namespace(name="pilot", seeds=[3072, 3073], gpus=4, overrides=["epochs=2"])
+    if method_order is not None:
+        args.method_order = method_order
+    expected_order = method_order or ["flow", "btm"]
     script = load_script("run_comparison")
     plan = script.make_plan(args)
-    assert [job["method"] for job in plan["jobs"]] == ["flow", "btm", "flow", "btm"]
+    assert plan["method_order"] == expected_order
+    assert [job["method"] for job in plan["jobs"]] == expected_order * 2
     for left, right in zip(plan["jobs"][::2], plan["jobs"][1::2]):
         a, b = deepcopy(left), deepcopy(right)
         for cfg in (a, b):
@@ -45,6 +50,22 @@ def test_campaign_uses_identical_training_except_method_and_run_labels(
                 cfg.pop(key)
             cfg["wandb"].pop("name")
         assert a == b
+    # The frozen campaign must reject changing order when it resumes.
+    saved = Path(plan["campaign_dir"]) / "comparison.json"
+    saved.parent.mkdir(parents=True)
+    saved.write_text(json.dumps(plan))
+    args.method_order = list(reversed(expected_order))
+    args.resume, args.dry_run = True, False
+    with monkeypatch.context() as patched:
+        patched.setattr(
+            script.subprocess,
+            "check_output",
+            lambda command, **kwargs: (
+                plan["git_commit"] if command[1] == "rev-parse" else ""
+            ),
+        )
+        with pytest.raises(ValueError, match="Resume changed"):
+            script.run(args)
     args.overrides = ["method=btm"]
     with pytest.raises(ValueError, match="Campaign controls method"):
         script.make_plan(args)
@@ -53,6 +74,17 @@ def test_campaign_uses_identical_training_except_method_and_run_labels(
     data["test_fixture"] = True
     manifest.write_text(json.dumps(data))
     with pytest.raises(ValueError, match="test fixture"):
+        script.make_plan(args)
+
+
+@pytest.mark.parametrize(
+    "method_order",
+    [["btm", "btm"], ["flow"], ["flow", "btm", "flow"], ["flow", "other"]],
+)
+def test_campaign_rejects_missing_duplicate_or_unknown_methods(method_order):
+    script = load_script("run_comparison")
+    args = Namespace(name="pilot", seeds=[3072], method_order=method_order)
+    with pytest.raises(ValueError, match="flow and btm exactly once"):
         script.make_plan(args)
 
 
