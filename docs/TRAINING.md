@@ -13,6 +13,9 @@ candidate budget. The new flow model is a matched baseline for this fork, not an
 exact reproduction of the published LeFlow network/training protocol. Original
 LeFlow files remain available below the fork instructions in the main README.
 
+Use the [paired campaign launcher](COMPARISON.md) to freeze these shared settings,
+group online W&B runs, resume both jobs, and audit final paired evaluation reports.
+
 ## 1. Environment on the GPU machine
 
 Use Linux with NVIDIA GPUs and a driver compatible with the CUDA runtime in

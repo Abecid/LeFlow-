@@ -8,14 +8,15 @@ online W&B logging with intermediate closed-loop evaluation.
 
 **Start here: [setup, data preparation, training, and evaluation](docs/TRAINING.md).**
 See [tensor shapes, losses, and planning algorithm](docs/METHOD.md).
+For a locked baseline/BTM campaign and paired metrics, use the
+[comparison launcher and protocol](docs/COMPARISON.md).
 
 The implemented backbone is LeWM. The V-JEPA 2.1/Meta-World extension remains
 future work; this release does not claim an implemented port or benchmark gains.
 
 ```bash
 # After Conda setup, data preparation, caching, and wandb login:
-GPUS=4 bash scripts/train.sh task=pusht method=flow
-GPUS=4 bash scripts/train.sh task=pusht method=btm
+python scripts/run_comparison.py --name pusht_pair_v1 --gpus 4
 ```
 
 Original LeFlow release documentation and attribution follow.

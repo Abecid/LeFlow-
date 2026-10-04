@@ -16,6 +16,7 @@ def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--task", default="pusht")
     p.add_argument("--gpus", type=int, default=1)
+    p.add_argument("--manifest", type=Path)
     p.add_argument("--skip-data", action="store_true")
     p.add_argument("--skip-wandb", action="store_true")
     args = p.parse_args()
@@ -39,7 +40,9 @@ def main():
         )
     )
     if not args.skip_data:
-        manifest = cache_root() / "latents" / args.task / "manifest.json"
+        manifest = (
+            args.manifest or cache_root() / "latents" / args.task / "manifest.json"
+        )
         for split in ("train", "val", "test"):
             data = LatentSegments(manifest, split=split)
             first = data[0]
