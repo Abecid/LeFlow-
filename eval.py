@@ -13,6 +13,7 @@ from omegaconf import DictConfig, OmegaConf
 from sklearn import preprocessing
 from torchvision.transforms import v2 as transforms
 import stable_worldmodel as swm
+from btm_jepa.env import World
 
 def img_transform(cfg):
     transform = transforms.Compose(
@@ -80,7 +81,7 @@ def run(cfg: DictConfig):
 
     # create world environment
     cfg.world.max_episode_steps = 2 * cfg.eval.eval_budget
-    world = swm.World(**cfg.world, image_shape=(224, 224))
+    world = World(**cfg.world, image_shape=(224, 224))
 
     # create the transform
     transform = {
@@ -119,7 +120,8 @@ def run(cfg: DictConfig):
         }:
             solver = hydra.utils.instantiate(cfg.solver)
         else:
-            model = swm.policy.AutoCostModel(cfg.policy)
+            from latent_planner import load_lewm
+            model = load_lewm(cfg.policy)
             model = model.to("cuda")
             model = model.eval()
             model.requires_grad_(False)

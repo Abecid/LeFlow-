@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 """Encode each source frame once; torchrun optionally distributes episodes."""
+
 import argparse
 import json
 import sys
@@ -33,32 +34,75 @@ def main():
     folder.mkdir(parents=True, exist_ok=True)
     if (folder / "manifest.json").exists():
         old = json.loads((folder / "manifest.json").read_text())
-        if old["checkpoint_sha256"] != meta["checkpoint_sha256"] or old["source"]["signature"] != meta["source"]["signature"] or old["split"] != meta["split"]:
+        if (
+            old["checkpoint_sha256"] != meta["checkpoint_sha256"]
+            or old["source"]["signature"] != meta["source"]["signature"]
+            or old["split"] != meta["split"]
+        ):
             raise ValueError("Existing latent cache differs; use a new STABLEWM_HOME")
+        for shard in set(old["episode_shards"].values()):
+            with h5py.File(folder / shard, "r") as f:
+                if (
+                    not f.attrs.get("complete", False)
+                    or f.attrs["checkpoint_sha256"] != meta["checkpoint_sha256"]
+                ):
+                    raise ValueError(f"Incomplete/incompatible latent shard: {shard}")
         if rank == 0:
             print(f"Verified existing cache: {folder / 'manifest.json'}", flush=True)
         return
     path = folder / f"rank_{rank:02d}_of_{world:02d}.h5"
     tmp = path.with_suffix(".h5.partial")
     model = load_lewm(meta["lewm_checkpoint"]).to(device).eval().requires_grad_(False)
+    chunk_action_dim = model.action_encoder.patch_embed.weight.shape[1]
+    primitive_action_dim = meta["source"]["action_dim"]
+    if chunk_action_dim % primitive_action_dim:
+        raise ValueError("Checkpoint and source action dimensions disagree")
+    action_block = chunk_action_dim // primitive_action_dim
     transform = image_transform()
-    mean, std = np.asarray(meta["source"]["action_mean"]), np.asarray(meta["source"]["action_std"])
+    mean, std = (
+        np.asarray(meta["source"]["action_mean"]),
+        np.asarray(meta["source"]["action_std"]),
+    )
     with h5py.File(meta["source"]["path"], "r") as src, h5py.File(tmp, "w") as out:
-        for ep in tqdm(range(rank, meta["source"]["episodes"], world), desc=f"cache rank {rank}"):
-            offset, length = meta["source"]["offsets"][ep], meta["source"]["lengths"][ep]
+        for ep in tqdm(
+            range(rank, meta["source"]["episodes"], world), desc=f"cache rank {rank}"
+        ):
+            offset, length = (
+                meta["source"]["offsets"][ep],
+                meta["source"]["lengths"][ep],
+            )
             g = out.create_group(f"episodes/{ep}")
-            actions = (src["action"][offset:offset+length].astype(np.float32) - mean) / std
-            g.create_dataset("action", data=actions.astype(np.float32), compression="lzf")
+            actions = (
+                src["action"][offset : offset + length].astype(np.float32) - mean
+            ) / std
+            g.create_dataset(
+                "action", data=actions.astype(np.float32), compression="lzf"
+            )
             for start in range(0, length, args.batch_size):
-                pixels = torch.from_numpy(src["pixels"][offset+start:offset+min(length,start+args.batch_size)])
-                pixels = transform(pixels.permute(0,3,1,2)).to(device)
+                pixels = torch.from_numpy(
+                    src["pixels"][
+                        offset + start : offset + min(length, start + args.batch_size)
+                    ]
+                )
+                pixels = transform(pixels.permute(0, 3, 1, 2)).to(device)
                 with torch.no_grad():
-                    z = model.encode({"pixels": pixels[:, None]})["emb"][:, 0].float().cpu().numpy()
+                    z = (
+                        model.encode({"pixels": pixels[:, None]})["emb"][:, 0]
+                        .float()
+                        .cpu()
+                        .numpy()
+                    )
                 if not np.isfinite(z).all():
                     raise ValueError(f"Nonfinite encoded latents in episode {ep}")
                 if "z" not in g:
-                    g.create_dataset("z", (length, z.shape[-1]), dtype="f4", chunks=True, compression="lzf")
-                g["z"][start:start+len(z)] = z
+                    g.create_dataset(
+                        "z",
+                        (length, z.shape[-1]),
+                        dtype="f4",
+                        chunks=True,
+                        compression="lzf",
+                    )
+                g["z"][start : start + len(z)] = z
         out.attrs["complete"] = True
         out.attrs["checkpoint_sha256"] = meta["checkpoint_sha256"]
     tmp.replace(path)
@@ -66,8 +110,16 @@ def main():
     if rank == 0:
         with h5py.File(path, "r") as f:
             latent_dim = f["episodes/0/z"].shape[-1]
-        manifest = dict(**meta, latent_dim=latent_dim, preprocessing="imagenet_resize224_v1",
-                        episode_shards={str(ep): f"rank_{ep%world:02d}_of_{world:02d}.h5" for ep in range(meta["source"]["episodes"])})
+        manifest = dict(
+            **meta,
+            latent_dim=latent_dim,
+            action_block=action_block,
+            preprocessing="imagenet_resize224_v1",
+            episode_shards={
+                str(ep): f"rank_{ep % world:02d}_of_{world:02d}.h5"
+                for ep in range(meta["source"]["episodes"])
+            },
+        )
         atomic_json(folder / "manifest.json", manifest)
         print(f"Training-ready latent cache: {folder / 'manifest.json'}", flush=True)
     barrier()

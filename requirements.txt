@@ -15,12 +15,14 @@ zstandard==0.24.0
 einops==0.8.1
 gymnasium==1.2.0
 pygame==2.6.1
-pymunk==6.11.1
+pymunk==7.1.0
 shapely==2.1.2
 scikit-learn==1.7.2
 imageio==2.37.0
 imageio-ffmpeg==0.6.0
 dm-control==1.0.34
 ogbench==1.2.0
+mujoco==3.3.7
+opencv-python-headless==4.12.0.88
 pytest==8.4.2
 ruff==0.14.0

@@ -46,6 +46,7 @@ loss:
 evaluation:
   enabled: true
   every_steps: 1000
+  every_epochs: 1
   at_end: true
   episodes: 20
   split: val
