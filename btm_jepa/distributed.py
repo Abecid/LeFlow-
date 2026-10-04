@@ -17,10 +17,8 @@ def initialize(device="cuda", *, evaluation_timeout_seconds=0):
     if not 1 <= world_size <= 4:
         raise ValueError("This experiment supports at most four processes/GPUs")
     if device == "cuda":
-        if not torch.cuda.is_available():
-            raise RuntimeError(
-                "CUDA requested but unavailable; use device=cpu only for tests"
-            )
+        # Select the rank device before availability/count queries: early CUDA
+        # probing crashes NCCL collectives on the training server's stack.
         torch.cuda.set_device(local_rank)
         dev = torch.device("cuda", local_rank)
     else:

@@ -95,6 +95,30 @@ def test_collective_wait_covers_sequential_evaluation(
     assert calls == [("gloo", timedelta(seconds=expected))]
 
 
+def test_cuda_initialization_selects_rank_device_before_collectives(monkeypatch):
+    calls = []
+    monkeypatch.setenv("WORLD_SIZE", "4")
+    monkeypatch.setenv("RANK", "3")
+    monkeypatch.setenv("LOCAL_RANK", "3")
+
+    def reject_early_cuda_probe():
+        pytest.fail("Do not probe CUDA availability/count before rank device selection")
+
+    monkeypatch.setattr(torch.cuda, "is_available", reject_early_cuda_probe)
+    monkeypatch.setattr(torch.cuda, "device_count", reject_early_cuda_probe)
+    monkeypatch.setattr(
+        torch.cuda, "set_device", lambda index: calls.append(("set_device", index))
+    )
+    monkeypatch.setattr(
+        torch.distributed,
+        "init_process_group",
+        lambda backend, timeout: calls.append(("collectives", backend)),
+    )
+    rank, world, device = initialize("cuda")
+    assert (rank, world, device) == (3, 4, torch.device("cuda", 3))
+    assert calls == [("set_device", 3), ("collectives", "nccl")]
+
+
 def test_cache_action_blocks_and_physical_spacing(tmp_path):
     with h5py.File(tmp_path / "cache.h5", "w") as f:
         for ep in range(3):
