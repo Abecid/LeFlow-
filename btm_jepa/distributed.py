@@ -9,10 +9,10 @@ from torch.utils.data import Sampler
 
 
 def initialize(device="cuda"):
-    world_size = int(os.environ.get("WORLD_SIZE", 1))
+    world_size = int(os.environ.get("WORLD_SIZE", "1"))
     rank, local_rank = (
-        int(os.environ.get("RANK", 0)),
-        int(os.environ.get("LOCAL_RANK", 0)),
+        int(os.environ.get("RANK", "0")),
+        int(os.environ.get("LOCAL_RANK", "0")),
     )
     if not 1 <= world_size <= 4:
         raise ValueError("This experiment supports at most four processes/GPUs")

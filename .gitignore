@@ -20,3 +20,10 @@ runs/
 .netrc
 .pytest_cache/
 .ruff_cache/
+*.zst
+*.mp4
+checkpoints/
+datasets/
+latents/
+prepared/
+results/

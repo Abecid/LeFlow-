@@ -89,6 +89,9 @@ def main():
     model = api.model_info(spec["repo"])
     data = api.dataset_info(spec["repo"], files_metadata=True)
     size = next(s.size for s in data.siblings if s.rfilename == spec["archive"])
+    disk_root = root
+    while not disk_root.exists():
+        disk_root = disk_root.parent
     plan = dict(
         task=args.task,
         dataset=spec["repo"],
@@ -98,7 +101,7 @@ def main():
         target=str(target),
         model_revision=model.sha,
         root=str(root),
-        free_bytes=shutil.disk_usage(root if root.exists() else root.parent).free,
+        free_bytes=shutil.disk_usage(disk_root).free,
     )
     print(json.dumps(plan, indent=2), flush=True)
     if args.dry_run:

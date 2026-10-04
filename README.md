@@ -1,3 +1,27 @@
+# BTM–JEPA subgoal planning (LeFlow fork)
+
+This fork adds conditional one-step Beckmann transport maps, matched flow and
+deterministic controls, hierarchical execution, and training on **1–4 GPUs**.
+It includes Conda setup, official dataset/checkpoint downloads, frozen-latent
+caching, episode-level train/validation/test splits, resumable checkpoints, and
+online W&B logging with intermediate closed-loop evaluation.
+
+**Start here: [setup, data preparation, training, and evaluation](docs/TRAINING.md).**
+See [tensor shapes, losses, and planning algorithm](docs/METHOD.md).
+
+The implemented backbone is LeWM. The V-JEPA 2.1/Meta-World extension remains
+future work; this release does not claim an implemented port or benchmark gains.
+
+```bash
+# After Conda setup, data preparation, caching, and wandb login:
+GPUS=4 bash scripts/train.sh task=pusht method=flow
+GPUS=4 bash scripts/train.sh task=pusht method=btm
+```
+
+Original LeFlow release documentation and attribution follow.
+
+---
+
 # LeFlow: Latent Path Flow Planning for LeWorldModel
 
 LeFlow adds a learned goal-conditioned planner on top of a frozen
