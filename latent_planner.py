@@ -93,7 +93,7 @@ def load_lewm(lewm_checkpoint: str | Path) -> nn.Module:
 
 
 def _build_lewm_from_state_dict(state_dict: dict[str, torch.Tensor]) -> nn.Module:
-    import stable_pretraining as spt
+    from transformers import ViTConfig, ViTModel
 
     from jepa import JEPA
     from module import ARPredictor, Embedder, MLP
@@ -130,13 +130,16 @@ def _build_lewm_from_state_dict(state_dict: dict[str, torch.Tensor]) -> nn.Modul
     if encoder_scale is None:
         raise ValueError(f"Cannot infer ViT scale from hidden_dim={hidden_dim}")
 
-    encoder = spt.backbone.utils.vit_hf(
-        encoder_scale,
-        patch_size=patch_size,
-        image_size=image_size,
-        pretrained=False,
-        use_mask_token=False,
-    )
+    # Reconstruct the released Hugging Face ViT directly, without importing the
+    # full stable-pretraining/Lightning training stack at inference or caching.
+    encoder_depth = max(int(k.split(".")[3]) for k in state_dict
+                        if k.startswith("encoder.encoder.layer.")) + 1
+    intermediate = state_dict["encoder.encoder.layer.0.intermediate.dense.weight"].shape[0]
+    encoder = ViTModel(ViTConfig(
+        hidden_size=hidden_dim, num_hidden_layers=encoder_depth,
+        num_attention_heads={"tiny": 3, "small": 6, "base": 12, "large": 16}[encoder_scale],
+        intermediate_size=intermediate, patch_size=patch_size, image_size=image_size,
+    ), add_pooling_layer=any(k.startswith("encoder.pooler.") for k in state_dict), use_mask_token=False)
     predictor = ARPredictor(
         num_frames=num_frames,
         depth=predictor_depth,

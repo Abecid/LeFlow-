@@ -1,0 +1,77 @@
+defaults:
+  - _self_
+
+task: pusht
+method: btm
+seed: 3072
+device: cuda
+run_dir: ${oc.env:STABLEWM_HOME}/runs/${task}/${method}_${seed}
+resume: null
+epochs: 10
+max_steps: null
+global_batch_size: 128
+micro_batch_size: 32
+num_workers: 4
+lr: 0.0001
+weight_decay: 0.0001
+grad_clip: 1.0
+log_every: 10
+validate_every: 500
+checkpoint_every: 500
+val_max_samples: 512
+val_generation_samples: 32
+val_candidates: 8
+precision: fp32
+
+data:
+  manifest: ${oc.env:STABLEWM_HOME}/latents/${task}/manifest.json
+  horizon: 5
+  action_block: 5
+  spacing_blocks: [1, 2, 4]
+  local_horizon: 4
+  clip_stride: 5
+
+model:
+  hidden_dim: 512
+  depth: 4
+  heads: 8
+  max_horizon: 20
+  inverse_hidden: 512
+
+loss:
+  boundary_weight: 1.0
+  inverse_weight: 1.0
+  consistency_weight: 0.1
+
+evaluation:
+  enabled: true
+  every_steps: 1000
+  at_end: true
+  episodes: 20
+  split: val
+  goal_offsets: [25, 50, 100]
+  budget: 200
+  mode: hierarchical
+  spacing: 2
+  candidates: 64
+  flow_steps: 16
+  cem_candidates: 32
+  cem_iterations: 3
+  cem_elites: 8
+  timeout_seconds: 3600
+
+wandb:
+  enabled: true
+  mode: online
+  project: btm-jepa
+  entity: ${oc.env:WANDB_ENTITY,null}
+  name: ${task}_${method}_${seed}
+  group: ${task}_subgoals
+  id: null
+  upload_checkpoints: false
+
+hydra:
+  run:
+    dir: ${run_dir}/hydra
+  job:
+    chdir: false

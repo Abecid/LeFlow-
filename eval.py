@@ -8,7 +8,6 @@ from pathlib import Path
 
 import hydra
 import numpy as np
-import stable_pretraining as spt
 import torch
 from omegaconf import DictConfig, OmegaConf
 from sklearn import preprocessing
@@ -20,7 +19,7 @@ def img_transform(cfg):
         [
             transforms.ToImage(),
             transforms.ToDtype(torch.float32, scale=True),
-            transforms.Normalize(**spt.data.dataset_stats.ImageNet),
+            transforms.Normalize(mean=[.485, .456, .406], std=[.229, .224, .225]),
             transforms.Resize(size=cfg.eval.img_size),
         ]
     )
@@ -39,7 +38,7 @@ def get_episodes_length(dataset, episodes):
 
 
 def get_dataset(cfg, dataset_name):
-    dataset_path = Path(cfg.cache_dir or swm.data.utils.get_cache_dir())
+    dataset_path = Path(cfg.get("cache_dir") or swm.data.utils.get_cache_dir())
     dataset = swm.data.HDF5Dataset(
         dataset_name,
         keys_to_cache=cfg.dataset.keys_to_cache,
@@ -158,9 +157,9 @@ def run(cfg: DictConfig):
     print(valid_mask.sum(), "valid starting points found for evaluation.")
 
     g = np.random.default_rng(cfg.seed)
-    random_episode_indices = g.choice(
-        len(valid_indices) - 1, size=cfg.eval.num_eval, replace=False
-    )
+    if len(valid_indices) < cfg.eval.num_eval:
+        raise ValueError(f"Requested {cfg.eval.num_eval} evaluations, found {len(valid_indices)} valid starts")
+    random_episode_indices = g.choice(len(valid_indices), size=cfg.eval.num_eval, replace=False)
 
     # sort increasingly to avoid issues with HDF5Dataset indexing
     random_episode_indices = np.sort(valid_indices[random_episode_indices])
