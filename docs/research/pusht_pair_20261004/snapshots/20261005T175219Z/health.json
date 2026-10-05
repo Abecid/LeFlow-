@@ -1,0 +1,156 @@
+{
+  "observed_utc": "2026-10-05T17:52:19+00:00",
+  "hardware": {
+    "observed_utc": "2026-10-05T17:52:19+00:00",
+    "units": {
+      "utilization.gpu": "%",
+      "memory.used": "MiB",
+      "memory.total": "MiB",
+      "power.draw": "W"
+    },
+    "gpus": [
+      {
+        "index": "0",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "0",
+        "memory.used": "0",
+        "memory.total": "81920",
+        "power.draw": "55.65"
+      },
+      {
+        "index": "1",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "0",
+        "memory.used": "0",
+        "memory.total": "81920",
+        "power.draw": "53.42"
+      },
+      {
+        "index": "2",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "0",
+        "memory.used": "0",
+        "memory.total": "81920",
+        "power.draw": "56.46"
+      },
+      {
+        "index": "3",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "0",
+        "memory.used": "0",
+        "memory.total": "81920",
+        "power.draw": "54.83"
+      },
+      {
+        "index": "4",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "0",
+        "memory.used": "0",
+        "memory.total": "81920",
+        "power.draw": "58.13"
+      },
+      {
+        "index": "5",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "0",
+        "memory.used": "0",
+        "memory.total": "81920",
+        "power.draw": "56.70"
+      },
+      {
+        "index": "6",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "0",
+        "memory.used": "0",
+        "memory.total": "81920",
+        "power.draw": "54.29"
+      },
+      {
+        "index": "7",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "0",
+        "memory.used": "0",
+        "memory.total": "81920",
+        "power.draw": "56.31"
+      }
+    ]
+  },
+  "controller_status_file": "running (stale)",
+  "controller_status_last_updated_utc": "2026-10-05T00:29:06+00:00",
+  "verified_processes": {
+    "controller": {
+      "exists": false
+    },
+    "flow_torchrun": {
+      "exists": false
+    },
+    "original_supervisor": {
+      "exists": true,
+      "state": "T",
+      "ppid": 2681796,
+      "exit_code_raw": 0
+    },
+    "btm_torchrun": {
+      "exists": true,
+      "state": "Z",
+      "ppid": 2692725,
+      "exit_code_raw": 0
+    }
+  },
+  "completion_markers": {
+    "btm_3072": false,
+    "flow_3072": false
+  },
+  "frozen_source_head": "69babde283f504120dae3dfc6e9188a0e2242be4",
+  "frozen_source_clean": true,
+  "checkpoint_sha256": {
+    "btm/best.pt": "89036ff00fdecd54f6abebb7fef4e7b937176431add6880a3da60076b120ac15",
+    "btm/last.pt": "f71611f2699347df2c44c23c821197d730cae86f1e0f72d6edaa8c502afb6096",
+    "flow/best.pt": "97532e69c6709f0c802585bb69e8cea5208532d415f9c6dca5f10e0941b49da8",
+    "flow/last.pt": "f2c4b3044591426d57d91f136f5353ac0aa14bfd14c4f88db20a1dd1f694364b"
+  },
+  "metric_health": {
+    "btm": {
+      "rows": 2465,
+      "jsonl_parse_errors": [],
+      "nonfinite_numeric_values": 0,
+      "grad_norm_min": 0.41013744473457336,
+      "grad_norm_max": 7.122122764587402,
+      "latest_training_metrics": {
+        "step": 23830,
+        "train/boundary_loss": 0.009026530175469815,
+        "train/consistency_loss": 0.008043567335698753,
+        "train/generative_loss": 0.3383547134697437,
+        "train/inverse_loss": 0.07608505575917661,
+        "train/jvp_rms": 0.5714909128844738,
+        "train/loss": 0.4152441293001175,
+        "train/transport_loss": 0.3293281827121973,
+        "train/grad_norm": 0.6157557964324951,
+        "train/lr": 0.0001,
+        "train/epoch": 10,
+        "system/samples_per_second": 2056.811817857858,
+        "system/gpu_peak_memory_gib": 0.4074592590332031
+      }
+    },
+    "flow": {
+      "rows": 2383,
+      "jsonl_parse_errors": [],
+      "nonfinite_numeric_values": 0,
+      "grad_norm_min": 0.48887574672698975,
+      "grad_norm_max": 1.502060055732727,
+      "latest_training_metrics": {
+        "step": 23040,
+        "train/consistency_loss": 0.008358214190229774,
+        "train/generative_loss": 0.16829897817224265,
+        "train/inverse_loss": 0.07710552085191011,
+        "train/loss": 0.24624032154679298,
+        "train/grad_norm": 0.7275655269622803,
+        "train/lr": 0.0001,
+        "train/epoch": 10,
+        "system/samples_per_second": 3034.302732851966,
+        "system/gpu_peak_memory_gib": 0.40839433670043945
+      }
+    }
+  },
+  "interpretation": "No campaign GPU workers or flow controller remain. BTM final checkpoint and exit status zero support completed training; completion bookkeeping is still absent. Flow saved only 23000 of23830 updates; W&B finished is not proof of reaching its training budget."
+}

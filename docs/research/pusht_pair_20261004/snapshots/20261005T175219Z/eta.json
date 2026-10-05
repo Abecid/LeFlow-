@@ -1,0 +1,345 @@
+{
+  "observed_utc": "2026-10-05T17:54:41+00:00",
+  "campaign_status": "interrupted",
+  "current_completion_eta": null,
+  "reason": "Flow trainer/controller absent before the final budget; original supervisor remains stopped. Both completion markers are absent.",
+  "btm_training_finished_utc": "2026-10-05T02:00:36+00:00",
+  "flow_last_checkpoint_step": 23000,
+  "flow_last_logged_step": 23040,
+  "flow_steps_to_replay_from_checkpoint": 830,
+  "prior_projection_valid": false,
+  "historical_cadence_projection": {
+    "format_version": 1,
+    "snapshot_time": {
+      "utc": "2026-10-05T17:52:19+00:00",
+      "america_new_york": "2026-10-05T13:52:19-04:00"
+    },
+    "methodology": {
+      "point_formula": "last_complete_eval_time + fitted_seconds_per_step * (target_steps - last_complete_eval_step) + fitted_seconds_per_three_offset_cycle * remaining_scheduled_cycles + 15 seconds finalization",
+      "schedule": "Union of every-1000-step evaluations and configured epoch ends; final at_end evaluation is deduplicated when final epoch already evaluates.",
+      "phase_control": "Fit complete evaluation endpoint intervals; exclude pre-concurrent intervals and use the latest 12. Subtract elapsed time since the last complete endpoint, so an in-progress evaluation is not counted afresh.",
+      "range": "Sensitivity envelope: 0.85/1.15 multipliers on fitted training and evaluation rates, plus 5/60 seconds finalization. Planning range, not a statistical confidence interval.",
+      "separation": "Pure training timing excludes log windows crossing local validation or environment evaluation; subprocess startup/I/O is inferred from consecutive offset file mtimes and compared with evaluator-reported durations.",
+      "assumptions": "No failure, restart, or major host-load change. Remaining wall time can be dominated by evaluation rather than optimizer steps."
+    },
+    "runs": {
+      "btm_3072": {
+        "current_checkpoint_step": 23830,
+        "current_logged_training_step": 23830,
+        "current_optimizer_step": 23830,
+        "target_steps": 23830,
+        "steps_per_epoch": 2383,
+        "epochs": 10,
+        "step_progress_fraction": 1,
+        "remaining_optimizer_steps": 0,
+        "completed_eval_cycles": 33,
+        "total_scheduled_eval_cycles": 33,
+        "completion_marker_present": false,
+        "state": "training_budget_and_final_evaluation_complete",
+        "eta": {
+          "point": {
+            "utc": "2026-10-05T02:00:34+00:00",
+            "america_new_york": "2026-10-04T22:00:34-04:00"
+          },
+          "range_lower": {
+            "utc": "2026-10-05T02:00:34+00:00",
+            "america_new_york": "2026-10-04T22:00:34-04:00"
+          },
+          "range_upper": {
+            "utc": "2026-10-05T02:00:34+00:00",
+            "america_new_york": "2026-10-04T22:00:34-04:00"
+          },
+          "remaining_minutes_point": 0,
+          "remaining_minutes_range": [
+            0,
+            0
+          ]
+        },
+        "handoff_note": "Without a completion marker, final cleanup or the paused original supervisor's bookkeeping can still be pending."
+      },
+      "flow_3072": {
+        "current_checkpoint_step": 23000,
+        "current_logged_training_step": 23040,
+        "current_optimizer_step": 23040,
+        "target_steps": 23830,
+        "steps_per_epoch": 2383,
+        "epochs": 10,
+        "step_progress_fraction": 0.9668485102811583,
+        "remaining_optimizer_steps": 790,
+        "completed_eval_cycles": 32,
+        "total_scheduled_eval_cycles": 33,
+        "completion_marker_present": false,
+        "state": "cadence_projection_overdue",
+        "last_complete_eval": {
+          "step": 23000,
+          "time": {
+            "utc": "2026-10-05T03:03:20+00:00",
+            "america_new_york": "2026-10-04T23:03:20-04:00"
+          }
+        },
+        "current_partial_evaluation": {
+          "in_progress": false,
+          "offsets_already_saved_when_read": [],
+          "estimated_seconds_remaining": 0,
+          "note": "File observations may differ by seconds during live collection; use checkpoint-time phase estimate, not each missing JSON as a whole unfinished offset."
+        },
+        "remaining_eval_steps_after_current": [
+          23830
+        ],
+        "remaining_eval_steps_after_last_complete": [
+          23830
+        ],
+        "fit": {
+          "method": "OLS consecutive complete-cycle intervals during concurrent execution",
+          "interval_count": 12,
+          "seconds_per_optimizer_step": 0.04439729721154401,
+          "seconds_per_three_offset_eval_cycle": 255.93104500195173,
+          "residual_rmse_seconds": 1.1295659660272592,
+          "intervals": [
+            {
+              "from_step": 14298,
+              "to_step": 15000,
+              "from_time": {
+                "utc": "2026-10-05T02:05:42+00:00",
+                "america_new_york": "2026-10-04T22:05:42-04:00"
+              },
+              "to_time": {
+                "utc": "2026-10-05T02:10:32+00:00",
+                "america_new_york": "2026-10-04T22:10:32-04:00"
+              },
+              "delta_steps": 702,
+              "delta_wall_seconds": 289.32816219329834,
+              "residual_seconds": 2.2302145488427243
+            },
+            {
+              "from_step": 15000,
+              "to_step": 16000,
+              "from_time": {
+                "utc": "2026-10-05T02:10:32+00:00",
+                "america_new_york": "2026-10-04T22:10:32-04:00"
+              },
+              "to_time": {
+                "utc": "2026-10-05T02:15:32+00:00",
+                "america_new_york": "2026-10-04T22:15:32-04:00"
+              },
+              "delta_steps": 1000,
+              "delta_wall_seconds": 299.9347095489502,
+              "residual_seconds": -0.39363266454554946
+            },
+            {
+              "from_step": 16000,
+              "to_step": 16681,
+              "from_time": {
+                "utc": "2026-10-05T02:15:32+00:00",
+                "america_new_york": "2026-10-04T22:15:32-04:00"
+              },
+              "to_time": {
+                "utc": "2026-10-05T02:20:18+00:00",
+                "america_new_york": "2026-10-04T22:20:18-04:00"
+              },
+              "delta_steps": 681,
+              "delta_wall_seconds": 286.04481768608093,
+              "residual_seconds": -0.12078671693225829
+            },
+            {
+              "from_step": 16681,
+              "to_step": 17000,
+              "from_time": {
+                "utc": "2026-10-05T02:20:18+00:00",
+                "america_new_york": "2026-10-04T22:20:18-04:00"
+              },
+              "to_time": {
+                "utc": "2026-10-05T02:24:49+00:00",
+                "america_new_york": "2026-10-04T22:24:49-04:00"
+              },
+              "delta_steps": 319,
+              "delta_wall_seconds": 271.09062695503235,
+              "residual_seconds": 0.9968441425980643
+            },
+            {
+              "from_step": 17000,
+              "to_step": 18000,
+              "from_time": {
+                "utc": "2026-10-05T02:24:49+00:00",
+                "america_new_york": "2026-10-04T22:24:49-04:00"
+              },
+              "to_time": {
+                "utc": "2026-10-05T02:29:48+00:00",
+                "america_new_york": "2026-10-04T22:29:48-04:00"
+              },
+              "delta_steps": 1000,
+              "delta_wall_seconds": 299.5112280845642,
+              "residual_seconds": -0.8171141289315358
+            },
+            {
+              "from_step": 18000,
+              "to_step": 19000,
+              "from_time": {
+                "utc": "2026-10-05T02:29:48+00:00",
+                "america_new_york": "2026-10-04T22:29:48-04:00"
+              },
+              "to_time": {
+                "utc": "2026-10-05T02:34:50+00:00",
+                "america_new_york": "2026-10-04T22:34:50-04:00"
+              },
+              "delta_steps": 1000,
+              "delta_wall_seconds": 301.9006772041321,
+              "residual_seconds": 1.5723349906363353
+            },
+            {
+              "from_step": 19000,
+              "to_step": 19064,
+              "from_time": {
+                "utc": "2026-10-05T02:34:50+00:00",
+                "america_new_york": "2026-10-04T22:34:50-04:00"
+              },
+              "to_time": {
+                "utc": "2026-10-05T02:39:08+00:00",
+                "america_new_york": "2026-10-04T22:39:08-04:00"
+              },
+              "delta_steps": 64,
+              "delta_wall_seconds": 257.9670443534851,
+              "residual_seconds": -0.8054276700054288
+            },
+            {
+              "from_step": 19064,
+              "to_step": 20000,
+              "from_time": {
+                "utc": "2026-10-05T02:39:08+00:00",
+                "america_new_york": "2026-10-04T22:39:08-04:00"
+              },
+              "to_time": {
+                "utc": "2026-10-05T02:44:05+00:00",
+                "america_new_york": "2026-10-04T22:44:05-04:00"
+              },
+              "delta_steps": 936,
+              "delta_wall_seconds": 296.64441990852356,
+              "residual_seconds": -0.842495283433351
+            },
+            {
+              "from_step": 20000,
+              "to_step": 21000,
+              "from_time": {
+                "utc": "2026-10-05T02:44:05+00:00",
+                "america_new_york": "2026-10-04T22:44:05-04:00"
+              },
+              "to_time": {
+                "utc": "2026-10-05T02:49:04+00:00",
+                "america_new_york": "2026-10-04T22:49:04-04:00"
+              },
+              "delta_steps": 1000,
+              "delta_wall_seconds": 298.753212928772,
+              "residual_seconds": -1.5751292847237721
+            },
+            {
+              "from_step": 21000,
+              "to_step": 21447,
+              "from_time": {
+                "utc": "2026-10-05T02:49:04+00:00",
+                "america_new_york": "2026-10-04T22:49:04-04:00"
+              },
+              "to_time": {
+                "utc": "2026-10-05T02:53:38+00:00",
+                "america_new_york": "2026-10-04T22:53:38-04:00"
+              },
+              "delta_steps": 447,
+              "delta_wall_seconds": 274.49202609062195,
+              "residual_seconds": -1.2846107648899476
+            },
+            {
+              "from_step": 21447,
+              "to_step": 22000,
+              "from_time": {
+                "utc": "2026-10-05T02:53:38+00:00",
+                "america_new_york": "2026-10-04T22:53:38-04:00"
+              },
+              "to_time": {
+                "utc": "2026-10-05T02:58:19+00:00",
+                "america_new_york": "2026-10-04T22:58:19-04:00"
+              },
+              "delta_steps": 553,
+              "delta_wall_seconds": 280.95985531806946,
+              "residual_seconds": 0.47710495813387865
+            },
+            {
+              "from_step": 22000,
+              "to_step": 23000,
+              "from_time": {
+                "utc": "2026-10-05T02:58:19+00:00",
+                "america_new_york": "2026-10-04T22:58:19-04:00"
+              },
+              "to_time": {
+                "utc": "2026-10-05T03:03:20+00:00",
+                "america_new_york": "2026-10-04T23:03:20-04:00"
+              },
+              "delta_steps": 1000,
+              "delta_wall_seconds": 300.8910400867462,
+              "residual_seconds": 0.562697873250471
+            }
+          ]
+        },
+        "clean_training_rate": {
+          "log_window_count": 293,
+          "mean_seconds_per_step": 0.04256274647527587,
+          "median_seconds_per_step": 0.04221318196505308,
+          "p10_seconds_per_step": 0.040763457417488096,
+          "p90_seconds_per_step": 0.04455420803278685
+        },
+        "evaluation_rate": {
+          "recent_complete_cycles": 10,
+          "mean_reported_evaluator_seconds_sum_three_offsets": 235.26095833722502,
+          "mean_three_offset_wall_seconds_including_subprocess_startup": 254.52476806640627,
+          "mean_unlogged_startup_io_seconds_per_three_offsets": 19.263809729181247
+        },
+        "remaining_cost_separation": {
+          "pure_training_seconds": 33.62456971546794,
+          "estimated_environment_evaluation_seconds_including_launches": 254.52476806640627,
+          "remaining_other_overhead_seconds_by_difference": -53318.90255285641,
+          "remaining_seconds_point": 0
+        },
+        "eta": {
+          "point": {
+            "utc": "2026-10-05T03:08:28+00:00",
+            "america_new_york": "2026-10-04T23:08:28-04:00"
+          },
+          "range_lower": {
+            "utc": "2026-10-05T03:07:34+00:00",
+            "america_new_york": "2026-10-04T23:07:34-04:00"
+          },
+          "range_upper": {
+            "utc": "2026-10-05T03:09:57+00:00",
+            "america_new_york": "2026-10-04T23:09:57-04:00"
+          },
+          "remaining_minutes_point": 0.0,
+          "remaining_minutes_range": [
+            0.0,
+            0.0
+          ]
+        },
+        "warning": "Recent-cadence projection is already past, while completion is unconfirmed. Investigate active phase/stall; zero projected remaining minutes is not completion."
+      }
+    },
+    "both_runs_complete_eta": {
+      "point": {
+        "utc": "2026-10-05T03:08:28+00:00",
+        "america_new_york": "2026-10-04T23:08:28-04:00"
+      },
+      "range_lower": {
+        "utc": "2026-10-05T03:07:34+00:00",
+        "america_new_york": "2026-10-04T23:07:34-04:00"
+      },
+      "range_upper": {
+        "utc": "2026-10-05T03:09:57+00:00",
+        "america_new_york": "2026-10-04T23:09:57-04:00"
+      },
+      "remaining_minutes_point": 0,
+      "remaining_minutes_range": [
+        0,
+        0
+      ],
+      "completion_unconfirmed": true,
+      "projection_overdue": true
+    }
+  },
+  "recovery_note": "A recovery requires the existing saved checkpoint and frozen protocol, then genuine completion validation/handoff. Monitoring does not launch recovery."
+}

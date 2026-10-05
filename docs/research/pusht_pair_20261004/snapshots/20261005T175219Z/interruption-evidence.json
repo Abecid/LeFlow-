@@ -1,0 +1,64 @@
+{
+  "observation_utc": "2026-10-05T17:54:41+00:00",
+  "deployed_controller_sha256": "caca6fee88d24c9d6cd30ffe352881cfbad10d858bf2148c2ae315ed11d86f8b",
+  "controller_source_evidence": [
+    "79: def signal_same_process(identity, pidfd, signum):",
+    "255:             for signum in (signal.SIGINT, signal.SIGTERM):",
+    "324:                 signal_same_process(identity, pidfd, signal.SIGCONT)",
+    "384:             signal_same_process(identity, pidfd, signal.SIGSTOP)",
+    "486:                     start_new_session=True,",
+    "499:                         child.terminate()",
+    "501:                         report(state=\"terminating\", interrupted_signal=interrupted[0])",
+    "503:                         child.wait(timeout=1)",
+    "516:             signal_same_process(identity, pidfd, signal.SIGCONT)",
+    "526:                 child.terminate()",
+    "527:                 child.wait()",
+    "530:                     state=\"failed\","
+  ],
+  "btm": {
+    "final_checkpoint_step": 23830,
+    "final_checkpoint_epoch": 10,
+    "final_checkpoint_next_batch": 0,
+    "torchrun_exit_code": 0,
+    "local_wandb_exit_code": 0,
+    "local_wandb_finish_utc": "2026-10-05T02:00:36+00:00",
+    "status": "training and final evaluation succeeded; supervisor bookkeeping pending"
+  },
+  "flow": {
+    "last_durable_checkpoint_step": 23000,
+    "last_logged_step": 23040,
+    "last_log_write_utc": "2026-10-05T03:03:23+00:00",
+    "controller_present": false,
+    "torchrun_present": false,
+    "explanatory_error_or_signal_matches_in_training_log": 0,
+    "local_wandb_finish_record_present": false,
+    "controller_log_bytes": 0,
+    "status": "interrupted; cause not established"
+  },
+  "system_evidence": {
+    "accessible_memory_oom_control": {
+      "oom_kill_disable": 0,
+      "under_oom": 0,
+      "oom_kill": 1
+    },
+    "oom_attribution": "Cumulative counter without timestamp, process identity, scope attribution or baseline; does not establish this run was OOM-killed.",
+    "kernel_journal_result": "No journal files were found",
+    "user_journal_result": "No journal files were found"
+  },
+  "interpretation": {
+    "observed": "Controller and flow process disappeared without a completion/failure record; original supervisor remains stopped.",
+    "hypothesis": "Abrupt/external termination is consistent with missing shutdown evidence. OOM, unhandled signal, session/container cleanup or another cause are not distinguished.",
+    "not_supported": "Earlier W&B errors occurred around01:35\u201301:36 UTC and both runs continued; they do not establish the later stop cause."
+  },
+  "recovery_recommendation": [
+    "Preserve hashes/configs and investigate external lifecycle or memory records before relaunch.",
+    "Keep original supervisor stopped while resuming the frozen flow run from its23000 checkpoint;830updates remain and40previouslylogged updates must replay.",
+    "After successful exit and verified23830finalcheckpoint/evaluation, let the controller write a genuine flow completion marker and resume the original supervisor for bookkeeping.",
+    "Do not restart the successfully finished BTM training. No recovery or process signal was performed by this monitor."
+  ],
+  "monitoring_gap": {
+    "scheduled_utc": "2026-10-05T01:45:18+00:00",
+    "network_available_observed_utc": "2026-10-05T17:51:57+00:00",
+    "reason": "SSH was blocked by the monitoring sandbox pending network permission. Fresh server collection resumed after permission; no claim of overnight monitoring coverage."
+  }
+}

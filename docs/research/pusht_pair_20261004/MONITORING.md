@@ -34,6 +34,16 @@ authentication stores. Do not copy credentials into reports or command output.
    Latest W&B summaries can lag local files and contain metrics from different
    optimizer steps; they are not selected-checkpoint comparisons.
 
+If trainer/controller processes are absent and saved training steps remain below
+the target, classify the run as interrupted. A stale status file saying
+`running`, W&B saying `finished`, or an overdue cadence projection rounded to
+zero remaining minutes cannot prove successful completion. Suppress the live
+ETA until recovery is actually running, preserve the historical projection as
+invalid, and record checkpoint hashes, last durable step, last logged step,
+process evidence and available exit/signal records. An absent exit record means
+the termination cause remains unknown. Do not infer it from earlier recovered
+logging-service errors.
+
 The shared run group is
 [pusht_pair_20261004](https://wandb.ai/attentionx2023/btm-jepa/groups/pusht_pair_20261004).
 BTM owns GPUs 0–3 and flow owns 4–7. Both receive 23,830 optimizer updates,
