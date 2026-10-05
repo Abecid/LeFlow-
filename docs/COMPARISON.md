@@ -119,7 +119,12 @@ seeds. Hardware/load can still differ despite matching protocol metadata, so
 inspect the recorded hardware and run timings before claiming a speedup.
 
 Intermediate validation is online in W&B; standalone final test reports are
-saved as JSON by the commands above. No actual GPU campaign has been launched
-from the development workspace: `target_server_2` requires its working SSH
-configuration, jump-host tunnel, and authorized key/agent in the execution
-environment.
+saved as JSON by the commands above. The October 2026 pilot is now running with
+four A800 GPUs per method, concurrently on eight GPUs total. The active server
+source and comparison protocol remain frozen. See the
+[progress and failure-analysis report](research/pusht_pair_20261004/PROGRESS.md)
+for measured results, ETA, diagnostic limitations, and improvement targets, and
+the [monitoring protocol](research/pusht_pair_20261004/MONITORING.md) for recurring
+reporting and provenance. The general launcher above remains sequential; the
+current deployment uses a separate controller to preserve the already-running
+BTM job while launching flow on the remaining allocation.

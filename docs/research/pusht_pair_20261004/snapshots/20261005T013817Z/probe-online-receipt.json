@@ -1,0 +1,34 @@
+{
+  "observed_utc": "2026-10-05T01:40:54+00:00",
+  "manifest_sha256": "6410f2f196e6fd50a84ae82a192edc718ce169885144195cc63693faaa7f7f26",
+  "probe": {
+    "source": "Actual frozen LatentSegments.__getitem__ reads on CPU",
+    "clips": 32,
+    "episode_ids": [
+      4,
+      5
+    ],
+    "spacing_counts": {
+      "1": 20,
+      "2": 11,
+      "4": 1
+    },
+    "loss_probe_512_unique_episodes": 28
+  },
+  "wandb": {
+    "btm": {
+      "run_id": "z78m0zk6",
+      "state": "running",
+      "step": 20870,
+      "runtime_seconds": 7089,
+      "checked_utc": "2026-10-05T01:41:00+00:00"
+    },
+    "flow": {
+      "run_id": "g0u3w723",
+      "state": "running",
+      "step": 11000,
+      "runtime_seconds": 4095.395688502,
+      "checked_utc": "2026-10-05T01:41:01+00:00"
+    }
+  }
+}

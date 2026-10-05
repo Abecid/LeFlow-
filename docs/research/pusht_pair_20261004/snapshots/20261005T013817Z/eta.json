@@ -1,0 +1,605 @@
+{
+  "format_version": 1,
+  "snapshot_time": {
+    "utc": "2026-10-05T01:38:17+00:00",
+    "america_new_york": "2026-10-04T21:38:17-04:00"
+  },
+  "methodology": {
+    "point_formula": "last_complete_eval_time + fitted_seconds_per_step * (target_steps - last_complete_eval_step) + fitted_seconds_per_three_offset_cycle * remaining_scheduled_cycles + 15 seconds finalization",
+    "schedule": "Union of every-1000-step evaluations and configured epoch ends; final at_end evaluation is deduplicated when final epoch already evaluates.",
+    "phase_control": "Fit complete evaluation endpoint intervals; exclude pre-concurrent intervals and use the latest 12. Subtract elapsed time since the last complete endpoint, so an in-progress evaluation is not counted afresh.",
+    "range": "Sensitivity envelope: 0.85/1.15 multipliers on fitted training and evaluation rates, plus 5/60 seconds finalization. Planning range, not a statistical confidence interval.",
+    "separation": "Pure training timing excludes log windows crossing local validation or environment evaluation; subprocess startup/I/O is inferred from consecutive offset file mtimes and compared with evaluator-reported durations.",
+    "assumptions": "No failure, restart, or major host-load change. Remaining wall time can be dominated by evaluation rather than optimizer steps."
+  },
+  "runs": {
+    "btm_3072": {
+      "current_checkpoint_step": 20000,
+      "current_logged_training_step": 20000,
+      "current_optimizer_step": 20000,
+      "target_steps": 23830,
+      "steps_per_epoch": 2383,
+      "epochs": 10,
+      "step_progress_fraction": 0.839278220730172,
+      "remaining_optimizer_steps": 3830,
+      "completed_eval_cycles": 27,
+      "total_scheduled_eval_cycles": 33,
+      "completion_marker_present": false,
+      "state": "projected",
+      "last_complete_eval": {
+        "step": 19064,
+        "time": {
+          "utc": "2026-10-05T01:34:52+00:00",
+          "america_new_york": "2026-10-04T21:34:52-04:00"
+        }
+      },
+      "current_partial_evaluation": {
+        "in_progress": true,
+        "offsets_already_saved_when_read": [
+          25,
+          50
+        ],
+        "estimated_seconds_remaining": 62.04056297540663,
+        "note": "File observations may differ by seconds during live collection; use checkpoint-time phase estimate, not each missing JSON as a whole unfinished offset."
+      },
+      "remaining_eval_steps_after_current": [
+        21000,
+        21447,
+        22000,
+        23000,
+        23830
+      ],
+      "remaining_eval_steps_after_last_complete": [
+        20000,
+        21000,
+        21447,
+        22000,
+        23000,
+        23830
+      ],
+      "fit": {
+        "method": "OLS consecutive complete-cycle intervals during concurrent execution",
+        "interval_count": 12,
+        "seconds_per_optimizer_step": 0.07013476197799967,
+        "seconds_per_three_offset_eval_cycle": 200.70775243759172,
+        "residual_rmse_seconds": 1.2334576718287626,
+        "intervals": [
+          {
+            "from_step": 11000,
+            "to_step": 11915,
+            "from_time": {
+              "utc": "2026-10-05T00:45:18+00:00",
+              "america_new_york": "2026-10-04T20:45:18-04:00"
+            },
+            "to_time": {
+              "utc": "2026-10-05T00:49:44+00:00",
+              "america_new_york": "2026-10-04T20:49:44-04:00"
+            },
+            "delta_steps": 915,
+            "delta_wall_seconds": 265.57995200157166,
+            "residual_seconds": 0.6988923541102281
+          },
+          {
+            "from_step": 11915,
+            "to_step": 12000,
+            "from_time": {
+              "utc": "2026-10-05T00:49:44+00:00",
+              "america_new_york": "2026-10-04T20:49:44-04:00"
+            },
+            "to_time": {
+              "utc": "2026-10-05T00:53:10+00:00",
+              "america_new_york": "2026-10-04T20:53:10-04:00"
+            },
+            "delta_steps": 85,
+            "delta_wall_seconds": 206.6807107925415,
+            "residual_seconds": 0.011503586819799239
+          },
+          {
+            "from_step": 12000,
+            "to_step": 13000,
+            "from_time": {
+              "utc": "2026-10-05T00:53:10+00:00",
+              "america_new_york": "2026-10-04T20:53:10-04:00"
+            },
+            "to_time": {
+              "utc": "2026-10-05T00:57:41+00:00",
+              "america_new_york": "2026-10-04T20:57:41-04:00"
+            },
+            "delta_steps": 1000,
+            "delta_wall_seconds": 270.80059003829956,
+            "residual_seconds": -0.04192437729184917
+          },
+          {
+            "from_step": 13000,
+            "to_step": 14000,
+            "from_time": {
+              "utc": "2026-10-05T00:57:41+00:00",
+              "america_new_york": "2026-10-04T20:57:41-04:00"
+            },
+            "to_time": {
+              "utc": "2026-10-05T01:02:15+00:00",
+              "america_new_york": "2026-10-04T21:02:15-04:00"
+            },
+            "delta_steps": 1000,
+            "delta_wall_seconds": 273.4952597618103,
+            "residual_seconds": 2.652745346218893
+          },
+          {
+            "from_step": 14000,
+            "to_step": 14298,
+            "from_time": {
+              "utc": "2026-10-05T01:02:15+00:00",
+              "america_new_york": "2026-10-04T21:02:15-04:00"
+            },
+            "to_time": {
+              "utc": "2026-10-05T01:05:56+00:00",
+              "america_new_york": "2026-10-04T21:05:56-04:00"
+            },
+            "delta_steps": 298,
+            "delta_wall_seconds": 221.7157163619995,
+            "residual_seconds": 0.10780485496388792
+          },
+          {
+            "from_step": 14298,
+            "to_step": 15000,
+            "from_time": {
+              "utc": "2026-10-05T01:05:56+00:00",
+              "america_new_york": "2026-10-04T21:05:56-04:00"
+            },
+            "to_time": {
+              "utc": "2026-10-05T01:10:06+00:00",
+              "america_new_york": "2026-10-04T21:10:06-04:00"
+            },
+            "delta_steps": 702,
+            "delta_wall_seconds": 249.19314455986023,
+            "residual_seconds": -0.7492107862872501
+          },
+          {
+            "from_step": 15000,
+            "to_step": 16000,
+            "from_time": {
+              "utc": "2026-10-05T01:10:06+00:00",
+              "america_new_york": "2026-10-04T21:10:06-04:00"
+            },
+            "to_time": {
+              "utc": "2026-10-05T01:14:34+00:00",
+              "america_new_york": "2026-10-04T21:14:34-04:00"
+            },
+            "delta_steps": 1000,
+            "delta_wall_seconds": 268.55307126045227,
+            "residual_seconds": -2.289443155139139
+          },
+          {
+            "from_step": 16000,
+            "to_step": 16681,
+            "from_time": {
+              "utc": "2026-10-05T01:14:34+00:00",
+              "america_new_york": "2026-10-04T21:14:34-04:00"
+            },
+            "to_time": {
+              "utc": "2026-10-05T01:18:41+00:00",
+              "america_new_york": "2026-10-04T21:18:41-04:00"
+            },
+            "delta_steps": 681,
+            "delta_wall_seconds": 246.6899290084839,
+            "residual_seconds": -1.7795963361256213
+          },
+          {
+            "from_step": 16681,
+            "to_step": 17000,
+            "from_time": {
+              "utc": "2026-10-05T01:18:41+00:00",
+              "america_new_york": "2026-10-04T21:18:41-04:00"
+            },
+            "to_time": {
+              "utc": "2026-10-05T01:22:25+00:00",
+              "america_new_york": "2026-10-04T21:22:25-04:00"
+            },
+            "delta_steps": 319,
+            "delta_wall_seconds": 223.76464176177979,
+            "residual_seconds": 0.6839002532061613
+          },
+          {
+            "from_step": 17000,
+            "to_step": 18000,
+            "from_time": {
+              "utc": "2026-10-05T01:22:25+00:00",
+              "america_new_york": "2026-10-04T21:22:25-04:00"
+            },
+            "to_time": {
+              "utc": "2026-10-05T01:26:56+00:00",
+              "america_new_york": "2026-10-04T21:26:56-04:00"
+            },
+            "delta_steps": 1000,
+            "delta_wall_seconds": 271.8448247909546,
+            "residual_seconds": 1.0023103753631801
+          },
+          {
+            "from_step": 18000,
+            "to_step": 19000,
+            "from_time": {
+              "utc": "2026-10-05T01:26:56+00:00",
+              "america_new_york": "2026-10-04T21:26:56-04:00"
+            },
+            "to_time": {
+              "utc": "2026-10-05T01:31:27+00:00",
+              "america_new_york": "2026-10-04T21:31:27-04:00"
+            },
+            "delta_steps": 1000,
+            "delta_wall_seconds": 270.3536419868469,
+            "residual_seconds": -0.4888724287444859
+          },
+          {
+            "from_step": 19000,
+            "to_step": 19064,
+            "from_time": {
+              "utc": "2026-10-05T01:31:27+00:00",
+              "america_new_york": "2026-10-04T21:31:27-04:00"
+            },
+            "to_time": {
+              "utc": "2026-10-05T01:34:52+00:00",
+              "america_new_york": "2026-10-04T21:34:52-04:00"
+            },
+            "delta_steps": 64,
+            "delta_wall_seconds": 205.38826751708984,
+            "residual_seconds": 0.19189031290613912
+          }
+        ]
+      },
+      "clean_training_rate": {
+        "log_window_count": 293,
+        "mean_seconds_per_step": 0.06786998198796763,
+        "median_seconds_per_step": 0.06711343452334403,
+        "p10_seconds_per_step": 0.06379666566848755,
+        "p90_seconds_per_step": 0.07293932963162661
+      },
+      "evaluation_rate": {
+        "recent_complete_cycles": 10,
+        "mean_reported_evaluator_seconds_sum_three_offsets": 182.13433267474176,
+        "mean_three_offset_wall_seconds_including_subprocess_startup": 201.22028671503065,
+        "mean_unlogged_startup_io_seconds_per_three_offsets": 19.085954040288897
+      },
+      "remaining_cost_separation": {
+        "pure_training_seconds": 259.94203101391605,
+        "estimated_environment_evaluation_seconds_including_launches": 1068.14199655056,
+        "remaining_other_overhead_seconds_by_difference": 21.051048004676886,
+        "remaining_seconds_point": 1349.1350755691528
+      },
+      "eta": {
+        "point": {
+          "utc": "2026-10-05T02:00:46+00:00",
+          "america_new_york": "2026-10-04T22:00:46-04:00"
+        },
+        "range_lower": {
+          "utc": "2026-10-05T01:56:45+00:00",
+          "america_new_york": "2026-10-04T21:56:45-04:00"
+        },
+        "range_upper": {
+          "utc": "2026-10-05T02:05:21+00:00",
+          "america_new_york": "2026-10-04T22:05:21-04:00"
+        },
+        "remaining_minutes_point": 22.485584592819215,
+        "remaining_minutes_range": [
+          18.472645950317382,
+          27.081856568654377
+        ]
+      }
+    },
+    "flow_3072": {
+      "current_checkpoint_step": 11000,
+      "current_logged_training_step": 11000,
+      "current_optimizer_step": 11000,
+      "target_steps": 23830,
+      "steps_per_epoch": 2383,
+      "epochs": 10,
+      "step_progress_fraction": 0.46160302140159465,
+      "remaining_optimizer_steps": 12830,
+      "completed_eval_cycles": 14,
+      "total_scheduled_eval_cycles": 33,
+      "completion_marker_present": false,
+      "state": "projected",
+      "last_complete_eval": {
+        "step": 10000,
+        "time": {
+          "utc": "2026-10-05T01:36:51+00:00",
+          "america_new_york": "2026-10-04T21:36:51-04:00"
+        }
+      },
+      "current_partial_evaluation": {
+        "in_progress": true,
+        "offsets_already_saved_when_read": [],
+        "estimated_seconds_remaining": 216.70503410100935,
+        "note": "File observations may differ by seconds during live collection; use checkpoint-time phase estimate, not each missing JSON as a whole unfinished offset."
+      },
+      "remaining_eval_steps_after_current": [
+        11915,
+        12000,
+        13000,
+        14000,
+        14298,
+        15000,
+        16000,
+        16681,
+        17000,
+        18000,
+        19000,
+        19064,
+        20000,
+        21000,
+        21447,
+        22000,
+        23000,
+        23830
+      ],
+      "remaining_eval_steps_after_last_complete": [
+        11000,
+        11915,
+        12000,
+        13000,
+        14000,
+        14298,
+        15000,
+        16000,
+        16681,
+        17000,
+        18000,
+        19000,
+        19064,
+        20000,
+        21000,
+        21447,
+        22000,
+        23000,
+        23830
+      ],
+      "fit": {
+        "method": "OLS consecutive complete-cycle intervals during concurrent execution",
+        "interval_count": 12,
+        "seconds_per_optimizer_step": 0.04594309834276889,
+        "seconds_per_three_offset_eval_cycle": 256.18317281779144,
+        "residual_rmse_seconds": 1.9650231225797543,
+        "intervals": [
+          {
+            "from_step": 2000,
+            "to_step": 2383,
+            "from_time": {
+              "utc": "2026-10-05T00:39:29+00:00",
+              "america_new_york": "2026-10-04T20:39:29-04:00"
+            },
+            "to_time": {
+              "utc": "2026-10-05T00:44:03+00:00",
+              "america_new_york": "2026-10-04T20:44:03-04:00"
+            },
+            "delta_steps": 383,
+            "delta_wall_seconds": 273.97216534614563,
+            "residual_seconds": 0.19278586307370915
+          },
+          {
+            "from_step": 2383,
+            "to_step": 3000,
+            "from_time": {
+              "utc": "2026-10-05T00:44:03+00:00",
+              "america_new_york": "2026-10-04T20:44:03-04:00"
+            },
+            "to_time": {
+              "utc": "2026-10-05T00:48:50+00:00",
+              "america_new_york": "2026-10-04T20:48:50-04:00"
+            },
+            "delta_steps": 617,
+            "delta_wall_seconds": 286.67316150665283,
+            "residual_seconds": 2.1430970113729586
+          },
+          {
+            "from_step": 3000,
+            "to_step": 4000,
+            "from_time": {
+              "utc": "2026-10-05T00:48:50+00:00",
+              "america_new_york": "2026-10-04T20:48:50-04:00"
+            },
+            "to_time": {
+              "utc": "2026-10-05T00:53:51+00:00",
+              "america_new_york": "2026-10-04T20:53:51-04:00"
+            },
+            "delta_steps": 1000,
+            "delta_wall_seconds": 301.1719460487366,
+            "residual_seconds": -0.9543251118237777
+          },
+          {
+            "from_step": 4000,
+            "to_step": 4766,
+            "from_time": {
+              "utc": "2026-10-05T00:53:51+00:00",
+              "america_new_york": "2026-10-04T20:53:51-04:00"
+            },
+            "to_time": {
+              "utc": "2026-10-05T00:58:44+00:00",
+              "america_new_york": "2026-10-04T20:58:44-04:00"
+            },
+            "delta_steps": 766,
+            "delta_wall_seconds": 293.2835638523102,
+            "residual_seconds": 1.9079777039577834
+          },
+          {
+            "from_step": 4766,
+            "to_step": 5000,
+            "from_time": {
+              "utc": "2026-10-05T00:58:44+00:00",
+              "america_new_york": "2026-10-04T20:58:44-04:00"
+            },
+            "to_time": {
+              "utc": "2026-10-05T01:03:12+00:00",
+              "america_new_york": "2026-10-04T21:03:12-04:00"
+            },
+            "delta_steps": 234,
+            "delta_wall_seconds": 267.86762499809265,
+            "residual_seconds": 0.9337671680933113
+          },
+          {
+            "from_step": 5000,
+            "to_step": 6000,
+            "from_time": {
+              "utc": "2026-10-05T01:03:12+00:00",
+              "america_new_york": "2026-10-04T21:03:12-04:00"
+            },
+            "to_time": {
+              "utc": "2026-10-05T01:08:11+00:00",
+              "america_new_york": "2026-10-04T21:08:11-04:00"
+            },
+            "delta_steps": 1000,
+            "delta_wall_seconds": 299.0892469882965,
+            "residual_seconds": -3.037024172263841
+          },
+          {
+            "from_step": 6000,
+            "to_step": 7000,
+            "from_time": {
+              "utc": "2026-10-05T01:08:11+00:00",
+              "america_new_york": "2026-10-04T21:08:11-04:00"
+            },
+            "to_time": {
+              "utc": "2026-10-05T01:13:11+00:00",
+              "america_new_york": "2026-10-04T21:13:11-04:00"
+            },
+            "delta_steps": 1000,
+            "delta_wall_seconds": 300.42483043670654,
+            "residual_seconds": -1.701440723853807
+          },
+          {
+            "from_step": 7000,
+            "to_step": 7149,
+            "from_time": {
+              "utc": "2026-10-05T01:13:11+00:00",
+              "america_new_york": "2026-10-04T21:13:11-04:00"
+            },
+            "to_time": {
+              "utc": "2026-10-05T01:17:33+00:00",
+              "america_new_york": "2026-10-04T21:17:33-04:00"
+            },
+            "delta_steps": 149,
+            "delta_wall_seconds": 261.5520112514496,
+            "residual_seconds": -1.4766832194144115
+          },
+          {
+            "from_step": 7149,
+            "to_step": 8000,
+            "from_time": {
+              "utc": "2026-10-05T01:17:33+00:00",
+              "america_new_york": "2026-10-04T21:17:33-04:00"
+            },
+            "to_time": {
+              "utc": "2026-10-05T01:22:32+00:00",
+              "america_new_york": "2026-10-04T21:22:32-04:00"
+            },
+            "delta_steps": 851,
+            "delta_wall_seconds": 299.1781904697418,
+            "residual_seconds": 3.897440962254052
+          },
+          {
+            "from_step": 8000,
+            "to_step": 9000,
+            "from_time": {
+              "utc": "2026-10-05T01:22:32+00:00",
+              "america_new_york": "2026-10-04T21:22:32-04:00"
+            },
+            "to_time": {
+              "utc": "2026-10-05T01:27:35+00:00",
+              "america_new_york": "2026-10-04T21:27:35-04:00"
+            },
+            "delta_steps": 1000,
+            "delta_wall_seconds": 303.1759569644928,
+            "residual_seconds": 1.049685803932448
+          },
+          {
+            "from_step": 9000,
+            "to_step": 9532,
+            "from_time": {
+              "utc": "2026-10-05T01:27:35+00:00",
+              "america_new_york": "2026-10-04T21:27:35-04:00"
+            },
+            "to_time": {
+              "utc": "2026-10-05T01:32:14+00:00",
+              "america_new_york": "2026-10-04T21:32:14-04:00"
+            },
+            "delta_steps": 532,
+            "delta_wall_seconds": 278.3333246707916,
+            "residual_seconds": -2.2915764653528754
+          },
+          {
+            "from_step": 9532,
+            "to_step": 10000,
+            "from_time": {
+              "utc": "2026-10-05T01:32:14+00:00",
+              "america_new_york": "2026-10-04T21:32:14-04:00"
+            },
+            "to_time": {
+              "utc": "2026-10-05T01:36:51+00:00",
+              "america_new_york": "2026-10-04T21:36:51-04:00"
+            },
+            "delta_steps": 468,
+            "delta_wall_seconds": 277.02083802223206,
+            "residual_seconds": -0.6637048199752371
+          }
+        ]
+      },
+      "clean_training_rate": {
+        "log_window_count": 293,
+        "mean_seconds_per_step": 0.0440225771091141,
+        "median_seconds_per_step": 0.043820521235466,
+        "p10_seconds_per_step": 0.041306990608572965,
+        "p90_seconds_per_step": 0.047058695070445536
+      },
+      "evaluation_rate": {
+        "recent_complete_cycles": 10,
+        "mean_reported_evaluator_seconds_sum_three_offsets": 235.7287277052179,
+        "mean_three_offset_wall_seconds_including_subprocess_startup": 255.4663585066795,
+        "mean_unlogged_startup_io_seconds_per_three_offsets": 19.73763080146162
+      },
+      "remaining_cost_separation": {
+        "pure_training_seconds": 564.8096643099339,
+        "estimated_environment_evaluation_seconds_including_launches": 4815.09948722124,
+        "remaining_other_overhead_seconds_by_difference": 52.099750780150316,
+        "remaining_seconds_point": 5432.008902311325
+      },
+      "eta": {
+        "point": {
+          "utc": "2026-10-05T03:08:49+00:00",
+          "america_new_york": "2026-10-04T23:08:49-04:00"
+        },
+        "range_lower": {
+          "utc": "2026-10-05T02:54:53+00:00",
+          "america_new_york": "2026-10-04T22:54:53-04:00"
+        },
+        "range_upper": {
+          "utc": "2026-10-05T03:23:19+00:00",
+          "america_new_york": "2026-10-04T23:23:19-04:00"
+        },
+        "remaining_minutes_point": 90.53348170518875,
+        "remaining_minutes_range": [
+          76.60963170131048,
+          105.04066503842672
+        ]
+      }
+    }
+  },
+  "both_runs_complete_eta": {
+    "point": {
+      "utc": "2026-10-05T03:08:49+00:00",
+      "america_new_york": "2026-10-04T23:08:49-04:00"
+    },
+    "range_lower": {
+      "utc": "2026-10-05T02:54:53+00:00",
+      "america_new_york": "2026-10-04T22:54:53-04:00"
+    },
+    "range_upper": {
+      "utc": "2026-10-05T03:23:19+00:00",
+      "america_new_york": "2026-10-04T23:23:19-04:00"
+    },
+    "remaining_minutes_point": 90.53348170518875,
+    "remaining_minutes_range": [
+      76.60963170131048,
+      105.04066503842672
+    ],
+    "completion_unconfirmed": true,
+    "projection_overdue": false
+  }
+}

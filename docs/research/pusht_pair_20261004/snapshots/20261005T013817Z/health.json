@@ -1,0 +1,86 @@
+{
+  "observed_utc": "2026-10-05T01:38:17+00:00",
+  "hardware": {
+    "observed_utc": "2026-10-05T01:38:17+00:00",
+    "units": {
+      "utilization.gpu": "%",
+      "memory.used": "MiB",
+      "memory.total": "MiB",
+      "power.draw": "W"
+    },
+    "gpus": [
+      {
+        "index": "0",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "0",
+        "memory.used": "1443",
+        "memory.total": "81920",
+        "power.draw": "65.65"
+      },
+      {
+        "index": "1",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "100",
+        "memory.used": "1443",
+        "memory.total": "81920",
+        "power.draw": "81.79"
+      },
+      {
+        "index": "2",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "100",
+        "memory.used": "1443",
+        "memory.total": "81920",
+        "power.draw": "88.79"
+      },
+      {
+        "index": "3",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "100",
+        "memory.used": "1443",
+        "memory.total": "81920",
+        "power.draw": "84.56"
+      },
+      {
+        "index": "4",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "59",
+        "memory.used": "2159",
+        "memory.total": "81920",
+        "power.draw": "151.71"
+      },
+      {
+        "index": "5",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "100",
+        "memory.used": "1429",
+        "memory.total": "81920",
+        "power.draw": "87.21"
+      },
+      {
+        "index": "6",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "100",
+        "memory.used": "1429",
+        "memory.total": "81920",
+        "power.draw": "85.25"
+      },
+      {
+        "index": "7",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "100",
+        "memory.used": "1429",
+        "memory.total": "81920",
+        "power.draw": "85.92"
+      }
+    ]
+  },
+  "process_state_counts": {
+    "R": 8,
+    "S": 71,
+    "T": 1
+  },
+  "controller_state": "running",
+  "sequential_supervisor_intentionally_paused": true,
+  "warning": "Utilization during evaluation may include NCCL waiting; it does not prove productive compute on every rank."
+}

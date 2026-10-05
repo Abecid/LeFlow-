@@ -1,0 +1,569 @@
+{
+  "source_sha256": "0c16922cac513902c7e126bf917cf2bca3aa13b706fd6a4b44de20845d44ce44",
+  "snapshot_time": {
+    "utc": "2026-10-05T01:21:18+00:00",
+    "america_new_york": "2026-10-04T21:21:18-04:00"
+  },
+  "concurrent_training_started": {
+    "utc": "2026-10-05T00:29:06+00:00",
+    "america_new_york": "2026-10-04T20:29:06-04:00"
+  },
+  "methodology": {
+    "point_formula": "last_complete_eval_time + fitted_seconds_per_step * (target_steps - last_complete_eval_step) + fitted_seconds_per_three_offset_cycle * remaining_scheduled_cycles + 15 seconds finalization",
+    "fit": "OLS delta_wall_seconds = a * delta_optimizer_steps + b over consecutive COMPLETE three-offset evaluation endpoints during concurrent execution; latest at most 12 intervals. This avoids partial-evaluation phase bias.",
+    "schedule": "Union of multiples of evaluation.every_steps and epoch end steps; terminal at_end evaluation is deduplicated when final epoch already evaluated.",
+    "planning_range": "Sensitivity envelope: both fitted rates scaled by 0.85 / 1.15, finalization 5 / 60 seconds. This is a load-variation planning range, not a statistical confidence interval.",
+    "separation": "Pure training rate is mean 128/system.samples_per_second over recent uncontaminated ten-step log windows; exclude windows crossing any local validation or closed-loop evaluation. Fitted per-step rate additionally absorbs checkpoint/local-validation overhead."
+  },
+  "runs": {
+    "btm_3072": {
+      "current_checkpoint_step": 17000,
+      "target_steps": 23830,
+      "steps_per_epoch": 2383,
+      "epochs": 10,
+      "step_progress_fraction": 0.7133864876206463,
+      "remaining_optimizer_steps": 6830,
+      "completed_eval_cycles": 23,
+      "total_scheduled_eval_cycles": 33,
+      "last_complete_eval": {
+        "step": 16681,
+        "time": {
+          "utc": "2026-10-05T01:18:41+00:00",
+          "america_new_york": "2026-10-04T21:18:41-04:00"
+        }
+      },
+      "current_partial_evaluation": {
+        "in_progress": true,
+        "current_checkpoint_time": "2026-10-05T01:19:04+00:00",
+        "offsets_already_saved_when_read": [
+          25
+        ],
+        "estimated_seconds_remaining": 68.3239324092865,
+        "note": "Evaluator files can advance while snapshot is collected; checkpoint-time phase estimate is used rather than counting remaining JSONs as full episodes."
+      },
+      "remaining_eval_steps_after_current": [
+        18000,
+        19000,
+        19064,
+        20000,
+        21000,
+        21447,
+        22000,
+        23000,
+        23830
+      ],
+      "remaining_eval_steps_after_last_complete": [
+        17000,
+        18000,
+        19000,
+        19064,
+        20000,
+        21000,
+        21447,
+        22000,
+        23000,
+        23830
+      ],
+      "fit": {
+        "interval_count": 11,
+        "seconds_per_optimizer_step": 0.07032707621346086,
+        "seconds_per_three_offset_eval_cycle": 200.7567299964661,
+        "residual_rmse_seconds": 1.3559180170972092,
+        "intervals": [
+          {
+            "from_step": 9000,
+            "to_step": 9532,
+            "from_time": {
+              "utc": "2026-10-05T00:32:52+00:00",
+              "america_new_york": "2026-10-04T20:32:52-04:00"
+            },
+            "to_time": {
+              "utc": "2026-10-05T00:36:51+00:00",
+              "america_new_york": "2026-10-04T20:36:51-04:00"
+            },
+            "delta_steps": 532,
+            "delta_wall_seconds": 238.74045944213867,
+            "residual_seconds": 0.569724900111396
+          },
+          {
+            "from_step": 9532,
+            "to_step": 10000,
+            "from_time": {
+              "utc": "2026-10-05T00:36:51+00:00",
+              "america_new_york": "2026-10-04T20:36:51-04:00"
+            },
+            "to_time": {
+              "utc": "2026-10-05T00:40:46+00:00",
+              "america_new_york": "2026-10-04T20:40:46-04:00"
+            },
+            "delta_steps": 468,
+            "delta_wall_seconds": 234.88117098808289,
+            "residual_seconds": 1.2113693237170935
+          },
+          {
+            "from_step": 10000,
+            "to_step": 11000,
+            "from_time": {
+              "utc": "2026-10-05T00:40:46+00:00",
+              "america_new_york": "2026-10-04T20:40:46-04:00"
+            },
+            "to_time": {
+              "utc": "2026-10-05T00:45:18+00:00",
+              "america_new_york": "2026-10-04T20:45:18-04:00"
+            },
+            "delta_steps": 1000,
+            "delta_wall_seconds": 272.1762981414795,
+            "residual_seconds": 1.09249193155253
+          },
+          {
+            "from_step": 11000,
+            "to_step": 11915,
+            "from_time": {
+              "utc": "2026-10-05T00:45:18+00:00",
+              "america_new_york": "2026-10-04T20:45:18-04:00"
+            },
+            "to_time": {
+              "utc": "2026-10-05T00:49:44+00:00",
+              "america_new_york": "2026-10-04T20:49:44-04:00"
+            },
+            "delta_steps": 915,
+            "delta_wall_seconds": 265.57995200157166,
+            "residual_seconds": 0.47394726978888
+          },
+          {
+            "from_step": 11915,
+            "to_step": 12000,
+            "from_time": {
+              "utc": "2026-10-05T00:49:44+00:00",
+              "america_new_york": "2026-10-04T20:49:44-04:00"
+            },
+            "to_time": {
+              "utc": "2026-10-05T00:53:10+00:00",
+              "america_new_york": "2026-10-04T20:53:10-04:00"
+            },
+            "delta_steps": 85,
+            "delta_wall_seconds": 206.6807107925415,
+            "residual_seconds": -0.05382068206878898
+          },
+          {
+            "from_step": 12000,
+            "to_step": 13000,
+            "from_time": {
+              "utc": "2026-10-05T00:53:10+00:00",
+              "america_new_york": "2026-10-04T20:53:10-04:00"
+            },
+            "to_time": {
+              "utc": "2026-10-05T00:57:41+00:00",
+              "america_new_york": "2026-10-04T20:57:41-04:00"
+            },
+            "delta_steps": 1000,
+            "delta_wall_seconds": 270.80059003829956,
+            "residual_seconds": -0.28321617162740154
+          },
+          {
+            "from_step": 13000,
+            "to_step": 14000,
+            "from_time": {
+              "utc": "2026-10-05T00:57:41+00:00",
+              "america_new_york": "2026-10-04T20:57:41-04:00"
+            },
+            "to_time": {
+              "utc": "2026-10-05T01:02:15+00:00",
+              "america_new_york": "2026-10-04T21:02:15-04:00"
+            },
+            "delta_steps": 1000,
+            "delta_wall_seconds": 273.4952597618103,
+            "residual_seconds": 2.4114535518833407
+          },
+          {
+            "from_step": 14000,
+            "to_step": 14298,
+            "from_time": {
+              "utc": "2026-10-05T01:02:15+00:00",
+              "america_new_york": "2026-10-04T21:02:15-04:00"
+            },
+            "to_time": {
+              "utc": "2026-10-05T01:05:56+00:00",
+              "america_new_york": "2026-10-04T21:05:56-04:00"
+            },
+            "delta_steps": 298,
+            "delta_wall_seconds": 221.7157163619995,
+            "residual_seconds": 0.00151765392206471
+          },
+          {
+            "from_step": 14298,
+            "to_step": 15000,
+            "from_time": {
+              "utc": "2026-10-05T01:05:56+00:00",
+              "america_new_york": "2026-10-04T21:05:56-04:00"
+            },
+            "to_time": {
+              "utc": "2026-10-05T01:10:06+00:00",
+              "america_new_york": "2026-10-04T21:10:06-04:00"
+            },
+            "delta_steps": 702,
+            "delta_wall_seconds": 249.19314455986023,
+            "residual_seconds": -0.9331929384553916
+          },
+          {
+            "from_step": 15000,
+            "to_step": 16000,
+            "from_time": {
+              "utc": "2026-10-05T01:10:06+00:00",
+              "america_new_york": "2026-10-04T21:10:06-04:00"
+            },
+            "to_time": {
+              "utc": "2026-10-05T01:14:34+00:00",
+              "america_new_york": "2026-10-04T21:14:34-04:00"
+            },
+            "delta_steps": 1000,
+            "delta_wall_seconds": 268.55307126045227,
+            "residual_seconds": -2.5307349494746916
+          },
+          {
+            "from_step": 16000,
+            "to_step": 16681,
+            "from_time": {
+              "utc": "2026-10-05T01:14:34+00:00",
+              "america_new_york": "2026-10-04T21:14:34-04:00"
+            },
+            "to_time": {
+              "utc": "2026-10-05T01:18:41+00:00",
+              "america_new_york": "2026-10-04T21:18:41-04:00"
+            },
+            "delta_steps": 681,
+            "delta_wall_seconds": 246.6899290084839,
+            "residual_seconds": -1.9595398893490596
+          }
+        ]
+      },
+      "clean_training_rate": {
+        "log_window_count": 292,
+        "mean_seconds_per_step": 0.06628872022568567,
+        "median_seconds_per_step": 0.06555723091587425,
+        "p10_seconds_per_step": 0.06347282137721777,
+        "p90_seconds_per_step": 0.06988428281620146,
+        "mean_seconds_per_1000_steps": 66.28872022568568
+      },
+      "evaluation_rate": {
+        "recent_complete_cycles": 10,
+        "mean_reported_evaluator_seconds_sum_three_offsets": 182.3827334208414,
+        "mean_three_offset_wall_seconds_including_subprocess_startup": 201.62977695465088,
+        "mean_unlogged_startup_io_seconds_per_three_offsets": 19.24704353380949
+      },
+      "remaining_cost_separation": {
+        "pure_training_seconds": 452.75195914143313,
+        "estimated_environment_evaluation_seconds_including_launches": 1882.9919250011444,
+        "remaining_other_overhead_seconds_by_difference": 32.86659282809501,
+        "remaining_seconds_point": 2368.6104769706726
+      },
+      "eta": {
+        "point": {
+          "utc": "2026-10-05T02:00:46+00:00",
+          "america_new_york": "2026-10-04T22:00:46-04:00"
+        },
+        "range_lower": {
+          "utc": "2026-10-05T01:54:20+00:00",
+          "america_new_york": "2026-10-04T21:54:20-04:00"
+        },
+        "range_upper": {
+          "utc": "2026-10-05T02:07:48+00:00",
+          "america_new_york": "2026-10-04T22:07:48-04:00"
+        },
+        "remaining_minutes_point": 39.476841282844546,
+        "remaining_minutes_range": [
+          33.034335696697234,
+          46.50268020232519
+        ]
+      },
+      "crosscheck_lifetime_linear_remaining_minutes": 39.834970588235294
+    },
+    "flow_3072": {
+      "current_checkpoint_step": 8000,
+      "target_steps": 23830,
+      "steps_per_epoch": 2383,
+      "epochs": 10,
+      "step_progress_fraction": 0.3357112882920688,
+      "remaining_optimizer_steps": 15830,
+      "completed_eval_cycles": 10,
+      "total_scheduled_eval_cycles": 33,
+      "last_complete_eval": {
+        "step": 7149,
+        "time": {
+          "utc": "2026-10-05T01:17:33+00:00",
+          "america_new_york": "2026-10-04T21:17:33-04:00"
+        }
+      },
+      "current_partial_evaluation": {
+        "in_progress": true,
+        "current_checkpoint_time": "2026-10-05T01:18:13+00:00",
+        "offsets_already_saved_when_read": [
+          25,
+          50
+        ],
+        "estimated_seconds_remaining": 70.93128225803378,
+        "note": "Evaluator files can advance while snapshot is collected; checkpoint-time phase estimate is used rather than counting remaining JSONs as full episodes."
+      },
+      "remaining_eval_steps_after_current": [
+        9000,
+        9532,
+        10000,
+        11000,
+        11915,
+        12000,
+        13000,
+        14000,
+        14298,
+        15000,
+        16000,
+        16681,
+        17000,
+        18000,
+        19000,
+        19064,
+        20000,
+        21000,
+        21447,
+        22000,
+        23000,
+        23830
+      ],
+      "remaining_eval_steps_after_last_complete": [
+        8000,
+        9000,
+        9532,
+        10000,
+        11000,
+        11915,
+        12000,
+        13000,
+        14000,
+        14298,
+        15000,
+        16000,
+        16681,
+        17000,
+        18000,
+        19000,
+        19064,
+        20000,
+        21000,
+        21447,
+        22000,
+        23000,
+        23830
+      ],
+      "fit": {
+        "interval_count": 9,
+        "seconds_per_optimizer_step": 0.04444247275070842,
+        "seconds_per_three_offset_eval_cycle": 256.98369642596447,
+        "residual_rmse_seconds": 1.5516729832621625,
+        "intervals": [
+          {
+            "from_step": 1000,
+            "to_step": 2000,
+            "from_time": {
+              "utc": "2026-10-05T00:34:27+00:00",
+              "america_new_york": "2026-10-04T20:34:27-04:00"
+            },
+            "to_time": {
+              "utc": "2026-10-05T00:39:29+00:00",
+              "america_new_york": "2026-10-04T20:39:29-04:00"
+            },
+            "delta_steps": 1000,
+            "delta_wall_seconds": 302.09548234939575,
+            "residual_seconds": 0.6693131727228661
+          },
+          {
+            "from_step": 2000,
+            "to_step": 2383,
+            "from_time": {
+              "utc": "2026-10-05T00:39:29+00:00",
+              "america_new_york": "2026-10-04T20:39:29-04:00"
+            },
+            "to_time": {
+              "utc": "2026-10-05T00:44:03+00:00",
+              "america_new_york": "2026-10-04T20:44:03-04:00"
+            },
+            "delta_steps": 383,
+            "delta_wall_seconds": 273.97216534614563,
+            "residual_seconds": -0.032998143340137176
+          },
+          {
+            "from_step": 2383,
+            "to_step": 3000,
+            "from_time": {
+              "utc": "2026-10-05T00:44:03+00:00",
+              "america_new_york": "2026-10-04T20:44:03-04:00"
+            },
+            "to_time": {
+              "utc": "2026-10-05T00:48:50+00:00",
+              "america_new_york": "2026-10-04T20:48:50-04:00"
+            },
+            "delta_steps": 617,
+            "delta_wall_seconds": 286.67316150665283,
+            "residual_seconds": 2.268459393501246
+          },
+          {
+            "from_step": 3000,
+            "to_step": 4000,
+            "from_time": {
+              "utc": "2026-10-05T00:48:50+00:00",
+              "america_new_york": "2026-10-04T20:48:50-04:00"
+            },
+            "to_time": {
+              "utc": "2026-10-05T00:53:51+00:00",
+              "america_new_york": "2026-10-04T20:53:51-04:00"
+            },
+            "delta_steps": 1000,
+            "delta_wall_seconds": 301.1719460487366,
+            "residual_seconds": -0.25422312793631363
+          },
+          {
+            "from_step": 4000,
+            "to_step": 4766,
+            "from_time": {
+              "utc": "2026-10-05T00:53:51+00:00",
+              "america_new_york": "2026-10-04T20:53:51-04:00"
+            },
+            "to_time": {
+              "utc": "2026-10-05T00:58:44+00:00",
+              "america_new_york": "2026-10-04T20:58:44-04:00"
+            },
+            "delta_steps": 766,
+            "delta_wall_seconds": 293.2835638523102,
+            "residual_seconds": 2.256933299303057
+          },
+          {
+            "from_step": 4766,
+            "to_step": 5000,
+            "from_time": {
+              "utc": "2026-10-05T00:58:44+00:00",
+              "america_new_york": "2026-10-04T20:58:44-04:00"
+            },
+            "to_time": {
+              "utc": "2026-10-05T01:03:12+00:00",
+              "america_new_york": "2026-10-04T21:03:12-04:00"
+            },
+            "delta_steps": 234,
+            "delta_wall_seconds": 267.86762499809265,
+            "residual_seconds": 0.48438994846242167
+          },
+          {
+            "from_step": 5000,
+            "to_step": 6000,
+            "from_time": {
+              "utc": "2026-10-05T01:03:12+00:00",
+              "america_new_york": "2026-10-04T21:03:12-04:00"
+            },
+            "to_time": {
+              "utc": "2026-10-05T01:08:11+00:00",
+              "america_new_york": "2026-10-04T21:08:11-04:00"
+            },
+            "delta_steps": 1000,
+            "delta_wall_seconds": 299.0892469882965,
+            "residual_seconds": -2.336922188376377
+          },
+          {
+            "from_step": 6000,
+            "to_step": 7000,
+            "from_time": {
+              "utc": "2026-10-05T01:08:11+00:00",
+              "america_new_york": "2026-10-04T21:08:11-04:00"
+            },
+            "to_time": {
+              "utc": "2026-10-05T01:13:11+00:00",
+              "america_new_york": "2026-10-04T21:13:11-04:00"
+            },
+            "delta_steps": 1000,
+            "delta_wall_seconds": 300.42483043670654,
+            "residual_seconds": -1.001338739966343
+          },
+          {
+            "from_step": 7000,
+            "to_step": 7149,
+            "from_time": {
+              "utc": "2026-10-05T01:13:11+00:00",
+              "america_new_york": "2026-10-04T21:13:11-04:00"
+            },
+            "to_time": {
+              "utc": "2026-10-05T01:17:33+00:00",
+              "america_new_york": "2026-10-04T21:17:33-04:00"
+            },
+            "delta_steps": 149,
+            "delta_wall_seconds": 261.5520112514496,
+            "residual_seconds": -2.053613614370448
+          }
+        ]
+      },
+      "clean_training_rate": {
+        "log_window_count": 293,
+        "mean_seconds_per_step": 0.04248967310254789,
+        "median_seconds_per_step": 0.04207708444446325,
+        "p10_seconds_per_step": 0.04058733649551868,
+        "p90_seconds_per_step": 0.04470046874135732,
+        "mean_seconds_per_1000_steps": 42.48967310254789
+      },
+      "evaluation_rate": {
+        "recent_complete_cycles": 10,
+        "mean_reported_evaluator_seconds_sum_three_offsets": 235.59697800632566,
+        "mean_three_offset_wall_seconds_including_subprocess_startup": 255.19155714511874,
+        "mean_unlogged_startup_io_seconds_per_three_offsets": 19.59457913879308
+      },
+      "remaining_cost_separation": {
+        "pure_training_seconds": 672.6115252133332,
+        "estimated_environment_evaluation_seconds_including_launches": 5685.1455394506465,
+        "remaining_other_overhead_seconds_by_difference": 84.64009968080791,
+        "remaining_seconds_point": 6442.397164344788
+      },
+      "eta": {
+        "point": {
+          "utc": "2026-10-05T03:08:40+00:00",
+          "america_new_york": "2026-10-04T23:08:40-04:00"
+        },
+        "range_lower": {
+          "utc": "2026-10-05T02:51:52+00:00",
+          "america_new_york": "2026-10-04T22:51:52-04:00"
+        },
+        "range_upper": {
+          "utc": "2026-10-05T03:26:03+00:00",
+          "america_new_york": "2026-10-04T23:26:03-04:00"
+        },
+        "remaining_minutes_point": 107.37328607241312,
+        "remaining_minutes_range": [
+          90.57669463952382,
+          124.75321083466211
+        ]
+      },
+      "crosscheck_lifetime_linear_remaining_minutes": 102.86202083333335
+    }
+  },
+  "both_runs_complete_eta": {
+    "point": {
+      "utc": "2026-10-05T03:08:40+00:00",
+      "america_new_york": "2026-10-04T23:08:40-04:00"
+    },
+    "range_lower": {
+      "utc": "2026-10-05T02:51:52+00:00",
+      "america_new_york": "2026-10-04T22:51:52-04:00"
+    },
+    "range_upper": {
+      "utc": "2026-10-05T03:26:03+00:00",
+      "america_new_york": "2026-10-04T23:26:03-04:00"
+    },
+    "remaining_minutes_point": 107.36666666666666,
+    "remaining_minutes_range": [
+      90.56666666666666,
+      124.75
+    ]
+  },
+  "summary": "At 9:21 PM EDT Oct 4, BTM has 6,830 optimizer steps left and flow 15,830. The ETA model explicitly includes remaining 1,000-step and epoch-end evaluations. Evaluation, not optimization, dominates the remaining wall time. These are projections assuming no failures/restarts or material host-load changes.",
+  "collector_review": {
+    "read_only": true,
+    "gpu_workload_or_process_signals": false,
+    "torch_loading": "Checkpoint tensors are mapped to CPU; errors including missing torch are contained per checkpoint. nvidia-smi is queried read-only.",
+    "partial_error_behavior": "Missing configs/evals/checkpoints return null or section errors, and checkpoint failures do not discard other metrics. A rare read_metrics/open or wandb-directory traversal I/O error can still escape main before JSON output. Collector exit 0 is not proof every section succeeded; inspect section error fields.",
+    "timestamp_note": "collection_finished_utc is assigned before hardware/process gathering, so it can precede the last observation by seconds; use recorded evaluation/checkpoint mtimes as timing anchors.",
+    "changes_made": "No collector, frozen repository, GPU, or process changes; only this derived local analysis file was written."
+  }
+}
