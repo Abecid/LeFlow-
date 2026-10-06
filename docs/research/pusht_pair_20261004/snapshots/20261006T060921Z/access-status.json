@@ -1,0 +1,143 @@
+{
+  "scheduled_heartbeat_utc": "2026-10-06T06:08:47.903Z",
+  "status": "monitoring_access_recovered_campaign_still_interrupted",
+  "collection_started_utc": "2026-10-06T06:09:21+00:00",
+  "collection_finished_utc": "2026-10-06T06:09:24+00:00",
+  "raw_snapshot_sha256": "c2233ff70889569547d2de91fbc6a40520a59a5f59af096be6ba3cd58fb02188",
+  "online_readback_sha256": "9da65e733e0d3cc51ae1b4f125b05e9d2eea6230da9e82b2f836156a64dd8e95",
+  "fresh_server_state_verified": true,
+  "fresh_online_state_verified": true,
+  "previous_access_incident": "20261006T055505Z",
+  "unchanged_results_report": "20261006T050931Z",
+  "frozen_source_commit": "69babde283f504120dae3dfc6e9188a0e2242be4",
+  "manifest_sha256": "6410f2f196e6fd50a84ae82a192edc718ce169885144195cc63693faaa7f7f26",
+  "comparison": {
+    "baseline_raw_snapshot_sha256": "e67316faa86023e5a4a84babbb0ac5aa2ca266fca8fcf90c610d386359c86400",
+    "unchanged_top_level_sections": [
+      "campaign",
+      "frozen_plan",
+      "dataset",
+      "controller_status"
+    ],
+    "unchanged_per_run_sections": [
+      "config",
+      "provenance",
+      "metrics",
+      "evaluations",
+      "checkpoints",
+      "training_complete"
+    ],
+    "process_state_unchanged_excluding_elapsed_seconds": true,
+    "meaningful_new_training_or_evaluation_evidence": false
+  },
+  "runs": {
+    "btm_3072": {
+      "last_saved_step": 23830,
+      "last_logged_step": 23830,
+      "selected_checkpoint_step": 1000,
+      "metric_rows": 2465,
+      "evaluation_records": 99,
+      "complete_three_offset_cycles": 33,
+      "metric_parse_errors": [],
+      "completion_marker_present": false,
+      "online": {
+        "run_id": "z78m0zk6",
+        "state": "finished",
+        "step": 23830,
+        "runtime_seconds": 8304,
+        "checked_utc": "2026-10-06T06:09:26+00:00"
+      }
+    },
+    "flow_3072": {
+      "last_saved_step": 23000,
+      "last_logged_step": 23040,
+      "selected_checkpoint_step": 1000,
+      "metric_rows": 2383,
+      "evaluation_records": 96,
+      "complete_three_offset_cycles": 32,
+      "metric_parse_errors": [],
+      "completion_marker_present": false,
+      "online": {
+        "run_id": "g0u3w723",
+        "state": "finished",
+        "step": 23040,
+        "runtime_seconds": 9240,
+        "checked_utc": "2026-10-06T06:09:26+00:00"
+      }
+    }
+  },
+  "gpu_observation": {
+    "initial_utc": "2026-10-06T06:09:24+00:00",
+    "initial_utilization_percent": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "initial_memory_mib": [
+      0,
+      0,
+      3,
+      3,
+      0,
+      0,
+      0,
+      0
+    ],
+    "followup_local_capture_finished_utc": "2026-10-06T06:11:31+00:00",
+    "followup_compute_applications_reported": 0,
+    "followup_utilization_percent": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "followup_memory_mib": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "interpretation": "Transient 3 MiB readings on GPUs 2 and 3 disappeared on the next sample; no evidence of a campaign restart."
+  },
+  "active_campaign_trainers": 0,
+  "active_flow_controller": false,
+  "original_supervisor_state": "stopped",
+  "campaign_complete": false,
+  "current_eta": null,
+  "recoverable_flow_updates_remaining": 830,
+  "gpu_jobs_changed": false,
+  "monitor_action": "keep_active",
+  "goals": {
+    "higher_primary_validation_success_demonstrated": false,
+    "controlled_efficiency_with_retained_success_demonstrated": false
+  },
+  "unchanged_selected_primary_success": {
+    "selection_step_both": 1000,
+    "btm": 0.25,
+    "flow": 0.2,
+    "paired_difference_pp": 5,
+    "paired_bootstrap_95_ci_pp": [
+      -15,
+      25
+    ]
+  },
+  "limitations": [
+    "No new failure-cause evidence",
+    "Held-out test unused",
+    "Single training seed",
+    "The access failure and recovery do not imply any training state change"
+  ]
+}

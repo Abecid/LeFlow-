@@ -1,11 +1,12 @@
 # LeFlow BTM-JEPA training: experiment status and results
 
-**Monitoring access interruption, October 6, 1:55 AM EDT (05:55 UTC):** SSH
-timed out during banner exchange on the initial attempt and one retry. No fresh
-server or W&B readback was obtained. The last successful check was at
-**1:39 AM EDT**, with all metrics, checkpoints and process state unchanged from
-the assessment below. This is an access failure, not evidence of a new training
-failure or recovery. See the [access incident](reports/20261006T055505Z.md).
+**Monitoring access recovered, October 6, 2:09 AM EDT (06:09 UTC):** Fresh
+server collection and authenticated W&B readback succeeded. Full training and
+evaluation records are unchanged: BTM saved at 23,830, flow saved at 23,000 and
+logged through 23,040, no active trainers, and both completion markers absent.
+Flow remains interrupted; there is no active completion ETA. See the
+[recovery update](reports/20261006T060921Z.md); the earlier
+[access incident](reports/20261006T055505Z.md) is preserved.
 
 **Verified October 6, 2026, 1:09–1:11 AM EDT (05:09–05:11 UTC).**
 
