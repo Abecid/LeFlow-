@@ -1,12 +1,12 @@
 # LeFlow BTM-JEPA training: experiment status and results
 
-**W&B readback unverified, October 6, 3:54 AM EDT (07:54 UTC):** Fresh
-server records remain unchanged. The online payload returned `AuthenticationError`;
-one retry failed during SSH banner exchange, so it could not retest the API.
-Online state was last verified at 3:40 AM EDT. The GPU query succeeded: the same
-two processes remain inaccessible in the SSH process view, with ownership
-unresolved. Flow recovery is unverified; there is no active completion ETA.
-See the [readback incident](reports/20261006T075418Z.md); earlier reports are preserved.
+**W&B access recovered, October 6, 4:09 AM EDT (08:09 UTC):** Fresh server
+collection and authenticated W&B checks succeeded. Campaign records remain
+unchanged. GPUs 2 and 3 remain active with unresolved ownership; one additional
+process was listed in one sample and absent from the follow-up. No campaign
+recovery or active completion ETA is verified. See the
+[recovery report](reports/20261006T080912Z.md); the
+[earlier readback incident](reports/20261006T075418Z.md) is preserved.
 
 **Verified October 6, 2026, 1:09–1:11 AM EDT (05:09–05:11 UTC).**
 
