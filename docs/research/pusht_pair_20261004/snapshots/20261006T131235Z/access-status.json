@@ -1,0 +1,164 @@
+{
+  "scheduled_heartbeat_utc": "2026-10-06T13:08:49.490Z",
+  "status": "campaign_and_online_reads_blocked_gpu_read_succeeded",
+  "fresh_server_state_verified": false,
+  "fresh_online_state_verified": false,
+  "fresh_gpu_process_mapping_verified": true,
+  "attempts": {
+    "campaign_collector": {
+      "count": 2,
+      "exit_codes": [
+        255,
+        255
+      ],
+      "errors": [
+        "Connection timed out during banner exchange\nConnection to UNKNOWN port 65535 timed out",
+        "Connection to UNKNOWN port 65535 timed out"
+      ]
+    },
+    "online_readback": {
+      "count": 2,
+      "exit_codes": [
+        255,
+        255
+      ],
+      "errors": [
+        "Connection timed out during banner exchange\nConnection to UNKNOWN port 65535 timed out",
+        "Connection timed out during banner exchange\nConnection to UNKNOWN port 65535 timed out"
+      ]
+    },
+    "gpu_process_query": {
+      "count": 1,
+      "exit_codes": [
+        0
+      ]
+    }
+  },
+  "last_verified_campaign": {
+    "collection_started_utc": "2026-10-06T12:39:22+00:00",
+    "collection_finished_utc": "2026-10-06T12:39:26+00:00",
+    "raw_snapshot_sha256": "eb12c499f2e9e4b1ac5cbbaa555711fae7c9ed8b75fde81aa03e5953931e372e",
+    "online_readback_sha256": "0b15a25919fb137aab46f5d8909214e99c7d8b338e13a6a3f76aac06fb9892c8",
+    "frozen_source_commit": "69babde283f504120dae3dfc6e9188a0e2242be4",
+    "manifest_sha256": "6410f2f196e6fd50a84ae82a192edc718ce169885144195cc63693faaa7f7f26",
+    "scope": "cached; no fresh campaign or online verification this heartbeat",
+    "runs": {
+      "btm_3072": {
+        "saved_step": 23830,
+        "logged_step": 23830,
+        "selected_checkpoint_step": 1000,
+        "metric_rows": 2465,
+        "evaluation_records": 99,
+        "complete_three_offset_cycles": 33,
+        "completion_marker_present": false,
+        "online": {
+          "run_id": "z78m0zk6",
+          "state": "finished",
+          "step": 23830,
+          "runtime_seconds": 8304,
+          "checked_utc": "2026-10-06T12:39:33+00:00"
+        }
+      },
+      "flow_3072": {
+        "saved_step": 23000,
+        "logged_step": 23040,
+        "selected_checkpoint_step": 1000,
+        "metric_rows": 2383,
+        "evaluation_records": 96,
+        "complete_three_offset_cycles": 32,
+        "completion_marker_present": false,
+        "online": {
+          "run_id": "g0u3w723",
+          "state": "finished",
+          "step": 23040,
+          "runtime_seconds": 9240,
+          "checked_utc": "2026-10-06T12:39:36+00:00"
+        }
+      }
+    }
+  },
+  "current_campaign_recovery": "unverified",
+  "current_campaign_completion": "unverified",
+  "current_eta": null,
+  "new_training_metrics_since_last_good": null,
+  "new_evaluations_since_last_good": null,
+  "last_verified_flow_updates_needed_from_saved_checkpoint": 830,
+  "results_report": "20261006T050931Z",
+  "previous_monitoring_report": "20261006T125520Z",
+  "last_verified_goals_demonstrated": {
+    "higher_primary_success": false,
+    "controlled_efficiency_with_retained_success": false
+  },
+  "gpu_jobs_changed": false,
+  "credentials_modified_by_monitor": false,
+  "monitor_action": "keep_active",
+  "last_good_snapshots_preserved": true,
+  "failure_recorded_utc": "2026-10-06T13:12:35+00:00",
+  "failed_output_files": 4,
+  "failed_output_bytes": 0,
+  "fresh_hardware": {
+    "observed_utc": "2026-10-06T13:09:59+00:00",
+    "finished_utc": "2026-10-06T13:09:59+00:00",
+    "gpu_query_sha256": "00f79f270335230a3e6b188ce82a11a81cd34f9a0bdfa55dbd99ee54dfad6b1b",
+    "gpus": [
+      {
+        "index": 0,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 1,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 2,
+        "utilization_percent": 80.0,
+        "memory_mib": 16639.0
+      },
+      {
+        "index": 3,
+        "utilization_percent": 59.0,
+        "memory_mib": 16599.0
+      },
+      {
+        "index": 4,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 5,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 6,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 7,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      }
+    ],
+    "processes": [
+      {
+        "gpu_index": 2,
+        "process_name_basename": "[Not Found]",
+        "memory_mib": "16636",
+        "pid_directory": "FileNotFoundError"
+      },
+      {
+        "gpu_index": 3,
+        "process_name_basename": "[Not Found]",
+        "memory_mib": "16596",
+        "pid_directory": "FileNotFoundError"
+      }
+    ],
+    "ownership": "unresolved",
+    "campaign_association": "not_established",
+    "scope": "fresh GPU query only; does not establish campaign activity",
+    "driver_reported_process_ids_mapping_memory_visibility_unchanged_since_1239": true
+  }
+}
