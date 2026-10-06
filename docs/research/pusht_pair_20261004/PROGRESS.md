@@ -1,13 +1,12 @@
 # LeFlow BTM-JEPA training: experiment status and results
 
-**Partial monitoring access failure, October 6, 4:54 AM EDT (08:54 UTC):**
-Fresh server records and authenticated W&B readback show no new campaign progress.
-GPU utilization was also read, but a separate GPU-process mapping query and its
-retry both timed out during SSH banner exchange. The last verified process mapping
-is from 08:39:59 UTC; current ownership remains unresolved. Flow recovery is
-unverified and there is no active completion ETA. See the
-[access report](reports/20261006T085418Z.md); the
-[previous recovery report](reports/20261006T083917Z.md) is preserved.
+**GPU-process monitoring recovered, October 6, 5:09 AM EDT (09:09 UTC):**
+Fresh server records, authenticated W&B readback and the GPU-process query all
+succeeded. Campaign metrics, evaluations, checkpoints and completion markers are
+unchanged. The same two unidentified processes remain on GPUs 2 and 3; their
+ownership remains unresolved. Flow recovery is unverified and there is no active
+completion ETA. See the [recovery report](reports/20261006T090918Z.md); the
+[previous access failure](reports/20261006T085418Z.md) is preserved.
 
 **Verified October 6, 2026, 1:09–1:11 AM EDT (05:09–05:11 UTC).**
 
