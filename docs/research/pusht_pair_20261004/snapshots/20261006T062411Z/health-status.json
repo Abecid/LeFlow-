@@ -1,0 +1,190 @@
+{
+  "scheduled_heartbeat_utc": "2026-10-06T06:23:47.958Z",
+  "collection_started_utc": "2026-10-06T06:24:11+00:00",
+  "collection_finished_utc": "2026-10-06T06:24:15+00:00",
+  "status": "gpu_activity_changed_campaign_recovery_unverified",
+  "raw_snapshot_sha256": "20e5f720db0d7b2d93a86b30e81f0ad9204c1dd0eac30942abc5034931aba95d",
+  "baseline_snapshot_sha256": "e67316faa86023e5a4a84babbb0ac5aa2ca266fca8fcf90c610d386359c86400",
+  "online_readback_sha256": "46cc4eefca0fbe4e9afc6d4c0cb5bf1d740d199a31ed10fbf4584474bb632f39",
+  "gpu_ownership_probe_sha256": "42ab15e00dbeadf10128c1f23861f1d77ce38b6abca69145aea3b412544d29c7",
+  "gpu_pid_visibility_probe_sha256": "9ee26c2db560ed7e61aa2272264aa3996b6d3ef68a7a581c35637209fd67c236",
+  "unchanged_results_report": "20261006T050931Z",
+  "frozen_source_commit": "69babde283f504120dae3dfc6e9188a0e2242be4",
+  "manifest_sha256": "6410f2f196e6fd50a84ae82a192edc718ce169885144195cc63693faaa7f7f26",
+  "unchanged_per_run_sections": [
+    "config",
+    "provenance",
+    "metrics",
+    "evaluations",
+    "checkpoints",
+    "training_complete"
+  ],
+  "process_list_unchanged_excluding_elapsed_seconds": true,
+  "new_evaluations": 0,
+  "new_training_metrics": 0,
+  "gpu_jobs_changed_by_monitor": false,
+  "runs": {
+    "btm_3072": {
+      "saved_step": 23830,
+      "logged_step": 23830,
+      "selected_step": 1000,
+      "metric_rows": 2465,
+      "evaluation_records": 99,
+      "complete_three_offset_cycles": 33,
+      "metric_parse_errors": [],
+      "completion_marker_present": false,
+      "online": {
+        "run_id": "z78m0zk6",
+        "state": "finished",
+        "step": 23830,
+        "runtime_seconds": 8304,
+        "checked_utc": "2026-10-06T06:24:22+00:00"
+      }
+    },
+    "flow_3072": {
+      "saved_step": 23000,
+      "logged_step": 23040,
+      "selected_step": 1000,
+      "metric_rows": 2383,
+      "evaluation_records": 96,
+      "complete_three_offset_cycles": 32,
+      "metric_parse_errors": [],
+      "completion_marker_present": false,
+      "online": {
+        "run_id": "g0u3w723",
+        "state": "finished",
+        "step": 23040,
+        "runtime_seconds": 9240,
+        "checked_utc": "2026-10-06T06:24:23+00:00"
+      }
+    }
+  },
+  "hardware": {
+    "first_observed_utc": "2026-10-06T06:24:15+00:00",
+    "first_sample": [
+      {
+        "gpu_index": 0,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "gpu_index": 1,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "gpu_index": 2,
+        "utilization_percent": 68.0,
+        "memory_mib": 10495.0
+      },
+      {
+        "gpu_index": 3,
+        "utilization_percent": 73.0,
+        "memory_mib": 10219.0
+      },
+      {
+        "gpu_index": 4,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "gpu_index": 5,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "gpu_index": 6,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "gpu_index": 7,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      }
+    ],
+    "followup_utc": "2026-10-06T06:25:32+00:00",
+    "followup_sample": [
+      {
+        "index": "0",
+        "utilization_percent": "0",
+        "memory_mib": "0"
+      },
+      {
+        "index": "1",
+        "utilization_percent": "0",
+        "memory_mib": "0"
+      },
+      {
+        "index": "2",
+        "utilization_percent": "78",
+        "memory_mib": "10495"
+      },
+      {
+        "index": "3",
+        "utilization_percent": "80",
+        "memory_mib": "10219"
+      },
+      {
+        "index": "4",
+        "utilization_percent": "0",
+        "memory_mib": "0"
+      },
+      {
+        "index": "5",
+        "utilization_percent": "0",
+        "memory_mib": "0"
+      },
+      {
+        "index": "6",
+        "utilization_percent": "0",
+        "memory_mib": "0"
+      },
+      {
+        "index": "7",
+        "utilization_percent": "0",
+        "memory_mib": "0"
+      }
+    ],
+    "reported_compute_processes": 2,
+    "pid_visibility_check_utc": "2026-10-06T06:26:16+00:00",
+    "same_two_process_ids_in_followup_checks": true,
+    "reported_process_names": [
+      "[Not Found]",
+      "[Not Found]"
+    ],
+    "process_directory_check_errors": [
+      "FileNotFoundError",
+      "FileNotFoundError"
+    ],
+    "ownership": "unresolved",
+    "campaign_attribution": "not_established"
+  },
+  "process_collection_limitations": [
+    "Exact script-name and campaign-path/working-directory filter",
+    "Only current /proc visibility",
+    "Per-process read failures skipped"
+  ],
+  "known_visible_campaign_trainers": 0,
+  "known_visible_flow_controller": false,
+  "original_supervisor_state": "stopped",
+  "campaign_complete": false,
+  "campaign_recovery_verified": false,
+  "current_eta": null,
+  "flow_updates_needed_from_last_saved_checkpoint": 830,
+  "goals_demonstrated": {
+    "primary_success": false,
+    "controlled_efficiency_with_retained_success": false
+  },
+  "selected_primary": {
+    "btm": 0.25,
+    "flow": 0.2,
+    "difference_pp": 5,
+    "paired_bootstrap_95_ci_pp": [
+      -15,
+      25
+    ]
+  },
+  "next_discriminating_check": "Resolve GPU process ownership through a process namespace that exposes the reported IDs; then check campaign artifact advancement before attributing recovery.",
+  "monitor_action": "keep_active"
+}

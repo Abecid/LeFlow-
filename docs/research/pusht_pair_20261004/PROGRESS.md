@@ -1,12 +1,12 @@
 # LeFlow BTM-JEPA training: experiment status and results
 
-**Monitoring access recovered, October 6, 2:09 AM EDT (06:09 UTC):** Fresh
-server collection and authenticated W&B readback succeeded. Full training and
-evaluation records are unchanged: BTM saved at 23,830, flow saved at 23,000 and
-logged through 23,040, no active trainers, and both completion markers absent.
-Flow remains interrupted; there is no active completion ETA. See the
-[recovery update](reports/20261006T060921Z.md); the earlier
-[access incident](reports/20261006T055505Z.md) is preserved.
+**Hardware status changed, October 6, 2:24–2:26 AM EDT (06:24–06:26 UTC):**
+GPUs 2 and 3 now show substantial compute activity, but the driver-reported
+process IDs are unavailable in the SSH process view, so ownership is unresolved.
+Known campaign metrics, evaluations, checkpoints and online records remain
+unchanged. Flow recovery is unverified; there is no active completion ETA. See
+the [hardware update](reports/20261006T062411Z.md). Access remains available;
+the earlier [recovery report](reports/20261006T060921Z.md) is preserved.
 
 **Verified October 6, 2026, 1:09–1:11 AM EDT (05:09–05:11 UTC).**
 
@@ -33,7 +33,7 @@ records this scope; it is not a claim about every directory on the server.
 | Held-out test and additional training seeds | Not run |
 | Exact published LeFlow reproduction; V-JEPA 2.1 / Meta-World | Not performed; the latter is not implemented |
 
-Only **one trained baseline** is available. The broader controls are research follow-ups, not experiments continuing in the background. All eight GPUs are idle. No trainer or flow controller is active; the original supervisor remains stopped. Both formal completion markers are absent. BTM's final checkpoint is valid at epoch 10, next batch 0, and its exited trainer has exit code zero. Flow requires **830 updates from its recoverable checkpoint**, including replay of 40 logged but unsaved updates, plus final validation. The cause of interruption remains unproven. **There is no active completion ETA.** W&B's “finished” labels do not certify the planned budget. No GPU jobs were changed for this report.
+Only **one trained baseline** is available. The broader controls have no results in the inspected campaign. GPUs 2 and 3 are active as of the latest check; their jobs could not be identified from the SSH process view. No known campaign trainer or flow controller is visible to the campaign collector, and the original supervisor remains stopped. Campaign recovery has not been verified. Both formal completion markers are absent. BTM's final checkpoint is valid at epoch 10, next batch 0, and its exited trainer has exit code zero. Flow requires **830 updates from its recoverable checkpoint**, including replay of 40 logged but unsaved updates, plus final validation. The cause of interruption remains unproven. **There is no active completion ETA.** W&B's “finished” labels do not certify the planned budget. No GPU jobs were changed for this report.
 
 ## How good is BTM relative to flow?
 
