@@ -1,15 +1,15 @@
 # LeFlow BTM-JEPA training: experiment status and results
 
-**Partial monitoring access, October 6, 9:12 AM EDT (13:12 UTC):**
-The GPU query succeeded at 13:09:59 UTC and saw the same unidentified processes
-on GPUs 2 and 3. Campaign collection and W&B readback each timed out on the
-initial attempt and one retry. Current training progress and completion remain
-unverified. Last-good campaign records from 12:39 UTC show BTM at 23,830 saved
-steps and flow at 23,000 saved / 23,040 logged, with both completion markers
-absent. Those campaign values are cached; GPU activity does not verify campaign
-recovery, and no active completion ETA is verified. See the
-[partial-access report](reports/20261006T131235Z.md). The
-[previous access failure](reports/20261006T125520Z.md) is preserved.
+**Monitoring read failures, October 6, 9:58 AM EDT (13:58 UTC):**
+One SSH read reached the server and verified the narrow validation-data probe at
+13:55:25 UTC, but W&B returned `CommError` without either run's state. Its retry,
+both campaign reads and both GPU reads failed with SSH banner-exchange timeouts.
+No current training progress, completion, W&B state or GPU activity was verified.
+Last-good campaign records from 12:39 UTC show BTM at 23,830 saved steps and flow
+at 23,000 saved / 23,040 logged, with both completion markers absent. Those values
+are cached; campaign recovery and an active ETA remain unverified. See the
+[communication-error report](reports/20261006T135807Z.md). The
+[previous partial-access report](reports/20261006T131235Z.md) is preserved.
 
 **Verified October 6, 2026, 1:09–1:11 AM EDT (05:09–05:11 UTC).**
 
