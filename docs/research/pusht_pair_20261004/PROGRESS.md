@@ -1,12 +1,13 @@
 # LeFlow BTM-JEPA training: experiment status and results
 
-**GPU process change, October 6, 6:09–6:10 AM EDT (10:09–10:10 UTC):**
-GPUs 2 and 3 now report different process IDs from the 09:54 UTC check, confirmed
-in two samples, with 16,499/16,459 MiB used. Their identities and ownership remain
-unavailable. Fresh campaign records and W&B show no new progress or completion;
-these GPU observations do not establish campaign recovery. There is no active
-completion ETA. See the [health report](reports/20261006T100922Z.md); the
-[previous monitoring report](reports/20261006T090918Z.md) is preserved.
+**Campaign monitoring access blocked, October 6, 6:23–6:25 AM EDT
+(10:23–10:25 UTC):** Server campaign and W&B reads each timed out during SSH
+banner exchange on both attempts. The GPU query recovered at 10:25:02 UTC and
+still sees the same unidentified processes on GPUs 2 and 3. Current campaign
+progress and completion are unverified; the latest campaign/W&B evidence is
+from 10:09 UTC. There is no verified active completion ETA. See the
+[access report](reports/20261006T102502Z.md); the
+[previous health report](reports/20261006T100922Z.md) is preserved.
 
 **Verified October 6, 2026, 1:09–1:11 AM EDT (05:09–05:11 UTC).**
 
