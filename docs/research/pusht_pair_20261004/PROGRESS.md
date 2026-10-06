@@ -1,15 +1,14 @@
 # LeFlow BTM-JEPA training: experiment status and results
 
-**Monitoring read failures, October 6, 9:58 AM EDT (13:58 UTC):**
-One SSH read reached the server and verified the narrow validation-data probe at
-13:55:25 UTC, but W&B returned `CommError` without either run's state. Its retry,
-both campaign reads and both GPU reads failed with SSH banner-exchange timeouts.
-No current training progress, completion, W&B state or GPU activity was verified.
-Last-good campaign records from 12:39 UTC show BTM at 23,830 saved steps and flow
-at 23,000 saved / 23,040 logged, with both completion markers absent. Those values
-are cached; campaign recovery and an active ETA remain unverified. See the
-[communication-error report](reports/20261006T135807Z.md). The
-[previous partial-access report](reports/20261006T131235Z.md) is preserved.
+**Monitoring access recovered, October 6, 10:11 AM EDT (14:11 UTC):**
+Campaign collection and GPU queries succeeded at 14:09 UTC; W&B verified both
+runs at 14:11:39–41 UTC after an initial `AuthenticationError` and one successful
+retry using unchanged credentials. Full campaign records match the last good
+12:39 UTC snapshot: BTM has 23,830 saved steps; flow has 23,000 saved / 23,040
+logged. There are no new training metrics or evaluations, and both completion
+markers remain absent. Campaign recovery is unverified and there is no active
+completion ETA. See the [recovery report](reports/20261006T140937Z.md); the
+[previous communication-error report](reports/20261006T135807Z.md) is preserved.
 
 **Verified October 6, 2026, 1:09–1:11 AM EDT (05:09–05:11 UTC).**
 
@@ -22,7 +21,7 @@ training artifacts were found in the inspected deployment and configured/default
 cache locations. The [run inventory](snapshots/20261006T050931Z/run-inventory.json)
 records this scope; it is not a claim about every directory on the server.
 
-**We have not run the full experiment suite, and the paired pilot is incomplete.** BTM reached its planned training and validation endpoint. Flow stopped short. The available single-seed validation results **do not establish that BTM improves long-horizon success or preserves success with a controlled speedup**. Through the last successful 12:39 UTC check, no new training/evaluation results had been observed since the October 5 report; this requested assessment adds experiment coverage, complete-history context, detailed diagnostic comparisons, and fresh health/provenance verification.
+**We have not run the full experiment suite, and the paired pilot is incomplete.** BTM reached its planned training and validation endpoint. Flow stopped short. The available single-seed validation results **do not establish that BTM improves long-horizon success or preserves success with a controlled speedup**. Through the latest 14:09 UTC server check, no new training/evaluation results had been observed since the October 5 report; this requested assessment adds experiment coverage, complete-history context, detailed diagnostic comparisons, and fresh health/provenance verification.
 
 ## What ran
 
@@ -36,7 +35,7 @@ records this scope; it is not a claim about every directory on the server.
 | Held-out test and additional training seeds | Not run |
 | Exact published LeFlow reproduction; V-JEPA 2.1 / Meta-World | Not performed; the latter is not implemented |
 
-Only **one trained baseline** is available. The broader controls have no results in the inspected campaign. At the last successful 12:39 UTC check, GPUs 2 and 3 were active; their jobs could not be identified from the SSH process view. No known campaign trainer or flow controller was visible to the campaign collector, and the original supervisor was stopped. Both formal completion markers were absent. These operational observations are cached; current campaign recovery and completion have not been verified. BTM's final checkpoint is valid at epoch 10, next batch 0, and its exited trainer has exit code zero. Flow requires **830 updates from its recoverable checkpoint**, including replay of 40 logged but unsaved updates, plus final validation. The cause of interruption remains unproven. **There is no active completion ETA.** W&B's “finished” labels do not certify the planned budget. No GPU jobs were changed for this report.
+Only **one trained baseline** is available. The broader controls have no results in the inspected campaign. At the latest 14:09 UTC server check, GPUs 2 and 3 were active; their jobs could not be identified from the SSH process view. No known campaign trainer or flow controller was visible to the campaign collector, and the original supervisor was stopped. Both formal completion markers were absent. These operational observations were freshly checked. Campaign recovery remains unverified, and full completion has not occurred. BTM's final checkpoint is valid at epoch 10, next batch 0, and its exited trainer has exit code zero. Flow requires **830 updates from its recoverable checkpoint**, including replay of 40 logged but unsaved updates, plus final validation. The cause of interruption remains unproven. **There is no active completion ETA.** W&B's “finished” labels do not certify the planned budget. No GPU jobs were changed for this report.
 
 ## How good is BTM relative to flow?
 

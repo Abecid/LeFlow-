@@ -1,0 +1,164 @@
+{
+  "scheduled_heartbeat_utc": "2026-10-06T14:08:49.689Z",
+  "status": "monitoring_access_recovered_campaign_unchanged",
+  "collection_started_utc": "2026-10-06T14:09:37+00:00",
+  "collection_finished_utc": "2026-10-06T14:09:40+00:00",
+  "raw_snapshot_sha256": "65fadfa86b2c190ef6dfe6715bc374056a88cb9c4e07eb1a5cc537ed81125ed0",
+  "comparison_baseline_sha256": "eb12c499f2e9e4b1ac5cbbaa555711fae7c9ed8b75fde81aa03e5953931e372e",
+  "comparison_baseline_collection_finished_utc": "2026-10-06T12:39:26+00:00",
+  "fresh_server_state_verified": true,
+  "fresh_online_state_verified": true,
+  "fresh_gpu_process_mapping_verified": true,
+  "campaign_record_differences": [],
+  "collection_errors": [],
+  "new_training_metrics_since_last_good": 0,
+  "new_evaluations_since_last_good": 0,
+  "full_config_provenance_metrics_evaluations_checkpoint_markers_unchanged": true,
+  "visible_process_states_unchanged_excluding_elapsed_counters": true,
+  "frozen_source_commit_recorded": "69babde283f504120dae3dfc6e9188a0e2242be4",
+  "manifest_sha256": "6410f2f196e6fd50a84ae82a192edc718ce169885144195cc63693faaa7f7f26",
+  "runs": {
+    "btm_3072": {
+      "saved_step": 23830,
+      "logged_step": 23830,
+      "selected_checkpoint_step": 1000,
+      "metric_rows": 2465,
+      "evaluation_records": 99,
+      "complete_three_offset_cycles": 33,
+      "completion_marker_present": false
+    },
+    "flow_3072": {
+      "saved_step": 23000,
+      "logged_step": 23040,
+      "selected_checkpoint_step": 1000,
+      "metric_rows": 2383,
+      "evaluation_records": 96,
+      "complete_three_offset_cycles": 32,
+      "completion_marker_present": false
+    }
+  },
+  "online": {
+    "btm": {
+      "run_id": "z78m0zk6",
+      "state": "finished",
+      "step": 23830,
+      "runtime_seconds": 8304,
+      "checked_utc": "2026-10-06T14:11:39+00:00"
+    },
+    "flow": {
+      "run_id": "g0u3w723",
+      "state": "finished",
+      "step": 23040,
+      "runtime_seconds": 9240,
+      "checked_utc": "2026-10-06T14:11:41+00:00"
+    }
+  },
+  "online_readback_sha256": "ba11578748a70d1d845cd392feb855f2c4c7c731c2076b5e1db45f14c9d66a97",
+  "online_initial_partial_sha256": "0316785300b6e9099ab721936d0e2d83da5d71cbf9dafaa89a37bee88268e466",
+  "attempts": {
+    "campaign_collector": {
+      "count": 1,
+      "exit_codes": [
+        0
+      ]
+    },
+    "online_readback": {
+      "count": 2,
+      "exit_codes": [
+        0,
+        0
+      ],
+      "payload_errors": [
+        "AuthenticationError",
+        null
+      ],
+      "initial_observed_utc": "2026-10-06T14:09:35+00:00",
+      "retry_observed_utc": "2026-10-06T14:11:31+00:00",
+      "note": "Initial process exit zero contained no run states; retry verified both online records using unchanged credentials."
+    },
+    "gpu_process_query": {
+      "count": 1,
+      "exit_codes": [
+        0
+      ]
+    }
+  },
+  "fresh_hardware": {
+    "observed_utc": "2026-10-06T14:09:34+00:00",
+    "finished_utc": "2026-10-06T14:09:34+00:00",
+    "gpu_query_sha256": "f6c3ae732459df52bc5170611595329f56c7d47b6b97a045ca204102fe9ebdb4",
+    "gpus": [
+      {
+        "index": 0,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 1,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 2,
+        "utilization_percent": 100.0,
+        "memory_mib": 16639.0
+      },
+      {
+        "index": 3,
+        "utilization_percent": 98.0,
+        "memory_mib": 16599.0
+      },
+      {
+        "index": 4,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 5,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 6,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 7,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      }
+    ],
+    "processes": [
+      {
+        "gpu_index": 2,
+        "process_name_basename": "[Not Found]",
+        "memory_mib": "16636",
+        "pid_directory": "FileNotFoundError"
+      },
+      {
+        "gpu_index": 3,
+        "process_name_basename": "[Not Found]",
+        "memory_mib": "16596",
+        "pid_directory": "FileNotFoundError"
+      }
+    ],
+    "driver_reported_process_ids_mapping_memory_visibility_unchanged": true,
+    "ownership": "unresolved",
+    "campaign_association": "not_established"
+  },
+  "current_campaign_recovery": "not_verified",
+  "current_campaign_completion": false,
+  "current_eta": null,
+  "flow_updates_needed_from_saved_checkpoint": 830,
+  "research_goals_demonstrated": {
+    "higher_primary_success": false,
+    "controlled_efficiency_with_retained_success": false
+  },
+  "results_report": "20261006T050931Z",
+  "previous_monitoring_report": "20261006T135807Z",
+  "gpu_jobs_changed": false,
+  "credentials_modified_by_monitor": false,
+  "monitor_action": "keep_active",
+  "last_good_snapshots_preserved": true
+}
