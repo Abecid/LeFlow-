@@ -1,12 +1,12 @@
 # LeFlow BTM-JEPA training: experiment status and results
 
-**W&B access recovered, October 6, 4:09 AM EDT (08:09 UTC):** Fresh server
-collection and authenticated W&B checks succeeded. Campaign records remain
-unchanged. GPUs 2 and 3 remain active with unresolved ownership; one additional
-process was listed in one sample and absent from the follow-up. No campaign
-recovery or active completion ETA is verified. See the
-[recovery report](reports/20261006T080912Z.md); the
-[earlier readback incident](reports/20261006T075418Z.md) is preserved.
+**Monitoring access blocked, October 6, 4:23 AM EDT heartbeat (08:23 UTC):**
+Both campaign collection and W&B readback failed during SSH banner exchange on
+the initial attempt and one retry each. No fresh run status or ETA is verified.
+The last successful campaign and online checks were at 4:09 AM EDT, followed by
+the GPU check at 4:10 AM EDT. All state below is cached until access succeeds.
+See the [access incident](reports/20261006T082545Z.md) and
+[last verified report](reports/20261006T080912Z.md).
 
 **Verified October 6, 2026, 1:09–1:11 AM EDT (05:09–05:11 UTC).**
 

@@ -1,0 +1,105 @@
+{
+  "recorded_utc": "2026-10-06T08:25:45+00:00",
+  "scheduled_heartbeat_utc": "2026-10-06T08:23:48.398Z",
+  "status": "monitoring_ssh_access_blocked",
+  "fresh_server_state_verified": false,
+  "fresh_online_state_verified": false,
+  "fresh_gpu_state_verified": false,
+  "campaign_collection_attempts": 2,
+  "online_readback_attempts": 2,
+  "exit_code_all_attempts": 255,
+  "error_all_attempts": "Connection timed out during banner exchange\nConnection to UNKNOWN port 65535 timed out",
+  "last_verified_campaign_collection_started_utc": "2026-10-06T08:09:12+00:00",
+  "last_verified_campaign_collection_finished_utc": "2026-10-06T08:09:16+00:00",
+  "last_good_campaign_snapshot_sha256": "d78bb040fb10f30ed7e33cd4350488f343ee8aaf3e5b1006101f26aedf08440b",
+  "last_good_online_readback_sha256": "e03d12a059eae274467906d300136c1a2b7d45b8c647a27bc818ec7d4b513c75",
+  "last_good_gpu_followup_sha256": "2a8d049c5d6c16493191ebc96e9372cec15a39e517146f04a24a7b22c42e8374",
+  "last_verified_online": {
+    "btm": {
+      "run_id": "z78m0zk6",
+      "state": "finished",
+      "step": 23830,
+      "runtime_seconds": 8304,
+      "checked_utc": "2026-10-06T08:09:22+00:00"
+    },
+    "flow": {
+      "run_id": "g0u3w723",
+      "state": "finished",
+      "step": 23040,
+      "runtime_seconds": 9240,
+      "checked_utc": "2026-10-06T08:09:23+00:00"
+    }
+  },
+  "last_verified_gpu_followup_utc": "2026-10-06T08:10:35+00:00",
+  "last_verified_runs": {
+    "btm_3072": {
+      "saved_step": 23830,
+      "logged_step": 23830,
+      "complete_three_offset_cycles": 33,
+      "completion_marker_present": false
+    },
+    "flow_3072": {
+      "saved_step": 23000,
+      "logged_step": 23040,
+      "complete_three_offset_cycles": 32,
+      "completion_marker_present": false
+    }
+  },
+  "last_verified_hardware": {
+    "gpus": [
+      {
+        "index": 0,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 1,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 2,
+        "utilization_percent": 72.0,
+        "memory_mib": 10635.0
+      },
+      {
+        "index": 3,
+        "utilization_percent": 69.0,
+        "memory_mib": 10359.0
+      },
+      {
+        "index": 4,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 5,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 6,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 7,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      }
+    ],
+    "reported_compute_processes": 2,
+    "ownership": "unresolved"
+  },
+  "new_training_failure_established": false,
+  "new_training_progress_verified": false,
+  "new_completion_verified": false,
+  "fresh_eta_verified": false,
+  "last_verified_active_eta": null,
+  "gpu_jobs_changed": false,
+  "credentials_modified": false,
+  "last_good_report": "20261006T080912Z",
+  "results_report": "20261006T050931Z",
+  "monitor_action": "keep_active",
+  "interpretation": "All four SSH attempts failed before remote collection. Last-good observations are retained as cached evidence only; current campaign and online state are unverified."
+}
