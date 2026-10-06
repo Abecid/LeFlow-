@@ -1,0 +1,133 @@
+{
+  "recorded_utc": "2026-10-06T06:56:08+00:00",
+  "scheduled_heartbeat_utc": "2026-10-06T06:53:48.107Z",
+  "status": "partial_monitoring_ssh_failure",
+  "collection_started_utc": "2026-10-06T06:54:20+00:00",
+  "collection_finished_utc": "2026-10-06T06:54:24+00:00",
+  "fresh_server_state_verified": true,
+  "fresh_online_state_verified": false,
+  "fresh_gpu_pid_visibility_verified": false,
+  "raw_snapshot_sha256": "fdd30b04c35bda10794eec5e780a0e3b4e16439a0d078305cfacece787b002be",
+  "comparison_baseline_sha256": "3ad92947821eb661e24b8fb537d795c3f810b44ca93d9d764656135739ba3090",
+  "unchanged_per_run_sections": [
+    "config",
+    "provenance",
+    "metrics",
+    "evaluations",
+    "checkpoints",
+    "training_complete"
+  ],
+  "visible_process_states_unchanged": true,
+  "online_readback": {
+    "attempts": 2,
+    "exit_codes": [
+      255,
+      255
+    ],
+    "error": "Connection timed out during banner exchange\nConnection to UNKNOWN port 65535 timed out",
+    "last_verified": {
+      "btm": {
+        "run_id": "z78m0zk6",
+        "state": "finished",
+        "step": 23830,
+        "runtime_seconds": 8304,
+        "checked_utc": "2026-10-06T06:39:24+00:00"
+      },
+      "flow": {
+        "run_id": "g0u3w723",
+        "state": "finished",
+        "step": 23040,
+        "runtime_seconds": 9240,
+        "checked_utc": "2026-10-06T06:39:25+00:00"
+      }
+    },
+    "last_good_readback_sha256": "4e461103514851d9bed08bdac5ca44ef7efe517d309c17ff648fa140e5301f01"
+  },
+  "gpu_pid_probe": {
+    "attempts": 2,
+    "exit_codes": [
+      255,
+      255
+    ],
+    "error": "Connection timed out during banner exchange\nConnection to UNKNOWN port 65535 timed out",
+    "last_verified_utc": "2026-10-06T06:39:34+00:00",
+    "last_good_probe_sha256": "71c615a5d0b3e50608253faacf008296bfde70cee8dbe4948fbe014c9d87b27c",
+    "last_verified_conclusion": "Two driver-reported processes unavailable in SSH /proc view; ownership unresolved."
+  },
+  "hardware": {
+    "observed_utc": "2026-10-06T06:54:24+00:00",
+    "gpus": [
+      {
+        "index": 0,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 1,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 2,
+        "utilization_percent": 65.0,
+        "memory_mib": 10635.0
+      },
+      {
+        "index": 3,
+        "utilization_percent": 60.0,
+        "memory_mib": 10359.0
+      },
+      {
+        "index": 4,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 5,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 6,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 7,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      }
+    ]
+  },
+  "runs": {
+    "btm_3072": {
+      "saved_step": 23830,
+      "logged_step": 23830,
+      "selected_checkpoint_step": 1000,
+      "complete_three_offset_cycles": 33,
+      "evaluation_records": 99,
+      "metric_rows": 2465,
+      "completion_marker_present": false
+    },
+    "flow_3072": {
+      "saved_step": 23000,
+      "logged_step": 23040,
+      "selected_checkpoint_step": 1000,
+      "complete_three_offset_cycles": 32,
+      "evaluation_records": 96,
+      "metric_rows": 2383,
+      "completion_marker_present": false
+    }
+  },
+  "new_training_metrics": 0,
+  "new_evaluations": 0,
+  "new_training_failure_established": false,
+  "campaign_recovery_verified": false,
+  "campaign_complete": false,
+  "current_eta": null,
+  "gpu_jobs_changed": false,
+  "goal_assessment_unchanged": "Primary superiority and controlled efficiency with retained success are not demonstrated.",
+  "results_report": "20261006T050931Z",
+  "prior_gpu_visibility_report": "20261006T062411Z",
+  "monitor_action": "keep_active"
+}
