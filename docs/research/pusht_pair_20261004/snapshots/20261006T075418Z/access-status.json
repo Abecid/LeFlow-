@@ -1,0 +1,146 @@
+{
+  "recorded_utc": "2026-10-06T07:57:02+00:00",
+  "scheduled_heartbeat_utc": "2026-10-06T07:53:48.339Z",
+  "status": "online_readback_unverified_authentication_error_then_ssh_timeout",
+  "collection_started_utc": "2026-10-06T07:54:14+00:00",
+  "collection_finished_utc": "2026-10-06T07:54:18+00:00",
+  "fresh_server_state_verified": true,
+  "fresh_online_state_verified": false,
+  "fresh_gpu_visibility_probe_succeeded": true,
+  "raw_snapshot_sha256": "964aeda72d1f1767190b4f93cb4b66eb1e87083ecc20af60a0a92101ba5041a4",
+  "comparison_snapshot_sha256": "cb6fa9d1ec542b3abe97ad937e8f68dd5285c016b09f7e167e4b2d9e993c5bf9",
+  "failed_online_payload_sha256": "dd983004a50d183f69582b54c4fabcb37ef124920b05a05e0f666b898af9663d",
+  "last_good_online_sha256": "168f8d721548cea5d95a633b2a8316dad356faf06f50673f88ae61d0ab99abf1",
+  "gpu_visibility_probe_sha256": "7c6eb371e1926034e0615155bacdf9c9fc87ad3ed90d19ba47df56ad61940f5e",
+  "unchanged_per_run_sections": [
+    "config",
+    "provenance",
+    "metrics",
+    "evaluations",
+    "checkpoints",
+    "training_complete"
+  ],
+  "visible_process_states_unchanged_excluding_elapsed": true,
+  "online_attempts": [
+    {
+      "attempt": 1,
+      "remote_command_exit": 0,
+      "payload_error": "AuthenticationError",
+      "wandb_records_returned": 0
+    },
+    {
+      "attempt": 2,
+      "remote_command_exit": 255,
+      "ssh_error": "Connection timed out during banner exchange\nConnection to UNKNOWN port 65535 timed out",
+      "api_reached": false
+    }
+  ],
+  "last_verified_online": {
+    "btm": {
+      "run_id": "z78m0zk6",
+      "state": "finished",
+      "step": 23830,
+      "runtime_seconds": 8304,
+      "checked_utc": "2026-10-06T07:40:09+00:00"
+    },
+    "flow": {
+      "run_id": "g0u3w723",
+      "state": "finished",
+      "step": 23040,
+      "runtime_seconds": 9240,
+      "checked_utc": "2026-10-06T07:40:10+00:00"
+    }
+  },
+  "runs": {
+    "btm_3072": {
+      "saved_step": 23830,
+      "logged_step": 23830,
+      "selected_checkpoint_step": 1000,
+      "metric_rows": 2465,
+      "evaluation_records": 99,
+      "complete_three_offset_cycles": 33,
+      "completion_marker_present": false
+    },
+    "flow_3072": {
+      "saved_step": 23000,
+      "logged_step": 23040,
+      "selected_checkpoint_step": 1000,
+      "metric_rows": 2383,
+      "evaluation_records": 96,
+      "complete_three_offset_cycles": 32,
+      "completion_marker_present": false
+    }
+  },
+  "hardware": {
+    "observed_utc": "2026-10-06T07:54:18+00:00",
+    "gpus": [
+      {
+        "index": 0,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 1,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 2,
+        "utilization_percent": 95.0,
+        "memory_mib": 10635.0
+      },
+      {
+        "index": 3,
+        "utilization_percent": 100.0,
+        "memory_mib": 10359.0
+      },
+      {
+        "index": 4,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 5,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 6,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 7,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      }
+    ],
+    "gpu_visibility_checked_utc": "2026-10-06T07:55:16+00:00",
+    "reported_process_count": 2,
+    "same_reported_process_ids_as_previous_good_probe": true,
+    "process_directory_errors": [
+      "FileNotFoundError",
+      "FileNotFoundError"
+    ],
+    "process_names": [
+      "[Not Found]",
+      "[Not Found]"
+    ],
+    "ownership": "unresolved",
+    "campaign_association": "not_established"
+  },
+  "new_training_metrics": 0,
+  "new_evaluations": 0,
+  "campaign_recovery_verified": false,
+  "campaign_complete": false,
+  "current_eta": null,
+  "flow_updates_needed_from_checkpoint": 830,
+  "new_training_failure_established": false,
+  "credentials_modified": false,
+  "gpu_jobs_changed": false,
+  "monitor_action": "keep_active",
+  "goal_assessment_unchanged": "Primary superiority and controlled efficiency with retained success are not demonstrated.",
+  "results_report": "20261006T050931Z",
+  "prior_access_report": "20261006T070915Z",
+  "interpretation": "The first API read failed authentication. Its retry did not reach the API because SSH timed out. Persistence and cause of the authentication error are unverified; durable campaign state is unchanged."
+}
