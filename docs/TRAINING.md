@@ -189,6 +189,16 @@ must be measured; a lower generator NFE alone is not the research result.
 
 ## 6. Validation status and remaining work
 
+**Current campaign status (October 6, 2026):** the real PushT four-GPU BTM run
+reached its planned 23,830-update endpoint and all validation cycles. Its matched
+four-GPU flow run stopped at a saved 23,000 updates. Online W&B and distributed
+GPU execution were exercised; this does not establish a research improvement.
+The paired campaign, held-out testing and multi-seed confirmation remain
+incomplete. See the [current results and experiment inventory](research/pusht_pair_20261004/PROGRESS.md).
+
+The bullets below record the **earlier local, pre-deployment checks**, not the
+current server experiment state:
+
 - Verified: pinned Python requirements resolve/install; official PushT LeWM
   checkpoint loads strictly; image encoding produces `[B,1,192]`.
 - Verified: core mathematical/data/planning tests and an exact single-process

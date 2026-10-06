@@ -1,0 +1,352 @@
+{
+  "observed_utc": "2026-10-06T05:09:31+00:00",
+  "raw_snapshot_sha256": "e67316faa86023e5a4a84babbb0ac5aa2ca266fca8fcf90c610d386359c86400",
+  "campaign": "pusht_pair_20261004",
+  "frozen_plan": {
+    "format_version": 1,
+    "name": "pusht_pair_20261004",
+    "gpus": 4,
+    "seeds": [
+      3072
+    ],
+    "method_order": [
+      "btm",
+      "flow"
+    ],
+    "git_commit": "69babde283f504120dae3dfc6e9188a0e2242be4",
+    "manifest_sha256": "6410f2f196e6fd50a84ae82a192edc718ce169885144195cc63693faaa7f7f26",
+    "encoder_sha256": "48938400ae3464c9680731287f583a9cb516f55a8ec64ea13a91be47fb15b607",
+    "primary_goal_offset": 100
+  },
+  "dataset": {
+    "manifest_sha256": "6410f2f196e6fd50a84ae82a192edc718ce169885144195cc63693faaa7f7f26",
+    "encoder_sha256": "48938400ae3464c9680731287f583a9cb516f55a8ec64ea13a91be47fb15b607",
+    "split_counts": {
+      "train": 14948,
+      "val": 1868,
+      "test": 1869
+    },
+    "episodes": 18685,
+    "frames": 2336736,
+    "test_fixture": null
+  },
+  "current_eta": null,
+  "eta_reason": "No active training workers; flow has not reached the planned budget.",
+  "all_planned_experiments_complete": false,
+  "goals": {
+    "primary_superiority_established": false,
+    "speedup_with_retained_success_established": false
+  },
+  "runs": {
+    "btm": {
+      "last_saved_step": 23830,
+      "last_logged_step": 23830,
+      "target_step": 23830,
+      "selected_checkpoint_step": 1000,
+      "selected_checkpoint_rule": "Maximum mean validation success across offsets 25/50/100, earliest tie retained",
+      "complete_validation_cycles": 33,
+      "planned_validation_cycles": 33,
+      "formal_completion_marker_present": false,
+      "metric_rows": 2465,
+      "evaluation_records": 99,
+      "nonfinite_metric_values": 0,
+      "metrics_unchanged_from_20261005T175219Z": true,
+      "evaluations_unchanged_from_20261005T175219Z": true,
+      "checkpoints_unchanged_from_20261005T175219Z": true,
+      "parameter_count": 13844170,
+      "gradient_norm_preclip_min": 0.41013744473457336,
+      "gradient_norm_preclip_max": 7.122122764587402,
+      "gradient_norm_logged_points": 2384,
+      "gradient_norm_logged_points_above_clip_1": 64,
+      "throughput_steps_20000_to_23000_median_samples_per_second": 1928.7120194608076,
+      "logged_peak_allocator_memory_gib": 0.4074592590332031,
+      "total_recorded_rollout_evaluation_seconds": 6018.150020612404,
+      "budget_clip_presentations_saved": 3050240,
+      "planned_clip_presentations": 3050240
+    },
+    "flow": {
+      "last_saved_step": 23000,
+      "last_logged_step": 23040,
+      "target_step": 23830,
+      "selected_checkpoint_step": 1000,
+      "selected_checkpoint_rule": "Maximum mean validation success across offsets 25/50/100, earliest tie retained",
+      "complete_validation_cycles": 32,
+      "planned_validation_cycles": 33,
+      "formal_completion_marker_present": false,
+      "metric_rows": 2383,
+      "evaluation_records": 96,
+      "nonfinite_metric_values": 0,
+      "metrics_unchanged_from_20261005T175219Z": true,
+      "evaluations_unchanged_from_20261005T175219Z": true,
+      "checkpoints_unchanged_from_20261005T175219Z": true,
+      "parameter_count": 14107850,
+      "gradient_norm_preclip_min": 0.48887574672698975,
+      "gradient_norm_preclip_max": 1.502060055732727,
+      "gradient_norm_logged_points": 2305,
+      "gradient_norm_logged_points_above_clip_1": 480,
+      "throughput_steps_20000_to_23000_median_samples_per_second": 3027.8572538785816,
+      "logged_peak_allocator_memory_gib": 0.40839433670043945,
+      "total_recorded_rollout_evaluation_seconds": 7539.107327733189,
+      "budget_clip_presentations_saved": 2944000,
+      "planned_clip_presentations": 3050240
+    }
+  },
+  "paired_protocols_verified": 96,
+  "evidence_volume": {
+    "rollout_attempts": 3900,
+    "fixed_offset_episode_start_cases": 60,
+    "distinct_validation_episodes": 57,
+    "independent_training_seed_pairs": 1
+  },
+  "selected_and_latest_matched_comparisons": [
+    {
+      "step": 1000,
+      "offset": 25,
+      "btm_success_rate": 0.4,
+      "flow_success_rate": 0.5,
+      "delta_pp": -10.0,
+      "paired_ci95_low_pp": -35.0,
+      "paired_ci95_high_pp": 15.0,
+      "btm_only_successes": 2,
+      "flow_only_successes": 4,
+      "both_successes": 6,
+      "neither_successes": 8
+    },
+    {
+      "step": 1000,
+      "offset": 50,
+      "btm_success_rate": 0.4,
+      "flow_success_rate": 0.3,
+      "delta_pp": 10.0,
+      "paired_ci95_low_pp": -10.0,
+      "paired_ci95_high_pp": 30.0,
+      "btm_only_successes": 3,
+      "flow_only_successes": 1,
+      "both_successes": 5,
+      "neither_successes": 11
+    },
+    {
+      "step": 1000,
+      "offset": 100,
+      "btm_success_rate": 0.25,
+      "flow_success_rate": 0.2,
+      "delta_pp": 5.0,
+      "paired_ci95_low_pp": -15.0,
+      "paired_ci95_high_pp": 25.0,
+      "btm_only_successes": 3,
+      "flow_only_successes": 2,
+      "both_successes": 2,
+      "neither_successes": 13
+    },
+    {
+      "step": 23000,
+      "offset": 25,
+      "btm_success_rate": 0.05,
+      "flow_success_rate": 0.45,
+      "delta_pp": -40.0,
+      "paired_ci95_low_pp": -60.0,
+      "paired_ci95_high_pp": -20.0,
+      "btm_only_successes": 0,
+      "flow_only_successes": 8,
+      "both_successes": 1,
+      "neither_successes": 11
+    },
+    {
+      "step": 23000,
+      "offset": 50,
+      "btm_success_rate": 0.0,
+      "flow_success_rate": 0.15,
+      "delta_pp": -15.0,
+      "paired_ci95_low_pp": -30.0,
+      "paired_ci95_high_pp": 0.0,
+      "btm_only_successes": 0,
+      "flow_only_successes": 3,
+      "both_successes": 0,
+      "neither_successes": 17
+    },
+    {
+      "step": 23000,
+      "offset": 100,
+      "btm_success_rate": 0.1,
+      "flow_success_rate": 0.05,
+      "delta_pp": 5.0,
+      "paired_ci95_low_pp": -10.0,
+      "paired_ci95_high_pp": 20.0,
+      "btm_only_successes": 2,
+      "flow_only_successes": 1,
+      "both_successes": 0,
+      "neither_successes": 17
+    }
+  ],
+  "matched_history_descriptive_only": {
+    "matched_checkpoints": 32,
+    "btm_mean_primary_success_percent": 8.125,
+    "flow_mean_primary_success_percent": 10.46875,
+    "btm_wins_ties_losses": [
+      12,
+      4,
+      16
+    ],
+    "note": "Repeated validation cases and selected checkpoints are not independent trials; this is not a new inferential endpoint."
+  },
+  "health": {
+    "observed_utc": "2026-10-06T05:10:41+00:00",
+    "frozen_source_head": "69babde283f504120dae3dfc6e9188a0e2242be4",
+    "frozen_source_clean": true,
+    "checkpoints": {
+      "btm/best.pt": {
+        "sha256": "89036ff00fdecd54f6abebb7fef4e7b937176431add6880a3da60076b120ac15",
+        "bytes": 167322983
+      },
+      "btm/last.pt": {
+        "sha256": "f71611f2699347df2c44c23c821197d730cae86f1e0f72d6edaa8c502afb6096",
+        "bytes": 167326311
+      },
+      "flow/best.pt": {
+        "sha256": "97532e69c6709f0c802585bb69e8cea5208532d415f9c6dca5f10e0941b49da8",
+        "bytes": 170491719
+      },
+      "flow/last.pt": {
+        "sha256": "f2c4b3044591426d57d91f136f5353ac0aa14bfd14c4f88db20a1dd1f694364b",
+        "bytes": 170495175
+      }
+    },
+    "process_health": {
+      "original_supervisor": {
+        "exists": true,
+        "state": "T",
+        "exit_code_raw": 0
+      },
+      "btm_torchrun": {
+        "exists": true,
+        "state": "Z",
+        "exit_code_raw": 0
+      },
+      "flow_controller": {
+        "exists": false
+      },
+      "flow_torchrun": {
+        "exists": false
+      }
+    }
+  },
+  "hardware": {
+    "observed_utc": "2026-10-06T05:09:31+00:00",
+    "units": {
+      "utilization.gpu": "%",
+      "memory.used": "MiB",
+      "memory.total": "MiB",
+      "power.draw": "W"
+    },
+    "gpus": [
+      {
+        "index": "0",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "0",
+        "memory.used": "0",
+        "memory.total": "81920",
+        "power.draw": "55.71"
+      },
+      {
+        "index": "1",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "0",
+        "memory.used": "0",
+        "memory.total": "81920",
+        "power.draw": "53.42"
+      },
+      {
+        "index": "2",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "0",
+        "memory.used": "0",
+        "memory.total": "81920",
+        "power.draw": "56.46"
+      },
+      {
+        "index": "3",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "0",
+        "memory.used": "0",
+        "memory.total": "81920",
+        "power.draw": "54.83"
+      },
+      {
+        "index": "4",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "0",
+        "memory.used": "0",
+        "memory.total": "81920",
+        "power.draw": "57.86"
+      },
+      {
+        "index": "5",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "0",
+        "memory.used": "0",
+        "memory.total": "81920",
+        "power.draw": "56.36"
+      },
+      {
+        "index": "6",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "0",
+        "memory.used": "0",
+        "memory.total": "81920",
+        "power.draw": "54.56"
+      },
+      {
+        "index": "7",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "0",
+        "memory.used": "0",
+        "memory.total": "81920",
+        "power.draw": "56.31"
+      }
+    ]
+  },
+  "online_readback": {
+    "observed_utc": "2026-10-06T05:09:30+00:00",
+    "manifest_sha256": "6410f2f196e6fd50a84ae82a192edc718ce169885144195cc63693faaa7f7f26",
+    "probe": {
+      "source": "Actual frozen LatentSegments.__getitem__ reads on CPU",
+      "clips": 32,
+      "episode_ids": [
+        4,
+        5
+      ],
+      "spacing_counts": {
+        "1": 20,
+        "2": 11,
+        "4": 1
+      },
+      "loss_probe_512_unique_episodes": 28
+    },
+    "wandb": {
+      "btm": {
+        "run_id": "z78m0zk6",
+        "state": "finished",
+        "step": 23830,
+        "runtime_seconds": 8304,
+        "checked_utc": "2026-10-06T05:09:37+00:00"
+      },
+      "flow": {
+        "run_id": "g0u3w723",
+        "state": "finished",
+        "step": 23040,
+        "runtime_seconds": 9240,
+        "checked_utc": "2026-10-06T05:09:37+00:00"
+      }
+    }
+  },
+  "limits": [
+    "Only one trained flow baseline; no deterministic or few-step sweep results.",
+    "No held-out testing or extra training seeds.",
+    "Validation-selected checkpoints optimize mean across offsets, not offset100 alone.",
+    "Generative objectives differ; raw generative losses are not cross-method scores.",
+    "Planning latency is solver-batch timing on different GPUs/load, not a controlled end-to-end speedup.",
+    "Observed and predicted subgoal errors are measured at different horizons/actions.",
+    "Absolute latent variance from32 clips/two episodes is not behavioral mode coverage.",
+    "Training throughput intervals can include evaluation waits; allocator memory is not total GPU-process memory."
+  ]
+}

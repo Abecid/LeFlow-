@@ -1,0 +1,146 @@
+{
+  "inventory_started_utc": "2026-10-06T05:17:39.284126+00:00",
+  "inventory_finished_utc": "2026-10-06T05:18:44.154552+00:00",
+  "repository": "Abecid/LeFlow-",
+  "scope": "LeFlow deployment and configured run/model cache to depth6; named LeFlow/JEPA locations and default user world-model cache. Not an exhaustive server-wide search.",
+  "default_user_world_model_cache_exists": false,
+  "run_configs": [
+    {
+      "relative_path": "20261004/runs/pusht_pair_20261004/btm_3072/config.json",
+      "method": "btm",
+      "task": "pusht",
+      "seed": 3072,
+      "epochs": 10,
+      "wandb_project": "btm-jepa"
+    },
+    {
+      "relative_path": "20261004/runs/pusht_pair_20261004/flow_3072/config.json",
+      "method": "flow",
+      "task": "pusht",
+      "seed": 3072,
+      "epochs": 10,
+      "wandb_project": "btm-jepa"
+    },
+    {
+      "relative_path": "20261004/runs/pusht_verification_20261004/btm_3072/config.json",
+      "method": "btm",
+      "task": "pusht",
+      "seed": 3072,
+      "epochs": 10,
+      "wandb_project": "btm-jepa"
+    },
+    {
+      "relative_path": "checkpoints/pusht/config.json",
+      "method": null,
+      "task": null,
+      "seed": null,
+      "epochs": null,
+      "wandb_project": null
+    }
+  ],
+  "artifacts": [
+    {
+      "location": "deployment",
+      "relative_path": "20261004/runs/pusht_pair_20261004/btm_3072/best.pt",
+      "bytes": 167322983
+    },
+    {
+      "location": "deployment",
+      "relative_path": "20261004/runs/pusht_pair_20261004/btm_3072/config.json",
+      "bytes": 1641
+    },
+    {
+      "location": "deployment",
+      "relative_path": "20261004/runs/pusht_pair_20261004/btm_3072/last.pt",
+      "bytes": 167326311
+    },
+    {
+      "location": "deployment",
+      "relative_path": "20261004/runs/pusht_pair_20261004/btm_3072/metrics.jsonl",
+      "bytes": 1256710
+    },
+    {
+      "location": "deployment",
+      "relative_path": "20261004/runs/pusht_pair_20261004/btm_3072/hydra/.hydra/config.yaml",
+      "bytes": 1238
+    },
+    {
+      "location": "deployment",
+      "relative_path": "20261004/runs/pusht_pair_20261004/flow_3072/best.pt",
+      "bytes": 170491719
+    },
+    {
+      "location": "deployment",
+      "relative_path": "20261004/runs/pusht_pair_20261004/flow_3072/config.json",
+      "bytes": 1644
+    },
+    {
+      "location": "deployment",
+      "relative_path": "20261004/runs/pusht_pair_20261004/flow_3072/last.pt",
+      "bytes": 170495175
+    },
+    {
+      "location": "deployment",
+      "relative_path": "20261004/runs/pusht_pair_20261004/flow_3072/metrics.jsonl",
+      "bytes": 923246
+    },
+    {
+      "location": "deployment",
+      "relative_path": "20261004/runs/pusht_pair_20261004/flow_3072/hydra/.hydra/config.yaml",
+      "bytes": 1241
+    },
+    {
+      "location": "deployment",
+      "relative_path": "20261004/runs/pusht_verification_20261004/btm_3072/best.pt",
+      "bytes": 167322983
+    },
+    {
+      "location": "deployment",
+      "relative_path": "20261004/runs/pusht_verification_20261004/btm_3072/config.json",
+      "bytes": 1656
+    },
+    {
+      "location": "deployment",
+      "relative_path": "20261004/runs/pusht_verification_20261004/btm_3072/last.pt",
+      "bytes": 167326311
+    },
+    {
+      "location": "deployment",
+      "relative_path": "20261004/runs/pusht_verification_20261004/btm_3072/metrics.jsonl",
+      "bytes": 4392
+    },
+    {
+      "location": "deployment",
+      "relative_path": "20261004/runs/pusht_verification_20261004/btm_3072/hydra/.hydra/config.yaml",
+      "bytes": 1271
+    },
+    {
+      "location": "deployment",
+      "relative_path": "20261004/wandb/run-20261004_230035-abkho661/files/config.yaml",
+      "bytes": 1126
+    },
+    {
+      "location": "configured_cache",
+      "relative_path": "checkpoints/pusht/weights.pt",
+      "bytes": 72290721
+    },
+    {
+      "location": "configured_cache",
+      "relative_path": "checkpoints/pusht/config.json",
+      "bytes": 1313
+    }
+  ],
+  "verification_run": {
+    "max_steps": 2,
+    "latest_logged_step": 2,
+    "metric_rows": 6,
+    "evaluation_files": [
+      "step_00000002_offset_100.json",
+      "step_00000002_offset_25.json",
+      "step_00000002_offset_50.json"
+    ]
+  },
+  "backbone_training_artifacts_found": false,
+  "original_latent_planner_training_artifacts_found": false,
+  "interpretation": "Research artifacts found are BTM-JEPA planner training over frozen pretrained LeWM, plus the two-update verification run. Downloaded model weights are not evidence of local JEPA-backbone training."
+}
