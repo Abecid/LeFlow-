@@ -1,0 +1,19 @@
+{
+  "recorded_utc": "2026-10-06T05:55:05Z",
+  "scheduled_heartbeat_utc": "2026-10-06T05:53:47.806Z",
+  "status": "monitoring_access_blocked",
+  "fresh_server_state_verified": false,
+  "fresh_online_state_verified": false,
+  "collection_attempts": 2,
+  "online_readback_attempts": 2,
+  "exit_code_each_attempt": 255,
+  "error": "Connection timed out during banner exchange\nConnection to UNKNOWN port 65535 timed out",
+  "last_verified_server_utc": "2026-10-06T05:39:19+00:00",
+  "last_verified_online_utc": "2026-10-06T05:39:20+00:00",
+  "last_verified_raw_snapshot_sha256": "4dfa04cd5e6016a085d6f801bfc3f01d1a2cddc9f8a674fc94d71224c56cfbe8",
+  "latest_results_report": "20261006T050931Z",
+  "new_training_failure_established": false,
+  "gpu_jobs_changed": false,
+  "current_eta": null,
+  "interpretation": "Access failed before remote collection. Preserve previous evidence; no inference of training progress, recovery or new failure is warranted."
+}
