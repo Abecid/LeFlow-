@@ -1,0 +1,131 @@
+{
+  "scheduled_heartbeat_utc": "2026-10-06T07:08:48.188Z",
+  "status": "monitoring_readbacks_recovered_campaign_unchanged",
+  "collection_started_utc": "2026-10-06T07:09:15+00:00",
+  "collection_finished_utc": "2026-10-06T07:09:19+00:00",
+  "fresh_server_state_verified": true,
+  "fresh_online_state_verified": true,
+  "fresh_gpu_visibility_probe_succeeded": true,
+  "raw_snapshot_sha256": "96e20ca9e639f82218ca3a69fd720cd612a075ec7c5993ea65bd15bb7eda3a0c",
+  "comparison_baseline_sha256": "fdd30b04c35bda10794eec5e780a0e3b4e16439a0d078305cfacece787b002be",
+  "online_readback_sha256": "f6f2bf47a98479c9745a57470c70aab4b202b089770444379e6bb8a3d8fee83d",
+  "gpu_visibility_probe_sha256": "b6b3f7323f1b49ed1fbb359580099caa5babb8345879ddbf278e52f07764fe84",
+  "previous_access_incident": "20261006T065424Z",
+  "results_report": "20261006T050931Z",
+  "unchanged_per_run_sections": [
+    "config",
+    "provenance",
+    "metrics",
+    "evaluations",
+    "checkpoints",
+    "training_complete"
+  ],
+  "visible_process_states_unchanged_excluding_elapsed": true,
+  "frozen_source_commit": "69babde283f504120dae3dfc6e9188a0e2242be4",
+  "manifest_sha256": "6410f2f196e6fd50a84ae82a192edc718ce169885144195cc63693faaa7f7f26",
+  "runs": {
+    "btm_3072": {
+      "saved_step": 23830,
+      "logged_step": 23830,
+      "selected_checkpoint_step": 1000,
+      "metric_rows": 2465,
+      "evaluation_records": 99,
+      "complete_three_offset_cycles": 33,
+      "completion_marker_present": false,
+      "online": {
+        "run_id": "z78m0zk6",
+        "state": "finished",
+        "step": 23830,
+        "runtime_seconds": 8304,
+        "checked_utc": "2026-10-06T07:09:25+00:00"
+      }
+    },
+    "flow_3072": {
+      "saved_step": 23000,
+      "logged_step": 23040,
+      "selected_checkpoint_step": 1000,
+      "metric_rows": 2383,
+      "evaluation_records": 96,
+      "complete_three_offset_cycles": 32,
+      "completion_marker_present": false,
+      "online": {
+        "run_id": "g0u3w723",
+        "state": "finished",
+        "step": 23040,
+        "runtime_seconds": 9240,
+        "checked_utc": "2026-10-06T07:09:27+00:00"
+      }
+    }
+  },
+  "hardware": {
+    "observed_utc": "2026-10-06T07:09:19+00:00",
+    "gpus": [
+      {
+        "index": 0,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 1,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 2,
+        "utilization_percent": 100.0,
+        "memory_mib": 10635.0
+      },
+      {
+        "index": 3,
+        "utilization_percent": 100.0,
+        "memory_mib": 10359.0
+      },
+      {
+        "index": 4,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 5,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 6,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 7,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      }
+    ],
+    "gpu_visibility_checked_utc": "2026-10-06T07:09:56+00:00",
+    "process_count": 2,
+    "same_reported_process_ids_as_previous_good_probe": true,
+    "process_directory_errors": [
+      "FileNotFoundError",
+      "FileNotFoundError"
+    ],
+    "process_names": [
+      "[Not Found]",
+      "[Not Found]"
+    ],
+    "ownership": "unresolved",
+    "campaign_association": "not_established"
+  },
+  "new_training_metrics": 0,
+  "new_evaluations": 0,
+  "campaign_recovery_verified": false,
+  "campaign_complete": false,
+  "current_eta": null,
+  "flow_updates_needed_from_saved_checkpoint": 830,
+  "gpu_jobs_changed": false,
+  "monitor_action": "keep_active",
+  "goals_demonstrated": {
+    "higher_primary_success": false,
+    "controlled_efficiency_with_retained_success": false
+  },
+  "interpretation": "SSH readbacks succeeded again; no campaign training progress or ownership resolution is established."
+}
