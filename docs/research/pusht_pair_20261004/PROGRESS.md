@@ -1,13 +1,13 @@
 # LeFlow BTM-JEPA training: experiment status and results
 
-**Campaign monitoring access blocked, October 6, 6:23–6:25 AM EDT
-(10:23–10:25 UTC):** Server campaign and W&B reads each timed out during SSH
-banner exchange on both attempts. The GPU query recovered at 10:25:02 UTC and
-still sees the same unidentified processes on GPUs 2 and 3. Current campaign
-progress and completion are unverified; the latest campaign/W&B evidence is
-from 10:09 UTC. There is no verified active completion ETA. See the
-[access report](reports/20261006T102502Z.md); the
-[previous health report](reports/20261006T100922Z.md) is preserved.
+**Monitoring access recovered, October 6, 6:55 AM EDT (10:55 UTC):**
+Server collection, authenticated W&B readback and GPU queries succeeded on retry.
+Full campaign records remain unchanged from the last good 10:09 UTC collection:
+BTM has 23,830 saved steps; flow has 23,000 saved / 23,040 logged. Both completion
+markers are absent. The same unidentified processes remain on GPUs 2 and 3.
+Campaign recovery is unverified and there is no active completion ETA. See the
+[recovery report](reports/20261006T105502Z.md); the
+[previous access failure](reports/20261006T102502Z.md) is preserved.
 
 **Verified October 6, 2026, 1:09–1:11 AM EDT (05:09–05:11 UTC).**
 
