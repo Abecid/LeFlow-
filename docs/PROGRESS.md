@@ -185,3 +185,15 @@ on the GPUs. Fresh online W&B readback succeeded. No training run or checkpoint
 exists yet, and no test evaluation has started. No recovery or code/configuration
 change was needed. Next: continue shared dataset preparation and automatic
 transition to training.
+
+### 2026-10-07 19:31 UTC heartbeat — preparation remains healthy
+
+The snapshot contains 332 completed episodes, up from 193. The supervisor and
+all four data workers remain active; recent assembly expert collection records
+report successful task completion. These remain data-collection outcomes only.
+The execution checkout is clean at `61a5d73`; the registered code and protocol
+have not changed. GPUs 0–3 remain the only campaign allocation.
+
+Fresh online W&B readback succeeded. No training runs/checkpoints or benchmark
+evaluations exist yet. No intervention was needed. Continue the shared cache
+and frozen goal manifest preparation before automatic training begins.
