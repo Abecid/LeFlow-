@@ -309,3 +309,15 @@ The supervisor and all four workers remain active, execution source is clean at
 Fresh online W&B readback passed. The finished run is the launch check; training
 runs and checkpoints remain at zero while shared preparation continues. No
 intervention was required. Continue the registered preparation/training queue.
+
+### 2026-10-07 22:16 UTC heartbeat
+
+Preparation advanced from 1754 to 1885 completed episodes: assembly,
+button-press-topdown and coffee-button now have 600 each; dial-turn has 85.
+Recent dial-turn collection is in the registered random-action portion, so
+unsuccessful episodes at these indices are expected. All four workers and the
+supervisor remain alive, with clean frozen source `61a5d73` and GPUs 0–3 only.
+
+Online W&B readback passed; training runs/checkpoints remain zero until shared
+preparation finishes. Free space remains 101 GiB on the persistent volume and
+2.2 TiB on scratch. No intervention was required; continue the registered queue.
