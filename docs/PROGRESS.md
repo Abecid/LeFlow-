@@ -156,3 +156,18 @@ Next autonomous step: finish all shared data/goal-screening rows and freeze the
 manifest, then train world models and all registered planners for three seeds;
 run validation during training and the 3,200-reset/model paired test campaign
 after all models finish. All method results, including losses, will be reported.
+
+### 2026-10-07 19:01 UTC heartbeat — preparation continues
+
+The supervisor (PID 2851417), distributed launcher, and all four data workers
+remain active. The execution checkout is clean and unchanged at `61a5d73`.
+The captured snapshot contains 56 completed episodes, up from the first verified
+24; all four ranks are making progress. These are still the scheduled random
+assembly episodes, so their unsuccessful task outcomes are not benchmark scores.
+Only GPUs 0–3 have campaign allocations (about 2.3 GiB each at this check).
+
+No training checkpoint/run has been created yet; the shared dataset remains the
+prerequisite. Fresh W&B API readback confirms the saved launch-check run remains
+accessible under the correct code revision. No intervention or protocol change
+was needed. Next: continue preparation, then let the supervisor start the
+registered training stages. This is routine ongoing progress, not a new result.

@@ -1,7 +1,9 @@
 {
+  "checked_at_utc": "2026-10-07T19:02:45.364864+00:00",
   "url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/reckez4q",
   "state": "finished",
   "job_type": "launch-check",
   "registered_code": "61a5d73257f47c728fab6333bb0aab30b98acdc4",
-  "online_readback": true
+  "online_readback": true,
+  "training_runs_created": 0
 }
