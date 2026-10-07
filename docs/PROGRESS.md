@@ -226,3 +226,14 @@ Fresh W&B readback and the consolidated snapshot transfer both succeeded. There
 are still no training runs/checkpoints or learned-method evaluation results.
 No intervention was needed; continue the remaining shared data preparation and
 the automatic training queue.
+
+### 2026-10-07 20:16 UTC heartbeat
+
+Preparation advanced from 616 to 756 completed episodes: 600 assembly and
+156 button-press-topdown episodes. The latter has reached expert collection;
+recent expert episodes report success. All four workers and the supervisor are
+active, the execution checkout is clean at `61a5d73`, and GPU use remains on 0–3.
+
+Fresh W&B readback passed; no training runs/checkpoints exist yet. Storage still
+has approximately 101 GiB free on persistent storage and 2.2 TiB on scratch. No
+intervention was needed. Continue preparation before automatic training.
