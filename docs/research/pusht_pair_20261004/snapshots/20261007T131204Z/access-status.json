@@ -1,0 +1,178 @@
+{
+  "scheduled_heartbeat_utc": "2026-10-07T13:10:06.756Z",
+  "reported_utc": "2026-10-07T13:12:04+00:00",
+  "status": "partial_monitoring_access_blocked",
+  "campaign_collector_verified_this_check": false,
+  "fresh_online_state_verified": true,
+  "fresh_gpu_process_mapping_verified": true,
+  "new_training_metrics_since_last_good": null,
+  "new_evaluations_since_last_good": null,
+  "current_checkpoints_verified": false,
+  "current_completion_markers_verified": false,
+  "current_campaign_processes_verified": false,
+  "current_campaign_recovery": "unverified",
+  "current_campaign_completion": "unverified",
+  "current_eta": null,
+  "attempts": {
+    "campaign_collector": {
+      "count": 2,
+      "exit_codes": [
+        255,
+        255
+      ],
+      "output_bytes": [
+        0,
+        0
+      ],
+      "error_lines": [
+        "Connection timed out during banner exchange",
+        "Connection to UNKNOWN port 65535 timed out"
+      ]
+    },
+    "online_readback": {
+      "count": 1,
+      "exit_codes": [
+        0
+      ],
+      "payload_errors": []
+    },
+    "gpu_process_query": {
+      "count": 1,
+      "exit_codes": [
+        0
+      ],
+      "payload_errors": []
+    }
+  },
+  "last_successful_campaign": {
+    "collection_started_utc": "2026-10-07T12:55:34+00:00",
+    "collection_finished_utc": "2026-10-07T12:55:38+00:00",
+    "snapshot_sha256": "f1dd9225843da8c1aa3c128509afe42f01b7b953137e8d95f838f024e7278300",
+    "evidence_is_cached": true,
+    "runs": {
+      "btm_3072": {
+        "saved_step": 23830,
+        "logged_step": 23830,
+        "selected_checkpoint_step": 1000,
+        "metric_rows": 2465,
+        "evaluation_records": 99,
+        "complete_three_offset_cycles": 33,
+        "completion_marker_present": false
+      },
+      "flow_3072": {
+        "saved_step": 23000,
+        "logged_step": 23040,
+        "selected_checkpoint_step": 1000,
+        "metric_rows": 2383,
+        "evaluation_records": 96,
+        "complete_three_offset_cycles": 32,
+        "completion_marker_present": false
+      }
+    },
+    "known_trainer_or_flow_controller_visible": false,
+    "visible_process_scope": "Campaign name/path filters in accessible process namespace; original supervisor intentionally stopped.",
+    "flow_updates_needed_from_saved_checkpoint": 830,
+    "frozen_source_commit_recorded": "69babde283f504120dae3dfc6e9188a0e2242be4"
+  },
+  "online": {
+    "btm": {
+      "run_id": "z78m0zk6",
+      "state": "finished",
+      "step": 23830,
+      "runtime_seconds": 8304,
+      "checked_utc": "2026-10-07T13:11:01+00:00"
+    },
+    "flow": {
+      "run_id": "g0u3w723",
+      "state": "finished",
+      "step": 23040,
+      "runtime_seconds": 9240,
+      "checked_utc": "2026-10-07T13:11:02+00:00"
+    }
+  },
+  "online_run_state_step_runtime_unchanged_since_last_read": true,
+  "online_readback_sha256": "9ed8b8b3f387b654bac880f175ff648fca717d79b38fd2d26ed65cfb43596243",
+  "fresh_manifest_sha256": "6410f2f196e6fd50a84ae82a192edc718ce169885144195cc63693faaa7f7f26",
+  "fresh_cpu_probe": {
+    "source": "Actual frozen LatentSegments.__getitem__ reads on CPU",
+    "clips": 32,
+    "episode_ids": [
+      4,
+      5
+    ],
+    "spacing_counts": {
+      "1": 20,
+      "2": 11,
+      "4": 1
+    },
+    "loss_probe_512_unique_episodes": 28
+  },
+  "fresh_hardware": {
+    "observed_utc": "2026-10-07T13:10:43+00:00",
+    "finished_utc": "2026-10-07T13:10:44+00:00",
+    "gpu_query_sha256": "e85c23275213fe7a532e0d3513bae644eafa2f69b1f42ad2fcdcd2df8abff934",
+    "gpus": [
+      {
+        "index": 0,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 1,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 2,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 3,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 4,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 5,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 6,
+        "utilization_percent": 0.0,
+        "memory_mib": 1071.0
+      },
+      {
+        "index": 7,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      }
+    ],
+    "processes": [
+      {
+        "gpu_index": 6,
+        "process_name_basename": "[Not Found]",
+        "memory_mib": "1068",
+        "pid_directory": "FileNotFoundError"
+      }
+    ],
+    "ownership": "unresolved",
+    "campaign_association": "not_established"
+  },
+  "research_goals_demonstrated_in_last_validated_results": {
+    "higher_primary_success": false,
+    "controlled_efficiency_with_retained_success": false
+  },
+  "results_report": "20261006T050931Z",
+  "previous_published_health_report": "20261007T092537Z",
+  "gpu_jobs_changed": false,
+  "credentials_modified_by_monitor": false,
+  "monitor_action": "keep_active",
+  "last_good_snapshots_preserved": true,
+  "independent_payload_audit": "passed"
+}
