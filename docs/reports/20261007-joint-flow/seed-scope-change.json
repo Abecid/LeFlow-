@@ -1,0 +1,22 @@
+{
+  "archive": "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/seed-scope-change-20261007",
+  "changed_at_utc": "2026-10-07T22:42:23.115082+00:00",
+  "completed_episode_files_preserved": 2128,
+  "data_configuration": "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/repo/config/flow_metaworld.json",
+  "data_protocol": "d2e0a5a0f7f14d94953122c9d09a7bc02c11415301cf81077ca4f66ab225f429",
+  "data_protocol_unchanged": true,
+  "execution_repo": "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/repo-single-seed",
+  "execution_revision": "06c5d02e542bfedf3772cc1575fd0e473b618dc7",
+  "execution_seeds": [
+    3072
+  ],
+  "previous_revision": "61a5d73257f47c728fab6333bb0aab30b98acdc4",
+  "previous_seeds": [
+    3072,
+    3073,
+    3074
+  ],
+  "reason": "Explicit user correction: one training seed only",
+  "tests_passed": 31,
+  "training_runs_before_change": 0
+}

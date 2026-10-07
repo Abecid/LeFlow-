@@ -1,10 +1,13 @@
 {
-  "checked_at_utc": "2026-10-07T22:35:54.004897+00:00",
+  "checked_at_utc": "2026-10-07T22:43:31.541007+00:00",
   "checkpoints": 0,
+  "execution_seeds": [
+    3072
+  ],
   "job_type": "launch-check",
   "online_readback": true,
-  "registered_code": "61a5d73257f47c728fab6333bb0aab30b98acdc4",
+  "registered_code": "06c5d02e542bfedf3772cc1575fd0e473b618dc7",
   "state": "finished",
   "training_runs_created": 0,
-  "url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/reckez4q"
+  "url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/l2sux44s"
 }

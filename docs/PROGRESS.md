@@ -2,14 +2,18 @@
 
 ## Current verified state
 
-- **User correction:** one training seed only (3072). Seed-scope migration is
-  in progress; do not restart the old three-seed supervisor. Preserve cached data.
+- **User correction applied:** exactly one training seed, 3072. Seeds 3073/3074
+  are removed from execution. Use `repo-single-seed` and the updated `launch.sh`.
 
-- **Running:** real MetaWorld data collection and V-JEPA feature caching on
-  target_server_2, GPUs 0–3. The shared dataset must finish before full training.
+- **Running:** corrected single-seed supervisor on target_server_2, limited to
+  GPUs 0–3. It rechecks the GPU setup, then resumes the preserved shared cache
+  before training. 2,128 completed episodes were retained at the switch.
 - **Passed:** 29 server tests; actual four-rank CUDA/NCCL preflight, official encoder,
   repeatable simulator rendering, and two optimizer updates per architecture.
-- **Active execution revision:** `61a5d73257f47c728fab6333bb0aab30b98acdc4`.
+- **Active execution revision:** `06c5d02e542bfedf3772cc1575fd0e473b618dc7`
+  in server checkout `repo-single-seed`. The old `repo` is preserved only for
+  its original cache-compatible data configuration; its three-seed supervisor
+  is stopped and must not be restarted.
   The desktop reporting branch advances independently; do not pull it into the
   running execution checkout.
 - **Continuity:** detached server supervisor, persistent logs/checkpoints/evaluation
@@ -361,3 +365,46 @@ active and remains the sole campaign monitor. It preserves subsequent progress,
 recovers failures within the authorized four-GPU limit, and reports meaningful
 changes. Next step: complete shared data preparation; allow the detached
 supervisor to advance automatically into world-model and planner training.
+
+### 2026-10-07 22:42 UTC — user correction: one training seed
+
+The user explicitly rejected multiple training seeds. The campaign now registers
+`execution_seeds: [3072]` and uses exactly that seed for all training, evaluation,
+and comparison stages. Seeds 3073 and 3074 are no longer queued. The eight method
+entries include our method, three ablations, LeFlow/HWM adaptations, and short/
+long CEM; no methods were removed without user instruction.
+
+Code `06c5d02` passed all 31 server tests. Added checks that a one-seed execution
+can reuse an unchanged historical data protocol, that comparison rejects extra
+seed reports, and that uncertainty is labeled as paired-reset uncertainty only.
+Fresh default configurations now also contain just seed 3072.
+
+The actual supervisor was replaced before any full training run existed. Its
+old process tree was stopped by verified PID identities; 2,128 completed cache
+files were retained. The original registration and launch metadata are archived
+at `/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/seed-scope-change-20261007`.
+No completed data was re-encoded or reselected. A first administrative command
+failed on an unavailable optional process library before changing anything; the
+successful switch used only the standard library and checked process identities.
+
+New frozen execution checkout: `repo-single-seed` at `06c5d02` under the same
+server record. New supervisor PID: 3094037. Launcher: the same `launch.sh`, now
+with `--seed 3072 --config "$record/repo/config/flow_metaworld.json"`. The original
+configuration is retained only to match existing cache fingerprints; the explicit
+single execution seed supersedes its historical list. `campaign/seed-scope-change.json`
+records this distinction and preservation evidence. New supervisor log:
+`launcher-single-seed.log`. Do not change either frozen checkout during execution.
+
+The existing heartbeat now explicitly prohibits extra training seeds and points
+to the new checkout. Next: verify resumed preparation after GPU checks, then allow
+one world model and six learned planners to train; CEM uses the shared world
+without separate planner training. Final paired evaluation remains 3,200 resets
+per method, 25,600 executions across eight methods, with validation-only selection.
+No confidence interval will claim to measure variation across training runs.
+
+Live verification: the new supervisor acquired GPUs 0–3 and started all four
+GPU-preflight workers from the new frozen checkout. Fresh W&B API readback of
+launch-check run `l2sux44s` confirms execution seed `[3072]` and code `06c5d02`:
+https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/l2sux44s.
+The monitor can continue normally; the seed migration is complete. Full training
+remains pending shared preparation, and there are still no benchmark results.

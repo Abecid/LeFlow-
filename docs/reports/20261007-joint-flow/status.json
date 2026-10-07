@@ -8,7 +8,7 @@
     "--rdzv-endpoint=127.0.0.1:0",
     "--nproc_per_node=4",
     "-m",
-    "flow_jepa.data",
+    "flow_jepa.preflight",
     "--config",
     "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/repo/config/flow_metaworld.json",
     "--root",
@@ -32,6 +32,6 @@
       "GPU-64e751ee-abb6-120c-f346-311e789228c7"
     ]
   ],
-  "stage": "prepare_data",
+  "stage": "gpu_preflight",
   "status": "running"
 }

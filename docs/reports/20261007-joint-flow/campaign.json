@@ -1,5 +1,5 @@
 {
-  "code": "61a5d73257f47c728fab6333bb0aab30b98acdc4",
+  "code": "06c5d02e542bfedf3772cc1575fd0e473b618dc7",
   "configuration": {
     "data": {
       "action_repeat": 2,
@@ -114,6 +114,9 @@
       "project": "flow-jepa-metaworld"
     }
   },
+  "execution_seeds": [
+    3072
+  ],
   "independent_test_resets": 3200,
   "max_gpus": 4,
   "protocol": "d2e0a5a0f7f14d94953122c9d09a7bc02c11415301cf81077ca4f66ab225f429",
