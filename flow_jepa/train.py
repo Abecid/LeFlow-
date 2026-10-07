@@ -30,6 +30,7 @@ from .data import Segments
 from .evaluate import evaluate
 from .models import System, prediction_loss, distance
 from .vision import Encoder
+from .budget import training_progress
 
 
 def rng_state():
@@ -224,58 +225,93 @@ def train(c, root, run_dir, method, seed, world_path=None, *, allow_fixture=Fals
             ),
         )
     encoder, began = None, time.perf_counter()
+    limit = tc.get("budget_seconds")
+    ledger_path = run_dir / "compute_usage.json"
+    ledger = json.loads(ledger_path.read_text()) if ledger_path.exists() else {}
+    used = max(float((saved or {}).get("training_seconds", 0.0)),
+               float(ledger.get("training_seconds", 0.0)))
+    validation_used = max(float((saved or {}).get("validation_seconds", 0.0)),
+                          float(ledger.get("validation_seconds", 0.0)))
+    validation_round = int((saved or {}).get("validation_round", 0))
+    rounds = tc.get("validation_rounds", 4)
+    step = start
+
+    def max_rank_seconds(seconds):
+        elapsed = torch.tensor(seconds, device=device, dtype=torch.float64)
+        if size > 1:
+            dist.all_reduce(elapsed, op=dist.ReduceOp.MAX)
+        return float(elapsed)
+
+    def save_usage():
+        if rank == 0:
+            save_json(ledger_path, dict(
+                step=step, training_seconds=used, validation_seconds=validation_used,
+                training_gpu_hours=used * size / 3600,
+                validation_gpu_hours=validation_used * size / 3600,
+                training_budget_seconds=limit, gpu_count=size,
+                budget_check="optimizer boundaries; any last-update overrun is reported",
+            ))
     try:
-        for step in range(start + 1, steps + 1):
-            model.train()
-            optimizer.zero_grad(set_to_none=True)
-            progress = (step - 1) / max(steps - 1, 1)
-            warmup = max(1, int(0.05 * steps))
-            factor = min(1.0, step / warmup) * (
-                0.01 + 0.99 * (1 + math.cos(math.pi * progress)) / 2
-            )
-            for group in optimizer.param_groups:
-                group["lr"] = lr * factor
-            metrics = {}
-            for acc in range(accumulation):
-                batch = {
-                    k: v.to(device, non_blocking=True)
-                    for k, v in next(iterator).items()
-                }
-                sync = (
-                    module.no_sync()
-                    if size > 1 and acc + 1 < accumulation
-                    else contextlib.nullcontext()
+        while step < steps:
+            updated = not (limit and used >= limit)
+            if updated:
+                step += 1
+                if device.type == "cuda":
+                    torch.cuda.synchronize(device)
+                update_started = time.perf_counter()
+                model.train()
+                optimizer.zero_grad(set_to_none=True)
+                progress = training_progress(step - 1, steps, used, limit)
+                warmup = max(1, int(0.05 * steps))
+                warmup_factor = max(progress, step / steps) / 0.05 if limit else step / warmup
+                factor = min(1.0, warmup_factor) * (
+                    0.01 + 0.99 * (1 + math.cos(math.pi * progress)) / 2
                 )
-                weight = 0.0
-                if method.endswith("_consistent"):
-                    weight = tc["consistency_weight"] * min(
-                        1.0,
-                        max(
-                            0.0,
-                            (step - tc["consistency_warmup"])
-                            / max(tc["consistency_warmup"], 1),
-                        ),
+                for group in optimizer.param_groups:
+                    group["lr"] = lr * factor
+                metrics = {}
+                for acc in range(accumulation):
+                    batch = {
+                        k: v.to(device, non_blocking=True)
+                        for k, v in next(iterator).items()
+                    }
+                    sync = (
+                        module.no_sync()
+                        if size > 1 and acc + 1 < accumulation
+                        else contextlib.nullcontext()
                     )
-                with sync:
-                    loss, parts = module(
-                        batch,
-                        world,
-                        consistency_weight=weight,
-                        consistency_batch=tc["consistency_batch"],
-                        consistency_steps=tc["consistency_steps"],
-                    )
-                    if not torch.isfinite(loss):
-                        raise FloatingPointError(
-                            f"Nonfinite training loss at step {step}"
+                    weight = 0.0
+                    if method.endswith("_consistent"):
+                        ramp = ((progress - 0.1) / 0.1) if limit else (
+                            (step - tc["consistency_warmup"]) / max(tc["consistency_warmup"], 1)
                         )
-                    (loss / accumulation).backward()
-                for k, v in {"loss": loss.detach(), **parts}.items():
-                    metrics[k] = metrics.get(k, 0.0) + float(v) / accumulation
-            norm = torch.nn.utils.clip_grad_norm_(
-                model.parameters(), tc["gradient_clip"], error_if_nonfinite=True
-            )
-            optimizer.step()
-            if step % tc["log_every"] == 0 or step == 1:
+                        weight = tc["consistency_weight"] * min(1.0, max(0.0, ramp))
+                    with sync:
+                        loss, parts = module(
+                            batch,
+                            world,
+                            consistency_weight=weight,
+                            consistency_batch=tc["consistency_batch"],
+                            consistency_steps=tc["consistency_steps"],
+                        )
+                        if not torch.isfinite(loss):
+                            raise FloatingPointError(
+                                f"Nonfinite training loss at step {step}"
+                            )
+                        (loss / accumulation).backward()
+                    for k, v in {"loss": loss.detach(), **parts}.items():
+                        metrics[k] = metrics.get(k, 0.0) + float(v) / accumulation
+                norm = torch.nn.utils.clip_grad_norm_(
+                    model.parameters(), tc["gradient_clip"], error_if_nonfinite=True
+                )
+                optimizer.step()
+                if device.type == "cuda":
+                    torch.cuda.synchronize(device)
+                used += max_rank_seconds(time.perf_counter() - update_started)
+                save_usage()
+            progress = training_progress(step, steps, used, limit)
+            stop_now = progress >= 1.0
+            if updated and (step % tc["log_every"] == 0 or step == 1 or stop_now):
                 keys = sorted(metrics)
                 vals = torch.tensor([metrics[k] for k in keys], device=device)
                 if size > 1:
@@ -287,6 +323,12 @@ def train(c, root, run_dir, method, seed, world_path=None, *, allow_fixture=Fals
                     **{
                         "train/lr": lr * factor,
                         "train/grad_norm": float(norm),
+                        "budget/training_seconds": used,
+                        "budget/training_gpu_hours": used * size / 3600,
+                        "budget/validation_gpu_hours": validation_used * size / 3600,
+                        "budget/fraction": progress,
+                        "budget/last_update_overrun_seconds": max(0.0, used - limit) if limit else 0.0,
+                        "train/consistency_weight": weight,
                         "system/samples_per_second": (step - start)
                         * global_batch
                         / (time.perf_counter() - began),
@@ -301,9 +343,12 @@ def train(c, root, run_dir, method, seed, world_path=None, *, allow_fixture=Fals
                     with (run_dir / "metrics.jsonl").open("a") as f:
                         f.write(json.dumps(log, allow_nan=False) + "\n")
                     print(json.dumps(log), flush=True)
-            evaluate_now = step % tc["eval_every"] == 0 or step == steps
+            evaluate_now = (progress >= (validation_round + 1) / rounds or stop_now) if limit else (
+                step % tc["eval_every"] == 0 or step == steps
+            )
             improved = False
             if evaluate_now:
+                evaluation_started = time.perf_counter()
                 rng = rng_state()
                 validation_metrics = None
                 if method == "world":
@@ -315,6 +360,17 @@ def train(c, root, run_dir, method, seed, world_path=None, *, allow_fixture=Fals
                         validation_metrics = {
                             f"validation/{k}": v for k, v in validation.items()
                         }
+                    if not allow_fixture and "cem_long" in c["methods"]:
+                        if encoder is None:
+                            encoder = Encoder(c["encoder"], root, device)
+                        records, summary = evaluate(
+                            None, model.world, c, root, "cem_long", seed, "validation",
+                            encoder, device, tc["validation_episodes_per_task"],
+                        )
+                        if rank == 0:
+                            save_json(run_dir / "validation" / f"cem_step_{step:07d}.json",
+                                      dict(step=step, method="cem_long", metrics=summary, records=records))
+                            validation_metrics.update({f"cem_validation/{k}": v for k, v in summary.items()})
                 elif not allow_fixture:
                     if encoder is None:
                         encoder = Encoder(c["encoder"], root, device)
@@ -342,14 +398,24 @@ def train(c, root, run_dir, method, seed, world_path=None, *, allow_fixture=Fals
                         validation_metrics = {
                             f"validation/{k}": v for k, v in summary.items()
                         }
+                if device.type == "cuda":
+                    torch.cuda.synchronize(device)
+                validation_used += max_rank_seconds(time.perf_counter() - evaluation_started)
+                validation_round += 1
+                save_usage()
                 if rank == 0 and validation_metrics is not None:
+                    validation_metrics.update({
+                        "budget/validation_round": validation_round,
+                        "budget/training_gpu_hours": used * size / 3600,
+                        "budget/validation_gpu_hours": validation_used * size / 3600,
+                    })
                     run.log(validation_metrics, step=step)
                     log = dict(step=step, **validation_metrics)
                     with (run_dir / "metrics.jsonl").open("a") as f:
                         f.write(json.dumps(log, allow_nan=False) + "\n")
                     print(json.dumps(log), flush=True)
                 restore_rng(rng)
-            if step % tc["checkpoint_every"] == 0 or evaluate_now:
+            if step == 1 or step % tc["checkpoint_every"] == 0 or evaluate_now:
                 rngs = gather(rng_state())
                 if rank == 0:
                     saved = dict(
@@ -367,15 +433,24 @@ def train(c, root, run_dir, method, seed, world_path=None, *, allow_fixture=Fals
                         code=git_revision(),
                         wandb_id=run_id,
                         fixture=allow_fixture,
+                        training_seconds=used,
+                        validation_seconds=validation_used,
+                        validation_round=validation_round,
                     )
                     checkpoint(last, saved)
                     if improved:
                         checkpoint(run_dir / "best.pt", saved)
                 barrier()
+            if stop_now:
+                break
         if rank == 0:
             save_json(
                 run_dir / "complete.json",
-                dict(step=steps, best=best, fixture=allow_fixture),
+                dict(step=step, best=best, fixture=allow_fixture,
+                     stop_reason="compute_budget" if limit and used >= limit else "update_limit",
+                     training_seconds=used, validation_seconds=validation_used,
+                     training_gpu_hours=used * size / 3600,
+                     training_budget_seconds=limit, validation_rounds=validation_round),
             )
     finally:
         if run is not None:

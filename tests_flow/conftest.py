@@ -21,6 +21,7 @@ def small_config():
         validation_episodes_per_task=2,
         test_episodes_per_task=4,
     )
+    c["training"].pop("budget_seconds", None)
     c["training"].update(
         world_steps=2,
         planner_steps=2,

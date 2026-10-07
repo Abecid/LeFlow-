@@ -14,6 +14,30 @@ import time
 from pathlib import Path
 
 from .common import config, digest, file_hash, git_revision, save_json
+from .budget import verify_data_compatibility
+
+
+def adopt_data_manifest(root, data_config, execution_config):
+    """Retain all episode hashes while registering a revised execution budget."""
+    verify_data_compatibility(data_config, execution_config)
+    path = root / "manifest.json"
+    manifest = json.loads(path.read_text())
+    if manifest["protocol"] == digest(execution_config):
+        return
+    if manifest["protocol"] != digest(data_config) or manifest.get("fixture", True):
+        raise ValueError("Prepared manifest does not match the preserved data protocol")
+    source_hash = file_hash(path)
+    archive = root / "data-manifest.json"
+    if archive.exists() and file_hash(archive) != source_hash:
+        raise ValueError("Original data manifest archive differs")
+    if not archive.exists():
+        shutil.copy2(path, archive)
+    manifest.update(
+        protocol=digest(execution_config), data_protocol=digest(data_config),
+        source_manifest_sha256=source_hash,
+        data_reuse="Unchanged episodes, reset IDs, goal screening, encoder and statistics",
+    )
+    save_json(path, manifest)
 
 
 def visible_gpus():
@@ -120,9 +144,14 @@ def main():
     p.add_argument("--gpus", type=int, default=4, choices=[1, 2, 4])
     p.add_argument("--wait-hours", type=float, default=168)
     p.add_argument("--seed", type=int, default=3072, help="Exactly one training seed")
+    p.add_argument("--data-config", help="Original configuration of a preserved feature cache")
     p.add_argument("--dry-run", action="store_true")
     a = p.parse_args()
     c, root = config(a.config), Path(a.root).expanduser().resolve()
+    if c["methods"] != ["joint_flow_consistent", "leflow_adapted", "hwm_adapted", "cem_long"]:
+        raise ValueError("First pass permits only ours, LeFlow, HWM and long CEM")
+    data_c = config(a.data_config) if a.data_config else c
+    verify_data_compatibility(data_c, c)
     if a.seed not in c["seeds"]:
         raise ValueError("Training seed is not registered in the data configuration")
     seeds = [a.seed]
@@ -132,6 +161,8 @@ def main():
         protocol=digest(c),
         max_gpus=a.gpus,
         execution_seeds=seeds,
+        execution_methods=c["methods"],
+        data_protocol=digest(data_c),
         rendering={
             "backend": os.getenv("MUJOCO_GL", "egl"),
             "egl_devices_override": os.getenv("FLOW_EGL_DEVICES"),
@@ -190,7 +221,7 @@ def main():
     )
     count = len(selected)
 
-    def run(module, arguments, log_name):
+    def run(module, arguments, log_name, configuration=None):
         if (
             git_revision() != plan["code"]
             or subprocess.check_output(
@@ -209,7 +240,7 @@ def main():
             "-m",
             module,
             "--config",
-            str(Path(a.config).resolve()),
+            str(Path(configuration or a.config).resolve()),
             "--root",
             str(root),
             *map(str, arguments),
@@ -235,7 +266,8 @@ def main():
                 raise RuntimeError(
                     "Use a data volume with at least 150 GiB free for the full dense-feature cache and goal screening"
                 )
-            run("flow_jepa.data", [], "prepare_data")
+            run("flow_jepa.data", [], "prepare_data", a.data_config)
+        adopt_data_manifest(root, data_c, c)
         manifest_hash = verify_manifest(root, c)
         for seed in seeds:
             world_dir = root / "runs" / f"world_{seed}"

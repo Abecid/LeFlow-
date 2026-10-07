@@ -77,7 +77,9 @@
     "log_every": 50,
     "checkpoint_every": 1000,
     "eval_every": 5000,
-    "validation_episodes_per_task": 32
+    "validation_episodes_per_task": 8,
+    "budget_seconds": 7200,
+    "validation_rounds": 4
   },
   "evaluation": {
     "candidates": 32,
@@ -91,16 +93,13 @@
     "refine_elites": 8,
     "refine_iterations": 3,
     "budget_primitive": 200,
-    "bootstrap_samples": 10000
+    "bootstrap_samples": 10000,
+    "controller_seconds_per_episode": 10.0
   },
   "methods": [
     "joint_flow_consistent",
-    "joint_flow",
-    "joint_deterministic_consistent",
-    "joint_deterministic",
     "leflow_adapted",
     "hwm_adapted",
-    "cem_short",
     "cem_long"
   ],
   "primary_method": "joint_flow_consistent",

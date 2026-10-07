@@ -5,7 +5,10 @@
 - The user authorizes SSH to `target_server_2`, at most four GPUs total for this
   campaign, training, online W&B logging, and matched baseline evaluation.
 - Use exactly one training seed, 3072, per the user's October 7 correction.
-  Never launch additional training seeds. The eight method entries include ours.
+  Never launch additional training seeds. Run only joint_flow_consistent,
+  leflow_adapted, hwm_adapted, and cem_long. No ablations until first results
+  and failure analysis justify them and the user authorizes subsequent work.
+  Enforce matched compute limits, shared train/evaluation data and periodic W&B evaluation.
 - Keep `docs/PROGRESS.md` current. Record code changes, commands/configuration,
   tests, experiment findings (including negative results), run/checkpoint paths,
   W&B links, failures, and the concrete next step.

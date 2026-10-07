@@ -23,6 +23,7 @@ from .common import (
 from .environment import make_env
 from .models import System, distance
 from .vision import Encoder, history_clip
+from .budget import PlanningBudget, PlanningBudgetExceeded
 
 
 def cem(
@@ -35,19 +36,22 @@ def cem(
     elites,
     iterations,
     mean=None,
+    budget=None,
 ):
     if not 1 <= elites <= candidates or min(horizon, iterations) < 1:
         raise ValueError("Invalid CEM settings")
     mean = start.new_zeros(horizon, action_dim) if mean is None else mean.clone()
     std, best, best_cost = torch.ones_like(mean), mean, float("inf")
     for _ in range(iterations):
+        if budget is not None:
+            budget.check()
         a = (
             mean[None]
             + std[None]
             * torch.randn(candidates, horizon, action_dim, device=start.device)
         ).clamp(-1, 1)
         a[0] = mean.clamp(-1, 1)
-        pred = dynamics.rollout(start.expand(candidates, -1, -1), a)
+        pred = dynamics.rollout(start.expand(candidates, -1, -1), a, budget=budget)
         costs = distance(pred, goal[:, None]).min(1).values
         idx = costs.topk(elites, largest=False).indices
         if float(costs[idx[0]]) < best_cost:
@@ -61,7 +65,9 @@ class Controller:
         self.model, self.world, self.c, self.method = model, world, c, method
 
     @torch.no_grad()
-    def plan(self, start, goal):
+    def plan(self, start, goal, *, budget=None):
+        if budget is not None:
+            budget.check()
         c, e = self.c["model"], self.c["evaluation"]
         k, m = c["chunk_steps"], c["segments"]
         ad = 4 * self.c["data"]["action_repeat"]
@@ -76,6 +82,7 @@ class Controller:
                 e["cem_candidates"],
                 e["cem_elites"],
                 e["cem_iterations"],
+                budget=budget,
             )
             return a[0], goal[0], score, h
         if self.method == "hwm_adapted":
@@ -88,6 +95,7 @@ class Controller:
                 e["cem_candidates"],
                 e["cem_elites"],
                 e["cem_iterations"],
+                budget=budget,
             )
             subgoal = self.model.coarse(start, macro[:1])
             warm = None
@@ -103,6 +111,7 @@ class Controller:
                 steps=e["flow_steps"],
                 deterministic=det,
                 path_only=path_only,
+                budget=budget,
             )
             paths = torch.cat([astart[:, None], interior, agoal[:, None]], 1)
             if path_only:
@@ -111,12 +120,13 @@ class Controller:
                 ).reshape(n, m, k, ad)
                 # LeFlow family: rank actual decoded actions by final rollout distance.
                 endpoint = self.world.rollout(
-                    astart, acts.clamp(-1, 1).reshape(n, m * k, ad)
+                    astart, acts.clamp(-1, 1).reshape(n, m * k, ad), budget=budget
                 )[:, -1]
                 scores = distance(endpoint, agoal)
             else:
                 endpoints = self.world.rollout(
-                    paths[:, :-1].flatten(0, 1), acts.clamp(-1, 1).reshape(n * m, k, ad)
+                    paths[:, :-1].flatten(0, 1), acts.clamp(-1, 1).reshape(n * m, k, ad),
+                    budget=budget,
                 )[:, -1]
                 scores = (
                     distance(endpoints, paths[:, 1:].flatten(0, 1))
@@ -139,6 +149,7 @@ class Controller:
             e["refine_elites"],
             e["refine_iterations"],
             mean=warm,
+            budget=budget,
         )
         return a[0], subgoal[0], score, k
 
@@ -272,6 +283,15 @@ def summarize(records, c):
     result["world_predictions_mean"] = float(
         np.mean([r["world_predictions"] for r in records])
     )
+    result["controller_seconds_per_episode_mean"] = float(
+        np.mean([sum(r["controller_latency_ms"]) / 1000 for r in records])
+    )
+    result["controller_budget_exhausted_rate"] = float(
+        np.mean([r.get("controller_budget_exhausted", False) for r in records])
+    )
+    result["controller_budget_overrun_seconds_mean"] = float(
+        np.mean([r.get("controller_budget_overrun_seconds", 0.0) for r in records])
+    )
     attained = [x for r in records for x in r["observed_subgoal_cosine"]]
     if attained:
         result["observed_subgoal_cosine"] = float(np.mean(attained))
@@ -337,6 +357,8 @@ def evaluate(
                 )
             success, first, total_reward = False, None, 0.0
             latency, scores, observed, pending = [], [], [], []
+            controller_limit = c["evaluation"].get("controller_seconds_per_episode")
+            controller_spent, exhausted = 0.0, False
             initial_calls = world.calls
             initial_coarse = model.coarse.calls if method == "hwm_adapted" else 0
             repeat, budget = (
@@ -347,22 +369,37 @@ def evaluate(
                 if device.type == "cuda":
                     torch.cuda.synchronize(device)
                 started = time.perf_counter()
-                clip = history_clip(
-                    frames, len(frames) - 1, c["data"]["history_frames"]
-                )
-                z = (encoder(clip[None]).float() - mean) / std
-                for due, target in pending:
-                    if due == t:
-                        observed.append(float(distance(z, target[None])))
-                pending = [(due, target) for due, target in pending if due > t]
-                action, subgoal, score, h = controller.plan(z, goal[None])
-                pending.append((t + h, subgoal.detach()))
-                if device.type == "cuda":
-                    torch.cuda.synchronize(device)
-                latency.append(1000 * (time.perf_counter() - started))
-                scores.append(score)
+                clock = PlanningBudget(controller_limit - controller_spent) if controller_limit else None
+                try:
+                    if clock is not None:
+                        clock.check()
+                    clip = history_clip(
+                        frames, len(frames) - 1, c["data"]["history_frames"]
+                    )
+                    z = (encoder(clip[None]).float() - mean) / std
+                    for due, target in pending:
+                        if due == t:
+                            observed.append(float(distance(z, target[None])))
+                    pending = [(due, target) for due, target in pending if due > t]
+                    action, subgoal, score, h = controller.plan(z, goal[None], budget=clock)
+                    actions = action.cpu().numpy().reshape(repeat, 4)
+                    if device.type == "cuda":
+                        torch.cuda.synchronize(device)
+                    if clock is not None:
+                        clock.check()
+                    pending.append((t + h, subgoal.detach()))
+                    scores.append(score)
+                except PlanningBudgetExceeded:
+                    exhausted = True
+                    if device.type == "cuda":
+                        torch.cuda.synchronize(device)
+                elapsed = time.perf_counter() - started
+                controller_spent += elapsed
+                latency.append(1000 * elapsed)
+                if exhausted:
+                    break  # Never execute an action produced after the shared deadline.
                 stop = False
-                for j, a in enumerate(action.cpu().numpy().reshape(repeat, 4)):
+                for j, a in enumerate(actions):
                     _, reward, terminated, truncated, info = env.step(np.clip(a, -1, 1))
                     total_reward += float(reward)
                     frames.append(env.render().copy())
@@ -392,8 +429,12 @@ def evaluate(
                     coarse_predictions=(model.coarse.calls - initial_coarse)
                     if method == "hwm_adapted"
                     else 0,
-                    predicted_plan_cost=float(np.mean(scores)),
+                    predicted_plan_cost=float(np.mean(scores)) if scores else None,
                     observed_subgoal_cosine=observed,
+                    controller_budget_seconds=controller_limit,
+                    controller_budget_exhausted=exhausted,
+                    controller_budget_overrun_seconds=max(0.0, controller_spent - controller_limit)
+                    if controller_limit else 0.0,
                 )
             )
             records[-1]["return"] = records[-1].pop("return_")

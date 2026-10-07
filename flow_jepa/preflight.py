@@ -84,17 +84,13 @@ def main():
     fixture["local"] = (
         torch.stack([z[0], z[-1]])[None].expand(micro, -1, -1, -1).clone()
     )
+    fixture["coarse_z"] = zpath.clone()
     methods = {}
-    for method in (
-        "joint_flow_consistent",
-        "joint_deterministic_consistent",
-        "leflow_adapted",
-        "hwm_adapted",
-    ):
+    for method in (x for x in c["methods"] if not x.startswith("cem_")):
         model = System(c, method).to(device)
         joint = DDP(model, device_ids=[device.index]) if size > 1 else model
         optimizer = torch.optim.AdamW(model.parameters(), lr=1e-4)
-        inputs = batch if method == "hwm_adapted" else fixture
+        inputs = fixture
         # Two iterations expose unused-parameter/reducer failures on the next forward.
         for _ in range(2):
             optimizer.zero_grad(set_to_none=True)

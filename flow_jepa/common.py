@@ -40,6 +40,9 @@ def config(path):
         raise ValueError("Training and task-held-out sets overlap")
     if len(set(c["seeds"])) != len(c["seeds"]):
         raise ValueError("Repeated training seeds")
+    for section, key in (("training", "budget_seconds"), ("evaluation", "controller_seconds_per_episode")):
+        if key in c[section] and c[section][key] <= 0:
+            raise ValueError(f"{key} must be positive")
     return c
 
 

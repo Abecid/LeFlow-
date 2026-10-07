@@ -6,7 +6,8 @@ for this experiment.
 
 ## Fixed scientific target
 
-Primary outcome: closed-loop MetaWorld v3 success within 200 primitive actions,
+Primary outcome: closed-loop MetaWorld v3 success within 200 primitive actions
+and 10 seconds of cumulative controller time per episode,
 averaged equally over 16 tasks. Report the 13 training-task and 3 task-held-out
 groups separately. The task list follows *The Planning Limits of Latent World
 Models* (arXiv:2609.39235), but this code is an independent implementation, not
@@ -30,11 +31,13 @@ This regularizer is not a certificate of simulator reachability.
 ## Data and evaluation rules
 
 - 600 independent training resets per training task (80% expert / 20% random).
-  Fine and coarse world dynamics see both collection modes. Planners use successful expert
-  episodes with hindsight goals, sampling starts before task completion. No training episodes from the three held-out
+  The one shared fine world model sees both collection modes. All three learned
+  planners use the same successful expert episodes and sampled trajectory windows,
+  with hindsight goals and starts before task completion. HWM learns its coarse
+  transitions from every five-step chunk in those same windows. No training episodes from the three held-out
   tasks. The success rate of the collecting expert is logged, not assumed.
 - 50 validation resets per training task, separate from all training resets.
-  Intermediate evaluation uses a fixed 32 per task. Only validation outcomes
+  Intermediate evaluation uses a fixed 8 per task (104 episodes). Only validation outcomes
   select checkpoints or tune hyperparameters.
 - 200 **distinct test resets per task**, with valid single-image goal annotations.
   Before any model is trained, collect a fixed stream of 400 candidate resets
@@ -60,27 +63,51 @@ This regularizer is not a certificate of simulator reachability.
 
 ## Comparators and attribution
 
-1. CEM over the same JEPA dynamics, horizons 5 and 30.
-2. LeFlow-style flow paths plus a separate inverse model and rollout selection
-   (arXiv:2608.24855), adapted to the shared V-JEPA token representation.
-3. HWM-style learned macro-actions and coarse/fine CEM (arXiv:2604.03208), adapted
-   to the shared representation and data.
-4. A matched 2 x 2: deterministic / flow, each with / without generated consistency.
+Exactly four methods run in this first pass:
 
-The LeFlow/HWM ports are method-family comparisons, **not exact reproductions of
-published SOTA checkpoints**. Published results use different data and protocols
-and must not be inserted into this measured comparison table. The campaign logs
-parameter counts, training updates, controller settings and actual latency.
-Equal candidate counts alone do not establish equal compute. A separate
-validation-calibrated latency-matched comparison is required for efficiency claims.
+1. **Proposed joint flow + generated-plan consistency** (`joint_flow_consistent`).
+2. **LeFlow adaptation** (`leflow_adapted`): latent flow paths, separate inverse
+   model, ranking by predicted action outcomes. Primary baseline.
+3. **HWM adaptation** (`hwm_adapted`): learned macro-actions, coarse/fine planning.
+4. **JEPA/CEM, horizon 30** (`cem_long`): direct action search through the same
+   fine world model; the stronger long-horizon reference in the planning-limits study.
+
+No ablations, additional seeds, or extra methods are queued. The evidence and
+selection rationale are in [FIRST_PASS.md](FIRST_PASS.md). LeFlow/HWM are method
+adaptations to a common encoder and dataset, not exact published-SOTA reproductions.
+
+Each learned model gets the same 7,200-second optimization allowance on the same
+four GPUs, with a 20,000-update ceiling. The fine world model is trained once with
+that same cap and shared by all methods. CEM has no extra learned head. This gives
+an upper training allowance of 32 GPU-hours plus the final atomic update, excluding
+shared preprocessing and separately metered validation. Caps are checked between
+optimizer updates; the last update's overrun and actual usage are logged. Usage
+is durably recorded each update and retained across resume. Methods may use fewer
+updates or less time; no dummy work is added to make consumption identical.
+
+Each controller gets 10 seconds cumulatively per evaluation episode, including
+image-history preparation, encoding, planning, and action conversion. Environment
+rendering/stepping is separate. Checks inside flow/CEM/rollout loops stop work at
+safe boundaries. A running tensor operation can finish beyond the deadline; that
+overrun is logged and its late action is not executed. Such episodes remain in
+the denominator. All methods also share the 200-primitive-action limit.
+
+Periodic validation occurs at 25%, 50%, 75%, and 100% of the earlier time/update
+cap, with the same 104 resets. Loss/system metrics are logged every 50 updates.
+CEM validation runs at those milestones while the shared world is being trained;
+its final test uses exactly the same selected frozen world as all learned heads.
+The final comparison contains 12,800 episode executions: four methods times
+3,200 paired resets. There is no automatic ablation phase after it.
 
 ## Launch and monitoring
 
-The active resumed campaign preserves the original data configuration to retain
-its existing cache hashes. Its historical `seeds` field is superseded by the
-registered `execution_seeds: [3072]` and explicit `--seed 3072` launch argument.
-Fresh campaigns use the single-seed default configuration. No data, model,
-controller, method, or reset selection changes accompany this seed reduction.
+The active resumed campaign passes the preserved original configuration through
+`--data-config` solely for feature preparation/cache compatibility. Its current
+`--config` contains exactly the four methods, seed 3072 and the explicit budgets.
+After preparation, the original manifest is archived as `data-manifest.json`,
+and the execution manifest retains all episode hashes, reset IDs, goal screening
+and feature statistics while recording the new execution protocol. Changing an
+encoder, camera, reset distribution, or split fails the compatibility check.
 
 Use branch `research/joint-flow-metaworld`. On the authorized server, run:
 
@@ -109,10 +136,9 @@ campaign. Data preparation then creates the frozen train/validation/test manifes
 It downloads the pretrained encoder and collects simulator data; it does not
 silently substitute another dataset if collection fails.
 
-Training logs online to W&B and to local JSONL every 50 optimizer steps. World
-validation reports prediction loss, no-motion persistence loss, and action
-identification among 16 candidates. Planner validation runs 32 fixed episodes per
-training task (416 total) every 5,000 updates, including the final update. The
+Training logs online to W&B and local JSONL every 50 optimizer steps. World
+validation reports prediction loss, persistence loss and action identification.
+Closed-loop validation uses 104 fixed episodes at four budget milestones. The
 selected checkpoint maximizes validation macro success. World checkpoints use
 validation prediction loss. All models finish before any test results are used.
 
@@ -126,6 +152,7 @@ Inspect these files beneath `FLOW_DATA_DIR`:
 | `campaign.json`, `manifest.json` | Frozen code/configuration and episode identity |
 | `runs/*/run.json` | Online W&B run links |
 | `runs/*/metrics.jsonl` | Intermediate training and evaluation metrics |
+| `runs/*/compute_usage.json` | Resumable training and validation time accounting |
 | `test/*.json`, `test/*.json.episodes/` | Final reports and durable individual episodes |
 | `comparison.json` | Paired single-seed comparison and reset confidence intervals |
 

@@ -69,9 +69,11 @@ class Dynamics(nn.Module):
         self.calls += len(z)
         return z + self.out(self.trunk(self.z(z) + self.a(a)[:, None]))
 
-    def rollout(self, z, actions):
+    def rollout(self, z, actions, *, budget=None):
         result = []
         for i in range(actions.shape[1]):
+            if budget is not None:
+                budget.check()
             z = self(z, actions[:, i])
             result.append(z)
         return torch.stack(result, 1)
@@ -113,7 +115,8 @@ class JointPlanner(nn.Module):
         ).reshape_as(actions)
 
     def sample(
-        self, start, goal, *, steps=8, deterministic=False, path_only=False, noise=None
+        self, start, goal, *, steps=8, deterministic=False, path_only=False, noise=None,
+        budget=None,
     ):
         b, p, d = start.shape
         m, k, a = self.segments, self.chunk_steps, self.action_dim
@@ -131,6 +134,8 @@ class JointPlanner(nn.Module):
                 start.new_zeros(b),
             )
         for i in range(steps):
+            if budget is not None:
+                budget.check()
             if path_only:
                 u = torch.zeros_like(u)
             vz, vu = self(z, u, start, goal, start.new_full((b,), i / steps))
@@ -189,8 +194,15 @@ class System(nn.Module):
             loss = prediction_loss(self.world.rollout(z[:, 0], a), z[:, 1:])
             return loss, {"dynamics": loss.detach()}
         if self.method == "hwm_adapted":
-            pred = self.coarse(z[:, 0], self.macro_encoder(a.flatten(1)))
-            loss = prediction_loss(pred, z[:, -1])
+            if a.ndim == 4:
+                # Same complete trajectory windows as the joint/LeFlow heads.
+                causal = batch["coarse_z"]
+                macro = self.macro_encoder(a.flatten(0, 1).flatten(1))
+                pred = self.coarse(causal[:, :-1].flatten(0, 1), macro)
+                loss = prediction_loss(pred, causal[:, 1:].flatten(0, 1))
+            else:
+                pred = self.coarse(z[:, 0], self.macro_encoder(a.flatten(1)))
+                loss = prediction_loss(pred, z[:, -1])
             return loss, {"coarse_dynamics": loss.detach()}
         start, goal, target = z[:, 0], z[:, -1], z[:, 1:-1]
         det, path_only = "deterministic" in self.method, self.method == "leflow_adapted"

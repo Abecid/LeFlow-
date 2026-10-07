@@ -16,7 +16,8 @@ root = pathlib.Path(sys.argv[1])
 files = {}
 for name in ('campaign.json', 'status.json', 'queue.json', 'allocation.json',
              'wandb.json', 'online-readback.json', 'gpu_preflight.json',
-             'data_protocol.json', 'comparison.json', 'seed-scope-change.json'):
+             'data_protocol.json', 'comparison.json', 'seed-scope-change.json',
+             'compute-scope-change.json'):
     p = root / name
     if p.exists():
         files[name] = json.loads(p.read_text())
@@ -40,7 +41,7 @@ for run in sorted((root / 'runs').glob('*')):
     if not run.is_dir():
         continue
     prefix = 'runs/' + run.name + '/'
-    for name in ('run.json', 'complete.json'):
+    for name in ('run.json', 'complete.json', 'compute_usage.json'):
         p = run / name
         if p.exists():
             files[prefix + name] = json.loads(p.read_text())

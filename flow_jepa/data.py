@@ -244,12 +244,12 @@ class Segments(Dataset):
         self.mean = np.asarray(self.manifest["mean"], np.float32)
         self.std = np.asarray(self.manifest["std"], np.float32)
         k, m = c["model"]["chunk_steps"], c["model"]["segments"]
-        self.horizon = k if stage in ("world", "hwm_adapted") else k * m
+        self.horizon = k if stage == "world" else k * m
         self.tasks = {}
         for row in self.manifest["entries"]:
             if row["split"] != split or row["steps"] < self.horizon:
                 continue
-            if stage not in ("world", "hwm_adapted") and (
+            if stage != "world" and (
                 row["mode"] != "expert" or not row["expert_success"]
             ):
                 continue
@@ -269,7 +269,7 @@ class Segments(Dataset):
         row = rows[int(rng.integers(len(rows)))]
         max_start = row["steps"] - self.horizon
         if (
-            self.stage not in ("world", "hwm_adapted")
+            self.stage != "world"
             and row.get("first_success_action") is not None
         ):
             max_start = min(
@@ -279,7 +279,7 @@ class Segments(Dataset):
         start = int(rng.integers(max_start + 1))
         k, m = self.c["model"]["chunk_steps"], self.c["model"]["segments"]
         with h5py.File(self.root / row["path"], "r") as f:
-            if self.stage in ("world", "hwm_adapted"):
+            if self.stage == "world":
                 z = (
                     f["z"][start : start + k + 1].astype(np.float32) - self.mean
                 ) / self.std
@@ -292,6 +292,7 @@ class Segments(Dataset):
             goal = (
                 f["image_goals"][start + self.horizon].astype(np.float32) - self.mean
             ) / self.std
+            coarse_z = z.copy()
             z[-1] = goal
             a = (
                 f["actions"][start : start + self.horizon]
@@ -306,6 +307,7 @@ class Segments(Dataset):
                 "z": torch.from_numpy(z),
                 "a": torch.from_numpy(a),
                 "local": torch.from_numpy(local),
+                "coarse_z": torch.from_numpy(coarse_z),
             }
 
 

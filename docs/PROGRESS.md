@@ -2,6 +2,10 @@
 
 ## Current verified state
 
+- **Four-method budget migration IN PROGRESS:** user restricted this first pass
+  to ours + LeFlow + HWM + long CEM, one seed, no ablations. Current preparation
+  may continue; monitors must not relaunch old scopes or commit pending edits.
+
 - **User correction applied:** exactly one training seed, 3072. Seeds 3073/3074
   are removed from execution. Use `repo-single-seed` and the updated `launch.sh`.
 
@@ -423,3 +427,51 @@ of W&B launch check `l2sux44s` confirms `[3072]` and the new revision. Training 
 and checkpoints remain zero pending shared preparation. No recovery intervention
 was needed. Continue the one-seed training queue after preparation; final paired
 reset intervals must not claim variation across independent training runs.
+
+### 2026-10-07 — four-method, bounded first comparison prepared
+
+The user restricted the first pass to three major baselines plus our best
+motivated proposal, one seed, matched compute/data and periodic evaluation.
+Current choice: joint_flow_consistent, leflow_adapted, hwm_adapted, cem_long.
+All deterministic/no-consistency ablations and short CEM are removed from the
+execution configuration; no follow-up sweep is scheduled. The literature and
+code review, including why the proposed method remains a hypothesis, is saved
+in `docs/FIRST_PASS.md`. Recent primary sources reviewed: Planning Limits,
+LeFlow, HWM, FF-JEPA, Qantara, Flow-JEPA and LeWAM.
+
+Default first-pass budget: 7,200 optimization seconds or 20,000 updates per
+learned model on the same four-GPU allocation. One world plus three heads gives
+up to 32 optimization GPU-hours; shared data preparation and validation are
+separate and logged. A user preference question offered 1/2/4-hour caps; no reply
+had arrived before proceeding with the stated 2-hour default. The runtime limits
+are checked at optimizer boundaries, preserving charged time across resume and
+reporting overruns. Learning-rate and consistency warm-ups use budget progress.
+
+Each method receives the same 10-second cumulative controller allowance per
+episode and 200 primitive actions. Late actions are discarded and failures stay
+in the denominator. Periodic evaluation uses the same 104 validation episodes
+at four budget milestones, with online W&B and local logs. The final shared test
+remains 3,200 resets per method (12,800 executions across four methods).
+
+Found and corrected an input fairness issue before training: HWM previously
+used short random/expert windows, while the generative heads used successful
+expert long windows. All three learned heads now receive identical successful
+expert trajectories/start positions/windows; HWM learns all macro transitions
+from them. The shared fine world retains the common expert/random dataset.
+
+Cache reuse is explicit: original data configuration drives ongoing collection;
+collection/encoder/split fields must match the execution configuration. On
+completion, preserve the original manifest and its digest, then register the new
+execution protocol while retaining every episode hash, reset, goal and statistic.
+No expensive feature data needs to be regenerated.
+
+The first server CPU test pass passed 36 tests. The final budget/resume/deadline
+checks are being verified before deployment. The live preparation checkout is
+still frozen and collecting data. Migration remains in progress until the new
+supervisor is registered and verified.
+
+Final targeted verification passed: 8 budget/training tests, including retained
+compute accounting on resume, late-action discard with failures retained, and
+identical learned-head input windows. One SSH route timed out; the configured
+Cloudflare fallback reached the same server. The corrected learning-rate warm-up
+was included in these targeted checks. Ready to deploy the four-method revision.
