@@ -75,3 +75,26 @@ The detached supervisor is launching from frozen source `448a30f`. It first
 verifies online W&B and idle GPUs, then runs real CUDA/NCCL/encoder/renderer
 preflight. Full training has not yet begun. Subsequent reports are published
 from the separate desktop checkout, leaving this execution revision untouched.
+
+### First GPU preflight failed safely: missing renderer
+
+Online W&B launch-check succeeded:
+https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/jqlr2md0.
+Four CUDA/NCCL workers loaded the official encoder, but MetaWorld rendering failed:
+EGL reported zero devices (`MUJOCO_EGL_DEVICE_ID` valid range 0..-1). The container
+has compute libraries but no NVIDIA EGL graphics libraries. This is a renderer
+provisioning failure, not an experimental result. The supervisor exited before
+full data collection/training; the failure log is preserved on the server as
+`egl-preflight-failure.log`, and the attempt metadata is copied under
+`docs/reports/20261007-joint-flow/attempt-1`.
+
+Provisioning Mesa software EGL in the dedicated environment. The launcher now
+allows explicit renderer-device mapping independently of CUDA devices and records
+renderer selection in the frozen campaign plan. This supports four GPU workers
+sharing software EGL device 0 without requesting unavailable graphics devices.
+The failed registered attempt will remain archived; the corrected attempt will
+register its new code and renderer settings before collecting any data.
+
+A 15-minute chat heartbeat is active (`continue-flow-jepa-campaign-and-preserve-results`)
+to continue this campaign, preserve new evidence on origin, and notify only
+meaningful progress, failure, completion, or a required action.

@@ -1,0 +1,37 @@
+{
+  "command": [
+    "/tmp/mtxu-flow-jepa-20261007/env/bin/python",
+    "-m",
+    "torch.distributed.run",
+    "--nnodes=1",
+    "--rdzv-backend=c10d",
+    "--rdzv-endpoint=127.0.0.1:0",
+    "--nproc_per_node=4",
+    "-m",
+    "flow_jepa.preflight",
+    "--config",
+    "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/repo/config/flow_metaworld.json",
+    "--root",
+    "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign"
+  ],
+  "gpus": [
+    [
+      "0",
+      "GPU-a303d11c-f1b5-e245-93f0-735a054671ce"
+    ],
+    [
+      "1",
+      "GPU-fc39ae51-86a1-df0a-8657-0d33620f5115"
+    ],
+    [
+      "2",
+      "GPU-85f3f7a6-107f-2921-13a5-76a94101f858"
+    ],
+    [
+      "3",
+      "GPU-64e751ee-abb6-120c-f346-311e789228c7"
+    ]
+  ],
+  "stage": "gpu_preflight",
+  "status": "running"
+}

@@ -127,6 +127,12 @@ def main():
         configuration=c,
         protocol=digest(c),
         max_gpus=a.gpus,
+        rendering={
+            "backend": os.getenv("MUJOCO_GL", "egl"),
+            "egl_devices_override": os.getenv("FLOW_EGL_DEVICES"),
+            "software": os.getenv("LIBGL_ALWAYS_SOFTWARE", "0"),
+            "gallium_driver": os.getenv("GALLIUM_DRIVER"),
+        },
         independent_test_resets=len(c["training_tasks"] + c["heldout_tasks"])
         * c["data"]["test_episodes_per_task"],
     )
@@ -168,8 +174,10 @@ def main():
     env = os.environ.copy()
     env.update(
         CUDA_VISIBLE_DEVICES=",".join(x[0] for x in selected),
-        FLOW_EGL_DEVICES=",".join(x[0] for x in selected),
-        MUJOCO_GL="egl",
+        FLOW_EGL_DEVICES=os.getenv(
+            "FLOW_EGL_DEVICES", ",".join(x[0] for x in selected)
+        ),
+        MUJOCO_GL=plan["rendering"]["backend"],
         OMP_NUM_THREADS="2",
         WANDB_MODE="online",
         FLOW_DEVICE="cuda",
