@@ -1,13 +1,18 @@
 {
-  "checked_at_utc": "2026-10-07T22:46:40.419461+00:00",
-  "checkpoints": 0,
+  "checked_at": "2026-10-07T23:11:33.340927+00:00",
+  "code": "16747bb451915b2488c67f5d550a97c1b0411290",
+  "controller_seconds_per_episode": 10,
+  "execution_methods": [
+    "joint_flow_consistent",
+    "leflow_adapted",
+    "hwm_adapted",
+    "cem_long"
+  ],
   "execution_seeds": [
     3072
   ],
-  "job_type": "launch-check",
-  "online_readback": true,
-  "registered_code": "06c5d02e542bfedf3772cc1575fd0e473b618dc7",
+  "optimization_seconds_per_model": 7200,
   "state": "finished",
-  "training_runs_created": 0,
-  "url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/l2sux44s"
+  "url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/jhc5g1dk",
+  "verified_online": true
 }

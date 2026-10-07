@@ -2,28 +2,33 @@
 
 ## Current verified state
 
-- **Four-method budget migration IN PROGRESS:** user restricted this first pass
-  to ours + LeFlow + HWM + long CEM, one seed, no ablations. Current preparation
-  may continue; monitors must not relaunch old scopes or commit pending edits.
-
-- **User correction applied:** exactly one training seed, 3072. Seeds 3073/3074
-  are removed from execution. Use `repo-single-seed` and the updated `launch.sh`.
-
-- **Running:** corrected single-seed supervisor on target_server_2, limited to
-  GPUs 0–3. The new GPU preflight passed and shared cache preparation resumed;
-  2,128 completed episodes were retained at the switch.
-- **Passed:** 31 server tests; actual four-rank CUDA/NCCL preflight, official encoder,
-  repeatable simulator rendering, and two optimizer updates per architecture.
-- **Active execution revision:** `06c5d02e542bfedf3772cc1575fd0e473b618dc7`
-  in server checkout `repo-single-seed`. The old `repo` is preserved only for
-  its original cache-compatible data configuration; its three-seed supervisor
-  is stopped and must not be restarted.
-  The desktop reporting branch advances independently; do not pull it into the
+- **Four-method migration complete:** only joint_flow_consistent, leflow_adapted,
+  hwm_adapted and cem_long, exactly one seed (3072). No ablations, extra seeds,
+  or automatic expansion. See `FIRST_PASS.md` for the evidence and scope.
+- **Budget:** each learned model gets 7,200 optimization seconds or 20,000 updates
+  on the same four GPUs, whichever ends first. One shared world plus three heads:
+  up to 32 optimization GPU-hours, plus separately recorded preparation/evaluation
+  and reported last-update overruns. Every controller gets 10 seconds per episode.
+- **Matched data:** identical learned-head windows, shared encoder/fine world,
+  four periodic 104-episode validation rounds, and 3,200 fixed test resets per
+  method after training. Validation metrics are logged online to W&B.
+- **Running:** supervisor PID 3126314 on target_server_2, limited to GPUs 0–3.
+  The revised online launch check and actual four-rank GPU preflight passed;
+  shared data preparation has resumed. All 2,381 completed episodes were retained.
+- **Passed:** the bulk server suite (36 tests) plus all 8 final targeted
+  budget/training tests after the last changes; actual CUDA/NCCL, official encoder,
+  repeatable renderer and two optimizer updates for each selected architecture.
+- **Frozen execution revision:** `16747bb451915b2488c67f5d550a97c1b0411290`
+  in server checkout `repo-first-pass`. `launch.sh` uses its execution config and
+  the original `repo/config/flow_metaworld.json` only as `--data-config` for cache
+  compatibility. Older supervisors are stopped and must not be restarted.
+  The desktop reporting branch advances independently; never pull into the
   running execution checkout.
-- **Continuity:** detached server supervisor, persistent logs/checkpoints/evaluation
-  records, GitHub progress/evidence backups, and a 15-minute chat heartbeat.
-- **No benchmark results yet:** no full model has completed training, and the
-  frozen test comparison has not run. No improvement is claimed.
+- **Continuity:** detached supervisor, persistent records, GitHub evidence backups,
+  and the existing 15-minute heartbeat. W&B launch check:
+  https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/jhc5g1dk.
+- **No benchmark results yet:** shared preparation is still required before full
+  model training and the frozen test comparison. No improvement is claimed.
 
 ## 2026-10-07 — recovered interrupted work
 
@@ -475,3 +480,47 @@ compute accounting on resume, late-action discard with failures retained, and
 identical learned-head input windows. One SSH route timed out; the configured
 Cloudflare fallback reached the same server. The corrected learning-rate warm-up
 was included in these targeted checks. Ready to deploy the four-method revision.
+
+### 2026-10-07 23:11 UTC — four-method migration deployed
+
+Published execution revision `16747bb` and transferred a verified Git bundle to
+new clean server checkout `repo-first-pass`. Its dry run registered only the four
+selected methods, one seed, 7,200 optimization seconds/model, the shared 10-second
+controller allowance, and the unchanged original data protocol. No training run
+existed before switching. The old supervisor PID 3094037 and its preparation-only
+process tree were stopped after checking process identities; unrelated jobs were
+untouched. All 2,381 completed episodes were preserved.
+
+Archive: `first-pass-scope-change-20261007` under the persistent server record.
+The updated `launch.sh` starts supervisor PID 3126314 with the current execution
+configuration and a separate original `--data-config`. `campaign/compute-scope-change.json`
+records revisions, budgets, process switch and data preservation. Supervisor log:
+`launcher-first-pass.log`. Fresh W&B API readback of run `jhc5g1dk` confirms the
+new revision, four methods, seed 3072 and the two-hour optimization allowance.
+GPU preflight is being checked before declaring the resumed collection healthy.
+
+### 2026-10-07 23:13 UTC — GPU checks passed; migration complete
+
+The new revision passed actual four-rank CUDA/NCCL preflight on GPUs 0–3. Every
+rank loaded the official encoder, reproduced a real simulator reset, and ran two
+optimizer updates with finite losses/gradients for the world model and all three
+selected learned heads. The revised HWM full-window inputs and generated-plan
+consistency objective passed. Peak allocated preflight memory was about 1.87 GiB
+per rank. These are wiring checks, not trained-method benchmark results.
+
+Supervisor PID 3126314 automatically advanced to `prepare_data`; four preparation
+workers (3138302–3138305 at this check) are active. The existing 15-minute heartbeat
+now points to `repo-first-pass`, enforces four methods/seed 3072/unchanged budgets,
+and explicitly prohibits automatic follow-up ablations or expansion. No duplicate
+monitor was created. Full training and final test evaluation remain pending shared
+preparation. Next: finish the existing cache and goal screening, freeze the shared
+manifest, train the shared world and three heads within their caps with periodic
+online evaluation, then run the paired four-method test and analyze failures.
+
+Live follow-up confirmed all four collection ranks writing new cache rows; the
+completed cache advanced from 2,381 to 2,390 episodes after the switch. This
+confirms actual preparation progress under the new supervisor. Full training
+runs/checkpoints remain absent, as expected until shared preparation completes.
+The compact snapshot now contains the current successful GPU-preflight report.
+Intermittent SSH handshake failures were recovered using the configured fallback;
+they did not interrupt the detached campaign.

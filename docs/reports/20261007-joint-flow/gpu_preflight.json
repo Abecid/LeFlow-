@@ -12,11 +12,6 @@
         "hwm_adapted": {
           "coarse_dynamics": true
         },
-        "joint_deterministic_consistent": {
-          "action_objective": true,
-          "generated_consistency": true,
-          "state_objective": true
-        },
         "joint_flow_consistent": {
           "action_objective": true,
           "generated_consistency": true,
@@ -29,7 +24,7 @@
           "state_objective": true
         }
       },
-      "peak_memory_gib": 1.855137825012207,
+      "peak_memory_gib": 1.8659825325012207,
       "rank": 0,
       "torch": "2.8.0+cu126"
     },
@@ -45,11 +40,6 @@
         "hwm_adapted": {
           "coarse_dynamics": true
         },
-        "joint_deterministic_consistent": {
-          "action_objective": true,
-          "generated_consistency": true,
-          "state_objective": true
-        },
         "joint_flow_consistent": {
           "action_objective": true,
           "generated_consistency": true,
@@ -62,7 +52,7 @@
           "state_objective": true
         }
       },
-      "peak_memory_gib": 1.855137825012207,
+      "peak_memory_gib": 1.8659825325012207,
       "rank": 1,
       "torch": "2.8.0+cu126"
     },
@@ -78,11 +68,6 @@
         "hwm_adapted": {
           "coarse_dynamics": true
         },
-        "joint_deterministic_consistent": {
-          "action_objective": true,
-          "generated_consistency": true,
-          "state_objective": true
-        },
         "joint_flow_consistent": {
           "action_objective": true,
           "generated_consistency": true,
@@ -95,7 +80,7 @@
           "state_objective": true
         }
       },
-      "peak_memory_gib": 1.855137825012207,
+      "peak_memory_gib": 1.8642191886901855,
       "rank": 2,
       "torch": "2.8.0+cu126"
     },
@@ -111,11 +96,6 @@
         "hwm_adapted": {
           "coarse_dynamics": true
         },
-        "joint_deterministic_consistent": {
-          "action_objective": true,
-          "generated_consistency": true,
-          "state_objective": true
-        },
         "joint_flow_consistent": {
           "action_objective": true,
           "generated_consistency": true,
@@ -128,7 +108,7 @@
           "state_objective": true
         }
       },
-      "peak_memory_gib": 1.855137825012207,
+      "peak_memory_gib": 1.8659825325012207,
       "rank": 3,
       "torch": "2.8.0+cu126"
     }

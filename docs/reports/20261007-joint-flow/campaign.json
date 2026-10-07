@@ -1,5 +1,5 @@
 {
-  "code": "06c5d02e542bfedf3772cc1575fd0e473b618dc7",
+  "code": "16747bb451915b2488c67f5d550a97c1b0411290",
   "configuration": {
     "data": {
       "action_repeat": 2,
@@ -36,6 +36,7 @@
       "cem_candidates": 100,
       "cem_elites": 10,
       "cem_iterations": 3,
+      "controller_seconds_per_episode": 10.0,
       "flow_steps": 8,
       "long_horizon": 30,
       "refine_candidates": 32,
@@ -50,12 +51,8 @@
     ],
     "methods": [
       "joint_flow_consistent",
-      "joint_flow",
-      "joint_deterministic_consistent",
-      "joint_deterministic",
       "leflow_adapted",
       "hwm_adapted",
-      "cem_short",
       "cem_long"
     ],
     "model": {
@@ -71,11 +68,10 @@
     "primary_method": "joint_flow_consistent",
     "schema": 1,
     "seeds": [
-      3072,
-      3073,
-      3074
+      3072
     ],
     "training": {
+      "budget_seconds": 7200,
       "checkpoint_every": 1000,
       "consistency_batch": 2,
       "consistency_steps": 4,
@@ -88,7 +84,8 @@
       "log_every": 50,
       "micro_batch": 4,
       "planner_steps": 20000,
-      "validation_episodes_per_task": 32,
+      "validation_episodes_per_task": 8,
+      "validation_rounds": 4,
       "weight_decay": 0.05,
       "workers": 2,
       "world_learning_rate": 0.001,
@@ -114,12 +111,19 @@
       "project": "flow-jepa-metaworld"
     }
   },
+  "data_protocol": "d2e0a5a0f7f14d94953122c9d09a7bc02c11415301cf81077ca4f66ab225f429",
+  "execution_methods": [
+    "joint_flow_consistent",
+    "leflow_adapted",
+    "hwm_adapted",
+    "cem_long"
+  ],
   "execution_seeds": [
     3072
   ],
   "independent_test_resets": 3200,
   "max_gpus": 4,
-  "protocol": "d2e0a5a0f7f14d94953122c9d09a7bc02c11415301cf81077ca4f66ab225f429",
+  "protocol": "50c4b357c19f15494971cd65fe0e524f740c92d0c2d6c9ec6631981272cdea71",
   "rendering": {
     "backend": "egl",
     "egl_devices_override": "0,0,0,0",

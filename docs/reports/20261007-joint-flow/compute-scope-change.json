@@ -1,0 +1,45 @@
+{
+  "completed_episodes_before": 2381,
+  "completed_episodes_retained": 2381,
+  "controller_seconds_per_episode": 10,
+  "data_config": "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/repo/config/flow_metaworld.json",
+  "data_protocol": "d2e0a5a0f7f14d94953122c9d09a7bc02c11415301cf81077ca4f66ab225f429",
+  "max_gpus": 4,
+  "max_updates": 20000,
+  "methods": [
+    "joint_flow_consistent",
+    "leflow_adapted",
+    "hwm_adapted",
+    "cem_long"
+  ],
+  "new_code": "16747bb451915b2488c67f5d550a97c1b0411290",
+  "no_ablations": true,
+  "old_code": "06c5d02e542bfedf3772cc1575fd0e473b618dc7",
+  "old_methods": [
+    "joint_flow_consistent",
+    "joint_flow",
+    "joint_deterministic_consistent",
+    "joint_deterministic",
+    "leflow_adapted",
+    "hwm_adapted",
+    "cem_short",
+    "cem_long"
+  ],
+  "old_process_tree_stopped": true,
+  "old_supervisor": 3094037,
+  "optimization_seconds_per_model": 7200,
+  "original_metadata_archive": "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/first-pass-scope-change-20261007",
+  "protocol": "50c4b357c19f15494971cd65fe0e524f740c92d0c2d6c9ec6631981272cdea71",
+  "seeds": [
+    3072
+  ],
+  "source_checkout": "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/repo-first-pass",
+  "supervisor_pid": 3126314,
+  "test_episodes_per_method": 3200,
+  "tests": {
+    "bulk_suite_passed": 36,
+    "final_budget_training_passed": 8
+  },
+  "timestamp": "2026-10-07T23:11:13.966781+00:00",
+  "validation_episodes": 104
+}
