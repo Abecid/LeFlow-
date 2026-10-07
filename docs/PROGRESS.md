@@ -38,3 +38,22 @@ that rejects early availability/count queries. Real NCCL verification is pending
 Storage: persistent `/home` has ~102 GiB free; scratch `/tmp` has ~2.2 TiB.
 Use scratch for regenerable encoded episodes, and persistent directories for
 model checkpoints, stage logs, and per-episode evaluation reports.
+
+### Deployment fixes and reporting
+
+The server's outbound GitHub clone failed with GnuTLS receive error (-110).
+Transferred a verified Git bundle over the working SSH connection instead.
+Pinned MetaWorld and V-JEPA source are likewise available as local transfers;
+this preserves their configured revisions, without changing the methods.
+
+The campaign now checks free space on the actual `episodes` storage target,
+allowing a scratch symlink while retaining the campaign root on persistent disk.
+The persistent campaign root will be
+`/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign`.
+Only regenerable encoded episodes and downloaded encoder weights use scratch.
+
+Added `scripts/snapshot_flow_campaign.py`: copies registered configuration,
+preflight, preparation counts, all training metrics, validation reports, final
+test reports and comparison results into a separate reporting checkout. It
+copies no credentials or large model binaries. Unchanged reports are not
+rewritten, so monitoring can commit/push only meaningful new evidence.

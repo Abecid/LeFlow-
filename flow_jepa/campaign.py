@@ -214,7 +214,11 @@ def main():
     try:
         run("flow_jepa.preflight", [], "gpu_preflight")
         if not (root / "manifest.json").exists():
-            if shutil.disk_usage(root).free < 150 * 2**30:
+            # The feature cache may live on scratch through this symlink while
+            # manifests, checkpoints and evaluation records remain persistent.
+            episode_storage = root / "episodes"
+            episode_storage.mkdir(parents=True, exist_ok=True)
+            if shutil.disk_usage(episode_storage).free < 150 * 2**30:
                 raise RuntimeError(
                     "Use a data volume with at least 150 GiB free for the full dense-feature cache and goal screening"
                 )
