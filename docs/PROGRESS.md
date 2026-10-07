@@ -286,3 +286,14 @@ active, source is clean at `61a5d73`, and allocation stays on GPUs 0–3.
 
 Fresh W&B readback passed; no training runs/checkpoints exist yet. No intervention
 was required. Continue the shared preparation and automatic training queue.
+
+### 2026-10-07 21:46 UTC heartbeat
+
+Preparation advanced from 1463 to 1603 completed episodes: 600 each for
+assembly and button-press-topdown, plus 403 coffee-button. Recent expert collection
+reports success. The supervisor and all four workers are active, execution
+source is clean at `61a5d73`, and GPU allocation remains 0–3.
+
+Fresh W&B readback succeeded; training runs/checkpoints remain at zero pending
+shared data preparation. No intervention was required. Continue the registered
+preparation and automatic training queue.
