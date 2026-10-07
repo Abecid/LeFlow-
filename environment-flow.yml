@@ -1,0 +1,11 @@
+name: flow-jepa
+channels: [conda-forge]
+dependencies:
+  - python=3.11
+  - pip
+  - git
+  - ffmpeg
+  - libgl
+  - libegl
+  - pip:
+      - -r requirements-flow.txt

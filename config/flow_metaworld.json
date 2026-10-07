@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "name": "vjepa21_metaworld_joint_flow_v1",
+  "training_tasks": ["assembly", "button-press-topdown", "coffee-button", "dial-turn", "door-close", "door-open", "drawer-close", "drawer-open", "faucet-open", "handle-press", "pick-place", "plate-slide", "reach"],
+  "heldout_tasks": ["window-open", "handle-pull", "push"],
+  "seeds": [3072, 3073, 3074],
+  "data": {"train_episodes_per_task": 600, "validation_episodes_per_task": 50, "test_episodes_per_task": 200, "random_fraction": 0.2, "primitive_budget": 200, "action_repeat": 2, "camera": "corner", "render_size": 256, "history_frames": 16},
+  "encoder": {"repository": "facebookresearch/vjepa2", "revision": "204698b45b3712590f06245fbfba32d3be539812", "architecture": "vit_large", "checkpoint_url": "https://dl.fbaipublicfiles.com/vjepa2/vjepa2_1_vitl_dist_vitG_384.pt", "checkpoint_key": "ema_encoder", "input_size": 256, "token_grid": [2, 4, 4], "dim": 1024, "batch_size": 2},
+  "model": {"width": 256, "depth": 4, "heads": 4, "segments": 12, "chunk_steps": 5, "macro_dim": 4},
+  "training": {"world_steps": 20000, "planner_steps": 20000, "global_batch": 64, "micro_batch": 4, "workers": 2, "learning_rate": 0.0001, "world_learning_rate": 0.001, "weight_decay": 0.05, "gradient_clip": 1.0, "consistency_weight": 0.1, "consistency_batch": 2, "consistency_steps": 4, "consistency_warmup": 2000, "log_every": 50, "checkpoint_every": 1000, "eval_every": 5000, "validation_episodes_per_task": 32},
+  "evaluation": {"candidates": 32, "flow_steps": 8, "cem_candidates": 100, "cem_elites": 10, "cem_iterations": 3, "short_horizon": 5, "long_horizon": 30, "refine_candidates": 32, "refine_elites": 8, "refine_iterations": 3, "budget_primitive": 200, "bootstrap_samples": 10000},
+  "methods": ["joint_flow_consistent", "joint_flow", "joint_deterministic_consistent", "joint_deterministic", "leflow_adapted", "hwm_adapted", "cem_short", "cem_long"],
+  "primary_method": "joint_flow_consistent",
+  "primary_baseline": "leflow_adapted",
+  "wandb": {"project": "flow-jepa-metaworld", "mode": "online"}
+}

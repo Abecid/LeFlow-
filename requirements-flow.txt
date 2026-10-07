@@ -1,0 +1,13 @@
+torch==2.8.0
+torchvision==0.23.0
+numpy==2.2.6
+h5py==3.14.0
+PyYAML==6.0.2
+wandb==0.22.3
+timm==1.0.20
+einops==0.8.1
+metaworld @ git+https://github.com/Farama-Foundation/Metaworld.git@59fc34d7768af9785e4688c3e1db671424f4a6c3
+gymnasium==1.2.0
+mujoco==3.3.0
+pytest==8.4.2
+ruff==0.14.0
