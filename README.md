@@ -1,23 +1,34 @@
-# BTM–JEPA subgoal planning (LeFlow fork)
+# Joint flow planning with V-JEPA 2.1 (LeFlow fork)
 
-This fork adds conditional one-step Beckmann transport maps, matched flow and
-deterministic controls, hierarchical execution, and training on **1–4 GPUs**.
-It includes Conda setup, official dataset/checkpoint downloads, frozen-latent
-caching, episode-level train/validation/test splits, resumable checkpoints, and
-online W&B logging with intermediate closed-loop evaluation.
+The active experiment uses **flow matching, with no BTM**, for goal-conditioned
+MetaWorld manipulation. It generates latent subgoals and action chunks, with a
+frozen JEPA dynamics loss on the generator's own samples.
 
-**Start here: [setup, data preparation, training, and evaluation](docs/TRAINING.md).**
-See [tensor shapes, losses, and planning algorithm](docs/METHOD.md).
-For a locked baseline/BTM campaign and paired metrics, use the
-[comparison launcher and protocol](docs/COMPARISON.md).
+- Official frozen V-JEPA 2.1 ViT-L; spatial/temporal tokens retained.
+- Thirteen training tasks and three held-out tasks; 200 test resets per task,
+  three training seeds, paired statistics and online W&B evaluation.
+- Matched deterministic/flow ablations, short/long CEM, and adapted LeFlow/HWM.
+- Conda setup, deterministic data collection and caching, 1/2/4-GPU training,
+  resumable checkpoints and a non-preemptive idle-GPU queue.
 
-The implemented backbone is LeWM. The V-JEPA 2.1/Meta-World extension remains
-future work; this release does not claim an implemented port or benchmark gains.
+**Read [the experiment and launch protocol](docs/FLOW_EXPERIMENT.md).**
+
+On the GPU server, from this branch:
 
 ```bash
-# After Conda setup, data preparation, caching, and wandb login:
-python scripts/run_comparison.py --name pusht_pair_v1 --gpus 4
+bash scripts/bootstrap_flow_server.sh
 ```
+
+The launcher verifies online W&B, waits for idle GPUs, runs a CUDA/NCCL/encoder
+preflight, collects data, trains all methods and evaluates held-out episodes.
+Use `FLOW_DATA_DIR` to select a volume with at least 120 GiB available.
+
+**Status:** CPU wiring tests and official-encoder loading have been validated.
+No GPU campaign has been launched by the assistant: the current runtime has no
+working SSH route to `target_server_2`. There are no measured task-success gains
+or SOTA claims yet. The LeFlow/HWM controls are documented adaptations, not exact
+published-checkpoint reproductions. Historical BTM scripts are inactive and
+remain only for reproducibility.
 
 Original LeFlow release documentation and attribution follow.
 
