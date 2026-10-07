@@ -264,3 +264,15 @@ recent expert collection succeeds. The execution checkout is clean at `61a5d73`,
 and allocation remains limited to GPUs 0–3. Fresh W&B readback succeeded; there
 are no training runs/checkpoints yet. No intervention was required. Continue
 shared preparation before the automatic training and evaluation stages.
+
+### 2026-10-07 21:16 UTC heartbeat — second task cache complete
+
+The snapshot has 1320 completed episodes: 600 assembly, 600
+button-press-topdown, and 120 coffee-button. Collection has moved to the third
+training task. The inspected coffee-button log rows were from its prescribed
+random-action portion; their failures are not learned-planner evaluation results.
+
+The supervisor and all four workers remain active, source is clean at `61a5d73`,
+and allocation is limited to GPUs 0–3. Fresh W&B readback passed. Training
+runs/checkpoints remain at zero until the shared preparation finishes. No
+intervention was needed; continue the registered preparation/training queue.
