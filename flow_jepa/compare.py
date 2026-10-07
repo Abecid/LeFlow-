@@ -11,8 +11,11 @@ import numpy as np
 from .common import config, digest, save_json
 
 
-def compare(c, reports):
-    methods, seeds = c["methods"], c["seeds"]
+def compare(c, reports, *, seeds=None):
+    methods = c["methods"]
+    seeds = list(c["seeds"] if seeds is None else seeds)
+    if not seeds or len(set(seeds)) != len(seeds) or not set(seeds) <= set(c["seeds"]):
+        raise ValueError("Invalid execution seed scope")
     tasks = c["training_tasks"] + c["heldout_tasks"]
     expected = {(m, s) for m in methods for s in seeds}
     groups = {(r["method"], r["seed"]): r for r in reports}
@@ -121,7 +124,13 @@ def compare(c, reports):
         comparisons=comparisons,
         independent_resets=len(tasks) * count,
         model_seeds=len(seeds),
-        interpretation="Bootstrap uncertainty over model seeds and paired resets; tasks fixed. Three seeds provide limited training-variance precision. Ports do not establish a published-SOTA reproduction.",
+        execution_seeds=seeds,
+        interpretation=(
+            "Single training seed: bootstrap uncertainty covers paired resets only; "
+            "training-run variation is not measured. Tasks fixed. "
+            if len(seeds) == 1 else
+            "Bootstrap uncertainty over model seeds and paired resets; tasks fixed. "
+        ) + "Ports do not establish a published-SOTA reproduction.",
     )
 
 
@@ -130,13 +139,14 @@ if __name__ == "__main__":
     p.add_argument("--config", default="config/flow_metaworld.json")
     p.add_argument("--reports", required=True)
     p.add_argument("--output", required=True)
+    p.add_argument("--seed", type=int, default=3072)
     a = p.parse_args()
     c = config(a.config)
     reports = [
         json.loads((Path(a.reports) / f"{m}_{s}.json").read_text())
         for m in c["methods"]
-        for s in c["seeds"]
+        for s in [a.seed]
     ]
-    result = compare(c, reports)
+    result = compare(c, reports, seeds=[a.seed])
     save_json(a.output, result)
     print(json.dumps(result, indent=2))

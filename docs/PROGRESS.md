@@ -2,6 +2,9 @@
 
 ## Current verified state
 
+- **User correction:** one training seed only (3072). Seed-scope migration is
+  in progress; do not restart the old three-seed supervisor. Preserve cached data.
+
 - **Running:** real MetaWorld data collection and V-JEPA feature caching on
   target_server_2, GPUs 0–3. The shared dataset must finish before full training.
 - **Passed:** 29 server tests; actual four-rank CUDA/NCCL preflight, official encoder,

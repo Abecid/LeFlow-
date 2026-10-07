@@ -22,9 +22,7 @@
     "push"
   ],
   "seeds": [
-    3072,
-    3073,
-    3074
+    3072
   ],
   "data": {
     "train_episodes_per_task": 600,

@@ -119,14 +119,19 @@ def main():
     p.add_argument("--root", required=True)
     p.add_argument("--gpus", type=int, default=4, choices=[1, 2, 4])
     p.add_argument("--wait-hours", type=float, default=168)
+    p.add_argument("--seed", type=int, default=3072, help="Exactly one training seed")
     p.add_argument("--dry-run", action="store_true")
     a = p.parse_args()
     c, root = config(a.config), Path(a.root).expanduser().resolve()
+    if a.seed not in c["seeds"]:
+        raise ValueError("Training seed is not registered in the data configuration")
+    seeds = [a.seed]
     plan = dict(
         code=git_revision(),
         configuration=c,
         protocol=digest(c),
         max_gpus=a.gpus,
+        execution_seeds=seeds,
         rendering={
             "backend": os.getenv("MUJOCO_GL", "egl"),
             "egl_devices_override": os.getenv("FLOW_EGL_DEVICES"),
@@ -232,7 +237,7 @@ def main():
                 )
             run("flow_jepa.data", [], "prepare_data")
         manifest_hash = verify_manifest(root, c)
-        for seed in c["seeds"]:
+        for seed in seeds:
             world_dir = root / "runs" / f"world_{seed}"
             if not (world_dir / "complete.json").exists():
                 run(
@@ -266,7 +271,7 @@ def main():
                         f"{method}_{seed}",
                     )
         # Test only after every model finishes; no adaptive tuning against test results.
-        for seed in c["seeds"]:
+        for seed in seeds:
             world = root / "runs" / f"world_{seed}" / "best.pt"
             for method in c["methods"]:
                 report = root / "test" / f"{method}_{seed}.json"
@@ -293,9 +298,9 @@ def main():
         reports = [
             json.loads((root / "test" / f"{m}_{s}.json").read_text())
             for m in c["methods"]
-            for s in c["seeds"]
+            for s in seeds
         ]
-        comparison = compare(c, reports)
+        comparison = compare(c, reports, seeds=seeds)
         save_json(root / "comparison.json", comparison)
         result = wandb.init(
             project=c["wandb"]["project"],

@@ -4,6 +4,8 @@
   `research/joint-flow-metaworld`. Follow `docs/FLOW_EXPERIMENT.md`.
 - The user authorizes SSH to `target_server_2`, at most four GPUs total for this
   campaign, training, online W&B logging, and matched baseline evaluation.
+- Use exactly one training seed, 3072, per the user's October 7 correction.
+  Never launch additional training seeds. The eight method entries include ours.
 - Keep `docs/PROGRESS.md` current. Record code changes, commands/configuration,
   tests, experiment findings (including negative results), run/checkpoint paths,
   W&B links, failures, and the concrete next step.

@@ -46,15 +46,15 @@ This regularizer is not a certificate of simulator reachability.
   This measures the goal-constructible subset; it is not an unconditional success
   rate over all MetaWorld resets. No selection uses a learned method's outcomes.
   The manifest is frozen before training and is shared by all comparisons.
-- Three training seeds (3072/3073/3074). All methods share reset IDs and goal
-  images. 3,200 test episodes/model, 9,600 executions/method over three seeds;
-  repeated model-seed evaluations are **not** 9,600 independent environments.
+- Exactly **one training seed, 3072**, per the user's correction. All methods
+  share reset IDs and goal images: 3,200 test episodes per method. The launcher
+  explicitly registers `execution_seeds: [3072]`; no additional seeds are run.
 - Report environment success, first-success time, episode return, full-controller
   mean/p95 latency, world-model calls, and predicted/observed subgoal distance.
   Goal images are allowed task specifications; expert subgoals are never exposed.
 - The primary comparison is joint_flow_consistent versus leflow_adapted. Report
-  all comparisons even if the method loses. Confidence intervals resample training
-  seeds and paired resets within tasks; correct secondary comparisons for multiple
+  all comparisons even if the method loses. Confidence intervals resample paired
+  resets within tasks; they do not measure variation across training runs. Correct secondary comparisons for multiple
   comparisons. With 200 resets, a per-task success CI can still be about +/-6.9 pp
   near 50%; do not infer small per-task improvements from point estimates.
 
@@ -75,6 +75,12 @@ Equal candidate counts alone do not establish equal compute. A separate
 validation-calibrated latency-matched comparison is required for efficiency claims.
 
 ## Launch and monitoring
+
+The active resumed campaign preserves the original data configuration to retain
+its existing cache hashes. Its historical `seeds` field is superseded by the
+registered `execution_seeds: [3072]` and explicit `--seed 3072` launch argument.
+Fresh campaigns use the single-seed default configuration. No data, model,
+controller, method, or reset selection changes accompany this seed reduction.
 
 Use branch `research/joint-flow-metaworld`. On the authorized server, run:
 
@@ -121,7 +127,7 @@ Inspect these files beneath `FLOW_DATA_DIR`:
 | `runs/*/run.json` | Online W&B run links |
 | `runs/*/metrics.jsonl` | Intermediate training and evaluation metrics |
 | `test/*.json`, `test/*.json.episodes/` | Final reports and durable individual episodes |
-| `comparison.json` | Paired three-seed comparison and confidence intervals |
+| `comparison.json` | Paired single-seed comparison and reset confidence intervals |
 
 Rerun the same bootstrap command to resume. Do not change a registered campaign's
 code or configuration. For a changed method, create a separate checkout and data

@@ -73,7 +73,10 @@ def test_paired_comparison_and_duplicate_guard(small_config):
     assert result["comparisons"][base]["delta_percentage_points"] == 100
     assert result["comparisons"][base]["paired_ci95"] == [100, 100]
     assert result["independent_resets"] == 8
-    assert result["model_seeds"] == 3
+    assert result["model_seeds"] == 1
+    assert result["execution_seeds"] == [3072]
+    assert result["table"][base]["seed_std"] is None
+    assert "paired resets only" in result["interpretation"]
     duplicate = copy.deepcopy(data)
     duplicate[0]["records"][1] = duplicate[0]["records"][0]
     with pytest.raises(ValueError, match="Duplicate"):
@@ -88,3 +91,34 @@ def test_comparison_rejects_unmatched_experiments(small_config, change):
     data[0][change] = True if change == "fixture" else "different"
     with pytest.raises(ValueError):
         compare(small_config, data)
+
+
+def test_single_seed_scope_reuses_legacy_protocol_and_rejects_extra_reports(small_config):
+    legacy = copy.deepcopy(small_config)
+    legacy["seeds"] = [3072, 3073, 3074]
+    all_reports = reports(legacy)
+    selected = [r for r in all_reports if r["seed"] == 3072]
+    result = compare(legacy, selected, seeds=[3072])
+    assert result["protocol"] == digest(legacy)
+    assert result["execution_seeds"] == [3072]
+    assert result["model_seeds"] == 1
+    with pytest.raises(ValueError, match="Missing/duplicated"):
+        compare(legacy, all_reports, seeds=[3072])
+    with pytest.raises(ValueError, match="Invalid execution"):
+        compare(legacy, selected, seeds=[999])
+
+
+def test_campaign_registers_one_seed_even_with_legacy_data_config(small_config, tmp_path, monkeypatch, capsys):
+    import json
+    from flow_jepa import campaign
+
+    legacy = copy.deepcopy(small_config)
+    legacy["seeds"] = [3072, 3073, 3074]
+    path = tmp_path / "legacy.json"
+    path.write_text(json.dumps(legacy))
+    monkeypatch.setattr("sys.argv", ["campaign", "--config", str(path), "--root", str(tmp_path), "--dry-run"])
+    campaign.main()
+    plan = json.loads(capsys.readouterr().out)
+    assert plan["execution_seeds"] == [3072]
+    assert plan["configuration"] == legacy
+    assert plan["protocol"] == digest(legacy)
