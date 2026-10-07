@@ -28,7 +28,7 @@ from .common import (
 )
 from .data import Segments
 from .evaluate import evaluate
-from .models import System
+from .models import System, prediction_loss, distance
 from .vision import Encoder
 
 
@@ -55,17 +55,38 @@ def world_validation(model, c, root, device, rank, size):
         Subset(data, list(range(rank, len(data), size))),
         batch_size=c["training"]["micro_batch"],
     )
-    total = torch.zeros(2, device=device)
+    total = torch.zeros(4, device=device)
     model.eval()
     with torch.no_grad():
         for b in loader:
             b = {k: v.to(device) for k, v in b.items()}
             loss, _ = model(b)
-            total += total.new_tensor([float(loss) * len(b["z"]), len(b["z"])])
+            n, k, ad = b["a"].shape
+            persistence = prediction_loss(
+                b["z"][:, :1].expand_as(b["z"][:, 1:]), b["z"][:, 1:]
+            )
+            choices = b["a"][:, None].expand(n, 16, k, ad).clone()
+            choices[:, 1:] = torch.rand_like(choices[:, 1:]) * 2 - 1
+            z0 = b["z"][:, 0, None].expand(n, 16, *b["z"].shape[2:]).flatten(0, 1)
+            future = model.world.rollout(z0, choices.flatten(0, 1))[:, -1]
+            targets = b["z"][:, -1, None].expand(n, 16, *b["z"].shape[2:]).flatten(0, 1)
+            ranked = distance(future, targets).reshape(n, 16)
+            # Ties get fractional credit; an action-ignoring model scores chance.
+            minimum = ranked.min(1, keepdim=True).values
+            tied = torch.isclose(ranked, minimum, atol=1e-7, rtol=1e-5)
+            identified = (tied[:, 0].float() / tied.sum(1)).sum()
+            total += total.new_tensor(
+                [float(loss) * n, n, float(persistence) * n, float(identified)]
+            )
     if size > 1:
         dist.all_reduce(total)
     model.train()
-    return float(total[0] / total[1])
+    return dict(
+        dynamics_loss=float(total[0] / total[1]),
+        persistence_loss=float(total[2] / total[1]),
+        action_identification_at_16=float(total[3] / total[1]),
+        action_identification_chance=1 / 16,
+    )
 
 
 def train(c, root, run_dir, method, seed, world_path=None, *, allow_fixture=False):
@@ -102,6 +123,7 @@ def train(c, root, run_dir, method, seed, world_path=None, *, allow_fixture=Fals
             or w["manifest"] != manifest_hash
             or w["seed"] != seed
             or w["method"] != "world"
+            or w["code"] != git_revision()
         ):
             raise ValueError("Wrong data/protocol/seed in frozen world checkpoint")
         ws = System(c, "world")
@@ -283,12 +305,16 @@ def train(c, root, run_dir, method, seed, world_path=None, *, allow_fixture=Fals
             improved = False
             if evaluate_now:
                 rng = rng_state()
+                validation_metrics = None
                 if method == "world":
-                    value = world_validation(model, c, root, device, rank, size)
+                    validation = world_validation(model, c, root, device, rank, size)
+                    value = validation["dynamics_loss"]
                     improved = value < best
                     best = min(best, value)
                     if rank == 0:
-                        run.log({"validation/dynamics_loss": value}, step=step)
+                        validation_metrics = {
+                            f"validation/{k}": v for k, v in validation.items()
+                        }
                 elif not allow_fixture:
                     if encoder is None:
                         encoder = Encoder(c["encoder"], root, device)
@@ -313,10 +339,15 @@ def train(c, root, run_dir, method, seed, world_path=None, *, allow_fixture=Fals
                             run_dir / "validation" / f"step_{step:07d}.json",
                             dict(step=step, metrics=summary, records=records),
                         )
-                        run.log(
-                            {f"validation/{k}": v for k, v in summary.items()},
-                            step=step,
-                        )
+                        validation_metrics = {
+                            f"validation/{k}": v for k, v in summary.items()
+                        }
+                if rank == 0 and validation_metrics is not None:
+                    run.log(validation_metrics, step=step)
+                    log = dict(step=step, **validation_metrics)
+                    with (run_dir / "metrics.jsonl").open("a") as f:
+                        f.write(json.dumps(log, allow_nan=False) + "\n")
+                    print(json.dumps(log), flush=True)
                 restore_rng(rng)
             if step % tc["checkpoint_every"] == 0 or evaluate_now:
                 rngs = gather(rng_state())

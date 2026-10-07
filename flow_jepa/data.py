@@ -27,6 +27,8 @@ def episode_plan(c):
     for split in ("train", "validation", "test"):
         tasks = c["training_tasks"] + (c["heldout_tasks"] if split == "test" else [])
         count = c["data"][split + "_episodes_per_task"]
+        if split != "train":
+            count *= c["data"].get("goal_candidate_multiplier", 2)
         for task in tasks:
             for i in range(count):
                 mode = (
@@ -46,6 +48,41 @@ def episode_plan(c):
                     )
                 )
     return rows
+
+
+def select_valid_goals(entries, c):
+    """Freeze goal-constructible evaluation cases before any method is trained.
+
+    A failed expert's final frame is not a valid task-goal annotation. Screening
+    uses only the fixed collection expert, never a tested method's outcomes.
+    """
+    selected, screening = [], {}
+    for row in entries:
+        if row["split"] == "train":
+            selected.append(row)
+            continue
+        key = row["split"] + "/" + row["task"]
+        group = screening.setdefault(
+            key, dict(attempted=0, valid=0, selected=0, failed_ids=[])
+        )
+        group["attempted"] += 1
+        if not row["expert_success"]:
+            group["failed_ids"].append(row["id"])
+            continue
+        group["valid"] += 1
+        count = c["data"][row["split"] + "_episodes_per_task"]
+        if group["selected"] < count:
+            selected.append(
+                {**row, "source_index": row["index"], "index": group["selected"]}
+            )
+            group["selected"] += 1
+    for key, group in screening.items():
+        split = key.split("/")[0]
+        if group["selected"] != c["data"][split + "_episodes_per_task"]:
+            raise ValueError(
+                f"Insufficient valid goal images for {key}: {group}. Fix the collection protocol; do not shrink the test set."
+            )
+    return selected, screening
 
 
 def _encode_list(encoder, clips, batch):
@@ -172,6 +209,7 @@ def prepare(c, root, *, encoder_factory=Encoder):
                     count += len(z)
         mean = total / count
         std = np.sqrt(np.maximum(squared / count - mean**2, 1e-6))
+        entries, screening = select_valid_goals(entries, c)
         save_json(
             root / "manifest.json",
             dict(
@@ -180,6 +218,7 @@ def prepare(c, root, *, encoder_factory=Encoder):
                 mean=mean.tolist(),
                 std=std.tolist(),
                 entries=entries,
+                goal_screening=screening,
                 expert_success={k: float(np.mean(v)) for k, v in expert.items()},
                 statistics_scope="training_episodes_only",
                 fixture=False,

@@ -64,6 +64,9 @@ class Encoder:
             tmp = weights.with_suffix(".partial")
             torch.hub.download_url_to_file(c["checkpoint_url"], str(tmp))
             tmp.replace(weights)
+        self.fingerprint = file_hash(weights)
+        if c.get("checkpoint_sha256") and self.fingerprint != c["checkpoint_sha256"]:
+            raise ValueError("Official encoder checkpoint hash mismatch")
         state = torch.load(weights, map_location="cpu", weights_only=False, mmap=True)[
             c["checkpoint_key"]
         ]
@@ -73,9 +76,6 @@ class Encoder:
         }
         self.model.load_state_dict(state, strict=True)
         self.model.eval().requires_grad_(False).to(device)
-        self.fingerprint = file_hash(weights)
-        if c.get("checkpoint_sha256") and self.fingerprint != c["checkpoint_sha256"]:
-            raise ValueError("Official encoder checkpoint hash mismatch")
 
     @torch.inference_mode()
     def __call__(self, clips):

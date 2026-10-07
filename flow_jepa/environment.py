@@ -20,7 +20,9 @@ def make_env(task, seed, c):
     # geometrically invalid draws before the random vector is frozen in a Task.
     # Sampling the box directly can otherwise cause an infinite rejection loop.
     env._set_task_called = True
-    env._partially_observable = False
+    # Leave observability at the constructor default until set_task below.
+    # Its public setter invalidates the cached observation bounds. Toggling the
+    # flag directly would leave goal bounds at zero and corrupt expert actions.
     env._freeze_rand_vec = False
     env.seeded_rand_vec = True
     env.seed(seed)

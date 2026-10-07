@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import fcntl
 import json
 import time
 from pathlib import Path
@@ -9,7 +10,16 @@ import h5py
 import numpy as np
 import torch
 
-from .common import config, digest, distributed, file_hash, gather, save_json, seed_all
+from .common import (
+    config,
+    digest,
+    distributed,
+    file_hash,
+    gather,
+    git_revision,
+    save_json,
+    seed_all,
+)
 from .environment import make_env
 from .models import System, distance
 from .vision import Encoder, history_clip
@@ -137,6 +147,8 @@ def load_models(c, world_path, method, checkpoint_path, device):
     base = torch.load(world_path, map_location="cpu", weights_only=False)
     if base["protocol"] != digest(c) or base["method"] != "world":
         raise ValueError("World checkpoint/protocol mismatch")
+    if base["code"] != git_revision():
+        raise ValueError("World checkpoint was created by another code revision")
     system = System(c, "world")
     system.load_state_dict(base["model"])
     world = system.world.eval().requires_grad_(False).to(device)
@@ -147,6 +159,8 @@ def load_models(c, world_path, method, checkpoint_path, device):
         saved["protocol"] != digest(c)
         or saved["method"] != method
         or saved["manifest"] != base["manifest"]
+        or saved["code"] != base["code"]
+        or saved["seed"] != base["seed"]
     ):
         raise ValueError("Planner checkpoint/protocol/data mismatch")
     if saved["world_hash"] != file_hash(world_path):
@@ -154,6 +168,55 @@ def load_models(c, world_path, method, checkpoint_path, device):
     model = System(c, method).to(device)
     model.load_state_dict(saved["model"])
     return model.eval(), world, saved
+
+
+class EpisodeJournal:
+    """Persist each episode, with strict identity checks before reusing results."""
+
+    def __init__(self, path, identity):
+        self.path, self.identity = Path(path), identity
+        self.path.mkdir(parents=True, exist_ok=True)
+        with (self.path / "identity.lock").open("a+") as lock:
+            fcntl.flock(lock, fcntl.LOCK_EX)
+            metadata = self.path / "identity.json"
+            if metadata.exists():
+                if json.loads(metadata.read_text()) != identity:
+                    raise ValueError("Evaluation resume identity mismatch")
+            else:
+                save_json(metadata, identity)
+
+    def record_path(self, episode_id):
+        return self.path / (digest(episode_id) + ".json")
+
+    def load(self, row):
+        path = self.record_path(row["id"])
+        if not path.exists():
+            return None
+        record = json.loads(path.read_text())
+        expected = dict(
+            id=row["id"],
+            task=row["task"],
+            reset_seed=row["seed"],
+            episode_sha256=row["sha256"],
+            model_seed=self.identity["seed"],
+        )
+        if any(record.get(k) != v for k, v in expected.items()):
+            raise ValueError("Cached evaluation episode mismatch")
+        return record
+
+    def save(self, record):
+        save_json(self.record_path(record["id"]), record)
+
+
+def checked_report(path, identity):
+    if not Path(path).exists():
+        return None
+    report = json.loads(Path(path).read_text())
+    if report.get("fixture", True) or any(
+        report.get(k) != v for k, v in identity.items()
+    ):
+        raise ValueError("Saved evaluation report identity mismatch")
+    return report
 
 
 def summarize(records, c):
@@ -188,6 +251,24 @@ def summarize(records, c):
     result["controller_step_latency_ms_mean"] = float(np.mean(timings))
     result["controller_step_latency_ms_p95"] = float(np.quantile(timings, 0.95))
     result["return_mean"] = float(np.mean([r["return"] for r in records]))
+    budget = c["evaluation"]["budget_primitive"]
+    for limit in sorted({x for x in (50, 100, budget) if x <= budget}):
+        result[f"success_within_{limit}_primitive"] = float(
+            np.mean(
+                [
+                    r["success"] and r["first_success_primitive"] <= limit
+                    for r in records
+                ]
+            )
+        )
+    result["steps_to_success_capped_mean"] = float(
+        np.mean(
+            [
+                r["first_success_primitive"] if r["success"] else budget + 1
+                for r in records
+            ]
+        )
+    )
     result["world_predictions_mean"] = float(
         np.mean([r["world_predictions"] for r in records])
     )
@@ -197,7 +278,19 @@ def summarize(records, c):
     return result
 
 
-def evaluate(model, world, c, root, method, seed, split, encoder, device, count=None):
+def evaluate(
+    model,
+    world,
+    c,
+    root,
+    method,
+    seed,
+    split,
+    encoder,
+    device,
+    count=None,
+    journal=None,
+):
     rank, size, _ = distributed()
     root = Path(root)
     manifest = json.loads((root / "manifest.json").read_text())
@@ -223,6 +316,10 @@ def evaluate(model, world, c, root, method, seed, split, encoder, device, count=
         raise ValueError("Incomplete evaluation suite")
     for i in range(rank, len(rows), size):
         row = rows[i]
+        cached = journal.load(row) if journal is not None else None
+        if cached is not None:
+            records.append(cached)
+            continue
         # Per-episode randomness pairs evaluation independently of scheduling/order.
         seed_all((seed + row["seed"]) % 2**32)
         with h5py.File(root / row["path"], "r") as f:
@@ -300,6 +397,8 @@ def evaluate(model, world, c, root, method, seed, split, encoder, device, count=
                 )
             )
             records[-1]["return"] = records[-1].pop("return_")
+            if journal is not None:
+                journal.save(records[-1])
             print(
                 json.dumps(
                     dict(
@@ -334,15 +433,61 @@ def main():
     a = p.parse_args()
     c = config(a.config)
     rank, _, device = distributed()
-    model, world, saved = load_models(c, a.world, a.method, a.checkpoint, device)
-    if saved["seed"] != a.seed:
-        raise ValueError("Evaluation seed differs from checkpoint training seed")
-    if saved.get("fixture", False):
-        raise ValueError("Fixture checkpoints cannot enter benchmark evaluation")
-    encoder = Encoder(c["encoder"], a.root, device)
-    records, metrics = evaluate(
-        model, world, c, a.root, a.method, a.seed, a.split, encoder, device
+    manifest = json.loads((Path(a.root) / "manifest.json").read_text())
+    if manifest.get("fixture", True) or manifest["protocol"] != digest(c):
+        raise ValueError("Wrong evaluation data/protocol or fixture manifest")
+    identity = dict(
+        protocol=digest(c),
+        manifest=file_hash(Path(a.root) / "manifest.json"),
+        world_hash=file_hash(a.world),
+        checkpoint_hash=file_hash(a.checkpoint) if a.checkpoint else None,
+        method=a.method,
+        seed=a.seed,
+        split=a.split,
+        code=git_revision(),
+        hardware=gather(
+            torch.cuda.get_device_name(device) if device.type == "cuda" else "CPU"
+        ),
     )
+    report = checked_report(a.output, identity)
+    if report is not None and report.get("wandb_synced", False):
+        if rank == 0:
+            print(
+                json.dumps(dict(event="evaluation_already_complete", output=a.output)),
+                flush=True,
+            )
+        return
+    if report is None:
+        model, world, saved = load_models(c, a.world, a.method, a.checkpoint, device)
+        if saved["seed"] != a.seed or saved["manifest"] != identity["manifest"]:
+            raise ValueError("Evaluation seed or manifest differs from checkpoint")
+        if saved.get("fixture", False):
+            raise ValueError("Fixture checkpoints cannot enter benchmark evaluation")
+        encoder = Encoder(c["encoder"], a.root, device)
+        journal = EpisodeJournal(str(a.output) + ".episodes", identity)
+        records, metrics = evaluate(
+            model,
+            world,
+            c,
+            a.root,
+            a.method,
+            a.seed,
+            a.split,
+            encoder,
+            device,
+            journal=journal,
+        )
+        report = dict(
+            **identity,
+            fixture=False,
+            records=records,
+            metrics=metrics,
+            goal_screening=manifest.get("goal_screening", {}),
+            wandb_synced=False,
+        )
+        if rank == 0:
+            # Preserve hours of evaluation even if the online service is unavailable.
+            save_json(a.output, report)
     if rank == 0:
         import wandb
 
@@ -352,26 +497,12 @@ def main():
             group=c["name"],
             job_type="test" if a.split == "test" else "validation",
             name=f"{a.method}_{a.seed}_{a.split}",
+            id=digest(identity)[:24],
+            resume="allow",
             config=c,
         )
-        run.log({f"{a.split}/{k}": v for k, v in metrics.items()})
-        report = dict(
-            protocol=digest(c),
-            manifest=file_hash(Path(a.root) / "manifest.json"),
-            world_hash=file_hash(a.world),
-            checkpoint_hash=file_hash(a.checkpoint) if a.checkpoint else None,
-            method=a.method,
-            seed=a.seed,
-            split=a.split,
-            fixture=False,
-            code=saved["code"],
-            metrics=metrics,
-            records=records,
-            wandb_url=run.url,
-            hardware=torch.cuda.get_device_name(device)
-            if device.type == "cuda"
-            else "CPU",
-        )
+        run.log({f"{a.split}/{k}": v for k, v in report["metrics"].items()})
+        report["wandb_url"] = run.url
         save_json(a.output, report)
         columns = [
             "id",
@@ -384,11 +515,14 @@ def main():
         run.log(
             {
                 "episodes": wandb.Table(
-                    columns=columns, data=[[r[k] for k in columns] for r in records]
+                    columns=columns,
+                    data=[[r[k] for k in columns] for r in report["records"]],
                 )
             }
         )
         run.finish()
+        report["wandb_synced"] = True
+        save_json(a.output, report)
 
 
 if __name__ == "__main__":

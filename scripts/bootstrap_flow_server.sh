@@ -33,7 +33,7 @@ fi
 # Pin the CUDA 12.6 build rather than silently using the newest CUDA wheel.
 "$conda_bin" run --no-capture-output -n flow-jepa python -m pip install torch==2.8.0 torchvision==0.23.0 --index-url https://download.pytorch.org/whl/cu126
 "$conda_bin" run --no-capture-output -n flow-jepa python -m pip install -r requirements-flow.txt
-"$conda_bin" run --no-capture-output -n flow-jepa python -m pytest tests_flow -q
+CUDA_VISIBLE_DEVICES="" OMP_NUM_THREADS=2 "$conda_bin" run --no-capture-output -n flow-jepa python -m pytest tests_flow -q
 mkdir -p "$data_dir"
 nohup "$conda_bin" run --no-capture-output -n flow-jepa python -u -m flow_jepa.campaign \
   --root "$data_dir" --gpus "${FLOW_MAX_GPUS:-4}" \

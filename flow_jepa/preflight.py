@@ -73,8 +73,6 @@ def main():
         torch.nn.utils.clip_grad_norm_(base.parameters(), 1.0, error_if_nonfinite=True)
         optimizer.step()
     world = base.world.eval().requires_grad_(False)
-    model = System(c, "joint_flow_consistent").to(device)
-    joint = DDP(model, device_ids=[device.index]) if size > 1 else model
     m, k = c["model"]["segments"], c["model"]["chunk_steps"]
     zpath = (
         torch.stack([torch.lerp(z[0], z[-1], i / m) for i in range(m + 1)])[None]
@@ -83,21 +81,45 @@ def main():
     )
     # Explicit wiring fixture, never an evaluation result or training dataset.
     fixture = dict(z=zpath, a=actions[:, None].expand(micro, m, k, -1).clone())
-    loss, parts = joint(
-        fixture,
-        world,
-        consistency_weight=0.1,
-        consistency_batch=c["training"]["consistency_batch"],
-        consistency_steps=c["training"]["consistency_steps"],
+    fixture["local"] = (
+        torch.stack([z[0], z[-1]])[None].expand(micro, -1, -1, -1).clone()
     )
-    loss.backward()
-    if not torch.isfinite(loss):
-        raise FloatingPointError("Nonfinite joint loss")
-    if not any(
-        p.grad is not None and torch.isfinite(p.grad).all() and p.grad.abs().sum() > 0
-        for p in model.parameters()
+    methods = {}
+    for method in (
+        "joint_flow_consistent",
+        "joint_deterministic_consistent",
+        "leflow_adapted",
+        "hwm_adapted",
     ):
-        raise AssertionError("No finite planner gradients")
+        model = System(c, method).to(device)
+        joint = DDP(model, device_ids=[device.index]) if size > 1 else model
+        optimizer = torch.optim.AdamW(model.parameters(), lr=1e-4)
+        inputs = batch if method == "hwm_adapted" else fixture
+        # Two iterations expose unused-parameter/reducer failures on the next forward.
+        for _ in range(2):
+            optimizer.zero_grad(set_to_none=True)
+            loss, parts = joint(
+                inputs,
+                world,
+                consistency_weight=0.1 if method.endswith("_consistent") else 0.0,
+                consistency_batch=c["training"]["consistency_batch"],
+                consistency_steps=c["training"]["consistency_steps"],
+            )
+            loss.backward()
+            if not torch.isfinite(loss):
+                raise FloatingPointError(f"Nonfinite preflight loss: {method}")
+            if any(
+                p.grad is None or not torch.isfinite(p.grad).all()
+                for p in model.parameters()
+            ):
+                raise AssertionError(
+                    f"Missing or nonfinite planner gradients: {method}"
+                )
+            optimizer.step()
+        methods[method] = {
+            key: bool(torch.isfinite(value)) for key, value in parts.items()
+        }
+        del joint, model, optimizer
     checks = gather(
         dict(
             rank=rank,
@@ -105,10 +127,7 @@ def main():
             torch=torch.__version__,
             cuda=torch.version.cuda,
             encoder_shape=list(z.shape),
-            joint_loss_finite=True,
-            generated_consistency_finite=bool(
-                torch.isfinite(parts["generated_consistency"])
-            ),
+            methods_finite=methods,
             peak_memory_gib=torch.cuda.max_memory_allocated(device) / 2**30,
         )
     )

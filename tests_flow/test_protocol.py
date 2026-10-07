@@ -4,7 +4,23 @@ import pytest
 
 from flow_jepa.common import digest, episode_seed
 from flow_jepa.compare import compare
-from flow_jepa.data import episode_plan
+from flow_jepa.data import episode_plan, select_valid_goals
+
+
+def test_goal_screening_never_replaces_based_on_model_outcomes(small_config):
+    rows = episode_plan(small_config)
+    for row in rows:
+        row["expert_success"] = row["index"] != 0
+    selected, screening = select_valid_goals(rows, small_config)
+    test = [x for x in selected if x["split"] == "test" and x["task"] == "reach"]
+    assert len(test) == 4
+    assert [r["index"] for r in test] == [0, 1, 2, 3]
+    assert [r["source_index"] for r in test] == [1, 2, 3, 4]
+    assert screening["test/reach"]["failed_ids"] == ["test/reach/00000"]
+    for row in rows:
+        row["expert_success"] = False
+    with pytest.raises(ValueError, match="Insufficient valid"):
+        select_valid_goals(rows, small_config)
 
 
 def test_split_disjoint_and_holdout_is_test_only(small_config):

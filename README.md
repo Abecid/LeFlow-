@@ -21,7 +21,7 @@ bash scripts/bootstrap_flow_server.sh
 
 The launcher verifies online W&B, waits for idle GPUs, runs a CUDA/NCCL/encoder
 preflight, collects data, trains all methods and evaluates held-out episodes.
-Use `FLOW_DATA_DIR` to select a volume with at least 120 GiB available.
+Use `FLOW_DATA_DIR` to select a volume with at least 150 GiB available.
 
 **Status:** CPU wiring tests and official-encoder loading have been validated.
 No GPU campaign has been launched by the assistant: the current runtime has no

@@ -46,7 +46,7 @@ def visible_gpus():
     return result
 
 
-def acquire_gpus(maximum, root, wait_hours):
+def acquire_gpus(maximum, root, wait_hours, required=None):
     if shutil.which("nvidia-smi") is None:
         raise RuntimeError("No NVIDIA GPU runtime: launch on the authorized server")
     if shutil.which("sinfo") and not os.getenv("SLURM_JOB_ID"):
@@ -77,6 +77,8 @@ def acquire_gpus(maximum, root, wait_hours):
                 selected.append((index, uuid))
             # Preserve the registered global batch on 1, 2 or 4 GPUs.
             count = next((n for n in (4, 2, 1) if n <= len(selected)), 0)
+            if required is not None:
+                count = required if len(selected) >= required else 0
             for f in held[count:]:
                 f.close()
             held, selected = held[:count], selected[:count]
@@ -153,7 +155,16 @@ def main():
     )
     save_json(root / "wandb.json", dict(url=check.url, project=c["wandb"]["project"]))
     check.finish()
-    selected, held = acquire_gpus(a.gpus, root, a.wait_hours)
+    allocation = root / "allocation.json"
+    required = (
+        json.loads(allocation.read_text())["world_size"]
+        if allocation.exists()
+        else None
+    )
+    if required is not None and required > a.gpus:
+        raise ValueError("Resume needs the original number of GPUs")
+    selected, held = acquire_gpus(a.gpus, root, a.wait_hours, required)
+    save_json(allocation, dict(world_size=len(selected)))
     env = os.environ.copy()
     env.update(
         CUDA_VISIBLE_DEVICES=",".join(x[0] for x in selected),
@@ -176,7 +187,9 @@ def main():
             sys.executable,
             "-m",
             "torch.distributed.run",
-            "--standalone",
+            "--nnodes=1",
+            "--rdzv-backend=c10d",
+            "--rdzv-endpoint=127.0.0.1:0",
             f"--nproc_per_node={count}",
             "-m",
             module,
@@ -199,9 +212,9 @@ def main():
     try:
         run("flow_jepa.preflight", [], "gpu_preflight")
         if not (root / "manifest.json").exists():
-            if shutil.disk_usage(root).free < 120 * 2**30:
+            if shutil.disk_usage(root).free < 150 * 2**30:
                 raise RuntimeError(
-                    "Use a data volume with at least 120 GiB free for the full dense-feature cache"
+                    "Use a data volume with at least 150 GiB free for the full dense-feature cache and goal screening"
                 )
             run("flow_jepa.data", [], "prepare_data")
         manifest_hash = verify_manifest(root, c)
@@ -243,8 +256,8 @@ def main():
             world = root / "runs" / f"world_{seed}" / "best.pt"
             for method in c["methods"]:
                 report = root / "test" / f"{method}_{seed}.json"
-                if report.exists():
-                    continue
+                # Evaluator validates hashes before skipping complete reports;
+                # unfinished online uploads reuse the durable local results.
                 arguments = [
                     "--world",
                     world,

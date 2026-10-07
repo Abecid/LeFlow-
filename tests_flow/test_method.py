@@ -40,6 +40,9 @@ def test_losses_and_backward(small_config, method):
     )
     loss.backward()
     assert torch.isfinite(loss)
+    assert all(
+        p.grad is not None and torch.isfinite(p.grad).all() for p in model.parameters()
+    )
     assert any(p.grad is not None and p.grad.norm() > 0 for p in model.parameters())
     assert all(p.grad is None for p in world.parameters())
     if method.endswith("_consistent"):

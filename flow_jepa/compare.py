@@ -30,6 +30,7 @@ def compare(c, reports):
             raise ValueError(f"Mismatched {key}")
     count = c["data"]["test_episodes_per_task"]
     arrays = {}
+    reference_signature = None
     for seed in seeds:
         rows = [groups[(m, seed)] for m in methods]
         if len({r["world_hash"] for r in rows}) != 1:
@@ -45,6 +46,9 @@ def compare(c, reports):
             signatures.append(sig)
         if any(s != signatures[0] for s in signatures[1:]):
             raise ValueError("Evaluation resets/goals differ between methods")
+        if reference_signature is not None and signatures[0] != reference_signature:
+            raise ValueError("Evaluation resets/goals differ between training seeds")
+        reference_signature = signatures[0]
     for method in methods:
         out = np.empty((len(seeds), len(tasks), count), np.float64)
         for si, seed in enumerate(seeds):

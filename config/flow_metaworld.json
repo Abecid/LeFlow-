@@ -35,7 +35,8 @@
     "action_repeat": 2,
     "camera": "corner",
     "render_size": 256,
-    "history_frames": 16
+    "history_frames": 16,
+    "goal_candidate_multiplier": 2
   },
   "encoder": {
     "repository": "facebookresearch/vjepa2",
