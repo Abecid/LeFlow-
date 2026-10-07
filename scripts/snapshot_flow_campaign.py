@@ -15,7 +15,8 @@ import collections, hashlib, json, pathlib, subprocess, sys
 root = pathlib.Path(sys.argv[1])
 files = {}
 for name in ('campaign.json', 'status.json', 'queue.json', 'allocation.json',
-             'wandb.json', 'gpu_preflight.json', 'data_protocol.json', 'comparison.json'):
+             'wandb.json', 'online-readback.json', 'gpu_preflight.json',
+             'data_protocol.json', 'comparison.json'):
     p = root / name
     if p.exists():
         files[name] = json.loads(p.read_text())

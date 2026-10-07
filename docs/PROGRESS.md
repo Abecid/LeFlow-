@@ -208,3 +208,9 @@ follow-up file copy timed out during SSH handshake; the verified API JSON alread
 returned by the successful server check was saved directly to the reporting
 checkout. No campaign intervention was needed. Continue preparation and the
 automatic training queue.
+
+Reporting recovery: the desktop snapshot helper now includes
+`online-readback.json` in its single SSH response. Future checks should refresh
+server/W&B health first and then run the snapshot helper; no separate file-copy
+connection is needed. This reporting-only change does not modify the frozen
+execution checkout. Python compilation passed.
