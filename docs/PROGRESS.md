@@ -545,3 +545,16 @@ world/three-head training and four-method evaluation queue proceed.
 The 23:01 heartbeat obeyed the then-active migration hold: read-only checks found
 2,288 cached episodes and healthy preparation/W&B, without writing reports,
 committing pending edits or changing the supervisor during that migration.
+
+### 2026-10-07 23:31 UTC heartbeat
+
+Preparation advanced from 2,414 to 2,549 completed episodes: 600 each for assembly,
+button-press-topdown, coffee-button and dial-turn, plus 149 door-close. Recent
+expert door-close collection reports success. Supervisor 3126314 and all four
+workers remain active, with clean frozen execution revision `16747bb` and GPUs
+0–3 only.
+
+Campaign registration and fresh W&B online readback still match the four methods,
+seed 3072, and unchanged optimization/controller limits. Training runs and
+checkpoints remain zero while shared preparation continues. No intervention was
+required; continue the registered bounded preparation/training/evaluation queue.
