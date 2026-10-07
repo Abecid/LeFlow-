@@ -524,3 +524,24 @@ runs/checkpoints remain absent, as expected until shared preparation completes.
 The compact snapshot now contains the current successful GPU-preflight report.
 Intermittent SSH handshake failures were recovered using the configured fallback;
 they did not interrupt the detached campaign.
+
+### 2026-10-07 23:16 UTC heartbeat — first-pass scope verified
+
+The current supervisor PID 3126314 and four preparation workers 3128857–3128860
+are alive in `repo-first-pass`; its source is clean at frozen revision `16747bb`.
+Campaign registration and fresh online W&B readback both confirm exactly
+joint_flow_consistent, leflow_adapted, hwm_adapted and cem_long, seed 3072,
+7,200 optimization seconds/model and 10 controller seconds/episode. Only GPUs
+0–3 are allocated. No supervisor or scientific configuration was changed.
+
+Preparation advanced from the post-migration snapshot of 2,390 to 2,414 completed
+episodes: 600 each for assembly, button-press-topdown, coffee-button and dial-turn,
+plus 14 door-close. The new door-close rows are in the registered random-action
+portion; their unsuccessful collection outcomes are expected. Training runs and
+checkpoints remain zero pending shared preparation. No recovery was needed.
+Next: finish the shared cache/goal screening, then let the registered bounded
+world/three-head training and four-method evaluation queue proceed.
+
+The 23:01 heartbeat obeyed the then-active migration hold: read-only checks found
+2,288 cached episodes and healthy preparation/W&B, without writing reports,
+committing pending edits or changing the supervisor during that migration.

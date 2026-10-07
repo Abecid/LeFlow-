@@ -3,7 +3,8 @@
     "train/assembly": 600,
     "train/button-press-topdown": 600,
     "train/coffee-button": 600,
-    "train/dial-turn": 590
+    "train/dial-turn": 600,
+    "train/door-close": 14
   },
-  "total": 2390
+  "total": 2414
 }
