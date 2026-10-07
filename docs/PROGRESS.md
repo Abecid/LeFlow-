@@ -321,3 +321,15 @@ supervisor remain alive, with clean frozen source `61a5d73` and GPUs 0–3 only.
 Online W&B readback passed; training runs/checkpoints remain zero until shared
 preparation finishes. Free space remains 101 GiB on the persistent volume and
 2.2 TiB on scratch. No intervention was required; continue the registered queue.
+
+### 2026-10-07 22:31 UTC heartbeat
+
+Preparation advanced from 1885 to 2028 completed episodes: 600 each for assembly,
+button-press-topdown and coffee-button, plus 228 dial-turn. Recent dial-turn
+expert collection reports success. The supervisor and all four workers are
+active, source remains clean at frozen revision `61a5d73`, and only GPUs 0–3
+are allocated.
+
+Fresh W&B online readback passed. Training runs/checkpoints remain zero while
+shared preparation continues; the finished W&B run is only the launch check.
+No intervention was required. Continue the registered preparation/training queue.
