@@ -214,3 +214,15 @@ Reporting recovery: the desktop snapshot helper now includes
 server/W&B health first and then run the snapshot helper; no separate file-copy
 connection is needed. This reporting-only change does not modify the frozen
 execution checkout. Python compilation passed.
+
+### 2026-10-07 20:01 UTC heartbeat — first task cache complete
+
+The snapshot contains 616 completed episodes: all 600 training assembly episodes
+and 16 button-press-topdown episodes. The second task has begun its configured
+random-action portion. The supervisor and four workers are active, execution
+source remains clean at `61a5d73`, and allocation remains limited to GPUs 0–3.
+
+Fresh W&B readback and the consolidated snapshot transfer both succeeded. There
+are still no training runs/checkpoints or learned-method evaluation results.
+No intervention was needed; continue the remaining shared data preparation and
+the automatic training queue.

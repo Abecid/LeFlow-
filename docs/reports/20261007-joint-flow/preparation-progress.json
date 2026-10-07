@@ -1,6 +1,7 @@
 {
   "completed_episode_files": {
-    "train/assembly": 470
+    "train/assembly": 600,
+    "train/button-press-topdown": 16
   },
-  "total": 470
+  "total": 616
 }
