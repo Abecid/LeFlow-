@@ -139,9 +139,13 @@ and produces finite `[1,32,1024]` features from real MetaWorld RGB frames. A rea
 scripted expert reaches all 16 task goals on one smoke-test reset per task; this
 is a data-collection check, not a learned-method benchmark.
 
-As of 2026-10-07, SSH from the development runtime fails to resolve
-`target_server_2`; the user's Mac SSH configuration is not attached here. No GPU
-training, full dataset collection, or online benchmark evaluation has started.
-CUDA/NCCL behavior remains unverified until the server preflight runs. A local
-two-process CPU collective attempt was blocked by the runtime's networking
-permissions. There are no measured success improvements or SOTA claims yet.
+The campaign was recovered on 2026-10-07 in a desktop chat with working SSH to
+`target_server_2`. All 29 CPU tests pass on the server, online W&B upload is
+verified, and the official encoder checksum is verified. The initial GPU
+preflight exposed missing NVIDIA EGL graphics libraries; Mesa software EGL now
+renders repeatable observations. The corrected four-GPU preflight and subsequent
+stages run under a detached supervisor. See [PROGRESS.md](PROGRESS.md) and the
+versioned [runtime reports](reports/20261007-joint-flow/) for the latest verified
+stage, failures, run links, and metrics. Historical runtime access blockers above
+must not be assumed to describe the current desktop session. There are no
+measured success improvements or SOTA claims yet.

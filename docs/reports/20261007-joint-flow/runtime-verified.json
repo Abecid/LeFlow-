@@ -1,0 +1,15 @@
+{
+  "vendor": "Mesa",
+  "renderer": "llvmpipe (LLVM 23.1.2, 256 bits)",
+  "version": "4.6 (Compatibility Profile) Mesa 26.2.4",
+  "packages": {
+    "torch": "2.8.0+cu126",
+    "torchvision": "0.23.0+cu126",
+    "numpy": "2.2.6",
+    "mujoco": "3.3.0",
+    "metaworld": "3.1.1",
+    "gymnasium": "1.2.0",
+    "wandb": "0.22.3",
+    "timm": "1.0.20"
+  }
+}

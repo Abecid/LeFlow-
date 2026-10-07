@@ -102,3 +102,19 @@ meaningful progress, failure, completion, or a required action.
 Reporting note: compact JSON under `docs/reports/**/runs/` is explicitly exempt
 from the global `runs/` ignore rule, so training metrics and validation evidence
 are included in routine commits. Model binaries remain ignored.
+
+### Renderer fixed; corrected GPU preflight active
+
+Mesa 26.2.4 / llvmpipe (LLVM 23.1.2) is installed inside the dedicated environment.
+A ten-action MetaWorld reach rollout repeats pixel-exactly, with frame SHA-256
+`ef2302cc4443026d0c2b88783ee0054f69efd74e70357ea468df8b98426234c9`.
+`pip check` remains clean and all 29 tests passed again (11.76 s).
+
+The failed campaign is archived at `attempt-1-egl-failed` under the server record.
+The corrected campaign is registered from frozen source `61a5d73`, same scientific
+configuration, with explicit software-renderer settings. Supervisor PID 2851417
+started the four-GPU preflight. Its online launch check is
+https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/reckez4q.
+The saved `launch.sh`, `runtime-verified.json`, and `renderer-probe.json` record
+actual deployment settings and packages. This is still wiring validation, not a
+trained-model success result.

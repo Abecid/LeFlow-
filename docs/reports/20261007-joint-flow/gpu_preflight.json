@@ -1,0 +1,138 @@
+{
+  "checks": [
+    {
+      "cuda": "12.6",
+      "encoder_shape": [
+        6,
+        32,
+        1024
+      ],
+      "gpu": "NVIDIA A800-SXM4-80GB",
+      "methods_finite": {
+        "hwm_adapted": {
+          "coarse_dynamics": true
+        },
+        "joint_deterministic_consistent": {
+          "action_objective": true,
+          "generated_consistency": true,
+          "state_objective": true
+        },
+        "joint_flow_consistent": {
+          "action_objective": true,
+          "generated_consistency": true,
+          "state_objective": true
+        },
+        "leflow_adapted": {
+          "action_objective": true,
+          "inverse": true,
+          "observed_consistency": true,
+          "state_objective": true
+        }
+      },
+      "peak_memory_gib": 1.8421220779418945,
+      "rank": 0,
+      "torch": "2.8.0+cu126"
+    },
+    {
+      "cuda": "12.6",
+      "encoder_shape": [
+        6,
+        32,
+        1024
+      ],
+      "gpu": "NVIDIA A800-SXM4-80GB",
+      "methods_finite": {
+        "hwm_adapted": {
+          "coarse_dynamics": true
+        },
+        "joint_deterministic_consistent": {
+          "action_objective": true,
+          "generated_consistency": true,
+          "state_objective": true
+        },
+        "joint_flow_consistent": {
+          "action_objective": true,
+          "generated_consistency": true,
+          "state_objective": true
+        },
+        "leflow_adapted": {
+          "action_objective": true,
+          "inverse": true,
+          "observed_consistency": true,
+          "state_objective": true
+        }
+      },
+      "peak_memory_gib": 1.855137825012207,
+      "rank": 1,
+      "torch": "2.8.0+cu126"
+    },
+    {
+      "cuda": "12.6",
+      "encoder_shape": [
+        6,
+        32,
+        1024
+      ],
+      "gpu": "NVIDIA A800-SXM4-80GB",
+      "methods_finite": {
+        "hwm_adapted": {
+          "coarse_dynamics": true
+        },
+        "joint_deterministic_consistent": {
+          "action_objective": true,
+          "generated_consistency": true,
+          "state_objective": true
+        },
+        "joint_flow_consistent": {
+          "action_objective": true,
+          "generated_consistency": true,
+          "state_objective": true
+        },
+        "leflow_adapted": {
+          "action_objective": true,
+          "inverse": true,
+          "observed_consistency": true,
+          "state_objective": true
+        }
+      },
+      "peak_memory_gib": 1.855137825012207,
+      "rank": 2,
+      "torch": "2.8.0+cu126"
+    },
+    {
+      "cuda": "12.6",
+      "encoder_shape": [
+        6,
+        32,
+        1024
+      ],
+      "gpu": "NVIDIA A800-SXM4-80GB",
+      "methods_finite": {
+        "hwm_adapted": {
+          "coarse_dynamics": true
+        },
+        "joint_deterministic_consistent": {
+          "action_objective": true,
+          "generated_consistency": true,
+          "state_objective": true
+        },
+        "joint_flow_consistent": {
+          "action_objective": true,
+          "generated_consistency": true,
+          "state_objective": true
+        },
+        "leflow_adapted": {
+          "action_objective": true,
+          "inverse": true,
+          "observed_consistency": true,
+          "state_objective": true
+        }
+      },
+      "peak_memory_gib": 1.8421220779418945,
+      "rank": 3,
+      "torch": "2.8.0+cu126"
+    }
+  ],
+  "label": "Wiring validation only; not an experiment result",
+  "passed": true
+}
