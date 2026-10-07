@@ -237,3 +237,12 @@ active, the execution checkout is clean at `61a5d73`, and GPU use remains on 0â€
 Fresh W&B readback passed; no training runs/checkpoints exist yet. Storage still
 has approximately 101 GiB free on persistent storage and 2.2 TiB on scratch. No
 intervention was needed. Continue preparation before automatic training.
+
+### 2026-10-07 20:31 UTC heartbeat
+
+Preparation advanced from 756 to 894 completed episodes (600 assembly,
+294 button-press-topdown). The supervisor and all four workers remain active;
+recent expert collection episodes succeed. Source is clean at `61a5d73`, and
+only GPUs 0â€“3 are allocated. Fresh W&B readback passed; training runs and
+checkpoints remain at zero. No intervention or protocol change was needed.
+Continue shared preparation before the automatic training stages.
