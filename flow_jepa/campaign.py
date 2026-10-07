@@ -172,6 +172,8 @@ def main():
         MUJOCO_GL="egl",
         OMP_NUM_THREADS="2",
         WANDB_MODE="online",
+        FLOW_DEVICE="cuda",
+        CUDA_MODULE_LOADING="LAZY",
     )
     count = len(selected)
 

@@ -63,7 +63,15 @@ def distributed():
     local = int(os.getenv("LOCAL_RANK", 0))
     if not 1 <= size <= 4:
         raise ValueError("This campaign permits at most four GPUs")
-    device = torch.device(f"cuda:{local}" if torch.cuda.is_available() else "cpu")
+    requested = os.getenv("FLOW_DEVICE", "auto")
+    if requested not in ("auto", "cpu", "cuda"):
+        raise ValueError("FLOW_DEVICE must be auto, cpu, or cuda")
+    # Explicit CUDA launches must select the rank before any CUDA availability
+    # query; early probing breaks NCCL on target_server_2's driver/runtime stack.
+    use_cuda = requested == "cuda" or (
+        requested == "auto" and torch.cuda.is_available()
+    )
+    device = torch.device(f"cuda:{local}" if use_cuda else "cpu")
     if device.type == "cuda":
         torch.cuda.set_device(device)
     os.environ.setdefault("MUJOCO_GL", "egl")
