@@ -29,7 +29,7 @@
           "state_objective": true
         }
       },
-      "peak_memory_gib": 1.8421220779418945,
+      "peak_memory_gib": 1.855137825012207,
       "rank": 0,
       "torch": "2.8.0+cu126"
     },
@@ -128,7 +128,7 @@
           "state_objective": true
         }
       },
-      "peak_memory_gib": 1.8421220779418945,
+      "peak_memory_gib": 1.855137825012207,
       "rank": 3,
       "torch": "2.8.0+cu126"
     }

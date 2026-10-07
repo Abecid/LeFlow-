@@ -6,9 +6,9 @@
   are removed from execution. Use `repo-single-seed` and the updated `launch.sh`.
 
 - **Running:** corrected single-seed supervisor on target_server_2, limited to
-  GPUs 0–3. It rechecks the GPU setup, then resumes the preserved shared cache
-  before training. 2,128 completed episodes were retained at the switch.
-- **Passed:** 29 server tests; actual four-rank CUDA/NCCL preflight, official encoder,
+  GPUs 0–3. The new GPU preflight passed and shared cache preparation resumed;
+  2,128 completed episodes were retained at the switch.
+- **Passed:** 31 server tests; actual four-rank CUDA/NCCL preflight, official encoder,
   repeatable simulator rendering, and two optimizer updates per architecture.
 - **Active execution revision:** `06c5d02e542bfedf3772cc1575fd0e473b618dc7`
   in server checkout `repo-single-seed`. The old `repo` is preserved only for
@@ -408,3 +408,18 @@ launch-check run `l2sux44s` confirms execution seed `[3072]` and code `06c5d02`:
 https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/l2sux44s.
 The monitor can continue normally; the seed migration is complete. Full training
 remains pending shared preparation, and there are still no benchmark results.
+
+### 2026-10-07 22:46 UTC heartbeat — single-seed preparation resumed
+
+The new four-rank GPU preflight passed. Supervisor PID 3094037 and preparation
+workers 3096481–3096484 are active in `repo-single-seed`, clean at `06c5d02`.
+Both the process arguments and campaign registration confirm only execution seed
+3072; GPUs 0–3 remain the sole allocation. The old supervisor was not restarted.
+The supervisor log is at the record root, `20261007-joint-flow/launcher-single-seed.log`.
+
+The retained cache advanced from 2,128 to 2,148 episodes: 600 each for assembly,
+button-press-topdown and coffee-button, plus 348 dial-turn. Fresh online readback
+of W&B launch check `l2sux44s` confirms `[3072]` and the new revision. Training runs
+and checkpoints remain zero pending shared preparation. No recovery intervention
+was needed. Continue the one-seed training queue after preparation; final paired
+reset intervals must not claim variation across independent training runs.
