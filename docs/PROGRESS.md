@@ -333,3 +333,28 @@ are allocated.
 Fresh W&B online readback passed. Training runs/checkpoints remain zero while
 shared preparation continues; the finished W&B run is only the launch check.
 No intervention was required. Continue the registered preparation/training queue.
+
+### 2026-10-07 22:36 UTC — continuation verified from desktop
+
+The continuation chat reconnected directly to `target_server_2` and recovered
+this active non-BTM campaign instead of launching a duplicate. The first two SSH
+handshakes timed out; retry succeeded through the existing configured route.
+No credential, SSH configuration, campaign code, or protocol changes were needed.
+
+Supervisor PID 2851417 and all four preparation workers are alive. The execution
+checkout is clean at `61a5d73`; campaign GPU allocation remains 0–3. The new snapshot
+contains 2,069 completed training episodes: 600 each for assembly,
+button-press-topdown and coffee-button, plus 269 dial-turn. Persistent storage has
+101 GiB free and scratch has 2.2 TiB free.
+
+Online W&B readback passed at 22:35:54 UTC. The W&B run `reckez4q` is a finished
+launch check; actual training runs and checkpoints are still zero. The campaign
+will finish shared feature preparation and goal screening before training the
+registered methods. Training and the paired 3,200-reset/model test evaluation
+remain queued, with three training seeds and validation-only selection.
+
+The existing 15-minute monitor in the “Resume GPU baseline comparison” chat is
+active and remains the sole campaign monitor. It preserves subsequent progress,
+recovers failures within the authorized four-GPU limit, and reports meaningful
+changes. Next step: complete shared data preparation; allow the detached
+supervisor to advance automatically into world-model and planner training.
