@@ -197,3 +197,14 @@ have not changed. GPUs 0–3 remain the only campaign allocation.
 Fresh online W&B readback succeeded. No training runs/checkpoints or benchmark
 evaluations exist yet. No intervention was needed. Continue the shared cache
 and frozen goal manifest preparation before automatic training begins.
+
+### 2026-10-07 19:46 UTC heartbeat
+
+Preparation advanced from 332 to 470 completed episodes. The supervisor and all
+four workers are alive; recent assembly expert episodes succeed. Source remains
+clean at `61a5d73`, and only GPUs 0–3 are allocated. Fresh online W&B readback
+passed; training runs/checkpoints remain at zero pending the shared dataset. A
+follow-up file copy timed out during SSH handshake; the verified API JSON already
+returned by the successful server check was saved directly to the reporting
+checkout. No campaign intervention was needed. Continue preparation and the
+automatic training queue.
