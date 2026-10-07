@@ -57,3 +57,21 @@ preflight, preparation counts, all training metrics, validation reports, final
 test reports and comparison results into a separate reporting checkout. It
 copies no credentials or large model binaries. Unchanged reports are not
 rewritten, so monitoring can commit/push only meaningful new evidence.
+
+### Server verification — CPU gates passed
+
+- All 29 `tests_flow` tests passed on the dedicated server environment (11.80 s),
+  including reset/transition pairing, expert goal integrity, generated-plan
+  gradients, exact resume, evaluation resume, and comparison guards.
+- `pip check` reports no broken requirements. Removed inherited `ogbench` and
+  `dm-control` from the new clone because they conflict with the pinned MuJoCo;
+  neither is used by this campaign. The historical environment is untouched.
+- Official V-JEPA 2.1 checkpoint (~5.15 GB) passed the configured SHA-256 check.
+- Pinned V-JEPA source was transferred as a Git bundle and checked out on Linux.
+- All eight GPUs were idle at the prelaunch recheck. The launcher explicitly
+  restricts visible devices to 0,1,2,3 and the campaign limit to four.
+
+The detached supervisor is launching from frozen source `448a30f`. It first
+verifies online W&B and idle GPUs, then runs real CUDA/NCCL/encoder/renderer
+preflight. Full training has not yet begun. Subsequent reports are published
+from the separate desktop checkout, leaving this execution revision untouched.
