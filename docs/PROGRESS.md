@@ -246,3 +246,12 @@ recent expert collection episodes succeed. Source is clean at `61a5d73`, and
 only GPUs 0–3 are allocated. Fresh W&B readback passed; training runs and
 checkpoints remain at zero. No intervention or protocol change was needed.
 Continue shared preparation before the automatic training stages.
+
+### 2026-10-07 20:46 UTC heartbeat
+
+Preparation advanced from 894 to 1037 completed episodes (600 assembly,
+437 button-press-topdown). All four workers and the supervisor remain active;
+recent collection-expert episodes succeed. Execution source is clean at
+`61a5d73`, allocation remains on GPUs 0–3, and fresh online W&B readback passed.
+No training run/checkpoint exists yet. No intervention was needed; continue
+shared dataset preparation and the automatic training queue.
