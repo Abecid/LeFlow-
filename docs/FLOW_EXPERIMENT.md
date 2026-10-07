@@ -143,8 +143,8 @@ The campaign was recovered on 2026-10-07 in a desktop chat with working SSH to
 `target_server_2`. All 29 CPU tests pass on the server, online W&B upload is
 verified, and the official encoder checksum is verified. The initial GPU
 preflight exposed missing NVIDIA EGL graphics libraries; Mesa software EGL now
-renders repeatable observations. The corrected four-GPU preflight and subsequent
-stages run under a detached supervisor. See [PROGRESS.md](PROGRESS.md) and the
+renders repeatable observations. The corrected four-GPU preflight passed and real data preparation is running
+under a detached supervisor. See [PROGRESS.md](PROGRESS.md) and the
 versioned [runtime reports](reports/20261007-joint-flow/) for the latest verified
 stage, failures, run links, and metrics. Historical runtime access blockers above
 must not be assumed to describe the current desktop session. There are no

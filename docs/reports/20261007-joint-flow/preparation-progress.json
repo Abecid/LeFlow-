@@ -1,4 +1,6 @@
 {
-  "completed_episode_files": {},
-  "total": 0
+  "completed_episode_files": {
+    "train/assembly": 24
+  },
+  "total": 24
 }

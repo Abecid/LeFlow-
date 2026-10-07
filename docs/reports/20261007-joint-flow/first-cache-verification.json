@@ -1,0 +1,40 @@
+{
+  "completed_episodes": 24,
+  "inspected_episode": "episodes/train/assembly/00000.h5",
+  "shapes": {
+    "actions": [
+      100,
+      8
+    ],
+    "goal": [
+      32,
+      1024
+    ],
+    "goal_rgb": [
+      256,
+      256,
+      3
+    ],
+    "image_goals": [
+      101,
+      32,
+      1024
+    ],
+    "initial_rgb": [
+      256,
+      256,
+      3
+    ],
+    "success": [
+      200
+    ],
+    "z": [
+      101,
+      32,
+      1024
+    ]
+  },
+  "finite_features": true,
+  "collection_mode": "random",
+  "protocol": "d2e0a5a0f7f14d94953122c9d09a7bc02c11415301cf81077ca4f66ab225f429"
+}

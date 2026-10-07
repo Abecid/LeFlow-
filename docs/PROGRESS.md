@@ -1,5 +1,19 @@
 # Active campaign progress
 
+## Current verified state
+
+- **Running:** real MetaWorld data collection and V-JEPA feature caching on
+  target_server_2, GPUs 0–3. The shared dataset must finish before full training.
+- **Passed:** 29 server tests; actual four-rank CUDA/NCCL preflight, official encoder,
+  repeatable simulator rendering, and two optimizer updates per architecture.
+- **Active execution revision:** `61a5d73257f47c728fab6333bb0aab30b98acdc4`.
+  The desktop reporting branch advances independently; do not pull it into the
+  running execution checkout.
+- **Continuity:** detached server supervisor, persistent logs/checkpoints/evaluation
+  records, GitHub progress/evidence backups, and a 15-minute chat heartbeat.
+- **No benchmark results yet:** no full model has completed training, and the
+  frozen test comparison has not run. No improvement is claimed.
+
 ## 2026-10-07 — recovered interrupted work
 
 User requested resumption after “Resume stream unavailable” and persistent GitHub
@@ -118,3 +132,27 @@ https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/reckez4q.
 The saved `launch.sh`, `runtime-verified.json`, and `renderer-probe.json` record
 actual deployment settings and packages. This is still wiring validation, not a
 trained-model success result.
+
+### Four-GPU gate passed; real preparation confirmed
+
+`gpu_preflight.json` reports success on all four A800 ranks with PyTorch
+2.8.0+cu126 / CUDA 12.6. Each rank encoded real observations to `[6,32,1024]`,
+ran two optimizer updates for the world model and each distinct planner
+architecture (joint flow with consistency, deterministic with consistency,
+LeFlow adaptation, and HWM adaptation), and checked finite planner gradients.
+This verification used wiring fixtures and is not a benchmark score.
+
+The supervisor automatically advanced to `prepare_data`. At the direct cache
+verification, 24 real episodes were complete. The inspected episode has
+`z` and single-image hindsight goals `[101,32,1024]`, actions `[100,8]`, and finite
+features. The early collection rows are the protocol's random-action portion;
+their zero task success is expected and is not a learned-method result.
+
+Online W&B readback independently confirms the corrected launch-check run is
+saved under the correct execution revision. It is a finished setup check;
+actual training runs will be created once data preparation completes.
+
+Next autonomous step: finish all shared data/goal-screening rows and freeze the
+manifest, then train world models and all registered planners for three seeds;
+run validation during training and the 3,200-reset/model paired test campaign
+after all models finish. All method results, including losses, will be reported.
