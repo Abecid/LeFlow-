@@ -171,3 +171,17 @@ prerequisite. Fresh W&B API readback confirms the saved launch-check run remains
 accessible under the correct code revision. No intervention or protocol change
 was needed. Next: continue preparation, then let the supervisor start the
 registered training stages. This is routine ongoing progress, not a new result.
+
+### 2026-10-07 19:16 UTC heartbeat — expert collection underway
+
+The supervisor, launcher and four workers remain active, with a clean execution
+checkout at `61a5d73`. The captured snapshot has 193 completed assembly episodes
+(up from 56). Collection has progressed from the initial random-action episodes
+to the prescribed expert episodes; recent expert episodes report success. These
+are collection-expert outcomes, not learned-planner evaluation scores.
+
+Only GPUs 0–3 are allocated to the campaign; feature encoding was observed active
+on the GPUs. Fresh online W&B readback succeeded. No training run or checkpoint
+exists yet, and no test evaluation has started. No recovery or code/configuration
+change was needed. Next: continue shared dataset preparation and automatic
+transition to training.
