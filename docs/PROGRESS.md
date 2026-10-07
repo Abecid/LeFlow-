@@ -98,3 +98,7 @@ register its new code and renderer settings before collecting any data.
 A 15-minute chat heartbeat is active (`continue-flow-jepa-campaign-and-preserve-results`)
 to continue this campaign, preserve new evidence on origin, and notify only
 meaningful progress, failure, completion, or a required action.
+
+Reporting note: compact JSON under `docs/reports/**/runs/` is explicitly exempt
+from the global `runs/` ignore rule, so training metrics and validation evidence
+are included in routine commits. Model binaries remain ignored.

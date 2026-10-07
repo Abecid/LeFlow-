@@ -27,3 +27,7 @@ datasets/
 latents/
 prepared/
 results/
+# Compact research evidence is intentionally versioned, even beneath runs/.
+!docs/reports/**/runs/
+!docs/reports/**/runs/**/
+!docs/reports/**/runs/**/*.json
