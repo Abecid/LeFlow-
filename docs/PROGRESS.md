@@ -5,11 +5,12 @@
 - **Throughput migration complete; training is running.** All 15,500 candidate
   cache files are prepared. The frozen manifest selects 7,800 training, 650
   validation and 3,200 test episodes. No full comparison result exists yet.
-- **Live verified training:** shared world model `world_3072` resumed after its
-  first periodic validation at step 5,000; the latest snapshot ledger is at step
-  6,769 with 893.436 optimization seconds (0.99271 GPU-hours). Both `best.pt` and
-  `last.pt` exist. W&B readback at 18:49 UTC verified step 5,450 and the first
-  validation metrics online at
+- **Live verified training:** shared world model `world_3072` reached step 10,000
+  and is running its second periodic validation. The ledger charges 1,321.442
+  optimization seconds (1.46827 GPU-hours), plus 0.50194 GPU-hours for the first
+  completed validation round; the active round is recorded when it finishes.
+  Both `best.pt` and `last.pt` exist. W&B readback at 19:02 UTC verified step
+  9,950 and the first validation metrics online at
   https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/fbcl549w.
 - **First validation result:** CEM succeeded on 10/104 cases (9.62% macro):
   drawer-close 3/8 and handle-press 7/8, with zero successes on the other 11 tasks.
@@ -1799,8 +1800,8 @@ test. No extra seeds, methods, ablations or budget increases are scheduled.
 Read the campaign instructions and both scope-change records, then checked the
 actual supervisor, training and evaluation processes over `target_server_2_cf`.
 Supervisor 142087 is healthy; frozen `repo-throughput` remains clean at
-`56419ed14cf127d4b7a8ab09a9d68e6681d2edc0`. The evaluation workers used GPUs 0–3
-and exited normally, after which the existing four training ranks resumed.
+`56419ed14cf127d4b7a8ab09a9d68e6681d2edc0`. Evaluation used GPUs 0–3 and completed
+normally, after which the existing four training ranks resumed optimization.
 GPUs 4–7 were empty. No restart, source edit or scope change was required.
 
 At world step 5,000 the first registered CEM validation completed all 104 unique
@@ -1838,3 +1839,29 @@ remaining world validation rounds, then the three registered learned heads and
 their matched validations. Any follow-up experiment proposal should use the
 completed comparison and failure analysis; no ablation or budget extension has
 been queued.
+
+### 2026-10-08 19:01 UTC — world step 10,000; second validation active
+
+Supervisor 142087 and its four training ranks (148180–148183 under launcher
+148077) remain healthy in clean frozen `repo-throughput` at `56419ed`. Verified
+each rank's working directory, rank identity and `CUDA_VISIBLE_DEVICES=0,1,2,3`.
+Only GPUs 0–3 are occupied; GPUs 4–7 are empty. Periodic evaluation runs inside
+the existing training ranks; the preceding entry's wording that evaluation
+workers exited has been corrected. NVIDIA's reported process IDs are not visible
+as process IDs inside this container, so they are not used to infer worker exits.
+
+The latest training step is 10,000 with finite loss 0.021481 and gradient norm
+0.012737. Its second 104-case CEM validation is advancing through the task logs;
+there is no second completed result yet. Charged optimization is 1,321.442 seconds
+(1.468268 GPU-hours), with no last-update overrun. The first validation cost
+remains separately recorded at 451.743 seconds (0.501937 GPU-hours); the active
+round's cost is added at completion. Checkpoints are preserved. No process or
+source intervention was needed.
+
+Fresh W&B API readback at 19:02:22 UTC confirmed `fbcl549w` running, seed 3072,
+frozen code and step 9,950 (the online summary lags the local step). Downloaded
+the updated snapshot through `target_server_2_cf`, preserving loss samples,
+checkpoint metadata, compute ledger and the online evidence. No learned head or
+final evaluation has started. Next: preserve the completed second validation and
+continue the unchanged registered queue; final testing stays sealed until all
+registered learned models finish.
