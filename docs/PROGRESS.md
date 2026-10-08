@@ -15,8 +15,8 @@
 - **Running:** supervisor PID 3126314 on target_server_2, limited to GPUs 0–3.
   The revised online launch check and actual four-rank GPU preflight passed;
   all 7,800 training episodes and 1,300 validation candidates are cached.
-  All four workers are now preparing fixed test-goal candidates (109/6,400
-  at the 11:16 UTC heartbeat), before full training and planner evaluation.
+  All four workers are now preparing fixed test-goal candidates (992/6,400
+  at the 12:31 UTC heartbeat), before full training and planner evaluation.
   All 2,381 episodes present at the scope migration were retained.
 - **Passed:** the bulk server suite (36 tests) plus all 8 final targeted
   budget/training tests after the last changes; actual CUDA/NCCL, official encoder,
@@ -1316,3 +1316,21 @@ failed requests. `preparation-progress.json` therefore remains the last complete
 snapshot (9,759 total files, including 659 test-goal candidates), not a current
 count. No restart or code change was made. Retry the snapshot at the next
 heartbeat and continue monitoring fixed test-goal preparation before training.
+
+
+### 2026-10-08 12:31 UTC heartbeat — snapshot retrieval restored
+
+Primary SSH health inspection, W&B online readback and the full compact snapshot
+all succeeded. The snapshot is current again after the previous heartbeat's
+connection failures: 10,092 completed files versus the last verified 9,759.
+All 7,800 training episodes and 1,300 validation candidates remain cached.
+Fixed test-goal candidates now total 992 of 6,400: assembly 400,
+button-press-topdown 400 and coffee-button 192. Recent expert collection reports
+success; these are fixed goal-data outcomes, not planner test scores.
+
+Supervisor 3126314 and all four workers remain active, frozen execution source
+is clean at `16747bb`, and only GPUs 0–3 are allocated. Online W&B readback
+succeeded at 12:32:01 UTC. Four methods, seed 3072 and compute limits remain
+unchanged; full training runs/checkpoints remain zero. No restart or code change
+was required. Continue fixed test-goal preparation before bounded training and
+validation, keeping planner test evaluation sealed until all models finish.
