@@ -1,0 +1,82 @@
+{
+  "checked_at": "2026-10-08T05:49:17.985322+00:00",
+  "completed_bytes": 82424405349,
+  "completed_recent": {
+    "10800_seconds": 1691,
+    "3600_seconds": 552,
+    "900_seconds": 141
+  },
+  "cpu_affinity_count": 112,
+  "dataset": "Locally generated MetaWorld v3 rollouts; frozen V-JEPA 2.1 ViT-L feature cache",
+  "episodes": {
+    "completed_dense": 6088,
+    "test_candidates": 6400,
+    "test_selected": 3200,
+    "total_candidate_cache": 15500,
+    "training": 7800,
+    "validation_candidates": 1300,
+    "validation_selected": 650
+  },
+  "estimates": {
+    "campaign_scratch_with_assets_GiB_range": [
+      130,
+      135
+    ],
+    "dense_cache_GiB": 114.74207548408387,
+    "eta_basis": "552 dense episodes/hour; 3012 dense episodes remaining and 6400 goal-only candidates; sampled rendering 20.75-21.13 seconds/episode on four workers. Excludes training and evaluation, task variation and interruptions can change ETA.",
+    "full_cache_GiB_range": [
+      116,
+      120
+    ],
+    "remaining_all_preparation_hours_range": [
+      15,
+      17
+    ],
+    "remaining_dense_cache_hours": 5.46,
+    "remaining_training_cache_hours": 3.1,
+    "test_candidates_GiB": 1.5504539012908936
+  },
+  "execution_revision": "16747bb451915b2488c67f5d550a97c1b0411290",
+  "free_bytes": {
+    "persistent": 108006809600,
+    "scratch": 2317621506048
+  },
+  "gpu_30_sample_mean_utilization_pct": [
+    29.1,
+    13.7,
+    15.866666666666667,
+    14.866666666666667
+  ],
+  "gpu_30_sample_zero_utilization_counts": [
+    20,
+    25,
+    25,
+    25
+  ],
+  "gpu_memory_capacity_MiB": 81920,
+  "gpu_memory_used_MiB": [
+    2363,
+    2363,
+    2363,
+    2379
+  ],
+  "heldout_tasks": 3,
+  "implementation_findings": [
+    "Four processes, one per GPU, each serially simulates/renders, encodes and writes an episode.",
+    "Frozen encoder batch size is two; bfloat16 inference, existing float16 stored features, lossless HDF5 compression.",
+    "Mesa llvmpipe software renderer, two threads per worker.",
+    "No producer-consumer overlap or asynchronous file writer.",
+    "Test candidate collection renders all 201 frames despite retaining initial/goal images only.",
+    "Largest fitting batch is not necessarily fastest; output-equivalence checks are needed before claiming larger batches are lossless."
+  ],
+  "persistent_campaign_bytes_at_055135": 84987904,
+  "render_probe_notes": "CPU-only seeded test-goal collection, 201 RGB frames per episode, two successful episodes; first three-task aggregate probe timed out at 55 seconds and was not used for timing estimates.",
+  "render_probe_seconds": {
+    "assembly": 20.748694283887744,
+    "reach": 21.13199927471578
+  },
+  "scope": "Read-only operational audit and CPU rendering probes; live execution source, precision, data protocol, methods and budgets unchanged.",
+  "scratch_campaign_bytes_at_055135": 96665776128,
+  "stage": "prepare_data",
+  "training_tasks": 13
+}

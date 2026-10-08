@@ -887,3 +887,43 @@ Health checks, fresh W&B online readback and compact snapshot retrieval succeede
 via `target_server_2`. Four methods, seed 3072 and compute limits remain unchanged.
 Full training runs/checkpoints remain zero pending shared preparation. No
 intervention was required; continue the registered bounded queue.
+
+### 2026-10-08 05:49–05:55 UTC — storage and throughput audit
+
+User requested the dataset definition, cache size, remaining storage, ETA and
+whether processing maximizes throughput without sacrificing outputs. Live SSH
+inspection found 6,088 dense training episodes occupying 76.76 GiB, a recent rate
+of 552/hour (1,691 over three hours), 2.108 TiB free on scratch and 100.59 GiB free
+on persistent storage. The whole campaign scratch tree occupied about 90.03 GiB
+including its environment/encoder assets. Source and running protocol were unchanged.
+
+This is locally generated MetaWorld v3 data: 7,800 train episodes across 13 tasks,
+1,300 validation candidates selecting 650, and 6,400 test candidates selecting
+3,200 across 16 tasks. All candidates are cached, so 15,500 files are prepared;
+9,100 carry dense features. A train/validation episode averages 13.54 MB with two
+101x32x1024 float16 feature arrays, actions, and initial/goal RGB. Test candidates
+store only initial/goal RGB, goal features, success flags and metadata. Measured
+component sizes project 116–120 GiB for all cache files and about 130–135 GiB for
+campaign scratch including existing assets. Checkpoints/logs use persistent storage.
+
+The current pipeline is NOT maximally optimized. Four workers use encoder batches
+of two; each worker runs software-rendered collection, encoding, and writing
+serially. No producer/consumer overlap exists. Thirty utilization samples averaged
+14–29% per GPU, with 20–25 idle samples out of 30 and about 2.3 GiB used out of
+80 GiB. CPU-only full-episode probes took 21.13 seconds for reach and 20.75 seconds
+for assembly (201 frames each). The initial three-task probe hit its 55-second
+limit without a timing result; only the successful separate probes inform the ETA.
+Rendering is the primary measured bottleneck; increasing batch size alone will
+not remove it. Goal-only test screening also renders every frame it later discards.
+
+At the unchanged implementation/rate, roughly 3.1 hours remain for the training
+cache, 5.5 hours for all dense train/validation candidates, and approximately
+15–17 hours for all required preparation including test-goal candidates, excluding
+model training/evaluation. This is a rough extrapolation; task-dependent times,
+goal-screening success and interruptions can change it. Lossless improvement would
+require pipelining more CPU render producers with GPU encoding/writes, batching
+benchmarks and output-equivalence checks, and checking whether discarded test
+rendering can be eliminated without changing retained images. Larger batches can
+change numerical results; do not declare bitwise equivalence without testing.
+No live code, model precision, dataset size, method scope or budget was changed by
+this audit. Evidence: `docs/reports/20261007-joint-flow/storage-throughput-audit.json`.
