@@ -1,10 +1,10 @@
 {
   "budget_check": "optimizer boundaries; any last-update overrun is reported",
   "gpu_count": 4,
-  "step": 1637,
+  "step": 6769,
   "training_budget_seconds": 7200,
-  "training_gpu_hours": 0.2497405424569216,
-  "training_seconds": 224.76648821122944,
-  "validation_gpu_hours": 0.0,
-  "validation_seconds": 0.0
+  "training_gpu_hours": 0.992706442369769,
+  "training_seconds": 893.4357981327921,
+  "validation_gpu_hours": 0.5019372044172552,
+  "validation_seconds": 451.74348397552967
 }

@@ -5,10 +5,17 @@
 - **Throughput migration complete; training is running.** All 15,500 candidate
   cache files are prepared. The frozen manifest selects 7,800 training, 650
   validation and 3,200 test episodes. No full comparison result exists yet.
-- **Live verified training:** shared world model `world_3072`, four GPUs, online
-  W&B step 1,400 with finite dynamics loss 0.03024 and a saved checkpoint. First
-  periodic evaluation remains pending; the initial real training metrics are at
+- **Live verified training:** shared world model `world_3072` resumed after its
+  first periodic validation at step 5,000; the latest snapshot ledger is at step
+  6,769 with 893.436 optimization seconds (0.99271 GPU-hours). Both `best.pt` and
+  `last.pt` exist. W&B readback at 18:49 UTC verified step 5,450 and the first
+  validation metrics online at
   https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/fbcl549w.
+- **First validation result:** CEM succeeded on 10/104 cases (9.62% macro):
+  drawer-close 3/8 and handle-press 7/8, with zero successes on the other 11 tasks.
+  All 94 failures exhausted the 10-second controller allowance and remain in the
+  results. This is an early validation checkpoint, not the final comparison.
+  Validation used 0.50194 GPU-hours, accounted separately from optimization.
 - **Lossless throughput changes:** 48 CPU producers, encoder/goal batches of 64,
   replay-based two-image test collection, overlapped writes and parallel ordered
   cache summarization. Final 1,270 files took about 42.2 seconds of worker elapsed
@@ -1786,3 +1793,48 @@ provenance. Its temporary read-only migration restriction is removed. Next:
 continue world training and periodic CEM/world validation, then the three selected
 learned heads and their periodic evaluations, followed by the fixed paired final
 test. No extra seeds, methods, ablations or budget increases are scheduled.
+
+### 2026-10-08 18:46–18:52 UTC — first periodic validation preserved; training resumed
+
+Read the campaign instructions and both scope-change records, then checked the
+actual supervisor, training and evaluation processes over `target_server_2_cf`.
+Supervisor 142087 is healthy; frozen `repo-throughput` remains clean at
+`56419ed14cf127d4b7a8ab09a9d68e6681d2edc0`. The evaluation workers used GPUs 0–3
+and exited normally, after which the existing four training ranks resumed.
+GPUs 4–7 were empty. No restart, source edit or scope change was required.
+
+At world step 5,000 the first registered CEM validation completed all 104 unique
+cases (eight per training task), using seed 3072 and the fixed controller cap.
+CEM achieved 10/104 successes (9.615% macro): drawer-close 3/8 and handle-press
+7/8; the other 11 tasks had no successes. Success within 50 primitive actions was
+7/104; within 100 and 200 it was 10/104. All 94 unsuccessful episodes exhausted
+the 10-second controller allowance and were retained as failures. Mean controller
+time was 9.598 seconds/episode, mean step latency 280.62 ms and p95 latency
+287.77 ms. The mean safe-boundary budget overrun was recorded as 0.01347 seconds.
+This early failure pattern is dominated by controller-budget exhaustion; it does
+not yet establish why planning fails or how the learned heads will compare.
+
+World validation dynamics loss was 0.021569 versus persistence loss 0.062804;
+action identification among 16 choices was 81.445% versus 6.25% chance. These
+diagnostics do not establish final task success. W&B API readback at
+18:49:04 UTC confirmed the running real training run `fbcl549w`, step 5,450,
+finite training loss 0.025889, the first validation round and its complete metrics.
+The later downloaded ledger reached step 6,769, charging 893.436 optimization
+seconds (0.992706 GPU-hours) and separately 451.743 validation seconds
+(0.501937 GPU-hours). The latest sampled loss at step 6,750 was 0.022437.
+Both durable checkpoints are present, 44,360,165 bytes each.
+
+Ran `scripts/snapshot_flow_campaign.py --host target_server_2_cf --root
+/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign --output
+docs/reports/20261007-joint-flow`. Compact evidence includes the complete paired
+episode records in `runs/world_3072/validation/cem_step_0005000.json`, loss samples,
+checkpoint metadata, charged compute and fresh online readback. Verified 104
+unique validation IDs, 13 tasks with eight cases each, seed 3072, a 10-second cap,
+and retention of every timeout as a failure. The throughput provenance update is
+JSON formatting only; all preparation preservation evidence remains intact.
+
+The learned heads have not started and final test remains sealed. Continue the
+remaining world validation rounds, then the three registered learned heads and
+their matched validations. Any follow-up experiment proposal should use the
+completed comparison and failure analysis; no ablation or budget extension has
+been queued.
