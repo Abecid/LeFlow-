@@ -584,3 +584,16 @@ Fresh W&B online readback passed; four methods, seed 3072, optimization allowanc
 and controller allowance remain unchanged. Training runs/checkpoints are still
 zero pending shared preparation. No intervention was required; continue the
 registered bounded preparation/training/evaluation queue.
+
+### 2026-10-08 00:16 UTC heartbeat
+
+Preparation advanced from 2,822 to 2,958 completed episodes: 600 each for assembly,
+button-press-topdown, coffee-button and dial-turn, plus 558 door-close. Recent
+expert collection reports success. Supervisor 3126314 and all four workers remain
+active, execution source is clean at frozen revision `16747bb`, and only GPUs
+0–3 are allocated.
+
+Fresh online W&B readback confirms the registered four methods, seed 3072 and
+unchanged optimization/controller limits. Training runs/checkpoints remain zero
+pending shared preparation. No intervention was required; continue the bounded
+preparation, training and evaluation queue without expanding scope.
