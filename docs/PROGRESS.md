@@ -15,8 +15,8 @@
 - **Running:** supervisor PID 3126314 on target_server_2, limited to GPUs 0–3.
   The revised online launch check and actual four-rank GPU preflight passed;
   all 7,800 training episodes and 1,300 validation candidates are cached.
-  All four workers are now preparing fixed test-goal candidates (4,164/6,400
-  at the 17:01 UTC heartbeat), before full training and planner evaluation.
+  All four workers are now preparing fixed test-goal candidates (4,694/6,400
+  at the 17:46 UTC heartbeat), before full training and planner evaluation.
   All 2,381 episodes present at the scope migration were retained.
 - **Passed:** the bulk server suite (36 tests) plus all 8 final targeted
   budget/training tests after the last changes; actual CUDA/NCCL, official encoder,
@@ -1693,6 +1693,24 @@ pick-place have 400 each; plate-slide has 120. The registered pool remains
 outcomes, not planner test scores.
 
 Health inspection, fresh W&B online readback at 17:31:57 UTC and snapshot
+retrieval succeeded through the configured fallback alias. Supervisor 3126314
+and all four workers remain active, frozen execution source is clean at
+`16747bb`, and only GPUs 0–3 are allocated. Four methods, seed 3072 and compute
+limits remain unchanged; full training runs/checkpoints remain zero. No campaign
+intervention was required. Continue fixed test-goal preparation before the
+registered bounded training/validation queue.
+
+
+### 2026-10-08 17:46 UTC heartbeat
+
+Preparation advanced from 13,620 to 13,794 completed files. All 7,800 training
+episodes and 1,300 validation candidates remain cached. Fixed test-goal
+candidates increased from 4,520 to 4,694: the first eleven tasks through
+pick-place have 400 each; plate-slide has 294. The registered pool remains
+6,400 candidates. Recent expert collection reports success; these are goal-data
+outcomes, not planner test scores.
+
+Health inspection, fresh W&B online readback at 17:46:55 UTC and snapshot
 retrieval succeeded through the configured fallback alias. Supervisor 3126314
 and all four workers remain active, frozen execution source is clean at
 `16747bb`, and only GPUs 0–3 are allocated. Four methods, seed 3072 and compute

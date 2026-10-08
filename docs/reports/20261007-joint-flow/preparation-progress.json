@@ -11,7 +11,7 @@
     "test/faucet-open": 400,
     "test/handle-press": 400,
     "test/pick-place": 400,
-    "test/plate-slide": 120,
+    "test/plate-slide": 294,
     "train/assembly": 600,
     "train/button-press-topdown": 600,
     "train/coffee-button": 600,
@@ -39,5 +39,5 @@
     "validation/plate-slide": 100,
     "validation/reach": 100
   },
-  "total": 13620
+  "total": 13794
 }
