@@ -18,7 +18,9 @@
     "validation/coffee-button": 100,
     "validation/dial-turn": 100,
     "validation/door-close": 100,
-    "validation/door-open": 39
+    "validation/door-open": 100,
+    "validation/drawer-close": 92,
+    "validation/drawer-open": 7
   },
-  "total": 8339
+  "total": 8499
 }
