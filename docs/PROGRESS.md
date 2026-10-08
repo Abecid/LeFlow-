@@ -785,3 +785,16 @@ The first health-check handshake via `target_server_2_cf` timed out; retry throu
 confirms four methods, seed 3072 and unchanged compute limits. Full training
 runs/checkpoints remain zero pending shared preparation. No campaign process or
 configuration was changed. Continue the registered bounded queue.
+
+### 2026-10-08 04:01 UTC heartbeat
+
+Preparation advanced from 4,959 to 5,094 completed episodes: the first eight tasks
+through drawer-open have 600 each; faucet-open has 294. Recent expert collection
+reports success. Supervisor 3126314 and all four workers remain active, execution
+source is clean at `16747bb`, and only GPUs 0–3 are allocated. Free space remains
+101 GiB on persistent storage and 2.2 TiB on scratch.
+
+Health checks, fresh W&B online readback and compact snapshot retrieval succeeded
+via `target_server_2`. Four methods, seed 3072 and compute limits remain unchanged.
+Full training runs/checkpoints remain zero pending shared preparation. No
+intervention was required; continue the registered bounded queue.
