@@ -1,5 +1,6 @@
 {
   "completed_episode_files": {
+    "test/assembly": 1,
     "train/assembly": 600,
     "train/button-press-topdown": 600,
     "train/coffee-button": 600,
@@ -23,8 +24,9 @@
     "validation/drawer-open": 100,
     "validation/faucet-open": 100,
     "validation/handle-press": 100,
-    "validation/pick-place": 96,
-    "validation/plate-slide": 10
+    "validation/pick-place": 100,
+    "validation/plate-slide": 100,
+    "validation/reach": 70
   },
-  "total": 8906
+  "total": 9071
 }

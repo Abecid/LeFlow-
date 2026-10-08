@@ -15,7 +15,8 @@
 - **Running:** supervisor PID 3126314 on target_server_2, limited to GPUs 0–3.
   The revised online launch check and actual four-rank GPU preflight passed;
   all 7,800 training episodes are cached. Validation candidate preparation is
-  underway (824/1,300 at the 10:16 UTC heartbeat); test-goal preparation follows.
+  underway (1,270/1,300 at the 11:01 UTC heartbeat); the first test-goal
+  candidate is cached as one worker advances to its next assigned split.
   All 2,381 episodes present at the scope migration were retained.
 - **Passed:** the bulk server suite (36 tests) plus all 8 final targeted
   budget/training tests after the last changes; actual CUDA/NCCL, official encoder,
@@ -1207,3 +1208,22 @@ readback and snapshot retrieval succeeded via `target_server_2`. Four methods,
 seed 3072 and compute limits remain unchanged. Full training runs/checkpoints
 remain zero. No intervention was required; continue the registered preparation
 and bounded training queue.
+
+
+### 2026-10-08 11:01 UTC heartbeat
+
+Preparation advanced from 8,906 to 9,071 completed files in the snapshot retrieved
+after connection retries. All 7,800 training episodes remain cached; validation
+candidates increased from 1,106 to 1,270: the first twelve tasks have 100 each,
+and reach has 70. The first test/assembly goal candidate is also cached as a
+worker advances to its next assigned split. This is fixed goal-data preparation,
+not planner evaluation or test-based model selection. No planner scores exist.
+
+Supervisor 3126314 and all four workers were active in the fresh health check,
+frozen source was clean at `16747bb`, and only GPUs 0–3 were allocated. Online
+W&B readback succeeded at 11:01:53 UTC. The initial snapshot request timed out
+after 120 seconds; the fallback alias then exited with SSH status 255. Retrying
+the primary alias retrieved the snapshot successfully without restarting or
+modifying the campaign. Four methods, seed 3072 and compute limits are unchanged;
+full training runs/checkpoints remain zero. Continue the remaining validation
+candidates and registered test-goal preparation before bounded training.
