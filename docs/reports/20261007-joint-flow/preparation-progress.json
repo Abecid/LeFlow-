@@ -12,7 +12,7 @@
     "train/handle-press": 600,
     "train/pick-place": 600,
     "train/plate-slide": 600,
-    "train/reach": 145
+    "train/reach": 289
   },
-  "total": 7345
+  "total": 7489
 }
