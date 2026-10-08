@@ -11,10 +11,10 @@
   accounted. W&B verified the run finished and both checkpoints are preserved:
   https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/fbcl549w.
 - **Live verified training:** `joint_flow_consistent_3072` resumed after its first
-  validation and reached step 5,355. Its ledger charges 1,457.400 optimization
-  seconds (1.61933 GPU-hours), plus 527.507 validation seconds (0.58612 GPU-hours).
+  validation and reached step 8,297. Its ledger charges 2,273.521 optimization
+  seconds (2.52613 GPU-hours), plus 527.507 validation seconds (0.58612 GPU-hours).
   The consistency weight is now 0.1, with finite training metrics. W&B readback
-  at 20:18 UTC confirmed step 5,100 and the first validation online at
+  at 20:31 UTC confirmed step 8,150 and the first validation online at
   https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/32710958.
 - **First joint-flow validation:** 23/104 successes (22.12%), with all 81 timeouts
   retained as failures. Using the same selected world and paired resets, CEM
@@ -2064,3 +2064,24 @@ charged compute, 104 unique paired cases and all timeout failures. Preserved
 loss samples, compute ledger and fresh online readback. Next: complete the
 remaining three joint-flow validations and the registered LeFlow/HWM training
 queue. Final testing remains sealed until all registered models finish.
+
+### 2026-10-08 20:31 UTC — joint-flow advancing toward second validation
+
+Supervisor 142087, launcher 228925 and all four joint-flow ranks remain healthy
+in clean frozen `repo-throughput` at `56419ed`. Only GPUs 0–3 are occupied;
+GPUs 4–7 are empty. Both scope-change records retain the four methods, seed 3072
+and original limits. No intervention was needed.
+
+The snapshot reached step 8,297, charging 2,273.521 optimization seconds
+(2.526135 GPU-hours), with the first validation cost unchanged at 527.507 seconds
+(0.586118 GPU-hours). No last-update overrun is recorded. At step 8,250, finite
+training loss was 1.345198, generated consistency 1.829613 and consistency weight
+0.1. Both saved checkpoints remain present; the only completed head validation
+is still the preserved 23/104 result at step 5,000.
+
+W&B API readback at 20:31:58 UTC verified `32710958` running at step 8,150 and
+`fbcl549w` finished. Downloaded updated metrics, compute usage, checkpoint metadata
+and online evidence through `target_server_2_cf`; checked finite saved metrics
+and nondecreasing charged optimization. Next: continue to the second registered
+validation and preserve its full paired outcomes. LeFlow/HWM and final testing
+remain pending; the test stays sealed and scope is unchanged.
