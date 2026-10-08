@@ -759,3 +759,16 @@ limits. The primary snapshot SSH connection exited 255; retry through
 `target_server_2_cf` succeeded. Full training runs/checkpoints remain zero pending
 shared preparation. No campaign process or configuration was changed. Continue
 the registered bounded preparation/training/evaluation queue.
+
+### 2026-10-08 03:31 UTC heartbeat
+
+Preparation advanced from 4,675 to 4,812 completed episodes: the first eight tasks
+through drawer-open have 600 each; faucet-open has 12. Recent faucet-open rows
+are in the registered random-action portion, where unsuccessful outcomes are
+expected. Supervisor 3126314 and all four workers remain active, execution source
+is clean at `16747bb`, and only GPUs 0–3 are allocated.
+
+Health checks, fresh W&B online readback and compact snapshot retrieval succeeded
+through the configured fallback. Four methods, seed 3072 and compute limits
+remain unchanged. Full training runs/checkpoints remain zero pending shared
+preparation. No intervention was required; continue the registered bounded queue.

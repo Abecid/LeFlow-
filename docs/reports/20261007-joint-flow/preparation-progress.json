@@ -7,7 +7,8 @@
     "train/door-close": 600,
     "train/door-open": 600,
     "train/drawer-close": 600,
-    "train/drawer-open": 475
+    "train/drawer-open": 600,
+    "train/faucet-open": 12
   },
-  "total": 4675
+  "total": 4812
 }
