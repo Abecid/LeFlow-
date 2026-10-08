@@ -681,3 +681,16 @@ Health checks and snapshot retrieval succeeded through the configured fallback.
 Fresh online W&B readback confirms the four methods, seed 3072 and unchanged
 compute limits. Training runs/checkpoints remain zero while shared preparation
 continues. No intervention was required; continue the registered bounded queue.
+
+### 2026-10-08 02:01 UTC heartbeat
+
+Preparation advanced from 3,792 to 3,940 completed episodes: the first six tasks
+through door-open have 600 each; drawer-close has 340. Recent expert collection
+reports success. Supervisor 3126314 and all four workers remain active, frozen
+source is clean at `16747bb`, and only GPUs 0–3 are allocated. Free space remains
+101 GiB on persistent storage and 2.2 TiB on scratch.
+
+Health checks, fresh online W&B readback and snapshot retrieval succeeded through
+`target_server_2_cf`. Four methods, seed 3072 and compute limits remain unchanged.
+Full training runs/checkpoints remain zero pending shared preparation. No
+intervention was required; continue the registered bounded queue.

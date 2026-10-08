@@ -6,7 +6,7 @@
     "train/dial-turn": 600,
     "train/door-close": 600,
     "train/door-open": 600,
-    "train/drawer-close": 192
+    "train/drawer-close": 340
   },
-  "total": 3792
+  "total": 3940
 }
