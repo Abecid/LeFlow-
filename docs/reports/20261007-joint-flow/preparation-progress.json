@@ -14,7 +14,8 @@
     "train/plate-slide": 600,
     "train/reach": 600,
     "validation/assembly": 100,
-    "validation/button-press-topdown": 14
+    "validation/button-press-topdown": 100,
+    "validation/coffee-button": 58
   },
-  "total": 7914
+  "total": 8058
 }

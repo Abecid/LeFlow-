@@ -1103,3 +1103,17 @@ online readback and snapshot retrieval succeeded via `target_server_2`. Four
 methods, seed 3072 and compute limits remain unchanged. Full training runs and
 checkpoints remain zero. No recovery was required; continue the registered
 preparation queue, then bounded model training and evaluation.
+
+### 2026-10-08 09:16 UTC heartbeat
+
+Preparation advanced from 7,914 to 8,058 completed files. All 7,800 training
+episodes remain cached; validation candidates increased from 114 to 258:
+assembly 100, button-press-topdown 100 and coffee-button 58. Recent expert
+collection reports success. These are data-preparation outcomes, not trained
+planner validation scores. Test-goal preparation follows validation candidates.
+
+Supervisor 3126314 and all four workers remain active, frozen source is clean
+at `16747bb`, and only GPUs 0–3 are allocated. Health checks, fresh W&B online
+readback and snapshot retrieval succeeded via `target_server_2`. Four methods,
+seed 3072 and compute limits remain unchanged. Full training runs/checkpoints
+remain zero. No intervention was required; continue the registered bounded queue.
