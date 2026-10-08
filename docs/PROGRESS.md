@@ -1663,3 +1663,21 @@ and all four workers remain active, frozen execution source is clean at
 limits remain unchanged; full training runs/checkpoints remain zero. No campaign
 intervention was required. Continue fixed test-goal preparation before the
 registered bounded training/validation queue.
+
+
+### 2026-10-08 17:16 UTC heartbeat
+
+Preparation advanced from 13,264 to 13,441 completed files. All 7,800 training
+episodes and 1,300 validation candidates remain cached. Fixed test-goal
+candidates increased from 4,164 to 4,341: the first ten tasks through
+handle-press have 400 each; pick-place has 333 and plate-slide has 8. The
+registered pool remains 6,400 candidates. Recent expert collection reports
+success; these are goal-data outcomes, not planner test scores.
+
+Health inspection, fresh W&B online readback at 17:16:57 UTC and snapshot
+retrieval succeeded through the configured fallback alias. Supervisor 3126314
+and all four workers remain active, frozen execution source is clean at
+`16747bb`, and only GPUs 0–3 are allocated. Four methods, seed 3072 and compute
+limits remain unchanged; full training runs/checkpoints remain zero. No campaign
+intervention was required. Continue fixed test-goal preparation before the
+registered bounded training/validation queue.
