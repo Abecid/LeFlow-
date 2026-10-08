@@ -15,20 +15,20 @@
   5,498.695 seconds (6.10966 GPU-hours); validation used 2,102.580 seconds
   (2.33620 GPU-hours), separately accounted. W&B verified the run finished:
   https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/32710958.
-- **LeFlow third validation active:** `leflow_adapted_3072` reached step
-  15,000, charging 4,038.653 optimization seconds (4.48739 GPU-hours), plus
-  947.065 seconds (1.05229 GPU-hours) for two completed validations. The active
-  round is charged at completion. It uses the same world hash, manifest,
-  protocol, code, seed and four GPUs as joint-flow. W&B readback at 23:17 UTC
-  confirmed step 14,950 and both completed validations online:
+- **LeFlow training resumed after its third validation:** `leflow_adapted_3072`
+  reached step 16,988, charging 4,569.058 optimization seconds (5.07673 GPU-hours)
+  and 1,408.647 validation seconds (1.56516 GPU-hours), separately accounted. It
+  uses the same world hash, manifest, protocol, code, seed and four GPUs as
+  joint-flow. W&B readback at 23:32 UTC confirmed step 16,750 and three completed
+  validations online:
   https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/9jhufn8j.
-- **LeFlow validation:** the first two rounds achieved 26/104 (25.00%) and
-  20/104 (19.23%) successes. All 84 second-round timeouts remain failures. Nine
-  first-round successes became timeouts and three previous failures succeeded;
-  the step-5,000 checkpoint remains selected. Its 26/104 result compares with
-  joint-flow's selected 23/104: 17 cases succeeded under both, nine only under
-  LeFlow and six only under joint-flow. LeFlow is still training; this is an
-  early validation comparison, not a completed ranking or a final test result.
+- **LeFlow validation:** the first three rounds achieved 26/104 (25.00%),
+  20/104 (19.23%) and 25/104 (24.04%) successes. All 79 third-round timeouts
+  remain failures. Against round two, nine previous failures succeeded and four
+  successes became timeouts. The step-5,000 checkpoint remains selected at
+  26/104; against joint-flow's selected 23/104, 17 cases succeeded under both,
+  nine only under LeFlow and six only under joint-flow. LeFlow's last validation
+  and HWM remain pending; this is not a final ranking or test result.
 - **Joint-flow validation:** the four rounds achieved 23/104 (22.12%), 17/104
   (16.35%), 16/104 (15.38%) and 19/104 (18.27%) successes. All 85 fourth-round
   timeouts remain failures. The registered selection rule retains the step-5,000
@@ -2488,3 +2488,53 @@ and the fixed compute allowance. Saved updated losses, compute usage, checkpoint
 metadata and online evidence. Next: preserve LeFlow's completed third validation
 and continue the registered queue. HWM remains pending. Final testing stays
 sealed; no test report exists and no follow-up experiment is queued.
+
+### 2026-10-08 23:31 UTC — third LeFlow validation: 25/104; first checkpoint retained
+
+LeFlow step 15,000 completed its third validation with 25/104 successes (24.04%),
+up from 20/104 in round two but below the selected first checkpoint's 26/104.
+All 79 controller timeouts remain failures. Handle-press achieved 8/8,
+coffee-button and door-close 5/8 each, drawer-close 4/8 and dial-turn 3/8; the
+other eight tasks had zero successes. Success within 50/100/200 primitive
+actions was 10/25/25 out of 104. Mean controller time was 9.017 seconds/episode,
+mean step latency 212.40 ms and p95 216.71 ms; mean safe-boundary overrun was
+0.01723 seconds. Mean return was 117.880 and observed subgoal cosine 0.317288.
+
+Paired against round two, 16 cases succeeded under both, nine previous failures
+succeeded, four successes became timeouts and 75 failed under both. Gains were
+coffee-button cases 00001/00002/00003, dial-turn 00001/00005, door-close
+00003/00004/00007 and handle-press 00005. Losses were door-close 00006 and
+drawer-close 00001/00005/00006. Relative to round one, 20 cases succeeded under
+both, five were new successes, six successes were lost and 73 failed under
+both. The recovery therefore includes different cases; it does not surpass the
+registered best score, and the first checkpoint remains selected unchanged.
+
+Against selected joint-flow, round three had 15 shared successes, ten LeFlow-only
+and eight joint-only successes, with 71 shared failures. Against selected-world
+CEM it had four shared successes, 21 LeFlow-only and three CEM-only successes,
+with 76 shared failures. All three CEM-only cases were drawer-close
+00003/00005/00006. These are paired validation diagnostics; the selected LeFlow
+checkpoint still has 26/104, and no final method ranking is available. No method,
+selection rule, data or compute allowance changed in response to these results.
+
+The third validation charged 461.582 seconds. Three completed validations total
+1,408.647 seconds (1.565163 GPU-hours), separately from optimization. Training
+resumed and the snapshot reached step 16,988 with 4,569.058 charged optimization
+seconds (5.076732 GPU-hours), with no last-update overrun. At step 16,950, finite
+training loss was 0.913270, inverse objective 0.003934 and observed consistency
+0.027793. Both checkpoints remain present at 73,951,425 bytes each; the best
+checkpoint metadata is unchanged. W&B API readback at 23:32:07 UTC verified
+`9jhufn8j` running at step 16,750 with all three validation results online.
+The world and joint-flow runs remain finished with their final charges preserved.
+
+Supervisor 142087, launcher 362482 and ranks 362602/362603/362604/362605 remain
+healthy in clean frozen `repo-throughput` at `56419ed`, using only GPUs 0–3;
+4–7 remain empty. Both scope-change records retain the original authorization.
+Downloaded the snapshot through `target_server_2_cf`; verified finite metrics,
+monotonic training steps/charged time, and all 104 unique paired IDs, episode
+hashes and reset seeds against prior LeFlow rounds, selected joint-flow and
+selected-world CEM. All 13 tasks retain eight cases, seed 3072 and the 10-second
+cap; every timeout remains a failure. Saved the third validation, losses,
+compute usage, checkpoint metadata and online evidence. Next: finish LeFlow's
+fourth validation, then HWM. Final testing stays sealed; no test report exists
+and no follow-up experiment is queued.
