@@ -597,3 +597,19 @@ Fresh online W&B readback confirms the registered four methods, seed 3072 and
 unchanged optimization/controller limits. Training runs/checkpoints remain zero
 pending shared preparation. No intervention was required; continue the bounded
 preparation, training and evaluation queue without expanding scope.
+
+### 2026-10-08 00:31 UTC heartbeat
+
+Preparation advanced from 2,958 to 3,109 completed episodes: assembly,
+button-press-topdown, coffee-button, dial-turn and door-close now have 600 each;
+door-open has 109. Recent door-open rows are in the registered random-action
+portion, where unsuccessful collection outcomes are expected. Supervisor 3126314
+and all four workers remain active, execution source is clean at `16747bb`, and
+only GPUs 0–3 are allocated.
+
+Fresh W&B online readback confirms the four methods, seed 3072 and unchanged
+compute limits. Full training runs/checkpoints remain zero pending shared
+preparation. The primary SSH health check succeeded, but the subsequent snapshot
+SSH connection exited 255; retry through configured `target_server_2_cf` succeeded.
+No campaign process was restarted or changed. Continue the registered bounded
+preparation/training/evaluation queue.
