@@ -15,11 +15,12 @@
   5,498.695 seconds (6.10966 GPU-hours); validation used 2,102.580 seconds
   (2.33620 GPU-hours), separately accounted. W&B verified the run finished:
   https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/32710958.
-- **LeFlow training resumed:** `leflow_adapted_3072` reached step 7,032,
-  charging 1,904.169 optimization seconds (2.11574 GPU-hours), plus 473.608
-  seconds (0.52623 GPU-hours) for its first validation. It uses the same world
-  hash, manifest, protocol, code, seed and four GPUs as joint-flow. W&B readback
-  at 22:32 UTC confirmed step 6,900 and the first validation online:
+- **LeFlow second validation active:** `leflow_adapted_3072` reached step
+  10,000, charging 2,702.708 optimization seconds (3.00301 GPU-hours), plus
+  473.608 seconds (0.52623 GPU-hours) for its first completed validation. The
+  active round is charged at completion. It uses the same world hash, manifest,
+  protocol, code, seed and four GPUs as joint-flow. W&B readback at 22:47 UTC
+  confirmed step 9,950 and the first validation online:
   https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/9jhufn8j.
 - **First LeFlow validation:** 26/104 successes (25.00%), retaining all 78
   timeouts as failures. Against joint-flow's selected 23/104 checkpoint, 17
@@ -2386,3 +2387,29 @@ timeout remains a failure. Saved the complete first LeFlow validation, loss
 samples, compute usage, checkpoint metadata and online evidence. Next: finish
 LeFlow's remaining three validations, then HWM. Final testing remains sealed;
 no test report exists and no follow-up experiment is queued.
+
+### 2026-10-08 22:46 UTC — LeFlow step 10,000; second validation active
+
+LeFlow reached step 10,000 and is running its second registered validation.
+The episode logs are advancing; no complete second-round result exists in this
+snapshot. Its ledger charges 2,702.708 optimization seconds (3.003009 GPU-hours),
+with no last-update overrun. The first validation remains separately charged at
+473.608 seconds (0.526232 GPU-hours); the active round is charged at completion.
+At step 10,000, finite loss is 0.909729, inverse objective 0.003329 and observed
+consistency 0.027048. Both checkpoints remain preserved at 73,951,425 bytes each,
+and the first validation's best checkpoint metadata is unchanged.
+
+Supervisor 142087, launcher 362482 and ranks 362602/362603/362604/362605 remain
+healthy in clean frozen `repo-throughput` at `56419ed`, assigned only GPUs 0–3;
+4–7 remain empty. Both scope-change records retain the original authorization.
+W&B API readback at 22:47:01 UTC verified `9jhufn8j` running at step 9,950 with
+the first validation online. The world and joint-flow runs remain finished,
+with their results and final compute charges preserved. No intervention was
+needed.
+
+Downloaded the snapshot through `target_server_2_cf`; verified finite metrics,
+increasing training steps, nondecreasing charged time and unchanged best
+checkpoint metadata. Saved updated losses, checkpoints, compute usage and online
+evidence. Next: preserve the completed second LeFlow validation and continue the
+registered queue. HWM remains pending; final testing stays sealed, no test
+report exists and no additional experiment is queued.
