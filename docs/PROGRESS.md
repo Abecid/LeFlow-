@@ -1350,3 +1350,20 @@ inspection, fresh W&B online readback and snapshot retrieval succeeded. Four
 methods, seed 3072 and compute limits remain unchanged; full training
 runs/checkpoints remain zero. No intervention was required. Continue fixed
 test-goal preparation before the registered bounded training/validation queue.
+
+### 2026-10-08 13:01 UTC heartbeat
+
+Preparation advanced from 10,269 to 10,458 completed files. All 7,800 training
+episodes and 1,300 validation candidates remain cached. Fixed test-goal
+candidates increased from 1,169 to 1,358: assembly, button-press-topdown and
+coffee-button have 400 each; dial-turn has 158. The registered pool remains
+6,400 candidates. Recent expert collection reports success; these are goal-data
+outcomes, not planner test scores.
+
+The primary SSH health request timed out during banner exchange. The fallback
+alias succeeded for health inspection, fresh W&B online readback at 13:02:44 UTC
+and snapshot retrieval. Supervisor 3126314 and all four workers remain active,
+frozen execution source is clean at `16747bb`, and only GPUs 0–3 are allocated.
+Four methods, seed 3072 and compute limits remain unchanged; full training
+runs/checkpoints remain zero. No campaign intervention was required. Continue
+fixed test-goal preparation before the bounded training/validation queue.
