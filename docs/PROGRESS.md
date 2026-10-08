@@ -14,7 +14,9 @@
   method after training. Validation metrics are logged online to W&B.
 - **Running:** supervisor PID 3126314 on target_server_2, limited to GPUs 0–3.
   The revised online launch check and actual four-rank GPU preflight passed;
-  shared data preparation has resumed. All 2,381 completed episodes were retained.
+  all 7,800 training episodes are cached. Validation candidate preparation is
+  underway (114/1,300 at the 09:01 UTC heartbeat); test-goal preparation follows.
+  All 2,381 episodes present at the scope migration were retained.
 - **Passed:** the bulk server suite (36 tests) plus all 8 final targeted
   budget/training tests after the last changes; actual CUDA/NCCL, official encoder,
   repeatable renderer and two optimizer updates for each selected architecture.
@@ -1086,3 +1088,18 @@ Health checks, fresh W&B online readback and compact snapshot retrieval succeede
 via `target_server_2`. Four methods, seed 3072 and compute limits remain unchanged.
 Full training runs/checkpoints remain zero pending shared preparation. No
 intervention was required; continue the registered bounded queue.
+
+### 2026-10-08 09:01 UTC heartbeat — training cache complete
+
+All 7,800 registered training episodes are now cached: 600 for each of the 13
+training tasks. Total preparation advanced from 7,774 to 7,914 files, including
+114 validation candidates (assembly 100, button-press-topdown 14). Validation
+candidate preparation and the 6,400 test-goal candidates remain before full model
+training. These collection outcomes are not learned-planner validation results.
+
+Supervisor 3126314 and all four workers remain active, frozen execution source
+is clean at `16747bb`, and only GPUs 0–3 are allocated. Health checks, fresh W&B
+online readback and snapshot retrieval succeeded via `target_server_2`. Four
+methods, seed 3072 and compute limits remain unchanged. Full training runs and
+checkpoints remain zero. No recovery was required; continue the registered
+preparation queue, then bounded model training and evaluation.
