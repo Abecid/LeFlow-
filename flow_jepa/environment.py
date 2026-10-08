@@ -69,3 +69,45 @@ def collect_episode(task, seed, c, mode="expert"):
         )
     finally:
         env.close()
+
+
+def collect_goal_episode(task, seed, c, mode="expert"):
+    """Same rollout/goal as collect_episode, without rendering discarded frames.
+
+    Replay the recorded actions from an independently recreated seeded reset to
+    the original last-success goal index. Physics and policy precision are
+    unchanged; no MuJoCo state approximation or lossy image conversion is used.
+    """
+    from metaworld.policies import ENV_POLICY_MAP
+
+    env = make_env(task, seed, c)
+    policy = ENV_POLICY_MAP[task + "-v3"]()
+    rng = np.random.default_rng(seed)
+    actions, rewards, successes = [], [], []
+    try:
+        obs, _ = env.reset()
+        initial = env.render().copy()
+        for _ in range(c["primitive_budget"]):
+            action = policy.get_action(obs) if mode == "expert" else rng.uniform(-1, 1, 4)
+            action = np.clip(action, -1, 1).astype(np.float32)
+            obs, reward, terminated, truncated, info = env.step(action)
+            actions.append(action)
+            rewards.append(float(reward))
+            successes.append(bool(info["success"]))
+            if terminated or truncated:
+                break
+    finally:
+        env.close()
+    good = np.flatnonzero(successes)
+    goal_index = int(good[-1] + 1) if len(good) else len(actions)
+    replay = make_env(task, seed, c)
+    try:
+        replay.reset()
+        for action in actions[:goal_index]:
+            replay.step(action)
+        goal = replay.render().copy()
+    finally:
+        replay.close()
+    return dict(initial_rgb=initial, goal_rgb=goal, actions=np.stack(actions),
+                rewards=np.asarray(rewards), successes=np.asarray(successes),
+                goal_index=goal_index, expert_success=bool(len(good)))

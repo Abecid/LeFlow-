@@ -1,0 +1,984 @@
+{
+  "benchmarks": {
+    "batches": {
+      "checks": [
+        {
+          "batch": 1,
+          "clips_per_second": 20.476465551488406,
+          "different_values": 0,
+          "exact_fp16": true,
+          "max_abs_diff": 0.0,
+          "peak_memory_GiB": 1.240616798400879,
+          "seconds": 0.781384851783514
+        },
+        {
+          "batch": 2,
+          "clips_per_second": 40.95747222631919,
+          "different_values": 0,
+          "exact_fp16": true,
+          "max_abs_diff": 0.0,
+          "peak_memory_GiB": 1.338273048400879,
+          "seconds": 0.3906491082161665
+        },
+        {
+          "batch": 4,
+          "clips_per_second": 53.50225328728849,
+          "different_values": 0,
+          "exact_fp16": true,
+          "max_abs_diff": 0.0,
+          "peak_memory_GiB": 1.533585548400879,
+          "seconds": 0.2990528251975775
+        },
+        {
+          "batch": 8,
+          "clips_per_second": 59.98528772452144,
+          "different_values": 0,
+          "exact_fp16": true,
+          "max_abs_diff": 0.0,
+          "peak_memory_GiB": 1.924210548400879,
+          "seconds": 0.266732070595026
+        },
+        {
+          "batch": 16,
+          "clips_per_second": 63.647370904180846,
+          "different_values": 0,
+          "exact_fp16": true,
+          "max_abs_diff": 0.0,
+          "peak_memory_GiB": 2.705460548400879,
+          "seconds": 0.25138508901000023
+        }
+      ],
+      "mode": "batches"
+    },
+    "batches-extended": {
+      "checks": [
+        {
+          "batch": 1,
+          "clips_per_second": 21.702716899651975,
+          "different_values": 0,
+          "exact_fp16": true,
+          "max_abs_diff": 0.0,
+          "peak_memory_GiB": 1.240616798400879,
+          "seconds": 5.897879080846906
+        },
+        {
+          "batch": 2,
+          "clips_per_second": 38.350515075866625,
+          "different_values": 0,
+          "exact_fp16": true,
+          "max_abs_diff": 0.0,
+          "peak_memory_GiB": 1.338273048400879,
+          "seconds": 3.33763444237411
+        },
+        {
+          "batch": 3,
+          "clips_per_second": 49.80846765053215,
+          "different_values": 0,
+          "exact_fp16": true,
+          "max_abs_diff": 0.0,
+          "peak_memory_GiB": 1.435929298400879,
+          "seconds": 2.569844165816903
+        },
+        {
+          "batch": 4,
+          "clips_per_second": 53.38023019256131,
+          "different_values": 0,
+          "exact_fp16": true,
+          "max_abs_diff": 0.0,
+          "peak_memory_GiB": 1.533585548400879,
+          "seconds": 2.3978914953768253
+        },
+        {
+          "batch": 5,
+          "clips_per_second": 56.83320718324577,
+          "different_values": 0,
+          "exact_fp16": true,
+          "max_abs_diff": 0.0,
+          "peak_memory_GiB": 1.631241798400879,
+          "seconds": 2.2522044125944376
+        },
+        {
+          "batch": 8,
+          "clips_per_second": 58.92998936438512,
+          "different_values": 0,
+          "exact_fp16": true,
+          "max_abs_diff": 0.0,
+          "peak_memory_GiB": 1.924210548400879,
+          "seconds": 2.1720689479261637
+        },
+        {
+          "batch": 16,
+          "clips_per_second": 63.383975322489874,
+          "different_values": 0,
+          "exact_fp16": true,
+          "max_abs_diff": 0.0,
+          "peak_memory_GiB": 2.705460548400879,
+          "seconds": 2.0194378681480885
+        },
+        {
+          "batch": 32,
+          "clips_per_second": 64.61615941399558,
+          "different_values": 0,
+          "exact_fp16": true,
+          "max_abs_diff": 0.0,
+          "peak_memory_GiB": 4.267960548400879,
+          "seconds": 1.9809286277741194
+        },
+        {
+          "batch": 64,
+          "clips_per_second": 65.74019814265728,
+          "different_values": 0,
+          "exact_fp16": true,
+          "max_abs_diff": 0.0,
+          "peak_memory_GiB": 7.392960548400879,
+          "seconds": 1.9470583237707615
+        },
+        {
+          "batch": 128,
+          "clips_per_second": 65.56041209009148,
+          "different_values": 0,
+          "exact_fp16": true,
+          "max_abs_diff": 0.0,
+          "peak_memory_GiB": 13.642960548400879,
+          "seconds": 1.952397733926773
+        }
+      ],
+      "mode": "batches"
+    },
+    "equivalence": {
+      "checks": [
+        {
+          "checks": {
+            "actions": true,
+            "expert_success": true,
+            "goal_index": true,
+            "goal_rgb": true,
+            "initial_rgb": true,
+            "rewards": true,
+            "successes": true
+          },
+          "exact": true,
+          "goal_index": 200,
+          "mode": "expert",
+          "new_seconds": 0.956108845770359,
+          "old_seconds": 22.25149865075946,
+          "rgb_sha256": "89956365e171998d5d8dc2a92d9822cd1cbfa95571a86d7ffe4a693afc9138b5",
+          "seed": 2004450000,
+          "task": "assembly"
+        },
+        {
+          "checks": {
+            "actions": true,
+            "expert_success": true,
+            "goal_index": true,
+            "goal_rgb": true,
+            "initial_rgb": true,
+            "rewards": true,
+            "successes": true
+          },
+          "exact": true,
+          "goal_index": 200,
+          "mode": "expert",
+          "new_seconds": 1.406304121017456,
+          "old_seconds": 21.521351436153054,
+          "rgb_sha256": "062f93a64cce22f81a040e7216094dec010d1bb94dffa6ae8e5f25a5652f37d5",
+          "seed": 2087450000,
+          "task": "button-press-topdown"
+        },
+        {
+          "checks": {
+            "actions": true,
+            "expert_success": true,
+            "goal_index": true,
+            "goal_rgb": true,
+            "initial_rgb": true,
+            "rewards": true,
+            "successes": true
+          },
+          "exact": true,
+          "goal_index": 51,
+          "mode": "expert",
+          "new_seconds": 1.2131909281015396,
+          "old_seconds": 21.165158377960324,
+          "rgb_sha256": "b6704aa1f44873acabe5c352b99bffdc8fe718f5290f16226a7613cb58443897",
+          "seed": 2046240000,
+          "task": "coffee-button"
+        },
+        {
+          "checks": {
+            "actions": true,
+            "expert_success": true,
+            "goal_index": true,
+            "goal_rgb": true,
+            "initial_rgb": true,
+            "rewards": true,
+            "successes": true
+          },
+          "exact": true,
+          "goal_index": 200,
+          "mode": "expert",
+          "new_seconds": 1.4707005843520164,
+          "old_seconds": 20.9232980273664,
+          "rgb_sha256": "af8287a4389e7d1e84062bbcc9bab26f4c0a4266c78f185fb5bc1942e8572b42",
+          "seed": 2065600000,
+          "task": "dial-turn"
+        },
+        {
+          "checks": {
+            "actions": true,
+            "expert_success": true,
+            "goal_index": true,
+            "goal_rgb": true,
+            "initial_rgb": true,
+            "rewards": true,
+            "successes": true
+          },
+          "exact": true,
+          "goal_index": 200,
+          "mode": "expert",
+          "new_seconds": 0.9666165597736835,
+          "old_seconds": 22.167467962950468,
+          "rgb_sha256": "875bcd64d15cbeb9ac00e0d289aeb72bcc913ce549121d0c6c378fbef015e55d",
+          "seed": 2056800000,
+          "task": "door-close"
+        },
+        {
+          "checks": {
+            "actions": true,
+            "expert_success": true,
+            "goal_index": true,
+            "goal_rgb": true,
+            "initial_rgb": true,
+            "rewards": true,
+            "successes": true
+          },
+          "exact": true,
+          "goal_index": 117,
+          "mode": "expert",
+          "new_seconds": 1.0297788307070732,
+          "old_seconds": 22.655885526910424,
+          "rgb_sha256": "1c14051482d09ba182fb2e658b8445685c6be293c51e9e10aa193f22b1b5c72b",
+          "seed": 2035600000,
+          "task": "door-open"
+        },
+        {
+          "checks": {
+            "actions": true,
+            "expert_success": true,
+            "goal_index": true,
+            "goal_rgb": true,
+            "initial_rgb": true,
+            "rewards": true,
+            "successes": true
+          },
+          "exact": true,
+          "goal_index": 200,
+          "mode": "expert",
+          "new_seconds": 0.9500853605568409,
+          "old_seconds": 20.648926008492708,
+          "rgb_sha256": "6c9125dd26d9ea3ce17ecf4f91569dc198439e512421912fa09dd6ad3a2245f1",
+          "seed": 2071240000,
+          "task": "drawer-close"
+        },
+        {
+          "checks": {
+            "actions": true,
+            "expert_success": true,
+            "goal_index": true,
+            "goal_rgb": true,
+            "initial_rgb": true,
+            "rewards": true,
+            "successes": true
+          },
+          "exact": true,
+          "goal_index": 200,
+          "mode": "expert",
+          "new_seconds": 0.9393002539873123,
+          "old_seconds": 20.60515688173473,
+          "rgb_sha256": "5e1ce004fbb21e526aa8bf3b5089c4b2dc7e87a3cdc84e202f861c3992118c71",
+          "seed": 2010730000,
+          "task": "drawer-open"
+        },
+        {
+          "checks": {
+            "actions": true,
+            "expert_success": true,
+            "goal_index": true,
+            "goal_rgb": true,
+            "initial_rgb": true,
+            "rewards": true,
+            "successes": true
+          },
+          "exact": true,
+          "goal_index": 168,
+          "mode": "expert",
+          "new_seconds": 1.12684297375381,
+          "old_seconds": 20.850537745282054,
+          "rgb_sha256": "c8308b4d0e22c870690e61e6e54933c7d7b4721da17b3f686d3ef63417952203",
+          "seed": 2037570000,
+          "task": "faucet-open"
+        },
+        {
+          "checks": {
+            "actions": true,
+            "expert_success": true,
+            "goal_index": true,
+            "goal_rgb": true,
+            "initial_rgb": true,
+            "rewards": true,
+            "successes": true
+          },
+          "exact": true,
+          "goal_index": 43,
+          "mode": "expert",
+          "new_seconds": 0.932435043156147,
+          "old_seconds": 22.189164634793997,
+          "rgb_sha256": "8e65c7849bbf170709b081f22e7472c31636788a6a595f5bdfab26257dac5b45",
+          "seed": 2051260000,
+          "task": "handle-press"
+        },
+        {
+          "checks": {
+            "actions": true,
+            "expert_success": true,
+            "goal_index": true,
+            "goal_rgb": true,
+            "initial_rgb": true,
+            "rewards": true,
+            "successes": true
+          },
+          "exact": true,
+          "goal_index": 200,
+          "mode": "expert",
+          "new_seconds": 1.3225071299821138,
+          "old_seconds": 20.132027631625533,
+          "rgb_sha256": "01d8690cc2316c35bd980787102236916e2411a44eaa88bf5a3551f815630932",
+          "seed": 2028570000,
+          "task": "pick-place"
+        },
+        {
+          "checks": {
+            "actions": true,
+            "expert_success": true,
+            "goal_index": true,
+            "goal_rgb": true,
+            "initial_rgb": true,
+            "rewards": true,
+            "successes": true
+          },
+          "exact": true,
+          "goal_index": 200,
+          "mode": "expert",
+          "new_seconds": 0.9468040429055691,
+          "old_seconds": 20.944683270528913,
+          "rgb_sha256": "a4ca960a99b731a29ccad063d2b0bf8dcaa66205eb03b9b66cfa344d51d2a9f6",
+          "seed": 2051300000,
+          "task": "plate-slide"
+        },
+        {
+          "checks": {
+            "actions": true,
+            "expert_success": true,
+            "goal_index": true,
+            "goal_rgb": true,
+            "initial_rgb": true,
+            "rewards": true,
+            "successes": true
+          },
+          "exact": true,
+          "goal_index": 200,
+          "mode": "expert",
+          "new_seconds": 0.9679873306304216,
+          "old_seconds": 20.399130281060934,
+          "rgb_sha256": "2c3f45e662f5edd2acf5c4a7ba9e63dc3339fc86f750e7dd96296e7f5068cf9f",
+          "seed": 2067930000,
+          "task": "reach"
+        },
+        {
+          "checks": {
+            "actions": true,
+            "expert_success": true,
+            "goal_index": true,
+            "goal_rgb": true,
+            "initial_rgb": true,
+            "rewards": true,
+            "successes": true
+          },
+          "exact": true,
+          "goal_index": 200,
+          "mode": "expert",
+          "new_seconds": 0.9152381755411625,
+          "old_seconds": 21.44533533602953,
+          "rgb_sha256": "5a873755ffddbdc31b4f39ba5a854d75e69f4914493a22db073ccefb0e2044c1",
+          "seed": 2032100000,
+          "task": "window-open"
+        },
+        {
+          "checks": {
+            "actions": true,
+            "expert_success": true,
+            "goal_index": true,
+            "goal_rgb": true,
+            "initial_rgb": true,
+            "rewards": true,
+            "successes": true
+          },
+          "exact": true,
+          "goal_index": 200,
+          "mode": "expert",
+          "new_seconds": 0.9514526277780533,
+          "old_seconds": 21.19364875741303,
+          "rgb_sha256": "5d9645503b2e9aae782e039e58a41f2e931ab52e1fbcbbb8fd62557d5e4acc99",
+          "seed": 2025690000,
+          "task": "handle-pull"
+        },
+        {
+          "checks": {
+            "actions": true,
+            "expert_success": true,
+            "goal_index": true,
+            "goal_rgb": true,
+            "initial_rgb": true,
+            "rewards": true,
+            "successes": true
+          },
+          "exact": true,
+          "goal_index": 200,
+          "mode": "expert",
+          "new_seconds": 1.1922160536050797,
+          "old_seconds": 20.314622612670064,
+          "rgb_sha256": "55c99454d7f014721d9684a4ef1d69caf1a4e6da4623393704959dac33091468",
+          "seed": 2010500000,
+          "task": "push"
+        },
+        {
+          "checks": {
+            "actions": true,
+            "expert_success": true,
+            "goal_index": true,
+            "goal_rgb": true,
+            "initial_rgb": true,
+            "rewards": true,
+            "successes": true
+          },
+          "exact": true,
+          "goal_index": 200,
+          "mode": "random",
+          "new_seconds": 1.0661101080477238,
+          "old_seconds": 19.637321438640356,
+          "rgb_sha256": "917d7d03b5d4eb0af7771d0b30f568caec55fb314408d2b9403418db419d4e58",
+          "seed": 77930000,
+          "task": "reach"
+        },
+        {
+          "checks": {
+            "actions": true,
+            "expert_success": true,
+            "goal_index": true,
+            "goal_rgb": true,
+            "initial_rgb": true,
+            "rewards": true,
+            "successes": true
+          },
+          "exact": true,
+          "goal_index": 200,
+          "mode": "random",
+          "new_seconds": 1.102943904697895,
+          "old_seconds": 19.708099918439984,
+          "rgb_sha256": "ba69c9fba1db84cd7bb42c219635dd2e9a642129530cf2453d2f24fdaf43eddd",
+          "seed": 20500000,
+          "task": "push"
+        },
+        {
+          "checks": {
+            "actions": true,
+            "expert_success": true,
+            "goal_index": true,
+            "goal_rgb": true,
+            "initial_rgb": true,
+            "rewards": true,
+            "successes": true
+          },
+          "exact": true,
+          "goal_index": 200,
+          "mode": "random",
+          "new_seconds": 1.1036239862442017,
+          "old_seconds": 19.875014182180166,
+          "rgb_sha256": "bb1b6799d3c7b59a186a95eef488fd069a4be526e7454ddaf41045f25cd6807f",
+          "seed": 38570000,
+          "task": "pick-place"
+        },
+        {
+          "checks": {
+            "actions": true,
+            "expert_success": true,
+            "goal_index": true,
+            "goal_rgb": true,
+            "initial_rgb": true,
+            "rewards": true,
+            "successes": true
+          },
+          "exact": true,
+          "goal_index": 200,
+          "mode": "random",
+          "new_seconds": 1.0197764672338963,
+          "old_seconds": 21.044063737615943,
+          "rgb_sha256": "7d232c9eeb609bce67853ebf8919e6d73b36322e956576ce8763ccfd90f42142",
+          "seed": 66800000,
+          "task": "door-close"
+        }
+      ],
+      "mode": "equivalence",
+      "passed": true
+    },
+    "workers-16": {
+      "checks": [],
+      "elapsed_seconds": 7.038137868046761,
+      "episodes": 64,
+      "mode": "workers",
+      "warm_episodes_per_second": 12.460457191581154,
+      "workers": 16
+    },
+    "workers-32": {
+      "checks": [],
+      "elapsed_seconds": 8.139041975140572,
+      "episodes": 128,
+      "mode": "workers",
+      "warm_episodes_per_second": 24.410563697978525,
+      "workers": 32
+    },
+    "workers-48": {
+      "checks": [],
+      "elapsed_seconds": 9.512835703790188,
+      "episodes": 192,
+      "mode": "workers",
+      "warm_episodes_per_second": 29.61087122047908,
+      "workers": 48
+    },
+    "workers-8": {
+      "checks": [],
+      "elapsed_seconds": 10.52363838814199,
+      "episodes": 64,
+      "mode": "workers",
+      "warm_episodes_per_second": 7.193222845584427,
+      "workers": 8
+    }
+  },
+  "checked_at": "2026-10-08T18:18:08.671544+00:00",
+  "pipeline64_log_tail": [
+    "/tmp/mtxu-flow-jepa-20261007/env/lib/python3.11/site-packages/metaworld/policies/policy.py:49: UserWarning: Constant(s) may be too high. Environments clip response to [-1, 1]",
+    "  warnings.warn(",
+    "/tmp/mtxu-flow-jepa-20261007/env/lib/python3.11/site-packages/metaworld/policies/policy.py:49: UserWarning: Constant(s) may be too high. Environments clip response to [-1, 1]",
+    "  warnings.warn(",
+    "{\"event\": \"cached_episode\", \"episode\": \"validation/assembly/00001\", \"success\": true, \"collection_seconds\": 21.58319402113557, \"encoding_seconds\": 4.043173186480999, \"write_seconds\": 0.23490223102271557, \"rank\": 0, \"completed\": 1, \"elapsed_seconds\": 27.186198784038424}",
+    "{\"event\": \"cached_episode\", \"episode\": \"test/assembly/00001\", \"success\": true, \"collection_seconds\": 1.0286906491965055, \"encoding_seconds\": 0.020304859150201082, \"write_seconds\": 0.03981638140976429, \"rank\": 0, \"completed\": 2, \"elapsed_seconds\": 27.226045612245798}",
+    "{\"event\": \"cached_episode\", \"episode\": \"test/assembly/00000\", \"success\": true, \"collection_seconds\": 1.0590105261653662, \"encoding_seconds\": 0.020304859150201082, \"write_seconds\": 0.029840754345059395, \"rank\": 0, \"completed\": 3, \"elapsed_seconds\": 27.255923993885517}",
+    "{\"event\": \"cached_episode\", \"episode\": \"test/assembly/00003\", \"success\": true, \"collection_seconds\": 1.1952113397419453, \"encoding_seconds\": 0.020304859150201082, \"write_seconds\": 0.03215167857706547, \"rank\": 0, \"completed\": 4, \"elapsed_seconds\": 30.74994888342917}",
+    "{\"event\": \"cached_episode\", \"episode\": \"test/assembly/00002\", \"success\": true, \"collection_seconds\": 1.0065723396837711, \"encoding_seconds\": 0.020304859150201082, \"write_seconds\": 0.028935620561242104, \"rank\": 0, \"completed\": 5, \"elapsed_seconds\": 34.31190835684538}",
+    "{\"event\": \"cached_episode\", \"episode\": \"validation/assembly/00000\", \"success\": true, \"collection_seconds\": 22.13813343271613, \"encoding_seconds\": 3.493814365938306, \"write_seconds\": 0.22328040935099125, \"rank\": 0, \"completed\": 6, \"elapsed_seconds\": 37.822054812684655}",
+    "{\"event\": \"cached_episode\", \"episode\": \"train/assembly/00000\", \"success\": false, \"collection_seconds\": 21.651984563097358, \"encoding_seconds\": 3.5609539672732353, \"write_seconds\": 0.230864055454731, \"rank\": 0, \"completed\": 7, \"elapsed_seconds\": 38.27888289280236}",
+    "{\"event\": \"cached_episode\", \"episode\": \"train/assembly/00001\", \"success\": false, \"collection_seconds\": 21.945798959583044, \"encoding_seconds\": 3.5095057263970375, \"write_seconds\": 0.236602071672678, \"rank\": 0, \"completed\": 8, \"elapsed_seconds\": 38.27960204705596}"
+  ],
+  "pipelines": {
+    "pipeline-cache": {
+      "all_cache_arrays_and_logical_attributes_exact": true,
+      "checks": [
+        {
+          "arrays_exact": {
+            "goal": true,
+            "goal_rgb": true,
+            "initial_rgb": true,
+            "success": true
+          },
+          "attributes_exact": {
+            "encoder": true,
+            "expert_success": true,
+            "goal_index": true,
+            "id": true,
+            "index": true,
+            "mode": true,
+            "seed": true,
+            "split": true,
+            "task": true
+          },
+          "datasets_match": true,
+          "episode": "test/assembly/00000.h5"
+        },
+        {
+          "arrays_exact": {
+            "goal": true,
+            "goal_rgb": true,
+            "initial_rgb": true,
+            "success": true
+          },
+          "attributes_exact": {
+            "encoder": true,
+            "expert_success": true,
+            "goal_index": true,
+            "id": true,
+            "index": true,
+            "mode": true,
+            "seed": true,
+            "split": true,
+            "task": true
+          },
+          "datasets_match": true,
+          "episode": "test/assembly/00001.h5"
+        },
+        {
+          "arrays_exact": {
+            "goal": true,
+            "goal_rgb": true,
+            "initial_rgb": true,
+            "success": true
+          },
+          "attributes_exact": {
+            "encoder": true,
+            "expert_success": true,
+            "goal_index": true,
+            "id": true,
+            "index": true,
+            "mode": true,
+            "seed": true,
+            "split": true,
+            "task": true
+          },
+          "datasets_match": true,
+          "episode": "test/assembly/00002.h5"
+        },
+        {
+          "arrays_exact": {
+            "goal": true,
+            "goal_rgb": true,
+            "initial_rgb": true,
+            "success": true
+          },
+          "attributes_exact": {
+            "encoder": true,
+            "expert_success": true,
+            "goal_index": true,
+            "id": true,
+            "index": true,
+            "mode": true,
+            "seed": true,
+            "split": true,
+            "task": true
+          },
+          "datasets_match": true,
+          "episode": "test/assembly/00003.h5"
+        },
+        {
+          "arrays_exact": {
+            "actions": true,
+            "goal": true,
+            "goal_rgb": true,
+            "image_goals": true,
+            "initial_rgb": true,
+            "success": true,
+            "z": true
+          },
+          "attributes_exact": {
+            "encoder": true,
+            "expert_success": true,
+            "goal_index": true,
+            "id": true,
+            "index": true,
+            "mode": true,
+            "seed": true,
+            "split": true,
+            "task": true
+          },
+          "datasets_match": true,
+          "episode": "train/assembly/00000.h5"
+        },
+        {
+          "arrays_exact": {
+            "actions": true,
+            "goal": true,
+            "goal_rgb": true,
+            "image_goals": true,
+            "initial_rgb": true,
+            "success": true,
+            "z": true
+          },
+          "attributes_exact": {
+            "encoder": true,
+            "expert_success": true,
+            "goal_index": true,
+            "id": true,
+            "index": true,
+            "mode": true,
+            "seed": true,
+            "split": true,
+            "task": true
+          },
+          "datasets_match": true,
+          "episode": "train/assembly/00001.h5"
+        },
+        {
+          "arrays_exact": {
+            "actions": true,
+            "goal": true,
+            "goal_rgb": true,
+            "image_goals": true,
+            "initial_rgb": true,
+            "success": true,
+            "z": true
+          },
+          "attributes_exact": {
+            "encoder": true,
+            "expert_success": true,
+            "goal_index": true,
+            "id": true,
+            "index": true,
+            "mode": true,
+            "seed": true,
+            "split": true,
+            "task": true
+          },
+          "datasets_match": true,
+          "episode": "validation/assembly/00000.h5"
+        },
+        {
+          "arrays_exact": {
+            "actions": true,
+            "goal": true,
+            "goal_rgb": true,
+            "image_goals": true,
+            "initial_rgb": true,
+            "success": true,
+            "z": true
+          },
+          "attributes_exact": {
+            "encoder": true,
+            "expert_success": true,
+            "goal_index": true,
+            "id": true,
+            "index": true,
+            "mode": true,
+            "seed": true,
+            "split": true,
+            "task": true
+          },
+          "datasets_match": true,
+          "episode": "validation/assembly/00001.h5"
+        }
+      ],
+      "complete": true,
+      "mean_exact": true,
+      "std_exact": true
+    },
+    "pipeline-cache64": {
+      "all_cache_arrays_and_logical_attributes_exact": true,
+      "checks": [
+        {
+          "arrays_exact": {
+            "goal": true,
+            "goal_rgb": true,
+            "initial_rgb": true,
+            "success": true
+          },
+          "attributes_exact": {
+            "encoder": true,
+            "expert_success": true,
+            "goal_index": true,
+            "id": true,
+            "index": true,
+            "mode": true,
+            "seed": true,
+            "split": true,
+            "task": true
+          },
+          "datasets_match": true,
+          "episode": "test/assembly/00000.h5"
+        },
+        {
+          "arrays_exact": {
+            "goal": true,
+            "goal_rgb": true,
+            "initial_rgb": true,
+            "success": true
+          },
+          "attributes_exact": {
+            "encoder": true,
+            "expert_success": true,
+            "goal_index": true,
+            "id": true,
+            "index": true,
+            "mode": true,
+            "seed": true,
+            "split": true,
+            "task": true
+          },
+          "datasets_match": true,
+          "episode": "test/assembly/00001.h5"
+        },
+        {
+          "arrays_exact": {
+            "goal": true,
+            "goal_rgb": true,
+            "initial_rgb": true,
+            "success": true
+          },
+          "attributes_exact": {
+            "encoder": true,
+            "expert_success": true,
+            "goal_index": true,
+            "id": true,
+            "index": true,
+            "mode": true,
+            "seed": true,
+            "split": true,
+            "task": true
+          },
+          "datasets_match": true,
+          "episode": "test/assembly/00002.h5"
+        },
+        {
+          "arrays_exact": {
+            "goal": true,
+            "goal_rgb": true,
+            "initial_rgb": true,
+            "success": true
+          },
+          "attributes_exact": {
+            "encoder": true,
+            "expert_success": true,
+            "goal_index": true,
+            "id": true,
+            "index": true,
+            "mode": true,
+            "seed": true,
+            "split": true,
+            "task": true
+          },
+          "datasets_match": true,
+          "episode": "test/assembly/00003.h5"
+        },
+        {
+          "arrays_exact": {
+            "actions": true,
+            "goal": true,
+            "goal_rgb": true,
+            "image_goals": true,
+            "initial_rgb": true,
+            "success": true,
+            "z": true
+          },
+          "attributes_exact": {
+            "encoder": true,
+            "expert_success": true,
+            "goal_index": true,
+            "id": true,
+            "index": true,
+            "mode": true,
+            "seed": true,
+            "split": true,
+            "task": true
+          },
+          "datasets_match": true,
+          "episode": "train/assembly/00000.h5"
+        },
+        {
+          "arrays_exact": {
+            "actions": true,
+            "goal": true,
+            "goal_rgb": true,
+            "image_goals": true,
+            "initial_rgb": true,
+            "success": true,
+            "z": true
+          },
+          "attributes_exact": {
+            "encoder": true,
+            "expert_success": true,
+            "goal_index": true,
+            "id": true,
+            "index": true,
+            "mode": true,
+            "seed": true,
+            "split": true,
+            "task": true
+          },
+          "datasets_match": true,
+          "episode": "train/assembly/00001.h5"
+        },
+        {
+          "arrays_exact": {
+            "actions": true,
+            "goal": true,
+            "goal_rgb": true,
+            "image_goals": true,
+            "initial_rgb": true,
+            "success": true,
+            "z": true
+          },
+          "attributes_exact": {
+            "encoder": true,
+            "expert_success": true,
+            "goal_index": true,
+            "id": true,
+            "index": true,
+            "mode": true,
+            "seed": true,
+            "split": true,
+            "task": true
+          },
+          "datasets_match": true,
+          "episode": "validation/assembly/00000.h5"
+        },
+        {
+          "arrays_exact": {
+            "actions": true,
+            "goal": true,
+            "goal_rgb": true,
+            "image_goals": true,
+            "initial_rgb": true,
+            "success": true,
+            "z": true
+          },
+          "attributes_exact": {
+            "encoder": true,
+            "expert_success": true,
+            "goal_index": true,
+            "id": true,
+            "index": true,
+            "mode": true,
+            "seed": true,
+            "split": true,
+            "task": true
+          },
+          "datasets_match": true,
+          "episode": "validation/assembly/00001.h5"
+        }
+      ],
+      "complete": true,
+      "mean_exact": true,
+      "std_exact": true
+    }
+  },
+  "tests-final_log_tail": [
+    "...........................................                              [100%]",
+    "=============================== warnings summary ===============================",
+    "tests_flow/test_environment.py::test_expert_goal_not_clipped_by_cached_observation_bounds",
+    "  /tmp/mtxu-flow-jepa-20261007/env/lib/python3.11/site-packages/metaworld/policies/policy.py:49: UserWarning: Constant(s) may be too high. Environments clip response to [-1, 1]",
+    "    warnings.warn(",
+    "",
+    "-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html",
+    "43 passed, 1 warning in 17.07s"
+  ],
+  "workers-48_log_tail": [
+    "  warnings.warn(",
+    "/tmp/mtxu-flow-jepa-20261007/env/lib/python3.11/site-packages/metaworld/policies/policy.py:49: UserWarning: Constant(s) may be too high. Environments clip response to [-1, 1]",
+    "  warnings.warn(",
+    "/tmp/mtxu-flow-jepa-20261007/env/lib/python3.11/site-packages/metaworld/policies/policy.py:49: UserWarning: Constant(s) may be too high. Environments clip response to [-1, 1]",
+    "  warnings.warn(",
+    "/tmp/mtxu-flow-jepa-20261007/env/lib/python3.11/site-packages/metaworld/policies/policy.py:49: UserWarning: Constant(s) may be too high. Environments clip response to [-1, 1]",
+    "  warnings.warn(",
+    "/tmp/mtxu-flow-jepa-20261007/env/lib/python3.11/site-packages/metaworld/policies/policy.py:49: UserWarning: Constant(s) may be too high. Environments clip response to [-1, 1]",
+    "  warnings.warn(",
+    "/tmp/mtxu-flow-jepa-20261007/env/lib/python3.11/site-packages/metaworld/policies/policy.py:49: UserWarning: Constant(s) may be too high. Environments clip response to [-1, 1]",
+    "  warnings.warn(",
+    "{\"mode\": \"workers\", \"checks\": [], \"workers\": 48, \"episodes\": 192, \"elapsed_seconds\": 9.512835703790188, \"warm_episodes_per_second\": 29.61087122047908}"
+  ]
+}

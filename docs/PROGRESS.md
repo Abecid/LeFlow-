@@ -2,6 +2,10 @@
 
 ## Current verified state
 
+- **Throughput migration IN PROGRESS:** user authorized lossless hardware tuning.
+  The existing supervisor may continue preparation; the monitor must remain
+  read-only and must not commit pending edits or relaunch a supervisor.
+
 - **Four-method migration complete:** only joint_flow_consistent, leflow_adapted,
   hwm_adapted and cem_long, exactly one seed (3072). No ablations, extra seeds,
   or automatic expansion. See `FIRST_PASS.md` for the evidence and scope.
@@ -1717,3 +1721,28 @@ and all four workers remain active, frozen execution source is clean at
 limits remain unchanged; full training runs/checkpoints remain zero. No campaign
 intervention was required. Continue fixed test-goal preparation before the
 registered bounded training/validation queue.
+
+### 2026-10-08 18:18 UTC — lossless throughput implementation verified
+
+The user explicitly authorized optimizing hardware throughput. Implemented sparse
+exact-action-replay goal collection, bounded parallel CPU producers, larger GPU
+batches, asynchronous atomic cache writes, incremental clip materialization and
+parallel cache statistics/hash checks with original reduction order. No methods,
+training seeds, split/candidate IDs, image resolution, model precision or compute
+allowances changed. Implementation/evidence are in `docs/THROUGHPUT.md` and the
+compact throughput benchmark report.
+
+All 20 real equivalence cases (all 16 tasks and four random cases) passed exact
+array checks. Two end-to-end preparation configurations matched original cached
+arrays, logical attributes, means and standard deviations bit-for-bit. All 43
+server tests passed. The measured configuration selected for deployment is 12 CPU
+producers per GPU (48 total), 24 prefetched jobs per GPU, batch 64 for both dense
+features and goals, one writer per GPU, and eight manifest workers. Batch 128 did
+not outperform 64. Warm 48-worker goal collection reached 29.61 episodes/second;
+this is a CPU-stage measurement, not a claim about live end-to-end throughput.
+
+The old supervisor is still running preparation while the verified revision is
+published and transferred. Migration remains in progress; the existing heartbeat
+is restricted to read-only checks until deployment and cache preservation are
+verified. Next: switch to a new frozen checkout, preserve completed files, verify
+actual throughput and the transition into training with W&B logs.

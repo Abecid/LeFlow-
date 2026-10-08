@@ -11,10 +11,12 @@ import shutil
 import subprocess
 import sys
 import time
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 from .common import config, digest, file_hash, git_revision, save_json
 from .budget import verify_data_compatibility
+from .collection import default_workers
 
 
 def adopt_data_manifest(root, data_config, execution_config):
@@ -131,9 +133,12 @@ def verify_manifest(root, c):
     manifest = json.loads(path.read_text())
     if manifest["protocol"] != digest(c) or manifest.get("fixture", True):
         raise ValueError("Wrong protocol or fixture data")
-    for entry in manifest["entries"]:
-        if file_hash(root / entry["path"]) != entry["sha256"]:
-            raise ValueError(f"Cached episode changed: {entry['id']}")
+    entries = manifest["entries"]
+    with ThreadPoolExecutor(max_workers=int(os.getenv("FLOW_MANIFEST_WORKERS", "8"))) as pool:
+        hashes = pool.map(file_hash, (root / entry["path"] for entry in entries))
+        for entry, sha in zip(entries, hashes):
+            if sha != entry["sha256"]:
+                raise ValueError(f"Cached episode changed: {entry['id']}")
     return file_hash(path)
 
 
@@ -160,6 +165,15 @@ def main():
         configuration=c,
         protocol=digest(c),
         max_gpus=a.gpus,
+        preparation=dict(
+            workers_per_gpu=int(os.getenv("FLOW_PREP_WORKERS_PER_GPU", str(default_workers(a.gpus)))),
+            manifest_workers=int(os.getenv("FLOW_MANIFEST_WORKERS", "8")),
+            collector="exact_action_replay_goals_v1",
+            encoder_batch=int(os.getenv("FLOW_CACHE_ENCODER_BATCH", str(data_c["encoder"]["batch_size"]))),
+            goal_batch=int(os.getenv("FLOW_GOAL_ENCODER_BATCH", "16")),
+            bounded_prefetch=True,
+            asynchronous_writes=True,
+        ),
         execution_seeds=seeds,
         execution_methods=c["methods"],
         data_protocol=digest(data_c),

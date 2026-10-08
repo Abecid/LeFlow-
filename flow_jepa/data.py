@@ -2,6 +2,10 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
+import time
+from collections import deque
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 import h5py
@@ -18,7 +22,7 @@ from .common import (
     file_hash,
     save_json,
 )
-from .environment import collect_episode
+from .collection import collected_rows, default_workers
 from .vision import Encoder, history_clip
 
 
@@ -97,6 +101,97 @@ def _encode_list(encoder, clips, batch):
     return np.concatenate(result)
 
 
+def encode_episode(episode, row, c, encoder):
+    """Use the original inference shapes, order, precision and cache arrays."""
+    history, repeat = c["data"]["history_frames"], c["data"]["action_repeat"]
+    frames = episode.get("frames")
+    goal_image = episode["goal_rgb"] if frames is None else frames[episode["goal_index"]]
+    arrays = dict(initial_rgb=episode["initial_rgb"] if frames is None else frames[0],
+                  goal_rgb=goal_image,
+                  goal=encoder(np.repeat(goal_image[None, None], history, axis=1)).cpu().numpy()[0].astype(np.float16),
+                  success=episode["successes"])
+    if row["split"] != "test":
+        indexes = range(0, len(frames), repeat)
+        # Materialize only one batch instead of two full lists of duplicated video clips.
+        batch = int(os.getenv("FLOW_CACHE_ENCODER_BATCH", str(c["encoder"]["batch_size"])))
+        def encode(kind):
+            result = []
+            for start in range(0, len(indexes), batch):
+                ids = indexes[start:start + batch]
+                clips = [history_clip(frames, i, history) if kind == "history" else
+                         np.repeat(frames[i][None], history, axis=0) for i in ids]
+                result.append(encoder(np.stack(clips)).cpu().numpy().astype(np.float16))
+            return np.concatenate(result)
+        arrays["z"] = encode("history")
+        arrays["image_goals"] = encode("static")
+        n = len(indexes) - 1
+        arrays["actions"] = episode["actions"][:n * repeat].reshape(n, repeat * 4)
+    return arrays
+
+
+def preparation_batches(rows, goal_batch):
+    goals = []
+    for item in rows:
+        if item[0]["split"] == "test":
+            goals.append(item)
+            if len(goals) >= goal_batch:
+                yield goals
+                goals = []
+        else:
+            if goals:
+                yield goals
+                goals = []
+            yield [item]
+    if goals:
+        yield goals
+
+
+def encode_goal_batch(items, c, encoder):
+    images = [e["goal_rgb"] for _, e, _ in items]
+    clips = np.repeat(np.stack(images)[:, None], c["data"]["history_frames"], axis=1)
+    goals = encoder(clips).cpu().numpy().astype(np.float16)
+    return [dict(initial_rgb=e["initial_rgb"], goal_rgb=e["goal_rgb"],
+                 goal=goals[i], success=e["successes"])
+            for i, (_, e, _) in enumerate(items)]
+
+
+def write_episode(root, row, episode, arrays, c, fingerprint,
+                  collection_seconds=0.0, encoding_seconds=0.0):
+    start = time.perf_counter()
+    path = root / "episodes" / (row["id"] + ".h5")
+    path.parent.mkdir(parents=True, exist_ok=True)
+    tmp = path.with_suffix(".partial")
+    with h5py.File(tmp, "w") as f:
+        f.attrs.update(**row, protocol=digest(c), encoder=fingerprint,
+                       expert_success=episode["expert_success"], goal_index=episode["goal_index"])
+        for name, value in arrays.items():
+            compression = "gzip" if name in ("initial_rgb", "goal_rgb") else (
+                "lzf" if name in ("z", "image_goals") else None)
+            f.create_dataset(name, data=value, compression=compression)
+        f.flush()
+    tmp.replace(path)
+    return dict(event="cached_episode", episode=row["id"], success=episode["expert_success"],
+                collection_seconds=collection_seconds, encoding_seconds=encoding_seconds,
+                write_seconds=time.perf_counter() - start)
+
+
+def summarize_episode(root, row, c):
+    path = root / "episodes" / (row["id"] + ".h5")
+    sha = file_hash(path)
+    with h5py.File(path, "r") as f:
+        successes = f["success"][:]
+        item = {**row, "path": str(path.relative_to(root)), "sha256": sha,
+                "expert_success": bool(f.attrs["expert_success"]),
+                "steps": len(f["actions"]) if "actions" in f else 0,
+                "first_success_action": int(np.flatnonzero(successes)[0]) if np.any(successes) else None}
+        if row["split"] == "train":
+            z = f["z"][:].astype(np.float64).reshape(-1, c["encoder"]["dim"])
+            if not np.isfinite(z).all():
+                raise ValueError("Nonfinite training features")
+            return item, z.sum(0), np.square(z).sum(0), len(z)
+    return item, None, None, 0
+
+
 def prepare(c, root, *, encoder_factory=Encoder):
     rank, size, device = distributed()
     root = Path(root)
@@ -113,100 +208,79 @@ def prepare(c, root, *, encoder_factory=Encoder):
     barrier()
     if rank != 0:
         encoder = encoder_factory(c["encoder"], root, device)
+    workers = int(os.getenv("FLOW_PREP_WORKERS_PER_GPU", str(default_workers(size))))
+    prefetch = int(os.getenv("FLOW_PREP_PREFETCH", str(max(1, workers * 2))))
+    writer_depth = 2
+    goal_batch = int(os.getenv("FLOW_GOAL_ENCODER_BATCH", "16"))
+    if workers < 0 or prefetch < max(1, workers) or goal_batch < 1:
+        raise ValueError("Invalid preparation concurrency")
+    pending = []
     for pos in range(rank, len(plan), size):
         row = plan[pos]
         path = root / "episodes" / (row["id"] + ".h5")
         if path.exists():
             with h5py.File(path, "r") as f:
-                if (
-                    f.attrs.get("protocol") != digest(c)
-                    or f.attrs.get("encoder") != encoder.fingerprint
-                ):
+                if (f.attrs.get("protocol") != digest(c)
+                        or f.attrs.get("encoder") != encoder.fingerprint):
                     raise ValueError(f"Mismatched completed cache: {path}")
-            continue
-        episode = collect_episode(row["task"], row["seed"], c["data"], row["mode"])
-        frames = episode.pop("frames")
-        history = c["data"]["history_frames"]
-        repeat = c["data"]["action_repeat"]
-        indexes = list(range(0, len(frames), repeat))
-        goal_image = frames[episode["goal_index"]]
-        goal = (
-            encoder(np.repeat(goal_image[None, None], history, axis=1)).cpu().numpy()[0]
-        )
-        # One RGB final goal only; no expert motion history is exposed at evaluation.
-        path.parent.mkdir(parents=True, exist_ok=True)
-        tmp = path.with_suffix(".partial")
-        with h5py.File(tmp, "w") as f:
-            f.attrs.update(
-                **row,
-                protocol=digest(c),
-                encoder=encoder.fingerprint,
-                expert_success=episode["expert_success"],
-                goal_index=episode["goal_index"],
-            )
-            f.create_dataset("initial_rgb", data=frames[0], compression="gzip")
-            f.create_dataset("goal_rgb", data=goal_image, compression="gzip")
-            f.create_dataset("goal", data=goal.astype(np.float16))
-            f.create_dataset("success", data=episode["successes"])
-            if row["split"] != "test":
-                clips = [history_clip(frames, i, history) for i in indexes]
-                z = _encode_list(encoder, clips, c["encoder"]["batch_size"])
-                # Hindsight goals are also single images, encoded identically to deployment.
-                static = [np.repeat(frames[i][None], history, axis=0) for i in indexes]
-                gz = _encode_list(encoder, static, c["encoder"]["batch_size"])
-                n = len(indexes) - 1
-                f.create_dataset("z", data=z, compression="lzf")
-                f.create_dataset("image_goals", data=gz, compression="lzf")
-                f.create_dataset(
-                    "actions",
-                    data=episode["actions"][: n * repeat].reshape(n, repeat * 4),
-                )
-            f.flush()
-        tmp.replace(path)
-        print(
-            json.dumps(
-                dict(
-                    event="cached_episode",
-                    rank=rank,
-                    episode=row["id"],
-                    success=episode["expert_success"],
-                )
-            ),
-            flush=True,
-        )
+        else:
+            pending.append(row)
+    print(json.dumps(dict(event="preparation_pipeline", rank=rank,
+                          workers=workers, prefetch=prefetch, writer_depth=writer_depth,
+                          pending=len(pending), encoder_batch=int(os.getenv("FLOW_CACHE_ENCODER_BATCH", str(c["encoder"]["batch_size"]))),
+                          goal_batch=goal_batch,
+                          sparse_test_goals=True)), flush=True)
+    began, completed = time.perf_counter(), 0
+    writes = deque()
+    def finish(future):
+        nonlocal completed
+        result = future.result()  # Writer exceptions must stop the campaign.
+        completed += 1
+        result.update(rank=rank, completed=completed,
+                      elapsed_seconds=time.perf_counter() - began)
+        print(json.dumps(result), flush=True)
+    with ThreadPoolExecutor(max_workers=1) as writer:
+        rows = collected_rows(pending, c["data"], workers, prefetch)
+        for items in preparation_batches(rows, goal_batch):
+            started = time.perf_counter()
+            if items[0][0]["split"] == "test":
+                encoded = encode_goal_batch(items, c, encoder)
+            else:
+                encoded = [encode_episode(items[0][1], items[0][0], c, encoder)]
+            encoding_seconds = (time.perf_counter() - started) / len(items)
+            for (row, episode, collection_seconds), arrays in zip(items, encoded):
+                if len(writes) >= writer_depth:
+                    finish(writes.popleft())
+                writes.append(writer.submit(write_episode, root, row, episode, arrays,
+                                            c, encoder.fingerprint, collection_seconds,
+                                            encoding_seconds))
+        while writes:
+            finish(writes.popleft())
     barrier()
     if rank == 0:
         entries, total, squared, count = [], None, None, 0
         expert = {}
-        for row in plan:
-            path = root / "episodes" / (row["id"] + ".h5")
-            with h5py.File(path, "r") as f:
-                item = {
-                    **row,
-                    "path": str(path.relative_to(root)),
-                    "sha256": file_hash(path),
-                    "expert_success": bool(f.attrs["expert_success"]),
-                    "steps": len(f["actions"]) if "actions" in f else 0,
-                    "first_success_action": int(np.flatnonzero(f["success"][:])[0])
-                    if np.any(f["success"][:])
-                    else None,
-                }
+        readers = int(os.getenv("FLOW_MANIFEST_WORKERS", "8"))
+        with ThreadPoolExecutor(max_workers=max(1, readers)) as pool:
+            queue = deque()
+            rows = iter(plan)
+            for _ in range(max(1, 2 * readers)):
+                row = next(rows, None)
+                if row is not None:
+                    queue.append(pool.submit(summarize_episode, root, row, c))
+            while queue:
+                item, row_total, row_squared, row_count = queue.popleft().result()
+                row = next(rows, None)
+                if row is not None:
+                    queue.append(pool.submit(summarize_episode, root, row, c))
                 entries.append(item)
-                if row["mode"] == "expert":
-                    expert.setdefault(row["split"] + "/" + row["task"], []).append(
-                        item["expert_success"]
-                    )
-                if row["split"] == "train":
-                    z = f["z"][:].astype(np.float64).reshape(-1, c["encoder"]["dim"])
-                    if not np.isfinite(z).all():
-                        raise ValueError("Nonfinite training features")
-                    total = z.sum(0) if total is None else total + z.sum(0)
-                    squared = (
-                        np.square(z).sum(0)
-                        if squared is None
-                        else squared + np.square(z).sum(0)
-                    )
-                    count += len(z)
+                if item["mode"] == "expert":
+                    expert.setdefault(item["split"] + "/" + item["task"], []).append(
+                        item["expert_success"])
+                if row_count:
+                    total = row_total if total is None else total + row_total
+                    squared = row_squared if squared is None else squared + row_squared
+                    count += row_count
         mean = total / count
         std = np.sqrt(np.maximum(squared / count - mean**2, 1e-6))
         entries, screening = select_valid_goals(entries, c)
