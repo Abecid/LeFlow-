@@ -22,7 +22,9 @@
     "validation/drawer-close": 100,
     "validation/drawer-open": 100,
     "validation/faucet-open": 100,
-    "validation/handle-press": 63
+    "validation/handle-press": 100,
+    "validation/pick-place": 96,
+    "validation/plate-slide": 10
   },
-  "total": 8763
+  "total": 8906
 }
