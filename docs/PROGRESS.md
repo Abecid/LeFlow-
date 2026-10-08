@@ -15,8 +15,8 @@
 - **Running:** supervisor PID 3126314 on target_server_2, limited to GPUs 0–3.
   The revised online launch check and actual four-rank GPU preflight passed;
   all 7,800 training episodes and 1,300 validation candidates are cached.
-  All four workers are now preparing fixed test-goal candidates (2,753/6,400
-  at the 15:01 UTC heartbeat), before full training and planner evaluation.
+  All four workers are now preparing fixed test-goal candidates (last retrieved count: 2,936/6,400
+  at the 15:16 UTC heartbeat; 15:31 snapshot retrieval failed), before full training and planner evaluation.
   All 2,381 episodes present at the scope migration were retained.
 - **Passed:** the bulk server suite (36 tests) plus all 8 final targeted
   budget/training tests after the last changes; actual CUDA/NCCL, official encoder,
@@ -1528,3 +1528,27 @@ and all four workers remain active, frozen execution source is clean at
 limits remain unchanged; full training runs/checkpoints remain zero. No campaign
 intervention was required. Continue fixed test-goal preparation before the
 registered bounded training/validation queue.
+
+
+### 2026-10-08 15:31 UTC heartbeat — live check passed, snapshot unavailable
+
+The fallback SSH health request timed out during banner exchange (status 255).
+Retrying the primary alias succeeded: supervisor 3126314 and data workers
+3128857–3128860 were active under launcher 3128848, stage `prepare_data`.
+The frozen execution checkout remained clean at `16747bb`; GPUs 0–3 held
+2,363/2,363/2,363/2,379 MiB and GPUs 4–7 held zero. Scope assertions confirmed
+only the four registered methods, seed 3072, 7,200-second training allowances
+and 10-second controller allowances. Full training runs/checkpoints remain zero.
+Recent logs progressed through `test/drawer-open/00396` on rank 0 and nearby
+rank-specific episodes, with expert success reported. These are preparation
+records, not planner test results or an exact aggregate count.
+
+Fresh W&B readback succeeded at 15:32:46 UTC and is preserved from the successful
+SSH response in `online-readback.json`. All three subsequent snapshot requests
+(primary, fallback, primary) failed with SSH status 255; the final attempt
+reported a banner-exchange timeout. `preparation-progress.json` remains the
+last successful 15:16 snapshot: 12,036 files = 7,800 training + 1,300 validation
+candidates + 2,936 test-goal candidates. Those counts are stale, not evidence of
+a stalled campaign. No processes, code, data or budgets were changed. Retry
+snapshot retrieval on the next heartbeat and continue the registered bounded
+training/validation queue after fixed goal preparation completes.
