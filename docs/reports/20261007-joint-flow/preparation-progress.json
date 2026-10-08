@@ -8,7 +8,7 @@
     "test/door-open": 400,
     "test/drawer-close": 400,
     "test/drawer-open": 400,
-    "test/faucet-open": 123,
+    "test/faucet-open": 274,
     "train/assembly": 600,
     "train/button-press-topdown": 600,
     "train/coffee-button": 600,
@@ -36,5 +36,5 @@
     "validation/plate-slide": 100,
     "validation/reach": 100
   },
-  "total": 12423
+  "total": 12574
 }
