@@ -19,8 +19,9 @@
     "validation/dial-turn": 100,
     "validation/door-close": 100,
     "validation/door-open": 100,
-    "validation/drawer-close": 92,
-    "validation/drawer-open": 7
+    "validation/drawer-close": 100,
+    "validation/drawer-open": 100,
+    "validation/faucet-open": 24
   },
-  "total": 8499
+  "total": 8624
 }

@@ -15,7 +15,7 @@
 - **Running:** supervisor PID 3126314 on target_server_2, limited to GPUs 0–3.
   The revised online launch check and actual four-rank GPU preflight passed;
   all 7,800 training episodes are cached. Validation candidate preparation is
-  underway (114/1,300 at the 09:01 UTC heartbeat); test-goal preparation follows.
+  underway (824/1,300 at the 10:16 UTC heartbeat); test-goal preparation follows.
   All 2,381 episodes present at the scope migration were retained.
 - **Passed:** the bulk server suite (36 tests) plus all 8 final targeted
   budget/training tests after the last changes; actual CUDA/NCCL, official encoder,
@@ -1160,3 +1160,19 @@ readback and snapshot retrieval succeeded via `target_server_2`. Four methods,
 seed 3072 and compute limits remain unchanged. Full training runs/checkpoints
 remain zero. No intervention was required; continue validation-candidate and
 then test-goal preparation before the registered bounded training queue.
+
+
+### 2026-10-08 10:16 UTC heartbeat
+
+Preparation advanced from 8,499 to 8,624 completed files. All 7,800 training
+episodes remain cached; validation candidates increased from 699 to 824:
+the first eight tasks through drawer-open have 100 each; faucet-open has 24.
+Recent expert collection reports success. These are data-collection outcomes,
+not trained-planner scores; test-goal preparation follows validation candidates.
+
+Supervisor 3126314 and all four workers remain active, frozen source is clean
+at `16747bb`, and only GPUs 0–3 are allocated. Health checks, fresh W&B online
+readback and snapshot retrieval succeeded via `target_server_2`. Four methods,
+seed 3072 and compute limits remain unchanged. Full training runs/checkpoints
+remain zero. No intervention was required; continue the registered preparation
+and bounded training queue.
