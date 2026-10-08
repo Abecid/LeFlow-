@@ -627,3 +627,18 @@ Fresh online W&B readback passed and confirms the registered four methods, seed
 the configured fallback route. Training runs/checkpoints remain zero while shared
 preparation continues. No recovery intervention was required; continue the
 registered bounded preparation/training/evaluation queue.
+
+### 2026-10-08 01:01 UTC heartbeat
+
+Preparation advanced from 3,233 to 3,379 completed episodes: 600 each for assembly,
+button-press-topdown, coffee-button, dial-turn and door-close, plus 379 door-open.
+Recent door-open expert rows include successes and an unsuccessful episode
+(`train/door-open/00377`); collection failures remain recorded, and these are not
+learned-planner evaluation results. Supervisor 3126314 and all four workers are
+active with clean frozen source `16747bb` and GPUs 0–3 only.
+
+Initial SSH handshakes timed out on both routes; a retry on `target_server_2_cf`
+succeeded, followed by a successful snapshot. The recovered health check and
+fresh online W&B readback confirm unchanged methods, seed and compute limits.
+Training runs/checkpoints remain zero pending shared preparation. No campaign
+process or configuration was changed. Continue the registered bounded queue.

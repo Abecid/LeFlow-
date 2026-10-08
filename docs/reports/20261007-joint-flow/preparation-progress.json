@@ -5,7 +5,7 @@
     "train/coffee-button": 600,
     "train/dial-turn": 600,
     "train/door-close": 600,
-    "train/door-open": 233
+    "train/door-open": 379
   },
-  "total": 3233
+  "total": 3379
 }
