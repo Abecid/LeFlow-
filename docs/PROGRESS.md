@@ -1295,3 +1295,24 @@ fallback exited with SSH status 255; retrying the primary alias succeeded.
 No campaign restart or code change was needed. Four methods, seed 3072 and
 compute limits remain unchanged; full training runs/checkpoints remain zero.
 Continue fixed test-goal preparation before bounded training/validation.
+
+### 2026-10-08 12:16 UTC heartbeat — healthy live check, snapshot unavailable
+
+The primary SSH health check succeeded. Supervisor 3126314, launcher 3128848
+and workers 3128857–3128860 were active in `prepare_data`; execution source was
+clean at `16747bb`. GPUs 0–3 held approximately 2.3 GiB each, and GPUs 4–7 were
+unused. Recent logs show continued expert goal preparation: worker 0 reached
+`test/coffee-button/00060`, worker 1 `test/coffee-button/00001`, and workers 2/3
+were finishing their button-press-topdown assignments. These are goal-data
+collection outcomes, not planner test scores. Full training runs/checkpoints
+remain zero, with four methods, seed 3072 and compute limits unchanged.
+
+Online W&B readback succeeded at 12:16:59 UTC. Its returned JSON is preserved
+in `online-readback.json` from the successful health-command output. Subsequent
+snapshot retrieval failed three times: primary alias, fallback alias, then
+primary retry all exited with SSH status 255; the final attempt explicitly
+reported a banner-exchange timeout. No snapshot files were updated by those
+failed requests. `preparation-progress.json` therefore remains the last complete
+snapshot (9,759 total files, including 659 test-goal candidates), not a current
+count. No restart or code change was made. Retry the snapshot at the next
+heartbeat and continue monitoring fixed test-goal preparation before training.
