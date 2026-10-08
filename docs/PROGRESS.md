@@ -10,10 +10,11 @@
   GPU-hours); validation used 1,780.427 seconds (1.97825 GPU-hours), separately
   accounted. W&B verified the run finished and both checkpoints are preserved:
   https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/fbcl549w.
-- **Live verified training:** `joint_flow_consistent_3072` has started on the
-  same four GPUs with the selected world checkpoint. Snapshot step 451 charges
-  128.055 optimization seconds (0.14228 GPU-hours), with no validation yet.
-  W&B readback at 19:47 UTC confirmed real training online at
+- **Live verified training:** `joint_flow_consistent_3072` reached step 3,704 on
+  the same four GPUs with the selected world checkpoint. Its ledger charges
+  1,006.832 optimization seconds (1.11870 GPU-hours), with no validation yet.
+  The generated consistency term is active after warmup, with finite metrics.
+  W&B readback at 20:02 UTC confirmed step 3,550 online at
   https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/32710958.
 - **Validation results:** CEM succeeded on 10/104 cases (9.62%) at step 5,000,
   9/104 (8.65%) at step 10,000, and 7/104 (6.73%) at both 15,000 and 20,000.
@@ -1995,3 +1996,28 @@ loss samples, checkpoints, compute ledgers and online evidence. Next: continue
 joint-flow training and its four validations, then LeFlow and HWM under the
 same allowances. Keep the 3,200-reset final tests sealed until all registered
 models finish; no additional experiments are queued.
+
+### 2026-10-08 20:01 UTC — joint-flow consistency active; training healthy
+
+Supervisor 142087, launcher 228925 and the four joint-flow ranks remain healthy
+in clean frozen `repo-throughput` at `56419ed`, using only GPUs 0–3. GPUs 4–7 are
+empty; the four-method, seed-3072 scope and original compute limits are unchanged.
+No restart or source change was needed. Shared world completion and all four
+CEM validations remain preserved; no learned-head validation or final test has
+run yet.
+
+The snapshot reached step 3,704 with 1,006.832 charged optimization seconds
+(1.118702 GPU-hours), no validation charge and no last-update overrun. All saved
+numeric metrics are finite, and training steps/charged seconds are monotonic.
+At step 3,700, total loss was 1.422912, action objective 0.189655, state objective
+1.053448 and generated consistency 2.116640 with weight 0.08495. The first sampled
+positive consistency weight occurs at step 2,050, after the registered 10% warmup;
+the ramp is operating as configured. These are training diagnostics, not task
+success results. The durable `last.pt` remains present at 45,396,953 bytes.
+
+W&B API readback at 20:02:00 UTC verified `32710958` running at step 3,550 with
+active consistency weight; `fbcl549w` remains finished. Downloaded updated loss
+samples, charged compute, checkpoint metadata and online evidence through
+`target_server_2_cf`. Next: continue to the first registered 104-case joint-flow
+validation milestone, then the remaining unchanged queue. Final testing stays
+sealed until all registered models finish.
