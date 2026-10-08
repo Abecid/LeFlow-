@@ -10,13 +10,18 @@
   GPU-hours); validation used 1,780.427 seconds (1.97825 GPU-hours), separately
   accounted. W&B verified the run finished and both checkpoints are preserved:
   https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/fbcl549w.
-- **Live verified training:** `joint_flow_consistent_3072` reached step 3,704 on
-  the same four GPUs with the selected world checkpoint. Its ledger charges
-  1,006.832 optimization seconds (1.11870 GPU-hours), with no validation yet.
-  The generated consistency term is active after warmup, with finite metrics.
-  W&B readback at 20:02 UTC confirmed step 3,550 online at
+- **Live verified training:** `joint_flow_consistent_3072` resumed after its first
+  validation and reached step 5,355. Its ledger charges 1,457.400 optimization
+  seconds (1.61933 GPU-hours), plus 527.507 validation seconds (0.58612 GPU-hours).
+  The consistency weight is now 0.1, with finite training metrics. W&B readback
+  at 20:18 UTC confirmed step 5,100 and the first validation online at
   https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/32710958.
-- **Validation results:** CEM succeeded on 10/104 cases (9.62%) at step 5,000,
+- **First joint-flow validation:** 23/104 successes (22.12%), with all 81 timeouts
+  retained as failures. Using the same selected world and paired resets, CEM
+  achieved 7/104 (6.73%): joint-flow retained those seven successes and added 16.
+  This is an intermediate validation comparison; LeFlow/HWM and final tests are
+  still pending, so it does not establish the completed four-method ranking.
+- **CEM validation results:** CEM succeeded on 10/104 cases (9.62%) at step 5,000,
   9/104 (8.65%) at step 10,000, and 7/104 (6.73%) at both 15,000 and 20,000.
   Round four had drawer-close 5/8 and handle-press 2/8; the other 11 tasks had
   zero successes. All 97 failures exhausted the 10-second controller allowance
@@ -2021,3 +2026,41 @@ samples, charged compute, checkpoint metadata and online evidence through
 `target_server_2_cf`. Next: continue to the first registered 104-case joint-flow
 validation milestone, then the remaining unchanged queue. Final testing stays
 sealed until all registered models finish.
+
+### 2026-10-08 20:16 UTC — first joint-flow validation completed and verified online
+
+Joint-flow step 5,000 completed its first registered 104-case validation with
+23 successes (22.115% macro), retaining all 81 controller timeouts (77.885%) as
+failures. Drawer-close achieved 8/8, door-close 6/8, handle-press 5/8 and dial-turn
+4/8; the other nine tasks had zero successes. Success within 50/100/200 primitive
+actions was 12/19/23 out of 104. Mean controller time was 9.012 seconds/episode,
+mean step latency 173.47 ms and p95 177.43 ms; recorded mean safe-boundary overrun
+was 0.02690 seconds. The per-episode report preserves every outcome.
+
+Verified identical episode IDs, hashes, reset seeds, training seed 3072 and the
+10-second cap against CEM using the selected step-20,000 shared world. All seven
+CEM-success cases also succeeded under this joint-flow checkpoint, another 16
+changed to success, and 81 failed under both. This is useful early validation
+evidence under the matched controller allowance, not a final test result or an
+established advantage over the other learned methods. Joint-flow is still
+training and LeFlow/HWM have not yet trained. No selection rule, budget or
+follow-up experiment was changed in response to these results.
+
+The first round charged 527.507 validation seconds (0.586118 GPU-hours), separate
+from optimization. Training resumed normally and the later snapshot reached
+step 5,355, charging 1,457.400 optimization seconds (1.619333 GPU-hours), with no
+last-update overrun. At step 5,350, finite loss was 1.407499, generated consistency
+1.921402 and consistency weight 0.1. Both `best.pt` and `last.pt` are present at
+45,396,953 bytes each. Fresh W&B API readback at 20:18:23 UTC verified run
+`32710958` online at step 5,100 with the 104-episode result and separate validation
+cost. The completed world run remains finished.
+
+Supervisor 142087 and the same four training ranks remain healthy in clean
+frozen `repo-throughput` at `56419ed`; only GPUs 0–3 are occupied, with 4–7 empty.
+Both scope-change records still match the authorized protocol. Downloaded the
+snapshot through `target_server_2_cf` and verified finite metrics, monotonic
+charged compute, 104 unique paired cases and all timeout failures. Preserved
+`runs/joint_flow_consistent_3072/validation/step_0005000.json`, updated checkpoints,
+loss samples, compute ledger and fresh online readback. Next: complete the
+remaining three joint-flow validations and the registered LeFlow/HWM training
+queue. Final testing remains sealed until all registered models finish.

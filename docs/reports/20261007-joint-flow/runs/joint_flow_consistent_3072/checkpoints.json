@@ -1,7 +1,12 @@
 {
+  "best.pt": {
+    "bytes": 45396953,
+    "mtime_ns": 1791490622877166751,
+    "path": "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/runs/joint_flow_consistent_3072/best.pt"
+  },
   "last.pt": {
     "bytes": 45396953,
-    "mtime_ns": 1791489548136962363,
+    "mtime_ns": 1791490622770660345,
     "path": "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/runs/joint_flow_consistent_3072/last.pt"
   }
 }
