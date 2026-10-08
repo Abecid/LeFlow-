@@ -613,3 +613,17 @@ preparation. The primary SSH health check succeeded, but the subsequent snapshot
 SSH connection exited 255; retry through configured `target_server_2_cf` succeeded.
 No campaign process was restarted or changed. Continue the registered bounded
 preparation/training/evaluation queue.
+
+### 2026-10-08 00:46 UTC heartbeat
+
+Preparation advanced from 3,109 to 3,233 completed episodes: 600 each for assembly,
+button-press-topdown, coffee-button, dial-turn and door-close, plus 233 door-open.
+Recent expert door-open collection reports success. Supervisor 3126314 and all
+four workers remain active, execution source is clean at `16747bb`, and allocation
+remains GPUs 0–3.
+
+Fresh online W&B readback passed and confirms the registered four methods, seed
+3072 and unchanged compute limits. The compact snapshot was retrieved through
+the configured fallback route. Training runs/checkpoints remain zero while shared
+preparation continues. No recovery intervention was required; continue the
+registered bounded preparation/training/evaluation queue.
