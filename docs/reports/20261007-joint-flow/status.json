@@ -14,9 +14,9 @@
     "--root",
     "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign",
     "--run-dir",
-    "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/runs/joint_flow_consistent_3072",
+    "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/runs/leflow_adapted_3072",
     "--method",
-    "joint_flow_consistent",
+    "leflow_adapted",
     "--seed",
     "3072",
     "--world",
@@ -40,6 +40,6 @@
       "GPU-64e751ee-abb6-120c-f346-311e789228c7"
     ]
   ],
-  "stage": "joint_flow_consistent_3072",
+  "stage": "leflow_adapted_3072",
   "status": "running"
 }
