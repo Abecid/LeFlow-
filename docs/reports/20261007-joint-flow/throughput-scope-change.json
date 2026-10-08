@@ -1,0 +1,126 @@
+{
+  "timestamp": "2026-10-08T18:24:12.162625+00:00",
+  "old_code": "16747bb451915b2488c67f5d550a97c1b0411290",
+  "new_code": "56419ed14cf127d4b7a8ab09a9d68e6681d2edc0",
+  "old_methods": [
+    "joint_flow_consistent",
+    "leflow_adapted",
+    "hwm_adapted",
+    "cem_long"
+  ],
+  "methods": [
+    "joint_flow_consistent",
+    "leflow_adapted",
+    "hwm_adapted",
+    "cem_long"
+  ],
+  "seeds": [
+    3072
+  ],
+  "optimization_seconds_per_model": 7200,
+  "max_updates": 20000,
+  "max_gpus": 4,
+  "controller_seconds_per_episode": 10,
+  "validation_episodes": 104,
+  "test_episodes_per_method": 3200,
+  "no_ablations": true,
+  "data_protocol": "d2e0a5a0f7f14d94953122c9d09a7bc02c11415301cf81077ca4f66ab225f429",
+  "protocol": "50c4b357c19f15494971cd65fe0e524f740c92d0c2d6c9ec6631981272cdea71",
+  "completed_episodes_before": 14230,
+  "completed_episodes_retained": 14230,
+  "original_metadata_archive": "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/throughput-scope-change-20261008",
+  "tests": {
+    "server_suite_passed": 43,
+    "real_equivalence_cases": 20,
+    "end_to_end_cache_variants": 2
+  },
+  "preparation": {
+    "workers_per_gpu": 12,
+    "manifest_workers": 8,
+    "collector": "exact_action_replay_goals_v1",
+    "encoder_batch": 64,
+    "goal_batch": 64,
+    "bounded_prefetch": true,
+    "asynchronous_writes": true
+  },
+  "old_supervisor": 3126314,
+  "old_process_tree_stopped": true,
+  "source_checkout": "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/repo-throughput",
+  "data_config": "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/repo/config/flow_metaworld.json",
+  "supervisor_pid": 142087,
+  "preserved_cache_hashes": "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/throughput-scope-change-20261008/preexisting-cache-sha256.json",
+  "cache_preservation_verified": true,
+  "preserved_hashes_checked": 14230,
+  "preservation_checked_at": "2026-10-08T18:30:26.337920+00:00",
+  "live_preparation": {
+    "completed_after_switch": 1270,
+    "max_rank_elapsed_seconds": 42.200194358825684,
+    "files_per_second_approx": 30.09464812415951,
+    "last_rank_events": {
+      "0": {
+        "event": "cached_episode",
+        "episode": "test/push/00396",
+        "success": true,
+        "collection_seconds": 1.6202392131090164,
+        "encoding_seconds": 0.01679785285765926,
+        "write_seconds": 0.0127498097717762,
+        "rank": 0,
+        "completed": 292,
+        "elapsed_seconds": 35.68896505050361
+      },
+      "1": {
+        "event": "cached_episode",
+        "episode": "test/push/00393",
+        "success": true,
+        "collection_seconds": 1.3204723000526428,
+        "encoding_seconds": 0.02029268443584442,
+        "write_seconds": 0.012592580169439316,
+        "rank": 1,
+        "completed": 324,
+        "elapsed_seconds": 41.606419852003455
+      },
+      "3": {
+        "event": "cached_episode",
+        "episode": "test/push/00379",
+        "success": true,
+        "collection_seconds": 1.2860115766525269,
+        "encoding_seconds": 0.017999146399753436,
+        "write_seconds": 0.011633969843387604,
+        "rank": 3,
+        "completed": 327,
+        "elapsed_seconds": 41.97425066307187
+      },
+      "2": {
+        "event": "cached_episode",
+        "episode": "test/push/00366",
+        "success": true,
+        "collection_seconds": 1.3827822413295507,
+        "encoding_seconds": 0.018075443538171903,
+        "write_seconds": 0.011622942984104156,
+        "rank": 2,
+        "completed": 327,
+        "elapsed_seconds": 42.200194358825684
+      }
+    },
+    "all_candidate_files": 15500
+  },
+  "training_online": {
+    "checked_at": "2026-10-08T18:32:55.252554+00:00",
+    "url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/fbcl549w",
+    "state": "running",
+    "code": "56419ed14cf127d4b7a8ab09a9d68e6681d2edc0",
+    "method": "world",
+    "seed": 3072,
+    "fixture": false,
+    "summary": {
+      "step": 1400,
+      "train/loss": 0.030240148305892944,
+      "train/dynamics": 0.030240148305892944,
+      "budget/training_seconds": 193.4589584805071,
+      "budget/training_gpu_hours": 0.2149543983116746
+    },
+    "verified_online": true,
+    "checkpoint_exists": true,
+    "validation_reports": 0
+  }
+}

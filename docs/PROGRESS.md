@@ -2,40 +2,35 @@
 
 ## Current verified state
 
-- **Throughput migration IN PROGRESS:** user authorized lossless hardware tuning.
-  The existing supervisor may continue preparation; the monitor must remain
-  read-only and must not commit pending edits or relaunch a supervisor.
-
-- **Four-method migration complete:** only joint_flow_consistent, leflow_adapted,
-  hwm_adapted and cem_long, exactly one seed (3072). No ablations, extra seeds,
-  or automatic expansion. See `FIRST_PASS.md` for the evidence and scope.
-- **Budget:** each learned model gets 7,200 optimization seconds or 20,000 updates
-  on the same four GPUs, whichever ends first. One shared world plus three heads:
-  up to 32 optimization GPU-hours, plus separately recorded preparation/evaluation
-  and reported last-update overruns. Every controller gets 10 seconds per episode.
-- **Matched data:** identical learned-head windows, shared encoder/fine world,
-  four periodic 104-episode validation rounds, and 3,200 fixed test resets per
-  method after training. Validation metrics are logged online to W&B.
-- **Running:** supervisor PID 3126314 on target_server_2, limited to GPUs 0–3.
-  The revised online launch check and actual four-rank GPU preflight passed;
-  all 7,800 training episodes and 1,300 validation candidates are cached.
-  All four workers are now preparing fixed test-goal candidates (4,694/6,400
-  at the 17:46 UTC heartbeat), before full training and planner evaluation.
-  All 2,381 episodes present at the scope migration were retained.
-- **Passed:** the bulk server suite (36 tests) plus all 8 final targeted
-  budget/training tests after the last changes; actual CUDA/NCCL, official encoder,
-  repeatable renderer and two optimizer updates for each selected architecture.
-- **Frozen execution revision:** `16747bb451915b2488c67f5d550a97c1b0411290`
-  in server checkout `repo-first-pass`. `launch.sh` uses its execution config and
-  the original `repo/config/flow_metaworld.json` only as `--data-config` for cache
-  compatibility. Older supervisors are stopped and must not be restarted.
-  The desktop reporting branch advances independently; never pull into the
-  running execution checkout.
-- **Continuity:** detached supervisor, persistent records, GitHub evidence backups,
-  and the existing 15-minute heartbeat. W&B launch check:
-  https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/jhc5g1dk.
-- **No benchmark results yet:** shared preparation is still required before full
-  model training and the frozen test comparison. No improvement is claimed.
+- **Throughput migration complete; training is running.** All 15,500 candidate
+  cache files are prepared. The frozen manifest selects 7,800 training, 650
+  validation and 3,200 test episodes. No full comparison result exists yet.
+- **Live verified training:** shared world model `world_3072`, four GPUs, online
+  W&B step 1,400 with finite dynamics loss 0.03024 and a saved checkpoint. First
+  periodic evaluation remains pending; the initial real training metrics are at
+  https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/fbcl549w.
+- **Lossless throughput changes:** 48 CPU producers, encoder/goal batches of 64,
+  replay-based two-image test collection, overlapped writes and parallel ordered
+  cache summarization. Final 1,270 files took about 42.2 seconds of worker elapsed
+  time (approximately 30 files/second). See `THROUGHPUT.md` for measured limits.
+- **Preservation verified:** all 14,230 pre-existing cache file SHA-256 hashes
+  matched again after optimized preparation completed. No cases, image resolution,
+  numerical precision, model weights, split definitions or screening rules changed.
+- **Fixed experiment:** only joint_flow_consistent, leflow_adapted, hwm_adapted
+  and cem_long; one seed, 3072; no ablations or automatic expansion. Each learned
+  model gets 7,200 optimization seconds or 20,000 updates on the same four GPUs,
+  whichever ends first. Shared preparation/evaluation are accounted separately.
+  Periodic evaluation uses 104 fixed cases; final testing uses 3,200 per method.
+- **Passed:** 43 server tests; 20 real trajectory/image equivalence cases covering
+  all 16 tasks; two end-to-end cache checks with exact arrays/statistics; actual
+  four-rank CUDA/NCCL/encoder/renderer/planner-gradient preflight.
+- **Frozen execution:** `56419ed14cf127d4b7a8ab09a9d68e6681d2edc0` in server
+  `repo-throughput`; supervisor PID 142087; launcher `launch.sh`; supervisor log
+  `launcher-throughput.log`. `repo/config/flow_metaworld.json` is only the original
+  `--data-config`. Older supervisors are stopped and must not be restarted.
+- **Continuity:** the existing 15-minute monitor now follows the optimized run.
+  Persistent results stay on the server; compact evidence is published from this
+  separate desktop checkout. Never pull reports into the running source checkout.
 
 ## 2026-10-07 — recovered interrupted work
 
@@ -1746,3 +1741,48 @@ published and transferred. Migration remains in progress; the existing heartbeat
 is restricted to read-only checks until deployment and cache preservation are
 verified. Next: switch to a new frozen checkout, preserve completed files, verify
 actual throughput and the transition into training with W&B logs.
+
+### 2026-10-08 18:24 UTC — optimized supervisor deployed; cache hashes verified
+
+Frozen execution revision `56419ed14cf127d4b7a8ab09a9d68e6681d2edc0` is deployed
+in `repo-throughput`. The dry run confirmed the scientific execution and original
+data protocol digests are unchanged. The old preparation-only supervisor and its
+verified process tree were stopped before any training run existed. All 14,230
+completed files were retained; every file was hashed before launch and checked
+again afterward with no changes, including unselected goal candidates.
+
+New supervisor PID 142087 uses updated `launch.sh` with 12 producers/GPU, prefetch
+24/GPU, encoder/goal batches 64, eight manifest readers, and only GPUs 0–3. Its log
+is `launcher-throughput.log`. Previous metadata and complete cache hash baseline
+are archived under `throughput-scope-change-20261008` in the server record.
+`campaign/throughput-scope-change.json` records the switch and verified hashes.
+Fresh W&B API readback confirmed revision, methods, seed, budgets and preparation
+settings: https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/8eme1wa7.
+GPU gates and live throughput are being verified; the monitor remains read-only
+until these checks complete. No optimizer training had started at this check.
+
+### 2026-10-08 18:32 UTC — migration complete; real training verified online
+
+The new four-rank GPU preflight passed. Preparation then wrote all remaining
+1,270 files with a maximum rank elapsed time of 42.200 seconds, approximately
+30.09 files/second across the four ranks. All 15,500 candidates are now present.
+This is around 150 times the preceding live goal-collection rate, with differing
+nearby task mixes; the separate same-case equivalence timings establish the
+per-episode improvement. Startup/GPU gating and final manifest checks are outside
+that 42-second worker timing and are not hidden inside the throughput claim.
+
+Every one of the 14,230 pre-existing files was SHA-256 checked again after
+preparation, all unchanged. Goal screening produced the complete registered
+650 validation and 3,200 test cases, and the manifest contains 11,650 entries.
+The supervisor automatically advanced into shared world training. At 18:32 UTC
+(11:32 a.m. America/Los_Angeles), W&B API readback confirmed real run `fbcl549w`
+active at step 1,400, loss 0.0302401, training time 193.46 seconds, four GPUs,
+seed 3072 and the new frozen code. A durable `last.pt` exists. There are no
+validation reports yet; the first evaluation occurs at the first budget/update
+milestone. These loss metrics are not benchmark success results.
+
+The existing heartbeat was updated to the optimized checkout, launcher and
+provenance. Its temporary read-only migration restriction is removed. Next:
+continue world training and periodic CEM/world validation, then the three selected
+learned heads and their periodic evaluations, followed by the fixed paired final
+test. No extra seeds, methods, ablations or budget increases are scheduled.

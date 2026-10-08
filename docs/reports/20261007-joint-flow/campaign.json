@@ -1,5 +1,5 @@
 {
-  "code": "16747bb451915b2488c67f5d550a97c1b0411290",
+  "code": "56419ed14cf127d4b7a8ab09a9d68e6681d2edc0",
   "configuration": {
     "data": {
       "action_repeat": 2,
@@ -123,6 +123,15 @@
   ],
   "independent_test_resets": 3200,
   "max_gpus": 4,
+  "preparation": {
+    "asynchronous_writes": true,
+    "bounded_prefetch": true,
+    "collector": "exact_action_replay_goals_v1",
+    "encoder_batch": 64,
+    "goal_batch": 64,
+    "manifest_workers": 8,
+    "workers_per_gpu": 12
+  },
   "protocol": "50c4b357c19f15494971cd65fe0e524f740c92d0c2d6c9ec6631981272cdea71",
   "rendering": {
     "backend": "egl",

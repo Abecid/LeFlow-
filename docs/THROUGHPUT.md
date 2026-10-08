@@ -53,3 +53,16 @@ throughput-scope-change.json. The existing completed cache is retained. CPU-only
 render rates are not claimed as end-to-end rates; live progress after migration
 will be recorded in PROGRESS.md. These tests establish equivalence on the checked
 cases; they are not a benchmark-success result or a universal performance proof.
+
+## Verified live outcome
+
+The deployed revision `56419ed` completed the remaining 1,270 candidate files in
+42.200 seconds of maximum per-rank worker elapsed time (about 30.09 files/second).
+This excludes launcher/GPU checks, encoder initialization and final manifest work.
+All 15,500 files are complete. All 14,230 pre-existing files passed SHA-256 checks
+after the optimized preparation, and the registered goal screening remained intact.
+World training automatically started; real step/loss/checkpoint records are online
+at https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/fbcl549w. The first verified
+online checkpoint in this report was step 1,400 with loss 0.0302401; evaluation
+results were still pending. Detailed live evidence is in throughput-scope-change.json
+under the campaign reports, and subsequent progress is recorded in PROGRESS.md.

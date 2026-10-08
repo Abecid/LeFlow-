@@ -1,0 +1,258 @@
+{
+  "encoder": "7ea9b7cb4a75d10644a8a8d42cff9e177b10dca8f02173f0eaf2b0bed82838c6",
+  "entries": 11650,
+  "expert_success": {
+    "test/assembly": 1.0,
+    "test/button-press-topdown": 1.0,
+    "test/coffee-button": 1.0,
+    "test/dial-turn": 1.0,
+    "test/door-close": 1.0,
+    "test/door-open": 0.9375,
+    "test/drawer-close": 1.0,
+    "test/drawer-open": 1.0,
+    "test/faucet-open": 1.0,
+    "test/handle-press": 1.0,
+    "test/handle-pull": 1.0,
+    "test/pick-place": 1.0,
+    "test/plate-slide": 1.0,
+    "test/push": 1.0,
+    "test/reach": 1.0,
+    "test/window-open": 1.0,
+    "train/assembly": 1.0,
+    "train/button-press-topdown": 1.0,
+    "train/coffee-button": 1.0,
+    "train/dial-turn": 1.0,
+    "train/door-close": 1.0,
+    "train/door-open": 0.9625,
+    "train/drawer-close": 1.0,
+    "train/drawer-open": 1.0,
+    "train/faucet-open": 1.0,
+    "train/handle-press": 1.0,
+    "train/pick-place": 1.0,
+    "train/plate-slide": 1.0,
+    "train/reach": 1.0,
+    "validation/assembly": 1.0,
+    "validation/button-press-topdown": 1.0,
+    "validation/coffee-button": 1.0,
+    "validation/dial-turn": 1.0,
+    "validation/door-close": 1.0,
+    "validation/door-open": 0.97,
+    "validation/drawer-close": 1.0,
+    "validation/drawer-open": 1.0,
+    "validation/faucet-open": 1.0,
+    "validation/handle-press": 1.0,
+    "validation/pick-place": 1.0,
+    "validation/plate-slide": 1.0,
+    "validation/reach": 1.0
+  },
+  "fixture": false,
+  "goal_screening": {
+    "test/assembly": {
+      "attempted": 400,
+      "failed_ids": [],
+      "selected": 200,
+      "valid": 400
+    },
+    "test/button-press-topdown": {
+      "attempted": 400,
+      "failed_ids": [],
+      "selected": 200,
+      "valid": 400
+    },
+    "test/coffee-button": {
+      "attempted": 400,
+      "failed_ids": [],
+      "selected": 200,
+      "valid": 400
+    },
+    "test/dial-turn": {
+      "attempted": 400,
+      "failed_ids": [],
+      "selected": 200,
+      "valid": 400
+    },
+    "test/door-close": {
+      "attempted": 400,
+      "failed_ids": [],
+      "selected": 200,
+      "valid": 400
+    },
+    "test/door-open": {
+      "attempted": 400,
+      "failed_ids": [
+        "test/door-open/00034",
+        "test/door-open/00038",
+        "test/door-open/00058",
+        "test/door-open/00060",
+        "test/door-open/00062",
+        "test/door-open/00122",
+        "test/door-open/00125",
+        "test/door-open/00126",
+        "test/door-open/00145",
+        "test/door-open/00172",
+        "test/door-open/00174",
+        "test/door-open/00185",
+        "test/door-open/00186",
+        "test/door-open/00195",
+        "test/door-open/00208",
+        "test/door-open/00212",
+        "test/door-open/00215",
+        "test/door-open/00239",
+        "test/door-open/00248",
+        "test/door-open/00319",
+        "test/door-open/00322",
+        "test/door-open/00324",
+        "test/door-open/00330",
+        "test/door-open/00331",
+        "test/door-open/00358"
+      ],
+      "selected": 200,
+      "valid": 375
+    },
+    "test/drawer-close": {
+      "attempted": 400,
+      "failed_ids": [],
+      "selected": 200,
+      "valid": 400
+    },
+    "test/drawer-open": {
+      "attempted": 400,
+      "failed_ids": [],
+      "selected": 200,
+      "valid": 400
+    },
+    "test/faucet-open": {
+      "attempted": 400,
+      "failed_ids": [],
+      "selected": 200,
+      "valid": 400
+    },
+    "test/handle-press": {
+      "attempted": 400,
+      "failed_ids": [],
+      "selected": 200,
+      "valid": 400
+    },
+    "test/handle-pull": {
+      "attempted": 400,
+      "failed_ids": [],
+      "selected": 200,
+      "valid": 400
+    },
+    "test/pick-place": {
+      "attempted": 400,
+      "failed_ids": [],
+      "selected": 200,
+      "valid": 400
+    },
+    "test/plate-slide": {
+      "attempted": 400,
+      "failed_ids": [],
+      "selected": 200,
+      "valid": 400
+    },
+    "test/push": {
+      "attempted": 400,
+      "failed_ids": [],
+      "selected": 200,
+      "valid": 400
+    },
+    "test/reach": {
+      "attempted": 400,
+      "failed_ids": [],
+      "selected": 200,
+      "valid": 400
+    },
+    "test/window-open": {
+      "attempted": 400,
+      "failed_ids": [],
+      "selected": 200,
+      "valid": 400
+    },
+    "validation/assembly": {
+      "attempted": 100,
+      "failed_ids": [],
+      "selected": 50,
+      "valid": 100
+    },
+    "validation/button-press-topdown": {
+      "attempted": 100,
+      "failed_ids": [],
+      "selected": 50,
+      "valid": 100
+    },
+    "validation/coffee-button": {
+      "attempted": 100,
+      "failed_ids": [],
+      "selected": 50,
+      "valid": 100
+    },
+    "validation/dial-turn": {
+      "attempted": 100,
+      "failed_ids": [],
+      "selected": 50,
+      "valid": 100
+    },
+    "validation/door-close": {
+      "attempted": 100,
+      "failed_ids": [],
+      "selected": 50,
+      "valid": 100
+    },
+    "validation/door-open": {
+      "attempted": 100,
+      "failed_ids": [
+        "validation/door-open/00047",
+        "validation/door-open/00060",
+        "validation/door-open/00089"
+      ],
+      "selected": 50,
+      "valid": 97
+    },
+    "validation/drawer-close": {
+      "attempted": 100,
+      "failed_ids": [],
+      "selected": 50,
+      "valid": 100
+    },
+    "validation/drawer-open": {
+      "attempted": 100,
+      "failed_ids": [],
+      "selected": 50,
+      "valid": 100
+    },
+    "validation/faucet-open": {
+      "attempted": 100,
+      "failed_ids": [],
+      "selected": 50,
+      "valid": 100
+    },
+    "validation/handle-press": {
+      "attempted": 100,
+      "failed_ids": [],
+      "selected": 50,
+      "valid": 100
+    },
+    "validation/pick-place": {
+      "attempted": 100,
+      "failed_ids": [],
+      "selected": 50,
+      "valid": 100
+    },
+    "validation/plate-slide": {
+      "attempted": 100,
+      "failed_ids": [],
+      "selected": 50,
+      "valid": 100
+    },
+    "validation/reach": {
+      "attempted": 100,
+      "failed_ids": [],
+      "selected": 50,
+      "valid": 100
+    }
+  },
+  "protocol": "50c4b357c19f15494971cd65fe0e524f740c92d0c2d6c9ec6631981272cdea71",
+  "sha256": "a02de61cc226a605e552320fb35f732d2fb8be465675b0401dbc556982c1ae65",
+  "statistics_scope": "training_episodes_only"
+}

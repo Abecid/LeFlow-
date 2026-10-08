@@ -1,7 +1,6 @@
 {
-  "checked_at": "2026-10-08T17:46:55.217951+00:00",
-  "checkpoints": 0,
-  "code": "16747bb451915b2488c67f5d550a97c1b0411290",
+  "checked_at": "2026-10-08T18:30:26.337920+00:00",
+  "code": "56419ed14cf127d4b7a8ab09a9d68e6681d2edc0",
   "controller_seconds_per_episode": 10,
   "execution_methods": [
     "joint_flow_consistent",
@@ -12,10 +11,17 @@
   "execution_seeds": [
     3072
   ],
-  "job_type": "launch-check",
   "optimization_seconds_per_model": 7200,
+  "preparation": {
+    "asynchronous_writes": true,
+    "bounded_prefetch": true,
+    "collector": "exact_action_replay_goals_v1",
+    "encoder_batch": 64,
+    "goal_batch": 64,
+    "manifest_workers": 8,
+    "workers_per_gpu": 12
+  },
   "state": "finished",
-  "training_runs_created": 0,
-  "url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/jhc5g1dk",
+  "url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/8eme1wa7",
   "verified_online": true
 }
