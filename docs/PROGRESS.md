@@ -10,12 +10,13 @@
   GPU-hours); validation used 1,780.427 seconds (1.97825 GPU-hours), separately
   accounted. W&B verified the run finished and both checkpoints are preserved:
   https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/fbcl549w.
-- **Live verified training:** `joint_flow_consistent_3072` resumed after its
-  third validation and reached step 17,531. Its ledger charges 4,820.500
-  optimization seconds (5.35611 GPU-hours), plus 1,574.092 seconds (1.74899
-  GPU-hours) for three completed validations. The consistency weight is 0.1 and
-  training metrics are finite. W&B readback at 21:32 UTC confirmed step 17,300
-  and the third validation online at
+- **Joint-flow at its update cap:** `joint_flow_consistent_3072` reached step
+  20,000 and is running its fourth validation. Optimization used 5,498.695
+  seconds (6.10966 GPU-hours), below the 7,200-second allowance; three completed
+  validations used 1,574.092 seconds (1.74899 GPU-hours). The active round is
+  charged at completion. Final training metrics are finite with consistency
+  weight 0.1. W&B readback at 21:47 UTC confirmed step 19,950 and the third
+  validation online at
   https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/32710958.
 - **Joint-flow validation:** the first three rounds achieved 23/104 (22.12%),
   17/104 (16.35%) and 16/104 (15.38%) successes. All 88 third-round timeouts
@@ -2225,3 +2226,29 @@ earlier joint-flow rounds and selected-world CEM. Preserved the complete third
 validation and updated compute, checkpoint, loss and online records. Next:
 finish joint-flow's fourth validation, then the unchanged LeFlow/HWM queue.
 No final test report exists; final testing remains sealed.
+
+### 2026-10-08 21:46 UTC — joint-flow reached update cap; fourth validation active
+
+Joint-flow reached its 20,000-update ceiling after 5,498.695 optimization seconds
+(6.109661 GPU-hours), below the 7,200-second allowance and with no last-update
+overrun. The fourth validation is advancing through its episode logs; the
+completion record and fourth result are not yet available. The previous three
+validations remain separately charged at 1,574.092 seconds (1.748991 GPU-hours).
+The active validation's cost will be recorded at completion.
+
+At step 20,000, finite training loss is 1.242981, generated consistency 1.765469
+and consistency weight 0.1. Both checkpoints remain present at 45,396,953 bytes;
+the first validation's best checkpoint metadata is unchanged. W&B API readback
+at 21:47:03 UTC confirmed `32710958` running at step 19,950 with the three
+completed validation rounds online; `fbcl549w` remains finished.
+
+Supervisor 142087, launcher 228925 and the same four ranks remain healthy in
+clean frozen `repo-throughput` at `56419ed`, assigned only GPUs 0–3, while 4–7
+remain empty. Both scope-change records retain the authorized methods, seed and
+budgets. No restart or source change was needed. Downloaded the snapshot through
+`target_server_2_cf`; checked finite metrics, the update ceiling, monotonic
+charged compute and unchanged best checkpoint. Preserved updated losses,
+checkpoint metadata, compute usage and online evidence. Next: preserve the
+fourth validation and completion record, then verify the supervisor proceeds to
+LeFlow on the same allocation. HWM follows; final testing stays sealed and no
+test report exists.
