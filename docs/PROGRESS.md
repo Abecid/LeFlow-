@@ -10,19 +10,19 @@
   GPU-hours); validation used 1,780.427 seconds (1.97825 GPU-hours), separately
   accounted. W&B verified the run finished and both checkpoints are preserved:
   https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/fbcl549w.
-- **Live verified training:** `joint_flow_consistent_3072` reached step 15,000
-  and is running its third validation. Its ledger charges 4,121.427 optimization
-  seconds (4.57936 GPU-hours), plus 1,057.890 seconds (1.17543 GPU-hours) for two
-  completed validations; the active round is charged at completion. The
-  consistency weight is 0.1 and training metrics are finite. W&B readback at
-  21:17 UTC confirmed step 14,950 and the second validation online at
+- **Live verified training:** `joint_flow_consistent_3072` resumed after its
+  third validation and reached step 17,531. Its ledger charges 4,820.500
+  optimization seconds (5.35611 GPU-hours), plus 1,574.092 seconds (1.74899
+  GPU-hours) for three completed validations. The consistency weight is 0.1 and
+  training metrics are finite. W&B readback at 21:32 UTC confirmed step 17,300
+  and the third validation online at
   https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/32710958.
-- **Joint-flow validation declined:** step 10,000 achieved 17/104 successes
-  (16.35%), down from 23/104 (22.12%) at step 5,000. Eight earlier successes
-  became timeouts and two earlier failures succeeded; all 87 second-round
-  timeouts remain failures. The step-5,000 best checkpoint remains preserved
+- **Joint-flow validation:** the first three rounds achieved 23/104 (22.12%),
+  17/104 (16.35%) and 16/104 (15.38%) successes. All 88 third-round timeouts
+  remain failures. Relative to round two, four successes became timeouts and
+  three failures succeeded. The step-5,000 best checkpoint remains preserved
   under the registered validation selection rule. CEM using the same selected
-  world achieved 7/104 (6.73%); both joint-flow rounds retained those successes.
+  world achieved 7/104 (6.73%); all joint-flow rounds retained those successes.
   These are intermediate validations; LeFlow/HWM and final tests remain pending.
 - **CEM validation results:** CEM succeeded on 10/104 cases (9.62%) at step 5,000,
   9/104 (8.65%) at step 10,000, and 7/104 (6.73%) at both 15,000 and 20,000.
@@ -2177,3 +2177,51 @@ Preserved loss samples, checkpoint metadata, compute ledger and fresh online
 evidence. Next: preserve the completed third validation and continue the
 registered queue. LeFlow/HWM are pending, and no final test report exists;
 testing remains sealed until all registered models finish.
+
+### 2026-10-08 21:31 UTC — third joint-flow validation complete; first remains best
+
+Joint-flow step 15,000 completed its third validation with 16/104 successes
+(15.385%), compared with 23/104 and 17/104 in the first two rounds. Drawer-close
+and handle-press each achieved 7/8; door-close achieved 2/8, and the other ten
+tasks had no successes. All 88 controller timeouts remain failures. Success
+within 50/100/200 primitive actions was 13/16/16 out of 104. Mean controller
+time was 8.986 seconds/episode, mean step latency 173.17 ms and p95 177.24 ms;
+mean safe-boundary overrun was 0.02290 seconds. Mean return was 114.161 and
+observed subgoal cosine was 0.253515.
+
+Paired failure inspection against round two found 13 successes under both,
+four success-to-timeout transitions, three failure-to-success transitions and
+84 failures under both. Lost successes were dial-turn 00002 and door-close
+00001/00002/00007; gains were drawer-close 00007 and handle-press 00005/00007.
+Against round one there were nine lost successes and two gains. All seven
+selected-world CEM successes remain successful, plus nine other cases. The
+step-5,000 checkpoint still has the highest validation success and its file
+metadata is unchanged. The current results do not identify the cause of the
+decline or establish a ranking against the untrained LeFlow/HWM methods.
+
+A possible follow-up after the four-method first pass is a matched comparison
+with generated-plan consistency disabled, keeping the joint planner and all
+other settings fixed. That would test the regularizer's contribution; these
+checkpoint comparisons cannot isolate it. This is a proposal only, requiring
+the user's authorization; no ablation or additional training is queued.
+
+Training resumed and the snapshot reached step 17,531, charging 4,820.500
+optimization seconds (5.356111 GPU-hours), with no last-update overrun. Three
+validations total 1,574.092 seconds (1.748991 GPU-hours), including 516.202 seconds
+for round three. At step 17,500, finite training loss was 1.318035, generated
+consistency 1.769762 and consistency weight 0.1. Both checkpoints remain present
+at 45,396,953 bytes. W&B API readback at 21:32:02 UTC verified `32710958` running
+at step 17,300 with all third-round validation metrics; the world run remains
+finished.
+
+Supervisor 142087, launcher 228925 and ranks 229056/229059/229060/229061 remain
+healthy in clean frozen `repo-throughput` at `56419ed`, with rank assignments
+0–3 and `CUDA_VISIBLE_DEVICES=0,1,2,3`. Only those four GPUs are occupied; 4–7
+remain empty. Both scope-change records retain the original limits. Downloaded
+the snapshot through `target_server_2_cf` and verified finite metrics, monotonic
+charged compute, 104 unique paired IDs/hashes/reset seeds, 13 tasks with eight
+cases each, seed 3072, the controller cap and timeout retention against all
+earlier joint-flow rounds and selected-world CEM. Preserved the complete third
+validation and updated compute, checkpoint, loss and online records. Next:
+finish joint-flow's fourth validation, then the unchanged LeFlow/HWM queue.
+No final test report exists; final testing remains sealed.
