@@ -15,8 +15,9 @@
 - **Running:** supervisor PID 3126314 on target_server_2, limited to GPUs 0–3.
   The revised online launch check and actual four-rank GPU preflight passed;
   all 7,800 training episodes and 1,300 validation candidates are cached.
-  All four workers are now preparing fixed test-goal candidates (last retrieved count: 2,936/6,400
-  at the 15:16 UTC heartbeat; 15:31 snapshot retrieval failed), before full training and planner evaluation.
+  All four workers are now preparing fixed test-goal candidates (3,323/6,400
+  in the 15:46 UTC heartbeat snapshot, retrieved after retry), before full
+  training and planner evaluation. Snapshot retrieval has recovered.
   All 2,381 episodes present at the scope migration were retained.
 - **Passed:** the bulk server suite (36 tests) plus all 8 final targeted
   budget/training tests after the last changes; actual CUDA/NCCL, official encoder,
@@ -1552,3 +1553,24 @@ candidates + 2,936 test-goal candidates. Those counts are stale, not evidence of
 a stalled campaign. No processes, code, data or budgets were changed. Retry
 snapshot retrieval on the next heartbeat and continue the registered bounded
 training/validation queue after fixed goal preparation completes.
+
+
+### 2026-10-08 15:46 UTC heartbeat — snapshot retrieval recovered
+
+The retrieved snapshot confirms 12,423 completed files, up from the last
+successful 15:16 snapshot's 12,036. All 7,800 training episodes and 1,300
+validation candidates remain cached. Fixed test-goal candidates increased from
+2,936 to 3,323: the first eight tasks through drawer-open have 400 each;
+faucet-open has 123. More than half of the registered 6,400-candidate pool is
+now prepared. Recent expert collection reports success; these are goal-data
+outcomes, not planner test scores.
+
+The live health inspection and fresh W&B readback at 15:46:59 UTC succeeded
+through the fallback alias. Its snapshot request later failed with SSH status
+255; the primary-alias retry succeeded and replaced the stale preparation
+snapshot. Supervisor 3126314 and all four workers remain active, frozen
+execution source is clean at `16747bb`, and only GPUs 0–3 are allocated.
+Four methods, seed 3072 and compute limits remain unchanged; full training
+runs/checkpoints remain zero. No campaign intervention was required. Continue
+fixed test-goal preparation before the registered bounded training/validation
+queue.
