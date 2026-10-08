@@ -10,11 +10,12 @@
   GPU-hours); validation used 1,780.427 seconds (1.97825 GPU-hours), separately
   accounted. W&B verified the run finished and both checkpoints are preserved:
   https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/fbcl549w.
-- **Live verified training:** `joint_flow_consistent_3072` resumed after its first
-  validation and reached step 8,297. Its ledger charges 2,273.521 optimization
-  seconds (2.52613 GPU-hours), plus 527.507 validation seconds (0.58612 GPU-hours).
-  The consistency weight is now 0.1, with finite training metrics. W&B readback
-  at 20:31 UTC confirmed step 8,150 and the first validation online at
+- **Live verified training:** `joint_flow_consistent_3072` reached step 10,000
+  and is running its second validation. Its ledger charges 2,742.554 optimization
+  seconds (3.04728 GPU-hours), plus 527.507 seconds (0.58612 GPU-hours) for the
+  first completed validation; the active round is charged at completion. The
+  consistency weight is 0.1 and training metrics are finite. W&B readback at
+  20:46 UTC confirmed step 9,950 and the first validation online at
   https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/32710958.
 - **First joint-flow validation:** 23/104 successes (22.12%), with all 81 timeouts
   retained as failures. Using the same selected world and paired resets, CEM
@@ -2085,3 +2086,26 @@ and online evidence through `target_server_2_cf`; checked finite saved metrics
 and nondecreasing charged optimization. Next: continue to the second registered
 validation and preserve its full paired outcomes. LeFlow/HWM and final testing
 remain pending; the test stays sealed and scope is unchanged.
+
+### 2026-10-08 20:46 UTC — joint-flow step 10,000; second validation active
+
+Supervisor 142087, launcher 228925 and all four joint-flow ranks remain healthy
+in clean frozen `repo-throughput` at `56419ed`, using only GPUs 0–3 while 4–7 are
+empty. Scope-change records still match the authorized four methods, seed 3072
+and compute limits. The second validation is advancing through its episode logs;
+no second completed result is available in this snapshot. No intervention was
+needed.
+
+At step 10,000, finite training loss is 1.305469, generated consistency 1.811364
+and consistency weight 0.1. The ledger charges 2,742.554 optimization seconds
+(3.047282 GPU-hours), with no last-update overrun. The first completed validation
+remains separately charged at 527.507 seconds (0.586118 GPU-hours); the active
+round's cost will be added at completion. Both checkpoints remain preserved.
+W&B API readback at 20:46:59 UTC confirmed `32710958` running at step 9,950 and
+`fbcl549w` finished.
+
+Downloaded and checked the updated snapshot through `target_server_2_cf`, with
+finite numeric metrics and nondecreasing charged compute. Saved the new loss
+samples, checkpoint metadata, compute ledger and online evidence. Next: preserve
+the completed second joint-flow validation and continue the registered queue.
+LeFlow/HWM are pending, and final testing remains sealed.
