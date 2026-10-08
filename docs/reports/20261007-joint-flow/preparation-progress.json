@@ -1,7 +1,7 @@
 {
   "completed_episode_files": {
     "test/assembly": 400,
-    "test/button-press-topdown": 56,
+    "test/button-press-topdown": 259,
     "train/assembly": 600,
     "train/button-press-topdown": 600,
     "train/coffee-button": 600,
@@ -29,5 +29,5 @@
     "validation/plate-slide": 100,
     "validation/reach": 100
   },
-  "total": 9556
+  "total": 9759
 }

@@ -1277,3 +1277,21 @@ fresh W&B online readback and snapshot retrieval succeeded. Four methods,
 seed 3072 and compute limits remain unchanged; full training runs/checkpoints
 remain zero. No intervention was required. Continue fixed test-goal preparation
 before the registered bounded training/validation queue.
+
+### 2026-10-08 12:01 UTC heartbeat
+
+Preparation advanced from 9,556 to 9,759 completed files in the snapshot
+retrieved after connection retries. All 7,800 training episodes and 1,300
+validation candidates remain cached. Fixed test-goal candidates increased from
+456 to 659: assembly has 400 and button-press-topdown has 259, out of the
+registered 6,400-candidate pool. Recent expert collection reports success;
+these are goal-preparation outcomes, not planner test scores.
+
+The primary SSH health request timed out during banner exchange. The fallback
+alias succeeded: supervisor 3126314 and all four workers were active, source
+was clean at `16747bb`, only GPUs 0–3 were allocated, and fresh W&B online
+readback succeeded at 12:02:59 UTC. A subsequent snapshot request through the
+fallback exited with SSH status 255; retrying the primary alias succeeded.
+No campaign restart or code change was needed. Four methods, seed 3072 and
+compute limits remain unchanged; full training runs/checkpoints remain zero.
+Continue fixed test-goal preparation before bounded training/validation.
