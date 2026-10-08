@@ -9,7 +9,8 @@
     "train/drawer-close": 600,
     "train/drawer-open": 600,
     "train/faucet-open": 600,
-    "train/handle-press": 528
+    "train/handle-press": 600,
+    "train/pick-place": 67
   },
-  "total": 5928
+  "total": 6067
 }
