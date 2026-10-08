@@ -15,9 +15,8 @@
 - **Running:** supervisor PID 3126314 on target_server_2, limited to GPUs 0–3.
   The revised online launch check and actual four-rank GPU preflight passed;
   all 7,800 training episodes and 1,300 validation candidates are cached.
-  All four workers are now preparing fixed test-goal candidates (3,323/6,400
-  in the 15:46 UTC heartbeat snapshot, retrieved after retry), before full
-  training and planner evaluation. Snapshot retrieval has recovered.
+  All four workers are now preparing fixed test-goal candidates (3,649/6,400
+  at the 16:16 UTC heartbeat), before full training and planner evaluation.
   All 2,381 episodes present at the scope migration were retained.
 - **Passed:** the bulk server suite (36 tests) plus all 8 final targeted
   budget/training tests after the last changes; actual CUDA/NCCL, official encoder,
@@ -1586,6 +1585,24 @@ drawer-open have 400 each; faucet-open has 274. The registered pool remains
 outcomes, not planner test scores.
 
 Health inspection, fresh W&B online readback at 16:02:02 UTC and snapshot
+retrieval succeeded through the configured fallback alias. Supervisor 3126314
+and all four workers remain active, frozen execution source is clean at
+`16747bb`, and only GPUs 0–3 are allocated. Four methods, seed 3072 and compute
+limits remain unchanged; full training runs/checkpoints remain zero. No campaign
+intervention was required. Continue fixed test-goal preparation before the
+registered bounded training/validation queue.
+
+
+### 2026-10-08 16:16 UTC heartbeat
+
+Preparation advanced from 12,574 to 12,749 completed files. All 7,800 training
+episodes and 1,300 validation candidates remain cached. Fixed test-goal
+candidates increased from 3,474 to 3,649: the first nine tasks through
+faucet-open have 400 each; handle-press has 49. The registered pool remains
+6,400 candidates. Recent expert collection reports success; these are goal-data
+outcomes, not planner test scores.
+
+Health inspection, fresh W&B online readback at 16:16:55 UTC and snapshot
 retrieval succeeded through the configured fallback alias. Supervisor 3126314
 and all four workers remain active, frozen execution source is clean at
 `16747bb`, and only GPUs 0–3 are allocated. Four methods, seed 3072 and compute
