@@ -6,8 +6,8 @@
     "test/dial-turn": 400,
     "test/door-close": 400,
     "test/door-open": 400,
-    "test/drawer-close": 345,
-    "test/drawer-open": 8,
+    "test/drawer-close": 400,
+    "test/drawer-open": 136,
     "train/assembly": 600,
     "train/button-press-topdown": 600,
     "train/coffee-button": 600,
@@ -35,5 +35,5 @@
     "validation/plate-slide": 100,
     "validation/reach": 100
   },
-  "total": 11853
+  "total": 12036
 }
