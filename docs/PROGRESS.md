@@ -927,3 +927,17 @@ rendering can be eliminated without changing retained images. Larger batches can
 change numerical results; do not declare bitwise equivalence without testing.
 No live code, model precision, dataset size, method scope or budget was changed by
 this audit. Evidence: `docs/reports/20261007-joint-flow/storage-throughput-audit.json`.
+
+### 2026-10-08 06:01 UTC heartbeat
+
+Preparation advanced from the previous heartbeat's 6,067 to 6,210 completed
+episodes: the first ten tasks through handle-press have 600 each; pick-place has
+210. Recent expert collection reports success. Supervisor 3126314 and all four
+workers remain active, frozen source is clean at `16747bb`, and only GPUs 0–3
+are allocated. The intervening storage/throughput audit is preserved separately;
+no throughput implementation change or scope expansion was made.
+
+Health checks, fresh W&B online readback and compact snapshot retrieval succeeded
+via `target_server_2`. Four methods, seed 3072 and compute limits remain unchanged.
+Full training runs/checkpoints remain zero pending shared preparation. No
+intervention was required; continue the registered bounded queue.
