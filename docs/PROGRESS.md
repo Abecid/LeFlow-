@@ -5,19 +5,22 @@
 - **Throughput migration complete; training is running.** All 15,500 candidate
   cache files are prepared. The frozen manifest selects 7,800 training, 650
   validation and 3,200 test episodes. No full comparison result exists yet.
-- **Live verified training:** shared world model `world_3072` reached step 18,493.
-  The ledger charges 2,452.177 optimization seconds (2.72464 GPU-hours), plus
-  1.48354 GPU-hours for three completed validation rounds. Both `best.pt` and
-  `last.pt` exist. W&B readback at 19:31 UTC verified step 18,050 and all three
-  completed validation rounds online at
+- **Shared world complete:** `world_3072` stopped at its 20,000-update cap with
+  all four validations complete. Optimization used 2,653.535 seconds (2.94837
+  GPU-hours); validation used 1,780.427 seconds (1.97825 GPU-hours), separately
+  accounted. W&B verified the run finished and both checkpoints are preserved:
   https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/fbcl549w.
+- **Live verified training:** `joint_flow_consistent_3072` has started on the
+  same four GPUs with the selected world checkpoint. Snapshot step 451 charges
+  128.055 optimization seconds (0.14228 GPU-hours), with no validation yet.
+  W&B readback at 19:47 UTC confirmed real training online at
+  https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/32710958.
 - **Validation results:** CEM succeeded on 10/104 cases (9.62%) at step 5,000,
-  9/104 (8.65%) at step 10,000 and 7/104 (6.73%) at step 15,000. Round three had
-  drawer-close 3/8, handle-press 3/8 and reach 1/8; the other 10 tasks had zero
-  successes. All 97 failures exhausted the 10-second controller allowance and
-  remain in the results. World prediction loss improved while task success
-  declined. These are intermediate validation results; no final comparison
-  exists yet.
+  9/104 (8.65%) at step 10,000, and 7/104 (6.73%) at both 15,000 and 20,000.
+  Round four had drawer-close 5/8 and handle-press 2/8; the other 11 tasks had
+  zero successes. All 97 failures exhausted the 10-second controller allowance
+  and remain in the results. World prediction loss improved without improving
+  task success. These are validation results; final testing is still sealed.
 - **Lossless throughput changes:** 48 CPU producers, encoder/goal batches of 64,
   replay-based two-image test collection, overlapped writes and parallel ordered
   cache summarization. Final 1,270 files took about 42.2 seconds of worker elapsed
@@ -1945,3 +1948,50 @@ the loss samples, checkpoint metadata, charged compute and online evidence.
 Next: allow the world model to reach its earlier update/time cap and finish its
 fourth validation, then continue the three registered heads. Final test is
 still sealed; no scope or budget expansion has been made.
+
+### 2026-10-08 19:46 UTC — shared world complete; joint-flow training verified
+
+The shared world finished normally at step 20,000, stopping on the update cap
+before its 7,200-second optimization allowance. `complete.json` records four
+validation rounds and 2,653.535 optimization seconds (2.948373 GPU-hours).
+Validation was separately charged at 1,780.427 seconds (1.978253 GPU-hours).
+No last-update overrun is recorded. W&B API readback at 19:47:00 UTC confirmed
+`fbcl549w` finished, with all four rounds and the final metrics online.
+
+The fourth 104-case CEM validation at step 20,000 achieved seven successes
+(6.731%) and 97 controller timeouts (93.269%), all retained as failures.
+Drawer-close achieved 5/8 and handle-press 2/8; the other 11 tasks had zero.
+Six successes occurred within 50 primitive actions and seven within 100/200.
+Against round three, five cases remained successful, two changed to success,
+two changed to failure and 95 failed both rounds. Mean controller time was
+9.718 seconds/episode, mean step latency 280.27 ms and p95 287.81 ms; the mean
+recorded safe-boundary overrun was 0.01396 seconds. The complete validation
+success sequence is 10, 9, 7, 7 out of the same 104 cases. These are not final
+test outcomes and cannot yet rank the four methods.
+
+Final world validation dynamics loss was 0.017506 versus persistence 0.062804;
+action identification among 16 choices was 88.281% versus 6.25% chance. The
+registered dynamics-loss selection chose the step-20,000 world checkpoint.
+Read the saved checkpoints on CPU and verified that the new head's `world_hash`
+matches the selected world's SHA-256, with identical manifest, protocol, code,
+seed 3072 and world size four. Compact provenance is saved in
+`runs/world_3072/checkpoint-provenance.json`; large binaries remain on the server.
+
+Supervisor 142087 automatically advanced to `joint_flow_consistent_3072`, using
+launcher 228925 and training ranks 229056/229059/229060/229061. Actual processes
+point to clean frozen `repo-throughput` at `56419ed` and the selected
+`campaign/runs/world_3072/best.pt`. Only GPUs 0–3 are occupied; GPUs 4–7 are
+empty. No restart, source change or scope adjustment was needed. Online run
+`32710958` was verified running at step 200; the later snapshot reached step 451
+with 128.055 charged optimization seconds (0.142284 GPU-hours). The latest
+sampled loss at step 450 was finite at 2.38756. Its first durable checkpoint
+exists; the consistency term is still in the registered initial warmup.
+
+Downloaded the updated snapshot through `target_server_2_cf`. Verified all four
+validation reports contain the same 104 IDs, episode hashes and reset seeds,
+eight per task, with seed 3072, the 10-second cap and every timeout retained as
+a failure. Preserved the fourth validation, world completion, new head metadata,
+loss samples, checkpoints, compute ledgers and online evidence. Next: continue
+joint-flow training and its four validations, then LeFlow and HWM under the
+same allowances. Keep the 3,200-reset final tests sealed until all registered
+models finish; no additional experiments are queued.

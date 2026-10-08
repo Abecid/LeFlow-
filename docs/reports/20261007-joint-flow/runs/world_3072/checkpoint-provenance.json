@@ -1,0 +1,21 @@
+{
+  "verification": "CPU checkpoint read and SHA-256 comparison after world completion",
+  "code": "56419ed14cf127d4b7a8ab09a9d68e6681d2edc0",
+  "manifest": "a02de61cc226a605e552320fb35f732d2fb8be465675b0401dbc556982c1ae65",
+  "protocol": "50c4b357c19f15494971cd65fe0e524f740c92d0c2d6c9ec6631981272cdea71",
+  "seed": 3072,
+  "world_size": 4,
+  "world_checkpoint": "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/runs/world_3072/best.pt",
+  "world_checkpoint_sha256": "fc55d9fb694813b4f7543c71ed6477c849f10fbf46e05f88369583555dfbc87a",
+  "world_checkpoint_step": 20000,
+  "world_validation_rounds": 4,
+  "world_selection_metric": "validation/dynamics_loss",
+  "world_selection_value": 0.017505817115306854,
+  "world_training_seconds": 2653.5352787654847,
+  "world_validation_seconds": 1780.4272710029036,
+  "verified_head_checkpoint": "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/runs/joint_flow_consistent_3072/last.pt",
+  "head_checkpoint_step_at_verification": 1,
+  "head_wandb_id": "32710958",
+  "head_world_hash_matches": true,
+  "head_manifest_protocol_code_seed_world_size_match": true
+}

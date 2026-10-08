@@ -14,11 +14,13 @@
     "--root",
     "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign",
     "--run-dir",
-    "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/runs/world_3072",
+    "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/runs/joint_flow_consistent_3072",
     "--method",
-    "world",
+    "joint_flow_consistent",
     "--seed",
-    "3072"
+    "3072",
+    "--world",
+    "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/runs/world_3072/best.pt"
   ],
   "gpus": [
     [
@@ -38,6 +40,6 @@
       "GPU-64e751ee-abb6-120c-f346-311e789228c7"
     ]
   ],
-  "stage": "world_3072",
+  "stage": "joint_flow_consistent_3072",
   "status": "running"
 }
