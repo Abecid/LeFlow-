@@ -15,12 +15,17 @@
   5,498.695 seconds (6.10966 GPU-hours); validation used 2,102.580 seconds
   (2.33620 GPU-hours), separately accounted. W&B verified the run finished:
   https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/32710958.
-- **LeFlow first validation active:** `leflow_adapted_3072` reached step 5,000,
-  charging 1,356.000 optimization seconds (1.50667 GPU-hours). No completed
-  validation result is available yet; its cost will be charged at completion.
-  The checkpoint uses the same world hash, manifest, protocol, code, seed and
-  four GPUs as joint-flow. W&B readback at 22:17 UTC confirmed step 4,950 online:
+- **LeFlow training resumed:** `leflow_adapted_3072` reached step 7,032,
+  charging 1,904.169 optimization seconds (2.11574 GPU-hours), plus 473.608
+  seconds (0.52623 GPU-hours) for its first validation. It uses the same world
+  hash, manifest, protocol, code, seed and four GPUs as joint-flow. W&B readback
+  at 22:32 UTC confirmed step 6,900 and the first validation online:
   https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/9jhufn8j.
+- **First LeFlow validation:** 26/104 successes (25.00%), retaining all 78
+  timeouts as failures. Against joint-flow's selected 23/104 checkpoint, 17
+  cases succeeded under both, nine only under LeFlow and six only under
+  joint-flow. LeFlow is still training; this is an early validation comparison,
+  not a completed four-method ranking or a final test result.
 - **Joint-flow validation:** the four rounds achieved 23/104 (22.12%), 17/104
   (16.35%), 16/104 (15.38%) and 19/104 (18.27%) successes. All 85 fourth-round
   timeouts remain failures. The registered selection rule retains the step-5,000
@@ -2338,3 +2343,46 @@ metadata, compute usage and online evidence. Next: preserve LeFlow's first
 complete validation and its paired outcomes, then continue the remaining
 registered validations and HWM queue. Final testing stays sealed; no test report
 exists and no follow-up experiment is queued.
+
+### 2026-10-08 22:31 UTC — first LeFlow validation: 26/104; paired outcomes preserved
+
+LeFlow step 5,000 completed its first validation with 26/104 successes (25.00%),
+retaining all 78 controller timeouts as failures. Door-close achieved 8/8,
+handle-press 7/8, drawer-close 6/8 and coffee-button 5/8; the other nine tasks
+had zero successes. Success within 50/100/200 primitive actions was 14/26/26 out
+of 104. Mean controller time was 8.985 seconds/episode, mean step latency 212.52
+ms and p95 216.39 ms; mean safe-boundary overrun was 0.01794 seconds. Mean return
+was 107.185 and observed subgoal cosine was 0.329316.
+
+Compared with joint-flow's selected step-5,000 validation checkpoint (23/104),
+17 cases succeeded under both, nine only under LeFlow, six only under joint-flow
+and 72 failed under both. LeFlow-only successes were five coffee-button cases,
+two door-close and two handle-press cases; joint-flow-only successes were four
+dial-turn and two drawer-close cases. Thus LeFlow's early point estimate is
+three successes higher, with differing failure profiles. This small validation
+difference is not a final test result or evidence of a stable advantage across
+training seeds. LeFlow has three validations remaining and HWM is untrained.
+Against CEM using the selected shared world, all seven CEM successes also
+succeeded under LeFlow, with nineteen additional successes and 78 shared
+failures. No method, selection rule, data or budget was changed in response.
+
+The first validation charged 473.608 seconds (0.526232 GPU-hours), separately
+from optimization. Training resumed and the snapshot reached step 7,032 with
+1,904.169 charged optimization seconds (2.115743 GPU-hours) and no last-update
+overrun. At step 7,000, finite loss was 0.925023, inverse objective 0.006535 and
+observed consistency 0.026325. Both `best.pt` and `last.pt` are present at
+73,951,425 bytes each. W&B API readback at 22:32:03 UTC verified `9jhufn8j`
+running at step 6,900 with the complete first validation online. The shared
+world and joint-flow runs remain finished with their final charges preserved.
+
+Supervisor 142087, launcher 362482 and ranks 362602/362603/362604/362605 remain
+healthy in clean frozen `repo-throughput` at `56419ed`, using only GPUs 0–3;
+4–7 remain empty. Both scope-change records retain the original authorization.
+Downloaded the snapshot through `target_server_2_cf`; verified finite metrics,
+monotonic training steps/charged time and 104 unique paired validation IDs,
+episode hashes and reset seeds against selected joint-flow and selected-world
+CEM. All 13 tasks have eight cases, seed 3072 and the 10-second cap; every
+timeout remains a failure. Saved the complete first LeFlow validation, loss
+samples, compute usage, checkpoint metadata and online evidence. Next: finish
+LeFlow's remaining three validations, then HWM. Final testing remains sealed;
+no test report exists and no follow-up experiment is queued.
