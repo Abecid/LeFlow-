@@ -11,7 +11,7 @@
     "train/faucet-open": 600,
     "train/handle-press": 600,
     "train/pick-place": 600,
-    "train/plate-slide": 50
+    "train/plate-slide": 180
   },
-  "total": 6650
+  "total": 6780
 }
