@@ -1,0 +1,256 @@
+{
+  "active_processes": [
+    {
+      "allocation": [
+        "CUDA_VISIBLE_DEVICES=0,1,2,3"
+      ],
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.campaign --root /home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign --gpus 4 --seed 3072 --config /home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/repo-throughput/config/flow_metaworld.json --data-config /home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/repo/config/flow_metaworld.json",
+      "cwd": "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/repo-throughput",
+      "pid": 645888
+    },
+    {
+      "allocation": [
+        "CUDA_VISIBLE_DEVICES=0,1,2,3"
+      ],
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -m torch.distributed.run --nnodes=1 --rdzv-backend=c10d --rdzv-endpoint=127.0.0.1:0 --nproc_per_node=4 -m flow_jepa.evaluate --config /home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/repo-throughput/config/flow_metaworld.json --root /home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign --world /home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/runs/world_3072/best.pt --method joint_flow_consistent --seed 3072 --output /home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/test/joint_flow_consistent_3072.json --checkpoint /home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/runs/joint_flow_consistent_3072/best.pt",
+      "cwd": "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/repo-throughput",
+      "pid": 648460
+    },
+    {
+      "allocation": [
+        "CUDA_VISIBLE_DEVICES=0,1,2,3",
+        "LOCAL_RANK=0",
+        "RANK=0"
+      ],
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.evaluate --config /home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/repo-throughput/config/flow_metaworld.json --root /home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign --world /home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/runs/world_3072/best.pt --method joint_flow_consistent --seed 3072 --output /home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/test/joint_flow_consistent_3072.json --checkpoint /home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/runs/joint_flow_consistent_3072/best.pt",
+      "cwd": "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/repo-throughput",
+      "pid": 648469
+    },
+    {
+      "allocation": [
+        "CUDA_VISIBLE_DEVICES=0,1,2,3",
+        "LOCAL_RANK=1",
+        "RANK=1"
+      ],
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.evaluate --config /home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/repo-throughput/config/flow_metaworld.json --root /home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign --world /home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/runs/world_3072/best.pt --method joint_flow_consistent --seed 3072 --output /home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/test/joint_flow_consistent_3072.json --checkpoint /home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/runs/joint_flow_consistent_3072/best.pt",
+      "cwd": "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/repo-throughput",
+      "pid": 648470
+    },
+    {
+      "allocation": [
+        "CUDA_VISIBLE_DEVICES=0,1,2,3",
+        "LOCAL_RANK=2",
+        "RANK=2"
+      ],
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.evaluate --config /home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/repo-throughput/config/flow_metaworld.json --root /home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign --world /home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/runs/world_3072/best.pt --method joint_flow_consistent --seed 3072 --output /home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/test/joint_flow_consistent_3072.json --checkpoint /home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/runs/joint_flow_consistent_3072/best.pt",
+      "cwd": "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/repo-throughput",
+      "pid": 648471
+    },
+    {
+      "allocation": [
+        "CUDA_VISIBLE_DEVICES=0,1,2,3",
+        "LOCAL_RANK=3",
+        "RANK=3"
+      ],
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.evaluate --config /home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/repo-throughput/config/flow_metaworld.json --root /home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign --world /home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/runs/world_3072/best.pt --method joint_flow_consistent --seed 3072 --output /home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/test/joint_flow_consistent_3072.json --checkpoint /home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/runs/joint_flow_consistent_3072/best.pt",
+      "cwd": "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/repo-throughput",
+      "pid": 648472
+    }
+  ],
+  "checked_at": "2026-10-09T02:36:53.465766+00:00",
+  "checkpoint_sizes_and_mtimes_unchanged": true,
+  "checkpoints": {
+    "hwm_adapted_3072": {
+      "best.pt": {
+        "bytes": 44490453,
+        "mtime_ns": 1791511509332329473
+      },
+      "last.pt": {
+        "bytes": 44490453,
+        "mtime_ns": 1791511509230177710
+      }
+    },
+    "joint_flow_consistent_3072": {
+      "best.pt": {
+        "bytes": 45396953,
+        "mtime_ns": 1791490622877166751
+      },
+      "last.pt": {
+        "bytes": 45396953,
+        "mtime_ns": 1791496347237834746
+      }
+    },
+    "leflow_adapted_3072": {
+      "best.pt": {
+        "bytes": 73951425,
+        "mtime_ns": 1791503624090220524
+      },
+      "last.pt": {
+        "bytes": 73951425,
+        "mtime_ns": 1791503623940183111
+      }
+    },
+    "world_3072": {
+      "best.pt": {
+        "bytes": 44360165,
+        "mtime_ns": 1791488593381649297
+      },
+      "last.pt": {
+        "bytes": 44360165,
+        "mtime_ns": 1791488593277056964
+      }
+    }
+  },
+  "code": "56419ed14cf127d4b7a8ab09a9d68e6681d2edc0",
+  "complete_test_reports": [],
+  "completed_training_unchanged_since_recovery": true,
+  "compute_ledgers_unchanged_since_recovery": true,
+  "execution_checkout_clean": true,
+  "gpu_processes": "234559, GPU-a303d11c-f1b5-e245-93f0-735a054671ce, [Not Found], 3294 MiB\n234560, GPU-fc39ae51-86a1-df0a-8657-0d33620f5115, [Not Found], 3294 MiB\n234561, GPU-85f3f7a6-107f-2921-13a5-76a94101f858, [Not Found], 3294 MiB\n234562, GPU-64e751ee-abb6-120c-f346-311e789228c7, [Not Found], 3294 MiB",
+  "gpu_readback": "0, NVIDIA A800-SXM4-80GB, 3297 MiB, 55 %\n1, NVIDIA A800-SXM4-80GB, 3297 MiB, 58 %\n2, NVIDIA A800-SXM4-80GB, 3297 MiB, 58 %\n3, NVIDIA A800-SXM4-80GB, 3297 MiB, 10 %\n4, NVIDIA A800-SXM4-80GB, 0 MiB, 0 %\n5, NVIDIA A800-SXM4-80GB, 0 MiB, 0 %\n6, NVIDIA A800-SXM4-80GB, 0 MiB, 0 %\n7, NVIDIA A800-SXM4-80GB, 0 MiB, 0 %",
+  "journals": {
+    "cem_long": {
+      "completed_episodes": 0,
+      "completed_report_exists": false,
+      "controller_budget_seconds": 10.0,
+      "counts_by_task": {},
+      "expected_episodes": 3200,
+      "finite_metrics": true,
+      "lock_target": "/tmp/mtxu-flow-jepa-20261007/evaluation-journal-locks/cem_long_3072.lock",
+      "lock_target_exists": true,
+      "model_seed": 3072,
+      "paired_manifest_records_verified": true,
+      "primitive_step_cap_verified": true,
+      "record_hashes_digest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "timeouts_retained_as_failures": true,
+      "unique_episode_ids": true
+    },
+    "hwm_adapted": {
+      "completed_episodes": 0,
+      "completed_report_exists": false,
+      "controller_budget_seconds": 10.0,
+      "counts_by_task": {},
+      "expected_episodes": 3200,
+      "finite_metrics": true,
+      "lock_target": "/tmp/mtxu-flow-jepa-20261007/evaluation-journal-locks/hwm_adapted_3072.lock",
+      "lock_target_exists": true,
+      "model_seed": 3072,
+      "paired_manifest_records_verified": true,
+      "primitive_step_cap_verified": true,
+      "record_hashes_digest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "timeouts_retained_as_failures": true,
+      "unique_episode_ids": true
+    },
+    "joint_flow_consistent": {
+      "completed_episodes": 139,
+      "completed_report_exists": false,
+      "controller_budget_seconds": 10.0,
+      "counts_by_task": {
+        "assembly": 139
+      },
+      "expected_episodes": 3200,
+      "finite_metrics": true,
+      "identity": {
+        "checkpoint_hash": "6ce71f76ea30006d4af0b9fde9f98dd8bcd8c7915445f2057fbe221c905d61ff",
+        "code": "56419ed14cf127d4b7a8ab09a9d68e6681d2edc0",
+        "hardware": [
+          "NVIDIA A800-SXM4-80GB",
+          "NVIDIA A800-SXM4-80GB",
+          "NVIDIA A800-SXM4-80GB",
+          "NVIDIA A800-SXM4-80GB"
+        ],
+        "manifest": "a02de61cc226a605e552320fb35f732d2fb8be465675b0401dbc556982c1ae65",
+        "method": "joint_flow_consistent",
+        "protocol": "50c4b357c19f15494971cd65fe0e524f740c92d0c2d6c9ec6631981272cdea71",
+        "seed": 3072,
+        "split": "test",
+        "world_hash": "fc55d9fb694813b4f7543c71ed6477c849f10fbf46e05f88369583555dfbc87a"
+      },
+      "identity_sha256": "48d46f3478807eb915b7fb8bec5f77cd4d1fae7536dc874ded05ec721ce6fffe",
+      "latest_episode_write_utc": "2026-10-09T02:36:53.542874+00:00",
+      "lock_target": "/tmp/mtxu-flow-jepa-20261007/evaluation-journal-locks/joint_flow_consistent_3072.lock",
+      "lock_target_exists": true,
+      "model_seed": 3072,
+      "paired_manifest_records_verified": true,
+      "primitive_step_cap_verified": true,
+      "record_hashes_digest": "b05eec1a74d7a0c358db8dc315773935c3ad622de5db682deaab98206976f5b8",
+      "timeouts_retained_as_failures": true,
+      "unique_episode_ids": true
+    },
+    "leflow_adapted": {
+      "completed_episodes": 0,
+      "completed_report_exists": false,
+      "controller_budget_seconds": 10.0,
+      "counts_by_task": {},
+      "expected_episodes": 3200,
+      "finite_metrics": true,
+      "lock_target": "/tmp/mtxu-flow-jepa-20261007/evaluation-journal-locks/leflow_adapted_3072.lock",
+      "lock_target_exists": true,
+      "model_seed": 3072,
+      "paired_manifest_records_verified": true,
+      "primitive_step_cap_verified": true,
+      "record_hashes_digest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "timeouts_retained_as_failures": true,
+      "unique_episode_ids": true
+    }
+  },
+  "launcher_sha256": "03b8d5369a9df1afdde6c009efe50b54af97b1ce2d2a10eca52677ba054668b2",
+  "online_readback_checked_at": "2026-10-09T02:37:00.238861+00:00",
+  "optimization_gpu_hours": 21.11207624328426,
+  "partial_scores_used_for_selection_or_tuning": false,
+  "status": {
+    "command": [
+      "/tmp/mtxu-flow-jepa-20261007/env/bin/python",
+      "-m",
+      "torch.distributed.run",
+      "--nnodes=1",
+      "--rdzv-backend=c10d",
+      "--rdzv-endpoint=127.0.0.1:0",
+      "--nproc_per_node=4",
+      "-m",
+      "flow_jepa.evaluate",
+      "--config",
+      "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/repo-throughput/config/flow_metaworld.json",
+      "--root",
+      "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign",
+      "--world",
+      "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/runs/world_3072/best.pt",
+      "--method",
+      "joint_flow_consistent",
+      "--seed",
+      "3072",
+      "--output",
+      "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/test/joint_flow_consistent_3072.json",
+      "--checkpoint",
+      "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/runs/joint_flow_consistent_3072/best.pt"
+    ],
+    "gpus": [
+      [
+        "0",
+        "GPU-a303d11c-f1b5-e245-93f0-735a054671ce"
+      ],
+      [
+        "1",
+        "GPU-fc39ae51-86a1-df0a-8657-0d33620f5115"
+      ],
+      [
+        "2",
+        "GPU-85f3f7a6-107f-2921-13a5-76a94101f858"
+      ],
+      [
+        "3",
+        "GPU-64e751ee-abb6-120c-f346-311e789228c7"
+      ]
+    ],
+    "stage": "test_joint_flow_consistent_3072",
+    "status": "running"
+  },
+  "supervisor_pid": 645888,
+  "training_wandb_states": {
+    "hwm_adapted": "finished",
+    "joint_flow_consistent": "finished",
+    "leflow_adapted": "finished",
+    "world": "finished"
+  },
+  "validation_gpu_hours": 9.05031814634593
+}

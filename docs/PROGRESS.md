@@ -52,9 +52,11 @@
 - **Final-test startup recovered without code changes:** shared-storage locking
   failed before any test episode completed. The four journal lock files now point
   to local locks, while identities and episode records stay in persistent storage.
-  Joint-flow final evaluation has saved 8/3,200 episodes as of 02:25 UTC on GPUs
-  0–3. All checkpoint hashes and training/validation ledgers are unchanged. See
-  [the recovery record](reports/20261007-joint-flow/evaluation-lock-recovery.json).
+  Joint-flow final evaluation has saved 139/3,200 episodes as of 02:36:53 UTC on
+  GPUs 0–3. All saved IDs, reset seeds and episode hashes match the frozen test
+  manifest. Checkpoint sizes/mtimes and training/validation ledgers are unchanged
+  since the recovery hash verification. See [test progress](reports/20261007-joint-flow/test-progress.json)
+  and [the recovery record](reports/20261007-joint-flow/evaluation-lock-recovery.json).
 - **Lossless throughput changes:** 48 CPU producers, encoder/goal batches of 64,
   replay-based two-image test collection, overlapped writes and parallel ordered
   cache summarization. Final 1,270 files took about 42.2 seconds of worker elapsed
@@ -3040,3 +3042,33 @@ Next: monitor the fixed 3,200-reset test for each of the four selected methods,
 preserve all episode outcomes, then publish the paired final comparison with
 its single-seed and implementation limitations. No follow-up experiment is
 queued; the monitor remains active until that comparison finishes.
+
+### 2026-10-09 02:31 UTC — recovered final-test journal advancing
+
+Joint-flow's fixed final evaluation has persisted 139/3,200 episodes as of
+02:36:53 UTC, up from eight at the recovery verification. All 139 unique episode
+IDs, reset seeds, task names and cache hashes match the frozen test manifest;
+model seed 3072, the 10-second controller allowance and 200-primitive-step cap
+are preserved. All recorded metrics are finite and timeout outcomes remain
+failures. The journal identity hash is unchanged, including selected planner,
+world, manifest, protocol, code and hardware. The four local lock symlinks and
+targets remain intact. No full test report exists; the other three methods await
+their registered sequential evaluations. No partial score is used for tuning
+or checkpoint selection.
+
+Supervisor 645888, evaluator launcher 648460 and ranks
+648469/648470/648471/648472 remain active in clean frozen `repo-throughput`
+at `56419ed`. Only GPUs 0–3 are allocated; 4–7 remain empty. Launcher SHA-256,
+all eight checkpoint sizes/mtimes, all completed-training metadata and all
+training/validation ledgers are unchanged since recovery. Optimization remains
+21.112076 GPU-hours and validation 9.050318 GPU-hours, separately accounted.
+No training process was relaunched. W&B API readback at 02:37:00 UTC confirms
+all four training runs remain finished with the correct execution revision.
+The unchanged evaluator uploads final test metrics after each full test ends.
+
+Saved compact journal integrity, live process/allocation and checkpoint evidence
+in `reports/20261007-joint-flow/test-progress.json`, and refreshed the campaign
+snapshot and online readback. Next: let the four registered final tests finish,
+preserve failures and paired records, then publish the comparison with the
+single-seed and implementation-audit limitations. No code, resource limit,
+selection, dataset or protocol changed; no follow-up experiment is queued.
