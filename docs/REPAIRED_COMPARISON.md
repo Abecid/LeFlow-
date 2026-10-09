@@ -70,6 +70,28 @@ no additional training or rollouts are launched by the analysis.
 
 ## Launch status
 
-Preparing a clean frozen checkout and running CPU regression checks plus the
-registered four-GPU preflight. Live status and first evaluation evidence will
-be appended here and in `PROGRESS.md` after actual execution is verified.
+Launched 2026-10-09 **04:26 UTC**, supervisor PID 778158, frozen code
+`75e0815351eb25c63e495f87458f139bd5062259`. All 59 CPU checks and the four-A800 GPU preflight passed. All cached file hashes
+were verified before world training began at approximately **04:29 UTC**.
+By 04:30 UTC the world had exceeded **300 optimizer updates**, with finite losses,
+a saved checkpoint and online W&B metrics independently read back from the API.
+The original campaign remains held.
+
+Live world run: [8vwksovs](https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/8vwksovs).
+Training metrics are present; the first periodic evaluation has **not** completed
+at this launch checkpoint. It triggers at update 5,000 (or 25% of the time cap,
+whichever comes first). The initial measured throughput was about 460 samples/s,
+so the first trigger was roughly 11 minutes after this checkpoint, followed by
+simulation evaluation. This is an estimate, not a completion assertion.
+
+The fresh manifest has SHA-256
+`ce6e190b9b777ad34807c47c2dbeebae810f9cca52b440dbaf9e05043d69f1bc`;
+its unchanged entry list has digest
+`632005d660cdf000ee244461c5ffacee020d8a9d3321535ae0e3e15deb4508a8`.
+The new execution protocol is
+`563c7d7d8b10664aa1ebf50db8f8a24fc015b50325ff1de82bcb736c7d411d51`.
+
+The existing 15-minute campaign monitor is active with the new authorization,
+new root and frozen revision. It will preserve meaningful evaluation results,
+complete final comparison/failure analysis, publish compact evidence to main,
+and pause when complete. It must not launch a duplicate or another campaign.

@@ -1,0 +1,40 @@
+{
+  "authorization": "Latest user correction explicitly requests fresh training after repairs, matched compute/data, periodic evaluation and failure analysis.",
+  "code": "75e0815351eb25c63e495f87458f139bd5062259",
+  "created_utc": "2026-10-09T04:26:44.376691+00:00",
+  "entries_sha256": "632005d660cdf000ee244461c5ffacee020d8a9d3321535ae0e3e15deb4508a8",
+  "fresh_root": "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign",
+  "gpus": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "identical_fields": [
+    "encoder",
+    "entries",
+    "expert_success",
+    "fixture",
+    "goal_screening",
+    "mean",
+    "statistics_scope",
+    "std"
+  ],
+  "initialization": "Fresh random initialization of all learned models; no optimizer, trained weights, completion markers or ledgers copied.",
+  "local_journal_locks": "/tmp/mtxu-flow-jepa-repaired-20261009/locks",
+  "manifest_sha256": "ce6e190b9b777ad34807c47c2dbeebae810f9cca52b440dbaf9e05043d69f1bc",
+  "max_updates": 20000,
+  "old_campaign_status": "held",
+  "original_data_manifest_sha256": "53a8a36ef98d07caedeb184cba0658f740e6e197d7b2975a3629c00451255d44",
+  "partial_old_test_outcomes_read": false,
+  "protocol": "563c7d7d8b10664aa1ebf50db8f8a24fc015b50325ff1de82bcb736c7d411d51",
+  "reused": "Immutable episodes, original train-only statistics, official frozen encoder weights and pinned encoder code only.",
+  "seed": 3072,
+  "source_root": "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign",
+  "split_counts": {
+    "test": 3200,
+    "train": 7800,
+    "validation": 650
+  },
+  "training_budget_seconds": 7200
+}

@@ -3177,3 +3177,42 @@ commit; later reporting commits will not modify it. At launch preparation the
 assigned GPUs were idle, persistent storage had about 98 GB free and scratch
 about 2.1 TB free. Next: verify real GPU preflight, manifest hashes, initial
 optimizer progress and online metric logging; then monitor all registered stages.
+
+## 2026-10-09 04:30 UTC — fresh optimization and online logging verified
+
+Published execution code to origin/main and the research branch at
+75e0815351eb25c63e495f87458f139bd5062259, then froze that exact revision in the NEW
+server root `/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/repo`.
+The SSH bundle transfer was slow and dropped; deployment succeeded by fetching
+the published revision directly from GitHub. Supervisor PID 778158 launched at
+04:26 UTC. Only GPUs 0–3 were acquired; GPUs 4–7 remain unused by this campaign.
+
+The fresh manifest records 7,800 train, 650 validation and 3,200 test entries.
+Entries/reset IDs/goals/encoder/statistics are exactly equal to the old selected
+manifest, and the campaign verified every cached episode hash before training.
+No old trained weights, optimizer state, completion files or budget ledgers were
+copied. Encoder code/weights and cache are reused through links. Local POSIX
+journal/campaign locks are prepared in the new scratch namespace. The original
+campaign remains held. The fresh identity is preserved in fresh-start.json.
+
+The four-GPU preflight passed on NVIDIA A800-SXM4-80GB cards with finite losses
+and gradients for all three learned heads, static encoder shape [6,32,1024] and
+peak allocated memory 2.10 GiB/rank. World optimization began around 04:29 UTC.
+Verified more than 300 fresh updates, a durable last.pt checkpoint, finite losses
+and charged compute. At update 300, training loss was 0.021283 and throughput
+about 460 samples/s; this is a training loss, NOT validation task success or
+comparative evidence. The first fixed validation trigger is update 5,000 or 25%
+of the training time cap. No repaired-model evaluation result is claimed yet.
+
+World W&B run: https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/8vwksovs
+An independent W&B API read at 04:30:24 UTC confirmed state running and uploaded
+history through update 300, including training losses and budget metrics.
+Compact campaign/preflight/fresh-start/manifest/run/metric/checkpoint metadata
+are preserved in docs/reports/20261009-repaired-comparison. Large binaries remain
+on the server. Later report commits do not alter the frozen execution checkout.
+
+Resumed the EXISTING 15-minute monitor with explicit fresh-run authorization,
+paths, frozen revision and unchanged budgets. It must preserve periodic results,
+finish the registered final comparison and failure analysis, publish findings
+and failed case references to origin/main, then pause. No duplicate campaign,
+new seed, ablation, budget extension or selective evaluation is authorized.
