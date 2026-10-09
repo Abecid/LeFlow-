@@ -1,5 +1,19 @@
 # Active campaign progress
 
+## Literature review — October 9, H-JEPA and EB-JEPA
+
+Reviewed both user-linked papers and pinned official implementations against
+the completed run. [Evidence and proposed application](HJEPA_EBJEPA_REVIEW_20261009.md)
+prioritize short local verification and action-conditioned coarse planning.
+Confirmed a five-step world-training versus 60-step proposal-scoring horizon,
+and local generated-bridge consistency versus continuous inference scoring.
+Abstract cost learning is conditional: H-JEPA's cost-only manipulation results
+are mixed. EB-JEPA offers stronger evidence for examining costs than replacing
+CEM with MPPI. Current results remain 17/104 for ours versus 22/104 same-world
+CEM; no new performance is claimed. This was a paper/code review only: no new
+training, diagnostics, ablations or tests; monitor remains paused. Any future
+variant must include new trainable components within its original allowance.
+
 ## Current verified state — October 9, 12:22 AM Pacific
 
 - **Optimization and all four registered validations are complete.** The repaired
