@@ -1,0 +1,321 @@
+{
+  "active_processes": [
+    {
+      "allocation": [
+        "CUDA_VISIBLE_DEVICES=0,1,2,3"
+      ],
+      "cwd": "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/repo-throughput",
+      "pid": 645888
+    },
+    {
+      "allocation": [
+        "CUDA_VISIBLE_DEVICES=0,1,2,3"
+      ],
+      "cwd": "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/repo-throughput",
+      "pid": 648460
+    },
+    {
+      "allocation": [
+        "CUDA_VISIBLE_DEVICES=0,1,2,3",
+        "LOCAL_RANK=0",
+        "RANK=0"
+      ],
+      "cwd": "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/repo-throughput",
+      "pid": 648469
+    },
+    {
+      "allocation": [
+        "CUDA_VISIBLE_DEVICES=0,1,2,3",
+        "LOCAL_RANK=1",
+        "RANK=1"
+      ],
+      "cwd": "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/repo-throughput",
+      "pid": 648470
+    },
+    {
+      "allocation": [
+        "CUDA_VISIBLE_DEVICES=0,1,2,3",
+        "LOCAL_RANK=2",
+        "RANK=2"
+      ],
+      "cwd": "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/repo-throughput",
+      "pid": 648471
+    },
+    {
+      "allocation": [
+        "CUDA_VISIBLE_DEVICES=0,1,2,3",
+        "LOCAL_RANK=3",
+        "RANK=3"
+      ],
+      "cwd": "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/repo-throughput",
+      "pid": 648472
+    }
+  ],
+  "archive": "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/evaluation-lock-recovery-20261009",
+  "checked_at": "2026-10-09T02:20:58.559280+00:00",
+  "checkpoint_hashes_preserved": true,
+  "checkpoint_sha256_before_resume": {
+    "runs/hwm_adapted_3072/best.pt": "559236b007e20a8b6ded2df4b64c755a95ebcf7b186eef69804677dce3809045",
+    "runs/hwm_adapted_3072/last.pt": "54fb6ea1a1c137bc2c540c80d7157a0eb374ec1c8a65992edd7cbde411691881",
+    "runs/joint_flow_consistent_3072/best.pt": "6ce71f76ea30006d4af0b9fde9f98dd8bcd8c7915445f2057fbe221c905d61ff",
+    "runs/joint_flow_consistent_3072/last.pt": "6e5f0bfc981f56148208a608e278edd10a698471f909a3156bca897e424f44cc",
+    "runs/leflow_adapted_3072/best.pt": "3af2d10e51d4ccda585ecb96431fe4eb45ea79d81892b4395e0e1fe5f80a49f9",
+    "runs/leflow_adapted_3072/last.pt": "3b4b677a77bc2f841cfa10870296db1b528dda968009669be421d49212e770ce",
+    "runs/world_3072/best.pt": "fc55d9fb694813b4f7543c71ed6477c849f10fbf46e05f88369583555dfbc87a",
+    "runs/world_3072/last.pt": "a30e8edd0e83c44e2b529bdff191a2dae7d7d34c2f33fc2c22e28c17ffa9c1d2"
+  },
+  "checks": {
+    "checked_at": "2026-10-09T02:19:57.279928+00:00",
+    "evaluation_episodes_run": 0,
+    "gpus_used": 0,
+    "identity_mismatch_rejected": true,
+    "local_lock_results": [
+      {
+        "acquired": 9832902.70646851,
+        "ok": true,
+        "released": 9832902.856538078,
+        "waited_seconds": 3.1342729926109314e-05
+      },
+      {
+        "acquired": 9832902.856560033,
+        "ok": true,
+        "released": 9832903.006632151,
+        "waited_seconds": 0.15010776929557323
+      },
+      {
+        "acquired": 9832903.006645253,
+        "ok": true,
+        "released": 9832903.156713694,
+        "waited_seconds": 0.30017874017357826
+      },
+      {
+        "acquired": 9832903.156733612,
+        "ok": true,
+        "released": 9832903.30680622,
+        "waited_seconds": 0.45023569092154503
+      }
+    ],
+    "local_mutual_exclusion_verified": true,
+    "local_probe": "/tmp/mtxu-flow-jepa-20261007/journal-lock-probe-aaladu22",
+    "shared_lock_results": [
+      {
+        "errno": 11,
+        "error": "[Errno 11] Resource temporarily unavailable",
+        "ok": false
+      },
+      {
+        "errno": 11,
+        "error": "[Errno 11] Resource temporarily unavailable",
+        "ok": false
+      },
+      {
+        "errno": 11,
+        "error": "[Errno 11] Resource temporarily unavailable",
+        "ok": false
+      },
+      {
+        "acquired": 9832902.54344066,
+        "ok": true,
+        "released": 9832902.693511207,
+        "waited_seconds": 6.980821490287781e-05
+      }
+    ],
+    "shared_probe": "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/evaluation-lock-recovery-20261009/probe-du6xmyn1",
+    "training_updates_run": 0,
+    "unchanged_episode_journal_results": [
+      {
+        "initializations": 10,
+        "ok": true
+      },
+      {
+        "initializations": 10,
+        "ok": true
+      },
+      {
+        "initializations": 10,
+        "ok": true
+      },
+      {
+        "initializations": 10,
+        "ok": true
+      }
+    ]
+  },
+  "code": "56419ed14cf127d4b7a8ab09a9d68e6681d2edc0",
+  "completed_test_episodes_before_recovery": 0,
+  "completed_training": {
+    "hwm_adapted": {
+      "best": 0.07692307692307693,
+      "fixture": false,
+      "step": 20000,
+      "stop_reason": "update_limit",
+      "training_budget_seconds": 7200,
+      "training_gpu_hours": 6.085162281894849,
+      "training_seconds": 5476.6460537053645,
+      "validation_rounds": 4,
+      "validation_seconds": 2383.521864209324
+    },
+    "joint_flow_consistent": {
+      "best": 0.22115384615384615,
+      "fixture": false,
+      "step": 20000,
+      "stop_reason": "update_limit",
+      "training_budget_seconds": 7200,
+      "training_gpu_hours": 6.1096609604731205,
+      "training_seconds": 5498.694864425808,
+      "validation_rounds": 4,
+      "validation_seconds": 2102.5804066266865
+    },
+    "leflow_adapted": {
+      "best": 0.25961538461538464,
+      "fixture": false,
+      "step": 20000,
+      "stop_reason": "update_limit",
+      "training_budget_seconds": 7200,
+      "training_gpu_hours": 5.968880468954643,
+      "training_seconds": 5371.992422059178,
+      "validation_rounds": 4,
+      "validation_seconds": 1878.7567898724228
+    },
+    "world": {
+      "best": 0.017505817115306854,
+      "fixture": false,
+      "step": 20000,
+      "stop_reason": "update_limit",
+      "training_budget_seconds": 7200,
+      "training_gpu_hours": 2.94837253196165,
+      "training_seconds": 2653.5352787654847,
+      "validation_rounds": 4,
+      "validation_seconds": 1780.4272710029036
+    }
+  },
+  "compute_ledgers_preserved": true,
+  "compute_usage_before_resume": {
+    "hwm_adapted_3072": {
+      "budget_check": "optimizer boundaries; any last-update overrun is reported",
+      "gpu_count": 4,
+      "step": 20000,
+      "training_budget_seconds": 7200,
+      "training_gpu_hours": 6.085162281894849,
+      "training_seconds": 5476.6460537053645,
+      "validation_gpu_hours": 2.648357626899249,
+      "validation_seconds": 2383.521864209324
+    },
+    "joint_flow_consistent_3072": {
+      "budget_check": "optimizer boundaries; any last-update overrun is reported",
+      "gpu_count": 4,
+      "step": 20000,
+      "training_budget_seconds": 7200,
+      "training_gpu_hours": 6.1096609604731205,
+      "training_seconds": 5498.694864425808,
+      "validation_gpu_hours": 2.3362004518074295,
+      "validation_seconds": 2102.5804066266865
+    },
+    "leflow_adapted_3072": {
+      "budget_check": "optimizer boundaries; any last-update overrun is reported",
+      "gpu_count": 4,
+      "step": 20000,
+      "training_budget_seconds": 7200,
+      "training_gpu_hours": 5.968880468954643,
+      "training_seconds": 5371.992422059178,
+      "validation_gpu_hours": 2.087507544302692,
+      "validation_seconds": 1878.7567898724228
+    },
+    "world_3072": {
+      "budget_check": "optimizer boundaries; any last-update overrun is reported",
+      "gpu_count": 4,
+      "step": 20000,
+      "training_budget_seconds": 7200,
+      "training_gpu_hours": 2.94837253196165,
+      "training_seconds": 2653.5352787654847,
+      "validation_gpu_hours": 1.9782525233365595,
+      "validation_seconds": 1780.4272710029036
+    }
+  },
+  "former_supervisor_pid": 142087,
+  "frozen_code_changed": false,
+  "gpu_readback": "0, 10 %, 3297 MiB\n1, 74 %, 3297 MiB\n2, 6 %, 3297 MiB\n3, 74 %, 3297 MiB\n4, 0 %, 0 MiB\n5, 0 %, 0 MiB\n6, 0 %, 0 MiB\n7, 0 %, 0 MiB\n",
+  "identity_preserved": true,
+  "identity_sha256_preserved": "48d46f3478807eb915b7fb8bec5f77cd4d1fae7536dc874ded05ec721ce6fffe",
+  "last_checked_at": "2026-10-09T02:25:04.706626+00:00",
+  "launcher_sha256": "03b8d5369a9df1afdde6c009efe50b54af97b1ce2d2a10eca52677ba054668b2",
+  "lock_changes": [
+    {
+      "journal": "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/test/joint_flow_consistent_3072.json.episodes",
+      "lock": "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/test/joint_flow_consistent_3072.json.episodes/identity.lock",
+      "method": "joint_flow_consistent",
+      "target": "/tmp/mtxu-flow-jepa-20261007/evaluation-journal-locks/joint_flow_consistent_3072.lock"
+    },
+    {
+      "journal": "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/test/leflow_adapted_3072.json.episodes",
+      "lock": "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/test/leflow_adapted_3072.json.episodes/identity.lock",
+      "method": "leflow_adapted",
+      "target": "/tmp/mtxu-flow-jepa-20261007/evaluation-journal-locks/leflow_adapted_3072.lock"
+    },
+    {
+      "journal": "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/test/hwm_adapted_3072.json.episodes",
+      "lock": "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/test/hwm_adapted_3072.json.episodes/identity.lock",
+      "method": "hwm_adapted",
+      "target": "/tmp/mtxu-flow-jepa-20261007/evaluation-journal-locks/hwm_adapted_3072.lock"
+    },
+    {
+      "journal": "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/test/cem_long_3072.json.episodes",
+      "lock": "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/test/cem_long_3072.json.episodes/identity.lock",
+      "method": "cem_long",
+      "target": "/tmp/mtxu-flow-jepa-20261007/evaluation-journal-locks/cem_long_3072.lock"
+    }
+  ],
+  "persisted_episodes_after_resume": 8,
+  "reason": "FUSE shared storage returned EAGAIN for blocking flock under contention",
+  "resume_stage": {
+    "command": [
+      "/tmp/mtxu-flow-jepa-20261007/env/bin/python",
+      "-m",
+      "torch.distributed.run",
+      "--nnodes=1",
+      "--rdzv-backend=c10d",
+      "--rdzv-endpoint=127.0.0.1:0",
+      "--nproc_per_node=4",
+      "-m",
+      "flow_jepa.evaluate",
+      "--config",
+      "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/repo-throughput/config/flow_metaworld.json",
+      "--root",
+      "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign",
+      "--world",
+      "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/runs/world_3072/best.pt",
+      "--method",
+      "joint_flow_consistent",
+      "--seed",
+      "3072",
+      "--output",
+      "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/test/joint_flow_consistent_3072.json",
+      "--checkpoint",
+      "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/runs/joint_flow_consistent_3072/best.pt"
+    ],
+    "gpus": [
+      [
+        "0",
+        "GPU-a303d11c-f1b5-e245-93f0-735a054671ce"
+      ],
+      [
+        "1",
+        "GPU-fc39ae51-86a1-df0a-8657-0d33620f5115"
+      ],
+      [
+        "2",
+        "GPU-85f3f7a6-107f-2921-13a5-76a94101f858"
+      ],
+      [
+        "3",
+        "GPU-64e751ee-abb6-120c-f346-311e789228c7"
+      ]
+    ],
+    "stage": "test_joint_flow_consistent_3072",
+    "status": "running"
+  },
+  "resumed_at": "2026-10-09T02:21:28.136594+00:00",
+  "resumed_preflight_passed": true,
+  "status": "evaluation_resumed_verified",
+  "supervisor_pid": 645888
+}

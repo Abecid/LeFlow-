@@ -1,0 +1,77 @@
+{
+  "checked_at": "2026-10-09T02:19:57.279928+00:00",
+  "evaluation_episodes_run": 0,
+  "gpus_used": 0,
+  "identity_mismatch_rejected": true,
+  "local_lock_results": [
+    {
+      "acquired": 9832902.70646851,
+      "ok": true,
+      "released": 9832902.856538078,
+      "waited_seconds": 3.1342729926109314e-05
+    },
+    {
+      "acquired": 9832902.856560033,
+      "ok": true,
+      "released": 9832903.006632151,
+      "waited_seconds": 0.15010776929557323
+    },
+    {
+      "acquired": 9832903.006645253,
+      "ok": true,
+      "released": 9832903.156713694,
+      "waited_seconds": 0.30017874017357826
+    },
+    {
+      "acquired": 9832903.156733612,
+      "ok": true,
+      "released": 9832903.30680622,
+      "waited_seconds": 0.45023569092154503
+    }
+  ],
+  "local_mutual_exclusion_verified": true,
+  "local_probe": "/tmp/mtxu-flow-jepa-20261007/journal-lock-probe-aaladu22",
+  "shared_lock_results": [
+    {
+      "errno": 11,
+      "error": "[Errno 11] Resource temporarily unavailable",
+      "ok": false
+    },
+    {
+      "errno": 11,
+      "error": "[Errno 11] Resource temporarily unavailable",
+      "ok": false
+    },
+    {
+      "errno": 11,
+      "error": "[Errno 11] Resource temporarily unavailable",
+      "ok": false
+    },
+    {
+      "acquired": 9832902.54344066,
+      "ok": true,
+      "released": 9832902.693511207,
+      "waited_seconds": 6.980821490287781e-05
+    }
+  ],
+  "shared_probe": "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/evaluation-lock-recovery-20261009/probe-du6xmyn1",
+  "training_updates_run": 0,
+  "unchanged_episode_journal_results": [
+    {
+      "initializations": 10,
+      "ok": true
+    },
+    {
+      "initializations": 10,
+      "ok": true
+    },
+    {
+      "initializations": 10,
+      "ok": true
+    },
+    {
+      "initializations": 10,
+      "ok": true
+    }
+  ]
+}

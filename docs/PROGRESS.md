@@ -2,10 +2,11 @@
 
 ## Current verified state
 
-- **All models reached 20,000 updates; HWM's final validation is running.**
-  All 15,500 candidate
-  cache files are prepared. The frozen manifest selects 7,800 training, 650
-  validation and 3,200 test episodes. No full comparison result exists yet.
+- **All training and periodic validation are complete; final testing is running.**
+  The four learned models used 21.112076 optimization GPU-hours and 9.050318
+  validation GPU-hours, separately accounted. All 15,500 candidate cache files
+  remain prepared; the manifest selects 7,800 training, 650 validation and 3,200
+  test episodes. No full comparison result exists yet.
 - **Shared world complete:** `world_3072` stopped at its 20,000-update cap with
   all four validations complete. Optimization used 2,653.535 seconds (2.94837
   GPU-hours); validation used 1,780.427 seconds (1.97825 GPU-hours), separately
@@ -21,37 +22,39 @@
   (5.96888 GPU-hours); validation used 1,878.757 seconds (2.08751 GPU-hours),
   separately accounted. W&B verified the run finished:
   https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/9jhufn8j.
-- **HWM at its update cap; fourth validation in progress:** `hwm_adapted_3072`
-  reached step 20,000, charging 5,476.646 optimization seconds (6.08516 GPU-hours).
-  Three completed validations charged 1,799.907 seconds (1.99990 GPU-hours),
-  separately accounted; the fourth round's charge will be recorded on completion.
-  Its checkpoint shares the world hash, manifest, protocol, code, seed and
-  four-GPU allocation of the other heads. W&B readback at 02:03 UTC confirmed
-  step 19,950 and all three completed validations online:
+- **HWM complete:** `hwm_adapted_3072` stopped at 20,000 updates with all four
+  validations complete. Optimization used 5,476.646 seconds (6.08516 GPU-hours);
+  validation used 2,383.522 seconds (2.64836 GPU-hours), separately accounted.
+  W&B verified the run finished at 02:17 UTC:
   https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/cguncmvz.
-- **HWM validation:** the first three rounds achieved 7/104 (6.73%), 2/104
-  (1.92%) and 6/104 (5.77%) successes. All 98 third-round timeouts remain
-  failures. Against round two, five cases gained success and one lost it;
-  the step-5,000 checkpoint remains selected. One HWM validation remains
-  before final testing.
+- **HWM validation:** four rounds achieved 7/104 (6.73%), 2/104 (1.92%),
+  6/104 (5.77%) and 8/104 (7.69%) successes. All 96 final-round timeouts remain
+  failures. The step-20,000 checkpoint is selected; its SHA-256 and shared world,
+  manifest, protocol, code, seed and four-GPU allocation are verified.
 - **LeFlow validation:** four rounds achieved 26/104 (25.00%), 20/104 (19.23%),
   25/104 (24.04%) and 27/104 (25.96%) successes. All 77 fourth-round timeouts
   remain failures. The step-20,000 checkpoint is selected; its step and SHA-256
   are verified. Against joint-flow's selected 23/104, 16 cases succeeded under
-  both, eleven only under LeFlow and seven only under joint-flow. HWM and final
+  both, eleven only under LeFlow and seven only under joint-flow. Final
   tests remain pending; this validation difference is not a final ranking.
 - **Joint-flow validation:** the four rounds achieved 23/104 (22.12%), 17/104
   (16.35%), 16/104 (15.38%) and 19/104 (18.27%) successes. All 85 fourth-round
   timeouts remain failures. The registered selection rule retains the step-5,000
   best checkpoint; its actual step and SHA-256 are verified. CEM using the same
   selected world achieved 7/104 (6.73%); all joint-flow rounds retained those
-  successes. These are validation results; HWM and final tests are pending.
+  successes. These are validation results; final tests are pending.
 - **CEM validation results:** CEM succeeded on 10/104 cases (9.62%) at step 5,000,
   9/104 (8.65%) at step 10,000, and 7/104 (6.73%) at both 15,000 and 20,000.
   Round four had drawer-close 5/8 and handle-press 2/8; the other 11 tasks had
   zero successes. All 97 failures exhausted the 10-second controller allowance
   and remain in the results. World prediction loss improved without improving
-  task success. These are validation results; final testing is still sealed.
+  task success. These are validation results; final testing uses fixed selected checkpoints.
+- **Final-test startup recovered without code changes:** shared-storage locking
+  failed before any test episode completed. The four journal lock files now point
+  to local locks, while identities and episode records stay in persistent storage.
+  Joint-flow final evaluation has saved 8/3,200 episodes as of 02:25 UTC on GPUs
+  0–3. All checkpoint hashes and training/validation ledgers are unchanged. See
+  [the recovery record](reports/20261007-joint-flow/evaluation-lock-recovery.json).
 - **Lossless throughput changes:** 48 CPU producers, encoder/goal batches of 64,
   replay-based two-image test collection, overlapped writes and parallel ordered
   cache summarization. Final 1,270 files took about 42.2 seconds of worker elapsed
@@ -68,7 +71,7 @@
   all 16 tasks; two end-to-end cache checks with exact arrays/statistics; actual
   four-rank CUDA/NCCL/encoder/renderer/planner-gradient preflight.
 - **Frozen execution:** `56419ed14cf127d4b7a8ab09a9d68e6681d2edc0` in server
-  `repo-throughput`; supervisor PID 142087; launcher `launch.sh`; supervisor log
+  `repo-throughput`; resumed supervisor PID 645888; launcher `launch.sh`; supervisor log
   `launcher-throughput.log`. `repo/config/flow_metaworld.json` is only the original
   `--data-config`. Older supervisors are stopped and must not be restarted.
 - **Continuity:** the existing 15-minute monitor now follows the optimized run.
@@ -2964,3 +2967,76 @@ sealed tests. Next: preserve HWM's final validation and checkpoint selection,
 then monitor the existing supervisor's registered final tests. The implementation
 audit remains applicable; no active code or protocol changed and no follow-up
 experiment is queued.
+
+### 2026-10-09 02:16 UTC — HWM complete; final-test journal lock recovery
+
+HWM's fourth validation achieved 8/104 successes (7.69%), selecting its
+step-20,000 checkpoint. Handle-press succeeded on seven cases (all except 00005),
+and reach succeeded on 00003; the other eleven tasks had zero successes. All
+96 controller timeouts remain failures. Success within 50/100/200 primitive
+steps was 5/8/8 out of 104. Mean controller time was 9.498 seconds/episode,
+mean call latency 156.72 ms, p95 161.09 ms and mean safe-boundary overrun
+0.00942 seconds. Mean return was 107.905 and observed subgoal cosine 0.028975.
+
+Against round three, four cases succeeded under both, two successes were lost
+(coffee-button 00002 and door-close 00007), four were gained (handle-press
+00001/00002/00006 and reach 00003), and 94 failed under both. Against the formerly
+selected first round, three succeeded under both, four first-round successes
+were lost and five were gained. Comparing selected checkpoints: HWM/LeFlow have
+seven shared successes, one HWM-only (reach 00003), 20 LeFlow-only and 76 shared
+failures; HWM/joint-flow have five shared, three HWM-only, 18 joint-only and 78
+shared failures; HWM/CEM have two shared, six HWM-only, five CEM-only and 91
+shared failures. Verified all 104 paired IDs, episode hashes, reset seeds, task
+counts, seed 3072 and timeout handling. These remain validation diagnostics for
+the frozen adaptations, subject to the implementation audit's limitations.
+
+The fourth validation charged 583.615 seconds. HWM's final ledger is 5,476.646
+optimization seconds (6.085162 GPU-hours) and 2,383.522 validation seconds
+(2.648358 GPU-hours), with no last-update overrun. Across world and all three
+heads, optimization totals 21.112076 GPU-hours and validation 9.050318 GPU-hours.
+All four runs stopped at 20,000 updates with four validations and are finished
+on W&B (verified 02:17:23 UTC). CPU-only reads verified HWM best/last checkpoint
+steps, hashes and shared provenance; each is 44,490,453 bytes. The selected HWM
+SHA-256 is `559236b007e20a8b6ded2df4b64c755a95ebcf7b186eef69804677dce3809045`.
+
+The original supervisor correctly waited for all training to finish, then failed
+at final-test startup at 02:05 UTC. Three evaluator ranks received `EAGAIN` from
+blocking `flock` while initializing the shared episode journal. No test episode
+completed. The persistent volume reports `fuseblk`; local scratch is `overlayfs`.
+A CPU-only four-process probe reproduced the failure on shared storage (three
+failed lock acquisitions), verified local mutual exclusion (four successes),
+and exercised the unchanged `EpisodeJournal` through 40 concurrent initializations
+with a local lock-file symlink. The identity-mismatch safeguard still rejects
+incompatible metadata. No training updates or evaluation episodes were run by
+these diagnostics, and no GPU was used.
+
+Archived the original failure status, launcher/evaluator logs, PID, preflight and
+empty lock under server `evaluation-lock-recovery-20261009`. After verifying no
+campaign processes remained, changed only each of the four journals' `identity.lock`
+paths into symlinks to local lock files in
+`/tmp/mtxu-flow-jepa-20261007/evaluation-journal-locks`. Journal identity and episode
+records stay in the persistent campaign directory. Verified the existing identity
+hash unchanged and all eight model checkpoint hashes and compute ledgers preserved.
+The execution checkout remains clean at `56419ed`; launcher SHA-256 is unchanged.
+Resumed that same launcher at 02:21:28 UTC as supervisor 645888. Completed training
+is skipped, and the normal startup preflight remains separate from optimization.
+The durable setup/recovery record is `campaign/evaluation-lock-recovery.json`.
+
+Recovery verified at 02:25:04 UTC: the normal four-rank preflight passed and the
+supervisor proceeded directly to `test_joint_flow_consistent_3072`. Evaluator
+launcher 648460 and ranks 648469/648470/648471/648472 run beneath supervisor
+645888, in the clean frozen checkout, with CUDA allocation 0–3 only; GPUs 4–7
+remain empty. Eight unique test episodes were durably saved in the unchanged
+persistent journal, with seed 3072, the 10-second cap and timeouts retained as
+failures. No training was repeated and no optimization or completed-validation
+charges changed. The existing online training records remain finished; the
+registered evaluator publishes its final W&B metrics after each full test
+completes. No partial test score is used for selection or tuning.
+
+The completed validation snapshot, HWM checkpoint provenance, reproducible CPU
+lock probe and compact recovery evidence are saved in the reporting checkout.
+Keep the four lock symlinks and their local targets intact while evaluation runs.
+Next: monitor the fixed 3,200-reset test for each of the four selected methods,
+preserve all episode outcomes, then publish the paired final comparison with
+its single-seed and implementation limitations. No follow-up experiment is
+queued; the monitor remains active until that comparison finishes.

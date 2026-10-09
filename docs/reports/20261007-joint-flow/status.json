@@ -8,19 +8,21 @@
     "--rdzv-endpoint=127.0.0.1:0",
     "--nproc_per_node=4",
     "-m",
-    "flow_jepa.train",
+    "flow_jepa.evaluate",
     "--config",
     "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/repo-throughput/config/flow_metaworld.json",
     "--root",
     "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign",
-    "--run-dir",
-    "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/runs/hwm_adapted_3072",
+    "--world",
+    "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/runs/world_3072/best.pt",
     "--method",
-    "hwm_adapted",
+    "joint_flow_consistent",
     "--seed",
     "3072",
-    "--world",
-    "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/runs/world_3072/best.pt"
+    "--output",
+    "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/test/joint_flow_consistent_3072.json",
+    "--checkpoint",
+    "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/runs/joint_flow_consistent_3072/best.pt"
   ],
   "gpus": [
     [
@@ -40,6 +42,6 @@
       "GPU-64e751ee-abb6-120c-f346-311e789228c7"
     ]
   ],
-  "stage": "hwm_adapted_3072",
+  "stage": "test_joint_flow_consistent_3072",
   "status": "running"
 }
