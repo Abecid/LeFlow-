@@ -5,15 +5,19 @@
   failure analysis. This explicitly supersedes the earlier no-training hold for
   the NEW campaign only. Follow docs/REPAIRED_COMPARISON.md. Retrain the shared
   world and all three learned heads, same seed 3072, original per-model time/update
-  ceilings, exact original train/evaluation episodes, and GPUs 0–3 only.
+  ceilings and exact original train/evaluation episodes. The latest resource
+  authorization permits GPUs 4–7 too after reviewing the idle PushT pilot. Use
+  two pools of FOUR GPUs, at most eight concurrently; never eight GPUs per
+  training job or larger per-model budgets. See docs/PARALLEL_ALLOCATION.md.
   Keep the original campaign held and its checkpoints/ledgers immutable. No
   extra seeds, ablations, sweeps, budget extensions, or selective test reruns.
   Publish latest evidence and plans to origin/main, preserving remote history.
 
 - The active project is the non-BTM V-JEPA 2.1 / MetaWorld campaign on branch
   `research/joint-flow-metaworld`. Follow `docs/FLOW_EXPERIMENT.md`.
-- The user authorizes SSH to `target_server_2`, at most four GPUs total for this
-  campaign, training, online W&B logging, and matched baseline evaluation.
+- The user authorizes SSH to `target_server_2`, up to eight GPUs total for this
+  campaign in two four-GPU jobs, training, online W&B logging, and matched
+  baseline evaluation. The world continues unchanged on GPUs 0–3.
 - Use exactly one training seed, 3072, per the user's October 7 correction.
   Never launch additional training seeds. Run only joint_flow_consistent,
   leflow_adapted, hwm_adapted, and cem_long. No ablations until first results

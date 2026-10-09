@@ -10,8 +10,10 @@ against test outcomes.
 
 - Server root: `/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison`.
 - Frozen execution checkout: `repo`; records: `campaign`; recipe:
-  `config/flow_metaworld_repair.json`; seed **3072**, GPUs **0–3** only.
-- Sequential fresh initialization: shared world, `joint_flow_consistent`,
+  `config/flow_metaworld_repair.json`; seed **3072**, four GPUs per job.
+  The later [resource amendment](PARALLEL_ALLOCATION.md) authorizes two concurrent
+  four-GPU pools (0–3 and 4–7) without changing any per-model budget.
+- Fresh initialization: shared world, `joint_flow_consistent`,
   `leflow_adapted`, `hwm_adapted`. `cem_long` uses the same shared world.
 - Each learned model: maximum **7,200 optimization seconds or 20,000 updates**,
   whichever occurs first, global batch 64, microbatch 4, four GPUs. Validation is

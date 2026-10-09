@@ -3216,3 +3216,28 @@ paths, frozen revision and unchanged budgets. It must preserve periodic results,
 finish the registered final comparison and failure analysis, publish findings
 and failed case references to origin/main, then pause. No duplicate campaign,
 new seed, ablation, budget extension or selective evaluation is authorized.
+
+## 2026-10-09 04:38 UTC — spare GPU review and parallel scheduling authorization
+
+The user asked to inspect the other four GPUs and the other agent's results,
+then allowed reusing those GPUs if the experiment was not promising. GPUs 4–7
+were idle at repeated checks. Reviewed the other PushT BTM/flow pilot and its
+paired evidence: selected offset-100 success 5/20 vs 4/20, difference +5 pp with
+95% paired interval [-15,+25]; across 32 matched checkpoints, descriptive means
+8.125% BTM vs 10.469% flow. Latest matched shorter-horizon scores favor flow.
+No convincing control advantage or controlled efficiency advantage is shown.
+Flow is incomplete at 23,000 saved / 23,040 logged versus 23,830 targeted steps;
+BTM reached 23,830, but neither completion marker exists. Our fresh CPU-only
+inspection confirmed unchanged checkpoint hashes and evaluation counts. No old
+trainer was active and no old process/artifact was modified.
+
+Prepared a separate scheduler for two four-GPU pools, preserving frozen code,
+per-model budgets, global batch, seed and data. World training continues on 0–3;
+heads wait for its final selected checkpoint, then ours/LeFlow run concurrently,
+HWM runs on the next free pool, followed by the unchanged four final test jobs
+in parallel pairs. Main supervisor is temporarily suspended while its world
+child continues, avoiding duplicate dispatch; after the registered jobs finish,
+the parent resumes to verify results and publish comparison/failure analysis.
+Handled scheduler failures drain its own children before parent recovery under
+existing ledgers. Three scheduler regression checks pass. Details and recovery
+rules are in PARALLEL_ALLOCATION.md; compact other-pilot evidence is preserved.

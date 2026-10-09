@@ -1,0 +1,136 @@
+{
+  "observed_utc": "2026-10-09T04:37:51.086578+00:00",
+  "runs": {
+    "btm": {
+      "completion_marker": false,
+      "latest_logged_step": 23830,
+      "evaluation_files": 99,
+      "checkpoints": {
+        "last.pt": {
+          "bytes": 167326311,
+          "mtime_unix": 1791165636.047725,
+          "sha256": "f71611f2699347df2c44c23c821197d730cae86f1e0f72d6edaa8c502afb6096",
+          "verified_saved_step": 23830
+        },
+        "best.pt": {
+          "bytes": 167322983,
+          "mtime_unix": 1791157608.4714837,
+          "sha256": "89036ff00fdecd54f6abebb7fef4e7b937176431add6880a3da60076b120ac15",
+          "verified_saved_step": 1000
+        }
+      }
+    },
+    "flow": {
+      "completion_marker": false,
+      "latest_logged_step": 23040,
+      "evaluation_files": 96,
+      "checkpoints": {
+        "last.pt": {
+          "bytes": 170495175,
+          "mtime_unix": 1791169146.2728653,
+          "sha256": "f2c4b3044591426d57d91f136f5353ac0aa14bfd14c4f88db20a1dd1f694364b",
+          "verified_saved_step": 23000
+        },
+        "best.pt": {
+          "bytes": 170491719,
+          "mtime_unix": 1791160468.8049507,
+          "sha256": "97532e69c6709f0c802585bb69e8cea5208532d415f9c6dca5f10e0941b49da8",
+          "verified_saved_step": 1000
+        }
+      }
+    }
+  },
+  "gpu_snapshot": "0, NVIDIA A800-SXM4-80GB, 1103, 25\n1, NVIDIA A800-SXM4-80GB, 1103, 62\n2, NVIDIA A800-SXM4-80GB, 1103, 60\n3, NVIDIA A800-SXM4-80GB, 1103, 58\n4, NVIDIA A800-SXM4-80GB, 0, 0\n5, NVIDIA A800-SXM4-80GB, 0, 0\n6, NVIDIA A800-SXM4-80GB, 0, 0\n7, NVIDIA A800-SXM4-80GB, 0, 0\n",
+  "selected_and_latest_matched_comparisons": [
+    {
+      "step": 1000,
+      "offset": 25,
+      "btm_success_rate": 0.4,
+      "flow_success_rate": 0.5,
+      "delta_pp": -10.0,
+      "paired_ci95_low_pp": -35.0,
+      "paired_ci95_high_pp": 15.0,
+      "btm_only_successes": 2,
+      "flow_only_successes": 4,
+      "both_successes": 6,
+      "neither_successes": 8
+    },
+    {
+      "step": 1000,
+      "offset": 50,
+      "btm_success_rate": 0.4,
+      "flow_success_rate": 0.3,
+      "delta_pp": 10.0,
+      "paired_ci95_low_pp": -10.0,
+      "paired_ci95_high_pp": 30.0,
+      "btm_only_successes": 3,
+      "flow_only_successes": 1,
+      "both_successes": 5,
+      "neither_successes": 11
+    },
+    {
+      "step": 1000,
+      "offset": 100,
+      "btm_success_rate": 0.25,
+      "flow_success_rate": 0.2,
+      "delta_pp": 5.0,
+      "paired_ci95_low_pp": -15.0,
+      "paired_ci95_high_pp": 25.0,
+      "btm_only_successes": 3,
+      "flow_only_successes": 2,
+      "both_successes": 2,
+      "neither_successes": 13
+    },
+    {
+      "step": 23000,
+      "offset": 25,
+      "btm_success_rate": 0.05,
+      "flow_success_rate": 0.45,
+      "delta_pp": -40.0,
+      "paired_ci95_low_pp": -60.0,
+      "paired_ci95_high_pp": -20.0,
+      "btm_only_successes": 0,
+      "flow_only_successes": 8,
+      "both_successes": 1,
+      "neither_successes": 11
+    },
+    {
+      "step": 23000,
+      "offset": 50,
+      "btm_success_rate": 0.0,
+      "flow_success_rate": 0.15,
+      "delta_pp": -15.0,
+      "paired_ci95_low_pp": -30.0,
+      "paired_ci95_high_pp": 0.0,
+      "btm_only_successes": 0,
+      "flow_only_successes": 3,
+      "both_successes": 0,
+      "neither_successes": 17
+    },
+    {
+      "step": 23000,
+      "offset": 100,
+      "btm_success_rate": 0.1,
+      "flow_success_rate": 0.05,
+      "delta_pp": 5.0,
+      "paired_ci95_low_pp": -10.0,
+      "paired_ci95_high_pp": 20.0,
+      "btm_only_successes": 2,
+      "flow_only_successes": 1,
+      "both_successes": 0,
+      "neither_successes": 17
+    }
+  ],
+  "matched_history_descriptive_only": {
+    "matched_checkpoints": 32,
+    "btm_mean_primary_success_percent": 8.125,
+    "flow_mean_primary_success_percent": 10.46875,
+    "btm_wins_ties_losses": [
+      12,
+      4,
+      16
+    ],
+    "note": "Repeated validation cases and selected checkpoints are not independent trials; this is not a new inferential endpoint."
+  },
+  "judgment": "No convincing BTM control advantage or controlled efficiency advantage. Incomplete, single-seed validation pilot. Reuse idle GPUs for existing repaired MetaWorld comparison; preserve pilot artifacts and stopped jobs."
+}
