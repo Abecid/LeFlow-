@@ -1,5 +1,19 @@
 # Active campaign progress
 
+## First latent-revision validation — October9,3:09 PM Pacific
+
+The5k checkpoint scores **73/104**, below the saved controller-grounded79/104:
+four improvements and ten regressions on identical cases/seeds. All31 failures
+reach200 actions; zero timeouts,85.55ms mean decision latency. The corrected
+executed-prefix progress estimate lowers MAE28.52%, but terminal penalties are
+positive in only9.06% of decisions and change the best anchor in the sampled
+candidate pool in0.194%. Prefix calibration is not yet producing task gains.
+[First-round report](LATENT_REVISION_RESULTS.md) records raw evidence, weak
+tasks, visual inspection of all10 saved cases and concrete formulation limits.
+No causal contribution claim follows from these diagnostics. Training continues
+unchanged through the registered10k/15k/20k validations; no further variant,
+baseline run, ablation or final test is queued.
+
 ## Latent revision training launched — October 9, 3:01 PM Pacific snapshot
 
 The isolated source is frozen at899f8f2. All10 behavioral tests, the bitwise

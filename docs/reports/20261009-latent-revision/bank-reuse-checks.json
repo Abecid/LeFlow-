@@ -1,0 +1,20 @@
+{
+  "complete_tensor_equality": [
+    "chunks",
+    "routes",
+    "episode",
+    "time",
+    "mean",
+    "std"
+  ],
+  "complete_episode_identity_equality": true,
+  "raw_state_bitwise_checks": [
+    0,
+    1,
+    100,
+    130661
+  ],
+  "source_states": 130662,
+  "source_routes": 209109,
+  "world_or_simulator_calls": 0
+}
