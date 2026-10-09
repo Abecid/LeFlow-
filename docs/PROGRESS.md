@@ -1,6 +1,6 @@
 # Active campaign progress
 
-## Current verified state — October 9, 05:48 UTC
+## Current verified state — October 9, 05:59 UTC
 
 - **World complete; only our repaired planner is training.** World reached
   20,000 updates and all four registered validations. Ours-only coordinator
@@ -18,8 +18,8 @@
   `ae3f910da43f0a43dd65945394444a0b11719ed042cdacffacc2faaf824ec5a3`.
   CPU-read checkpoint metadata, the coordinator and online head configuration
   agree on this identity. See [selected world and paired CEM evidence](reports/20261009-repaired-comparison/selected-world-diagnostic.json).
-- **Our head reached 1,218 updates** in the saved snapshot, with 342.915 charged
-  optimization seconds (0.381017 GPU-hours), finite losses and no optimization
+- **Our head reached 3,111 updates** in the saved snapshot, with 993.535 charged
+  optimization seconds (1.103927 GPU-hours), finite losses and no optimization
   overrun. Its first validation has not run. Online W&B confirms
   [our repaired run rm46k69b](https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/rm46k69b)
   running and [world 8vwksovs](https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/8vwksovs)
@@ -34,7 +34,7 @@
   validation pool 650 with 104 fixed periodic cases, reserved final test 3,200.
   Four GPUs, global batch 64/microbatch 4, and 7,200 optimization seconds OR 20,000 updates
   remain the unchanged ceilings. No test outcomes were inspected.
-- **Cumulative charged compute:** 24.471863 optimization GPU-hours and 10.913087
+- **Cumulative charged compute:** 25.194774 optimization GPU-hours and 10.913087
   completed registered-validation GPU-hours across both MetaWorld campaigns,
   plus 0.136526 bounded repair-diagnostic GPU-hours. The completed new world used
   2.978770 optimization and 1.862768 validation GPU-hours. Shared preparation,
@@ -3422,3 +3422,18 @@ inspection/snapshot through the fallback succeeded. No server process was
 restarted or modified by this monitor. No test outcomes were inspected or tests
 launched. Next: the head's four registered validations and historical-reference
 failure review, followed by publication and monitor pause; no automatic next run.
+
+## 2026-10-09 05:57 UTC — head health and charged compute preserved
+
+At 2026-10-09T05:58:43 UTC, coordinator 807392, head launcher 858560 and
+four ranks retained their verified identities on GPUs 0–3. Cancelled parent
+778158, old world launcher 780827 and cancelled coordinator 795290 are absent.
+Our head reached 3,111 updates with 993.535 charged optimization seconds
+(1.103927 GPU-hours); no validation has completed. Metrics are finite,
+steps and charged time are monotone, and no optimization overrun is recorded.
+W&B confirms the head running and the selected world finished. Frozen source,
+configuration, manifest, selected-world hash and held historical records still
+match. Updated cumulative optimization accounting to 25.194774 GPU-hours;
+completed registered validation remains 10.913087 GPU-hours, with the same
+separate diagnostic and cost exclusions. No intervention, new job or test was
+performed. The next meaningful checkpoint is the head's first validation.

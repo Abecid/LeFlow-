@@ -1,6 +1,6 @@
 {
   "cancelled_coordinator_absent": true,
-  "checked_at": "2026-10-09T05:47:50.998269+00:00",
+  "checked_at": "2026-10-09T05:58:43.113898+00:00",
   "checkpoint_metadata": {
     "best.pt": {
       "bytes": 44360165,
@@ -14,8 +14,8 @@
   "configuration_matches_registered": true,
   "configuration_sha256": "d7c0e96603f0cf3598ed5469d9a9add10a6850874d0d02d288d66be80f8df7bb",
   "coordinator_log_tail": "",
-  "gpu_process_readback": "GPU-a303d11c-f1b5-e245-93f0-735a054671ce, 1928040, [Not Found], 1248 MiB\nGPU-fc39ae51-86a1-df0a-8657-0d33620f5115, 1928041, [Not Found], 1248 MiB\nGPU-85f3f7a6-107f-2921-13a5-76a94101f858, 1928042, [Not Found], 1248 MiB\nGPU-64e751ee-abb6-120c-f346-311e789228c7, 1928043, [Not Found], 1248 MiB\n",
-  "gpu_readback": "0, 1251 MiB, 61 %\n1, 1251 MiB, 70 %\n2, 1251 MiB, 8 %\n3, 1251 MiB, 96 %\n4, 0 MiB, 0 %\n5, 0 MiB, 0 %\n6, 0 MiB, 0 %\n7, 0 MiB, 0 %\n",
+  "gpu_process_readback": "GPU-a303d11c-f1b5-e245-93f0-735a054671ce, 1928040, [Not Found], 2008 MiB\nGPU-fc39ae51-86a1-df0a-8657-0d33620f5115, 1928041, [Not Found], 2008 MiB\nGPU-85f3f7a6-107f-2921-13a5-76a94101f858, 1928042, [Not Found], 2008 MiB\nGPU-64e751ee-abb6-120c-f346-311e789228c7, 1928043, [Not Found], 2008 MiB\n",
+  "gpu_readback": "0, 2011 MiB, 55 %\n1, 2011 MiB, 70 %\n2, 2011 MiB, 66 %\n3, 2011 MiB, 63 %\n4, 0 MiB, 0 %\n5, 0 MiB, 0 %\n6, 0 MiB, 0 %\n7, 0 MiB, 0 %\n",
   "manifest_sha256": "ce6e190b9b777ad34807c47c2dbeebae810f9cca52b440dbaf9e05043d69f1bc",
   "new_test_reports": [],
   "old_campaign_held": true,
@@ -23,7 +23,7 @@
   "online_readback": {
     "code": "75e0815351eb25c63e495f87458f139bd5062259",
     "group": "vjepa21_metaworld_repair_v2_matched",
-    "observed_utc": "2026-10-09T05:47:54.395418+00:00",
+    "observed_utc": "2026-10-09T05:58:45.762297+00:00",
     "seed": 3072,
     "state": "finished",
     "summary": {
@@ -109,6 +109,11 @@
     "url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/8vwksovs",
     "verified_online": true
   },
+  "retired_process_states": {
+    "778158": "absent",
+    "780827": "absent",
+    "795290": "absent"
+  },
   "run_completion": {
     "world_3072": {
       "best": 0.009740524925291538,
@@ -128,20 +133,21 @@
   ],
   "run_latest_training": {
     "joint_flow_consistent_3072": {
-      "budget/fraction": 0.06,
+      "budget/fraction": 0.1525,
       "budget/last_update_overrun_seconds": 0.0,
-      "budget/training_gpu_hours": 0.37534578476929004,
-      "budget/training_seconds": 337.811206292361,
+      "budget/training_gpu_hours": 1.0770606080463363,
+      "budget/training_seconds": 969.3545472417027,
       "budget/validation_gpu_hours": 0.0,
-      "step": 1200,
-      "system/gpu_peak_memory_gib": 0.26982975006103516,
-      "system/samples_per_second": 232.2611279101358,
-      "train/action_objective": 0.25432905554771423,
-      "train/consistency_weight": 0.0,
-      "train/grad_norm": 2.9269015789031982,
-      "train/loss": 0.2996874451637268,
-      "train/lr": 9.912467528370846e-05,
-      "train/state_objective": 0.045358382165431976
+      "step": 3050,
+      "system/gpu_peak_memory_gib": 0.939939022064209,
+      "system/samples_per_second": 202.50078093436417,
+      "train/action_objective": 0.2776944041252136,
+      "train/consistency_weight": 0.05245,
+      "train/generated_consistency": 0.017112629488110542,
+      "train/grad_norm": 3.0055463314056396,
+      "train/loss": 0.3224613070487976,
+      "train/lr": 9.443054936692118e-05,
+      "train/state_objective": 0.04386937990784645
     },
     "world_3072": {
       "budget/fraction": 1.0,
@@ -163,10 +169,10 @@
     "joint_flow_consistent_3072": {
       "budget_check": "optimizer boundaries; any last-update overrun is reported",
       "gpu_count": 4,
-      "step": 1203,
+      "step": 3098,
       "training_budget_seconds": 7200,
-      "training_gpu_hours": 0.37619592171369326,
-      "training_seconds": 338.57632954232395,
+      "training_gpu_hours": 1.0981362131300072,
+      "training_seconds": 988.3225918170065,
       "validation_gpu_hours": 0.0,
       "validation_seconds": 0.0
     },
@@ -185,28 +191,29 @@
     "joint_flow_consistent_3072": {
       "code": "75e0815351eb25c63e495f87458f139bd5062259",
       "group": "vjepa21_metaworld_repair_v2_matched",
-      "observed_utc": "2026-10-09T05:47:56.767135+00:00",
+      "observed_utc": "2026-10-09T05:58:49.214116+00:00",
       "seed": 3072,
       "state": "running",
       "summary": {
-        "_runtime": 316.920752652,
-        "_step": 1100,
-        "_timestamp": 1791524845.754084,
-        "_wandb.runtime": 316,
-        "budget/fraction": 0.055,
+        "_runtime": 944.153168418,
+        "_step": 2950,
+        "_timestamp": 1791525467.110037,
+        "_wandb.runtime": 944,
+        "budget/fraction": 0.1475,
         "budget/last_update_overrun_seconds": 0,
-        "budget/training_gpu_hours": 0.3447118388178448,
-        "budget/training_seconds": 310.2406549360603,
+        "budget/training_gpu_hours": 1.0333988025391267,
+        "budget/training_seconds": 930.058922285214,
         "budget/validation_gpu_hours": 0,
-        "step": 1100,
-        "system/gpu_peak_memory_gib": 0.26982975006103516,
-        "system/samples_per_second": 232.31223459814507,
-        "train/action_objective": 0.3960278034210205,
-        "train/consistency_weight": 0,
-        "train/grad_norm": 2.6543667316436768,
-        "train/loss": 0.4428170323371887,
-        "train/lr": 9.92642478677835e-05,
-        "train/state_objective": 0.046789221465587616
+        "step": 2950,
+        "system/gpu_peak_memory_gib": 0.939939022064209,
+        "system/samples_per_second": 204.2413845498353,
+        "train/action_objective": 0.2041051983833313,
+        "train/consistency_weight": 0.04744999999999999,
+        "train/generated_consistency": 0.017802517861127853,
+        "train/grad_norm": 1.512966513633728,
+        "train/loss": 0.25095582008361816,
+        "train/lr": 9.47834345819446e-05,
+        "train/state_objective": 0.04600588232278824
       },
       "url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/rm46k69b",
       "verified_online": true,
@@ -215,7 +222,7 @@
     "world_3072": {
       "code": "75e0815351eb25c63e495f87458f139bd5062259",
       "group": "vjepa21_metaworld_repair_v2_matched",
-      "observed_utc": "2026-10-09T05:47:54.395418+00:00",
+      "observed_utc": "2026-10-09T05:58:45.762297+00:00",
       "seed": 3072,
       "state": "finished",
       "summary": {
@@ -453,7 +460,7 @@
       },
       "pid": 858566,
       "start_ticks": "984503717",
-      "state": "R"
+      "state": "S"
     },
     {
       "command": [
@@ -543,7 +550,7 @@
       },
       "pid": 858569,
       "start_ticks": "984503717",
-      "state": "R"
+      "state": "S"
     }
   ],
   "verified_processes": [

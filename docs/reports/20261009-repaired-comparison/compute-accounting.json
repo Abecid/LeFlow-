@@ -2,20 +2,20 @@
   "all_infrastructure_runtime_total_available": false,
   "baseline_retraining_updates": 0,
   "bounded_repair_diagnostic_gpu_hours": 0.13652564757193128,
-  "checked_at": "2026-10-09T05:48:56.236149+00:00",
+  "checked_at": "2026-10-09T05:59:52.857635+00:00",
   "cumulative_completed_registered_validation_gpu_hours": 10.91308657962415,
-  "cumulative_optimization_gpu_hours": 24.471862802192984,
+  "cumulative_optimization_gpu_hours": 25.194773511321596,
   "current_campaign": "20261009-repaired-comparison",
   "current_completed_validation_gpu_hours": 1.8627684332782195,
-  "current_optimization_gpu_hours": 3.359786558908721,
+  "current_optimization_gpu_hours": 4.082697268037332,
   "current_run_ledgers": {
     "joint_flow_consistent_3072": {
       "budget_check": "optimizer boundaries; any last-update overrun is reported",
       "gpu_count": 4,
-      "step": 1218,
+      "step": 3111,
       "training_budget_seconds": 7200,
-      "training_gpu_hours": 0.38101652885683707,
-      "training_seconds": 342.9148759711534,
+      "training_gpu_hours": 1.1039272379854488,
+      "training_seconds": 993.5345141869038,
       "validation_gpu_hours": 0.0,
       "validation_seconds": 0.0
     },
@@ -36,11 +36,11 @@
     "Separate older PushT pilot is a different benchmark and is outside these MetaWorld subtotals."
   ],
   "gpu_count_per_model": 4,
-  "health_checked_at": "2026-10-09T05:47:50.998269+00:00",
+  "health_checked_at": "2026-10-09T05:58:43.113898+00:00",
   "historical_optimization_gpu_hours": 21.112076243284264,
   "historical_registered_validation_gpu_hours": 9.05031814634593,
   "interpretation": "Cumulative charged training and completed validation are retained across both MetaWorld campaigns. This is not a claim that the per-run allowance equals total R&D cost or that the known subtotal covers all infrastructure runtime.",
-  "known_charged_components_gpu_hours": 35.521475029389066,
+  "known_charged_components_gpu_hours": 36.24438573851768,
   "original_campaign": "20261007-joint-flow",
   "original_run_ledgers": {
     "hwm_adapted_3072": {
