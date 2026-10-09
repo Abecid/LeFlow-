@@ -3264,3 +3264,29 @@ snapshot tool. Updated the existing monitor with the new eight-total/four-per-jo
 scope, actual scheduler state, expected parent suspension and duplicate-safe
 recovery rules. Compact review, allocation and process verification evidence are
 published with this progress update. No old pilot job or artifact was changed.
+
+## October 8, 2026, 9:49 PM Pacific — baseline repetition cancelled
+
+The user clarified that already trained baselines should remain fixed while our
+method is improved. Queuing fresh LeFlow/HWM runs was an overly broad reading of
+the preceding fresh-training instruction. Verified that only the world was
+running and neither baseline nor our head had started. Cancelled waiting-only
+parallel coordinator 795290 with zero head dispatches; its old parent 778158
+remains stopped and must never resume the cancelled queue. The active world
+launcher 780827 was not signalled. GPUs4–7's unused locks were released.
+
+The continuation now targets only our repaired head after its compatible static
+world finishes, retaining all original per-model ceilings, data, seed, periodic
+validation, checkpoint and budget ledgers. It produces a historical validation
+comparison/failure inventory and stops for review; no repeated full-test tuning,
+baseline retraining or automatic chain of new variants. The existing monitor was
+updated immediately to enforce the corrected scope. See OURS_ONLY_ITERATION.md
+for the compatibility/known-baseline-defect limits and full recovery rules.
+
+Offline analysis verified the saved selections (ours23, LeFlow27, HWM8, CEM7 of
+104) and rejects changed case fingerprints. No training or simulator rollouts
+were used for these checks. Frozen model source remains75e0815. The running new
+world is needed by our changed representation; historical references keep their
+old worlds and code. A resulting gain is a full-pipeline historical comparison,
+not an isolated sampler effect or corrected-SOTA claim. Definitive corrected
+baseline work is a separate decision, never an automatic cost of each iteration.

@@ -19,7 +19,9 @@ for name in ('campaign.json', 'status.json', 'queue.json', 'allocation.json',
              'data_protocol.json', 'comparison.json', 'seed-scope-change.json',
              'compute-scope-change.json', 'throughput-scope-change.json',
              'fresh-start.json', 'failure-analysis.json',
-             'parallel-allocation.json', 'parallel-status.json'):
+             'parallel-allocation.json', 'parallel-status.json',
+             'baseline-queue-cancelled.json', 'ours-only-status.json',
+             'historical-validation-comparison.json', 'validation-failure-analysis.json'):
     p = root / name
     if p.exists():
         files[name] = json.loads(p.read_text())

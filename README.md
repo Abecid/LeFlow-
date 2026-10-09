@@ -1,5 +1,11 @@
 # Joint flow planning with V-JEPA 2.1 (LeFlow fork)
 
+> Latest scope correction: repeated baseline training and the all-method queue
+> are cancelled. Continue the compatible world, then train only our repaired
+> method and compare validation with frozen historical references. See
+> [ours-only iteration](docs/OURS_ONLY_ITERATION.md). Earlier scheduling details below are historical.
+
+
 **Current status, October 9, 2026:** the user authorized a fresh matched
 comparison after repairs. The new campaign retrains the shared world model and
 all three learned methods from scratch on the exact original train/evaluation

@@ -1,5 +1,11 @@
 # Fresh repaired comparison — October 9, 2026 UTC
 
+> Latest scope correction: repeated baseline training and the all-method queue
+> are cancelled. Continue the compatible world, then train only our repaired
+> method and compare validation with frozen historical references. See
+> [ours-only iteration](OURS_ONLY_ITERATION.md). Earlier scheduling details below are historical.
+
+
 The user's latest correction explicitly authorizes fresh training after the
 repairs, periodic evaluation, comparison against the three major baselines, and
 failure analysis. This supersedes the previous no-additional-training instruction

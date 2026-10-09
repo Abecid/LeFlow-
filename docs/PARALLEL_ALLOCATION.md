@@ -1,5 +1,11 @@
 # Additional idle GPUs — October 9, 2026 UTC
 
+> Latest scope correction: repeated baseline training and the all-method queue
+> are cancelled. Continue the compatible world, then train only our repaired
+> method and compare validation with frozen historical references. See
+> [ours-only iteration](OURS_ONLY_ITERATION.md). Earlier scheduling details below are historical.
+
+
 The user explicitly authorized using the other four GPUs after inspecting the
 other agent's experiments and judging whether they justify retaining resources.
 At 04:31 and 04:37 UTC, GPUs 4–7 had zero memory, zero utilization and no GPU
