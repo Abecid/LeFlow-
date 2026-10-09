@@ -1,0 +1,61 @@
+{
+  "checkpoint": 5000,
+  "all_contact_sheets_inspected": true,
+  "resolution": [
+    1536,
+    326
+  ],
+  "render_source": "saved actual validation frames only",
+  "model_calls": 0,
+  "simulator_calls": 0,
+  "files": [
+    {
+      "name": "assembly-00000.png",
+      "sha256": "365460c110e4b6581e8a3c9f5cc15887e77f513d2a0460c00726036f2344af0d"
+    },
+    {
+      "name": "coffee-button-00000.png",
+      "sha256": "fc4fc7ea725328d9e6f203d149e0d56f6186c88b2655a83511ec156d72ad35af"
+    },
+    {
+      "name": "dial-turn-00000.png",
+      "sha256": "63de7c9532c6d15d4a1121fec67e3451847f575c833fb1a8e839633309533432"
+    },
+    {
+      "name": "door-close-00000.png",
+      "sha256": "dec4017831753d685521207c21d758a2a7e8189bdaaadb285afa3a0ff8625eb8"
+    },
+    {
+      "name": "drawer-close-00004.png",
+      "sha256": "fce44836f8dd16ea1ca24e3f0caaae28dd4f8fbf561e80076250a7fe86f8efa5"
+    },
+    {
+      "name": "faucet-open-00003.png",
+      "sha256": "65033ed8928209bbaaab6c9ffb46816a865c697a6d531cc15db1f9fb6005efbb"
+    },
+    {
+      "name": "handle-press-00000.png",
+      "sha256": "b1e69b3b97bc38baaa569dead27c85a4257134f742935e22f0431014dc2a8ad5"
+    },
+    {
+      "name": "pick-place-00000.png",
+      "sha256": "a974846aac2008bc5969140c520e7eaf5d1a203bdd91ba898ee569b03e9582cf"
+    },
+    {
+      "name": "reach-00003.png",
+      "sha256": "f9b912051a70109a2368871d0b91b2ba20dcbd8226c8d14f738ae8a4e1a85db2"
+    },
+    {
+      "name": "reach-00005.png",
+      "sha256": "5497038e83d00933e92971a56ccc7a532edff15d27fb711ba657ea5df4ba278c"
+    }
+  ],
+  "findings": {
+    "assembly/00000": "Failure: little visible progress after approach; ring remains on table in sampled frames.",
+    "pick-place/00000": "Failure: approaches object, then gripper moves away toward the goal side; red object remains near its original table location.",
+    "faucet-open/00003": "Failure: gripper moves past/right of handle; goal configuration not attained.",
+    "reach/00003": "Failure: late gripper position remains offset from red target.",
+    "reach/00005": "Success at45 actions."
+  },
+  "limits": "Uniformly sampled fixed illustrative cases. Images do not establish contact forces, exact grasp mechanics or causality of any repair."
+}

@@ -1,6 +1,6 @@
 # Execution-aligned revision: interim results
 
-October 9, 2026. The first registered validation is complete. The 5,000-update
+October 9, 2026. The first two registered validations are complete. The selected 5,000-update
 checkpoint scores **80/104 (76.92%)**, with zero controller timeouts. Training
 continues toward the unchanged 20,000-update/8-GPU-hour ceiling; this is an
 interim result, not the completed run or a final-test result.
@@ -8,6 +8,7 @@ interim result, not the completed run or a final-test result.
 | Checkpoint | New execution revision | Prior controller-grounded | Prior latent revision |
 | --- | ---: | ---: | ---: |
 | 5,000 | 80/104 | 79/104 | 73/104 |
+| 10,000 | 78/104 | 78/104 | 75/104 |
 
 The selected historical references remain controller-grounded **79/104** and
 latent revision **77/104**. Against 79/104, seven cases improve and six regress:
@@ -68,9 +69,26 @@ it does not establish that missing late labels caused the observed failures.
 [Paired validation review](reports/20261009-execution-revision/validation-review.json),
 [decision and training diagnostics](reports/20261009-execution-revision/extra-diagnostics.json),
 and [compressed raw records](reports/20261009-execution-revision/run/) are saved.
-This numerical review made no model/simulator calls. Visual failure inspection
-and the final source/checkpoint/compute audit remain pending completion.
+This numerical review made no model/simulator calls. All ten complete 5k contact sheets were visually inspected at their full
+1536×326 resolution. Captions, sampled action indices, frames and goal panels
+are intact and readable; copied bytes were checked. The final source/checkpoint/compute
+audit remains pending completion.
 
 The frozen source stays `8be2808eaa09e539d30d07ee3760fc7b59717793`. The next registered
-validation is at10,000 updates; no settings are changed in response to these results.
+validation is at 15,000 updates; no settings are changed in response to these results.
 [Live metrics](https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/tyytbnn1).
+
+## Second validation and saved visual failures
+
+The 10k checkpoint scores **78/104**, with zero timeouts; 5k80/104 remains selected.
+This is a mixed result, not monotonic improvement. Both completed rounds and
+paired case changes are retained in the review above.
+
+All ten [5k contact sheets](reports/20261009-execution-revision/contact-sheets-step-5000/)
+show actual saved rollout frames and the registered goal. Assembly0 shows little
+visible change after approaching the ring. Pick-place0 approaches the red object
+and then moves the gripper toward the goal side while the object remains on the
+table. Faucet-open3 moves past/right of the handle; reach3 remains offset from
+its target. These cases fail at200 actions. Reach5 succeeds at45 actions.
+The views do not establish contact forces, precise grasp mechanics or which
+repair caused a behavior. [Visual verification](reports/20261009-execution-revision/visual-review-5000.json).

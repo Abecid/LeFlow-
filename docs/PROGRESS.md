@@ -3856,3 +3856,15 @@ Prefix corrections changed action rankings in6.23% of target/iteration groups;
 shifted plans supplied11.68% of selected prefixes. Late stalling and poor pick-place
 remain. Published raw records, paired inventory and honest interim report.
 Training continues unchanged toward20k with the next validation at10k.
+
+
+## October 9 — second execution-revision validation:78/104
+
+The10k round scored78/104 with zero timeouts. The5k checkpoint remains selected
+at80/104; optimization continues unchanged to the registered15k and20k checks.
+Published both full validation rounds, paired case changes and all ten5k contact
+sheets after inspecting every sheet at1536×326. Pick-place0 now moves the gripper
+away after approaching while leaving the object on the table; this is observed
+behavior, not proof of a representation or contact-mechanics cause. Assembly,
+faucet and reach examples preserve visible late failures. No new inference or
+simulator runs were made for this review.
