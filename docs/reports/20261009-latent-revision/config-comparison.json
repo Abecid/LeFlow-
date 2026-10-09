@@ -1,0 +1,24 @@
+{
+  "identical_sections": [
+    "training_tasks",
+    "heldout_tasks",
+    "seeds",
+    "data",
+    "encoder",
+    "model",
+    "training",
+    "evaluation",
+    "controller_grounded"
+  ],
+  "changed_sections": [
+    "diagnostics",
+    "execution",
+    "latent_revision",
+    "methods",
+    "name",
+    "primary_method"
+  ],
+  "scope": "Static configuration audit against the previous 79/104 candidate. Runtime implementation, added causal context, learned parameters and realized compute differ; actual runtime identities and counts are checked separately.",
+  "model_calls": 0,
+  "simulator_calls": 0
+}

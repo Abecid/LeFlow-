@@ -1,5 +1,13 @@
 # Active campaign progress
 
+## Third latent-revision validation — October 9, 3:30 PM Pacific
+
+The 15k checkpoint scores **74/104**. Current best remains 10k, 75/104, below
+the saved 79/104 method. Training continues to the final 20k checkpoint under
+the unchanged contract. The [report](LATENT_REVISION_RESULTS.md) now records
+three rounds, calibration/selection diagnostics and a shared limitation in
+late-trajectory action supervision. No new variant or extra evaluation was run.
+
 ## Second latent-revision validation — October 9, 3:20 PM Pacific
 
 The 10k checkpoint scores **75/104**, versus 73 at 5k and the saved reference's

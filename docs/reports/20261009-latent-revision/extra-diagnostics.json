@@ -1,0 +1,1304 @@
+{
+  "selected_step": 10000,
+  "rounds": [
+    {
+      "step": 5000,
+      "successes": 73,
+      "mean_selected_prefix_correction": 0.0016012701760781999,
+      "mean_selected_terminal_correction": -0.0024605272530423775,
+      "positive_terminal_penalty_count": 515,
+      "changed_raw_pool_anchor_count": 11,
+      "raw_positive_count": 5537,
+      "raw_false_positive_count": 1431,
+      "corrected_false_positive_count": 924,
+      "failures_with_raw_optimistic_nonprogressing_tail": 20,
+      "failures_with_corrected_optimistic_nonprogressing_tail": 11,
+      "failures_with_non_decreasing_final_goal_cost_in_tail": 23,
+      "failures_with_positive_local_progress_but_non_decreasing_final_goal_cost": 3,
+      "tails": [
+        {
+          "id": "validation/assembly/00001",
+          "actual_target_progress": 0.0012833784873548307,
+          "predicted_target_progress": 0.002764473032010229,
+          "corrected_target_progress": 0.0016269780891506296,
+          "final_goal_cost_change": -0.002595968544483185,
+          "direct_goal_rate": 0.0,
+          "final_anchor": {
+            "episode": "train/assembly/00161",
+            "span": 60,
+            "start": 15
+          }
+        },
+        {
+          "id": "validation/assembly/00002",
+          "actual_target_progress": 0.002313780451291486,
+          "predicted_target_progress": 0.006393364973758396,
+          "corrected_target_progress": 0.0049470441513939905,
+          "final_goal_cost_change": -0.018460333347320557,
+          "direct_goal_rate": 0.0,
+          "final_anchor": {
+            "episode": "train/assembly/00363",
+            "span": 60,
+            "start": 35
+          }
+        },
+        {
+          "id": "validation/assembly/00003",
+          "actual_target_progress": 0.004317102953791618,
+          "predicted_target_progress": 0.0063224461321768005,
+          "corrected_target_progress": 0.0048134617115321915,
+          "final_goal_cost_change": -0.06803646683692932,
+          "direct_goal_rate": 0.0,
+          "final_anchor": {
+            "episode": "train/assembly/00496",
+            "span": 40,
+            "start": 45
+          }
+        },
+        {
+          "id": "validation/assembly/00004",
+          "actual_target_progress": 0.0023251293521178397,
+          "predicted_target_progress": 0.005089571307364263,
+          "corrected_target_progress": 0.00381723075712982,
+          "final_goal_cost_change": -0.005411975085735321,
+          "direct_goal_rate": 0.0,
+          "final_anchor": {
+            "episode": "train/assembly/00216",
+            "span": 40,
+            "start": 30
+          }
+        },
+        {
+          "id": "validation/assembly/00005",
+          "actual_target_progress": 0.0013861793436502155,
+          "predicted_target_progress": 0.0040203436816993515,
+          "corrected_target_progress": 0.0028399553542074406,
+          "final_goal_cost_change": 0.0022133290767669678,
+          "direct_goal_rate": 0.0,
+          "final_anchor": {
+            "episode": "train/assembly/00535",
+            "span": 60,
+            "start": 25
+          }
+        },
+        {
+          "id": "validation/assembly/00006",
+          "actual_target_progress": 0.0007362355919260727,
+          "predicted_target_progress": 0.0032535047319374585,
+          "corrected_target_progress": 0.002208930685331947,
+          "final_goal_cost_change": 0.006688609719276428,
+          "direct_goal_rate": 0.0,
+          "final_anchor": {
+            "episode": "train/assembly/00269",
+            "span": 60,
+            "start": 20
+          }
+        },
+        {
+          "id": "validation/dial-turn/00001",
+          "actual_target_progress": 0.0002763006640108008,
+          "predicted_target_progress": 0.002764694098579256,
+          "corrected_target_progress": 0.0012584822742562544,
+          "final_goal_cost_change": 0.003485707566142082,
+          "direct_goal_rate": 0.0,
+          "final_anchor": {
+            "episode": "train/dial-turn/00336",
+            "span": 20,
+            "start": 35
+          }
+        },
+        {
+          "id": "validation/dial-turn/00007",
+          "actual_target_progress": -0.0011988721395793714,
+          "predicted_target_progress": 0.005060562569844096,
+          "corrected_target_progress": 0.003145955110851087,
+          "final_goal_cost_change": 0.0291142538189888,
+          "direct_goal_rate": 0.05,
+          "final_anchor": {
+            "episode": "train/dial-turn/00135",
+            "span": 5,
+            "start": 35
+          }
+        },
+        {
+          "id": "validation/door-open/00004",
+          "actual_target_progress": 0.0025985354655667357,
+          "predicted_target_progress": 0.018887159463606383,
+          "corrected_target_progress": 0.015844888593021193,
+          "final_goal_cost_change": -0.06196002662181854,
+          "direct_goal_rate": 0.0,
+          "final_anchor": {
+            "episode": "train/door-open/00255",
+            "span": 10,
+            "start": 40
+          }
+        },
+        {
+          "id": "validation/faucet-open/00001",
+          "actual_target_progress": -0.00020597698657136214,
+          "predicted_target_progress": 0.0004185918522508521,
+          "corrected_target_progress": -0.0007304368834746512,
+          "final_goal_cost_change": 0.003913562744855881,
+          "direct_goal_rate": 1.0,
+          "final_anchor": {
+            "direct_goal": true,
+            "episode": null,
+            "span": null,
+            "start": null
+          }
+        },
+        {
+          "id": "validation/faucet-open/00002",
+          "actual_target_progress": -0.0038589145007886386,
+          "predicted_target_progress": 0.0051598366546003445,
+          "corrected_target_progress": 0.0031418514094854657,
+          "final_goal_cost_change": 0.10102088749408722,
+          "direct_goal_rate": 0.5,
+          "final_anchor": {
+            "episode": "train/assembly/00443",
+            "span": 40,
+            "start": 45
+          }
+        },
+        {
+          "id": "validation/faucet-open/00003",
+          "actual_target_progress": -0.0004100725054740906,
+          "predicted_target_progress": 0.0017220734765655116,
+          "corrected_target_progress": -0.0001201862959485305,
+          "final_goal_cost_change": 0.008577942848205566,
+          "direct_goal_rate": 0.35,
+          "final_anchor": {
+            "episode": "train/reach/00599",
+            "span": 60,
+            "start": 25
+          }
+        },
+        {
+          "id": "validation/faucet-open/00005",
+          "actual_target_progress": -0.0001277525566126171,
+          "predicted_target_progress": 0.0005064010620117188,
+          "corrected_target_progress": -0.0006319756962751088,
+          "final_goal_cost_change": 0.003837481141090393,
+          "direct_goal_rate": 0.0,
+          "final_anchor": {
+            "episode": "train/assembly/00363",
+            "span": 20,
+            "start": 45
+          }
+        },
+        {
+          "id": "validation/pick-place/00000",
+          "actual_target_progress": 0.00019286367061891054,
+          "predicted_target_progress": 0.0020681480435948622,
+          "corrected_target_progress": 0.0008226139961104644,
+          "final_goal_cost_change": -0.005484648048877716,
+          "direct_goal_rate": 0.0,
+          "final_anchor": {
+            "episode": "train/pick-place/00442",
+            "span": 60,
+            "start": 15
+          }
+        },
+        {
+          "id": "validation/pick-place/00001",
+          "actual_target_progress": 0.00042025127301090643,
+          "predicted_target_progress": 0.0023438118790325368,
+          "corrected_target_progress": 0.0006932935334349933,
+          "final_goal_cost_change": -0.014999784529209137,
+          "direct_goal_rate": 0.0,
+          "final_anchor": {
+            "episode": "train/pick-place/00137",
+            "span": 60,
+            "start": 15
+          }
+        },
+        {
+          "id": "validation/pick-place/00002",
+          "actual_target_progress": -0.0010626398419079028,
+          "predicted_target_progress": 0.005484540015459061,
+          "corrected_target_progress": 0.003689698482814588,
+          "final_goal_cost_change": 0.019384052604436874,
+          "direct_goal_rate": 0.95,
+          "final_anchor": {
+            "direct_goal": true,
+            "episode": null,
+            "span": null,
+            "start": null
+          }
+        },
+        {
+          "id": "validation/pick-place/00003",
+          "actual_target_progress": -0.0008557738834305814,
+          "predicted_target_progress": 0.0018215653927702653,
+          "corrected_target_progress": 0.00018858821376373895,
+          "final_goal_cost_change": 0.016259703785181046,
+          "direct_goal_rate": 1.0,
+          "final_anchor": {
+            "direct_goal": true,
+            "episode": null,
+            "span": null,
+            "start": null
+          }
+        },
+        {
+          "id": "validation/pick-place/00004",
+          "actual_target_progress": -0.0017385635721056086,
+          "predicted_target_progress": 0.007141635802231337,
+          "corrected_target_progress": 0.00568721404201106,
+          "final_goal_cost_change": 0.031247243285179138,
+          "direct_goal_rate": 0.0,
+          "final_anchor": {
+            "episode": "train/reach/00197",
+            "span": 40,
+            "start": 40
+          }
+        },
+        {
+          "id": "validation/pick-place/00005",
+          "actual_target_progress": -0.00023399254209116886,
+          "predicted_target_progress": 0.002503681143647746,
+          "corrected_target_progress": 0.0011173045556796225,
+          "final_goal_cost_change": 0.015896916389465332,
+          "direct_goal_rate": 0.0,
+          "final_anchor": {
+            "episode": "train/reach/00378",
+            "span": 40,
+            "start": 25
+          }
+        },
+        {
+          "id": "validation/pick-place/00006",
+          "actual_target_progress": -0.0013079615800004256,
+          "predicted_target_progress": 0.002368414970604997,
+          "corrected_target_progress": 0.0008488928801135012,
+          "final_goal_cost_change": 0.026851464062929153,
+          "direct_goal_rate": 0.0,
+          "final_anchor": {
+            "episode": "train/reach/00343",
+            "span": 5,
+            "start": 35
+          }
+        },
+        {
+          "id": "validation/pick-place/00007",
+          "actual_target_progress": -0.00013160548712077893,
+          "predicted_target_progress": 0.0026905120987641183,
+          "corrected_target_progress": 0.001277910839570196,
+          "final_goal_cost_change": 0.011717483401298523,
+          "direct_goal_rate": 0.0,
+          "final_anchor": {
+            "episode": "train/reach/00378",
+            "span": 40,
+            "start": 25
+          }
+        },
+        {
+          "id": "validation/plate-slide/00000",
+          "actual_target_progress": -0.0001636853343562076,
+          "predicted_target_progress": 0.0033009210111279237,
+          "corrected_target_progress": 0.001504765823483467,
+          "final_goal_cost_change": 0.001658514142036438,
+          "direct_goal_rate": 0.0,
+          "final_anchor": {
+            "episode": "train/plate-slide/00387",
+            "span": 60,
+            "start": 10
+          }
+        },
+        {
+          "id": "validation/plate-slide/00003",
+          "actual_target_progress": -3.627472017940722e-05,
+          "predicted_target_progress": 0.004061343246384671,
+          "corrected_target_progress": 0.002042700291464203,
+          "final_goal_cost_change": 0.0007570087909698486,
+          "direct_goal_rate": 0.0,
+          "final_anchor": {
+            "episode": "train/plate-slide/00524",
+            "span": 60,
+            "start": 10
+          }
+        },
+        {
+          "id": "validation/plate-slide/00004",
+          "actual_target_progress": 2.1034459534444306e-05,
+          "predicted_target_progress": 0.0033472195071609398,
+          "corrected_target_progress": 0.0014430441354450426,
+          "final_goal_cost_change": -0.0012459158897399902,
+          "direct_goal_rate": 0.0,
+          "final_anchor": {
+            "episode": "train/plate-slide/00215",
+            "span": 60,
+            "start": 10
+          }
+        },
+        {
+          "id": "validation/reach/00000",
+          "actual_target_progress": -0.0007149967315949892,
+          "predicted_target_progress": 0.0005052432810005389,
+          "corrected_target_progress": -0.0006657903523821579,
+          "final_goal_cost_change": 0.013584937900304794,
+          "direct_goal_rate": 1.0,
+          "final_anchor": {
+            "direct_goal": true,
+            "episode": null,
+            "span": null,
+            "start": null
+          }
+        },
+        {
+          "id": "validation/reach/00001",
+          "actual_target_progress": -2.144032010906621e-05,
+          "predicted_target_progress": 0.00019029302424506138,
+          "corrected_target_progress": -0.0008909985619155984,
+          "final_goal_cost_change": 0.000407366082072258,
+          "direct_goal_rate": 1.0,
+          "final_anchor": {
+            "direct_goal": true,
+            "episode": null,
+            "span": null,
+            "start": null
+          }
+        },
+        {
+          "id": "validation/reach/00003",
+          "actual_target_progress": -0.00020383788566840323,
+          "predicted_target_progress": 0.00061580617176859,
+          "corrected_target_progress": -0.0005497706955985019,
+          "final_goal_cost_change": 0.0038729198276996613,
+          "direct_goal_rate": 1.0,
+          "final_anchor": {
+            "direct_goal": true,
+            "episode": null,
+            "span": null,
+            "start": null
+          }
+        },
+        {
+          "id": "validation/reach/00004",
+          "actual_target_progress": -0.0005190689116716385,
+          "predicted_target_progress": 0.0004413756296822899,
+          "corrected_target_progress": -0.0007659756627522017,
+          "final_goal_cost_change": 0.009862309321761131,
+          "direct_goal_rate": 1.0,
+          "final_anchor": {
+            "direct_goal": true,
+            "episode": null,
+            "span": null,
+            "start": null
+          }
+        },
+        {
+          "id": "validation/reach/00005",
+          "actual_target_progress": -0.0002452722309451354,
+          "predicted_target_progress": 0.0004874468830070998,
+          "corrected_target_progress": -0.0006823683843800896,
+          "final_goal_cost_change": 0.004660172387957573,
+          "direct_goal_rate": 1.0,
+          "final_anchor": {
+            "direct_goal": true,
+            "episode": null,
+            "span": null,
+            "start": null
+          }
+        },
+        {
+          "id": "validation/reach/00006",
+          "actual_target_progress": -0.00014180690050125122,
+          "predicted_target_progress": 0.000589239754174885,
+          "corrected_target_progress": -0.0006031739084344162,
+          "final_goal_cost_change": 0.002694331109523773,
+          "direct_goal_rate": 1.0,
+          "final_anchor": {
+            "direct_goal": true,
+            "episode": null,
+            "span": null,
+            "start": null
+          }
+        },
+        {
+          "id": "validation/reach/00007",
+          "actual_target_progress": -0.00047997483297398214,
+          "predicted_target_progress": 0.0012763844508873788,
+          "corrected_target_progress": 3.316586739138553e-05,
+          "final_goal_cost_change": 0.009119521826505661,
+          "direct_goal_rate": 1.0,
+          "final_anchor": {
+            "direct_goal": true,
+            "episode": null,
+            "span": null,
+            "start": null
+          }
+        }
+      ]
+    },
+    {
+      "step": 10000,
+      "successes": 75,
+      "mean_selected_prefix_correction": 0.0014408739605284856,
+      "mean_selected_terminal_correction": -0.002276946116153309,
+      "positive_terminal_penalty_count": 703,
+      "changed_raw_pool_anchor_count": 25,
+      "raw_positive_count": 5327,
+      "raw_false_positive_count": 1339,
+      "corrected_false_positive_count": 969,
+      "failures_with_raw_optimistic_nonprogressing_tail": 17,
+      "failures_with_corrected_optimistic_nonprogressing_tail": 11,
+      "failures_with_non_decreasing_final_goal_cost_in_tail": 24,
+      "failures_with_positive_local_progress_but_non_decreasing_final_goal_cost": 7,
+      "tails": [
+        {
+          "id": "validation/assembly/00000",
+          "actual_target_progress": 0.0003114640712738037,
+          "predicted_target_progress": 0.0034894272685050964,
+          "corrected_target_progress": 0.0025124506240612582,
+          "final_goal_cost_change": 0.00391513854265213,
+          "direct_goal_rate": 0.0,
+          "final_anchor": {
+            "episode": "train/assembly/00452",
+            "span": 60,
+            "start": 10
+          }
+        },
+        {
+          "id": "validation/assembly/00001",
+          "actual_target_progress": 0.0007487904084356208,
+          "predicted_target_progress": 0.002493182197213173,
+          "corrected_target_progress": 0.0016345121946774032,
+          "final_goal_cost_change": -0.0009144246578216553,
+          "direct_goal_rate": 0.0,
+          "final_anchor": {
+            "episode": "train/assembly/00161",
+            "span": 60,
+            "start": 10
+          }
+        },
+        {
+          "id": "validation/assembly/00002",
+          "actual_target_progress": 0.0022210112135661276,
+          "predicted_target_progress": 0.004772349309764411,
+          "corrected_target_progress": 0.0037062813674933032,
+          "final_goal_cost_change": 0.0028672367334365845,
+          "direct_goal_rate": 0.0,
+          "final_anchor": {
+            "episode": "train/assembly/00363",
+            "span": 60,
+            "start": 30
+          }
+        },
+        {
+          "id": "validation/assembly/00003",
+          "actual_target_progress": 0.0006555757044177307,
+          "predicted_target_progress": 0.003399211227109558,
+          "corrected_target_progress": 0.00250299402365559,
+          "final_goal_cost_change": -0.002908870577812195,
+          "direct_goal_rate": 0.0,
+          "final_anchor": {
+            "episode": "train/assembly/00438",
+            "span": 60,
+            "start": 10
+          }
+        },
+        {
+          "id": "validation/assembly/00004",
+          "actual_target_progress": 0.0006091354512854627,
+          "predicted_target_progress": 0.0024485594936107333,
+          "corrected_target_progress": 0.0015262880019451443,
+          "final_goal_cost_change": 0.0004758089780807495,
+          "direct_goal_rate": 0.0,
+          "final_anchor": {
+            "episode": "train/assembly/00278",
+            "span": 60,
+            "start": 15
+          }
+        },
+        {
+          "id": "validation/assembly/00005",
+          "actual_target_progress": -0.00014847085664146826,
+          "predicted_target_progress": 0.0010542495078162144,
+          "corrected_target_progress": -0.00023365069768930736,
+          "final_goal_cost_change": 0.0028209462761878967,
+          "direct_goal_rate": 1.0,
+          "final_anchor": {
+            "direct_goal": true,
+            "episode": null,
+            "span": null,
+            "start": null
+          }
+        },
+        {
+          "id": "validation/assembly/00006",
+          "actual_target_progress": 0.000620154859988313,
+          "predicted_target_progress": 0.0031486218305010545,
+          "corrected_target_progress": 0.0023473147793035757,
+          "final_goal_cost_change": -0.003644414246082306,
+          "direct_goal_rate": 0.0,
+          "final_anchor": {
+            "episode": "train/assembly/00269",
+            "span": 60,
+            "start": 15
+          }
+        },
+        {
+          "id": "validation/assembly/00007",
+          "actual_target_progress": 0.00047872039048295275,
+          "predicted_target_progress": 0.002759150670547234,
+          "corrected_target_progress": 0.0018948233735404517,
+          "final_goal_cost_change": 0.0053163617849349976,
+          "direct_goal_rate": 0.0,
+          "final_anchor": {
+            "episode": "train/assembly/00220",
+            "span": 60,
+            "start": 10
+          }
+        },
+        {
+          "id": "validation/dial-turn/00007",
+          "actual_target_progress": -0.0016450438844530207,
+          "predicted_target_progress": 0.005886773529805635,
+          "corrected_target_progress": 0.004255672426600205,
+          "final_goal_cost_change": 0.039395950734615326,
+          "direct_goal_rate": 0.0,
+          "final_anchor": {
+            "episode": "train/dial-turn/00585",
+            "span": 10,
+            "start": 30
+          }
+        },
+        {
+          "id": "validation/door-open/00003",
+          "actual_target_progress": 0.002470526648195166,
+          "predicted_target_progress": 0.015389501656356611,
+          "corrected_target_progress": 0.013058236162913473,
+          "final_goal_cost_change": 0.006728574633598328,
+          "direct_goal_rate": 0.0,
+          "final_anchor": {
+            "episode": "train/door-open/00283",
+            "span": 60,
+            "start": 10
+          }
+        },
+        {
+          "id": "validation/door-open/00006",
+          "actual_target_progress": 0.0039447881281375885,
+          "predicted_target_progress": 0.011478464070119355,
+          "corrected_target_progress": 0.008680262651882674,
+          "final_goal_cost_change": -0.025257602334022522,
+          "direct_goal_rate": 0.0,
+          "final_anchor": {
+            "episode": "train/door-open/00531",
+            "span": 20,
+            "start": 35
+          }
+        },
+        {
+          "id": "validation/faucet-open/00001",
+          "actual_target_progress": -0.0004161421797777477,
+          "predicted_target_progress": 0.0010901723841303273,
+          "corrected_target_progress": -5.57889671702134e-05,
+          "final_goal_cost_change": 0.005722131580114365,
+          "direct_goal_rate": 0.1,
+          "final_anchor": {
+            "episode": "train/assembly/00363",
+            "span": 40,
+            "start": 45
+          }
+        },
+        {
+          "id": "validation/faucet-open/00002",
+          "actual_target_progress": -0.0029317964064447502,
+          "predicted_target_progress": 0.004594695607298299,
+          "corrected_target_progress": 0.0030151295818780597,
+          "final_goal_cost_change": 0.07230636477470398,
+          "direct_goal_rate": 0.05,
+          "final_anchor": {
+            "episode": "train/faucet-open/00399",
+            "span": 40,
+            "start": 30
+          }
+        },
+        {
+          "id": "validation/faucet-open/00003",
+          "actual_target_progress": 4.036057936517816e-05,
+          "predicted_target_progress": 0.002946957749755759,
+          "corrected_target_progress": 0.0008515423457873495,
+          "final_goal_cost_change": 0.010033465921878815,
+          "direct_goal_rate": 0.0,
+          "final_anchor": {
+            "episode": "train/reach/00599",
+            "span": 60,
+            "start": 25
+          }
+        },
+        {
+          "id": "validation/faucet-open/00005",
+          "actual_target_progress": -0.002653638587186211,
+          "predicted_target_progress": 0.006387764097828614,
+          "corrected_target_progress": 0.004680557862708443,
+          "final_goal_cost_change": 0.07535164430737495,
+          "direct_goal_rate": 0.3,
+          "final_anchor": {
+            "episode": "train/assembly/00595",
+            "span": 40,
+            "start": 45
+          }
+        },
+        {
+          "id": "validation/faucet-open/00006",
+          "actual_target_progress": -0.003128931710594579,
+          "predicted_target_progress": 0.005525573303824977,
+          "corrected_target_progress": 0.0037523776684936726,
+          "final_goal_cost_change": 0.08011376112699509,
+          "direct_goal_rate": 0.15,
+          "final_anchor": {
+            "episode": "train/assembly/00265",
+            "span": 40,
+            "start": 45
+          }
+        },
+        {
+          "id": "validation/pick-place/00000",
+          "actual_target_progress": -0.0012804630555604633,
+          "predicted_target_progress": 0.00436001623931684,
+          "corrected_target_progress": 0.002799505269841144,
+          "final_goal_cost_change": 0.028013188391923904,
+          "direct_goal_rate": 0.5,
+          "final_anchor": {
+            "episode": "train/reach/00545",
+            "span": 60,
+            "start": 30
+          }
+        },
+        {
+          "id": "validation/pick-place/00002",
+          "actual_target_progress": -0.000901540447222559,
+          "predicted_target_progress": 0.005515111512259433,
+          "corrected_target_progress": 0.003938103780934685,
+          "final_goal_cost_change": 0.019881755113601685,
+          "direct_goal_rate": 0.65,
+          "final_anchor": {
+            "episode": "train/reach/00378",
+            "span": 40,
+            "start": 25
+          }
+        },
+        {
+          "id": "validation/pick-place/00003",
+          "actual_target_progress": -0.0008827566512321171,
+          "predicted_target_progress": 0.0009667638101075825,
+          "corrected_target_progress": -6.436316394492199e-05,
+          "final_goal_cost_change": 0.016772376373410225,
+          "direct_goal_rate": 1.0,
+          "final_anchor": {
+            "direct_goal": true,
+            "episode": null,
+            "span": null,
+            "start": null
+          }
+        },
+        {
+          "id": "validation/pick-place/00004",
+          "actual_target_progress": -0.0031594794831777875,
+          "predicted_target_progress": 0.009390642572390405,
+          "corrected_target_progress": 0.007416900443403344,
+          "final_goal_cost_change": 0.07201888412237167,
+          "direct_goal_rate": 0.0,
+          "final_anchor": {
+            "episode": "train/reach/00178",
+            "span": 60,
+            "start": 35
+          }
+        },
+        {
+          "id": "validation/pick-place/00005",
+          "actual_target_progress": -0.0012526965062869223,
+          "predicted_target_progress": 0.0035339472325224626,
+          "corrected_target_progress": 0.0020965182859646646,
+          "final_goal_cost_change": 0.02872905135154724,
+          "direct_goal_rate": 0.45,
+          "final_anchor": {
+            "episode": "train/reach/00378",
+            "span": 40,
+            "start": 25
+          }
+        },
+        {
+          "id": "validation/pick-place/00006",
+          "actual_target_progress": -0.0016217661139212157,
+          "predicted_target_progress": 0.00473227195049587,
+          "corrected_target_progress": 0.002873459340710389,
+          "final_goal_cost_change": 0.03694598376750946,
+          "direct_goal_rate": 0.0,
+          "final_anchor": {
+            "episode": "train/reach/00197",
+            "span": 10,
+            "start": 40
+          }
+        },
+        {
+          "id": "validation/pick-place/00007",
+          "actual_target_progress": -0.00011775093643288863,
+          "predicted_target_progress": 0.002814375648373052,
+          "corrected_target_progress": 0.0014430013926405656,
+          "final_goal_cost_change": 0.009011559188365936,
+          "direct_goal_rate": 0.0,
+          "final_anchor": {
+            "episode": "train/reach/00378",
+            "span": 40,
+            "start": 25
+          }
+        },
+        {
+          "id": "validation/plate-slide/00000",
+          "actual_target_progress": -0.00015230810171679447,
+          "predicted_target_progress": 0.0024897111089606035,
+          "corrected_target_progress": 0.001101277768611908,
+          "final_goal_cost_change": 0.0005053877830505371,
+          "direct_goal_rate": 0.0,
+          "final_anchor": {
+            "episode": "train/plate-slide/00387",
+            "span": 60,
+            "start": 10
+          }
+        },
+        {
+          "id": "validation/plate-slide/00004",
+          "actual_target_progress": 6.203902395148026e-05,
+          "predicted_target_progress": 0.0035044754806317783,
+          "corrected_target_progress": 0.0021097518895801747,
+          "final_goal_cost_change": 0.0010220706462860107,
+          "direct_goal_rate": 0.0,
+          "final_anchor": {
+            "episode": "train/plate-slide/00215",
+            "span": 60,
+            "start": 10
+          }
+        },
+        {
+          "id": "validation/reach/00001",
+          "actual_target_progress": 1.642333441659024e-05,
+          "predicted_target_progress": 0.0009239380689043747,
+          "corrected_target_progress": -6.451300884547986e-05,
+          "final_goal_cost_change": -0.00031204335391521454,
+          "direct_goal_rate": 1.0,
+          "final_anchor": {
+            "direct_goal": true,
+            "episode": null,
+            "span": null,
+            "start": null
+          }
+        },
+        {
+          "id": "validation/reach/00003",
+          "actual_target_progress": -9.153469612723903e-05,
+          "predicted_target_progress": 0.00023717893973777167,
+          "corrected_target_progress": -0.0007913577321328615,
+          "final_goal_cost_change": 0.0017391592264175415,
+          "direct_goal_rate": 1.0,
+          "final_anchor": {
+            "direct_goal": true,
+            "episode": null,
+            "span": null,
+            "start": null
+          }
+        },
+        {
+          "id": "validation/reach/00006",
+          "actual_target_progress": -0.0002679408184791866,
+          "predicted_target_progress": 0.00039937288353317663,
+          "corrected_target_progress": -0.0005847076444249405,
+          "final_goal_cost_change": 0.005090875551104546,
+          "direct_goal_rate": 1.0,
+          "final_anchor": {
+            "direct_goal": true,
+            "episode": null,
+            "span": null,
+            "start": null
+          }
+        },
+        {
+          "id": "validation/reach/00007",
+          "actual_target_progress": -0.000385804788062447,
+          "predicted_target_progress": 0.0003386818264660082,
+          "corrected_target_progress": -0.0008200159982631081,
+          "final_goal_cost_change": 0.007330290973186493,
+          "direct_goal_rate": 1.0,
+          "final_anchor": {
+            "direct_goal": true,
+            "episode": null,
+            "span": null,
+            "start": null
+          }
+        }
+      ]
+    },
+    {
+      "step": 15000,
+      "successes": 74,
+      "mean_selected_prefix_correction": 0.0013865286299276258,
+      "mean_selected_terminal_correction": -0.0021628390180883834,
+      "positive_terminal_penalty_count": 846,
+      "changed_raw_pool_anchor_count": 29,
+      "raw_positive_count": 5442,
+      "raw_false_positive_count": 1420,
+      "corrected_false_positive_count": 993,
+      "failures_with_raw_optimistic_nonprogressing_tail": 21,
+      "failures_with_corrected_optimistic_nonprogressing_tail": 13,
+      "failures_with_non_decreasing_final_goal_cost_in_tail": 23,
+      "failures_with_positive_local_progress_but_non_decreasing_final_goal_cost": 4,
+      "tails": [
+        {
+          "id": "validation/assembly/00001",
+          "actual_target_progress": 0.00034132452779694607,
+          "predicted_target_progress": 0.002883997402693096,
+          "corrected_target_progress": 0.002136033224432092,
+          "final_goal_cost_change": 0.013159729540348053,
+          "direct_goal_rate": 0.0,
+          "final_anchor": {
+            "episode": "train/assembly/00161",
+            "span": 60,
+            "start": 20
+          }
+        },
+        {
+          "id": "validation/assembly/00002",
+          "actual_target_progress": -0.001236055634523693,
+          "predicted_target_progress": 0.0005668048795900846,
+          "corrected_target_progress": -0.0005032067236147429,
+          "final_goal_cost_change": 0.026981379836797714,
+          "direct_goal_rate": 0.9,
+          "final_anchor": {
+            "episode": "train/assembly/00385",
+            "span": 40,
+            "start": 45
+          }
+        },
+        {
+          "id": "validation/assembly/00003",
+          "actual_target_progress": 0.0008430532915027518,
+          "predicted_target_progress": 0.0034972609657990305,
+          "corrected_target_progress": 0.0026966799050569534,
+          "final_goal_cost_change": 0.018250852823257446,
+          "direct_goal_rate": 0.0,
+          "final_anchor": {
+            "episode": "train/assembly/00331",
+            "span": 60,
+            "start": 25
+          }
+        },
+        {
+          "id": "validation/assembly/00004",
+          "actual_target_progress": -3.211670800259239e-05,
+          "predicted_target_progress": 0.0020177132989230907,
+          "corrected_target_progress": 0.000842423423340446,
+          "final_goal_cost_change": -0.0018993914127349854,
+          "direct_goal_rate": 0.15,
+          "final_anchor": {
+            "direct_goal": true,
+            "episode": null,
+            "span": null,
+            "start": null
+          }
+        },
+        {
+          "id": "validation/assembly/00005",
+          "actual_target_progress": 0.002119501758562891,
+          "predicted_target_progress": 0.00407620784091322,
+          "corrected_target_progress": 0.002927779563163456,
+          "final_goal_cost_change": -0.012295201420783997,
+          "direct_goal_rate": 0.0,
+          "final_anchor": {
+            "episode": "train/assembly/00421",
+            "span": 20,
+            "start": 30
+          }
+        },
+        {
+          "id": "validation/assembly/00006",
+          "actual_target_progress": -1.0142593007338674e-05,
+          "predicted_target_progress": 0.0028407158035981027,
+          "corrected_target_progress": 0.002167833674895136,
+          "final_goal_cost_change": 0.002605825662612915,
+          "direct_goal_rate": 0.0,
+          "final_anchor": {
+            "episode": "train/assembly/00269",
+            "span": 60,
+            "start": 15
+          }
+        },
+        {
+          "id": "validation/assembly/00007",
+          "actual_target_progress": 0.002634677741872637,
+          "predicted_target_progress": 0.005384182361395736,
+          "corrected_target_progress": 0.004222758310405831,
+          "final_goal_cost_change": -0.005816936492919922,
+          "direct_goal_rate": 0.0,
+          "final_anchor": {
+            "episode": "train/assembly/00228",
+            "span": 40,
+            "start": 30
+          }
+        },
+        {
+          "id": "validation/door-open/00003",
+          "actual_target_progress": -5.1111473064673574e-05,
+          "predicted_target_progress": 0.003937285785612307,
+          "corrected_target_progress": 0.002634927777475432,
+          "final_goal_cost_change": 0.00023667514324188232,
+          "direct_goal_rate": 0.0,
+          "final_anchor": {
+            "episode": "train/door-open/00283",
+            "span": 60,
+            "start": 10
+          }
+        },
+        {
+          "id": "validation/door-open/00006",
+          "actual_target_progress": -0.0007008441576832219,
+          "predicted_target_progress": 0.008420252780381002,
+          "corrected_target_progress": 0.005666221884128295,
+          "final_goal_cost_change": -0.011026144027709961,
+          "direct_goal_rate": 0.0,
+          "final_anchor": {
+            "episode": "train/door-open/00373",
+            "span": 40,
+            "start": 30
+          }
+        },
+        {
+          "id": "validation/faucet-open/00001",
+          "actual_target_progress": -0.0026015705968204295,
+          "predicted_target_progress": 0.007137968351966457,
+          "corrected_target_progress": 0.004988344092118113,
+          "final_goal_cost_change": 0.07025656849145889,
+          "direct_goal_rate": 0.2,
+          "final_anchor": {
+            "episode": "train/assembly/00383",
+            "span": 40,
+            "start": 45
+          }
+        },
+        {
+          "id": "validation/faucet-open/00002",
+          "actual_target_progress": 3.585689946224815e-06,
+          "predicted_target_progress": 0.002560802980473167,
+          "corrected_target_progress": 0.0007983073592185974,
+          "final_goal_cost_change": -0.0013821646571159363,
+          "direct_goal_rate": 0.9,
+          "final_anchor": {
+            "direct_goal": true,
+            "episode": null,
+            "span": null,
+            "start": null
+          }
+        },
+        {
+          "id": "validation/faucet-open/00003",
+          "actual_target_progress": -0.0007764348074009544,
+          "predicted_target_progress": 0.00371712210931276,
+          "corrected_target_progress": 0.0019851009312428928,
+          "final_goal_cost_change": 0.023270703852176666,
+          "direct_goal_rate": 0.0,
+          "final_anchor": {
+            "episode": "train/reach/00599",
+            "span": 60,
+            "start": 25
+          }
+        },
+        {
+          "id": "validation/faucet-open/00005",
+          "actual_target_progress": -7.170203484986958e-07,
+          "predicted_target_progress": 0.002450842410326004,
+          "corrected_target_progress": 0.0008136996705281107,
+          "final_goal_cost_change": 1.362338662147522e-05,
+          "direct_goal_rate": 1.0,
+          "final_anchor": {
+            "direct_goal": true,
+            "episode": null,
+            "span": null,
+            "start": null
+          }
+        },
+        {
+          "id": "validation/faucet-open/00006",
+          "actual_target_progress": -6.084163722239042e-05,
+          "predicted_target_progress": 0.0010769516229629517,
+          "corrected_target_progress": -0.0002929350655329855,
+          "final_goal_cost_change": 0.001155991107225418,
+          "direct_goal_rate": 1.0,
+          "final_anchor": {
+            "direct_goal": true,
+            "episode": null,
+            "span": null,
+            "start": null
+          }
+        },
+        {
+          "id": "validation/pick-place/00000",
+          "actual_target_progress": -9.683588225590556e-05,
+          "predicted_target_progress": 0.002082445511692449,
+          "corrected_target_progress": 0.0008589686139633781,
+          "final_goal_cost_change": 0.0018825680017471313,
+          "direct_goal_rate": 0.0,
+          "final_anchor": {
+            "episode": "train/pick-place/00442",
+            "span": 60,
+            "start": 15
+          }
+        },
+        {
+          "id": "validation/pick-place/00001",
+          "actual_target_progress": -2.300700074747989e-05,
+          "predicted_target_progress": 0.0020555765613129266,
+          "corrected_target_progress": 0.0009856406403215307,
+          "final_goal_cost_change": 0.0019192546606063843,
+          "direct_goal_rate": 0.0,
+          "final_anchor": {
+            "episode": "train/reach/00510",
+            "span": 5,
+            "start": 25
+          }
+        },
+        {
+          "id": "validation/pick-place/00002",
+          "actual_target_progress": -0.0004261963461574755,
+          "predicted_target_progress": 0.0041675083339214325,
+          "corrected_target_progress": 0.002777736241880216,
+          "final_goal_cost_change": 0.00849788635969162,
+          "direct_goal_rate": 0.35,
+          "final_anchor": {
+            "episode": "train/reach/00378",
+            "span": 40,
+            "start": 25
+          }
+        },
+        {
+          "id": "validation/pick-place/00003",
+          "actual_target_progress": -0.0008123266069512619,
+          "predicted_target_progress": 0.002824711172204269,
+          "corrected_target_progress": 0.0016136320405884792,
+          "final_goal_cost_change": 0.015434205532073975,
+          "direct_goal_rate": 1.0,
+          "final_anchor": {
+            "direct_goal": true,
+            "episode": null,
+            "span": null,
+            "start": null
+          }
+        },
+        {
+          "id": "validation/pick-place/00004",
+          "actual_target_progress": -0.002183180890585247,
+          "predicted_target_progress": 0.00686923728177422,
+          "corrected_target_progress": 0.005554969177434319,
+          "final_goal_cost_change": 0.04031101614236832,
+          "direct_goal_rate": 0.1,
+          "final_anchor": {
+            "episode": "train/reach/00197",
+            "span": 40,
+            "start": 40
+          }
+        },
+        {
+          "id": "validation/pick-place/00006",
+          "actual_target_progress": -0.0009234901517629623,
+          "predicted_target_progress": 0.0011768837116266553,
+          "corrected_target_progress": 0.00015911636383909928,
+          "final_goal_cost_change": 0.016449492424726486,
+          "direct_goal_rate": 0.0,
+          "final_anchor": {
+            "episode": "train/reach/00198",
+            "span": 5,
+            "start": 30
+          }
+        },
+        {
+          "id": "validation/pick-place/00007",
+          "actual_target_progress": 9.036142575113397e-05,
+          "predicted_target_progress": 0.0024474333775670906,
+          "corrected_target_progress": 0.0013068898728019313,
+          "final_goal_cost_change": 0.005105912685394287,
+          "direct_goal_rate": 0.0,
+          "final_anchor": {
+            "episode": "train/reach/00378",
+            "span": 40,
+            "start": 25
+          }
+        },
+        {
+          "id": "validation/plate-slide/00000",
+          "actual_target_progress": 7.674980320428546e-05,
+          "predicted_target_progress": 0.0026960917993595727,
+          "corrected_target_progress": 0.0012429136488782732,
+          "final_goal_cost_change": -0.0009706169366836548,
+          "direct_goal_rate": 0.0,
+          "final_anchor": {
+            "episode": "train/plate-slide/00387",
+            "span": 60,
+            "start": 10
+          }
+        },
+        {
+          "id": "validation/plate-slide/00004",
+          "actual_target_progress": 5.972610884591153e-05,
+          "predicted_target_progress": 0.0034152126233828696,
+          "corrected_target_progress": 0.0019628976128603284,
+          "final_goal_cost_change": 0.0006571114063262939,
+          "direct_goal_rate": 0.0,
+          "final_anchor": {
+            "episode": "train/plate-slide/00215",
+            "span": 60,
+            "start": 10
+          }
+        },
+        {
+          "id": "validation/plate-slide/00005",
+          "actual_target_progress": 0.0034050751281412025,
+          "predicted_target_progress": 0.007439515700465755,
+          "corrected_target_progress": 0.005515256602513163,
+          "final_goal_cost_change": -0.05086544156074524,
+          "direct_goal_rate": 0.0,
+          "final_anchor": {
+            "episode": "train/plate-slide/00386",
+            "span": 40,
+            "start": 20
+          }
+        },
+        {
+          "id": "validation/reach/00000",
+          "actual_target_progress": -0.00033493938022538235,
+          "predicted_target_progress": 0.00012840467848275838,
+          "corrected_target_progress": -0.0006694697137725981,
+          "final_goal_cost_change": 0.006363848224282265,
+          "direct_goal_rate": 1.0,
+          "final_anchor": {
+            "direct_goal": true,
+            "episode": null,
+            "span": null,
+            "start": null
+          }
+        },
+        {
+          "id": "validation/reach/00001",
+          "actual_target_progress": -0.00012612538902383101,
+          "predicted_target_progress": 0.0003928140197929583,
+          "corrected_target_progress": -0.0004312583784523763,
+          "final_goal_cost_change": 0.0023963823914527893,
+          "direct_goal_rate": 1.0,
+          "final_anchor": {
+            "direct_goal": true,
+            "episode": null,
+            "span": null,
+            "start": null
+          }
+        },
+        {
+          "id": "validation/reach/00003",
+          "actual_target_progress": -6.972008237713261e-05,
+          "predicted_target_progress": 0.0002762490981503537,
+          "corrected_target_progress": -0.0006504797033573452,
+          "final_goal_cost_change": 0.0013246815651655197,
+          "direct_goal_rate": 1.0,
+          "final_anchor": {
+            "direct_goal": true,
+            "episode": null,
+            "span": null,
+            "start": null
+          }
+        },
+        {
+          "id": "validation/reach/00004",
+          "actual_target_progress": -7.295775178231691e-05,
+          "predicted_target_progress": 0.00031868025268379013,
+          "corrected_target_progress": -0.0004923382872029355,
+          "final_goal_cost_change": 0.0013861972838640213,
+          "direct_goal_rate": 1.0,
+          "final_anchor": {
+            "direct_goal": true,
+            "episode": null,
+            "span": null,
+            "start": null
+          }
+        },
+        {
+          "id": "validation/reach/00006",
+          "actual_target_progress": -0.00027643055900147085,
+          "predicted_target_progress": 0.00023877120723849848,
+          "corrected_target_progress": -0.0006003408741794134,
+          "final_goal_cost_change": 0.0052521806210279465,
+          "direct_goal_rate": 1.0,
+          "final_anchor": {
+            "direct_goal": true,
+            "episode": null,
+            "span": null,
+            "start": null
+          }
+        },
+        {
+          "id": "validation/reach/00007",
+          "actual_target_progress": -0.0005657051346803966,
+          "predicted_target_progress": 0.0006729968284305773,
+          "corrected_target_progress": -0.0003222070242229261,
+          "final_goal_cost_change": 0.010748397558927536,
+          "direct_goal_rate": 1.0,
+          "final_anchor": {
+            "direct_goal": true,
+            "episode": null,
+            "span": null,
+            "start": null
+          }
+        }
+      ]
+    }
+  ],
+  "training_last_500_update_windows": [
+    {
+      "ending_step": 5000,
+      "entries": 10,
+      "averages": {
+        "train/action_nll": -1.3942731976509095,
+        "train/calibration_loss": 0.004891861230134964,
+        "train/shallow_calibration_loss": 0.005012892931699753,
+        "train/paired_regression": 0.00048642142792232335,
+        "train/recorded_raw_prefix_mae": 0.0021229342790320517,
+        "train/recorded_corrected_prefix_mae": 0.0014358576270751655,
+        "train/recorded_raw_terminal_mae": 0.002706739795394242,
+        "train/recorded_corrected_terminal_mae": 0.0013061459292657673,
+        "system/update_examples_per_second": 911.8770225181163
+      }
+    },
+    {
+      "ending_step": 10000,
+      "entries": 10,
+      "averages": {
+        "train/action_nll": -1.6819428205490112,
+        "train/calibration_loss": 0.004038526932708919,
+        "train/shallow_calibration_loss": 0.004229906480759382,
+        "train/paired_regression": 0.0003357056120876223,
+        "train/recorded_raw_prefix_mae": 0.0019336420809850097,
+        "train/recorded_corrected_prefix_mae": 0.0013254063203930854,
+        "train/recorded_raw_terminal_mae": 0.002746075228787959,
+        "train/recorded_corrected_terminal_mae": 0.001318630133755505,
+        "system/update_examples_per_second": 904.2065086413402
+      }
+    },
+    {
+      "ending_step": 15000,
+      "entries": 10,
+      "averages": {
+        "train/action_nll": -1.7623843789100646,
+        "train/calibration_loss": 0.003865311108529568,
+        "train/shallow_calibration_loss": 0.004022178845480085,
+        "train/paired_regression": 0.0003418211577809416,
+        "train/recorded_raw_prefix_mae": 0.0018995426711626352,
+        "train/recorded_corrected_prefix_mae": 0.0012987752445042134,
+        "train/recorded_raw_terminal_mae": 0.0028919837903231384,
+        "train/recorded_corrected_terminal_mae": 0.0012608518940396608,
+        "system/update_examples_per_second": 883.0634784184665
+      }
+    }
+  ],
+  "interpretation": "Chosen-action traces only; no rejected-candidate physical outcomes. Goal-cost tail compares first/last pre-decision observations in the last 20 decisions, not terminal simulator reward. A cosine trend alone does not establish task progress.",
+  "model_calls": 0,
+  "simulator_calls": 0,
+  "final_tests_read": false
+}

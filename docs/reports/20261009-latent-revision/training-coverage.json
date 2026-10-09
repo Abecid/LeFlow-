@@ -1,0 +1,32 @@
+{
+  "source_code": "899f8f2564e011ae87065a70acf28c50dade9997",
+  "eligible_expert_episodes": 6222,
+  "recorded_control_blocks_histogram": {
+    "100": 6222
+  },
+  "retained_sampling_horizon": 60,
+  "supervised_action_chunk_length": 5,
+  "largest_main_start": 40,
+  "largest_supervised_action_block_inclusive": 44,
+  "episodes_with_recorded_first_success_index_above_80": 1152,
+  "per_task_first_success_index_above_80": {
+    "assembly": 480,
+    "button-press-topdown": 0,
+    "coffee-button": 0,
+    "dial-turn": 17,
+    "door-close": 0,
+    "door-open": 172,
+    "drawer-close": 0,
+    "drawer-open": 480,
+    "faucet-open": 0,
+    "handle-press": 0,
+    "pick-place": 0,
+    "plate-slide": 0,
+    "reach": 3
+  },
+  "same_in_previous_controller_grounded": true,
+  "scope": "Training manifest metadata only. Main starts are at most control block 40, supervised action blocks at most 44. Goal/context states can be later; this is action-supervision coverage, not a claim that later states are unseen. Both compared candidates inherit this restriction. No causal attribution of failures.",
+  "model_calls": 0,
+  "simulator_calls": 0,
+  "test_outcomes_read": false
+}

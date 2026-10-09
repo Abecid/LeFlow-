@@ -1,9 +1,26 @@
 # Latent revision: results and failure analysis
 
-October 9, 2026. **Training is ongoing; two registered checkpoints are complete.**
+October 9, 2026. **Training is ongoing; three registered checkpoints are complete.**
 The 10k model scores **75/104 (72.12%)**, up from 73/104 at 5k and still below
-the previous controller-grounded method's 79/104. The 15k and 20k evaluations
-remain pending. Source and the registered algorithm remain unchanged.
+the previous controller-grounded method's 79/104. The 15k checkpoint scores 74/104; the 20k evaluation
+remains pending. Source and the registered algorithm remain unchanged.
+
+## Third checkpoint: 15,000 updates
+
+The third checkpoint scores **74/104**, leaving 10k as the current selection.
+The run continues unchanged to its final registered checkpoint. Factual training
+calibration loss has continued decreasing, without a corresponding increase in
+task success. The [full raw-record analysis](reports/20261009-latent-revision/validation-review.json)
+now covers all three rounds.
+
+The [training coverage audit](reports/20261009-latent-revision/training-coverage.json)
+confirms an inherited restriction shared with the previous controller-grounded
+method: the 60-control-step sampling horizon limits supervised five-step action
+chunks to the first 90 primitive actions of each 200-action demonstration.
+Later goal states are available; later action targets are omitted. All 480
+assembly and 480 drawer-open expert episodes record first success after index
+80, but drawer-open succeeds consistently. This is a coverage limitation to
+investigate, not a proven cause of failure or of the new method's regression.
 
 ## Second checkpoint: 10,000 updates
 
