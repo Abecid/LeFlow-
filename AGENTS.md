@@ -1,5 +1,14 @@
 # Experiment continuity
 
+- October 8 user correction: current training is complete. Hold final testing
+  while repairing the sampler, aligning goal representations, and checking
+  candidate-score calibration on the existing validation set. No additional
+  training, retraining, extra optimization, or expanded budgets are authorized.
+  See docs/REPAIR_PLAN.md and campaign/post-training-hold.json on the server.
+  Do not restart the old supervisor. Preserve partially collected test records
+  without reading their outcomes for development. Publish latest results,
+  findings, plans, and repair work to origin/main, preserving remote history.
+
 - The active project is the non-BTM V-JEPA 2.1 / MetaWorld campaign on branch
   `research/joint-flow-metaworld`. Follow `docs/FLOW_EXPERIMENT.md`.
 - The user authorizes SSH to `target_server_2`, at most four GPUs total for this

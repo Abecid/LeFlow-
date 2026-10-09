@@ -1,0 +1,142 @@
+{
+  "time_utc": "2026-10-09T02:45:55.089526+00:00",
+  "status": "held_after_training",
+  "reason": "User requested sampler/goal alignment and validation diagnostics before more definitive comparison compute; no additional training.",
+  "previous_status": {
+    "command": [
+      "/tmp/mtxu-flow-jepa-20261007/env/bin/python",
+      "-m",
+      "torch.distributed.run",
+      "--nnodes=1",
+      "--rdzv-backend=c10d",
+      "--rdzv-endpoint=127.0.0.1:0",
+      "--nproc_per_node=4",
+      "-m",
+      "flow_jepa.evaluate",
+      "--config",
+      "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/repo-throughput/config/flow_metaworld.json",
+      "--root",
+      "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign",
+      "--world",
+      "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/runs/world_3072/best.pt",
+      "--method",
+      "joint_flow_consistent",
+      "--seed",
+      "3072",
+      "--output",
+      "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/test/joint_flow_consistent_3072.json",
+      "--checkpoint",
+      "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/runs/joint_flow_consistent_3072/best.pt"
+    ],
+    "gpus": [
+      [
+        "0",
+        "GPU-a303d11c-f1b5-e245-93f0-735a054671ce"
+      ],
+      [
+        "1",
+        "GPU-fc39ae51-86a1-df0a-8657-0d33620f5115"
+      ],
+      [
+        "2",
+        "GPU-85f3f7a6-107f-2921-13a5-76a94101f858"
+      ],
+      [
+        "3",
+        "GPU-64e751ee-abb6-120c-f346-311e789228c7"
+      ]
+    ],
+    "stage": "test_joint_flow_consistent_3072",
+    "status": "running"
+  },
+  "terminated_processes": {
+    "645888": {
+      "ppid": 1,
+      "args": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.campaign --root /home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign --gpus 4 --seed 3072 --config /home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/repo-throughput/config/flow_metaworld.json --data-config /home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/repo/config/flow_metaworld.json"
+    },
+    "646085": {
+      "ppid": 645888,
+      "args": "/tmp/mtxu-flow-jepa-20261007/env/lib/python3.11/site-packages/wandb/bin/wandb-core --port-filename /tmp/tmp6hik67nr/port-645888.txt --pid 645888"
+    },
+    "648460": {
+      "ppid": 645888,
+      "args": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -m torch.distributed.run --nnodes=1 --rdzv-backend=c10d --rdzv-endpoint=127.0.0.1:0 --nproc_per_node=4 -m flow_jepa.evaluate --config /home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/repo-throughput/config/flow_metaworld.json --root /home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign --world /home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/runs/world_3072/best.pt --method joint_flow_consistent --seed 3072 --output /home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/test/joint_flow_consistent_3072.json --checkpoint /home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/runs/joint_flow_consistent_3072/best.pt"
+    },
+    "648469": {
+      "ppid": 648460,
+      "args": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.evaluate --config /home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/repo-throughput/config/flow_metaworld.json --root /home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign --world /home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/runs/world_3072/best.pt --method joint_flow_consistent --seed 3072 --output /home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/test/joint_flow_consistent_3072.json --checkpoint /home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/runs/joint_flow_consistent_3072/best.pt"
+    },
+    "648470": {
+      "ppid": 648460,
+      "args": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.evaluate --config /home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/repo-throughput/config/flow_metaworld.json --root /home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign --world /home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/runs/world_3072/best.pt --method joint_flow_consistent --seed 3072 --output /home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/test/joint_flow_consistent_3072.json --checkpoint /home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/runs/joint_flow_consistent_3072/best.pt"
+    },
+    "648471": {
+      "ppid": 648460,
+      "args": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.evaluate --config /home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/repo-throughput/config/flow_metaworld.json --root /home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign --world /home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/runs/world_3072/best.pt --method joint_flow_consistent --seed 3072 --output /home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/test/joint_flow_consistent_3072.json --checkpoint /home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/runs/joint_flow_consistent_3072/best.pt"
+    },
+    "648472": {
+      "ppid": 648460,
+      "args": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.evaluate --config /home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/repo-throughput/config/flow_metaworld.json --root /home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign --world /home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/runs/world_3072/best.pt --method joint_flow_consistent --seed 3072 --output /home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/test/joint_flow_consistent_3072.json --checkpoint /home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/runs/joint_flow_consistent_3072/best.pt"
+    }
+  },
+  "remaining_processes": [],
+  "completion": {
+    "world": {
+      "best": 0.017505817115306854,
+      "fixture": false,
+      "step": 20000,
+      "stop_reason": "update_limit",
+      "training_budget_seconds": 7200,
+      "training_gpu_hours": 2.94837253196165,
+      "training_seconds": 2653.5352787654847,
+      "validation_rounds": 4,
+      "validation_seconds": 1780.4272710029036
+    },
+    "joint_flow_consistent": {
+      "best": 0.22115384615384615,
+      "fixture": false,
+      "step": 20000,
+      "stop_reason": "update_limit",
+      "training_budget_seconds": 7200,
+      "training_gpu_hours": 6.1096609604731205,
+      "training_seconds": 5498.694864425808,
+      "validation_rounds": 4,
+      "validation_seconds": 2102.5804066266865
+    },
+    "leflow_adapted": {
+      "best": 0.25961538461538464,
+      "fixture": false,
+      "step": 20000,
+      "stop_reason": "update_limit",
+      "training_budget_seconds": 7200,
+      "training_gpu_hours": 5.968880468954643,
+      "training_seconds": 5371.992422059178,
+      "validation_rounds": 4,
+      "validation_seconds": 1878.7567898724228
+    },
+    "hwm_adapted": {
+      "best": 0.07692307692307693,
+      "fixture": false,
+      "step": 20000,
+      "stop_reason": "update_limit",
+      "training_budget_seconds": 7200,
+      "training_gpu_hours": 6.085162281894849,
+      "training_seconds": 5476.6460537053645,
+      "validation_rounds": 4,
+      "validation_seconds": 2383.521864209324
+    }
+  },
+  "training_record_sha256": {
+    "runs/world_3072/complete.json": "8bd24234943b0c29179d31a5eebfe2c04385030c3260e33883134b919290a99d",
+    "runs/world_3072/compute_usage.json": "d2a99908c038ea195afca8affcf2318ee60607abbd3874f3bf96a85efab297e9",
+    "runs/joint_flow_consistent_3072/complete.json": "e0b192c699b7c6e564d27002990144840d32a47911c4b22aa581ab4aed5e4bcc",
+    "runs/joint_flow_consistent_3072/compute_usage.json": "3c70ffa3e35c33bf3abf5c4e954808c1c6a4971dafca998d1b792ae6b3241f22",
+    "runs/leflow_adapted_3072/complete.json": "0cb862cfbeedce700b317f88178ea5245e9defb1cd7780fe36078ca07c9770cc",
+    "runs/leflow_adapted_3072/compute_usage.json": "6fed8f16ea79966256b20337600769b8020ad873dc2e112d58946261868bbbd4",
+    "runs/hwm_adapted_3072/complete.json": "71713a801c6f2f92b26e4561c09103220d554920b3b1f5c077879b5ee3b910cd",
+    "runs/hwm_adapted_3072/compute_usage.json": "9631c742ed5259667cfa2ff43d4daf34837d9ddc10514219f53ea0d6b1134050"
+  },
+  "test_results_used_for_development": false,
+  "original_execution_sha": "56419ed14cf127d4b7a8ab09a9d68e6681d2edc0",
+  "restart_authorized": false
+}
