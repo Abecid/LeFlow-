@@ -1,0 +1,192 @@
+{
+  "scheduled_heartbeat_utc": "2026-10-09T11:10:51.087Z",
+  "recorded_utc": "2026-10-09T11:11:54+00:00",
+  "status": "campaign_and_online_access_blocked_gpu_query_succeeded",
+  "fresh_campaign_records_verified": false,
+  "fresh_online_state_verified": false,
+  "fresh_gpu_process_mapping_verified": true,
+  "current_campaign_state": null,
+  "current_online_state": null,
+  "new_training_metrics_since_last_good": null,
+  "new_evaluations_since_last_good": null,
+  "attempts": {
+    "campaign_collector": {
+      "count": 2,
+      "exit_codes": [
+        255,
+        255
+      ],
+      "output_bytes": [
+        0,
+        0
+      ],
+      "error_lines": [
+        "Connection timed out during banner exchange",
+        "Connection to UNKNOWN port 65535 timed out"
+      ]
+    },
+    "online_readback": {
+      "count": 2,
+      "exit_codes": [
+        255,
+        255
+      ],
+      "output_bytes": [
+        0,
+        0
+      ],
+      "error_lines": [
+        "Connection timed out during banner exchange",
+        "Connection to UNKNOWN port 65535 timed out"
+      ]
+    },
+    "gpu_process_query": {
+      "count": 1,
+      "exit_codes": [
+        0
+      ],
+      "result": "Valid fresh payload with no errors"
+    }
+  },
+  "cached_campaign": {
+    "evidence_is_cached": true,
+    "collection_started_utc": "2026-10-09T10:56:15+00:00",
+    "collection_finished_utc": "2026-10-09T10:56:19+00:00",
+    "raw_snapshot_sha256": "b600626cce5377e1847711dc9c3512f3d66f7f7485166071f49efefcc22b6272",
+    "frozen_source_commit": "69babde283f504120dae3dfc6e9188a0e2242be4",
+    "manifest_sha256": "6410f2f196e6fd50a84ae82a192edc718ce169885144195cc63693faaa7f7f26",
+    "encoder_sha256": "48938400ae3464c9680731287f583a9cb516f55a8ec64ea13a91be47fb15b607",
+    "runs": {
+      "btm_3072": {
+        "saved_step": 23830,
+        "logged_step": 23830,
+        "selected_checkpoint_step": 1000,
+        "metric_rows": 2465,
+        "evaluation_records": 99,
+        "complete_three_offset_cycles": 33,
+        "completion_marker_present": false
+      },
+      "flow_3072": {
+        "saved_step": 23000,
+        "logged_step": 23040,
+        "selected_checkpoint_step": 1000,
+        "metric_rows": 2383,
+        "evaluation_records": 96,
+        "complete_three_offset_cycles": 32,
+        "completion_marker_present": false
+      }
+    },
+    "known_campaign_trainer_or_flow_controller_visible": false,
+    "process_scope": "Campaign name/path filters in accessible process namespace; original supervisor intentionally stopped.",
+    "collection_errors": [],
+    "completion": false,
+    "recovery": "not_verified",
+    "flow_updates_needed_from_saved_checkpoint": 830,
+    "full_config_provenance_metrics_evaluations_checkpoint_markers_unchanged_at_last_good_check": true
+  },
+  "cached_online": {
+    "evidence_is_cached": true,
+    "observed_utc": "2026-10-09T10:56:14+00:00",
+    "runs": {
+      "btm": {
+        "run_id": "z78m0zk6",
+        "state": "finished",
+        "step": 23830,
+        "runtime_seconds": 8304,
+        "checked_utc": "2026-10-09T10:56:22+00:00"
+      },
+      "flow": {
+        "run_id": "g0u3w723",
+        "state": "finished",
+        "step": 23040,
+        "runtime_seconds": 9240,
+        "checked_utc": "2026-10-09T10:56:23+00:00"
+      }
+    },
+    "readback_sha256": "a5116bf6a0b52f8e59606df482ceb0d4a13abb3c9f103a812d9eb87b81b8e71d",
+    "manifest_sha256": "6410f2f196e6fd50a84ae82a192edc718ce169885144195cc63693faaa7f7f26",
+    "cpu_probe": {
+      "source": "Actual frozen LatentSegments.__getitem__ reads on CPU",
+      "clips": 32,
+      "episode_ids": [
+        4,
+        5
+      ],
+      "spacing_counts": {
+        "1": 20,
+        "2": 11,
+        "4": 1
+      },
+      "loss_probe_512_unique_episodes": 28
+    }
+  },
+  "fresh_hardware": {
+    "evidence_is_cached": false,
+    "observed_utc": "2026-10-09T11:11:15+00:00",
+    "finished_utc": "2026-10-09T11:11:15+00:00",
+    "gpu_query_sha256": "a528b39b22e85b008278f7eaddea8276ea9b9388ca632ba9411c1afa858d0459",
+    "gpus": [
+      {
+        "index": 0,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 1,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 2,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 3,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 4,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 5,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 6,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 7,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      }
+    ],
+    "processes": [],
+    "comparison_baseline_sha256": "60530cc96de955dafef16cc6c3b8a4a218eb6f5712a86852d6cee97eef2e1eea",
+    "device_memory_utilization_and_compute_records_unchanged_since_baseline": true,
+    "ownership_of_prior_unidentified_workloads": "unresolved",
+    "campaign_association_of_prior_unidentified_workloads": "not_established",
+    "current_collector_hardware_available": false
+  },
+  "current_campaign_recovery": "not_verified",
+  "current_campaign_completion": null,
+  "current_eta": null,
+  "access_failure_cause": "unknown",
+  "research_goals_demonstrated_by_available_evidence": {
+    "higher_primary_success": false,
+    "controlled_efficiency_with_retained_success": false
+  },
+  "results_report": "20261006T050931Z",
+  "previous_monitoring_report": "20261009T102613Z",
+  "gpu_jobs_changed": false,
+  "credentials_modified_by_monitor": false,
+  "monitor_action": "keep_active",
+  "last_good_snapshots_preserved": true,
+  "independent_payload_audit": "passed"
+}
