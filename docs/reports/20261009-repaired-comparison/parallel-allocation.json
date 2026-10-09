@@ -1,0 +1,28 @@
+{
+  "authorized_utc": "2026-10-09T04:40:12.088022+00:00",
+  "authorization": "User permits using the other four GPUs after reviewing the unpromising inactive pilot.",
+  "max_simultaneous_gpus": 8,
+  "gpus_per_job": 4,
+  "pools": [
+    [
+      0,
+      1,
+      2,
+      3
+    ],
+    [
+      4,
+      5,
+      6,
+      7
+    ]
+  ],
+  "execution_revision": "75e0815351eb25c63e495f87458f139bd5062259",
+  "script_sha256": "746f61d05cb9ca1b9fea7438c8647dadc16fa11fe33432781be89c6bb870cdd2",
+  "scientific_protocol_unchanged": true,
+  "per_model_budgets_unchanged": true,
+  "world_continues_unmodified": true,
+  "old_pilots_untouched": true,
+  "scheduler_revision": "e0125c3",
+  "correction": "Match original FLOW_DEVICE=cuda initialization before any availability probe; no head training had started."
+}

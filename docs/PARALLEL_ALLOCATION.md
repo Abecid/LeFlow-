@@ -79,5 +79,18 @@ process identities first. Never restart the intentionally held old campaigns.
 Four focused scheduler tests cover two-pool dispatch without duplicate/overlap,
 no next-job dispatch on failure, rejecting signals after PID identity change, and matching the original explicit
 CUDA-device initialization and four-GPU visibility.
-The scheduler is being deployed; actual acquisition and world-continuation
-verification will be recorded after launch.
+At **04:43:43 UTC**, coordinator **795290** was verified in
+`waiting_for_world` with all four extra locks held. Original supervisor **778158**
+was intentionally stopped (`T`); world launcher **780827** remained active (`S`)
+and GPUs 0–3 showed active evaluation. It had reached 5,000 updates and its first
+periodic evaluation. GPUs 4–7 remained idle while awaiting the shared world.
+No head or final-test task has been dispatched early.
+
+The scheduler's model-execution source remains 75e0815. Its external operational
+script is published at e0125c3, SHA-256
+`746f61d05cb9ca1b9fea7438c8647dadc16fa11fe33432781be89c6bb870cdd2`.
+The initial coordinator was deliberately replaced before head training to match
+the original explicit CUDA initialization; the old signal-15 log is accounted
+for, and its state was archived. The active monitor knows the two-pool schedule,
+intentional parent suspension and recovery rules. See the saved
+parallel-verification.json, parallel-status.json and parallel-allocation.json.

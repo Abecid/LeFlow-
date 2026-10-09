@@ -1,0 +1,75 @@
+{
+  "scheduler_pid": 795290,
+  "supervisor": {
+    "pid": 778158,
+    "start_ticks": "984051099",
+    "cwd": "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/repo",
+    "command": [
+      "/tmp/mtxu-flow-jepa-20261007/env/bin/python",
+      "-u",
+      "-m",
+      "flow_jepa.campaign",
+      "--root",
+      "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign",
+      "--gpus",
+      "4",
+      "--seed",
+      "3072",
+      "--config",
+      "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/repo/config/flow_metaworld_repair.json",
+      "--data-config",
+      "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/repo/config/flow_metaworld.json"
+    ]
+  },
+  "world_launcher": {
+    "pid": 780827,
+    "start_ticks": "984064327",
+    "cwd": "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/repo",
+    "command": [
+      "/tmp/mtxu-flow-jepa-20261007/env/bin/python",
+      "-m",
+      "torch.distributed.run",
+      "--nnodes=1",
+      "--rdzv-backend=c10d",
+      "--rdzv-endpoint=127.0.0.1:0",
+      "--nproc_per_node=4",
+      "-m",
+      "flow_jepa.train",
+      "--config",
+      "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/repo/config/flow_metaworld_repair.json",
+      "--root",
+      "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign",
+      "--run-dir",
+      "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072",
+      "--method",
+      "world",
+      "--seed",
+      "3072"
+    ]
+  },
+  "started_utc": "2026-10-09T04:42:05.450246+00:00",
+  "execution_revision": "75e0815351eb25c63e495f87458f139bd5062259",
+  "protocol": "563c7d7d8b10664aa1ebf50db8f8a24fc015b50325ff1de82bcb736c7d411d51",
+  "script_sha256": "746f61d05cb9ca1b9fea7438c8647dadc16fa11fe33432781be89c6bb870cdd2",
+  "max_simultaneous_gpus": 8,
+  "gpus_per_job": 4,
+  "pools": [
+    [
+      0,
+      1,
+      2,
+      3
+    ],
+    [
+      4,
+      5,
+      6,
+      7
+    ]
+  ],
+  "unchanged": "Seed, models, code, data, updates/time caps, global batch, validation and final-test cases",
+  "events": [],
+  "state": "waiting_for_world",
+  "updated_utc": "2026-10-09T04:43:36.385500+00:00",
+  "supervisor_paused": true
+}

@@ -3241,3 +3241,26 @@ the parent resumes to verify results and publish comparison/failure analysis.
 Handled scheduler failures drain its own children before parent recovery under
 existing ledgers. Three scheduler regression checks pass. Details and recovery
 rules are in PARALLEL_ALLOCATION.md; compact other-pilot evidence is preserved.
+
+## 2026-10-09 04:43:43 UTC — extra pool acquired, world uninterrupted
+
+Verified active coordinator PID 795290 in waiting_for_world after three idle
+checks and successful advisory-lock acquisition for GPUs 4–7. Original parent
+778158 is intentionally stopped (T), while the original world launcher 780827
+continues (S) and GPUs 0–3 show active simulation evaluation. World reached 5,000
+updates with 682.678 optimization seconds charged; its first periodic evaluation
+was underway, not yet a completed success metric. Extra GPUs remain idle until
+the world completes and its selected checkpoint is final. This avoids changing
+the frozen world supplied to different heads or adding training work.
+
+An initial scheduler was replaced before any head dispatch to preserve the
+original FLOW_DEVICE=cuda initialization before availability probing. The
+intentional SIGTERM's traceback is explained in saved verification evidence;
+no model training was stopped, restarted or relabeled. Four focused scheduler
+tests pass. Current external script is published at e0125c3 with SHA-256
+746f61d05cb9ca1b9fea7438c8647dadc16fa11fe33432781be89c6bb870cdd2; model execution
+remains frozen at 75e0815. Added allocation/status fields to the reporting
+snapshot tool. Updated the existing monitor with the new eight-total/four-per-job
+scope, actual scheduler state, expected parent suspension and duplicate-safe
+recovery rules. Compact review, allocation and process verification evidence are
+published with this progress update. No old pilot job or artifact was changed.

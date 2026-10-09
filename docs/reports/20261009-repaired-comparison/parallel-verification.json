@@ -1,0 +1,195 @@
+{
+  "observed_utc": "2026-10-09T04:43:43.872188+00:00",
+  "parallel-status.json": {
+    "scheduler_pid": 795290,
+    "supervisor": {
+      "pid": 778158,
+      "start_ticks": "984051099",
+      "cwd": "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/repo",
+      "command": [
+        "/tmp/mtxu-flow-jepa-20261007/env/bin/python",
+        "-u",
+        "-m",
+        "flow_jepa.campaign",
+        "--root",
+        "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign",
+        "--gpus",
+        "4",
+        "--seed",
+        "3072",
+        "--config",
+        "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/repo/config/flow_metaworld_repair.json",
+        "--data-config",
+        "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/repo/config/flow_metaworld.json"
+      ]
+    },
+    "world_launcher": {
+      "pid": 780827,
+      "start_ticks": "984064327",
+      "cwd": "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/repo",
+      "command": [
+        "/tmp/mtxu-flow-jepa-20261007/env/bin/python",
+        "-m",
+        "torch.distributed.run",
+        "--nnodes=1",
+        "--rdzv-backend=c10d",
+        "--rdzv-endpoint=127.0.0.1:0",
+        "--nproc_per_node=4",
+        "-m",
+        "flow_jepa.train",
+        "--config",
+        "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/repo/config/flow_metaworld_repair.json",
+        "--root",
+        "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign",
+        "--run-dir",
+        "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072",
+        "--method",
+        "world",
+        "--seed",
+        "3072"
+      ]
+    },
+    "started_utc": "2026-10-09T04:42:05.450246+00:00",
+    "execution_revision": "75e0815351eb25c63e495f87458f139bd5062259",
+    "protocol": "563c7d7d8b10664aa1ebf50db8f8a24fc015b50325ff1de82bcb736c7d411d51",
+    "script_sha256": "746f61d05cb9ca1b9fea7438c8647dadc16fa11fe33432781be89c6bb870cdd2",
+    "max_simultaneous_gpus": 8,
+    "gpus_per_job": 4,
+    "pools": [
+      [
+        0,
+        1,
+        2,
+        3
+      ],
+      [
+        4,
+        5,
+        6,
+        7
+      ]
+    ],
+    "unchanged": "Seed, models, code, data, updates/time caps, global batch, validation and final-test cases",
+    "events": [],
+    "state": "waiting_for_world",
+    "updated_utc": "2026-10-09T04:43:36.385500+00:00",
+    "supervisor_paused": true
+  },
+  "parallel-allocation.json": {
+    "authorized_utc": "2026-10-09T04:40:12.088022+00:00",
+    "authorization": "User permits using the other four GPUs after reviewing the unpromising inactive pilot.",
+    "max_simultaneous_gpus": 8,
+    "gpus_per_job": 4,
+    "pools": [
+      [
+        0,
+        1,
+        2,
+        3
+      ],
+      [
+        4,
+        5,
+        6,
+        7
+      ]
+    ],
+    "execution_revision": "75e0815351eb25c63e495f87458f139bd5062259",
+    "script_sha256": "746f61d05cb9ca1b9fea7438c8647dadc16fa11fe33432781be89c6bb870cdd2",
+    "scientific_protocol_unchanged": true,
+    "per_model_budgets_unchanged": true,
+    "world_continues_unmodified": true,
+    "old_pilots_untouched": true,
+    "scheduler_revision": "e0125c3",
+    "correction": "Match original FLOW_DEVICE=cuda initialization before any availability probe; no head training had started."
+  },
+  "status.json": {
+    "command": [
+      "/tmp/mtxu-flow-jepa-20261007/env/bin/python",
+      "-m",
+      "torch.distributed.run",
+      "--nnodes=1",
+      "--rdzv-backend=c10d",
+      "--rdzv-endpoint=127.0.0.1:0",
+      "--nproc_per_node=4",
+      "-m",
+      "flow_jepa.train",
+      "--config",
+      "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/repo/config/flow_metaworld_repair.json",
+      "--root",
+      "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign",
+      "--run-dir",
+      "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072",
+      "--method",
+      "world",
+      "--seed",
+      "3072"
+    ],
+    "gpus": [
+      [
+        "0",
+        "GPU-a303d11c-f1b5-e245-93f0-735a054671ce"
+      ],
+      [
+        "1",
+        "GPU-fc39ae51-86a1-df0a-8657-0d33620f5115"
+      ],
+      [
+        "2",
+        "GPU-85f3f7a6-107f-2921-13a5-76a94101f858"
+      ],
+      [
+        "3",
+        "GPU-64e751ee-abb6-120c-f346-311e789228c7"
+      ]
+    ],
+    "stage": "world_3072",
+    "status": "running"
+  },
+  "processes": {
+    "778158": {
+      "state": "T",
+      "start_ticks": "984051099",
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.campaign --root /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign --gpus 4 --seed 3072 --config /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/repo/config/flow_metaworld_repair.json --data-config /home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/repo/config/flow_metaworld.json "
+    },
+    "780827": {
+      "state": "S",
+      "start_ticks": "984064327",
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -m torch.distributed.run --nnodes=1 --rdzv-backend=c10d --rdzv-endpoint=127.0.0.1:0 --nproc_per_node=4 -m flow_jepa.train --config /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/repo/config/flow_metaworld_repair.json --root /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072 --method world --seed 3072 "
+    },
+    "795290": {
+      "state": "S",
+      "start_ticks": "984143151",
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/parallel_flow_campaign.py --record /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison --supervisor 778158 --world-launcher 780827 --revision 75e0815351eb25c63e495f87458f139bd5062259 "
+    }
+  },
+  "compute_usage.json": {
+    "budget_check": "optimizer boundaries; any last-update overrun is reported",
+    "gpu_count": 4,
+    "step": 5000,
+    "training_budget_seconds": 7200,
+    "training_gpu_hours": 0.7585306413471699,
+    "training_seconds": 682.6775772124529,
+    "validation_gpu_hours": 0.0,
+    "validation_seconds": 0.0
+  },
+  "latest_metric": {
+    "train/dynamics": 0.01364145427942276,
+    "train/loss": 0.01364145427942276,
+    "step": 5000,
+    "train/lr": 0.0008550728330453025,
+    "train/grad_norm": 0.007811353076249361,
+    "budget/training_seconds": 682.6775772124529,
+    "budget/training_gpu_hours": 0.7585306413471699,
+    "budget/validation_gpu_hours": 0.0,
+    "budget/fraction": 0.25,
+    "budget/last_update_overrun_seconds": 0.0,
+    "train/consistency_weight": 0.0,
+    "system/samples_per_second": 472.2237409897987,
+    "system/gpu_peak_memory_gib": 0.15074443817138672
+  },
+  "evaluations": [],
+  "log_tail": "Traceback (most recent call last):\n  File \"/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/parallel_flow_campaign.py\", line 256, in <module>\n    main()\n  File \"/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/parallel_flow_campaign.py\", line 176, in main\n    time.sleep(10)\n  File \"/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/parallel_flow_campaign.py\", line 253, in interrupted\n    raise RuntimeError(f'Scheduler interrupted by signal {signum}')\nRuntimeError: Scheduler interrupted by signal 15\n",
+  "gpu_snapshot": "0, NVIDIA A800-SXM4-80GB, 4245, 82\n1, NVIDIA A800-SXM4-80GB, 4245, 99\n2, NVIDIA A800-SXM4-80GB, 4245, 69\n3, NVIDIA A800-SXM4-80GB, 4245, 40\n4, NVIDIA A800-SXM4-80GB, 0, 0\n5, NVIDIA A800-SXM4-80GB, 0, 0\n6, NVIDIA A800-SXM4-80GB, 0, 0\n7, NVIDIA A800-SXM4-80GB, 0, 0\n",
+  "log_tail_note": "The signal-15 traceback belongs to the intentionally replaced initial coordinator, before any head or test job was dispatched. Current coordinator 795290 is alive and waiting normally."
+}
