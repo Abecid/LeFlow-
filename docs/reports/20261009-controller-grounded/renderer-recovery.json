@@ -1,0 +1,14 @@
+{
+  "cause": "Launcher omitted existing Mesa renderer environment; no scored episode completed",
+  "source_unchanged": true,
+  "resume_step": 5000,
+  "first_attempt_start_utc": "2026-10-09T19:25:33.787632+00:00",
+  "first_attempt_end_utc": "2026-10-09T19:31:42.467685+00:00",
+  "first_attempt_reserved_gpu_seconds": 2949.440424,
+  "optimization_gpu_seconds_at_failure": 2466.815155237913,
+  "first_attempt_other_occupancy_gpu_seconds_upper_bound": 482.62526876208676,
+  "other_occupancy_includes": "startup, checkpoint IO, failed evaluator initialization and shutdown; not added to optimization",
+  "renderer_check": "One training reset RGB bitwise equal to existing cache, zero actions",
+  "resume_utc": "2026-10-09T19:36:09.593530+00:00",
+  "source": "74a0a715cc393ba26285deb4571006ee7bc4d286"
+}

@@ -157,3 +157,20 @@ server checkout. Eight-GPU training began October9 at19:25UTC, with
 [W&B run s12cr0yl](https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/s12cr0yl).
 The data/window/index evidence is preserved beside the preflight report.
 First evaluation remains pending as of the initial launch report.
+
+### Renderer recovery at update5,000
+
+The first launch omitted the existing Mesa environment, so evaluator startup
+failed before any scored episode completed. This was a launcher error. The
+corrected [launcher](reports/20261009-controller-grounded/launch.sh) restores the
+exact renderer used for dataset collection and checks one training reset image
+bitwise before launching. That CPU-only check passed. The same frozen source,
+5,000-update checkpoint, optimizer/RNG state and W&B run resumed at19:36UTC;
+no update was discarded or repeated. Optimization usage remained0.685226GPUh.
+
+[Recovery accounting](reports/20261009-controller-grounded/renderer-recovery.json)
+preserves the failure and timestamps. The first attempt reserved2,949.440GPU
+seconds, including2,466.815 measured optimization GPU-seconds. The remaining
+482.625GPU-seconds is an upper bound for startup/checkpoint IO/failed evaluator
+initialization/shutdown occupancy, recorded separately from optimization and
+completed validation. The first registered evaluation resumes before update5,001.

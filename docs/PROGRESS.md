@@ -1,5 +1,34 @@
 # Active campaign progress
 
+## First controller-grounded validation — October 9, 12:43 PM Pacific
+
+The first complete104-case validation at update5,000 scored **79/104 (75.96%)**.
+Saved references are historical LeFlow27, same-world CEM22, repaired flow17 and
+historical HWM8. All case IDs, reset seeds, episode hashes and model seeds match.
+Against same-world CEM,59 cases improve and2 regress; against historical LeFlow,
+53 improve and1 regresses. Historical implementation confounds still apply.
+
+No failure exhausted the10-second controller allowance. All25 failures reached
+200 primitive actions; mean controller decision latency was81.42ms. Seventy
+cases already succeeded within100 primitives. The largest deficits are
+pick-place1/8, reach2/8 and assembly3/8. The next three registered validations
+and20k training endpoint are still pending; the algorithm is unchanged.
+
+Predicted/observed executed-prefix latent progress correlates0.745 over5212
+observations;23.86% of predicted-positive prefixes have nonpositive observed
+progress. These are dependent latent-distance diagnostics, not counterfactual
+candidate-rank accuracy or calibrated task-success probabilities. Retrieval
+choice changes after controller scoring in31.68% of decisions. Direct-goal
+choices are concentrated in failures, an association needing visual review.
+[The review and raw compressed validation](reports/20261009-controller-grounded/validation-review.json)
+preserve evidence. No baseline or final test was rerun.
+
+An omitted Mesa launcher environment stopped evaluator initialization before
+any scored episode. The same5k checkpoint/source/RNG/optimizer resumed after a
+training reset image matched the cache bitwise. The failed startup occupancy
+is recorded separately; no optimizer update was lost/repeated. Current source
+remains74a0a71 and W&B run s12cr0yl. Baseline and test artifacts remain untouched.
+
 ## Controller-grounded iteration running — October 9, 12:29 PM Pacific
 
 The user explicitly authorized one first implementation/training/evaluation

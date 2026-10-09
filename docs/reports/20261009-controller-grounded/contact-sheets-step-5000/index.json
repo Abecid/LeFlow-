@@ -1,0 +1,98 @@
+{
+  "checkpoint": 5000,
+  "kind": "Measured saved rollout frames, uniformly sampled; final panel is registered goal image",
+  "simulator_calls": 0,
+  "model_calls": 0,
+  "images": [
+    {
+      "id": "validation/coffee-button/00000",
+      "success": true,
+      "steps": 36,
+      "sampled_primitive_indices": [
+        0,
+        9,
+        18,
+        27,
+        36
+      ],
+      "file": "coffee-button-00000.png",
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261009-controller-grounded/campaign/runs/controller_grounded_3072/trajectories/step_0005000/coffee-button/00000.npz",
+      "registered_episode_sha256": "c20ef40683da48a61f562cb821dd329f3c3183b5f89fbc5cf2d9d562e25f6f36"
+    },
+    {
+      "id": "validation/dial-turn/00000",
+      "success": true,
+      "steps": 104,
+      "sampled_primitive_indices": [
+        0,
+        26,
+        52,
+        78,
+        104
+      ],
+      "file": "dial-turn-00000.png",
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261009-controller-grounded/campaign/runs/controller_grounded_3072/trajectories/step_0005000/dial-turn/00000.npz",
+      "registered_episode_sha256": "529bd81d3b5ab086e102520e34627f901537fb4d90d19da6515ff014bca22121"
+    },
+    {
+      "id": "validation/door-close/00000",
+      "success": true,
+      "steps": 71,
+      "sampled_primitive_indices": [
+        0,
+        17,
+        35,
+        53,
+        71
+      ],
+      "file": "door-close-00000.png",
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261009-controller-grounded/campaign/runs/controller_grounded_3072/trajectories/step_0005000/door-close/00000.npz",
+      "registered_episode_sha256": "e310defe973604fb4ac870bbb03fec4a65e9dbf97ebc8e640231aac78809e251"
+    },
+    {
+      "id": "validation/drawer-close/00004",
+      "success": true,
+      "steps": 70,
+      "sampled_primitive_indices": [
+        0,
+        17,
+        35,
+        52,
+        70
+      ],
+      "file": "drawer-close-00004.png",
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261009-controller-grounded/campaign/runs/controller_grounded_3072/trajectories/step_0005000/drawer-close/00004.npz",
+      "registered_episode_sha256": "25631545f194be4f315ce035615c13d1e3d0b63bfe095b8bf9ceb9c777d67563"
+    },
+    {
+      "id": "validation/handle-press/00000",
+      "success": true,
+      "steps": 15,
+      "sampled_primitive_indices": [
+        0,
+        3,
+        7,
+        11,
+        15
+      ],
+      "file": "handle-press-00000.png",
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261009-controller-grounded/campaign/runs/controller_grounded_3072/trajectories/step_0005000/handle-press/00000.npz",
+      "registered_episode_sha256": "ad17b50fdfddd958f89be5bed4c25ac90193f3ea164546f611ce04494dc294be"
+    },
+    {
+      "id": "validation/reach/00003",
+      "success": false,
+      "steps": 200,
+      "sampled_primitive_indices": [
+        0,
+        50,
+        100,
+        150,
+        200
+      ],
+      "file": "reach-00003.png",
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261009-controller-grounded/campaign/runs/controller_grounded_3072/trajectories/step_0005000/reach/00003.npz",
+      "registered_episode_sha256": "14d14cc180361a114b59c40d1cd5b7dfeaae43e3daeb87038ce1358689c5603e"
+    }
+  ]
+}

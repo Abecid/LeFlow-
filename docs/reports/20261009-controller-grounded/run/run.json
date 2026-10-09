@@ -1,0 +1,12 @@
+{
+  "bank_hash": "1642bf4598b694a46866c8aedecaa09b988ff4fde915032990744dce5aeea0b2",
+  "code": "74a0a715cc393ba26285deb4571006ee7bc4d286",
+  "id": "s12cr0yl",
+  "manifest": "d168cd83b6f92dd4cc8e2e5033ebfed6f7e73e3d58614021f96aa43b0081560c",
+  "method": "controller_grounded",
+  "protocol": "86ef8d4d14ec2b1daaae38bb697bb306b9ba32ad2394e7e2ebba724c2b4309d8",
+  "seed": 3072,
+  "wandb_url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/s12cr0yl",
+  "world_hash": "ae3f910da43f0a43dd65945394444a0b11719ed042cdacffacc2faaf824ec5a3",
+  "world_size": 8
+}

@@ -1,6 +1,7 @@
 """Offline paired validation review. Never reads a test directory or runs models."""
 import argparse
 from collections import Counter
+import gzip
 import hashlib
 import json
 from pathlib import Path
@@ -8,8 +9,18 @@ from pathlib import Path
 import numpy as np
 
 
-def load(path):return json.loads(Path(path).read_text())
+def load(path):
+    path=Path(path)
+    return json.loads(gzip.decompress(path.read_bytes()) if path.suffix=='.gz' else path.read_text())
 def sha(path):return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+
+
+def validation_paths(run):
+    paths=sorted((run/'validation').glob('step_*.json*'))
+    stems=[p.name.removesuffix('.gz') for p in paths]
+    if len(set(stems))!=len(stems):
+        raise ValueError('Duplicate compressed/uncompressed validation report')
+    return paths
 
 
 def selected(paths):
@@ -29,11 +40,68 @@ def summary(report):
         records=cases,metrics=report['metrics'])
 
 
+def trace_summary(records):
+    decisions=[d for r in records for d in r.get('controller_diagnostics',{}).get('decisions',[])]
+    observed=[d for d in decisions if 'actual_prefix_target_progress' in d]
+    if not decisions:
+        return {'decisions':0,'observed_prefixes':0}
+    pred=np.array([d['predicted_prefix_target_progress'] for d in observed])
+    actual=np.array([d['actual_prefix_target_progress'] for d in observed])
+    def corr(x,y):
+        return float(np.corrcoef(x,y)[0,1]) if len(x)>1 and np.std(x)>0 and np.std(y)>0 else None
+    transitions=switches=same_episode=backward=0
+    for r in records:
+        anchors=[d['anchor'] for d in r.get('controller_diagnostics',{}).get('decisions',[])]
+        for a,b in zip(anchors,anchors[1:]):
+            transitions+=1
+            switches+=a.get('episode')!=b.get('episode')
+            if a.get('episode') and a.get('episode')==b.get('episode'):
+                same_episode+=1
+                backward+=b['start']<a['start']
+    chosen_response=[d['candidate_response_costs'][d['selected_anchor']] for d in decisions]
+    return dict(decisions=len(decisions),observed_prefixes=len(observed),
+        actual_prefix_progress_mean=float(actual.mean()) if len(actual) else None,
+        predicted_prefix_progress_mean=float(pred.mean()) if len(pred) else None,
+        optimism_gap_mean=float((pred-actual).mean()) if len(actual) else None,
+        predicted_actual_progress_pearson=corr(pred,actual),
+        selected_response_cost_actual_progress_pearson=corr([d['local_cost'] for d in observed],actual),
+        predicted_positive_count=int((pred>0).sum()),
+        predicted_positive_actual_nonpositive_count=int(((pred>0)&(actual<=0)).sum()),
+        observed_actual_positive_count=int((actual>0).sum()),
+        episode_switch_rate=switches/transitions if transitions else None,
+        same_episode_backtracking_rate=backward/same_episode if same_episode else None,
+        same_episode_transitions=same_episode,
+        direct_goal_rate=float(np.mean([d['anchor'].get('direct_goal',False) for d in decisions])),
+        response_changes_retrieval_rate=float(np.mean([d['response_changed_retrieval_choice'] for d in decisions])),
+        proposal_diversity_mean=float(np.mean([d['proposal_diversity'] for d in decisions])),
+        chosen_response_cost_mean=float(np.mean(chosen_response)),
+        chosen_route_cost_mean=float(np.mean([d['route_cost'] for d in decisions])),
+        per_decision_route_cost_range_mean=float(np.mean([np.ptp(d['candidate_route_costs']) for d in decisions])),
+        per_decision_response_cost_range_mean=float(np.mean([np.ptp(d['candidate_response_costs']) for d in decisions])))
+
+
+def failed_case_tails(records):
+    tails=[]
+    for r in records:
+        if r['success']:continue
+        trace=r.get('controller_diagnostics',{}).get('decisions',[])
+        if not trace:continue
+        tail=trace[-20:]
+        row=dict(id=r['id'],task=r['task'],decisions_in_tail=len(tail),
+            final_goal_distance_start_tail=tail[0]['candidate_route_costs'][-1],
+            final_goal_distance_end=tail[-1]['candidate_route_costs'][-1],
+            last_target=tail[-1]['anchor'])
+        row.update(trace_summary([dict(controller_diagnostics=dict(decisions=tail))]))
+        tails.append(row)
+    return tails
+
+
 def analyze(args):
     repo=Path(args.repo);new=Path(args.run_dir)
     old=repo/'docs/reports/20261007-joint-flow/runs'
     repaired=repo/'docs/reports/20261009-repaired-comparison/runs'
-    p,ours=selected((new/'validation').glob('step_*.json'))
+    paths=validation_paths(new)
+    p,ours=selected(paths)
     refs={
         'same_world_cem':(repaired/'world_3072/validation/cem_step_0020000.json',22),
         'repaired_flow':(repaired/'joint_flow_consistent_3072/validation/step_0005000.json',17),
@@ -78,7 +146,7 @@ def analyze(args):
             if previous is not None:transitions+=1;switches+=key!=previous
             previous=key
     result=dict(selected_step=ours['step'],source_report=str(p),source_sha256=sha(p),
-        rounds=[summary(load(p)) for p in sorted((new/'validation').glob('step_*.json'))],
+        rounds=[summary(load(p)) for p in paths],
         selected=summary(ours),comparison=comparison,case_pairing_verified=True,
         diagnostics=dict(decisions=len(decisions),observed_prefixes=len(observed),
             response_changes_retrieval_rate=float(np.mean([d['response_changed_retrieval_choice'] for d in decisions])) if decisions else None,
@@ -89,10 +157,17 @@ def analyze(args):
             cross_task_retrieval_rate=cross_task/retrieved if retrieved else None,
             route_switch_rate=switches/transitions if transitions else None,
             chosen_refinement_round_counts=dict(Counter(str(d['selected_after_refinement_round']) for d in decisions))),
+        trace_review=trace_summary(ours['records']),
+        trace_by_task={t:trace_summary([r for r in ours['records'] if r['task']==t])
+                       for t in sorted({r['task'] for r in ours['records']})},
+        trace_by_outcome={label:trace_summary([r for r in ours['records'] if bool(r['success'])==success])
+                          for label,success in [('success',True),('failure',False)]},
+        failed_case_last_20_decisions=failed_case_tails(ours['records']),
         limits=['Selected reused validation; not an unbiased final-test estimate.',
                 'One model seed. Bootstrap covers descriptive paired reset variation only.',
                 'Historical reference world/representation/sampler differences remain.',
                 'Prefix progress uses latent distance, not full-chunk execution or counterfactual rank calibration.',
+                'Trace correlations pool dependent decisions; no independence or causal inference is claimed.',
                 'Cross-task retrieval is a warning to inspect, not by itself proof of bad targets.'],
         training_complete=(new/'complete.json').exists(),final_tests_read=False,
         compute=load(new/'compute_usage.json'),run=load(new/'run.json'))
