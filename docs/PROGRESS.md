@@ -3844,3 +3844,15 @@ Added CPU-only analysis support for paired comparisons against both79/104 and
 77/104 references, plus an exact-source/data/budget audit for completion. These
 reporting changes stay outside the frozen execution checkout. No other training
 run, baseline, seed or test was dispatched.
+
+
+## October 9 — first execution-revision validation:80/104
+
+The fixed104 round at5k completed with80 successes and zero controller timeouts.
+Paired identity checks passed against all saved references. Against previous
+controller-grounded79, seven cases improve/six regress; against latent-revision77,
+seven improve/four regress. The +1-case margin is not reliable superiority evidence.
+Prefix corrections changed action rankings in6.23% of target/iteration groups;
+shifted plans supplied11.68% of selected prefixes. Late stalling and poor pick-place
+remain. Published raw records, paired inventory and honest interim report.
+Training continues unchanged toward20k with the next validation at10k.

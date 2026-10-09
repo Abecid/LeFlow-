@@ -6,16 +6,16 @@ Method name: `execution_revision`; configuration: `config/flow_metaworld_aligned
 
 ## Evidence and scope
 
-The previous latent-revision run scored77/104, below the controller-grounded79/104.
-It improved chosen-prefix prediction MAE28.12%, but used only a positive terminal
-correction for decisions. That correction changed target choice in0.428% of
-recorded candidate pools. Eighteen of27 failures retained optimistic, actually
-nonprogressing late local behavior. An inherited60-control-step sampling window
-omitted supervised action targets after primitive action90 despite a five-step
+The previous latent-revision run scored 77/104, below the controller-grounded 79/104.
+It improved chosen-prefix prediction MAE 28.12%, but used only a positive terminal
+correction for decisions. That correction changed target choice in 0.428% of
+recorded candidate pools. Eighteen of 27 failures retained optimistic, actually
+nonprogressing late local behavior. An inherited 60-control-step sampling window
+omitted supervised action targets after primitive action 90 despite a five-step
 action head. The direct-goal candidate set also duplicated its mean action.
 See [completed evidence](LATENT_REVISION_RESULTS.md).
 
-The new candidate retains the same4,531,782-parameter RevisionPolicy, initialized
+The new candidate retains the same 4,531,782-parameter RevisionPolicy, initialized
 from scratch, four-step latent workspace, factual calibration objective, cached
 V-JEPA2.1 encoder, normalization and frozen fine world. No extra teacher,
 simulator training, diffusion head, new training episodes or generated-action
@@ -24,9 +24,9 @@ or proof that any individual mechanism causes improvement.
 
 ## Fixed changes
 
-1. **Executed-prefix scoring.** For each candidate, letC1 be predicted distance
-   after the first control block andC5 the average terminal distance at blocks4/5.
-   LetE1,E5 be their factual-error-trained signed corrections. Inner CEM uses
+1. **Executed-prefix scoring.** For each candidate, let C1 be predicted distance
+   after the first control block and C5 the average terminal distance at blocks 4/5.
+   Let E1, E5 be their factual-error-trained signed corrections. Inner CEM uses
    `J = 0.5*(C1 + relu(E1)) + 0.5*(C5 + relu(E5))`.
    Outer selection uses unchanged route cost+J+the stall penalty below.
    Equal weights are fixed before evaluation, not selected by a validation sweep.
@@ -35,7 +35,7 @@ or proof that any individual mechanism causes improvement.
 
 2. **Shifted-plan reuse.** After observing the executed block, preserve the
    remaining four blocks of the selected plan as one proposal for every target,
-   with that target's fresh sampled tail. It replaces stochastic slot1. Mean,
+   with that target's fresh sampled tail. It replaces stochastic slot 1. Mean,
    recorded-expert and fresh alternatives remain; the direct goal's last slot
    stays independently sampled instead of duplicating its mean. This follows
    the established reuse principle in [iCEM](https://github.com/martius-lab/iCEM),
@@ -44,16 +44,16 @@ or proof that any individual mechanism causes improvement.
 3. **Causal, temporary stall feedback.** Retain eight observed transitions.
    A transition counts only when predicted target progress>0 and observed
    progress<=0. For a candidate target, match past start and target within
-   token-mean cosine distance0.005 of the current start/target. At least three
+   token-mean cosine distance 0.005 of the current start/target. At least three
    matching failures are required. Sum their observed optimism gaps, weighted
-   by0.8^age, capped at0.02 cost units. This penalty decays and expires, is local
+   by 0.8^age, capped at 0.02 cost units. This penalty decays and expires, is local
    to state/target, never uses task labels, and cannot be triggered by imagined
    outcomes. These are explicit first-candidate engineering constants, not
    empirically optimized or certified confidence bounds.
 
 4. **Local training-window coverage.** Keep the same task/episode random draws
    and successful expert episode inventory. Sample start uniformly through
-   `min(episode_steps-5, first_success_action//2)`. Then choose among5/10/20/40/60
+   `min(episode_steps-5, first_success_action//2)`. Then choose among 5/10/20/40/60
    goal offsets that fit the remaining episode. Five-step labels and causal
    four-transition history remain factual. Starts do not move past first
    success; a chunk may straddle it. There is no new padding or synthetic data.
@@ -63,39 +63,39 @@ or proof that any individual mechanism causes improvement.
 
 ## Preserved comparison contract
 
-- Exactly one fresh seed3072; global batch64 across8 A800 GPUs, physical batch8.
-- Stop at20,000 updates or28,800 aggregate optimization GPU-seconds, whichever
+- Exactly one fresh seed 3072; global batch 64 across 8 A800 GPUs, physical batch 8.
+- Stop at 20,000 updates or 28,800 aggregate optimization GPU-seconds, whichever
   occurs first. All learned components and factual-history work are charged.
-  This is1,280,000 sampled windows at the update cap, not conventional epochs.
-- Same7,800-episode training split; policy/bank use6,222 successful experts.
+  This is 1,280,000 sampled windows at the update cap, not conventional epochs.
+- Same 7,800-episode training split; policy/bank use 6,222 successful experts.
   Same cached features and frozen world SHA256
   `ae3f910da43f0a43dd65945394444a0b11719ed042cdacffacc2faaf824ec5a3`.
-- Same104 validation cases at5k/10k/15k/20k. Highest task-macro success selects
+- Same 104 validation cases at 5k/10k/15k/20k. Highest task-macro success selects
   the checkpoint; earliest wins ties. Restore training RNG after validation.
-- Same200 primitive actions and10-second cumulative controller allowance per
+- Same 200 primitive actions and 10-second cumulative controller allowance per
   case, including encoding, retrieval, latent reasoning, feedback and search.
   Eight targets×four candidates×three CEM rounds×five blocks=480 world
   transitions per decision. Execute only the selected first block (two actions).
-- Preserve saved previous79/104 and latent-revision77/104, same-world CEM22,
-  repaired flow17, historical LeFlow27 and HWM8. Historical implementation and
+- Preserve saved previous 79/104 and latent-revision 77/104, same-world CEM 22,
+  repaired flow 17, historical LeFlow 27 and HWM 8. Historical implementation and
   world confounds remain: this is not a faithful-SOTA superiority claim.
 - No baseline retraining, extra seeds, automatic variants, ablations or final
-  test. Reserved3,200-case test remains sealed. Repeated development validation
+  test. Reserved 3,200-case test remains sealed. Repeated development validation
   is not an unbiased final-test estimate. Equal caps are not equal realized FLOPs.
 
 ## Verification, diagnostics and accounting
 
-Behavioral checks cover late action99/state100 supervision, bounded future goals,
+Behavioral checks cover late action 99/state 100 supervision, bounded future goals,
 same episode draws, causal histories, prefix-induced ranking changes, negative
 correction conservatism, observed-before-reuse, exact executed action handoff,
 480 transitions, local repeated-stall activation, expiration and episode reset.
 All existing factual-label and frozen-world tests remain required.
 
-Bounded preflight uses training data only: check10,000 sample specifications,
+Bounded preflight uses training data only: check 10,000 sample specifications,
 eight actual late windows, finite forward/backward and unchanged world weights.
 Time the full encoder/controller with populated training-derived history, plan
 reuse and stall memory; no parameter update or policy simulator rollout occurs.
-Retain the prior120ms preflight gate rather than relaxing execution limits.
+Retain the prior 120 ms preflight gate rather than relaxing execution limits.
 
 Log previous metrics plus late-window fraction, mean start/goal offset, prefix
 and terminal penalties, candidate stall counts/penalties, warm-start availability,
@@ -110,22 +110,22 @@ is not presumed to help.
 
 ## Verified launch
 
-Coordinator1958947 was dispatched at23:05:15 UTC on October9. Frozen execution
+Coordinator 1958947 was dispatched at 23:05:15 UTC on October 9. Frozen execution
 source: `8be2808eaa09e539d30d07ee3760fc7b59717793`, in
 `/home/mtxu/adam/LeFlow-experiments/20261009-execution-revision/repo`.
-Training started at23:07:15 UTC using all8 GPUs.
+Training started at 23:07:15 UTC using all 8 GPUs.
 
-The exact launch source passed4 original,6 latent-revision and4 new behavioral
+The exact launch source passed 4 original, 6 latent-revision and 4 new behavioral
 tests. The registered training reset rendered bitwise identically. Full-size
-preflight confirmed10000 unchanged task/episode draws and valid start/goal bounds;
-147 of those sampled windows start after control block40. Eight late real-data
+preflight confirmed 10,000 unchanged task/episode draws and valid start/goal bounds;
+147 of those sampled windows start after control block 40. Eight late real-data
 windows and their causal histories passed checks. Full forward/backward preserved
-the frozen world. The unchanged4531782-parameter policy's full-controller latency
-with populated memory and reuse averaged81.44ms; peak allocation9.485GiB.
-Preflight used0.005719GPUh and zero parameter updates or simulator policy episodes.
+the frozen world. The unchanged 4,531,782-parameter policy's full-controller latency
+with populated memory and reuse averaged 81.44 ms; peak allocation 9.485 GiB.
+Preflight used 0.005719 GPU-hours and zero parameter updates or simulator policy episodes.
 
-Route construction used the same6222 episodes,130662 states and209109 routes.
-The first live snapshot reached819 updates with finite logged metrics and all8
+Route construction used the same 6,222 episodes, 130,662 states and 209,109 routes.
+The first live snapshot reached 819 updates with finite logged metrics and all 8
 GPU workers active. These are launch/health checks, not success results.
 
 [Live W&B run](https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/tyytbnn1).
