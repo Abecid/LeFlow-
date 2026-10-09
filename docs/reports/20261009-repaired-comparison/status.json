@@ -14,30 +14,15 @@
     "--root",
     "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign",
     "--run-dir",
-    "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072",
+    "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/joint_flow_consistent_3072",
     "--method",
-    "world",
+    "joint_flow_consistent",
     "--seed",
-    "3072"
+    "3072",
+    "--world",
+    "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt"
   ],
-  "gpus": [
-    [
-      "0",
-      "GPU-a303d11c-f1b5-e245-93f0-735a054671ce"
-    ],
-    [
-      "1",
-      "GPU-fc39ae51-86a1-df0a-8657-0d33620f5115"
-    ],
-    [
-      "2",
-      "GPU-85f3f7a6-107f-2921-13a5-76a94101f858"
-    ],
-    [
-      "3",
-      "GPU-64e751ee-abb6-120c-f346-311e789228c7"
-    ]
-  ],
-  "stage": "world_3072",
+  "scope": "ours_only",
+  "stage": "joint_flow_consistent_3072",
   "status": "running"
 }

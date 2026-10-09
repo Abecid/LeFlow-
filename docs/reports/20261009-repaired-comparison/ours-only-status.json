@@ -1,13 +1,38 @@
 {
-  "pid": 807392,
-  "started_utc": "2026-10-09T04:53:38.215707+00:00",
-  "state": "waiting_for_world",
+  "baseline_retraining": false,
+  "child_pid": 858560,
+  "command": [
+    "/tmp/mtxu-flow-jepa-20261007/env/bin/python",
+    "-m",
+    "torch.distributed.run",
+    "--nnodes=1",
+    "--rdzv-backend=c10d",
+    "--rdzv-endpoint=127.0.0.1:0",
+    "--nproc_per_node=4",
+    "-m",
+    "flow_jepa.train",
+    "--config",
+    "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/repo/config/flow_metaworld_repair.json",
+    "--root",
+    "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign",
+    "--run-dir",
+    "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/joint_flow_consistent_3072",
+    "--method",
+    "joint_flow_consistent",
+    "--seed",
+    "3072",
+    "--world",
+    "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt"
+  ],
+  "execution_revision": "75e0815351eb25c63e495f87458f139bd5062259",
+  "final_test_enabled": false,
   "methods_to_train": [
     "joint_flow_consistent"
   ],
-  "baseline_retraining": false,
-  "final_test_enabled": false,
-  "execution_revision": "75e0815351eb25c63e495f87458f139bd5062259",
+  "pid": 807392,
   "script_sha256": "712a0f2b141ba8bf2daf35855bb74fec4a2664818ae9bb5160d842e7dd7a5857",
-  "updated_utc": "2026-10-09T04:53:38.216696+00:00"
+  "started_utc": "2026-10-09T04:53:38.215707+00:00",
+  "state": "training_ours",
+  "updated_utc": "2026-10-09T05:42:09.926123+00:00",
+  "world_sha256": "ae3f910da43f0a43dd65945394444a0b11719ed042cdacffacc2faaf824ec5a3"
 }

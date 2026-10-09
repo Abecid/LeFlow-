@@ -2,22 +2,32 @@
   "all_infrastructure_runtime_total_available": false,
   "baseline_retraining_updates": 0,
   "bounded_repair_diagnostic_gpu_hours": 0.13652564757193128,
-  "checked_at": "2026-10-09T05:28:05.744208+00:00",
-  "cumulative_completed_registered_validation_gpu_hours": 10.45298556552786,
-  "cumulative_optimization_gpu_hours": 23.633939357383387,
+  "checked_at": "2026-10-09T05:48:56.236149+00:00",
+  "cumulative_completed_registered_validation_gpu_hours": 10.91308657962415,
+  "cumulative_optimization_gpu_hours": 24.471862802192984,
   "current_campaign": "20261009-repaired-comparison",
-  "current_completed_validation_gpu_hours": 1.4026674191819297,
-  "current_optimization_gpu_hours": 2.521863114099122,
+  "current_completed_validation_gpu_hours": 1.8627684332782195,
+  "current_optimization_gpu_hours": 3.359786558908721,
   "current_run_ledgers": {
+    "joint_flow_consistent_3072": {
+      "budget_check": "optimizer boundaries; any last-update overrun is reported",
+      "gpu_count": 4,
+      "step": 1218,
+      "training_budget_seconds": 7200,
+      "training_gpu_hours": 0.38101652885683707,
+      "training_seconds": 342.9148759711534,
+      "validation_gpu_hours": 0.0,
+      "validation_seconds": 0.0
+    },
     "world_3072": {
       "budget_check": "optimizer boundaries; any last-update overrun is reported",
       "gpu_count": 4,
-      "step": 16933,
+      "step": 20000,
       "training_budget_seconds": 7200,
-      "training_gpu_hours": 2.521863114099122,
-      "training_seconds": 2269.6768026892096,
-      "validation_gpu_hours": 1.4026674191819297,
-      "validation_seconds": 1262.4006772637367
+      "training_gpu_hours": 2.9787700300518836,
+      "training_seconds": 2680.8930270466954,
+      "validation_gpu_hours": 1.8627684332782195,
+      "validation_seconds": 1676.4915899503976
     }
   },
   "excluded_or_not_yet_finalized": [
@@ -26,11 +36,11 @@
     "Separate older PushT pilot is a different benchmark and is outside these MetaWorld subtotals."
   ],
   "gpu_count_per_model": 4,
-  "health_checked_at": "2026-10-09T05:28:05.744208+00:00",
+  "health_checked_at": "2026-10-09T05:47:50.998269+00:00",
   "historical_optimization_gpu_hours": 21.112076243284264,
   "historical_registered_validation_gpu_hours": 9.05031814634593,
   "interpretation": "Cumulative charged training and completed validation are retained across both MetaWorld campaigns. This is not a claim that the per-run allowance equals total R&D cost or that the known subtotal covers all infrastructure runtime.",
-  "known_charged_components_gpu_hours": 34.22345057048317,
+  "known_charged_components_gpu_hours": 35.521475029389066,
   "original_campaign": "20261007-joint-flow",
   "original_run_ledgers": {
     "hwm_adapted_3072": {
@@ -76,6 +86,6 @@
   },
   "per_model_optimization_ceiling_seconds": 7200,
   "per_model_update_ceiling": 20000,
-  "timestamp_basis": "Local snapshot save time; remote ledgers are read without interrupting active training or validation.",
+  "timestamp_basis": "Report assembly time; current ledgers are the immediately preceding remote snapshot.",
   "units": "GPU-hours"
 }

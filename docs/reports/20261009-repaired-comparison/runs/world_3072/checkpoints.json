@@ -1,12 +1,12 @@
 {
   "best.pt": {
     "bytes": 44360165,
-    "mtime_ns": 1791522347449630465,
+    "mtime_ns": 1791524513295534566,
     "path": "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt"
   },
   "last.pt": {
     "bytes": 44360165,
-    "mtime_ns": 1791522877851919477,
+    "mtime_ns": 1791524513188393685,
     "path": "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/last.pt"
   }
 }

@@ -99,3 +99,24 @@ finally selected new world alongside the historical-reference analysis; this
 requires no extra training or evaluation. Final tests remain unrun for this
 iteration. Latest monitor instructions enforce this scope and prohibit automatic
 subsequent training runs.
+
+## World completion and head handoff — October 9, 05:42 UTC
+
+The registered world finished at 20,000 updates with all four validations;
+the ours-only coordinator started only `joint_flow_consistent` at 05:42:09 UTC.
+Launcher 858560 and ranks 858566–858569 use GPUs 0–3, seed 3072, under the unchanged
+budget. Online head run is
+[rm46k69b](https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/rm46k69b).
+No baseline was retrained and no final test is queued.
+
+The selected world is the 20k checkpoint, chosen by minimum prediction loss
+0.00974052, SHA-256
+`ae3f910da43f0a43dd65945394444a0b11719ed042cdacffacc2faaf824ec5a3`.
+Its recorded CEM diagnostic is **22/104**, below the intermediate 24/104 peak;
+report 22 alongside historical CEM 7 and the other fixed references. Do not
+reselect the world using CEM outcomes or omit the decline. Lower prediction
+loss did not imply higher controller success across these final checkpoints.
+The diagnostic and paired case changes are preserved in
+[selected-world-diagnostic.json](reports/20261009-repaired-comparison/selected-world-diagnostic.json).
+All 82 failures hit the controller allowance; no physical cause is established.
+The repaired head has no completed validation yet at the 05:48 UTC snapshot.
