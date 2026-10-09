@@ -1,5 +1,17 @@
 # Experiment continuity
 
+- Latest throughput authorization: use all available GPUs for the SAME repaired
+  run and registered evaluations. The execution-only runtime preserves global
+  batch64, original per-rank random streams and per-microbatch consistency
+  subsets while fusing physical microbatches to16. Train on GPUs0–3 and overlap
+  validation on4–7; use all8 for final validation after optimization stops.
+  Preserve the original 7,200-second four-GPU optimization allowance, charged
+  ledgers, seed3072, cases and four validation rounds. No baseline reruns, extra
+  seeds, new variants or final tests are authorized. Read THROUGHPUT_RUNTIME.md
+  and the migration/runtime manifests before recovery; never resume superseded
+  coordinators807392/858560 after the checkpoint handoff is recorded.
+
+
 - Latest user correction (October 8, Pacific evening): freeze previously trained
   baselines and their evaluation records. Retraining all baselines was an overly
   broad interpretation. Continue the already-running compatible world and train
@@ -19,8 +31,9 @@
   `research/joint-flow-metaworld`. Follow `docs/FLOW_EXPERIMENT.md`.
 - The user authorizes SSH to `target_server_2` (or `target_server_2_cf`),
   continuation of the existing compatible world and then one repaired
-  joint_flow_consistent head on GPUs 0–3, with online W&B and fixed validation.
-  Spare GPUs do not authorize additional jobs; the earlier dual-pool queue is cancelled.
+  joint_flow_consistent head with online W&B and fixed validation. All available GPUs may accelerate
+  this same run and its registered evaluations; the earlier baseline dual-pool
+  queue remains cancelled.
 - Use exactly one training seed, 3072, per the user's October 7 correction.
   Never launch additional training seeds. Train only the already-running world
   and the one authorized joint_flow_consistent head. LeFlow/HWM/CEM references
