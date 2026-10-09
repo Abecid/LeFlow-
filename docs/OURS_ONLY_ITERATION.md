@@ -128,4 +128,4 @@ The authorized world and single repaired head are complete. Head rounds scored
 owned processes exited. Final testing remains reserved; no next variant is
 authorized. See [the final validation review](REPAIRED_VALIDATION_RESULTS.md) for
 paired failure cases, same-world CEM22, historical references, compute and limits.
-The monitor is to be paused after verified publication.
+The existing monitor is paused after verified publication.

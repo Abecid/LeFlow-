@@ -107,8 +107,9 @@ EOF/header-timeout retries, then synced successfully without intervention. The
 shutdown log warns that `destroy_process_group()` was not called; actual GPU
 release was independently verified. This is a future cleanup improvement, not
 an unresolved worker or lost result. Both automatic review files and the richer
-six-reference paired inventory are preserved. The existing monitor will be
-paused after publication; no further run or final test is authorized.
+six-reference paired inventory are preserved. Publication to origin/main was
+verified, and the existing monitor is **paused**. No further run or final test
+is authorized.
 [W&B run](https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/rm46k69b)
 retains the same run ID and explicit validation checkpoint axis.
 

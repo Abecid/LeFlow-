@@ -3,7 +3,7 @@
 - Completion recorded October 9, 07:22 UTC: the authorized repaired world/head
   and four validation rounds are finished, W&B is finished, and all owned
   processes exited. Read docs/REPAIRED_VALIDATION_RESULTS.md. Preserve all
-  results and pause the existing monitor after verified publication. Do not
+  results. The existing monitor is paused after verified publication. Do not
   restart any coordinator or launch training, ablations or final tests without
   new user authorization. Later bullets retain historical execution context.
 

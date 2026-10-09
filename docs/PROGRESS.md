@@ -38,8 +38,9 @@
   Automatic comparison/failure-analysis files are preserved alongside the richer
   six-reference offline review. A missing explicit NCCL teardown warning was
   recorded; independent checks confirm resources were released.
-- The authorized run and validation failure review are complete. Publish and
-  verify origin/main, then pause the existing monitor. Further diagnostics,
+- The authorized run and validation failure review are complete and published
+  to origin/main. The existing monitor is **PAUSED**, verified in its saved
+  configuration after publication. Further diagnostics,
   ablations, retraining or final tests require new authorization; none is queued.
 
 Earlier entries below record historical authorizations and states. The current
@@ -3574,3 +3575,12 @@ report 17/104 without a favorable-result assumption, retain same-world CEM 22 an
 all historical references, and separate observed timeout conditions from unproven
 physical causes. Proposed diagnostics/ablations are not executed. After verifying
 publication, pause the monitor instead of starting another experiment.
+
+## Monitor closed after verified publication
+
+Final review/evidence commit5a271ce9f2c30c7ffefa2aa9261031d96c7b668a was verified
+on origin/main and origin/research/joint-flow-metaworld. The existing automation
+continue-flow-jepa-campaign-and-preserve-results was then set toPAUSED through
+the app; saved status was rechecked and its prompt/schedule/target preserved.
+No new campaign is scheduled. Final report text, case inventories, checkpoint
+provenance and compute totals were checked against the completed source records.

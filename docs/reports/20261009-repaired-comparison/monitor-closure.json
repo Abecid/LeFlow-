@@ -1,0 +1,13 @@
+{
+  "automation_id": "continue-flow-jepa-campaign-and-preserve-results",
+  "name_prompt_schedule_target_preserved": true,
+  "published_branches": [
+    "main",
+    "research/joint-flow-metaworld"
+  ],
+  "recorded_utc": "2026-10-09T07:26:28.564125+00:00",
+  "review_publication_commit": "5a271ce9f2c30c7ffefa2aa9261031d96c7b668a",
+  "scope": "This authorized repaired-method run and its registered validation review are complete; no automatic next experiment.",
+  "status": "PAUSED",
+  "verified_saved_status": true
+}
