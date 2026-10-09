@@ -1,19 +1,20 @@
 # Active campaign progress
 
-## Current verified state — October 9, 04:59 UTC
+## Current verified state — October 9, 05:17 UTC
 
 - **Active scope is ours-only.** Finish the already-running compatible world,
   then train exactly `joint_flow_consistent`, seed 3072, on GPUs 0–3. Baseline
   retraining and the all-method final-test queue are cancelled. Spare GPUs do
   not authorize jobs. See [OURS_ONLY_ITERATION](OURS_ONLY_ITERATION.md).
-- **World at 10,000 updates; second validation underway.** Its ledger records
-  1,356.255 optimization seconds (1.506950 GPU-hours) and one completed validation
-  at 427.558 seconds (0.475064 GPU-hours), separately charged. The second round
-  is not yet a completed result. Only `world_3072` exists; our head has not started.
-- **First new-world CEM diagnostic: 23/104.** Successes were handle-press 8/8,
-  coffee-button 7/8, drawer-close 6/8 and reach 2/8; the other nine tasks were
-  zero. All 81 timeouts remain failures. World prediction loss was 0.012797
-  versus persistence 0.028101, and action identification was 79.30%. These are
+- **World at 15,000 updates; two validations complete.** Its ledger records
+  2,014.204 optimization seconds (2.238004 GPU-hours) and 842.126 completed
+  validation seconds (0.935695 GPU-hours), separately charged. Only
+  `world_3072` exists; our head has not started.
+- **New-world CEM diagnostics: 23/104 at 5k, 24/104 at 10k.** The second round
+  succeeded on handle-press 8/8, coffee-button 7/8, drawer-close 7/8 and reach
+  2/8; the other nine tasks were zero. All 80 second-round timeouts remain
+  failures. World prediction loss improved from 0.012797 to 0.011090 versus
+  persistence 0.028101, and action identification reached 85.74%. These are
   registered world diagnostics, not repaired-planner results. Include the
   already-recorded CEM diagnostic for the finally selected world in the final
   review; never hide it by quoting only historical CEM's 7/104.
@@ -40,7 +41,7 @@
   No new seeds, baseline runs, ablations, sweeps or automatic subsequent variants.
 - **Cumulative compute is retained:** original MetaWorld training used 21.112076
   optimization GPU-hours and 9.050318 registered-validation GPU-hours. Including
-  this world's current ledger gives 22.619027 optimization and 9.525382 completed
+  this world's current ledger gives 23.350080 optimization and 9.986014 completed
   validation GPU-hours; the bounded repair diagnostic separately used 0.136526
   GPU-hours. These subtotals do not cover all shared preparation, preflights or
   interrupted original test runtime. See [compute accounting](reports/20261009-repaired-comparison/compute-accounting.json).
@@ -3319,3 +3320,43 @@ incomplete current validation and interrupted historical test costs remain
 separate rather than being silently counted as zero. The next step remains
 world completion followed by only our head and validation failure analysis;
 no additional method, seed, budget or final test is authorized.
+
+## 2026-10-09 05:12 UTC — second world validation preserved; ours-only queue intact
+
+The 05:15 UTC health check verified ours-only continuation 807392, its recorded
+start time and script hash, live original world launcher 780827, stopped cancelled
+parent 778158 and absent cancelled coordinator 795290. Only `world_3072` exists;
+no repeated baseline training or repaired-head dispatch has occurred. GPUs 0–3
+are occupied and 4–7 idle. Frozen execution/configuration/manifest checks pass,
+the old held campaign's completion/compute hashes remain unchanged, and W&B
+confirms the world run, code, group and seed online. No recovery, restart or
+change to execution code was needed.
+
+World validation at 10,000 updates completed with **24/104 CEM successes**:
+handle-press 8, coffee-button 7, drawer-close 7 and reach 2; all other tasks zero.
+All 80 unsuccessful episodes exhausted the controller allowance. The paired
+case changes from the first 23/104 round are gains on coffee-button/00006 and
+drawer-close/00000, /00001, and losses on coffee-button/00002 and
+drawer-close/00003 (all under `validation/`). This is an interim world diagnostic,
+not our repaired planner or evidence of a physical failure mechanism. World
+prediction loss is 0.0110901 versus persistence 0.0281005; action identification
+is 85.74%. The selected-world diagnostic must still accompany the eventual
+historical-reference review, regardless of its result.
+
+The subsequent 05:17 UTC snapshot reached 15,000 updates, with 2,014.204 charged
+optimization seconds (2.238004 GPU-hours), two completed validations totaling
+842.126 seconds (0.935695 GPU-hours), and no recorded optimization overrun.
+Updated cumulative MetaWorld accounting: 23.350080 optimization GPU-hours,
+9.986014 completed registered-validation GPU-hours and 0.136526 bounded repair
+diagnostic GPU-hours. These remain partial infrastructure-cost subtotals with
+the excluded preparation/preflight/interrupted-test components explicitly listed.
+
+Verified both completed validation reports contain the same 104 unique case IDs,
+reset seeds, episode hashes and model seed as the frozen historical validation
+set, 13 tasks with eight cases each, and retained every timeout as a failure.
+All copied metrics are finite; training steps and charged time are monotone.
+The primary route succeeded for health/W&B but then timed out during SSH banner
+exchange; the fallback successfully preserved the compact snapshot. No test
+outcomes were inspected, and current final testing remains disabled. Next:
+finish the registered world rounds, then only the authorized repaired head and
+its validation failure analysis; preserve and publish that review before pausing.
