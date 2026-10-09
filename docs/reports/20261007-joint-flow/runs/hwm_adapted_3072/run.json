@@ -1,0 +1,8 @@
+{
+  "fixture": false,
+  "id": "cguncmvz",
+  "method": "hwm_adapted",
+  "protocol": "50c4b357c19f15494971cd65fe0e524f740c92d0c2d6c9ec6631981272cdea71",
+  "seed": 3072,
+  "wandb_url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/cguncmvz"
+}
