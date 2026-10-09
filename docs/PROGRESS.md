@@ -21,11 +21,11 @@
   separately accounted. W&B verified the run finished:
   https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/9jhufn8j.
 - **HWM training resumed after its third validation:** `hwm_adapted_3072`
-  reached step 15,275, charging 4,190.168 optimization seconds (4.65574 GPU-hours)
+  reached step 18,244, charging 4,998.712 optimization seconds (5.55412 GPU-hours)
   and 1,799.907 validation seconds (1.99990 GPU-hours), separately accounted.
   Its checkpoint shares the world hash, manifest, protocol, code, seed and
-  four-GPU allocation of the other heads. Later W&B readback at 01:35 UTC
-  confirmed step 15,350 and all three completed validations online:
+  four-GPU allocation of the other heads. W&B readback at 01:47 UTC confirmed
+  step 17,950 and all three completed validations online:
   https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/cguncmvz.
 - **HWM validation:** the first three rounds achieved 7/104 (6.73%), 2/104
   (1.92%) and 6/104 (5.77%) successes. All 98 third-round timeouts remain
@@ -2904,3 +2904,27 @@ All 13 tasks retain eight cases, seed 3072 and the 10-second controller cap;
 every timeout remains a failure. Next: finish HWM's fourth registered validation,
 then allow the existing supervisor to evaluate the selected frozen models on the
 registered final tests. No test result exists yet and no follow-up run is queued.
+
+### 2026-10-09 01:46 UTC — HWM at 18,244 updates; final validation pending
+
+The updated snapshot reached HWM step 18,244, charging 4,998.712 optimization
+seconds (5.554125 GPU-hours), with no last-update overrun. Three completed
+validations still total 1,799.907 seconds (1.999897 GPU-hours), separately
+accounted. At step 18,200, coarse-dynamics loss was 0.029913 and gradient norm
+0.027101. Both 44,490,453-byte checkpoints are present; the selected step-5,000
+checkpoint metadata is unchanged. No fourth validation or test result exists yet.
+
+W&B API readback at 01:47:04 UTC verified `cguncmvz` running at step 17,950 with
+all three validation results online. World, joint-flow and LeFlow remain finished
+with their final charges preserved. Supervisor 142087, launcher 489992 and ranks
+489996/489997/489998/489999 remain healthy in clean frozen `repo-throughput`
+at `56419ed`, using only GPUs 0–3; 4–7 remain empty. Both scope-change records
+retain the authorized four methods, seed 3072 and matched resource limits.
+
+Saved updated losses, compute usage, checkpoint metadata and online evidence.
+Verified finite metrics, strictly increasing training steps and charged time,
+unchanged validation charges and best checkpoint metadata, and sealed tests.
+Next: finish HWM at the earlier registered cap and complete its fourth validation
+before the existing supervisor starts final testing. The implementation audit
+remains part of the interpretation; no active code or protocol was changed and
+no follow-up experiment is queued.
