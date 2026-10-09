@@ -10,7 +10,7 @@
     "-m",
     "flow_jepa.runtime.async_eval",
     "--job",
-    "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/joint_flow_consistent_3072/async_validation/step_0010000.json"
+    "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/joint_flow_consistent_3072/async_validation/step_0015000.json"
   ],
   "devices": [
     4,
@@ -18,6 +18,6 @@
     6,
     7
   ],
-  "job": "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/joint_flow_consistent_3072/async_validation/step_0010000.json",
-  "pid": 926345
+  "job": "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/joint_flow_consistent_3072/async_validation/step_0015000.json",
+  "pid": 939245
 }

@@ -2,22 +2,22 @@
   "all_infrastructure_runtime_total_available": false,
   "baseline_retraining_updates": 0,
   "bounded_repair_diagnostic_gpu_hours": 0.13652564757193128,
-  "checked_at": "2026-10-09T06:46:41.593760+00:00",
-  "cumulative_completed_registered_validation_gpu_hours": 11.453650138491971,
-  "cumulative_optimization_gpu_hours": 27.826489444770335,
+  "checked_at": "2026-10-09T07:00:09.437809+00:00",
+  "cumulative_completed_registered_validation_gpu_hours": 12.01362562917173,
+  "cumulative_optimization_gpu_hours": 28.726123434073397,
   "current_campaign": "20261009-repaired-comparison",
-  "current_completed_validation_gpu_hours": 2.4033319921460414,
-  "current_optimization_gpu_hours": 6.714413201486071,
+  "current_completed_validation_gpu_hours": 2.9633074828257993,
+  "current_optimization_gpu_hours": 7.614047190789133,
   "current_run_ledgers": {
     "joint_flow_consistent_3072": {
       "budget_check": "optimizer boundaries; any last-update overrun is reported",
       "gpu_count": 4,
-      "step": 10544,
+      "step": 15981,
       "training_budget_seconds": 7200,
-      "training_gpu_hours": 3.7356431714341873,
-      "training_seconds": 3362.0788542907685,
-      "validation_gpu_hours": 0.540563558867822,
-      "validation_seconds": 486.5072029810399,
+      "training_gpu_hours": 4.63527716073725,
+      "training_seconds": 4171.749444663525,
+      "validation_gpu_hours": 1.1005390495475795,
+      "validation_seconds": 990.4851445928216,
       "validation_seconds_basis": "four-GPU equivalent; actual wall time in each async report"
     },
     "world_3072": {
@@ -37,11 +37,18 @@
     "Separate older PushT pilot is a different benchmark and is outside these MetaWorld subtotals."
   ],
   "gpu_count_per_model": 4,
-  "health_checked_at": "2026-10-09T06:46:41.593760+00:00",
+  "health_checked_at": "2026-10-09T07:00:09.437809+00:00",
   "historical_optimization_gpu_hours": 21.112076243284264,
   "historical_registered_validation_gpu_hours": 9.05031814634593,
   "interpretation": "Cumulative charged training and completed validation are retained across both MetaWorld campaigns. This is not a claim that the per-run allowance equals total R&D cost or that the known subtotal covers all infrastructure runtime.",
-  "known_charged_components_gpu_hours": 39.421618246104465,
+  "known_charged_components_gpu_hours": 40.88122772608729,
+  "migration_cost": {
+    "completed_updates_discarded": 0,
+    "conservative_inflight_optimization_seconds": 1,
+    "failed_attempt_preserved": "throughput-migration-attempt-7000.json",
+    "included_in_head_optimization_ledger": true,
+    "standalone_gpu_hour_charge_not_added_again": true
+  },
   "original_campaign": "20261007-joint-flow",
   "original_run_ledgers": {
     "hwm_adapted_3072": {

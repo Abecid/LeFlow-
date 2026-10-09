@@ -8,7 +8,7 @@
     "--rdzv-endpoint=127.0.0.1:0",
     "--nproc_per_node=4",
     "-m",
-    "flow_jepa.train",
+    "flow_jepa.runtime.train",
     "--config",
     "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/repo/config/flow_metaworld_repair.json",
     "--root",
@@ -22,7 +22,7 @@
     "--world",
     "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt"
   ],
-  "scope": "ours_only",
+  "scope": "ours_only_all_gpu_throughput",
   "stage": "joint_flow_consistent_3072",
   "status": "running"
 }

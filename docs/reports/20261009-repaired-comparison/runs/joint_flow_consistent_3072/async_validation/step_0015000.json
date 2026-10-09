@@ -1,0 +1,21 @@
+{
+  "checkpoint": "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/joint_flow_consistent_3072/async_validation/step_0015000.pt",
+  "checkpoint_sha256": "97a92d73e931b4826b80cce6c9bed31e463879fb018dca40b1cfac6e6b25d245",
+  "config": "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/repo/config/flow_metaworld_repair.json",
+  "devices": [
+    4,
+    5,
+    6,
+    7
+  ],
+  "manifest": "ce6e190b9b777ad34807c47c2dbeebae810f9cca52b440dbaf9e05043d69f1bc",
+  "method": "joint_flow_consistent",
+  "model_code": "75e0815351eb25c63e495f87458f139bd5062259",
+  "output": "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/joint_flow_consistent_3072/validation/step_0015000.json",
+  "protocol": "563c7d7d8b10664aa1ebf50db8f8a24fc015b50325ff1de82bcb736c7d411d51",
+  "root": "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign",
+  "seed": 3072,
+  "step": 15000,
+  "world": "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt",
+  "world_sha256": "ae3f910da43f0a43dd65945394444a0b11719ed042cdacffacc2faaf824ec5a3"
+}
