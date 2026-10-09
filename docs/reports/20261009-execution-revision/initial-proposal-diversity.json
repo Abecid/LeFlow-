@@ -1,0 +1,29 @@
+{
+  "rounds": [
+    {
+      "step": 5000,
+      "cases": 104,
+      "mean": 0.07522278434883517
+    },
+    {
+      "step": 10000,
+      "cases": 104,
+      "mean": 0.0481537831409906
+    },
+    {
+      "step": 15000,
+      "cases": 104,
+      "mean": 0.037559485636078395
+    },
+    {
+      "step": 20000,
+      "cases": 104,
+      "mean": 0.03665675405556193
+    }
+  ],
+  "lower_at_20k_than_5k": 101,
+  "identical_case_ids": true,
+  "model_calls": 0,
+  "simulator_calls": 0,
+  "scope": "Initial decisions only: same registered resets/goals, no history or warm-start. Diversity includes the fixed recorded proposals. Association is not causal evidence of mode collapse."
+}

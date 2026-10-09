@@ -1,5 +1,16 @@
 # Experiment continuity
 
+- Execution-revision iteration completed October 9: one fresh seed3072 run,
+  20,000 updates and all four fixed104 validations (80/78/79/76). Selected5k
+  scores80/104 versus controller-grounded79 and latent-revision77. This is a
+  one-case gain over the strongest reference, not reliable SOTA evidence.
+  Read docs/EXECUTION_REVISION_RESULTS.md and its final audit/compute ledger.
+  Later training regresses; matched-initial proposal diversity falls about51%.
+  All14 tests passed, W&B synced, owned workers exited and all8 GPUs were idle
+  at2026-10-09T23:50:16.141415+00:00. The one-run authorization is fulfilled. Preserve
+  frozen runs and sealed tests; no automatic training, variants, baseline reruns,
+  additional seeds, ablations or final tests. Later authorization bullets are history.
+
 - Latest user authorization: implement the diagnosed execution-alignment,
   repeated-stall, plan-reuse and sampling-coverage fixes, then run ONE fresh
   `execution_revision` candidate. This supersedes the completed-run hold for

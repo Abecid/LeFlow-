@@ -1,0 +1,92 @@
+{
+  "source": "8be2808eaa09e539d30d07ee3760fc7b59717793",
+  "run": {
+    "bank_hash": "3b3b53bbd95b644ec753a5dcfba2e83141176535c5c634c3259ba849079e848a",
+    "code": "8be2808eaa09e539d30d07ee3760fc7b59717793",
+    "id": "tyytbnn1",
+    "manifest": "cacd08e07420764dc7dacd6ddfdc9b63b41625a293274991f83fd415c63b32b6",
+    "method": "execution_revision",
+    "protocol": "8e77e5b5de65638179e063b6ae43aa7ba492fa495bb02d6ef9213eff3bc5bc71",
+    "seed": 3072,
+    "wandb_url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/tyytbnn1",
+    "world_hash": "ae3f910da43f0a43dd65945394444a0b11719ed042cdacffacc2faaf824ec5a3",
+    "world_size": 8
+  },
+  "rounds": [
+    {
+      "step": 5000,
+      "successes": 80
+    },
+    {
+      "step": 10000,
+      "successes": 78
+    },
+    {
+      "step": 15000,
+      "successes": 79
+    },
+    {
+      "step": 20000,
+      "successes": 76
+    }
+  ],
+  "checkpoints": {
+    "last": {
+      "step": 20000,
+      "sha256": "24f9cc076de171592f3a5a838498ecd8ee7ef3c30807f96569e84090de20a324",
+      "finite": true
+    },
+    "best": {
+      "step": 5000,
+      "sha256": "74a3f6db1d59d79f2e3a45ca5086bb18f1f6a0f9d6c6dc865b88c84187af7e2c",
+      "finite": true
+    }
+  },
+  "frozen_source_clean": true,
+  "data_and_world_identity_verified": true,
+  "identical_route_bank_tensors": true,
+  "training_metric_records": 401,
+  "validation_metric_records": 4,
+  "same_cases_across_rounds": true,
+  "causal_history_and_plan_reuse": true,
+  "score_reconstruction_verified": true,
+  "score_rounding_tolerance": 1e-07,
+  "world_transition_budget_verified": true,
+  "training_coverage_logging_verified": true,
+  "compute": {
+    "global_batch": 64,
+    "gpu_count": 8,
+    "last_update_overrun_gpu_seconds": 0.0,
+    "optimization_cap_gpu_seconds": 28800,
+    "optimization_gpu_hours": 3.233375356346369,
+    "optimization_gpu_seconds": 11640.151282846928,
+    "step": 20000,
+    "stop_check": "optimizer boundary; final-update overrun reported",
+    "validation_gpu_hours": 1.9459724818294246,
+    "validation_gpu_seconds": 7005.500934585929,
+    "validation_steps": [
+      5000,
+      10000,
+      15000,
+      20000
+    ]
+  },
+  "complete": {
+    "best": 0.7692307692307693,
+    "best_step": 5000,
+    "optimization_gpu_hours": 3.233375356346369,
+    "step": 20000,
+    "stop_reason": "update_limit",
+    "validation_gpu_hours": 1.9459724818294246,
+    "validation_steps": [
+      5000,
+      10000,
+      15000,
+      20000
+    ],
+    "wall_seconds": 2357.0925552453846
+  },
+  "final_tests_read": false,
+  "model_calls": 0,
+  "simulator_calls": 0
+}

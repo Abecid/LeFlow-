@@ -3879,3 +3879,23 @@ Clarified that exact shifted-prefix matches are an identity diagnostic, not
 unique proposal provenance or a causal warm-start ablation. The CPU-only final
 audit allows1e-7 float32 summation ties when reconstructing serialized scores;
 this reporting-only change does not alter the frozen execution source.
+
+
+## October 9 — execution revision completed and verified
+
+One fresh seed3072 run completed20,000 updates with fixed104 validations80/78/79/76.
+The selected5k checkpoint scores80/104 versus saved79 and77 references. Against79,
+seven improve/six regress, a small descriptive gain with a paired interval spanning
+zero. The final20k model regresses to76, including assembly0/8 and pick-place0/8.
+At identical initial reset/goal pairs, proposal diversity falls about51%, lower
+on101/104 cases. This is a recovery/exploration lead, not established causality.
+
+All14 behavior checks and final source/data/world/bank/checkpoint/score/budget
+checks passed. There are401 training logs and four validation records. All ten
+selected5k contact sheets were visually inspected and their final copied bytes
+verified. Optimization3.233375GPUh, validation1.945972GPUh,
+preflight0.005719GPUh; other held occupancy is separately bounded.
+W&B synced and all owned workers exited; eight GPUs were empty/idle at
+2026-10-09T23:50:16.141415+00:00. Published all results, failures and compact raw evidence.
+No baseline was retrained and no extra seed, variant, ablation or final test ran.
+The authorized run is complete; further experiments require a new user request.

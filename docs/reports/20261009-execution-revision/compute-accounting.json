@@ -1,0 +1,19 @@
+{
+  "units": "aggregate GPU-hours",
+  "checked_utc": "2026-10-09T23:50:15.820037+00:00",
+  "optimization": 3.233375356346369,
+  "completed_registered_validation": 1.9459724818294246,
+  "training_only_preflight": 0.005719020063471463,
+  "charged_new_components": 5.185066858239265,
+  "other_reserved_occupancy_upper_bound": 0.4294787456188347,
+  "known_prior_campaign_subtotal": 52.3775713434148,
+  "known_cumulative_components": 57.56263820165407,
+  "cumulative_optimization": 38.26917939144705,
+  "cumulative_completed_validation": 19.13515798378322,
+  "optimization_limit": 8,
+  "updates": 20000,
+  "baseline_retraining_updates": 0,
+  "final_tests_read": false,
+  "all_infrastructure_runtime_total_available": false,
+  "scope": "Measured optimization, registered evaluation and one-GPU preflight. Other held occupancy is a separate upper bound, not billing. Shared world/cache costs are not charged twice."
+}

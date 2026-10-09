@@ -1,5 +1,9 @@
 # Execution-aligned revision: registered candidate
 
+**Completed October 9, 2026:** 80/78/79/76 successes across the four validations;
+selected 5k80/104. See [final results](EXECUTION_REVISION_RESULTS.md).
+The registration below is preserved as historical evidence.
+
 October 9, 2026. The user authorized implementing the diagnosed improvements and
 one fresh training run. This registration precedes its first validation result.
 Method name: `execution_revision`; configuration: `config/flow_metaworld_aligned.json`.
@@ -130,3 +134,10 @@ GPU workers active. These are launch/health checks, not success results.
 
 [Live W&B run](https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/tyytbnn1).
 [Source/configuration and preflight evidence](reports/20261009-execution-revision/).
+
+## Verified completion
+
+The run stopped normally at 20,000 updates; selected checkpoint5k scores80/104.
+Optimization used3.233375GPUh and validation1.945972GPUh.
+The final audit passed; W&B synced, owned workers exited and all8 GPUs were idle
+at2026-10-09T23:50:16.141415+00:00. No additional run or final test was launched.
