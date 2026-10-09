@@ -37,7 +37,8 @@ These are adaptation results subject to [the audit](EVAL_AUDIT_20261009.md).
 
 ## Work now
 
-1. Implement a clean-endpoint state parameterization with a terminal Euler update
+1. Implement a clean-endpoint state parameterization with full-dimensional
+   start/goal bridge anchors and learned residuals, plus a terminal Euler update
    that can remove all sampled state noise, keeping the transformer width fixed.
    Apply the same state sampler/target convention to both flow methods. Test at
    the production 1,024-dimensional state and 256-dimensional hidden width.

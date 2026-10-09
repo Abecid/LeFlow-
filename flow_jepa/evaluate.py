@@ -19,10 +19,12 @@ from .common import (
     git_revision,
     save_json,
     seed_all,
+    require_execution,
 )
 from .environment import make_env
 from .models import System, distance
-from .vision import Encoder, history_clip
+from .vision import Encoder, state_clip
+from .scoring import continuous_plan_score
 from .budget import PlanningBudget, PlanningBudgetExceeded
 
 
@@ -118,6 +120,12 @@ class Controller:
                 acts = self.model.inverse(
                     paths[:, :-1].flatten(0, 1), paths[:, 1:].flatten(0, 1)
                 ).reshape(n, m, k, ad)
+            if e.get("proposal_scoring", "legacy") == "continuous":
+                scores = continuous_plan_score(
+                    self.world, start, goal, paths, acts,
+                    waypoint_weight=e.get("waypoint_weight", 0.1), budget=budget,
+                )
+            elif path_only:
                 # LeFlow family: rank actual decoded actions by final rollout distance.
                 endpoint = self.world.rollout(
                     astart, acts.clamp(-1, 1).reshape(n, m * k, ad), budget=budget
@@ -373,8 +381,9 @@ def evaluate(
                 try:
                     if clock is not None:
                         clock.check()
-                    clip = history_clip(
-                        frames, len(frames) - 1, c["data"]["history_frames"]
+                    clip = state_clip(
+                        frames, len(frames) - 1, c["data"]["history_frames"],
+                        c["model"].get("state_representation", "causal"),
                     )
                     z = (encoder(clip[None]).float() - mean) / std
                     for due, target in pending:
@@ -473,6 +482,8 @@ def main():
     p.add_argument("--output", required=True)
     a = p.parse_args()
     c = config(a.config)
+    if a.split == "test":
+        require_execution(c, a.root, "test")
     rank, _, device = distributed()
     manifest = json.loads((Path(a.root) / "manifest.json").read_text())
     if manifest.get("fixture", True) or manifest["protocol"] != digest(c):

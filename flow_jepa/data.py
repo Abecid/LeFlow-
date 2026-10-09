@@ -317,6 +317,10 @@ class Segments(Dataset):
             raise ValueError("Configuration differs from prepared data")
         self.mean = np.asarray(self.manifest["mean"], np.float32)
         self.std = np.asarray(self.manifest["std"], np.float32)
+        representation = c["model"].get("state_representation", "causal")
+        if representation not in ("causal", "static"):
+            raise ValueError("Unknown state representation")
+        self.state_key = "image_goals" if representation == "static" else "z"
         k, m = c["model"]["chunk_steps"], c["model"]["segments"]
         self.horizon = k if stage == "world" else k * m
         self.tasks = {}
@@ -355,12 +359,12 @@ class Segments(Dataset):
         with h5py.File(self.root / row["path"], "r") as f:
             if self.stage == "world":
                 z = (
-                    f["z"][start : start + k + 1].astype(np.float32) - self.mean
+                    f[self.state_key][start : start + k + 1].astype(np.float32) - self.mean
                 ) / self.std
                 a = f["actions"][start : start + k].astype(np.float32)
                 return {"z": torch.from_numpy(z), "a": torch.from_numpy(a)}
             z = (
-                f["z"][start : start + self.horizon + 1 : k].astype(np.float32)
+                f[self.state_key][start : start + self.horizon + 1 : k].astype(np.float32)
                 - self.mean
             ) / self.std
             goal = (
@@ -375,7 +379,7 @@ class Segments(Dataset):
             )
             # Observed one-chunk targets for the separate LeFlow inverse control.
             local = (
-                f["z"][start : start + k + 1 : k].astype(np.float32) - self.mean
+                f[self.state_key][start : start + k + 1 : k].astype(np.float32) - self.mean
             ) / self.std
             return {
                 "z": torch.from_numpy(z),

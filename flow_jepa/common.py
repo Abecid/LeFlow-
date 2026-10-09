@@ -46,6 +46,17 @@ def config(path):
     return c
 
 
+def require_execution(c, root, operation):
+    """A repair recipe is not permission to spend another training/test budget."""
+    if operation not in ("training", "test"):
+        raise ValueError("Unknown execution operation")
+    if not c.get("execution", {}).get(operation + "_enabled", True):
+        raise RuntimeError(f"{operation} is disabled: this repair is diagnostic-only")
+    hold = Path(root) / "post-training-hold.json"
+    if hold.exists() and not json.loads(hold.read_text()).get("restart_authorized", False):
+        raise RuntimeError(f"{operation} is held by the user's post-training instruction")
+
+
 def episode_seed(task, split, index):
     # Separate blocks, then task/index: no accidental cross-split seed collisions.
     base = {"train": 10000000, "validation": 1000000000, "test": 2000000000}[split]

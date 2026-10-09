@@ -1,0 +1,116 @@
+{
+  "cases": 26,
+  "candidates": 208,
+  "methods": {
+    "joint_flow_consistent": {
+      "cases": 13,
+      "changed_choices": 11,
+      "rho_legacy_goal_progress": {
+        "mean": -0.03479853479853481,
+        "n": 13
+      },
+      "rho_continuous_goal_progress": {
+        "mean": 0.20512820512820515,
+        "n": 13
+      },
+      "rho_predicted_actual_goal_progress": {
+        "mean": 0.031135531135531136,
+        "n": 13
+      },
+      "rho_predicted_actual_subgoal_distance": {
+        "mean": 0.8992673992673993,
+        "n": 13
+      },
+      "legacy_progress_regret": {
+        "mean": 0.007745058347399418,
+        "n": 13
+      },
+      "continuous_progress_regret": {
+        "mean": 0.007120860310701223,
+        "n": 13
+      },
+      "legacy": {
+        "mean_static_goal_progress": 0.014551566197321964,
+        "mean_reward": 7.0728714757475615,
+        "successes_in_short_chunk": 0
+      },
+      "continuous": {
+        "mean_static_goal_progress": 0.01517576423402016,
+        "mean_reward": 7.628859687373429,
+        "successes_in_short_chunk": 0
+      }
+    },
+    "leflow_adapted": {
+      "cases": 13,
+      "changed_choices": 0,
+      "rho_legacy_goal_progress": {
+        "mean": -3.3000329709557646e-05,
+        "n": 13
+      },
+      "rho_continuous_goal_progress": {
+        "mean": 0.0036630036630036517,
+        "n": 13
+      },
+      "rho_predicted_actual_goal_progress": {
+        "mean": 0.09890109890109891,
+        "n": 13
+      },
+      "rho_predicted_actual_subgoal_distance": {
+        "mean": 0.8754578754578756,
+        "n": 13
+      },
+      "legacy_progress_regret": {
+        "mean": 0.006609255591264138,
+        "n": 13
+      },
+      "continuous_progress_regret": {
+        "mean": 0.006609255591264138,
+        "n": 13
+      },
+      "legacy": {
+        "mean_static_goal_progress": 0.012042813576184787,
+        "mean_reward": 7.472722359076234,
+        "successes_in_short_chunk": 0
+      },
+      "continuous": {
+        "mean_static_goal_progress": 0.012042813576184787,
+        "mean_reward": 7.472722359076234,
+        "successes_in_short_chunk": 0
+      }
+    }
+  },
+  "compute": {
+    "started_utc": "2026-10-09T02:55:14.825032+00:00",
+    "command": [
+      "/tmp/mtxu-flow-jepa-20261007/env/bin/python",
+      "-m",
+      "torch.distributed.run",
+      "--nnodes=1",
+      "--rdzv-backend=c10d",
+      "--rdzv-endpoint=127.0.0.1:0",
+      "--nproc_per_node=4",
+      "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/repair-diagnostics/scripts/diagnose_flow_progress.py",
+      "--root",
+      "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign",
+      "--execution-repo",
+      "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/repo-throughput",
+      "--scoring-file",
+      "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/repair-diagnostics/flow_jepa/scoring.py",
+      "--output",
+      "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/validation-progress-diagnostic-20261009"
+    ],
+    "gpus": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "wall_limit_seconds": 600,
+    "optimization_updates": 0,
+    "test_outcomes_read": false,
+    "exit_code": 0,
+    "elapsed_seconds": 122.87308281473815,
+    "gpu_hours": 0.13652564757193128
+  },
+  "scope": "Exploratory validation-only short-chunk diagnostics on existing legacy checkpoints, not repaired-model success or full-episode comparison."
+}

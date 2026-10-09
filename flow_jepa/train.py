@@ -25,6 +25,7 @@ from .common import (
     git_revision,
     save_json,
     seed_all,
+    require_execution,
 )
 from .data import Segments
 from .evaluate import evaluate
@@ -91,6 +92,7 @@ def world_validation(model, c, root, device, rank, size):
 
 
 def train(c, root, run_dir, method, seed, world_path=None, *, allow_fixture=False):
+    require_execution(c, root, "training")
     rank, size, device = distributed()
     if device.type != "cuda" and not allow_fixture:
         raise RuntimeError(

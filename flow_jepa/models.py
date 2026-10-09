@@ -81,11 +81,15 @@ class Dynamics(nn.Module):
 
 class JointPlanner(nn.Module):
     def __init__(
-        self, dim, action_dim, segments, chunk_steps, width=256, depth=4, heads=4
+        self, dim, action_dim, segments, chunk_steps, width=256, depth=4, heads=4,
+        state_parameterization="velocity",
     ):
         super().__init__()
         self.dim, self.action_dim = dim, action_dim
         self.segments, self.chunk_steps = segments, chunk_steps
+        if state_parameterization not in ("velocity", "endpoint"):
+            raise ValueError("Unknown state flow parameterization")
+        self.state_parameterization = state_parameterization
         self.zin = nn.Linear(dim, width)
         self.ain = nn.Linear(action_dim * chunk_steps, width)
         self.time = nn.Sequential(
@@ -110,15 +114,23 @@ class JointPlanner(nn.Module):
         )
         tokens = torch.cat((context, ztokens, atokens), 1)
         h = self.trunk(tokens + self.time(time[:, None])[:, None])[:, 2 * p :]
-        return self.zout(h[:, : m * p]).reshape(b, m, p, self.dim), self.aout(
-            h[:, m * p :]
-        ).reshape_as(actions)
+        states = self.zout(h[:, : m * p]).reshape(b, m, p, self.dim)
+        if self.state_parameterization == "endpoint":
+            # Preserve the full-dimensional observed anchors. The small head
+            # learns a correction to this bridge, rather than reconstructing
+            # every visual feature through a global width-256 affine space.
+            fraction = torch.arange(1, m + 1, device=z.device, dtype=z.dtype) / (m + 1)
+            anchor = torch.lerp(start[:, None], goal[:, None], fraction[None, :, None, None])
+            states = anchor + states
+        return states, self.aout(h[:, m * p :]).reshape_as(actions)
 
     def sample(
         self, start, goal, *, steps=8, deterministic=False, path_only=False, noise=None,
         budget=None,
     ):
         b, p, d = start.shape
+        if steps < 1:
+            raise ValueError("Flow sampling needs at least one step")
         m, k, a = self.segments, self.chunk_steps, self.action_dim
         if noise is None:
             z = torch.randn(b, m - 1, p, d, device=start.device)
@@ -139,7 +151,15 @@ class JointPlanner(nn.Module):
             if path_only:
                 u = torch.zeros_like(u)
             vz, vu = self(z, u, start, goal, start.new_full((b,), i / steps))
-            z, u = z + vz / steps, u + vu / steps
+            if self.state_parameterization == "endpoint":
+                # v=(clean_prediction-z)/(1-t). With dt=1/steps this is
+                # (clean_prediction-z)/(steps-i), avoiding a near-zero division.
+                # The last update exactly removes the full-dimensional noise;
+                # a width-limited velocity projection alone cannot do that.
+                z = vz if i == steps - 1 else z + (vz - z) / (steps - i)
+            else:
+                z = z + vz / steps
+            u = u + vu / steps
         return z, u
 
 
@@ -176,7 +196,10 @@ class System(nn.Module):
             )
             self.coarse = Dynamics(d, m["macro_dim"], **kwargs)
         else:
-            self.planner = JointPlanner(d, a, m["segments"], m["chunk_steps"], **kwargs)
+            self.planner = JointPlanner(
+                d, a, m["segments"], m["chunk_steps"], **kwargs,
+                state_parameterization=m.get("state_parameterization", "velocity"),
+            )
             if method == "leflow_adapted":
                 self.inverse = Inverse(d, a, m["chunk_steps"], m["width"], m["heads"])
 
@@ -215,7 +238,10 @@ class System(nn.Module):
         if path_only:
             xa = torch.zeros_like(xa)
         vz, va = self.planner(xz, xa, start, goal, t)
-        zloss = F.mse_loss(vz, target if det else target - nz)
+        endpoint = self.planner.state_parameterization == "endpoint"
+        # Endpoint mode uses clean-state regression, not the legacy velocity
+        # target. Protocol hashes prevent interpreting old weights as this model.
+        zloss = F.mse_loss(vz, target if det or endpoint else target - nz)
         aloss = F.mse_loss(va, a if det else a - na) if not path_only else va.sum() * 0
         loss = zloss + aloss
         metrics = dict(state_objective=zloss.detach(), action_objective=aloss.detach())

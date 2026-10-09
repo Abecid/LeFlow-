@@ -3072,3 +3072,76 @@ snapshot and online readback. Next: let the four registered final tests finish,
 preserve failures and paired records, then publish the comparison with the
 single-seed and implementation-audit limitations. No code, resource limit,
 selection, dataset or protocol changed; no follow-up experiment is queued.
+
+
+### 2026-10-09 — user-directed final-test hold, no-training repairs and diagnostics
+
+The user's latest instruction requires repairs after current baseline training,
+no additional training, equal unchanged training budgets and train/eval sets,
+and publication of latest findings/plans to origin/main. All original runs had
+already completed 20,000 updates and four validations. HWM finished at 8/104
+(7.69%) on its selected step-20,000 checkpoint; selected LeFlow remains 27/104,
+ours 23/104 and selected-world CEM 7/104.
+
+The previous queue had started the original joint-flow final test. At 02:45:55
+UTC, verified all training completion records and process identities, stopped
+supervisor 645888 and only its evaluator/process descendants, and preserved the
+partial journal without reading outcomes for development. No training process
+was interrupted. Saved campaign/post-training-hold.json; status is held for
+post-training repair. Existing automation was updated to respect this user
+instruction and never restart training or the final test. Latest completed
+results, the audit and authorized REPAIR_PLAN were pushed to origin/main at
+14e020c, preserving history, and the research branch was kept current.
+
+Implemented an opt-in untrained repair recipe: full-dimensional start/goal
+bridge anchors plus clean-endpoint residual prediction, a terminal sampler
+update that removes the noise-support restriction, consistent cached static
+features for states and goals in all methods, continuous action-rollout scoring
+from the true observed state, and matched eight-step sampling during generated
+consistency and deployment. Endpoint MSE is explicitly a weighted-flow objective
+change, not a reinterpretation of old velocity weights. Protocol checks preserve
+that boundary. The recipe disables training/testing, and new entry points also
+respect the hold marker. Old frozen execution source and checkpoints remain
+untouched. Static states give up temporal-history input; control performance of
+this design remains unmeasured without separately authorized matched training.
+
+29 CPU tests passed in 2.68 seconds on the final repair source, including the
+actual 1024/256 dimensionality, known endpoint integration, gradient paths,
+static data/observation conventions, continuous scoring and authorization gates.
+No optimizer updates were performed by these checks. Verified the repair recipe
+retains original tasks, seed, cached data, batch, per-method time/update caps,
+validation rounds/count, controller-time budget and primitive-action ceiling.
+
+Executed exactly the preregistered bounded validation diagnostic with existing
+selected legacy checkpoints: 13 validation resets (index 0 per training task),
+eight candidates, two flow methods, and identical five-control-step CEM refinement
+before simulator execution. All 26 conditions / 208 short candidate rollouts
+completed. It took 122.873 seconds on four GPUs (0.136526 GPU-hours), with zero
+training updates and no test outcomes used. This cost is separate from training
+and the original validation ledger; no sweep or additional diagnostic is queued.
+
+For ours, mean within-condition Spearman correlation between score preference
+and actual static-goal progress was -0.0348 for original local scores and 0.2051
+for continuous scores. Ranking changed in 11/13 cases; mean goal progress changed
+0.01455 to 0.01518 and regret 0.00775 to 0.00712. LeFlow's selected candidate did
+not change; its progress correlation remained near zero. Predicted/observed raw
+subgoal distances correlate strongly (0.899 ours, 0.875 LeFlow), but predicting
+closeness to a proposed subgoal does not establish useful task progress. These
+small, short-chunk diagnostics do not establish reliable long-horizon ranking,
+improved full-episode success, or the performance of repaired, untrained models.
+Long-horizon plans may require short-term detours. All negative/inconclusive
+findings are preserved in REPAIR_RESULTS and compact per-candidate JSON records.
+
+README now reflects the actual completed single-seed campaign and hold, replacing
+stale three-seed/ablation and no-SSH/no-training-started text. No extra training
+or full comparison is authorized or queued. Future repaired-model performance
+would require a separate authorization and equally budgeted training for all
+applicable comparisons on exactly the same train/evaluation sets.
+
+Final integrity verification at 03:05:29 UTC confirmed all training/completion
+ledgers unchanged, all four selected checkpoint hashes unchanged, the original
+execution checkout clean at 56419ed, and no GPU processes on any of the eight
+GPUs. The original final-test journal retains 236 partial records; their outcomes
+were not inspected for this work. Diagnostic source/scoring hashes exactly match
+the files published with the repair. Saved final-integrity.json. The existing
+monitor will be paused on completion so no stopped campaign is restarted.

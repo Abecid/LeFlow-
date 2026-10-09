@@ -1,0 +1,63 @@
+/tmp/mtxu-flow-jepa-20261007/env/lib/python3.11/site-packages/timm/models/layers/__init__.py:48: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/tmp/mtxu-flow-jepa-20261007/env/lib/python3.11/site-packages/timm/models/layers/__init__.py:48: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/tmp/mtxu-flow-jepa-20261007/env/lib/python3.11/site-packages/timm/models/layers/__init__.py:48: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/tmp/mtxu-flow-jepa-20261007/env/lib/python3.11/site-packages/timm/models/layers/__init__.py:48: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/tmp/mtxu-flow-jepa-20261007/env/lib/python3.11/contextlib.py:105: FutureWarning: `torch.backends.cuda.sdp_kernel()` is deprecated. In the future, this context manager will be removed. Please see `torch.nn.attention.sdpa_kernel()` for the new context manager, with updated signature.
+  self.gen = func(*args, **kwds)
+/tmp/mtxu-flow-jepa-20261007/env/lib/python3.11/contextlib.py:105: FutureWarning: `torch.backends.cuda.sdp_kernel()` is deprecated. In the future, this context manager will be removed. Please see `torch.nn.attention.sdpa_kernel()` for the new context manager, with updated signature.
+  self.gen = func(*args, **kwds)
+/tmp/mtxu-flow-jepa-20261007/env/lib/python3.11/contextlib.py:105: FutureWarning: `torch.backends.cuda.sdp_kernel()` is deprecated. In the future, this context manager will be removed. Please see `torch.nn.attention.sdpa_kernel()` for the new context manager, with updated signature.
+  self.gen = func(*args, **kwds)
+/tmp/mtxu-flow-jepa-20261007/env/lib/python3.11/contextlib.py:105: FutureWarning: `torch.backends.cuda.sdp_kernel()` is deprecated. In the future, this context manager will be removed. Please see `torch.nn.attention.sdpa_kernel()` for the new context manager, with updated signature.
+  self.gen = func(*args, **kwds)
+MESA-EGL: warning: Not allowed to force software rendering when API explicitly selects a hardware device.
+MESA-EGL: warning: Not allowed to force software rendering when API explicitly selects a hardware device.
+MESA-EGL: warning: Not allowed to force software rendering when API explicitly selects a hardware device.
+MESA-EGL: warning: Not allowed to force software rendering when API explicitly selects a hardware device.
+/tmp/mtxu-flow-jepa-20261007/env/lib/python3.11/contextlib.py:105: FutureWarning: `torch.backends.cuda.sdp_kernel()` is deprecated. In the future, this context manager will be removed. Please see `torch.nn.attention.sdpa_kernel()` for the new context manager, with updated signature.
+  self.gen = func(*args, **kwds)
+/tmp/mtxu-flow-jepa-20261007/env/lib/python3.11/contextlib.py:105: FutureWarning: `torch.backends.cuda.sdp_kernel()` is deprecated. In the future, this context manager will be removed. Please see `torch.nn.attention.sdpa_kernel()` for the new context manager, with updated signature.
+  self.gen = func(*args, **kwds)
+/tmp/mtxu-flow-jepa-20261007/env/lib/python3.11/contextlib.py:105: FutureWarning: `torch.backends.cuda.sdp_kernel()` is deprecated. In the future, this context manager will be removed. Please see `torch.nn.attention.sdpa_kernel()` for the new context manager, with updated signature.
+  self.gen = func(*args, **kwds)
+{"event": "diagnostic_case", "rank": 3, "method": "joint_flow_consistent", "task": "dial-turn", "rho_legacy": -0.4285714285714286, "rho_continuous": -0.30952380952380953}
+/tmp/mtxu-flow-jepa-20261007/env/lib/python3.11/contextlib.py:105: FutureWarning: `torch.backends.cuda.sdp_kernel()` is deprecated. In the future, this context manager will be removed. Please see `torch.nn.attention.sdpa_kernel()` for the new context manager, with updated signature.
+  self.gen = func(*args, **kwds)
+{"event": "diagnostic_case", "rank": 1, "method": "joint_flow_consistent", "task": "button-press-topdown", "rho_legacy": 0.7380952380952381, "rho_continuous": -0.4761904761904762}
+{"event": "diagnostic_case", "rank": 2, "method": "joint_flow_consistent", "task": "coffee-button", "rho_legacy": -0.1666666666666667, "rho_continuous": 0.6904761904761906}
+{"event": "diagnostic_case", "rank": 0, "method": "joint_flow_consistent", "task": "assembly", "rho_legacy": 0.04761904761904763, "rho_continuous": 0.4047619047619048}
+{"event": "diagnostic_case", "rank": 3, "method": "joint_flow_consistent", "task": "drawer-open", "rho_legacy": -0.4285714285714286, "rho_continuous": -0.19047619047619052}
+{"event": "diagnostic_case", "rank": 2, "method": "joint_flow_consistent", "task": "drawer-close", "rho_legacy": 0.7380952380952381, "rho_continuous": 0.09523809523809526}
+{"event": "diagnostic_case", "rank": 0, "method": "joint_flow_consistent", "task": "door-close", "rho_legacy": -0.30952380952380953, "rho_continuous": 0.28571428571428575}
+{"event": "diagnostic_case", "rank": 1, "method": "joint_flow_consistent", "task": "door-open", "rho_legacy": -0.04761904761904763, "rho_continuous": 0.4285714285714286}
+{"event": "diagnostic_case", "rank": 2, "method": "joint_flow_consistent", "task": "pick-place", "rho_legacy": -0.2380952380952381, "rho_continuous": 0.7142857142857144}
+{"event": "diagnostic_case", "rank": 0, "method": "joint_flow_consistent", "task": "faucet-open", "rho_legacy": 0.04761904761904763, "rho_continuous": -0.28571428571428575}
+{"event": "diagnostic_case", "rank": 3, "method": "joint_flow_consistent", "task": "plate-slide", "rho_legacy": -0.19047619047619052, "rho_continuous": 0.28571428571428575}
+{"event": "diagnostic_case", "rank": 1, "method": "joint_flow_consistent", "task": "handle-press", "rho_legacy": -0.4523809523809524, "rho_continuous": 0.2380952380952381}
+/tmp/mtxu-flow-jepa-20261007/env/lib/python3.11/contextlib.py:105: FutureWarning: `torch.backends.cuda.sdp_kernel()` is deprecated. In the future, this context manager will be removed. Please see `torch.nn.attention.sdpa_kernel()` for the new context manager, with updated signature.
+  self.gen = func(*args, **kwds)
+/tmp/mtxu-flow-jepa-20261007/env/lib/python3.11/contextlib.py:105: FutureWarning: `torch.backends.cuda.sdp_kernel()` is deprecated. In the future, this context manager will be removed. Please see `torch.nn.attention.sdpa_kernel()` for the new context manager, with updated signature.
+  self.gen = func(*args, **kwds)
+/tmp/mtxu-flow-jepa-20261007/env/lib/python3.11/contextlib.py:105: FutureWarning: `torch.backends.cuda.sdp_kernel()` is deprecated. In the future, this context manager will be removed. Please see `torch.nn.attention.sdpa_kernel()` for the new context manager, with updated signature.
+  self.gen = func(*args, **kwds)
+{"event": "diagnostic_case", "rank": 0, "method": "joint_flow_consistent", "task": "reach", "rho_legacy": 0.2380952380952381, "rho_continuous": 0.7857142857142858}
+/tmp/mtxu-flow-jepa-20261007/env/lib/python3.11/contextlib.py:105: FutureWarning: `torch.backends.cuda.sdp_kernel()` is deprecated. In the future, this context manager will be removed. Please see `torch.nn.attention.sdpa_kernel()` for the new context manager, with updated signature.
+  self.gen = func(*args, **kwds)
+{"event": "diagnostic_case", "rank": 3, "method": "leflow_adapted", "task": "dial-turn", "rho_legacy": 0.1666666666666667, "rho_continuous": 0.1666666666666667}
+{"event": "diagnostic_case", "rank": 1, "method": "leflow_adapted", "task": "button-press-topdown", "rho_legacy": -0.38095238095238104, "rho_continuous": -0.38095238095238104}
+{"event": "diagnostic_case", "rank": 2, "method": "leflow_adapted", "task": "coffee-button", "rho_legacy": -0.19047619047619052, "rho_continuous": -0.19047619047619052}
+{"event": "diagnostic_case", "rank": 3, "method": "leflow_adapted", "task": "drawer-open", "rho_legacy": -0.4047619047619048, "rho_continuous": -0.4047619047619048}
+{"event": "diagnostic_case", "rank": 2, "method": "leflow_adapted", "task": "drawer-close", "rho_legacy": -0.3333333333333334, "rho_continuous": -0.3333333333333334}
+{"event": "diagnostic_case", "rank": 1, "method": "leflow_adapted", "task": "door-open", "rho_legacy": 0.7142857142857144, "rho_continuous": 0.7142857142857144}
+{"event": "diagnostic_case", "rank": 0, "method": "leflow_adapted", "task": "assembly", "rho_legacy": -0.5000000000000001, "rho_continuous": -0.5000000000000001}
+{"event": "diagnostic_case", "rank": 2, "method": "leflow_adapted", "task": "pick-place", "rho_legacy": -0.07185757571479554, "rho_continuous": -0.023809523809523815}
+{"event": "diagnostic_case", "rank": 3, "method": "leflow_adapted", "task": "plate-slide", "rho_legacy": 0.5476190476190477, "rho_continuous": 0.5476190476190477}
+{"event": "diagnostic_case", "rank": 0, "method": "leflow_adapted", "task": "door-close", "rho_legacy": 0.5000000000000001, "rho_continuous": 0.5000000000000001}
+{"event": "diagnostic_case", "rank": 1, "method": "leflow_adapted", "task": "handle-press", "rho_legacy": 0.14285714285714288, "rho_continuous": 0.14285714285714288}
+{"event": "diagnostic_case", "rank": 0, "method": "leflow_adapted", "task": "faucet-open", "rho_legacy": -0.8095238095238096, "rho_continuous": -0.8095238095238096}
+{"event": "diagnostic_case", "rank": 0, "method": "leflow_adapted", "task": "reach", "rho_legacy": 0.6190476190476191, "rho_continuous": 0.6190476190476191}
+[rank0]:[W1009 02:57:17.137899762 ProcessGroupNCCL.cpp:1538] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())

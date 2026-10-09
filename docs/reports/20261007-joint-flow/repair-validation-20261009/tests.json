@@ -1,0 +1,18 @@
+{
+  "command": "OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 /tmp/mtxu-flow-jepa-20261007/env/bin/python -m pytest -q tests_flow/test_repairs.py tests_flow/test_method.py",
+  "server_directory": "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/repair-structural-tests",
+  "passed": 29,
+  "elapsed_seconds": 2.68,
+  "device": "CPU",
+  "optimizer_updates": 0,
+  "production_latent_dimension": 1024,
+  "production_hidden_width": 256,
+  "coverage": [
+    "legacy noise preservation counterexample",
+    "endpoint cancellation with full-dimensional observed anchors",
+    "static state and goal view agreement",
+    "connected candidate rollout scoring",
+    "training and test authorization gates",
+    "historical method gradient/controller wiring"
+  ]
+}

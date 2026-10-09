@@ -4,6 +4,13 @@ This is the active experiment. BTM is not part of its model, training, or campai
 Historical BTM files remain for reproducibility; do not launch `run_comparison.py`
 for this experiment.
 
+**Current execution override, October 9:** all registered training is complete.
+The user requested repairs and bounded validation diagnostics before further
+definitive comparison compute. Final testing is held; no additional training is
+authorized. Read [REPAIR_PLAN](REPAIR_PLAN.md) and [REPAIR_RESULTS](REPAIR_RESULTS.md).
+The launch instructions below describe the historical protocol, not permission
+to restart it.
+
 ## Fixed scientific target
 
 Primary outcome: closed-loop MetaWorld v3 success within 200 primitive actions

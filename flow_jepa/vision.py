@@ -119,3 +119,12 @@ class Encoder:
 
 def history_clip(frames, index, history):
     return np.stack([frames[max(0, j)] for j in range(index - history + 1, index + 1)])
+
+
+def state_clip(frames, index, history, representation="causal"):
+    """Use the same input convention for live states and cached state targets."""
+    if representation == "static":
+        return np.repeat(np.asarray(frames[index])[None], history, axis=0)
+    if representation == "causal":
+        return history_clip(frames, index, history)
+    raise ValueError("Unknown state representation")

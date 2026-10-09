@@ -1,0 +1,30 @@
+{
+  "started_utc": "2026-10-09T02:55:14.825032+00:00",
+  "command": [
+    "/tmp/mtxu-flow-jepa-20261007/env/bin/python",
+    "-m",
+    "torch.distributed.run",
+    "--nnodes=1",
+    "--rdzv-backend=c10d",
+    "--rdzv-endpoint=127.0.0.1:0",
+    "--nproc_per_node=4",
+    "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/repair-diagnostics/scripts/diagnose_flow_progress.py",
+    "--root",
+    "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign",
+    "--execution-repo",
+    "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/repo-throughput",
+    "--scoring-file",
+    "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/repair-diagnostics/flow_jepa/scoring.py",
+    "--output",
+    "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/validation-progress-diagnostic-20261009"
+  ],
+  "gpus": [
+    "0",
+    "1",
+    "2",
+    "3"
+  ],
+  "wall_limit_seconds": 600,
+  "optimization_updates": 0,
+  "test_outcomes_read": false
+}

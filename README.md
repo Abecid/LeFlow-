@@ -1,34 +1,30 @@
 # Joint flow planning with V-JEPA 2.1 (LeFlow fork)
 
-The active experiment uses **flow matching, with no BTM**, for goal-conditioned
-MetaWorld manipulation. It generates latent subgoals and action chunks, with a
-frozen JEPA dynamics loss on the generator's own samples.
+**Current status, October 9, 2026:** baseline training is complete. Full testing
+is held at the user's request while implementation defects are addressed.
+**No additional training is authorized.** Exactly one seed (3072), three baseline
+methods and our proposed method were registered; no ablations are queued.
 
-- Official frozen V-JEPA 2.1 ViT-L; spatial/temporal tokens retained.
-- Thirteen training tasks and three held-out tasks; 200 test resets per task,
-  three training seeds, paired statistics and online W&B evaluation.
-- Matched deterministic/flow ablations, short/long CEM, and adapted LeFlow/HWM.
-- Conda setup, deterministic data collection and caching, 1/2/4-GPU training,
-  resumable checkpoints and a non-preemptive idle-GPU queue.
+Selected validation success on the same 104 resets: **LeFlow 26.0%, ours 22.1%,
+HWM 7.7%, CEM 6.7%**. These are adaptations, not exact SOTA reproductions. The
+audit found a flow-output noise restriction affecting both learned flow methods;
+these results do not establish an advantage for our proposal.
 
-**Read [the experiment and launch protocol](docs/FLOW_EXPERIMENT.md).**
+- [Latest repairs and diagnostic findings](docs/REPAIR_RESULTS.md)
+- [Authorized plan and fixed compute/data constraints](docs/REPAIR_PLAN.md)
+- [Implementation and literature-fidelity audit](docs/EVAL_AUDIT_20261009.md)
+- [Full progress and preserved experiment evidence](docs/PROGRESS.md)
+- [Original experiment protocol](docs/FLOW_EXPERIMENT.md)
 
-On the GPU server, from this branch:
+The repair recipe in `config/flow_metaworld_repair.json` disables training and
+full-test execution. Structural checks and short validation diagnostics use no
+optimizer updates. Existing checkpoint semantics and the frozen execution
+checkout remain unchanged. A repaired-model performance comparison would require
+separate authorization and identical original training/evaluation sets and
+per-method budgets; old weights must not be relabeled as repaired-model weights.
 
-```bash
-bash scripts/bootstrap_flow_server.sh
-```
-
-The launcher verifies online W&B, waits for idle GPUs, runs a CUDA/NCCL/encoder
-preflight, collects data, trains all methods and evaluates held-out episodes.
-Use `FLOW_DATA_DIR` to select a volume with at least 150 GiB available.
-
-**Status:** CPU wiring tests and official-encoder loading have been validated.
-No GPU campaign has been launched by the assistant: the current runtime has no
-working SSH route to `target_server_2`. There are no measured task-success gains
-or SOTA claims yet. The LeFlow/HWM controls are documented adaptations, not exact
-published-checkpoint reproductions. Historical BTM scripts are inactive and
-remain only for reproducibility.
+The research uses frozen V-JEPA 2.1 features for MetaWorld, with **no BTM**.
+Historical BTM scripts remain only for reproducibility.
 
 Original LeFlow release documentation and attribution follow.
 

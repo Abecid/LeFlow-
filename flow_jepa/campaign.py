@@ -14,7 +14,7 @@ import time
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
-from .common import config, digest, file_hash, git_revision, save_json
+from .common import config, digest, file_hash, git_revision, save_json, require_execution
 from .budget import verify_data_compatibility
 from .collection import default_workers
 
@@ -189,6 +189,8 @@ def main():
     if a.dry_run:
         print(json.dumps(plan, indent=2))
         return
+    require_execution(c, root, "training")
+    require_execution(c, root, "test")
     if subprocess.check_output(["git", "status", "--porcelain"], text=True).strip():
         raise RuntimeError("Commit and push code before launching a campaign")
     root.mkdir(parents=True, exist_ok=True)
