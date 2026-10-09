@@ -1,5 +1,15 @@
 # Experiment continuity
 
+- Latest authorization, October 9: implement and run ONE first
+  `controller_grounded` candidate, seed3072, from scratch, using the frozen
+  selected world/cache and unchanged train/validation cases. The user's latest
+  message explicitly supersedes the completed-run hold for this new isolated
+  iteration only. Preserve 20k/global64/28,800 optimization GPU-second ceilings,
+  four periodic validations and 10s/200-action control limits. All eight GPUs
+  may accelerate this run. Compare saved baselines and analyze failure modes;
+  no baseline reruns, extra seeds, automatic next variants, ablations or final
+  tests. Keep previous execution trees frozen and record the new formulation.
+
 - Completion recorded October 9, 07:22 UTC: the authorized repaired world/head
   and four validation rounds are finished, W&B is finished, and all owned
   processes exited. Read docs/REPAIRED_VALIDATION_RESULTS.md. Preserve all

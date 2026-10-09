@@ -318,13 +318,17 @@ def evaluate(
     device,
     count=None,
     journal=None,
+    controller=None,
+    trajectory_dir=None,
+    distributed_context=None,
 ):
-    rank, size, _ = distributed()
+    rank, size, _ = distributed_context or distributed()
     root = Path(root)
     manifest = json.loads((root / "manifest.json").read_text())
     if manifest["protocol"] != digest(c) or manifest["encoder"] != encoder.fingerprint:
         raise ValueError("Evaluation encoder/data/protocol mismatch")
-    records, controller = [], Controller(model, world, c, method)
+    records = []
+    controller = controller if controller is not None else Controller(model, world, c, method)
     mean, std = (
         torch.tensor(manifest["mean"], device=device),
         torch.tensor(manifest["std"], device=device),
@@ -357,6 +361,8 @@ def evaluate(
             initial = f["initial_rgb"][:]
         env = make_env(row["task"], row["seed"], c["data"])
         try:
+            if hasattr(controller, 'begin_episode'):
+                controller.begin_episode()
             env.reset()
             frames = [env.render().copy()]
             if not np.array_equal(frames[0], initial):
@@ -386,6 +392,8 @@ def evaluate(
                         c["model"].get("state_representation", "causal"),
                     )
                     z = (encoder(clip[None]).float() - mean) / std
+                    if hasattr(controller, 'observe'):
+                        controller.observe(z)
                     for due, target in pending:
                         if due == t:
                             observed.append(float(distance(z, target[None])))
@@ -447,6 +455,17 @@ def evaluate(
                 )
             )
             records[-1]["return"] = records[-1].pop("return_")
+            if hasattr(controller, 'diagnostics'):
+                records[-1]['controller_diagnostics'] = controller.diagnostics()
+            if trajectory_dir is not None and row['id'] in {
+                'validation/coffee-button/00000', 'validation/reach/00003',
+                'validation/door-close/00000', 'validation/dial-turn/00000',
+                'validation/drawer-close/00004', 'validation/handle-press/00000',
+            }:
+                destination = Path(trajectory_dir) / row['task']
+                destination.mkdir(parents=True, exist_ok=True)
+                np.savez_compressed(destination / (row['id'].split('/')[-1] + '.npz'),
+                                    frames=np.stack(frames))
             if journal is not None:
                 journal.save(records[-1])
             print(
