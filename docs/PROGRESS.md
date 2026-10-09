@@ -21,11 +21,11 @@
   separately accounted. W&B verified the run finished:
   https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/9jhufn8j.
 - **HWM training resumed after its first validation:** `hwm_adapted_3072`
-  reached step 6,309, charging 1,720.914 optimization seconds (1.91213 GPU-hours)
+  reached step 9,747, charging 2,654.448 optimization seconds (2.94939 GPU-hours)
   and 607.415 validation seconds (0.67491 GPU-hours), separately accounted.
   Its checkpoint shares the world hash, manifest, protocol, code, seed and
-  four-GPU allocation of the other heads. W&B readback at 00:32 UTC confirmed
-  step 6,050 and the completed first validation online:
+  four-GPU allocation of the other heads. W&B readback at 00:47 UTC confirmed
+  step 9,300 and the completed first validation online:
   https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/cguncmvz.
 - **First HWM validation:** 7/104 successes (6.73%), retaining all 97 timeouts
   as failures. It matches selected-world CEM's aggregate success count but
@@ -2706,3 +2706,28 @@ timeout remains a failure. Saved the first validation, losses, compute usage,
 checkpoint metadata and online evidence. Next: complete HWM's three remaining
 registered validations. Final testing stays sealed; no test report exists and
 no follow-up experiment is queued.
+
+### 2026-10-09 00:46 UTC — HWM approaching second validation; primary SSH recovered access
+
+HWM's snapshot reached step 9,747 with 2,654.448 charged optimization seconds
+(2.949386 GPU-hours), with no last-update overrun. The first validation remains
+separately charged at 607.415 seconds (0.674905 GPU-hours); no second validation
+report exists yet. At step 9,700, finite coarse-dynamics loss is 0.031270 and
+gradient norm 0.052524. Both checkpoints remain present at 44,490,453 bytes each,
+and the first validation's best checkpoint metadata is unchanged at 7/104.
+
+The initial `target_server_2_cf` connection timed out during banner exchange.
+The primary `target_server_2` route then connected successfully; no process was
+restarted. Supervisor 142087, launcher 489992 and ranks
+489996/489997/489998/489999 remain healthy in clean frozen `repo-throughput` at
+`56419ed`, using only GPUs 0–3; 4–7 remain empty. Both scope-change records retain
+the original authorization. W&B API readback at 00:47:57 UTC verified `cguncmvz`
+running at step 9,300 with the first validation online. The completed world,
+joint-flow and LeFlow runs retain their results and final charges.
+
+Downloaded the snapshot through `target_server_2`; verified finite metrics,
+monotonic training steps/charged time, unchanged best checkpoint metadata and
+the fixed compute allowance. Saved updated losses, compute usage, checkpoint
+metadata and online evidence. Next: preserve HWM's second registered validation
+when complete, then continue the remaining queue. Final testing stays sealed;
+no test report exists and no follow-up experiment is queued.
