@@ -107,6 +107,8 @@ def analyze(args):
         'repaired_flow':(repaired/'joint_flow_consistent_3072/validation/step_0005000.json',17),
         'historical_cem':(old/'world_3072/validation/cem_step_0020000.json',7),
     }
+    if load(new/'run.json')['method']=='latent_revision':
+        refs['controller_grounded']=(repo/'docs/reports/20261009-controller-grounded/run/validation/step_0005000.json.gz',79)
     for name,method,expected in [('historical_leflow','leflow_adapted',27),('historical_hwm','hwm_adapted',8),('historical_flow','joint_flow_consistent',23)]:
         path,_=selected((old/f'{method}_3072/validation').glob('step_*.json'));refs[name]=(path,expected)
     byid={r['id']:r for r in ours['records']}
@@ -198,6 +200,29 @@ def analyze(args):
                 'Cross-task retrieval is a warning to inspect, not by itself proof of bad targets.'],
         training_complete=(new/'complete.json').exists(),final_tests_read=False,
         compute=load(new/'compute_usage.json'),run=load(new/'run.json'))
+    def calibration_review(records):
+        ds=[d for r in records for d in r.get('controller_diagnostics',{}).get('decisions',[])
+            if 'corrected_prefix_target_progress' in d]
+        obs=[d for d in ds if 'actual_prefix_target_progress' in d]
+        if not obs:return None
+        actual=np.array([d['actual_prefix_target_progress'] for d in obs])
+        raw=np.array([d['predicted_prefix_target_progress'] for d in obs])
+        corrected=np.array([d['corrected_prefix_target_progress'] for d in obs])
+        pos=corrected>0
+        return dict(observed_prefixes=len(obs),raw_progress_mae=float(np.mean(abs(raw-actual))),
+            corrected_progress_mae=float(np.mean(abs(corrected-actual))),
+            corrected_progress_pearson=float(np.corrcoef(corrected,actual)[0,1]) if corrected.std()>0 and actual.std()>0 else None,
+            corrected_positive_count=int(pos.sum()),
+            corrected_positive_actual_nonpositive_rate=float(np.mean(actual[pos]<=0)) if pos.any() else None,
+            correction_changes_raw_pool_anchor_rate=float(np.mean([d['correction_changed_raw_pool_anchor'] for d in ds])),
+            applied_terminal_penalty_mean=float(np.mean([d['applied_terminal_penalty'] for d in ds])),
+            penalized_decision_rate=float(np.mean([d['applied_terminal_penalty']>0 for d in ds])),
+            reasoning_depths=sorted(set(d['reasoning_depth'] for d in ds)),
+            history_lengths=sorted(set(d['history_valid_steps'] for d in ds)))
+    if result['run']['method']=='latent_revision':
+        result['revision_calibration_by_round']={str(r['step']):calibration_review(r['records']) for r in round_reports}
+        result['revision_calibration_by_task']={t:calibration_review([r for r in ours['records'] if r['task']==t])
+                                              for t in result['selected']['per_task']}
     dest=Path(args.output);dest.parent.mkdir(parents=True,exist_ok=True)
     dest.write_text(json.dumps(result,indent=2,allow_nan=False)+'\n')
     print(json.dumps(dict(selected_step=ours['step'],successes=result['selected']['successes'],diagnostics=result['diagnostics'])))

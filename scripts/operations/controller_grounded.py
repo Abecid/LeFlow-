@@ -20,9 +20,10 @@ def main(a):
     lock=(cache/'coordinator.lock').open('a+')
     fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
     root, repo = record/'campaign', record/'repo'
-    c=config(repo/'config/flow_metaworld_execution.json')
+    config_name='flow_metaworld_revision.json' if a.variant=='latent_revision' else 'flow_metaworld_execution.json'
+    c=config(repo/'config'/config_name)
     world=previous/'campaign/runs/world_3072/best.pt'
-    run_dir=root/'runs/controller_grounded_3072'
+    run_dir=root/'runs'/f'{a.variant}_3072'
     state=record/'status.json'
     began=time.perf_counter()
 
@@ -45,9 +46,9 @@ def main(a):
             world_source_manifest=file_hash(previous/'campaign/manifest.json'),
             entries_sha256=digest(before['entries']),encoder_sha256=before['encoder'],
             world_sha256=file_hash(world),unchanged_fields=['entries','encoder','mean','std','goal_screening','expert_success'],
-            new_trainable_components='one fresh ChunkPolicy only',validation_cases=104,
+            new_trainable_components=a.variant+' fresh policy only',validation_cases=104,
             seed=3072,test_enabled=False,source_code=git_revision()))
-    cfg=str(repo/'config/flow_metaworld_execution.json')
+    cfg=str(repo/'config'/config_name)
     bank=str(cache/'route_bank.pt')
     env=os.environ.copy();env.update(OMP_NUM_THREADS='2',OPENBLAS_NUM_THREADS='2',
         MUJOCO_GL='egl',MUJOCO_EGL_DEVICE_ID='0',FLOW_DEVICE='cuda',CUDA_MODULE_LOADING='LAZY')
@@ -55,6 +56,9 @@ def main(a):
     with (record/'tests.log').open('a') as log:
         subprocess.run([sys.executable,'-m','unittest','discover','-s','tests','-p','test_execution.py','-v'],
                        env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
+        if a.variant=='latent_revision':
+            subprocess.run([sys.executable,'-m','unittest','discover','-s','tests','-p','test_latent_revision.py','-v'],
+                           env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
     if not Path(bank).exists():
         status('building_train_only_route_index')
         with (record/'bank.log').open('a') as log:
@@ -96,6 +100,7 @@ def main(a):
 if __name__=='__main__':
     p=argparse.ArgumentParser()
     for name in ('record','previous','cache'):p.add_argument('--'+name,required=True)
+    p.add_argument('--variant',choices=['controller_grounded','latent_revision'],default='controller_grounded')
     args=p.parse_args()
     try:main(args)
     except Exception as error:

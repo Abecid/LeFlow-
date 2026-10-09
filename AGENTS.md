@@ -1,5 +1,14 @@
 # Experiment continuity
 
+- Latest authorization, October 9: implement and run ONE fresh `latent_revision`
+  candidate using the accepted execution-error-conditioned latent reasoning
+  direction. This supersedes the completed-run hold for this iteration only.
+  Preserve seed3072, same train/validation sets, global64,20k-update/28,800
+  aggregate optimization GPU-second caps, four fixed104 validations and
+  10s/200-primitive-action allowance. Use all8 available GPUs. Frozen world,
+  encoder/cache and saved baselines remain references; no baseline reruns,
+  additional seeds/variants/ablations or final tests. Read docs/LATENT_REVISION_RUN.md.
+
 - Controller-grounded iteration completed October 9, 20:06 UTC: 20,000 updates,
   all four fixed104 validations (79/78/75/78), selected5k79/104. All owned workers
   exited; W&B synced and all8 GPUs were idle at the final inspection. Read

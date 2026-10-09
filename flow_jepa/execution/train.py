@@ -23,6 +23,17 @@ from .controller import ExecutionController
 from .model import ChunkPolicy, ExecutionSegments
 
 
+def component_types(c):
+    method=c['primary_method']
+    if method=='controller_grounded':
+        return method,ChunkPolicy,ExecutionSegments,ExecutionController
+    if method=='latent_revision':
+        from .revision import RevisionPolicy, RevisionSegments
+        from .revision_controller import RevisionController
+        return method,RevisionPolicy,RevisionSegments,RevisionController
+    raise ValueError(f'Unsupported isolated candidate: {method}')
+
+
 def load_world(c, path, device):
     if file_hash(path) != c['controller_grounded']['world_sha256']:
         raise ValueError('Frozen world hash mismatch')
@@ -59,9 +70,10 @@ def restore_rng(value):
 
 def train(args):
     c = config(args.config)
+    method,Policy,Dataset,ControllerType=component_types(c)
     root, run_dir = Path(args.root), Path(args.run_dir)
     require_execution(c, root, 'training')
-    assert c['seeds'] == [3072] and c['methods'] == ['controller_grounded']
+    assert c['seeds'] == [3072] and c['methods'] == [method]
     assert not c['execution']['test_enabled']
     rank, size, device = initialize()
     torch.set_num_threads(2)
@@ -73,7 +85,7 @@ def train(args):
     assert steps == 20000 and batch == 64 and batch % size == 0
     run_dir.mkdir(parents=True, exist_ok=True)
     seed_all(3072)
-    model = ChunkPolicy(c).to(device)
+    model = Policy(c).to(device)
     world, source = load_world(c, args.world, device)
     reuse = json.loads((root / 'reuse.json').read_text())
     assert source['manifest'] == reuse['world_source_manifest']
@@ -85,7 +97,7 @@ def train(args):
     last = run_dir / 'last.pt'
     identity = dict(protocol=digest(c), manifest=manifest_hash, world_hash=file_hash(args.world),
                     bank_hash=json.loads(Path(args.bank+'.json').read_text())['sha256'],
-                    code=git_revision(), method='controller_grounded', seed=3072, world_size=size)
+                    code=git_revision(), method=method, seed=3072, world_size=size)
     if last.exists():
         saved = torch.load(last, map_location='cpu', weights_only=False)
         for k, v in identity.items():
@@ -101,7 +113,7 @@ def train(args):
         raise RuntimeError('Existing run without recoverable checkpoint')
     module = DDP(model, device_ids=[device.index], broadcast_buffers=False) if size > 1 else model
     seed_all(3072 + 997 * rank)
-    data = ExecutionSegments(root, c, 'controller_grounded', 3072, steps * batch)
+    data = Dataset(root, c, method, 3072, steps * batch)
     data = Subset(data, range(start * batch, len(data)))
     sampler = DistributedSampler(data, size, rank, shuffle=False, drop_last=True) if size > 1 else None
     loader = DataLoader(data, batch_size=batch//size, sampler=sampler, shuffle=False,
@@ -114,7 +126,7 @@ def train(args):
     if rank == 0:
         import wandb
         wandb_run = wandb.init(project=c['wandb']['project'], mode='online',
-                              name='controller_grounded_3072', group=c['name'], dir=str(run_dir),
+                              name=f'{method}_3072', group=c['name'], dir=str(run_dir),
                               id=run_id, resume='must' if run_id else None,
                               config={**c, **identity, 'parameters':sum(p.numel() for p in model.parameters())})
         run_id = wandb_run.id
@@ -197,10 +209,10 @@ def train(args):
                     encoder = Encoder(c['encoder'], root, device)
                     bank = RouteBank(args.bank, c, manifest_hash, device)
                 model.eval()
-                controller = ExecutionController(model, world, c, bank)
+                controller = ControllerType(model, world, c, bank)
                 journal = EpisodeJournal(Path(args.bank).parent/'journals'/f'step_{step:07d}',
                     {**identity, 'step':step, 'split':'validation'})
-                records, summary = evaluate(model, world, c, root, 'controller_grounded', 3072,
+                records, summary = evaluate(model, world, c, root, method, 3072,
                     'validation', encoder, device, count=8, controller=controller, journal=journal,
                     trajectory_dir=run_dir/'trajectories'/f'step_{step:07d}',
                     distributed_context=(rank,size,device))

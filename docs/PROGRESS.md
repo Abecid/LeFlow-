@@ -1,5 +1,24 @@
 # Active campaign progress
 
+## Latent revision authorized and implemented — October 9, 2026
+
+The user authorized one fresh latent-revision candidate after reviewing the
+79/104 method and the LARC application proposal. [Registered formulation](LATENT_REVISION_RUN.md):
+a four-step recurrent workspace reads up to four causal execution residuals,
+conditions action proposals and predicts factual prefix/terminal cost errors.
+Controller scoring conservatively adds only predicted optimism penalties.
+Supported target relabeling avoids a trivial zero-terminal-cost calibration
+target; recorded actions/outcomes remain paired. Main sampling, seed3072,
+global64,20k/28,800GPU-second limits and all evaluation cases/limits are fixed.
+
+Six new causal/gradient/handoff/data tests passed on the server. Full-size
+preflight and immutable-source launch are pending at this registration point.
+No new validation result is claimed; saved baselines and final tests are untouched.
+All8 A800 GPUs were idle at the initial resource check; approximately2TiB /tmp
+and579GiB shared storage remained. The new8GiB route index and compact checkpoints
+fit without removing any previous run. Actor/calibration target views are batched
+together; no additional encoder cache, world training, baseline or variant runs.
+
 ## Controller-grounded run complete; latent-reasoning review — October 9, 2026
 
 All20,000 updates and four fixed104 validations completed: **79,78,75,78**

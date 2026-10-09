@@ -457,11 +457,12 @@ def evaluate(
             records[-1]["return"] = records[-1].pop("return_")
             if hasattr(controller, 'diagnostics'):
                 records[-1]['controller_diagnostics'] = controller.diagnostics()
-            if trajectory_dir is not None and row['id'] in {
+            trajectory_cases = c.get('diagnostics',{}).get('trajectory_case_ids',[
                 'validation/coffee-button/00000', 'validation/reach/00003',
                 'validation/door-close/00000', 'validation/dial-turn/00000',
                 'validation/drawer-close/00004', 'validation/handle-press/00000',
-            }:
+            ])
+            if trajectory_dir is not None and row['id'] in trajectory_cases:
                 destination = Path(trajectory_dir) / row['task']
                 destination.mkdir(parents=True, exist_ok=True)
                 np.savez_compressed(destination / (row['id'].split('/')[-1] + '.npz'),
