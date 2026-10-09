@@ -3868,3 +3868,14 @@ away after approaching while leaving the object on the table; this is observed
 behavior, not proof of a representation or contact-mechanics cause. Assembly,
 faucet and reach examples preserve visible late failures. No new inference or
 simulator runs were made for this review.
+
+
+## October 9 — third execution-revision validation:79/104
+
+The15k round scored79/104 with zero timeouts; fixed-case identity checks passed.
+The5k80/104 checkpoint remains selected. Published all three reports and fresh
+diagnostics. Training continues to the final20k checkpoint with no method change.
+Clarified that exact shifted-prefix matches are an identity diagnostic, not
+unique proposal provenance or a causal warm-start ablation. The CPU-only final
+audit allows1e-7 float32 summation ties when reconstructing serialized scores;
+this reporting-only change does not alter the frozen execution source.

@@ -1,6 +1,6 @@
 # Execution-aligned revision: interim results
 
-October 9, 2026. The first two registered validations are complete. The selected 5,000-update
+October 9, 2026. The first three registered validations are complete. The selected 5,000-update
 checkpoint scores **80/104 (76.92%)**, with zero controller timeouts. Training
 continues toward the unchanged 20,000-update/8-GPU-hour ceiling; this is an
 interim result, not the completed run or a final-test result.
@@ -9,6 +9,7 @@ interim result, not the completed run or a final-test result.
 | --- | ---: | ---: | ---: |
 | 5,000 | 80/104 | 79/104 | 73/104 |
 | 10,000 | 78/104 | 78/104 | 75/104 |
+| 15,000 | 79/104 | 75/104 | 74/104 |
 
 The selected historical references remain controller-grounded **79/104** and
 latent revision **77/104**. Against 79/104, seven cases improve and six regress:
@@ -52,8 +53,9 @@ sampled pool41/4,966 times (0.83%); stall penalties also change target choice
 for rejected actions. Do not compare the6.23% action-group statistic with the old
 0.43% target-choice statistic as if they measured the same thing.
 
-A shifted previous plan supplies the exact selected four-block prefix in11.68%
-of decisions. Corrections lower MAE on observed chosen prefixes from0.002765 to
+The selected four-block prefix exactly matches the shifted previous plan in
+11.68% of decisions. This identity check is not unique candidate provenance or
+a causal estimate of warm-start benefit. Corrections lower MAE on observed chosen prefixes from0.002765 to
 0.002003 (27.56%). Seventeen failures retain optimistic raw forecasts despite
 nonpositive actual local progress in their last20 decisions; corrected forecasts
 still do so in13. Nineteen failures end that window no closer to the final goal
@@ -75,7 +77,7 @@ are intact and readable; copied bytes were checked. The final source/checkpoint/
 audit remains pending completion.
 
 The frozen source stays `8be2808eaa09e539d30d07ee3760fc7b59717793`. The next registered
-validation is at 15,000 updates; no settings are changed in response to these results.
+validation is at 20,000 updates; no settings are changed in response to these results.
 [Live metrics](https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/tyytbnn1).
 
 ## Second validation and saved visual failures
@@ -92,3 +94,10 @@ table. Faucet-open3 moves past/right of the handle; reach3 remains offset from
 its target. These cases fail at200 actions. Reach5 succeeds at45 actions.
 The views do not establish contact forces, precise grasp mechanics or which
 repair caused a behavior. [Visual verification](reports/20261009-execution-revision/visual-review-5000.json).
+
+## Third validation
+
+The 15k checkpoint scores **79/104**, with zero controller timeouts. The registered
+sequence is80/78/79, and the5k checkpoint remains selected. The20k validation is
+the last scheduled round. No source, scoring constant or training setting has
+changed during the run. All three raw reports and paired changes are preserved.

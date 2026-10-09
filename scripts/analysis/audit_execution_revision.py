@@ -81,7 +81,9 @@ def main(args):
                 assert len(d['candidate_stall_penalties'])==8
                 assert all(0<=v<=.020001 for v in d['candidate_stall_penalties'])
                 scores=[a+b+s for a,b,s in zip(d['candidate_route_costs'],d['candidate_response_costs'],d['candidate_stall_penalties'])]
-                assert min(range(8),key=scores.__getitem__)==d['selected_anchor']
+                # Serialized components are recombined as float64 here; actual
+                # selection sums float32 tensors. Allow float32 rounding ties.
+                assert scores[d['selected_anchor']]<=min(scores)+1e-7
                 if i<len(ds)-1:assert 'actual_prefix_target_progress' in d
         count=sum(r['success'] for r in records)
         assert abs(count/104-report['metrics']['success_macro'])<1e-9
@@ -92,7 +94,7 @@ def main(args):
         frozen_source_clean=True,data_and_world_identity_verified=True,identical_route_bank_tensors=True,
         training_metric_records=len(training),validation_metric_records=4,
         same_cases_across_rounds=True,causal_history_and_plan_reuse=True,
-        exact_score_reconstruction=True,world_transition_budget_verified=True,
+        score_reconstruction_verified=True,score_rounding_tolerance=1e-7,world_transition_budget_verified=True,
         training_coverage_logging_verified=True,compute=usage,complete=complete,
         final_tests_read=False,model_calls=0,simulator_calls=0)
     Path(args.output).write_text(json.dumps(result,indent=2)+'\n')
