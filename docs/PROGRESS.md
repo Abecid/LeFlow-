@@ -2,7 +2,8 @@
 
 ## Current verified state
 
-- **Throughput migration complete; training is running.** All 15,500 candidate
+- **All models reached 20,000 updates; HWM's final validation is running.**
+  All 15,500 candidate
   cache files are prepared. The frozen manifest selects 7,800 training, 650
   validation and 3,200 test episodes. No full comparison result exists yet.
 - **Shared world complete:** `world_3072` stopped at its 20,000-update cap with
@@ -20,12 +21,13 @@
   (5.96888 GPU-hours); validation used 1,878.757 seconds (2.08751 GPU-hours),
   separately accounted. W&B verified the run finished:
   https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/9jhufn8j.
-- **HWM training resumed after its third validation:** `hwm_adapted_3072`
-  reached step 18,244, charging 4,998.712 optimization seconds (5.55412 GPU-hours)
-  and 1,799.907 validation seconds (1.99990 GPU-hours), separately accounted.
+- **HWM at its update cap; fourth validation in progress:** `hwm_adapted_3072`
+  reached step 20,000, charging 5,476.646 optimization seconds (6.08516 GPU-hours).
+  Three completed validations charged 1,799.907 seconds (1.99990 GPU-hours),
+  separately accounted; the fourth round's charge will be recorded on completion.
   Its checkpoint shares the world hash, manifest, protocol, code, seed and
-  four-GPU allocation of the other heads. W&B readback at 01:47 UTC confirmed
-  step 17,950 and all three completed validations online:
+  four-GPU allocation of the other heads. W&B readback at 02:03 UTC confirmed
+  step 19,950 and all three completed validations online:
   https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/cguncmvz.
 - **HWM validation:** the first three rounds achieved 7/104 (6.73%), 2/104
   (1.92%) and 6/104 (5.77%) successes. All 98 third-round timeouts remain
@@ -2928,3 +2930,37 @@ Next: finish HWM at the earlier registered cap and complete its fourth validatio
 before the existing supervisor starts final testing. The implementation audit
 remains part of the interpretation; no active code or protocol was changed and
 no follow-up experiment is queued.
+
+### 2026-10-09 02:01 UTC — all optimization caps reached; HWM final validation active
+
+HWM reached its 20,000-update cap with 5,476.646 charged optimization seconds
+(6.085162 GPU-hours), below the 7,200-second allowance and with no last-update
+overrun. All four learned models have now reached 20,000 updates, for a combined
+21.112076 optimization GPU-hours. Preparation and evaluation are charged
+separately. HWM's final training loss/coarse-dynamics value was 0.029251 and
+gradient norm 0.025303; all recorded metrics remain finite.
+
+The fourth 104-case validation is active; its result and `complete.json` are
+not yet present. Three completed validations still account for 1,799.907 seconds
+(1.999897 GPU-hours); the ongoing round has not yet been finalized in the ledger.
+The selected step-5,000 checkpoint remains unchanged at 7/104. Both checkpoints
+are preserved at 44,490,453 bytes each. W&B API readback at 02:03:13 UTC verified
+HWM `cguncmvz` running at step 19,950 with three completed validations online;
+world, joint-flow and LeFlow remain finished. No partial fourth-round score is
+treated as a completed result.
+
+Primary SSH was slow to connect, then completed successfully; the configured
+fallback also reached the same server and was used for the snapshot. Supervisor
+142087, launcher 489992 and ranks 489996/489997/489998/489999 remain healthy in
+clean frozen `repo-throughput` at `56419ed`, using only GPUs 0–3; 4–7 are empty.
+Both scope-change records retain the fixed authorization. Rechecked the unchanged
+supervisor sequence: it waits for all registered training processes before
+starting the four selected-checkpoint final evaluations. No test report exists.
+
+Saved updated losses, compute usage, checkpoint metadata and online evidence.
+Verified finite metrics, increasing steps/charged time, all four 20,000-update
+caps, unchanged best checkpoint metadata and completed-validation charges, and
+sealed tests. Next: preserve HWM's final validation and checkpoint selection,
+then monitor the existing supervisor's registered final tests. The implementation
+audit remains applicable; no active code or protocol changed and no follow-up
+experiment is queued.
