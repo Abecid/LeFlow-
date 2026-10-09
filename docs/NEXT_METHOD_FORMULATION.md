@@ -6,6 +6,13 @@ Design review, October 9, 2026. Project evidence is pinned to
 literature and implementation review. **Status: design only.** No model code,
 running process, experiment queue, monitor, baseline or test result was changed.
 
+**Research-positioning update:** the user's subsequent novelty review identifies
+this design as an engineering synthesis, not an established new method. See the
+[contribution audit](CONTRIBUTION_AUDIT_20261009.md) for overlap with prior work,
+the unresolved controller/execution mismatch and the missing central mechanism.
+The design below is retained as a reference; it is not a settled paper-level
+formulation or a queued experiment.
+
 ## Decision and empirical motivation
 
 Recommend one candidate: **retrieve a demonstrated route, check its near-term

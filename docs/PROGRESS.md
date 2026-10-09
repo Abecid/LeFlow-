@@ -1,5 +1,25 @@
 # Active campaign progress
 
+## Contribution audit — October 9, research positioning correction
+
+The user requires a central new approach, with prior methods serving supporting
+roles. [The contribution audit](CONTRIBUTION_AUDIT_20261009.md) concludes that the
+previous retrieval/coarse/mixture/CEM design is an engineering synthesis and
+does not yet establish a distinct algorithmic contribution. It is retained as
+a reference, not the settled paper-level formulation.
+
+The sharper research question concerns the actual bounded controller's outcome:
+the proposed coarse route evaluates recorded actions, while local control can
+generate different actions and executes only a prefix before replanning. This
+is an untested causal hypothesis, not a proven explanation of our failures.
+Targeted primary-source checks of HAC, Strict Subgoal Execution, LMTA and EA-WM
+show that generic reachable subgoals, failure-aware routing, budget conditioning
+and progress verifiers already have precedents. A new efficient mechanism and
+valid supervision under the fixed offline data remain unresolved.
+
+No new implementation or GPU experiment was run. The current completed-run
+state, frozen baselines, validation/test separation and paused monitor persist.
+
 ## Next formulation — October 9, broader literature and code review
 
 [The concrete next-method design](NEXT_METHOD_FORMULATION.md) recommends one
