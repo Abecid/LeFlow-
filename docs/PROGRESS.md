@@ -21,11 +21,11 @@
   separately accounted. W&B verified the run finished:
   https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/9jhufn8j.
 - **HWM training resumed after its second validation:** `hwm_adapted_3072`
-  reached step 10,721, charging 2,920.201 optimization seconds (3.24467 GPU-hours)
+  reached step 14,458, charging 3,963.382 optimization seconds (4.40376 GPU-hours)
   and 1,204.761 validation seconds (1.33862 GPU-hours), separately accounted.
   Its checkpoint shares the world hash, manifest, protocol, code, seed and
-  four-GPU allocation of the other heads. W&B readback at 01:02 UTC confirmed
-  step 10,250 and both completed validations online:
+  four-GPU allocation of the other heads. W&B readback at 01:19 UTC confirmed
+  step 14,300 and both completed validations online:
   https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/cguncmvz.
 - **HWM validation:** the first two rounds achieved 7/104 (6.73%) and 2/104
   (1.92%) successes. All 102 second-round timeouts remain failures. Five first-
@@ -71,6 +71,11 @@
 - **Continuity:** the existing 15-minute monitor now follows the optimized run.
   Persistent results stay on the server; compact evidence is published from this
   separate desktop checkout. Never pull reports into the running source checkout.
+- **Interpretation limit:** the requested [implementation audit](EVAL_AUDIT_20261009.md)
+  confirmed a flow-output support restriction in both flow planners and narrowed
+  the novelty claim. This frozen campaign is diagnostic evidence about these
+  implementations; it cannot establish the quality of a sound full-dimensional
+  flow planner or published SOTA. No replacement run is queued.
 
 ## 2026-10-07 — recovered interrupted work
 
@@ -2826,3 +2831,29 @@ seeds, ablations, or new experiments were launched. Next methodological priority
 is to repair the confirmed output support restriction and validate goal/proposal
 scoring before treating this campaign as evidence about a sound flow method or
 published SOTA. Existing frozen-run outcomes must remain recorded honestly.
+
+### 2026-10-09 01:16 UTC — HWM progressing toward third validation
+
+The 01:20 UTC snapshot reached HWM step 14,458 with 3,963.382 charged
+optimization seconds (4.403758 GPU-hours). Validation remains 1,204.761 seconds
+(1.338624 GPU-hours), separately accounted, with two completed rounds. The
+step-14,450 loss/coarse-dynamics value was 0.029597 and gradient norm 0.034203;
+all recorded metrics are finite and no last-update overrun occurred. Both
+44,490,453-byte checkpoints remain present; the selected step-5,000 checkpoint
+metadata is unchanged. No new validation result or test report exists.
+
+W&B API readback at 01:19:54 UTC verified HWM `cguncmvz` running at step 14,300
+with both validations online. World, joint-flow and LeFlow remain finished.
+Supervisor 142087, HWM launcher 489992 and ranks 489996/489997/489998/489999
+remain healthy in clean frozen `repo-throughput` at `56419ed`, assigned only
+GPUs 0–3; GPUs 4–7 are empty. Both scope-change records preserve the same four
+methods, seed 3072 and compute allowances. Primary SSH is working.
+
+Refreshed the compact snapshot and verified finite metrics, strictly increasing
+training steps, monotonic charged time, unchanged validation charges and selected
+checkpoint metadata, and the absence of test results. Preserved the separate
+01:10 implementation audit and surfaced its interpretation limits above. No
+active code, training settings or queue entries were changed. Next: record HWM's
+third registered validation after step 15,000, then its final round; tests remain
+sealed until all registered training and validation finish. No follow-up run is
+queued.
