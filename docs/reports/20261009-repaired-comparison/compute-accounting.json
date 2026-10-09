@@ -1,0 +1,79 @@
+{
+  "all_infrastructure_runtime_total_available": false,
+  "baseline_retraining_updates": 0,
+  "bounded_repair_diagnostic_gpu_hours": 0.13652564757193128,
+  "checked_at": "2026-10-09T04:59:30.660173+00:00",
+  "cumulative_completed_registered_validation_gpu_hours": 9.525382035453287,
+  "cumulative_optimization_gpu_hours": 22.61902653144673,
+  "current_campaign": "20261009-repaired-comparison",
+  "current_completed_validation_gpu_hours": 0.4750638891073565,
+  "current_optimization_gpu_hours": 1.5069502881624632,
+  "current_run_ledgers": {
+    "world_3072": {
+      "budget_check": "optimizer boundaries; any last-update overrun is reported",
+      "gpu_count": 4,
+      "step": 10000,
+      "training_budget_seconds": 7200,
+      "training_gpu_hours": 1.5069502881624632,
+      "training_seconds": 1356.255259346217,
+      "validation_gpu_hours": 0.4750638891073565,
+      "validation_seconds": 427.5575001966208
+    }
+  },
+  "excluded_or_not_yet_finalized": [
+    "Current in-progress validation has not yet entered the completed-validation ledger.",
+    "Shared preparation, preflights, and interrupted original final-test attempts are preserved separately but are not comprehensively totaled here.",
+    "Separate older PushT pilot is a different benchmark and is outside these MetaWorld subtotals."
+  ],
+  "gpu_count_per_model": 4,
+  "historical_optimization_gpu_hours": 21.112076243284264,
+  "historical_registered_validation_gpu_hours": 9.05031814634593,
+  "interpretation": "Cumulative charged training and completed validation are retained across both MetaWorld campaigns. This is not a claim that the per-run allowance equals total R&D cost or that the known subtotal covers all infrastructure runtime.",
+  "known_charged_components_gpu_hours": 32.28093421447194,
+  "original_campaign": "20261007-joint-flow",
+  "original_run_ledgers": {
+    "hwm_adapted_3072": {
+      "budget_check": "optimizer boundaries; any last-update overrun is reported",
+      "gpu_count": 4,
+      "step": 20000,
+      "training_budget_seconds": 7200,
+      "training_gpu_hours": 6.085162281894849,
+      "training_seconds": 5476.6460537053645,
+      "validation_gpu_hours": 2.648357626899249,
+      "validation_seconds": 2383.521864209324
+    },
+    "joint_flow_consistent_3072": {
+      "budget_check": "optimizer boundaries; any last-update overrun is reported",
+      "gpu_count": 4,
+      "step": 20000,
+      "training_budget_seconds": 7200,
+      "training_gpu_hours": 6.1096609604731205,
+      "training_seconds": 5498.694864425808,
+      "validation_gpu_hours": 2.3362004518074295,
+      "validation_seconds": 2102.5804066266865
+    },
+    "leflow_adapted_3072": {
+      "budget_check": "optimizer boundaries; any last-update overrun is reported",
+      "gpu_count": 4,
+      "step": 20000,
+      "training_budget_seconds": 7200,
+      "training_gpu_hours": 5.968880468954643,
+      "training_seconds": 5371.992422059178,
+      "validation_gpu_hours": 2.087507544302692,
+      "validation_seconds": 1878.7567898724228
+    },
+    "world_3072": {
+      "budget_check": "optimizer boundaries; any last-update overrun is reported",
+      "gpu_count": 4,
+      "step": 20000,
+      "training_budget_seconds": 7200,
+      "training_gpu_hours": 2.94837253196165,
+      "training_seconds": 2653.5352787654847,
+      "validation_gpu_hours": 1.9782525233365595,
+      "validation_seconds": 1780.4272710029036
+    }
+  },
+  "per_model_optimization_ceiling_seconds": 7200,
+  "per_model_update_ceiling": 20000,
+  "units": "GPU-hours"
+}

@@ -17,14 +17,16 @@
 
 - The active project is the non-BTM V-JEPA 2.1 / MetaWorld campaign on branch
   `research/joint-flow-metaworld`. Follow `docs/FLOW_EXPERIMENT.md`.
-- The user authorizes SSH to `target_server_2`, up to eight GPUs total for this
-  campaign in two four-GPU jobs, training, online W&B logging, and matched
-  baseline evaluation. The world continues unchanged on GPUs 0–3.
+- The user authorizes SSH to `target_server_2` (or `target_server_2_cf`),
+  continuation of the existing compatible world and then one repaired
+  joint_flow_consistent head on GPUs 0–3, with online W&B and fixed validation.
+  Spare GPUs do not authorize additional jobs; the earlier dual-pool queue is cancelled.
 - Use exactly one training seed, 3072, per the user's October 7 correction.
-  Never launch additional training seeds. Run only joint_flow_consistent,
-  leflow_adapted, hwm_adapted, and cem_long. No ablations until first results
-  and failure analysis justify them and the user authorizes subsequent work.
-  Enforce matched compute limits, shared train/evaluation data and periodic W&B evaluation.
+  Never launch additional training seeds. Train only the already-running world
+  and the one authorized joint_flow_consistent head. LeFlow/HWM/CEM references
+  are frozen; existing registered world CEM diagnostics continue. No final tests,
+  additional variants or ablations are queued. Preserve per-run ceilings and
+  original cases, and report cumulative compute and historical-comparison limits.
 - Keep `docs/PROGRESS.md` current. Record code changes, commands/configuration,
   tests, experiment findings (including negative results), run/checkpoint paths,
   W&B links, failures, and the concrete next step.

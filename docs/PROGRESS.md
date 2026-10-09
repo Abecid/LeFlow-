@@ -1,89 +1,63 @@
 # Active campaign progress
 
-## Current verified state
+## Current verified state — October 9, 04:59 UTC
 
-- **All training and periodic validation are complete; final testing is running.**
-  The four learned models used 21.112076 optimization GPU-hours and 9.050318
-  validation GPU-hours, separately accounted. All 15,500 candidate cache files
-  remain prepared; the manifest selects 7,800 training, 650 validation and 3,200
-  test episodes. No full comparison result exists yet.
-- **Shared world complete:** `world_3072` stopped at its 20,000-update cap with
-  all four validations complete. Optimization used 2,653.535 seconds (2.94837
-  GPU-hours); validation used 1,780.427 seconds (1.97825 GPU-hours), separately
-  accounted. W&B verified the run finished and both checkpoints are preserved:
-  https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/fbcl549w.
-- **Joint-flow complete:** `joint_flow_consistent_3072` stopped at its
-  20,000-update cap with all four validations complete. Optimization used
-  5,498.695 seconds (6.10966 GPU-hours); validation used 2,102.580 seconds
-  (2.33620 GPU-hours), separately accounted. W&B verified the run finished:
-  https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/32710958.
-- **LeFlow complete:** `leflow_adapted_3072` stopped at its 20,000-update cap
-  with all four validations complete. Optimization used 5,371.992 seconds
-  (5.96888 GPU-hours); validation used 1,878.757 seconds (2.08751 GPU-hours),
-  separately accounted. W&B verified the run finished:
-  https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/9jhufn8j.
-- **HWM complete:** `hwm_adapted_3072` stopped at 20,000 updates with all four
-  validations complete. Optimization used 5,476.646 seconds (6.08516 GPU-hours);
-  validation used 2,383.522 seconds (2.64836 GPU-hours), separately accounted.
-  W&B verified the run finished at 02:17 UTC:
-  https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/cguncmvz.
-- **HWM validation:** four rounds achieved 7/104 (6.73%), 2/104 (1.92%),
-  6/104 (5.77%) and 8/104 (7.69%) successes. All 96 final-round timeouts remain
-  failures. The step-20,000 checkpoint is selected; its SHA-256 and shared world,
-  manifest, protocol, code, seed and four-GPU allocation are verified.
-- **LeFlow validation:** four rounds achieved 26/104 (25.00%), 20/104 (19.23%),
-  25/104 (24.04%) and 27/104 (25.96%) successes. All 77 fourth-round timeouts
-  remain failures. The step-20,000 checkpoint is selected; its step and SHA-256
-  are verified. Against joint-flow's selected 23/104, 16 cases succeeded under
-  both, eleven only under LeFlow and seven only under joint-flow. Final
-  tests remain pending; this validation difference is not a final ranking.
-- **Joint-flow validation:** the four rounds achieved 23/104 (22.12%), 17/104
-  (16.35%), 16/104 (15.38%) and 19/104 (18.27%) successes. All 85 fourth-round
-  timeouts remain failures. The registered selection rule retains the step-5,000
-  best checkpoint; its actual step and SHA-256 are verified. CEM using the same
-  selected world achieved 7/104 (6.73%); all joint-flow rounds retained those
-  successes. These are validation results; final tests are pending.
-- **CEM validation results:** CEM succeeded on 10/104 cases (9.62%) at step 5,000,
-  9/104 (8.65%) at step 10,000, and 7/104 (6.73%) at both 15,000 and 20,000.
-  Round four had drawer-close 5/8 and handle-press 2/8; the other 11 tasks had
-  zero successes. All 97 failures exhausted the 10-second controller allowance
-  and remain in the results. World prediction loss improved without improving
-  task success. These are validation results; final testing uses fixed selected checkpoints.
-- **Final-test startup recovered without code changes:** shared-storage locking
-  failed before any test episode completed. The four journal lock files now point
-  to local locks, while identities and episode records stay in persistent storage.
-  Joint-flow final evaluation has saved 139/3,200 episodes as of 02:36:53 UTC on
-  GPUs 0–3. All saved IDs, reset seeds and episode hashes match the frozen test
-  manifest. Checkpoint sizes/mtimes and training/validation ledgers are unchanged
-  since the recovery hash verification. See [test progress](reports/20261007-joint-flow/test-progress.json)
-  and [the recovery record](reports/20261007-joint-flow/evaluation-lock-recovery.json).
-- **Lossless throughput changes:** 48 CPU producers, encoder/goal batches of 64,
-  replay-based two-image test collection, overlapped writes and parallel ordered
-  cache summarization. Final 1,270 files took about 42.2 seconds of worker elapsed
-  time (approximately 30 files/second). See `THROUGHPUT.md` for measured limits.
-- **Preservation verified:** all 14,230 pre-existing cache file SHA-256 hashes
-  matched again after optimized preparation completed. No cases, image resolution,
-  numerical precision, model weights, split definitions or screening rules changed.
-- **Fixed experiment:** only joint_flow_consistent, leflow_adapted, hwm_adapted
-  and cem_long; one seed, 3072; no ablations or automatic expansion. Each learned
-  model gets 7,200 optimization seconds or 20,000 updates on the same four GPUs,
-  whichever ends first. Shared preparation/evaluation are accounted separately.
-  Periodic evaluation uses 104 fixed cases; final testing uses 3,200 per method.
-- **Passed:** 43 server tests; 20 real trajectory/image equivalence cases covering
-  all 16 tasks; two end-to-end cache checks with exact arrays/statistics; actual
-  four-rank CUDA/NCCL/encoder/renderer/planner-gradient preflight.
-- **Frozen execution:** `56419ed14cf127d4b7a8ab09a9d68e6681d2edc0` in server
-  `repo-throughput`; resumed supervisor PID 645888; launcher `launch.sh`; supervisor log
-  `launcher-throughput.log`. `repo/config/flow_metaworld.json` is only the original
-  `--data-config`. Older supervisors are stopped and must not be restarted.
-- **Continuity:** the existing 15-minute monitor now follows the optimized run.
-  Persistent results stay on the server; compact evidence is published from this
-  separate desktop checkout. Never pull reports into the running source checkout.
-- **Interpretation limit:** the requested [implementation audit](EVAL_AUDIT_20261009.md)
-  confirmed a flow-output support restriction in both flow planners and narrowed
-  the novelty claim. This frozen campaign is diagnostic evidence about these
-  implementations; it cannot establish the quality of a sound full-dimensional
-  flow planner or published SOTA. No replacement run is queued.
+- **Active scope is ours-only.** Finish the already-running compatible world,
+  then train exactly `joint_flow_consistent`, seed 3072, on GPUs 0–3. Baseline
+  retraining and the all-method final-test queue are cancelled. Spare GPUs do
+  not authorize jobs. See [OURS_ONLY_ITERATION](OURS_ONLY_ITERATION.md).
+- **World at 10,000 updates; second validation underway.** Its ledger records
+  1,356.255 optimization seconds (1.506950 GPU-hours) and one completed validation
+  at 427.558 seconds (0.475064 GPU-hours), separately charged. The second round
+  is not yet a completed result. Only `world_3072` exists; our head has not started.
+- **First new-world CEM diagnostic: 23/104.** Successes were handle-press 8/8,
+  coffee-button 7/8, drawer-close 6/8 and reach 2/8; the other nine tasks were
+  zero. All 81 timeouts remain failures. World prediction loss was 0.012797
+  versus persistence 0.028101, and action identification was 79.30%. These are
+  registered world diagnostics, not repaired-planner results. Include the
+  already-recorded CEM diagnostic for the finally selected world in the final
+  review; never hide it by quoting only historical CEM's 7/104.
+- **Frozen historical references:** LeFlow 27/104 (25.96%), HWM 8/104 (7.69%),
+  CEM with the old selected world 7/104 (6.73%), and our original method 23/104
+  (22.12%). All use the same selected validation resets. Representation/world
+  identities differ from this iteration, and historical LeFlow has a known
+  sampler restriction. Differences are descriptive full-pipeline comparisons,
+  not isolated sampler effects, common-world comparisons or corrected-SOTA claims.
+- **Coordinator verified:** ours-only PID 807392 is waiting for the world;
+  world launcher 780827 and workers continue unchanged. Cancelled parent 778158
+  remains stopped and must never be resumed; coordinator 795290 is absent.
+  The replacement will retire the cancelled parent after the world exits,
+  train only ours, save historical validation comparison/failure analysis,
+  then stop without final tests or another training run.
+- **Execution frozen:** `75e0815351eb25c63e495f87458f139bd5062259` in
+  `/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/repo`;
+  protocol `563c7d7d8b10664aa1ebf50db8f8a24fc015b50325ff1de82bcb736c7d411d51`.
+  Source/config/manifest checks pass. The original 11,650 selected entries,
+  cached features, reset IDs, goals, encoder and train-only statistics are reused.
+- **Per-run limits unchanged:** 7,200 optimization seconds OR 20,000 updates,
+  four GPUs, global batch 64/microbatch 4, four fixed 104-case validations,
+  10 controller seconds and 200 primitive actions per evaluation episode.
+  No new seeds, baseline runs, ablations, sweeps or automatic subsequent variants.
+- **Cumulative compute is retained:** original MetaWorld training used 21.112076
+  optimization GPU-hours and 9.050318 registered-validation GPU-hours. Including
+  this world's current ledger gives 22.619027 optimization and 9.525382 completed
+  validation GPU-hours; the bounded repair diagnostic separately used 0.136526
+  GPU-hours. These subtotals do not cover all shared preparation, preflights or
+  interrupted original test runtime. See [compute accounting](reports/20261009-repaired-comparison/compute-accounting.json).
+- **Preservation and logging:** the old `20261007-joint-flow` campaign remains
+  held, and its completion/compute hashes are unchanged. Its 236 partial test
+  records remain reserved and were not read by this monitor. No current test
+  report exists. W&B confirms [world 8vwksovs](https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/8vwksovs)
+  running in `vjepa21_metaworld_repair_v2_matched` with the frozen code and seed.
+  Reports are published from this separate desktop checkout to `origin/main`.
+- **Next:** complete this world, preserve its selected checkpoint and matching
+  CEM diagnostic, then monitor our one authorized head and paired validation
+  failure inventory. Pause the monitor after these findings are preserved and
+  published; any later experiment requires separate authorization.
+
+Earlier entries below record historical authorizations and states. The current
+ours-only scope above and `OURS_ONLY_ITERATION.md` supersede the all-method,
+dual-pool and automatic-final-test plans in those entries.
 
 ## 2026-10-07 — recovered interrupted work
 
@@ -3311,3 +3285,37 @@ new-world CEM diagnostics in the eventual failure discussion without launching
 more training/evaluation. Historical LeFlow/HWM checkpoints and metrics remain
 unchanged. Further method iterations should follow the first repaired results
 and failure evidence, with cumulative development compute reported honestly.
+
+## 2026-10-09 04:57 UTC — ours-only scope verified; world second validation active
+
+Read-only health verification at 04:59:30 UTC confirmed coordinator 807392
+(start ticks 984212427) in `waiting_for_world`, with exactly our repaired head
+scheduled and final tests disabled. Its source hash matches the published
+712a0f2b continuation. Cancelled coordinator 795290 is absent. Original parent
+778158 remains stopped with its recorded identity; world launcher 780827 is
+unchanged and active. Only `world_3072` exists. GPUs 0–3 are active and 4–7 idle;
+no repeated baseline updates, head dispatch, recovery or restart occurred.
+
+The world reached 10,000 updates with 1,356.255 charged optimization seconds
+(1.506950 GPU-hours), no recorded last-update overrun, and its second validation
+in progress. One completed round remains 427.558 seconds (0.475064 GPU-hours).
+At update 5,000, CEM's 23/104 successes were handle-press 8, coffee-button 7,
+drawer-close 6 and reach 2. All 81 failures exhausted the controller allowance.
+The already-recorded diagnostic belongs to the new world/representation, not
+our planner. Preserve the finally selected world's matching CEM report alongside
+historical CEM 7/104 in the final review, without rerunning evaluation.
+
+Verified clean frozen execution, unchanged configuration and manifest hash,
+old held-campaign completion/compute hashes, and online W&B revision/seed/group.
+The fallback SSH route timed out during banner exchange; the primary route
+succeeded. No server intervention was needed. Saved updated compact training,
+validation, coordinator and online evidence. Replaced the stale current-state
+summary and removed superseded dual-pool authorization from AGENTS so future
+monitors do not mistake old running-test claims for the active scope.
+
+Added explicit cumulative compute accounting across the original and current
+MetaWorld ledgers, plus the bounded repair diagnostic. Preparation, preflight,
+incomplete current validation and interrupted historical test costs remain
+separate rather than being silently counted as zero. The next step remains
+world completion followed by only our head and validation failure analysis;
+no additional method, seed, budget or final test is authorized.
