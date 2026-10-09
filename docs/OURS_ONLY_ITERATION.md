@@ -78,3 +78,24 @@ case IDs, reset seeds, episode hashes and model seed before pairing outcomes.
 It rejects mismatched identities; it deliberately does not masquerade as the
 strict same-world/same-code final comparison. New output filenames are
 `historical-validation-comparison.json` and `validation-failure-analysis.json`.
+
+## Verified continuation
+
+At **9:54 PM Pacific, October 8**, continuation PID **807392** was alive in
+`waiting_for_world`, with only `joint_flow_consistent` scheduled. Cancelled
+coordinator795290 was absent, old parent778158 remained stopped, and world
+launcher780827 continued unchanged. Only the world run directory exists: no
+baseline or proposed head has started yet. World had reached update7896 and
+completed its first validation. External continuation SHA-256:
+`712a0f2b141ba8bf2daf35855bb74fec4a2664818ae9bb5160d842e7dd7a5857`.
+
+The already-registered first CEM world diagnostic scored **23/104** with the
+new world at5k updates, versus the historical selected CEM reference7/104. This
+is an interim world diagnostic, not our planner's result or a replacement of
+saved baseline scores. It demonstrates why the changed shared representation/
+world must be disclosed: improvements cannot be attributed solely to the
+planner. Preserve and include the already-computed CEM diagnostic for the
+finally selected new world alongside the historical-reference analysis; this
+requires no extra training or evaluation. Final tests remain unrun for this
+iteration. Latest monitor instructions enforce this scope and prohibit automatic
+subsequent training runs.

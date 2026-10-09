@@ -3290,3 +3290,24 @@ world is needed by our changed representation; historical references keep their
 old worlds and code. A resulting gain is a full-pipeline historical comparison,
 not an isolated sampler effect or corrected-SOTA claim. Definitive corrected
 baseline work is a separate decision, never an automatic cost of each iteration.
+
+## October 8, 2026, 9:54 PM Pacific — ours-only continuation verified
+
+Replacement continuation PID807392 is running and waiting for world completion.
+Its executable hash is712a0f2b141ba8bf2daf35855bb74fec4a2664818ae9bb5160d842e7dd7a5857.
+Only joint_flow_consistent is in its training scope; final testing is disabled
+for this iteration. Old coordinator795290 is absent, original parent778158 is
+intentionally stopped, and original world launcher780827 remains active. No
+LeFlow, HWM or proposed-head run directories have been created. World training
+advanced to7896 updates without restart. Saved cancellation, scope and process
+verification records; the monitor cannot resume the superseded queue.
+
+First new-world validation at5k updates is now recorded: prediction loss0.0127967
+versus persistence0.0281005, action-identification79.30%, and registered CEM
+world diagnostic23/104. This is NOT an evaluation of our repaired planner.
+Historical selected CEM was7/104 under the old world/representation, illustrating
+the shared-pipeline confound. Keep both explicitly labelled; use already-logged
+new-world CEM diagnostics in the eventual failure discussion without launching
+more training/evaluation. Historical LeFlow/HWM checkpoints and metrics remain
+unchanged. Further method iterations should follow the first repaired results
+and failure evidence, with cumulative development compute reported honestly.

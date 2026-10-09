@@ -1,0 +1,295 @@
+{
+  "observed_utc": "2026-10-09T04:54:07.647482+00:00",
+  "baseline-queue-cancelled.json": {
+    "utc": "2026-10-09T04:49:38.724885+00:00",
+    "user_correction": "Freeze existing baselines; fresh training and iteration are for our method. Remove repeated baseline training.",
+    "cancelled_scheduler": 795290,
+    "previous_scheduler_state": {
+      "scheduler_pid": 795290,
+      "supervisor": {
+        "pid": 778158,
+        "start_ticks": "984051099",
+        "cwd": "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/repo",
+        "command": [
+          "/tmp/mtxu-flow-jepa-20261007/env/bin/python",
+          "-u",
+          "-m",
+          "flow_jepa.campaign",
+          "--root",
+          "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign",
+          "--gpus",
+          "4",
+          "--seed",
+          "3072",
+          "--config",
+          "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/repo/config/flow_metaworld_repair.json",
+          "--data-config",
+          "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/repo/config/flow_metaworld.json"
+        ]
+      },
+      "world_launcher": {
+        "pid": 780827,
+        "start_ticks": "984064327",
+        "cwd": "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/repo",
+        "command": [
+          "/tmp/mtxu-flow-jepa-20261007/env/bin/python",
+          "-m",
+          "torch.distributed.run",
+          "--nnodes=1",
+          "--rdzv-backend=c10d",
+          "--rdzv-endpoint=127.0.0.1:0",
+          "--nproc_per_node=4",
+          "-m",
+          "flow_jepa.train",
+          "--config",
+          "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/repo/config/flow_metaworld_repair.json",
+          "--root",
+          "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign",
+          "--run-dir",
+          "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072",
+          "--method",
+          "world",
+          "--seed",
+          "3072"
+        ]
+      },
+      "started_utc": "2026-10-09T04:42:05.450246+00:00",
+      "execution_revision": "75e0815351eb25c63e495f87458f139bd5062259",
+      "protocol": "563c7d7d8b10664aa1ebf50db8f8a24fc015b50325ff1de82bcb736c7d411d51",
+      "script_sha256": "746f61d05cb9ca1b9fea7438c8647dadc16fa11fe33432781be89c6bb870cdd2",
+      "max_simultaneous_gpus": 8,
+      "gpus_per_job": 4,
+      "pools": [
+        [
+          0,
+          1,
+          2,
+          3
+        ],
+        [
+          4,
+          5,
+          6,
+          7
+        ]
+      ],
+      "unchanged": "Seed, models, code, data, updates/time caps, global batch, validation and final-test cases",
+      "events": [],
+      "state": "waiting_for_world",
+      "updated_utc": "2026-10-09T04:43:36.385500+00:00",
+      "supervisor_paused": true
+    },
+    "baseline_retraining_started": false,
+    "baseline_retraining_updates": 0,
+    "parent_supervisor": 778158,
+    "parent_remains_stopped": true,
+    "world_launcher": 780827,
+    "world_untouched": true,
+    "allowed_fresh_head": "joint_flow_consistent",
+    "final_test_policy": "Use fixed validation for iteration; do not repeatedly tune against test.",
+    "next": "Install ours-only continuation with existing world budget and four validation rounds; never resume the cancelled all-method supervisor."
+  },
+  "ours-only-status.json": {
+    "pid": 807392,
+    "started_utc": "2026-10-09T04:53:38.215707+00:00",
+    "state": "waiting_for_world",
+    "methods_to_train": [
+      "joint_flow_consistent"
+    ],
+    "baseline_retraining": false,
+    "final_test_enabled": false,
+    "execution_revision": "75e0815351eb25c63e495f87458f139bd5062259",
+    "script_sha256": "712a0f2b141ba8bf2daf35855bb74fec4a2664818ae9bb5160d842e7dd7a5857",
+    "updated_utc": "2026-10-09T04:53:38.216696+00:00"
+  },
+  "parallel-status.json": {
+    "scheduler_pid": 795290,
+    "supervisor": {
+      "pid": 778158,
+      "start_ticks": "984051099",
+      "cwd": "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/repo",
+      "command": [
+        "/tmp/mtxu-flow-jepa-20261007/env/bin/python",
+        "-u",
+        "-m",
+        "flow_jepa.campaign",
+        "--root",
+        "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign",
+        "--gpus",
+        "4",
+        "--seed",
+        "3072",
+        "--config",
+        "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/repo/config/flow_metaworld_repair.json",
+        "--data-config",
+        "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/repo/config/flow_metaworld.json"
+      ]
+    },
+    "world_launcher": {
+      "pid": 780827,
+      "start_ticks": "984064327",
+      "cwd": "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/repo",
+      "command": [
+        "/tmp/mtxu-flow-jepa-20261007/env/bin/python",
+        "-m",
+        "torch.distributed.run",
+        "--nnodes=1",
+        "--rdzv-backend=c10d",
+        "--rdzv-endpoint=127.0.0.1:0",
+        "--nproc_per_node=4",
+        "-m",
+        "flow_jepa.train",
+        "--config",
+        "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/repo/config/flow_metaworld_repair.json",
+        "--root",
+        "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign",
+        "--run-dir",
+        "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072",
+        "--method",
+        "world",
+        "--seed",
+        "3072"
+      ]
+    },
+    "started_utc": "2026-10-09T04:42:05.450246+00:00",
+    "execution_revision": "75e0815351eb25c63e495f87458f139bd5062259",
+    "protocol": "563c7d7d8b10664aa1ebf50db8f8a24fc015b50325ff1de82bcb736c7d411d51",
+    "script_sha256": "746f61d05cb9ca1b9fea7438c8647dadc16fa11fe33432781be89c6bb870cdd2",
+    "max_simultaneous_gpus": 8,
+    "gpus_per_job": 4,
+    "pools": [
+      [
+        0,
+        1,
+        2,
+        3
+      ],
+      [
+        4,
+        5,
+        6,
+        7
+      ]
+    ],
+    "unchanged": "Seed, models, code, data, updates/time caps, global batch, validation and final-test cases",
+    "events": [],
+    "state": "cancelled_by_user_scope_correction",
+    "updated_utc": "2026-10-09T04:49:38.724885+00:00",
+    "supervisor_paused": true
+  },
+  "processes": {
+    "807392": {
+      "state": "S",
+      "start_ticks": "984212427",
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/ours_only_continuation.py --record /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison "
+    },
+    "778158": {
+      "state": "T",
+      "start_ticks": "984051099",
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.campaign --root /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign --gpus 4 --seed 3072 --config /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/repo/config/flow_metaworld_repair.json --data-config /home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/repo/config/flow_metaworld.json "
+    },
+    "780827": {
+      "state": "S",
+      "start_ticks": "984064327",
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -m torch.distributed.run --nnodes=1 --rdzv-backend=c10d --rdzv-endpoint=127.0.0.1:0 --nproc_per_node=4 -m flow_jepa.train --config /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/repo/config/flow_metaworld_repair.json --root /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072 --method world --seed 3072 "
+    }
+  },
+  "ours_only_log": "",
+  "run_directories": [
+    "world_3072"
+  ],
+  "world_compute": {
+    "budget_check": "optimizer boundaries; any last-update overrun is reported",
+    "gpu_count": 4,
+    "step": 7896,
+    "training_budget_seconds": 7200,
+    "training_gpu_hours": 1.1916524544647997,
+    "training_seconds": 1072.4872090183198,
+    "validation_gpu_hours": 0.4750638891073565,
+    "validation_seconds": 427.5575001966208
+  },
+  "world_latest": {
+    "train/dynamics": 0.013677192851901054,
+    "train/loss": 0.013677192851901054,
+    "step": 7850,
+    "train/lr": 0.0006690856150046072,
+    "train/grad_norm": 0.007208846975117922,
+    "budget/training_seconds": 1066.5534644015133,
+    "budget/training_gpu_hours": 1.1850594048905703,
+    "budget/validation_gpu_hours": 0.4750638891073565,
+    "budget/fraction": 0.3925,
+    "budget/last_update_overrun_seconds": 0.0,
+    "train/consistency_weight": 0.0,
+    "system/samples_per_second": 336.8221702215051,
+    "system/gpu_peak_memory_gib": 2.6936521530151367
+  },
+  "world_validation": [
+    {
+      "step": 5000,
+      "validation/dynamics_loss": 0.012796729803085327,
+      "validation/persistence_loss": 0.028100503608584404,
+      "validation/action_identification_at_16": 0.79296875,
+      "validation/action_identification_chance": 0.0625,
+      "cem_validation/task/assembly/success": 0.0,
+      "cem_validation/task/assembly/ci95_low": 0.0,
+      "cem_validation/task/assembly/ci95_high": 0.3244156195108769,
+      "cem_validation/task/button-press-topdown/success": 0.0,
+      "cem_validation/task/button-press-topdown/ci95_low": 0.0,
+      "cem_validation/task/button-press-topdown/ci95_high": 0.3244156195108769,
+      "cem_validation/task/coffee-button/success": 0.875,
+      "cem_validation/task/coffee-button/ci95_low": 0.5291051942301386,
+      "cem_validation/task/coffee-button/ci95_high": 0.9775830911367038,
+      "cem_validation/task/dial-turn/success": 0.0,
+      "cem_validation/task/dial-turn/ci95_low": 0.0,
+      "cem_validation/task/dial-turn/ci95_high": 0.3244156195108769,
+      "cem_validation/task/door-close/success": 0.0,
+      "cem_validation/task/door-close/ci95_low": 0.0,
+      "cem_validation/task/door-close/ci95_high": 0.3244156195108769,
+      "cem_validation/task/door-open/success": 0.0,
+      "cem_validation/task/door-open/ci95_low": 0.0,
+      "cem_validation/task/door-open/ci95_high": 0.3244156195108769,
+      "cem_validation/task/drawer-close/success": 0.75,
+      "cem_validation/task/drawer-close/ci95_low": 0.40926987910258916,
+      "cem_validation/task/drawer-close/ci95_high": 0.9285223111419724,
+      "cem_validation/task/drawer-open/success": 0.0,
+      "cem_validation/task/drawer-open/ci95_low": 0.0,
+      "cem_validation/task/drawer-open/ci95_high": 0.3244156195108769,
+      "cem_validation/task/faucet-open/success": 0.0,
+      "cem_validation/task/faucet-open/ci95_low": 0.0,
+      "cem_validation/task/faucet-open/ci95_high": 0.3244156195108769,
+      "cem_validation/task/handle-press/success": 1.0,
+      "cem_validation/task/handle-press/ci95_low": 0.6755843804891231,
+      "cem_validation/task/handle-press/ci95_high": 1.0,
+      "cem_validation/task/pick-place/success": 0.0,
+      "cem_validation/task/pick-place/ci95_low": 0.0,
+      "cem_validation/task/pick-place/ci95_high": 0.3244156195108769,
+      "cem_validation/task/plate-slide/success": 0.0,
+      "cem_validation/task/plate-slide/ci95_low": 0.0,
+      "cem_validation/task/plate-slide/ci95_high": 0.3244156195108769,
+      "cem_validation/task/reach/success": 0.25,
+      "cem_validation/task/reach/ci95_low": 0.07147768885802763,
+      "cem_validation/task/reach/ci95_high": 0.5907301208974108,
+      "cem_validation/success_macro": 0.22115384615384615,
+      "cem_validation/seen_success_macro": 0.22115384615384615,
+      "cem_validation/episodes": 104,
+      "cem_validation/expert_goal_failure_rate": 0.0,
+      "cem_validation/latency_ms_mean": 281.34420459743524,
+      "cem_validation/controller_step_latency_ms_mean": 280.9995296552662,
+      "cem_validation/controller_step_latency_ms_p95": 290.5977097339928,
+      "cem_validation/return_mean": 63.160707588721394,
+      "cem_validation/success_within_50_primitive": 0.17307692307692307,
+      "cem_validation/success_within_100_primitive": 0.22115384615384615,
+      "cem_validation/success_within_200_primitive": 0.22115384615384615,
+      "cem_validation/steps_to_success_capped_mean": 165.3846153846154,
+      "cem_validation/world_predictions_mean": 286210.57692307694,
+      "cem_validation/controller_seconds_per_episode_mean": 9.073042505599846,
+      "cem_validation/controller_budget_exhausted_rate": 0.7788461538461539,
+      "cem_validation/controller_budget_overrun_seconds_mean": 0.01186165652381113,
+      "cem_validation/observed_subgoal_cosine": 0.07899697950914882,
+      "budget/validation_round": 1,
+      "budget/training_gpu_hours": 0.7585306413471699,
+      "budget/validation_gpu_hours": 0.4750638891073565
+    }
+  ],
+  "gpu_snapshot": "0, 4245, 36\n1, 4245, 39\n2, 4245, 44\n3, 4245, 37\n4, 0, 0\n5, 0, 0\n6, 0, 0\n7, 0, 0\n"
+}

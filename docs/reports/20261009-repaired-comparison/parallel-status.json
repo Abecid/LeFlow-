@@ -69,7 +69,7 @@
   ],
   "unchanged": "Seed, models, code, data, updates/time caps, global batch, validation and final-test cases",
   "events": [],
-  "state": "waiting_for_world",
-  "updated_utc": "2026-10-09T04:43:36.385500+00:00",
+  "state": "cancelled_by_user_scope_correction",
+  "updated_utc": "2026-10-09T04:49:38.724885+00:00",
   "supervisor_paused": true
 }

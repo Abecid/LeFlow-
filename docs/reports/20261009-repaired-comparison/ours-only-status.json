@@ -1,0 +1,13 @@
+{
+  "pid": 807392,
+  "started_utc": "2026-10-09T04:53:38.215707+00:00",
+  "state": "waiting_for_world",
+  "methods_to_train": [
+    "joint_flow_consistent"
+  ],
+  "baseline_retraining": false,
+  "final_test_enabled": false,
+  "execution_revision": "75e0815351eb25c63e495f87458f139bd5062259",
+  "script_sha256": "712a0f2b141ba8bf2daf35855bb74fec4a2664818ae9bb5160d842e7dd7a5857",
+  "updated_utc": "2026-10-09T04:53:38.216696+00:00"
+}
