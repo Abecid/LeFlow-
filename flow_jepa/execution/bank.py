@@ -1,6 +1,6 @@
 """Train-only observed-route memory; no oracle task or query duration."""
 import argparse
-from concurrent.futures import ThreadPoolExecutor
+from concurrent.futures import ProcessPoolExecutor
 import json
 from pathlib import Path
 import time
@@ -14,6 +14,13 @@ from ..common import checkpoint, config, digest, file_hash, save_json
 from ..models import distance
 
 
+def read_episode(path):
+    # HDF5's global lock serializes threads. Independent processes decompress
+    # episodes concurrently; dense reading avoids expensive strided selection.
+    with h5py.File(path, 'r') as f:
+        return f['image_goals'][:][::5].copy(), f['actions'][:]
+
+
 def build(c, root, output):
     start = time.perf_counter()
     root = Path(root)
@@ -23,16 +30,11 @@ def build(c, root, output):
             and r['mode'] == 'expert' and r['expert_success'] and r['steps'] >= 60]
     assert len(rows) == 6222
 
-    def read(row):
-        with h5py.File(root / row['path'], 'r') as f:
-            raw = f['image_goals'][::5]
-            actions = f['actions'][:]
-        return raw, actions
-
     raw_states, chunks, routes, episodes, times = [], [], [], [], []
     offset = 0
-    with ThreadPoolExecutor(max_workers=12) as pool:
-        for episode, (row, (raw, actions)) in enumerate(zip(rows, pool.map(read, rows))):
+    with ProcessPoolExecutor(max_workers=16) as pool:
+        loaded = pool.map(read_episode, [str(root / row['path']) for row in rows], chunksize=4)
+        for episode, (row, (raw, actions)) in enumerate(zip(rows, loaded)):
             n = len(raw)
             raw_states.append(raw)
             chunk = np.zeros((n, 5, 8), np.float32)
@@ -48,6 +50,8 @@ def build(c, root, output):
                     if s + span < n:
                         routes.append((offset+s, offset+s+1, offset+s+span, span*5))
             offset += n
+            if (episode+1) % 500 == 0:
+                print(json.dumps(dict(event='bank_progress',episodes=episode+1,total=len(rows))),flush=True)
     payload = dict(raw=torch.from_numpy(np.concatenate(raw_states)),
                    chunks=torch.from_numpy(np.concatenate(chunks)),
                    routes=torch.tensor(routes, dtype=torch.int64),
