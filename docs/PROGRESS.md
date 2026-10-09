@@ -20,11 +20,12 @@
   (5.96888 GPU-hours); validation used 1,878.757 seconds (2.08751 GPU-hours),
   separately accounted. W&B verified the run finished:
   https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/9jhufn8j.
-- **HWM training active:** `hwm_adapted_3072` reached step 1,981, charging
-  545.051 optimization seconds (0.60561 GPU-hours), with no validation charge
-  or last-update overrun. Its checkpoint shares the world hash, manifest,
-  protocol, code, seed and four-GPU allocation of the other heads. W&B readback
-  at 00:02 UTC confirmed step 1,600 online:
+- **HWM first validation active:** `hwm_adapted_3072` reached step 5,000,
+  charging 1,365.844 optimization seconds (1.51760 GPU-hours), with no
+  last-update overrun. Validation is charged separately at completion; no
+  complete first-round score exists yet. Its checkpoint shares the world hash,
+  manifest, protocol, code, seed and four-GPU allocation of the other heads.
+  W&B readback at 00:17 UTC confirmed step 4,950 online:
   https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/cguncmvz.
 - **LeFlow validation:** four rounds achieved 26/104 (25.00%), 20/104 (19.23%),
   25/104 (24.04%) and 27/104 (25.96%) successes. All 77 fourth-round timeouts
@@ -2630,3 +2631,28 @@ seed 3072 and the 10-second cap; every timeout remains a failure. Preserved the
 fourth validation, completion, checkpoint provenance and HWM startup evidence.
 Next: complete HWM's four registered validations before opening final testing.
 No test report exists and no follow-up experiment is queued.
+
+### 2026-10-09 00:16 UTC — HWM step 5,000; first validation active
+
+HWM reached step 5,000 and entered its first registered 104-case validation.
+No completed validation report or selected best checkpoint is present yet.
+Optimization has charged 1,365.844 seconds (1.517605 GPU-hours), with no
+last-update overrun; validation is charged separately at completion. At step
+5,000, finite coarse-dynamics loss is 0.033806 and gradient norm 0.061115.
+These training diagnostics are not task success scores. Its `last.pt` is
+preserved at 44,490,453 bytes.
+
+Supervisor 142087, launcher 489992 and ranks 489996/489997/489998/489999 remain
+healthy in clean frozen `repo-throughput` at `56419ed`, using only GPUs 0–3;
+4–7 remain empty. Both scope-change records retain the original four methods,
+seed 3072 and compute limits. W&B API readback at 00:17:11 UTC verified
+`cguncmvz` running at step 4,950. The world, joint-flow and LeFlow runs remain
+finished, with their results, selected checkpoints and final charges preserved.
+No restart or source change was needed.
+
+Downloaded the snapshot through `target_server_2_cf`; verified finite metrics,
+increasing training steps and charged time, the fixed allowance and absence of
+premature final test reports. Saved updated HWM losses, compute usage, checkpoint
+metadata and online evidence. Next: preserve HWM's completed first validation
+and paired outcomes, then continue its three remaining registered validations.
+Final testing stays sealed; no follow-up experiment is queued.

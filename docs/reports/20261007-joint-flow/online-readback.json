@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-09T00:02:26.937721+00:00",
+  "checked_at": "2026-10-09T00:17:11.672112+00:00",
   "code": "56419ed14cf127d4b7a8ab09a9d68e6681d2edc0",
   "controller_seconds_per_episode": 10.0,
   "execution_methods": [
@@ -20,23 +20,23 @@
       "seed": 3072,
       "state": "running",
       "summary": {
-        "_runtime": 462,
-        "_step": 1600,
-        "_timestamp": 1791504077.0902514,
-        "_wandb.runtime": 462,
-        "budget/fraction": 0.08,
+        "_runtime": 1361.83744307,
+        "_step": 4950,
+        "_timestamp": 1791504989.6772592,
+        "_wandb.runtime": 1361,
+        "budget/fraction": 0.2475,
         "budget/last_update_overrun_seconds": 0,
-        "budget/training_gpu_hours": 0.49072728116479186,
-        "budget/training_seconds": 441.65455304831266,
+        "budget/training_gpu_hours": 1.5022559784890877,
+        "budget/training_seconds": 1352.030380640179,
         "budget/validation_gpu_hours": 0,
-        "step": 1600,
+        "step": 4950,
         "system/gpu_peak_memory_gib": 0.26651763916015625,
-        "system/samples_per_second": 235.2570713815436,
-        "train/coarse_dynamics": 0.040598515421152115,
+        "system/samples_per_second": 235.04002879305853,
+        "train/coarse_dynamics": 0.034236110746860504,
         "train/consistency_weight": 0,
-        "train/grad_norm": 0.05996096134185791,
-        "train/loss": 0.040598515421152115,
-        "train/lr": 9.84467995581115e-05
+        "train/grad_norm": 0.08703569322824478,
+        "train/loss": 0.034236110746860504,
+        "train/lr": 8.578106096836421e-05
       },
       "url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/cguncmvz",
       "verified_online": true
