@@ -5,6 +5,12 @@ one training seed, the same data and compute allowance, and periodic evaluation.
 Ablations are deferred until first results and failure cases justify follow-up.
 This document records the evidence reviewed before any full model training.
 
+**Post-training audit, October 9:** the current implementation has a confirmed
+flow-output support restriction, and the LeFlow paper/code discrepancy requires
+narrowing the generated-consistency novelty claim. See
+[the validation and fidelity audit](EVAL_AUDIT_20261009.md) before interpreting
+this initial rationale as evidence that the proposed method is best.
+
 ## Selected experiment
 
 | Entry | Role and reason |

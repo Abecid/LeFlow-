@@ -1,0 +1,270 @@
+{
+  "checked_at_utc": "2026-10-09T01:06:18.404839+00:00",
+  "execution_sha": "56419ed14cf127d4b7a8ab09a9d68e6681d2edc0",
+  "device": "cpu",
+  "threads": 2,
+  "runs": {
+    "joint_flow_consistent": {
+      "checkpoint_step": 5000,
+      "weight_shape": [
+        1024,
+        256
+      ],
+      "maximum_controllable_dimensions_including_bias": 257,
+      "minimum_unchangeable_dimensions": 767,
+      "noise_residual_mse_per_coordinate": 0.7007127404212952,
+      "sample_residual_mse_per_coordinate": 0.7007127404212952,
+      "residual_change_max_absolute": 5.364418029785156e-06,
+      "residual_change_rms": 7.398825232485251e-07
+    },
+    "leflow_adapted": {
+      "checkpoint_step": 20000,
+      "weight_shape": [
+        1024,
+        256
+      ],
+      "maximum_controllable_dimensions_including_bias": 257,
+      "minimum_unchangeable_dimensions": 767,
+      "noise_residual_mse_per_coordinate": 0.7151978015899658,
+      "sample_residual_mse_per_coordinate": 0.7151978015899658,
+      "residual_change_max_absolute": 3.814697265625e-06,
+      "residual_change_rms": 4.883897304353013e-07
+    }
+  },
+  "goal_representation": [
+    {
+      "task": "assembly",
+      "control_step": 25,
+      "same_endpoint_history_vs_static_cosine_distance": 0.14031898975372314,
+      "five_control_step_history_change_cosine_distance": 0.0532752126455307
+    },
+    {
+      "task": "assembly",
+      "control_step": 50,
+      "same_endpoint_history_vs_static_cosine_distance": 0.12219785153865814,
+      "five_control_step_history_change_cosine_distance": 0.04049523547291756
+    },
+    {
+      "task": "assembly",
+      "control_step": 75,
+      "same_endpoint_history_vs_static_cosine_distance": 0.056796327233314514,
+      "five_control_step_history_change_cosine_distance": 0.008482014760375023
+    },
+    {
+      "task": "button-press-topdown",
+      "control_step": 25,
+      "same_endpoint_history_vs_static_cosine_distance": 0.14030292630195618,
+      "five_control_step_history_change_cosine_distance": 0.04504481330513954
+    },
+    {
+      "task": "button-press-topdown",
+      "control_step": 50,
+      "same_endpoint_history_vs_static_cosine_distance": 0.0780382752418518,
+      "five_control_step_history_change_cosine_distance": 0.014141296967864037
+    },
+    {
+      "task": "button-press-topdown",
+      "control_step": 75,
+      "same_endpoint_history_vs_static_cosine_distance": 0.07189299911260605,
+      "five_control_step_history_change_cosine_distance": 0.011590179055929184
+    },
+    {
+      "task": "coffee-button",
+      "control_step": 25,
+      "same_endpoint_history_vs_static_cosine_distance": 0.12178662419319153,
+      "five_control_step_history_change_cosine_distance": 0.04124296456575394
+    },
+    {
+      "task": "coffee-button",
+      "control_step": 50,
+      "same_endpoint_history_vs_static_cosine_distance": 0.05656394734978676,
+      "five_control_step_history_change_cosine_distance": 0.009099164977669716
+    },
+    {
+      "task": "coffee-button",
+      "control_step": 75,
+      "same_endpoint_history_vs_static_cosine_distance": 0.03425035625696182,
+      "five_control_step_history_change_cosine_distance": 0.008039288222789764
+    },
+    {
+      "task": "dial-turn",
+      "control_step": 25,
+      "same_endpoint_history_vs_static_cosine_distance": 0.1115667074918747,
+      "five_control_step_history_change_cosine_distance": 0.05046192929148674
+    },
+    {
+      "task": "dial-turn",
+      "control_step": 50,
+      "same_endpoint_history_vs_static_cosine_distance": 0.1509675681591034,
+      "five_control_step_history_change_cosine_distance": 0.07887312769889832
+    },
+    {
+      "task": "dial-turn",
+      "control_step": 75,
+      "same_endpoint_history_vs_static_cosine_distance": 0.12173032015562057,
+      "five_control_step_history_change_cosine_distance": 0.035912640392780304
+    },
+    {
+      "task": "door-close",
+      "control_step": 25,
+      "same_endpoint_history_vs_static_cosine_distance": 0.19628897309303284,
+      "five_control_step_history_change_cosine_distance": 0.09122391045093536
+    },
+    {
+      "task": "door-close",
+      "control_step": 50,
+      "same_endpoint_history_vs_static_cosine_distance": 0.10510838031768799,
+      "five_control_step_history_change_cosine_distance": 0.061214275658130646
+    },
+    {
+      "task": "door-close",
+      "control_step": 75,
+      "same_endpoint_history_vs_static_cosine_distance": 0.08959362655878067,
+      "five_control_step_history_change_cosine_distance": 0.014179591089487076
+    },
+    {
+      "task": "door-open",
+      "control_step": 25,
+      "same_endpoint_history_vs_static_cosine_distance": 0.15214350819587708,
+      "five_control_step_history_change_cosine_distance": 0.06567740440368652
+    },
+    {
+      "task": "door-open",
+      "control_step": 50,
+      "same_endpoint_history_vs_static_cosine_distance": 0.14681117236614227,
+      "five_control_step_history_change_cosine_distance": 0.04928603023290634
+    },
+    {
+      "task": "door-open",
+      "control_step": 75,
+      "same_endpoint_history_vs_static_cosine_distance": 0.0945131778717041,
+      "five_control_step_history_change_cosine_distance": 0.029182802885770798
+    },
+    {
+      "task": "drawer-close",
+      "control_step": 25,
+      "same_endpoint_history_vs_static_cosine_distance": 0.14386162161827087,
+      "five_control_step_history_change_cosine_distance": 0.05637059733271599
+    },
+    {
+      "task": "drawer-close",
+      "control_step": 50,
+      "same_endpoint_history_vs_static_cosine_distance": 0.10902468115091324,
+      "five_control_step_history_change_cosine_distance": 0.0387592688202858
+    },
+    {
+      "task": "drawer-close",
+      "control_step": 75,
+      "same_endpoint_history_vs_static_cosine_distance": 0.07915009558200836,
+      "five_control_step_history_change_cosine_distance": 0.00820271298289299
+    },
+    {
+      "task": "drawer-open",
+      "control_step": 25,
+      "same_endpoint_history_vs_static_cosine_distance": 0.12237975746393204,
+      "five_control_step_history_change_cosine_distance": 0.025507990270853043
+    },
+    {
+      "task": "drawer-open",
+      "control_step": 50,
+      "same_endpoint_history_vs_static_cosine_distance": 0.13096562027931213,
+      "five_control_step_history_change_cosine_distance": 0.04210881516337395
+    },
+    {
+      "task": "drawer-open",
+      "control_step": 75,
+      "same_endpoint_history_vs_static_cosine_distance": 0.08817824721336365,
+      "five_control_step_history_change_cosine_distance": 0.014076311141252518
+    },
+    {
+      "task": "faucet-open",
+      "control_step": 25,
+      "same_endpoint_history_vs_static_cosine_distance": 0.1595045030117035,
+      "five_control_step_history_change_cosine_distance": 0.04612376168370247
+    },
+    {
+      "task": "faucet-open",
+      "control_step": 50,
+      "same_endpoint_history_vs_static_cosine_distance": 0.12262716144323349,
+      "five_control_step_history_change_cosine_distance": 0.04532092809677124
+    },
+    {
+      "task": "faucet-open",
+      "control_step": 75,
+      "same_endpoint_history_vs_static_cosine_distance": 0.1047450602054596,
+      "five_control_step_history_change_cosine_distance": 0.07194843143224716
+    },
+    {
+      "task": "handle-press",
+      "control_step": 25,
+      "same_endpoint_history_vs_static_cosine_distance": 0.13413956761360168,
+      "five_control_step_history_change_cosine_distance": 0.057719722390174866
+    },
+    {
+      "task": "handle-press",
+      "control_step": 50,
+      "same_endpoint_history_vs_static_cosine_distance": 0.07092247158288956,
+      "five_control_step_history_change_cosine_distance": 0.019365977495908737
+    },
+    {
+      "task": "handle-press",
+      "control_step": 75,
+      "same_endpoint_history_vs_static_cosine_distance": 0.03037353791296482,
+      "five_control_step_history_change_cosine_distance": 0.014029311016201973
+    },
+    {
+      "task": "pick-place",
+      "control_step": 25,
+      "same_endpoint_history_vs_static_cosine_distance": 0.17244035005569458,
+      "five_control_step_history_change_cosine_distance": 0.049179866909980774
+    },
+    {
+      "task": "pick-place",
+      "control_step": 50,
+      "same_endpoint_history_vs_static_cosine_distance": 0.11144667118787766,
+      "five_control_step_history_change_cosine_distance": 0.013330195099115372
+    },
+    {
+      "task": "pick-place",
+      "control_step": 75,
+      "same_endpoint_history_vs_static_cosine_distance": 0.08323922753334045,
+      "five_control_step_history_change_cosine_distance": 0.009690281003713608
+    },
+    {
+      "task": "plate-slide",
+      "control_step": 25,
+      "same_endpoint_history_vs_static_cosine_distance": 0.15773236751556396,
+      "five_control_step_history_change_cosine_distance": 0.038620561361312866
+    },
+    {
+      "task": "plate-slide",
+      "control_step": 50,
+      "same_endpoint_history_vs_static_cosine_distance": 0.11001235991716385,
+      "five_control_step_history_change_cosine_distance": 0.013535859063267708
+    },
+    {
+      "task": "plate-slide",
+      "control_step": 75,
+      "same_endpoint_history_vs_static_cosine_distance": 0.07239748537540436,
+      "five_control_step_history_change_cosine_distance": 0.009197313338518143
+    },
+    {
+      "task": "reach",
+      "control_step": 25,
+      "same_endpoint_history_vs_static_cosine_distance": 0.11194202303886414,
+      "five_control_step_history_change_cosine_distance": 0.029465289786458015
+    },
+    {
+      "task": "reach",
+      "control_step": 50,
+      "same_endpoint_history_vs_static_cosine_distance": 0.08508122712373734,
+      "five_control_step_history_change_cosine_distance": 0.010430440306663513
+    },
+    {
+      "task": "reach",
+      "control_step": 75,
+      "same_endpoint_history_vs_static_cosine_distance": 0.06915684044361115,
+      "five_control_step_history_change_cosine_distance": 0.007437469437718391
+    }
+  ]
+}

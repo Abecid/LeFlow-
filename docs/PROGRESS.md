@@ -2778,3 +2778,51 @@ a failure. Saved the second validation, losses, compute usage, checkpoints and
 online evidence. Next: complete HWM's remaining two registered validations.
 Final testing stays sealed; no test report exists and no follow-up experiment
 is queued.
+
+
+### 2026-10-09 01:10 UTC — requested validation/fidelity audit; flow limitation confirmed
+
+The user asked whether evaluations favor ours, what failure modes are visible,
+whether the implementation is faithful, and whether the approach is best
+supported by the evidence. Recorded the full audit in
+[EVAL_AUDIT_20261009.md](EVAL_AUDIT_20261009.md), with compact validation evidence
+and a reproducible read-only checkpoint diagnostic under
+`reports/20261007-joint-flow/audit-20261009/`.
+
+Our selected validation result remains 23/104 versus LeFlow 27/104: seven paired
+resets favor ours, eleven favor LeFlow. Ours is faster per controller call but
+not better in success. All failures in both selected models exhaust the shared
+controller-time allowance; median failed action counts are 114 and 92. Better
+consistency metrics have not translated into higher task success. HWM's first
+two validations are 7/104 and 2/104; the selected-world CEM result is 7/104.
+
+A production-dimensionality issue is confirmed in both flow planners. The state
+velocity head maps width 256 to dimension 1024 without a full-dimensional noise
+cancellation path. For any fixed checkpoint, its updates span at most 257
+directions including bias, leaving at least 767 initial-noise directions
+unchanged. CPU-only checks of the actual eight-step sampler and selected
+checkpoints verified residual changes below 8e-7 RMS. This is not detected by
+the small-fixture gradient tests. No new training or evaluation episodes were
+run for the diagnostic; it used two CPU threads and existing checkpoints/cache.
+
+A second small cache check found a mean 0.1092 cosine gap between history and
+static-image features at the same endpoint, compared with 0.0340 mean ordinary
+five-step history change (39 pairs, 13 validation tasks). This establishes a
+representation mismatch, not its causal effect on success. Also documented
+local-bridge scoring versus a continuous rollout from the observed start,
+four-versus-eight integration steps during regularization/deployment, and
+specific departures from published LeFlow/HWM/Planning Limits implementations.
+
+Rechecked primary literature and official LeFlow training code. The paper
+already describes generated-transition consistency, while its public training
+code applies consistency to observed encoded paths. The earlier novelty
+rationale must be narrowed to a code-level difference, not claimed as novelty
+over the paper. FIRST_PASS now links the correction. Other literature supports
+reachable subgoals but does not establish that our joint flow design is best.
+
+The audit verified execution SHA 56419ed. Active source, configuration,
+checkpoints, manifests, budgets, and supervisor were left unchanged. No extra
+seeds, ablations, or new experiments were launched. Next methodological priority
+is to repair the confirmed output support restriction and validate goal/proposal
+scoring before treating this campaign as evidence about a sound flow method or
+published SOTA. Existing frozen-run outcomes must remain recorded honestly.
