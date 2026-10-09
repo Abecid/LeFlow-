@@ -1,0 +1,42 @@
+{
+  "bank_states": 130662,
+  "batch_loss": 4.015580177307129,
+  "causal_history_end_checks": true,
+  "frozen_world_unchanged": true,
+  "full_controller_latency_ms": [
+    83.88619683682919,
+    79.76208068430424,
+    81.19241334497929,
+    81.23362623155117,
+    81.1170618981123
+  ],
+  "gpu_count": 1,
+  "gpu_hours": 0.005719020063471463,
+  "late_real_examples_checked": 8,
+  "late_windows_in_first_10000": 147,
+  "max_gpu_gib": 9.484652042388916,
+  "mean_ms": 81.43827579915524,
+  "method": "execution_revision",
+  "optimizer_updates": 0,
+  "parameters": 4531782,
+  "parts": {
+    "action_nll": 4.010459899902344,
+    "calibration_loss": 0.01164749264717102,
+    "endpoint_loss": 0.05748794972896576,
+    "history_fraction": 0.90625,
+    "paired_regression": 0.0,
+    "prefix_loss": 0.01580343022942543,
+    "reasoning_depth": 4.0,
+    "recorded_corrected_prefix_mae": 0.001780540682375431,
+    "recorded_corrected_terminal_mae": 0.002364268759265542,
+    "recorded_raw_prefix_mae": 0.001780540682375431,
+    "recorded_raw_terminal_mae": 0.002364268759265542,
+    "shallow_calibration_loss": 0.01164749264717102
+  },
+  "same_task_episode_draws": 10000,
+  "sampling_change": "all valid five-step pre-success starts",
+  "seconds": 20.588471664115787,
+  "simulator_episodes": 0,
+  "training_examples_only": true,
+  "window_and_goal_bounds_checked": 10000
+}

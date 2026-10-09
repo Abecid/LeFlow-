@@ -3828,3 +3828,19 @@ second-decision execution-handoff assertion and populated-memory full-size
 preflight will be checked again on the exact frozen launch source. All8 A800
 GPUs were verified idle; shared storage had577GiB and local scratch2.0TiB free.
 The dataset/cache is reused; no new dataset processing is needed.
+
+
+## October 9,23:08 UTC — execution-aligned training verified live
+
+Frozen8be2808 source passed all14 CPU behavior tests and full-size train-only
+preflight. Mean controller81.44ms, unchanged4531782 parameters, exact registered
+RGB, same10000 task/episode draws,147 sampled late windows and8 real late examples
+checked; no model update or policy simulator episode in preparation. All8 GPUs
+are optimizing one fresh seed3072 run. First live snapshot819 updates; metrics
+finite. W&B tyytbnn1. The source/config/preflight records are published under
+docs/reports/20261009-execution-revision. First fixed104 validation remains pending.
+
+Added CPU-only analysis support for paired comparisons against both79/104 and
+77/104 references, plus an exact-source/data/budget audit for completion. These
+reporting changes stay outside the frozen execution checkout. No other training
+run, baseline, seed or test was dispatched.

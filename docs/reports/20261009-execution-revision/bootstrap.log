@@ -1,0 +1,4 @@
+MESA-EGL: warning: Not allowed to force software rendering when API explicitly selects a hardware device.
+Training reset RGB exactly matches registered cache
+Waiting for idle authorized GPUs; existing jobs are never stopped.
+Waiting for idle authorized GPUs; existing jobs are never stopped.

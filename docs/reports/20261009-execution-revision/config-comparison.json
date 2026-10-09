@@ -1,0 +1,24 @@
+{
+  "unchanged_sections": [
+    "training_tasks",
+    "heldout_tasks",
+    "seeds",
+    "data",
+    "encoder",
+    "model",
+    "training",
+    "evaluation",
+    "controller_grounded",
+    "latent_revision",
+    "diagnostics"
+  ],
+  "changed_sections": [
+    "name",
+    "methods",
+    "primary_method",
+    "execution",
+    "execution_revision"
+  ],
+  "sampling_change": "same episode draws; expanded local starts, feasible future goals",
+  "frozen_execution_source": "8be2808eaa09e539d30d07ee3760fc7b59717793"
+}

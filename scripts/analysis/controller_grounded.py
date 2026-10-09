@@ -107,8 +107,11 @@ def analyze(args):
         'repaired_flow':(repaired/'joint_flow_consistent_3072/validation/step_0005000.json',17),
         'historical_cem':(old/'world_3072/validation/cem_step_0020000.json',7),
     }
-    if load(new/'run.json')['method']=='latent_revision':
+    method=load(new/'run.json')['method']
+    if method in ('latent_revision','execution_revision'):
         refs['controller_grounded']=(repo/'docs/reports/20261009-controller-grounded/run/validation/step_0005000.json.gz',79)
+    if method=='execution_revision':
+        refs['latent_revision']=(repo/'docs/reports/20261009-latent-revision/run/validation/step_0020000.json.gz',77)
     for name,method,expected in [('historical_leflow','leflow_adapted',27),('historical_hwm','hwm_adapted',8),('historical_flow','joint_flow_consistent',23)]:
         path,_=selected((old/f'{method}_3072/validation').glob('step_*.json'));refs[name]=(path,expected)
     byid={r['id']:r for r in ours['records']}
@@ -219,7 +222,7 @@ def analyze(args):
             penalized_decision_rate=float(np.mean([d['applied_terminal_penalty']>0 for d in ds])),
             reasoning_depths=sorted(set(d['reasoning_depth'] for d in ds)),
             history_lengths=sorted(set(d['history_valid_steps'] for d in ds)))
-    if result['run']['method']=='latent_revision':
+    if result['run']['method'] in ('latent_revision','execution_revision'):
         result['revision_calibration_by_round']={str(r['step']):calibration_review(r['records']) for r in round_reports}
         result['revision_calibration_by_task']={t:calibration_review([r for r in ours['records'] if r['task']==t])
                                               for t in result['selected']['per_task']}

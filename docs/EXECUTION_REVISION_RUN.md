@@ -107,3 +107,26 @@ Report optimization, validation, preparation/preflight and other reserved GPU
 occupancy separately. Keep execution source frozen and publish progress/results
 from a separate checkout. Compare actual success and paired failures; a repair
 is not presumed to help.
+
+## Verified launch
+
+Coordinator1958947 was dispatched at23:05:15 UTC on October9. Frozen execution
+source: `8be2808eaa09e539d30d07ee3760fc7b59717793`, in
+`/home/mtxu/adam/LeFlow-experiments/20261009-execution-revision/repo`.
+Training started at23:07:15 UTC using all8 GPUs.
+
+The exact launch source passed4 original,6 latent-revision and4 new behavioral
+tests. The registered training reset rendered bitwise identically. Full-size
+preflight confirmed10000 unchanged task/episode draws and valid start/goal bounds;
+147 of those sampled windows start after control block40. Eight late real-data
+windows and their causal histories passed checks. Full forward/backward preserved
+the frozen world. The unchanged4531782-parameter policy's full-controller latency
+with populated memory and reuse averaged81.44ms; peak allocation9.485GiB.
+Preflight used0.005719GPUh and zero parameter updates or simulator policy episodes.
+
+Route construction used the same6222 episodes,130662 states and209109 routes.
+The first live snapshot reached819 updates with finite logged metrics and all8
+GPU workers active. These are launch/health checks, not success results.
+
+[Live W&B run](https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/tyytbnn1).
+[Source/configuration and preflight evidence](reports/20261009-execution-revision/).
