@@ -31,6 +31,10 @@ def component_types(c):
         from .revision import RevisionPolicy, RevisionSegments
         from .revision_controller import RevisionController
         return method,RevisionPolicy,RevisionSegments,RevisionController
+    if method=='execution_revision':
+        from .revision import RevisionPolicy
+        from .aligned import AlignedSegments, AlignedController
+        return method,RevisionPolicy,AlignedSegments,AlignedController
     raise ValueError(f'Unsupported isolated candidate: {method}')
 
 
@@ -178,6 +182,10 @@ def train(args):
                 weight = 0.1 * min(1.0, max(0.0, (step-1000)/1000))
                 item = {k:v.to(device, non_blocking=True) for k,v in next(iterator).items()}
                 loss, parts = module(item, world, weight=weight)
+                if 'sample_start' in item:
+                    parts.update(sample_start_mean=item['sample_start'].float().mean(),
+                                 late_window_fraction=(item['sample_start']>40).float().mean(),
+                                 goal_offset_mean=item['sample_goal_offset'].float().mean())
                 if not torch.isfinite(loss): raise FloatingPointError(f'Nonfinite loss at {step}')
                 loss.backward()
                 norm = torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0, error_if_nonfinite=True)

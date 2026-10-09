@@ -1,0 +1,168 @@
+{
+  "schema": 1,
+  "name": "vjepa21_metaworld_execution_revision_v1",
+  "training_tasks": [
+    "assembly",
+    "button-press-topdown",
+    "coffee-button",
+    "dial-turn",
+    "door-close",
+    "door-open",
+    "drawer-close",
+    "drawer-open",
+    "faucet-open",
+    "handle-press",
+    "pick-place",
+    "plate-slide",
+    "reach"
+  ],
+  "heldout_tasks": [
+    "window-open",
+    "handle-pull",
+    "push"
+  ],
+  "seeds": [
+    3072
+  ],
+  "data": {
+    "train_episodes_per_task": 600,
+    "validation_episodes_per_task": 50,
+    "test_episodes_per_task": 200,
+    "random_fraction": 0.2,
+    "primitive_budget": 200,
+    "action_repeat": 2,
+    "camera": "corner",
+    "render_size": 256,
+    "history_frames": 16,
+    "goal_candidate_multiplier": 2
+  },
+  "encoder": {
+    "repository": "facebookresearch/vjepa2",
+    "revision": "204698b45b3712590f06245fbfba32d3be539812",
+    "architecture": "vit_large",
+    "checkpoint_url": "https://dl.fbaipublicfiles.com/vjepa2/vjepa2_1_vitl_dist_vitG_384.pt",
+    "checkpoint_key": "ema_encoder",
+    "input_size": 256,
+    "token_grid": [
+      2,
+      4,
+      4
+    ],
+    "dim": 1024,
+    "batch_size": 2,
+    "checkpoint_sha256": "7ea9b7cb4a75d10644a8a8d42cff9e177b10dca8f02173f0eaf2b0bed82838c6"
+  },
+  "model": {
+    "width": 256,
+    "depth": 4,
+    "heads": 4,
+    "segments": 12,
+    "chunk_steps": 5,
+    "macro_dim": 4,
+    "state_parameterization": "endpoint",
+    "state_representation": "static"
+  },
+  "training": {
+    "world_steps": 20000,
+    "planner_steps": 20000,
+    "global_batch": 64,
+    "micro_batch": 4,
+    "workers": 2,
+    "learning_rate": 0.0001,
+    "world_learning_rate": 0.001,
+    "weight_decay": 0.05,
+    "gradient_clip": 1.0,
+    "consistency_weight": 0.1,
+    "consistency_batch": 2,
+    "consistency_steps": 8,
+    "consistency_warmup": 2000,
+    "log_every": 50,
+    "checkpoint_every": 1000,
+    "eval_every": 5000,
+    "validation_episodes_per_task": 8,
+    "budget_seconds": 7200,
+    "validation_rounds": 4
+  },
+  "evaluation": {
+    "candidates": 32,
+    "flow_steps": 8,
+    "cem_candidates": 100,
+    "cem_elites": 10,
+    "cem_iterations": 3,
+    "short_horizon": 5,
+    "long_horizon": 30,
+    "refine_candidates": 32,
+    "refine_elites": 8,
+    "refine_iterations": 3,
+    "budget_primitive": 200,
+    "bootstrap_samples": 10000,
+    "controller_seconds_per_episode": 10.0,
+    "proposal_scoring": "continuous",
+    "waypoint_weight": 0.1
+  },
+  "methods": [
+    "execution_revision"
+  ],
+  "primary_method": "execution_revision",
+  "primary_baseline": "leflow_adapted",
+  "wandb": {
+    "project": "flow-jepa-metaworld",
+    "mode": "online"
+  },
+  "execution": {
+    "training_enabled": true,
+    "test_enabled": false,
+    "note": "User authorizes one fresh execution_revision run: prefix scoring, causal stall feedback, shifted plan reuse, full local-window coverage. Same seed/data/budgets/validation; no baselines, variants or final tests."
+  },
+  "controller_grounded": {
+    "width": 256,
+    "depth": 3,
+    "mixtures": 4,
+    "optimization_gpu_seconds": 28800,
+    "world_sha256": "ae3f910da43f0a43dd65945394444a0b11719ed042cdacffacc2faaf824ec5a3",
+    "anchors": 8,
+    "candidates_per_anchor": 4,
+    "controller_rounds": 3,
+    "prefix_steps": 1,
+    "local_steps": 5,
+    "training_world_weight": 0.1,
+    "goal_offsets": [
+      5,
+      10,
+      20,
+      40,
+      60
+    ]
+  },
+  "latent_revision": {
+    "history_steps": 4,
+    "workspace_slots": 4,
+    "reasoning_steps": 4,
+    "error_scale": 0.02,
+    "correction_bound": 0.1,
+    "calibration_weight": 0.1
+  },
+  "diagnostics": {
+    "trajectory_case_ids": [
+      "validation/coffee-button/00000",
+      "validation/reach/00003",
+      "validation/door-close/00000",
+      "validation/dial-turn/00000",
+      "validation/drawer-close/00004",
+      "validation/handle-press/00000",
+      "validation/pick-place/00000",
+      "validation/assembly/00000",
+      "validation/faucet-open/00003",
+      "validation/reach/00005"
+    ]
+  },
+  "execution_revision": {
+    "prefix_weight": 0.5,
+    "stall_memory": 8,
+    "stall_min_failures": 3,
+    "stall_state_radius": 0.005,
+    "stall_target_radius": 0.005,
+    "stall_decay": 0.8,
+    "stall_penalty_cap": 0.02
+  }
+}

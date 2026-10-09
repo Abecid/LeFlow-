@@ -20,7 +20,9 @@ def main(a):
     lock=(cache/'coordinator.lock').open('a+')
     fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
     root, repo = record/'campaign', record/'repo'
-    config_name='flow_metaworld_revision.json' if a.variant=='latent_revision' else 'flow_metaworld_execution.json'
+    config_name={'controller_grounded':'flow_metaworld_execution.json',
+                 'latent_revision':'flow_metaworld_revision.json',
+                 'execution_revision':'flow_metaworld_aligned.json'}[a.variant]
     c=config(repo/'config'/config_name)
     world=previous/'campaign/runs/world_3072/best.pt'
     run_dir=root/'runs'/f'{a.variant}_3072'
@@ -56,8 +58,11 @@ def main(a):
     with (record/'tests.log').open('a') as log:
         subprocess.run([sys.executable,'-m','unittest','discover','-s','tests','-p','test_execution.py','-v'],
                        env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
-        if a.variant=='latent_revision':
+        if a.variant in ('latent_revision','execution_revision'):
             subprocess.run([sys.executable,'-m','unittest','discover','-s','tests','-p','test_latent_revision.py','-v'],
+                           env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
+        if a.variant=='execution_revision':
+            subprocess.run([sys.executable,'-m','unittest','discover','-s','tests','-p','test_execution_revision.py','-v'],
                            env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
     if not Path(bank).exists():
         status('building_train_only_route_index')
@@ -100,7 +105,7 @@ def main(a):
 if __name__=='__main__':
     p=argparse.ArgumentParser()
     for name in ('record','previous','cache'):p.add_argument('--'+name,required=True)
-    p.add_argument('--variant',choices=['controller_grounded','latent_revision'],default='controller_grounded')
+    p.add_argument('--variant',choices=['controller_grounded','latent_revision','execution_revision'],default='controller_grounded')
     args=p.parse_args()
     try:main(args)
     except Exception as error:

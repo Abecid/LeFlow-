@@ -3811,3 +3811,20 @@ continue-flow-jepa-campaign-and-preserve-results was then set toPAUSED through
 the app; saved status was rechecked and its prompt/schedule/target preserved.
 No new campaign is scheduled. Final report text, case inventories, checkpoint
 provenance and compute totals were checked against the completed source records.
+
+
+## October 9 — execution-aligned repair authorized and implemented
+
+The user authorized one fresh execution_revision run after reviewing the77/104
+latent-revision result and its failure modes. Registered prefix/terminal scoring,
+causal temporary stall penalties, shifted-plan reuse and repaired short-window
+coverage in EXECUTION_REVISION_RUN.md. Same6222 eligible episodes, seed3072,
+global64,20k/28800 GPU-second caps, fixed104 validations and10s/200-action limits.
+The start/goal sampling distribution changes explicitly. No baseline rerun,
+extra seed/variant/ablation or final test is queued.
+
+Initial server CPU verification passed all14 behavioral checks. A strengthened
+second-decision execution-handoff assertion and populated-memory full-size
+preflight will be checked again on the exact frozen launch source. All8 A800
+GPUs were verified idle; shared storage had577GiB and local scratch2.0TiB free.
+The dataset/cache is reused; no new dataset processing is needed.

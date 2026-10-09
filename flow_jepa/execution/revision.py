@@ -13,7 +13,7 @@ from .model import ChunkPolicy
 
 
 class RevisionSegments(Segments):
-    def __getitem__(self, index):
+    def sample_spec(self, index):
         # Preserve the previous sampler's task/episode/start and goal draws.
         rng = np.random.default_rng(np.random.SeedSequence([self.seed, int(index)]))
         rows = self.tasks[self.names[int(rng.integers(len(self.names)))]]
@@ -24,6 +24,10 @@ class RevisionSegments(Segments):
         start = int(rng.integers(limit + 1))
         grng = np.random.default_rng(np.random.SeedSequence([self.seed, int(index), 1701]))
         delta = int(grng.choice([5, 10, 20, 40, 60]))
+        return row, start, delta
+
+    def __getitem__(self, index):
+        row, start, delta = self.sample_spec(index)
         history = self.c['latent_revision']['history_steps']
         left = max(0, start-history)
         with h5py.File(self.root/row['path'], 'r') as f:

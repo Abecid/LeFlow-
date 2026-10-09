@@ -1,5 +1,15 @@
 # Experiment continuity
 
+- Latest user authorization: implement the diagnosed execution-alignment,
+  repeated-stall, plan-reuse and sampling-coverage fixes, then run ONE fresh
+  `execution_revision` candidate. This supersedes the completed-run hold for
+  this iteration. Read docs/EXECUTION_REVISION_RUN.md. Preserve seed3072,
+  global64,20k-update/28,800 optimization GPU-second ceilings, same episodes,
+  four fixed104 validations and10s/200-action limits. Use all8 idle GPUs;
+  no baseline reruns, additional seeds, variants, ablations or final tests.
+  Preserve prior frozen execution trees and report the changed sampling
+  distribution explicitly. Publish code, results and negative findings.
+
 - Latent-revision iteration completed October 9, 22:39 UTC: one fresh seed3072
   run, 20,000 updates and four fixed104 validations (73/75/74/77). Selected20k
   scores77/104 versus the preserved controller-grounded79/104 reference. Read
