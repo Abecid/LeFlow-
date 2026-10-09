@@ -1,0 +1,26 @@
+{
+  "bank_states": 130662,
+  "batch_loss": 4.040409564971924,
+  "frozen_world_unchanged": true,
+  "full_controller_latency_ms": [
+    74.98674653470516,
+    69.61818411946297,
+    69.52861323952675,
+    71.08980417251587,
+    69.60216723382473
+  ],
+  "gpu_count": 1,
+  "gpu_hours": 0.005569234532304108,
+  "max_gpu_gib": 9.458049297332764,
+  "mean_ms": 70.9651030600071,
+  "optimizer_updates": 0,
+  "parameters": 2716228,
+  "parts": {
+    "action_nll": 4.036571502685547,
+    "endpoint_loss": 0.060312699526548386,
+    "prefix_loss": 0.016451846808195114
+  },
+  "seconds": 20.049243865534663,
+  "simulator_episodes": 0,
+  "training_examples_only": true
+}

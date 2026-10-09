@@ -1,0 +1,7 @@
+{
+  "bank_dense_strided_bitwise_examples": 4,
+  "gpu_seconds": 0,
+  "optimizer_updates": 0,
+  "passed": true,
+  "window_action_and_state_examples": 8
+}

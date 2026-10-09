@@ -141,3 +141,19 @@ tests could not import h5py; they will run in the established server environment
 Real-data bounded forward/backward and full encoder/controller latency checks
 are required before launching optimization. Results and exact source identity
 will be appended after verification.
+
+## Verified launch
+
+All four behavioral tests passed in the established server environment. Eight
+sampled window/action checks and four raw-bank bitwise checks passed. The
+training-data-only preflight measured70.97ms average full controller latency,
+9.46GiB peak GPU memory and zero optimizer updates/simulator episodes. See
+[preflight evidence](reports/20261009-controller-grounded/preflight.json).
+CPU index construction was changed from serialized HDF5 threads to16 processes
+and exact dense-read/subsample operations; source features are unchanged.
+
+Source `74a0a715cc393ba26285deb4571006ee7bc4d286` is frozen in the isolated
+server checkout. Eight-GPU training began October9 at19:25UTC, with
+[W&B run s12cr0yl](https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/s12cr0yl).
+The data/window/index evidence is preserved beside the preflight report.
+First evaluation remains pending as of the initial launch report.

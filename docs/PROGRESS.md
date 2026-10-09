@@ -1,5 +1,37 @@
 # Active campaign progress
 
+## Controller-grounded iteration running — October 9, 12:29 PM Pacific
+
+The user explicitly authorized one first implementation/training/evaluation
+iteration in the chosen direction. [The implemented formulation](CONTROLLER_GROUNDED_RUN.md)
+selects a subgoal jointly with its actual bounded local-search response and
+executes that response's prefix. It trains one2.716M-parameter mixture policy,
+with observed action/prefix/endpoint supervision, keeping the selected world
+and image cache frozen. It omits the earlier independent coarse predictor.
+Novelty and physical reachability remain hypotheses, not established claims.
+
+Execution source is frozen at `74a0a715cc393ba26285deb4571006ee7bc4d286` in
+`/home/mtxu/adam/LeFlow-experiments/20261009-controller-grounded/repo`.
+Coordinator1723319 launched8-GPU training at19:25:33UTC. Run
+[s12cr0yl](https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/s12cr0yl)
+had passed2600 updates at roughly640 examples/second at19:29UTC. Global batch64,
+seed3072,20k-update/28,800GPU-second caps and four fixed104-case validations
+are retained. No validation outcome is available at this snapshot. Baselines
+and tests remain untouched; no automatic subsequent variant is scheduled.
+
+All four behavioral tests passed on the server. Eight sampled windows/actions
+match the old sampler exactly; four route-bank samples match strided source
+reads bitwise. The initial threaded HDF5 index build was stopped after184CPU
+wall seconds, before any GPU work, and preserved. Independent-process dense
+reads completed the identical index in28.02CPU wall seconds. It contains6222
+training episodes,130662 states and209109 routes, occupying8.003GiB under/tmp.
+A one-GPU training-data-only preflight made no optimizer updates or simulator
+calls: full encoder/controller latency averaged70.97ms over five timed calls,
+peak memory9.46GiB, and cost0.005569GPU-hours. This is a latency check, not a
+validation speed or task-success claim. Exact evidence is under
+[the run report directory](reports/20261009-controller-grounded/preflight.json).
+
+
 ## Contribution audit — October 9, research positioning correction
 
 The user requires a central new approach, with prior methods serving supporting

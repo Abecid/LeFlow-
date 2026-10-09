@@ -1,0 +1,11 @@
+{
+  "bytes": 8593428916,
+  "episodes": 6222,
+  "manifest": "d168cd83b6f92dd4cc8e2e5033ebfed6f7e73e3d58614021f96aa43b0081560c",
+  "preparation_cpu_seconds": 28.023152569308877,
+  "protocol": "86ef8d4d14ec2b1daaae38bb697bb306b9ba32ad2394e7e2ebba724c2b4309d8",
+  "routes": 209109,
+  "sha256": "1642bf4598b694a46866c8aedecaa09b988ff4fde915032990744dce5aeea0b2",
+  "states": 130662,
+  "train_only": true
+}
