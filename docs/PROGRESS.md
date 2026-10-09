@@ -1,5 +1,27 @@
 # Active campaign progress
 
+## Next formulation — October 9, broader literature and code review
+
+[The concrete next-method design](NEXT_METHOD_FORMULATION.md) recommends one
+candidate: training-only demonstration retrieval, continuous action-conditioned
+coarse checks, one-pass mixture action proposals, and five-step verification
+with the selected frozen fine world. The encoder/cache remain unchanged; the
+two new learned components share the original method allowance. This refines
+the earlier H-JEPA direction: no abstract-state metric or regularizer is added.
+
+The broader review includes Anchored Planning, Hi-LeWM, SAGE, TD-JEPA, Planning
+Limits, RC-aux and Qantara, with pinned official code where inspected. Key
+transfer limits are explicit: demonstrated goal duration/proprioception are
+unavailable here; temporal ranking need not improve manipulation; observed
+anchors and empirical actions are support evidence, not executable guarantees.
+The formulation specifies retrieval, objectives, action scoring, compute/data
+constraints, a latency target and failure logging. No new success is claimed.
+
+This checkpoint is research/design only: no implementation, GPU benchmark,
+training, baseline rerun, ablation, simulator diagnostic or final test was
+launched. The completed campaign, 17/104 result, frozen references and paused
+monitor remain unchanged. New execution must preserve the hold in AGENTS.md.
+
 ## Literature review — October 9, H-JEPA and EB-JEPA
 
 Reviewed both user-linked papers and pinned official implementations against
