@@ -1,0 +1,10 @@
+{
+  "checkpoint": 20000,
+  "images_inspected": 10,
+  "resolution": "1536x326, each complete contact sheet",
+  "readability": "All captions and panels readable; no clipping, overlap or missing glyphs",
+  "bytes_match_export": true,
+  "source_index_sha256": "0497b756bbb4583ab9080f16ceb359173c8996fc6d04e93499ff708b74eb8442",
+  "model_calls": 0,
+  "simulator_calls": 0
+}

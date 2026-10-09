@@ -1,0 +1,46 @@
+{
+  "checked_utc": "2026-10-09T22:39:59.022945+00:00",
+  "complete": {
+    "best": 0.7403846153846154,
+    "best_step": 20000,
+    "optimization_gpu_hours": 3.2435090097784998,
+    "step": 20000,
+    "stop_reason": "update_limit",
+    "validation_gpu_hours": 2.0474755409442715,
+    "validation_steps": [
+      5000,
+      10000,
+      15000,
+      20000
+    ],
+    "wall_seconds": 2407.5636018346995
+  },
+  "checkpoints": {
+    "best.pt": {
+      "step": 20000,
+      "sha256": "cbe214dc379c0f7078817bdef52aee7fa9da30f7f669a9acca6d19a2529dacfe",
+      "parameters": 4531782
+    },
+    "last.pt": {
+      "step": 20000,
+      "sha256": "a6d4cd3fe50699940d1eb0173718dc8d5e03ddba245a105646efa2956e3b4bbd",
+      "parameters": 4531782
+    }
+  },
+  "source_code": "899f8f2564e011ae87065a70acf28c50dade9997",
+  "working_tree_clean": true,
+  "manifest_unchanged": true,
+  "world_file_unchanged": true,
+  "bank_hash_verified": true,
+  "all_round_case_identities_match": true,
+  "optimizer_budget_verified": true,
+  "unique_training_metric_steps_verified": true,
+  "all_registered_validation_metrics_logged": true,
+  "causal_history_lengths_verified": true,
+  "conservative_score_penalties_verified": true,
+  "reserved_interval_seconds": 2448.35934,
+  "other_reserved_occupancy_gpu_seconds_upper_bound": 519.4082654214362,
+  "occupancy_basis": "Eight held GPUs from allocation metadata mtime to normal coordinator completion, minus measured optimization, evaluation and one-GPU preflight. Includes loading/file IO and shutdown; not cluster billing.",
+  "final_tests_read": false,
+  "model_or_simulator_calls": 0
+}

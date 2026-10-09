@@ -1,5 +1,5 @@
 {
-  "selected_step": 10000,
+  "selected_step": 20000,
   "rounds": [
     {
       "step": 5000,
@@ -1248,6 +1248,380 @@
           }
         }
       ]
+    },
+    {
+      "step": 20000,
+      "successes": 77,
+      "mean_selected_prefix_correction": 0.001440898114957973,
+      "mean_selected_terminal_correction": -0.00208882063815215,
+      "positive_terminal_penalty_count": 827,
+      "changed_raw_pool_anchor_count": 23,
+      "raw_positive_count": 5216,
+      "raw_false_positive_count": 1267,
+      "corrected_false_positive_count": 878,
+      "failures_with_raw_optimistic_nonprogressing_tail": 18,
+      "failures_with_corrected_optimistic_nonprogressing_tail": 12,
+      "failures_with_non_decreasing_final_goal_cost_in_tail": 19,
+      "failures_with_positive_local_progress_but_non_decreasing_final_goal_cost": 3,
+      "tails": [
+        {
+          "id": "validation/assembly/00001",
+          "actual_target_progress": 0.0004656706005334854,
+          "predicted_target_progress": 0.0029467180567352394,
+          "corrected_target_progress": 0.0023094613693262402,
+          "final_goal_cost_change": 0.0017352253198623657,
+          "direct_goal_rate": 0.0,
+          "final_anchor": {
+            "episode": "train/assembly/00161",
+            "span": 60,
+            "start": 10
+          }
+        },
+        {
+          "id": "validation/assembly/00002",
+          "actual_target_progress": -0.0012247250660469657,
+          "predicted_target_progress": 0.0009557040114151804,
+          "corrected_target_progress": -0.0003956103403317301,
+          "final_goal_cost_change": 0.03268509730696678,
+          "direct_goal_rate": 0.65,
+          "final_anchor": {
+            "episode": "train/assembly/00385",
+            "span": 40,
+            "start": 45
+          }
+        },
+        {
+          "id": "validation/assembly/00003",
+          "actual_target_progress": 0.0032057539608917737,
+          "predicted_target_progress": 0.005648100356522359,
+          "corrected_target_progress": 0.004187064049275298,
+          "final_goal_cost_change": -0.03379381448030472,
+          "direct_goal_rate": 0.0,
+          "final_anchor": {
+            "episode": "train/assembly/00571",
+            "span": 60,
+            "start": 35
+          }
+        },
+        {
+          "id": "validation/assembly/00004",
+          "actual_target_progress": -4.3654128124839384e-05,
+          "predicted_target_progress": 0.0021327087949765356,
+          "corrected_target_progress": 0.0008390192922792936,
+          "final_goal_cost_change": -0.0009914711117744446,
+          "direct_goal_rate": 0.05,
+          "final_anchor": {
+            "direct_goal": true,
+            "episode": null,
+            "span": null,
+            "start": null
+          }
+        },
+        {
+          "id": "validation/assembly/00005",
+          "actual_target_progress": 0.003354590190084357,
+          "predicted_target_progress": 0.005548165326839999,
+          "corrected_target_progress": 0.004182709282950351,
+          "final_goal_cost_change": -0.026553556323051453,
+          "direct_goal_rate": 0.0,
+          "final_anchor": {
+            "episode": "train/assembly/00535",
+            "span": 60,
+            "start": 35
+          }
+        },
+        {
+          "id": "validation/assembly/00007",
+          "actual_target_progress": 0.003780302836706764,
+          "predicted_target_progress": 0.006506917606058873,
+          "corrected_target_progress": 0.004925324924682316,
+          "final_goal_cost_change": -0.07375141978263855,
+          "direct_goal_rate": 0.0,
+          "final_anchor": {
+            "episode": "train/assembly/00456",
+            "span": 20,
+            "start": 45
+          }
+        },
+        {
+          "id": "validation/door-open/00003",
+          "actual_target_progress": -0.00022152752468460485,
+          "predicted_target_progress": 0.0027866521360058534,
+          "corrected_target_progress": 0.0013216104554502589,
+          "final_goal_cost_change": 0.0009105205535888672,
+          "direct_goal_rate": 0.0,
+          "final_anchor": {
+            "episode": "train/door-open/00278",
+            "span": 60,
+            "start": 10
+          }
+        },
+        {
+          "id": "validation/faucet-open/00001",
+          "actual_target_progress": -0.0020207411756640987,
+          "predicted_target_progress": 0.006752435117959976,
+          "corrected_target_progress": 0.005047786784799476,
+          "final_goal_cost_change": 0.08474791049957275,
+          "direct_goal_rate": 0.35,
+          "final_anchor": {
+            "episode": "train/faucet-open/00294",
+            "span": 40,
+            "start": 30
+          }
+        },
+        {
+          "id": "validation/faucet-open/00002",
+          "actual_target_progress": -0.003528903581594166,
+          "predicted_target_progress": 0.012819547794367137,
+          "corrected_target_progress": 0.010170521312638334,
+          "final_goal_cost_change": 0.11793606728315353,
+          "direct_goal_rate": 0.2,
+          "final_anchor": {
+            "episode": "train/faucet-open/00294",
+            "span": 40,
+            "start": 30
+          }
+        },
+        {
+          "id": "validation/faucet-open/00003",
+          "actual_target_progress": -0.0006462913986883665,
+          "predicted_target_progress": 0.0033809475992855275,
+          "corrected_target_progress": 0.0015942411203133432,
+          "final_goal_cost_change": 0.025789037346839905,
+          "direct_goal_rate": 0.0,
+          "final_anchor": {
+            "episode": "train/reach/00599",
+            "span": 60,
+            "start": 25
+          }
+        },
+        {
+          "id": "validation/faucet-open/00005",
+          "actual_target_progress": -0.000308091507146233,
+          "predicted_target_progress": 0.0014142923449215136,
+          "corrected_target_progress": -8.602303109670941e-05,
+          "final_goal_cost_change": 0.00727853924036026,
+          "direct_goal_rate": 0.0,
+          "final_anchor": {
+            "episode": "train/assembly/00581",
+            "span": 40,
+            "start": 45
+          }
+        },
+        {
+          "id": "validation/faucet-open/00006",
+          "actual_target_progress": -0.0004966800150118376,
+          "predicted_target_progress": 0.0013511196563118382,
+          "corrected_target_progress": -0.0003151183849886844,
+          "final_goal_cost_change": 0.008471004664897919,
+          "direct_goal_rate": 0.5,
+          "final_anchor": {
+            "episode": "train/assembly/00581",
+            "span": 20,
+            "start": 45
+          }
+        },
+        {
+          "id": "validation/pick-place/00000",
+          "actual_target_progress": -2.595576408662294e-05,
+          "predicted_target_progress": 0.0016141176027686971,
+          "corrected_target_progress": 0.0004453009092494061,
+          "final_goal_cost_change": -0.0011572837829589844,
+          "direct_goal_rate": 0.0,
+          "final_anchor": {
+            "episode": "train/pick-place/00442",
+            "span": 60,
+            "start": 15
+          }
+        },
+        {
+          "id": "validation/pick-place/00001",
+          "actual_target_progress": -0.0002932558326344741,
+          "predicted_target_progress": 0.0019664382071871507,
+          "corrected_target_progress": 0.0007992108401499296,
+          "final_goal_cost_change": 0.005576618015766144,
+          "direct_goal_rate": 0.0,
+          "final_anchor": {
+            "episode": "train/reach/00510",
+            "span": 5,
+            "start": 25
+          }
+        },
+        {
+          "id": "validation/pick-place/00002",
+          "actual_target_progress": -0.0005264195956681904,
+          "predicted_target_progress": 0.003735458968501342,
+          "corrected_target_progress": 0.0022681755454916704,
+          "final_goal_cost_change": 0.013137668371200562,
+          "direct_goal_rate": 0.3,
+          "final_anchor": {
+            "episode": "train/reach/00378",
+            "span": 40,
+            "start": 25
+          }
+        },
+        {
+          "id": "validation/pick-place/00003",
+          "actual_target_progress": -0.0006494761297577306,
+          "predicted_target_progress": 0.0020222932492431843,
+          "corrected_target_progress": 0.0007275346862642389,
+          "final_goal_cost_change": 0.015524514019489288,
+          "direct_goal_rate": 0.4,
+          "final_anchor": {
+            "episode": "train/reach/00271",
+            "span": 60,
+            "start": 25
+          }
+        },
+        {
+          "id": "validation/pick-place/00004",
+          "actual_target_progress": -0.002198665157744759,
+          "predicted_target_progress": 0.008409916570312098,
+          "corrected_target_progress": 0.006895821541547775,
+          "final_goal_cost_change": 0.0466129332780838,
+          "direct_goal_rate": 0.2,
+          "final_anchor": {
+            "episode": "train/reach/00197",
+            "span": 40,
+            "start": 40
+          }
+        },
+        {
+          "id": "validation/pick-place/00005",
+          "actual_target_progress": 6.802674186857123e-05,
+          "predicted_target_progress": 0.0022894138176190225,
+          "corrected_target_progress": 0.0010411745231402548,
+          "final_goal_cost_change": 0.0056171715259552,
+          "direct_goal_rate": 0.0,
+          "final_anchor": {
+            "episode": "train/reach/00378",
+            "span": 40,
+            "start": 25
+          }
+        },
+        {
+          "id": "validation/pick-place/00006",
+          "actual_target_progress": -0.0012803038484171818,
+          "predicted_target_progress": 0.0025908803861392172,
+          "corrected_target_progress": 0.0012733914742344304,
+          "final_goal_cost_change": 0.024793844670057297,
+          "direct_goal_rate": 0.0,
+          "final_anchor": {
+            "episode": "train/reach/00343",
+            "span": 5,
+            "start": 35
+          }
+        },
+        {
+          "id": "validation/pick-place/00007",
+          "actual_target_progress": 1.1110188145386546e-05,
+          "predicted_target_progress": 0.0025615398036806206,
+          "corrected_target_progress": 0.0012561176952562835,
+          "final_goal_cost_change": 0.007170587778091431,
+          "direct_goal_rate": 0.0,
+          "final_anchor": {
+            "episode": "train/reach/00378",
+            "span": 40,
+            "start": 25
+          }
+        },
+        {
+          "id": "validation/plate-slide/00000",
+          "actual_target_progress": 1.3640542563639188e-05,
+          "predicted_target_progress": 0.002928814605662697,
+          "corrected_target_progress": 0.0015892206544154568,
+          "final_goal_cost_change": -0.0013896822929382324,
+          "direct_goal_rate": 0.0,
+          "final_anchor": {
+            "episode": "train/plate-slide/00387",
+            "span": 60,
+            "start": 10
+          }
+        },
+        {
+          "id": "validation/plate-slide/00004",
+          "actual_target_progress": 1.3000576903945521e-05,
+          "predicted_target_progress": 0.0030834763065764777,
+          "corrected_target_progress": 0.0017039699381903599,
+          "final_goal_cost_change": -0.0003189891576766968,
+          "direct_goal_rate": 0.0,
+          "final_anchor": {
+            "episode": "train/plate-slide/00215",
+            "span": 60,
+            "start": 10
+          }
+        },
+        {
+          "id": "validation/reach/00001",
+          "actual_target_progress": 6.836368457267159e-05,
+          "predicted_target_progress": 0.0004937864447894849,
+          "corrected_target_progress": -0.0004187323839256638,
+          "final_goal_cost_change": -0.0012989100068807602,
+          "direct_goal_rate": 1.0,
+          "final_anchor": {
+            "direct_goal": true,
+            "episode": null,
+            "span": null,
+            "start": null
+          }
+        },
+        {
+          "id": "validation/reach/00003",
+          "actual_target_progress": -0.00011632228760342849,
+          "predicted_target_progress": 0.00021856307591262616,
+          "corrected_target_progress": -0.0008145171756807127,
+          "final_goal_cost_change": 0.0022101234644651413,
+          "direct_goal_rate": 1.0,
+          "final_anchor": {
+            "direct_goal": true,
+            "episode": null,
+            "span": null,
+            "start": null
+          }
+        },
+        {
+          "id": "validation/reach/00004",
+          "actual_target_progress": -0.0003222640799848657,
+          "predicted_target_progress": 0.00044594685498036837,
+          "corrected_target_progress": -0.0005215966191731001,
+          "final_goal_cost_change": 0.006123017519712448,
+          "direct_goal_rate": 1.0,
+          "final_anchor": {
+            "direct_goal": true,
+            "episode": null,
+            "span": null,
+            "start": null
+          }
+        },
+        {
+          "id": "validation/reach/00006",
+          "actual_target_progress": -0.00027966773823687906,
+          "predicted_target_progress": 0.0003436387173439327,
+          "corrected_target_progress": -0.0005549658580045951,
+          "final_goal_cost_change": 0.005313687026500702,
+          "direct_goal_rate": 1.0,
+          "final_anchor": {
+            "direct_goal": true,
+            "episode": null,
+            "span": null,
+            "start": null
+          }
+        },
+        {
+          "id": "validation/reach/00007",
+          "actual_target_progress": -0.00029909179398888037,
+          "predicted_target_progress": 0.00117587768717816,
+          "corrected_target_progress": 4.4038421229312296e-05,
+          "final_goal_cost_change": 0.005682744085788727,
+          "direct_goal_rate": 1.0,
+          "final_anchor": {
+            "direct_goal": true,
+            "episode": null,
+            "span": null,
+            "start": null
+          }
+        }
+      ]
     }
   ],
   "training_last_500_update_windows": [
@@ -1294,6 +1668,21 @@
         "train/recorded_raw_terminal_mae": 0.0028919837903231384,
         "train/recorded_corrected_terminal_mae": 0.0012608518940396608,
         "system/update_examples_per_second": 883.0634784184665
+      }
+    },
+    {
+      "ending_step": 20000,
+      "entries": 10,
+      "averages": {
+        "train/action_nll": -1.808128297328949,
+        "train/calibration_loss": 0.0037453636527061463,
+        "train/shallow_calibration_loss": 0.003964665508829057,
+        "train/paired_regression": 0.00027765479462686925,
+        "train/recorded_raw_prefix_mae": 0.0019829027936793865,
+        "train/recorded_corrected_prefix_mae": 0.001307655335403979,
+        "train/recorded_raw_terminal_mae": 0.00271638548001647,
+        "train/recorded_corrected_terminal_mae": 0.0011585030355490745,
+        "system/update_examples_per_second": 886.4500142341001
       }
     }
   ],

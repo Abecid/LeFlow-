@@ -1,0 +1,31 @@
+{
+  "checked_utc": "2026-10-09T22:40:11.550170+00:00",
+  "status": "completed_validation_ready_for_analysis",
+  "owned_training_processes": [],
+  "gpu_snapshot": [
+    "0, 0 %, 0 MiB",
+    "1, 0 %, 0 MiB",
+    "2, 0 %, 0 MiB",
+    "3, 0 %, 0 MiB",
+    "4, 0 %, 0 MiB",
+    "5, 0 %, 0 MiB",
+    "6, 0 %, 0 MiB",
+    "7, 0 %, 0 MiB"
+  ],
+  "compute_processes": [],
+  "storage_snapshot": [
+    "Filesystem      Size  Used Avail Use% Mounted on",
+    "overlay         3.5T  1.6T  2.0T  44% /",
+    "quarkfs_client   80T   80T  578G 100% /home"
+  ],
+  "wandb_finish_evidence": [
+    "wandb: \ud83d\ude80 View run at https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/5thxkk6y",
+    "wandb: \ud83d\ude80 View run latent_revision_3072 at: https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/5thxkk6y",
+    "wandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)",
+    "wandb: Find logs at: /home/mtxu/adam/LeFlow-experiments/20261009-latent-revision/campaign/runs/latent_revision_3072/wandb/run-20261009_215927-5thxkk6y/logs"
+  ],
+  "normal_completion_file": true,
+  "new_runs_launched": 0,
+  "model_calls": 0,
+  "simulator_calls": 0
+}

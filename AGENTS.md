@@ -1,5 +1,14 @@
 # Experiment continuity
 
+- Latent-revision iteration completed October 9, 22:39 UTC: one fresh seed3072
+  run, 20,000 updates and four fixed104 validations (73/75/74/77). Selected20k
+  scores77/104 versus the preserved controller-grounded79/104 reference. Read
+  docs/LATENT_REVISION_RESULTS.md and its final audit/compute ledger. W&B synced,
+  owned workers exited and all8 GPUs were idle at22:40 UTC. Preserve this run,
+  all saved references and sealed tests. No automatic additional training,
+  variants, seeds, ablations, baseline reruns or final tests are authorized.
+  Later bullets are historical; the one-run authorization is fulfilled.
+
 - Latest authorization, October 9: implement and run ONE fresh `latent_revision`
   candidate using the accepted execution-error-conditioned latent reasoning
   direction. This supersedes the completed-run hold for this iteration only.

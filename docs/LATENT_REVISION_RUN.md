@@ -1,5 +1,10 @@
 # Execution-error-conditioned latent revision: first candidate
 
+**Completed October 9, 2026.** All four registered validations are finished;
+the selected 20k checkpoint scores 77/104. See the
+[completed comparison and failure analysis](LATENT_REVISION_RESULTS.md).
+The registration and launch record below are preserved as historical evidence.
+
 October 9, 2026. The user explicitly authorized implementing and training one
 fresh candidate under the existing method/data/evaluation allowance. This
 document registers the actual formulation before its first validation result.
@@ -198,3 +203,17 @@ It passed1,600 updates at approximately870–930 examples/second after the full
 objective became active. This is a launch snapshot, not a task-success result;
 the first registered validation is at5,000 updates. Future results will be
 reported against both the saved79/104 controller and historical references.
+
+## Verified completion
+
+The run stopped normally at 20,000 updates after validations of 73, 75, 74 and
+77 successes out of 104. The final checkpoint is selected. Optimization used
+3.243509 aggregate GPU-hours, registered validation 2.047476 GPU-hours and
+preflight 0.005534 GPU-hours. Source, data identity, world and route-bank hashes
+were unchanged. W&B synced; owned workers exited and all eight GPUs were idle
+at the 22:40 UTC health check. No additional run or final test was dispatched.
+
+Best checkpoint: `/home/mtxu/adam/LeFlow-experiments/20261009-latent-revision/campaign/runs/latent_revision_3072/best.pt`.
+Its SHA256 is `cbe214dc379c0f7078817bdef52aee7fa9da30f7f669a9acca6d19a2529dacfe`.
+See the [postrun audit](reports/20261009-latent-revision/postrun-audit.json) and
+[final process/logging snapshot](reports/20261009-latent-revision/final-health.json).

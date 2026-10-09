@@ -1,5 +1,23 @@
 # Active campaign progress
 
+## Latent revision complete — October 9, 3:40 PM Pacific
+
+All 20,000 updates and four validations completed: **73/75/74/77 successes**.
+The selected 20k model scores **77/104 (74.04%)**, below the saved previous
+method's **79/104 (75.96%)**; four cases improve and six regress. Corrected
+executed-prefix MAE falls 28.12%, but terminal penalties change the best anchor
+in the actual sampled pool in only 0.428% of decisions. All 27 failures hit the
+200-action cap; no timeouts. Pick-place remains 0/8, assembly 2/8 and reach 3/8.
+
+[The final report](LATENT_REVISION_RESULTS.md) includes all four rounds, matched
+case comparisons, inspected selected-rollout images, formulation limitations and
+the inherited late-action supervision restriction. It does not establish a task
+benefit from latent reasoning. Optimization used 3.243509 GPUh, validation
+2.047476 GPUh and preflight 0.005534 GPUh; known cumulative components total
+52.377571 GPUh. Other reserved occupancy is separately bounded at 0.144280 GPUh.
+The final CPU audit passed, W&B synced, and all eight GPUs were idle at the
+22:40 UTC health check. No further run or final test is queued.
+
 ## Third latent-revision validation — October 9, 3:30 PM Pacific
 
 The 15k checkpoint scores **74/104**. Current best remains 10k, 75/104, below

@@ -1,34 +1,38 @@
 # Joint flow planning with V-JEPA 2.1 (LeFlow fork)
 
-> Latest scope correction: repeated baseline training and the all-method queue
-> are cancelled. Continue the compatible world, then train only our repaired
-> method and compare validation with frozen historical references. See
-> [ours-only iteration](docs/OURS_ONLY_ITERATION.md). Earlier scheduling details below are historical.
+**Current status, October 9, 2026:** the authorized latent-revision iteration
+is complete. Its four fixed validation rounds score **73, 75, 74 and 77 out of
+104** at 5k, 10k, 15k and 20k updates. The selected 20k checkpoint scores
+**74.04%**, below our previous controller-grounded method's **79/104 (75.96%)**.
+The new method improves executed-prefix prediction calibration, but does not
+improve the primary task-success result.
 
+One fresh seed-3072 policy was trained on all eight A800 GPUs using the same
+6,222 successful expert episodes, global batch 64, 20k-update/8-optimization-GPUh
+ceilings, fixed 104 validation cases and 10-second/200-action controller limits.
+Actual optimization used 3.243509 GPUh; registered validation used 2.047476 GPUh.
+The cached V-JEPA 2.1 encoder features and fine world were frozen. Baselines
+were preserved; no baseline rerun, extra seed, ablation or final test was added.
+The run finished normally and all owned workers exited.
 
-**Current status, October 9, 2026:** the user authorized a fresh matched
-comparison after repairs. The new campaign retrains the shared world model and
-all three learned methods from scratch on the exact original train/evaluation
-episodes, with seed 3072 and unchanged per-model training and controller budgets.
-CEM uses the same newly trained world model. No ablations or extra seeds.
+The current candidate uses an execution-error-conditioned latent workspace,
+a GMM action proposer, supported target retrieval and bounded CEM verification.
+Historical LeFlow/HWM adaptations retain documented implementation differences;
+these development validation comparisons are not corrected-SOTA or final-test
+claims. No further training is queued.
 
-The prior selected validation results were LeFlow 26.0%, ours 22.1%, HWM 7.7%,
-and CEM 6.7%. They describe the old implementation, whose sampler had a confirmed
-noise restriction; they are not results for the repaired models. These methods
-are adaptations, not exact published-SOTA reproductions.
-
-- [Fresh comparison protocol, launch status and failure analysis](docs/REPAIRED_COMPARISON.md)
-- [Repairs and bounded diagnostic findings](docs/REPAIR_RESULTS.md)
-- [Implementation and literature-fidelity audit](docs/EVAL_AUDIT_20261009.md)
+- [Completed latent-revision results and failure analysis](docs/LATENT_REVISION_RESULTS.md)
+- [Registered implementation and resource contract](docs/LATENT_REVISION_RUN.md)
+- [Previous strongest controller-grounded result](docs/CONTROLLER_GROUNDED_RESULTS.md)
+- [Latent-reasoning literature and code review](docs/LARC_APPLICATION_20261009.md)
 - [Progress and preserved experiment evidence](docs/PROGRESS.md)
-- [Original experiment protocol](docs/FLOW_EXPERIMENT.md)
-
-The repaired recipe is enabled by the latest explicit authorization. Old weights
-are not reused as trained repaired-model weights. The original campaign remains
-held, and its partial test outcomes were not used for development.
+- [Historical repair and comparison protocol](docs/REPAIRED_COMPARISON.md)
+- [Implementation and literature-fidelity audit](docs/EVAL_AUDIT_20261009.md)
 
 The research uses frozen V-JEPA 2.1 features for MetaWorld, with **no BTM**.
-Historical BTM scripts remain only for reproducibility.
+Historical BTM scripts remain only for reproducibility. Earlier scheduling
+records are historical; repeated baseline training and the old all-method
+queue remain cancelled. Final tests stay reserved.
 
 Original LeFlow release documentation and attribution follow.
 

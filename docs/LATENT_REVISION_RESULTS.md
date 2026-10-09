@@ -1,168 +1,245 @@
-# Latent revision: results and failure analysis
+# Latent revision: completed results and failure analysis
 
-October 9, 2026. **Training is ongoing; three registered checkpoints are complete.**
-The 10k model scores **75/104 (72.12%)**, up from 73/104 at 5k and still below
-the previous controller-grounded method's 79/104. The 15k checkpoint scores 74/104; the 20k evaluation
-remains pending. Source and the registered algorithm remain unchanged.
+October 9, 2026. **The one authorized run is complete: 20,000 updates and all four
+registered validation rounds.** The selected 20,000-update checkpoint scores
+**77/104 (74.04%)**, below the previous
+controller-grounded method's **79/104 (75.96%)**. Selection follows the registered
+highest-success, earliest-tie rule. Task success within the 10-second controller
+allowance and 200 primitive actions is the primary outcome.
 
-## Third checkpoint: 15,000 updates
+## What was implemented
 
-The third checkpoint scores **74/104**, leaving 10k as the current selection.
-The run continues unchanged to its final registered checkpoint. Factual training
-calibration loss has continued decreasing, without a corresponding increase in
-task success. The [full raw-record analysis](reports/20261009-latent-revision/validation-review.json)
-now covers all three rounds.
+A fresh 4,531,782-parameter policy uses a separate four-slot recurrent workspace
+to condition action proposals on up to four already observed execution errors.
+Four shared refinement iterations run at inference. The workspace is rebuilt
+from causal history each decision; it is not a physical JEPA state or an
+indefinitely persistent hidden state. Factual recorded actions/outcomes supervise
+prefix and terminal cost corrections. No generated action receives a fabricated
+physical-outcome label.
 
-The [training coverage audit](reports/20261009-latent-revision/training-coverage.json)
-confirms an inherited restriction shared with the previous controller-grounded
-method: the 60-control-step sampling horizon limits supervised five-step action
-chunks to the first 90 primitive actions of each 200-action demonstration.
-Later goal states are available; later action targets are omitted. All 480
-assembly and 480 drawer-open expert episodes record first success after index
-80, but drawer-open succeeds consistently. This is a coverage limitation to
-investigate, not a proven cause of failure or of the new method's regression.
+This candidate retains the strongest previous pipeline's **GMM action proposer,
+retrieved targets and bounded CEM search**. It does not add a diffusion action
+head, VLM, GRPO stage or simulator-generated training data. Candidate-specific
+readouts use the workspace; the recurrent workspace itself does not iterate on
+CEM feedback. The actual selection penalty uses only positive terminal-window
+corrections; the signed executed-prefix correction is diagnostic.
 
-## Second checkpoint: 10,000 updates
+The [registered method](LATENT_REVISION_RUN.md) gives the exact objective and
+implementation. [Prior literature and code analysis](LARC_APPLICATION_20261009.md)
+records LARC, RD-VLA, MPCoT and relevant overlap. This is an evidence-motivated
+candidate, not a demonstrated novelty or latent-reasoning contribution.
 
-The same 104 cases produce seven improvements and five regressions relative
-to 5k. Reach rises from 1/8 to 4/8, while assembly falls from 2/8 to 0/8.
-Compared with the saved 79/104 reference, five cases improve and nine regress.
-All 29 failures reach the 200-action cap; none exhausts the controller clock.
+## Same registered comparison, saved references
 
-Across 5,396 observed prefixes, corrections reduce MAE from 0.002907 to
-0.002141 (26.35%). Terminal penalties are positive in 12.78% of decisions and
-change the best anchor in the actual sampled pool in 25/5,500 decisions
-(0.455%). These are chosen-action diagnostics, not evidence that rejected
-candidates would execute better.
+| Update | New successes | New success rate | Previous method at same update | New controller timeouts |
+| --- | ---: | ---: | ---: | ---: |
+| 5,000 | 73/104 | 70.19% | 79/104 | 0 |
+| 10,000 | 75/104 | 72.12% | 78/104 | 0 |
+| 15,000 | 74/104 | 71.15% | 75/104 | 0 |
+| 20,000 | 77/104 | 74.04% | 78/104 | 0 |
 
-All ten [10k contact sheets](reports/20261009-latent-revision/contact-sheets-step-10000/index.json)
-were visually inspected at full resolution and checked against the exported
-bytes. Assembly0 now stalls after its initial approach; reach5 now succeeds
-in 44 actions. Pick-place0 moves toward the target region but leaves the red
-object on the table, visibly different from the registered goal. Faucet-open3
-and reach3 still fail. The other five saved cases succeed. These observations
-are descriptive; sparse views do not establish contact forces or exact grasp
-failure causes.
-
-The earlier checkpoint evidence below is retained explicitly as the **5k**
-analysis. The machine-readable review contains both rounds and the currently
-selected 10k comparison.
-
-## First checkpoint comparison: 5,000 updates
-
-| Method | Selected/saved validation successes |
+| Method | Saved/selected successes |
 | --- | ---: |
 | Previous controller-grounded | 79/104 |
-| New latent revision,5k | 73/104 |
+| New latent revision | 77/104 |
 | Historical LeFlow adaptation | 27/104 |
 | Same-world CEM | 22/104 |
 | Repaired flow | 17/104 |
 | Historical HWM adaptation | 8/104 |
 
-All104 case IDs, reset seeds, episode hashes and model seed3072 match. Relative
-to79/104, four cases become successful and ten regress, a−5.77 percentage-point
-difference. The same-world reference is the important iteration comparison;
-beating the historical adaptations does not establish improvement over our
-strongest method. Historical world/representation/sampler confounds persist.
-No baseline or final test was rerun. Validation is reused for development and
-selection; this is not an unbiased final-test or multi-seed estimate.
+Against the 79/104 reference, **4 cases improve and
+6 regress** (-1.92 percentage
+points). Case IDs, reset seeds, episode hashes and model seed 3072 match across
+all rounds and references. The descriptive paired-reset interval is
+[-7.69,
+3.85] percentage points; it
+does not cover model-seed variation, repeated development or checkpoint selection.
 
-| Task | New5k /8 | Previous selected5k /8 |
+The task is a custom 13-task MetaWorld v3 image-goal benchmark, not standard
+MT10/MT50. The unchanged training split contains 7,800 episodes (6,240 expert,
+1,560 random); this policy and its route bank use the same **6,222 successful
+expert episodes** as the previous candidate. Main sampling and global batch 64
+are preserved, with additional causal history from those same episodes. The
+fixed validation subset is **104 cases, eight per task**, from a 650-case pool.
+The 3,200-case final-test set, including three held-out tasks, stays sealed.
+
+The encoder/cache, normalization and fine-world checkpoint match the previous
+79/104 candidate and same-world CEM. Historical LeFlow/HWM results retain the
+previously documented world/representation/sampler differences. They are saved
+adaptations, not a controlled claim of beating corrected published SOTA.
+No baseline was rerun. Reused validation supports development decisions,
+not an unbiased final-test or long-horizon generalization claim.
+
+| Task | New selected /8 | Previous selected /8 |
 | --- | ---: | ---: |
 | assembly | 2 | 3 |
 | button-press-topdown | 8 | 8 |
 | coffee-button | 8 | 8 |
-| dial-turn | 6 | 7 |
+| dial-turn | 8 | 7 |
 | door-close | 8 | 8 |
 | door-open | 7 | 8 |
 | drawer-close | 8 | 8 |
 | drawer-open | 8 | 8 |
-| faucet-open | 4 | 4 |
+| faucet-open | 3 | 4 |
 | handle-press | 8 | 8 |
 | pick-place | 0 | 1 |
-| plate-slide | 5 | 6 |
-| reach | 1 | 2 |
+| plate-slide | 6 | 6 |
+| reach | 3 | 2 |
 
-All31 failures reach200 primitive actions. None exhausts the10-second controller
-allowance. Mean decision latency is85.55ms, p95 is89.08ms, and mean cumulative
-controller time is4.675s per episode. The regression is not explained by clock
-exhaustion. Sixty-seven cases succeed within100 primitive actions.
+At the selected checkpoint, all 27 failures reach the action
+cap, with 0 controller timeouts. Mean decision latency is
+85.21 ms, p95 is
+88.94 ms, and mean cumulative controller time
+is 4.398 seconds per case.
+71 cases succeed within 100 actions.
+Return is logged but is not the primary comparison: episode lengths differ.
 
-## Prediction improves, but its effect on selection is limited
+## Better prediction does not establish better control
 
-Across5,579 observed executed prefixes, the corrected progress estimate reduces
-mean absolute error from0.002690 to0.001923 (28.52%). Predicted-positive prefixes
-with nonpositive observed progress decrease from25.84% of raw-positive estimates
-to19.80% of corrected-positive estimates. The denominators differ:5,537 raw and
-4,667 corrected positive predictions. Correlation rises from0.714 to0.728.
-These are paired diagnostic measurements on the same chosen actions and
-dependent decisions, not counterfactual candidate ranking or task success.
+| Update | Raw prefix MAE | Corrected prefix MAE | Positive terminal penalty | Changed best anchor in sampled pool |
+| --- | ---: | ---: | ---: | ---: |
+| 5,000 | 0.002690 | 0.001923 | 9.06% | 0.194% |
+| 10,000 | 0.002907 | 0.002141 | 12.78% | 0.455% |
+| 15,000 | 0.002584 | 0.001861 | 15.04% | 0.516% |
+| 20,000 | 0.002665 | 0.001916 | 15.41% | 0.428% |
 
-The controller's actual conservative penalty applies to the **terminal-window**
-correction. It is positive for515/5,683 decisions (9.06%) and averages only
-0.0000595 cosine-cost units. Corrections change the best anchor in the actual
-sampled candidate pool in11/5,683 decisions (0.194%). This metric does not count
-changes to actions within the same anchor or changes to the generated pool;
-it is not a complete causal effect estimate.
+For the selected checkpoint, corrections reduce error on 5,264
+observed executed prefixes by **28.12%**.
+Raw predictions classify 1267/5216
+positive-progress prefixes incorrectly; corrected predictions classify
+878/4619 incorrectly.
+These denominators differ. Correlation changes from
+0.712 to
+0.731. All are dependent, chosen-action traces,
+not observed outcomes or ranking accuracy for rejected candidates.
 
-Mean predicted prefix cost correction is+0.001601, while mean terminal correction
-is−0.002461; the conservative rule clips negative terminal corrections to zero.
-Thus the useful prefix estimate is largely diagnostic in this formulation,
-while decision penalties operate on a different, unexecuted horizon. This is
-a concrete objective-alignment weakness to investigate after the run. It does
-not prove that a particular alternative score would recover the ten regressions.
+The actual terminal penalty is positive in
+827/5368 decisions and averages
+0.0001840 cosine-cost units. It changes the best
+anchor within the sampled pool in only
+23/5368 decisions
+(0.428%). This excludes action
+changes within the same anchor and changes to the sampled pool; it is not the
+complete causal effect of the new model.
 
-On the last500 logged training updates before5k, deep and shallow calibration
-losses average0.004892 and0.005013. Their small difference does not establish
-a task-level benefit from recurrence or memory. This training diagnostic is
-already part of the objective; no extra depth ablation was run.
+Mean selected prefix correction is +0.001441,
+while mean terminal correction is -0.002089.
+The conservative score clips negative terminal corrections to zero. This exposes
+a concrete alignment weakness: the useful correction to the executed prefix
+is diagnostic, while ranking uses a different, unexecuted horizon. Improved
+forecasting therefore need not improve the action that is actually executed.
+The run does not isolate whether recurrence, memory, changed proposals or
+calibration causes its task-level changes; no extra ablation was run.
 
-## Stalling and visual evidence
+## Failure modes and coverage limits
 
-Twenty of31 failures have positive mean raw predicted progress but nonpositive
-observed progress in their last20 decisions. Late stalling remains. The new
-mean action likelihood loss improves during training, but the task-success
-result is worse; a better supervised proxy alone is insufficient.
+In the last 20 decisions, 18
+failed cases retain positive mean raw predicted target progress while mean
+observed target progress is nonpositive. The corrected forecast still does so
+in 12 cases.
+19 failures end that
+window no closer to the final goal in JEPA distance; among them,
+3
+show positive mean progress toward their changing local targets. These are
+latent-distance diagnostics between pre-decision observations, not physical
+reward or proof that every necessary intermediate setback is wrong.
 
-Ten preselected saved-rollout contact sheets were rendered without new model
-or simulator calls, checked against registered initial images, inspected at
-full resolution, and byte-verified in the published copy. All panels and labels
-are readable. The [image index](reports/20261009-latent-revision/contact-sheets-step-5000/index.json)
-records exact case IDs, steps and source archives.
+A code/manifest audit found a shared coverage restriction: both candidates
+retain the old 60-control-step sampling window, although the action head
+supervises only five steps. All eligible demonstrations have 100 control
+blocks. Main starts are at most block 40, and supervised chunks end by primitive
+action 90 of 200. Later goal/context states are available; later action targets
+are omitted. Of the 6,222 eligible episodes, 1,152 record first success after
+primitive index 80. This includes all 480 assembly and all 480 drawer-open
+episodes. Drawer-open still succeeds consistently, so this is an inherited
+coverage limitation, not a sufficient explanation of failure or of the new
+method's regression. See [training coverage](reports/20261009-latent-revision/training-coverage.json).
 
-- **Pick-place0 fails:** sampled frames show an initial approach, followed by
-  very similar poses from50 to200 actions, different from the registered goal.
-  Its last20 decisions use retrieved anchors; mean observed target progress is
-  +0.000193 versus raw predicted+0.002068. The views do not establish a precise
-  grasp/contact failure mechanism.
-- **Reach3 and reach5 fail:** late poses remain offset from the goal. Their last
-  20 decisions all choose the direct goal. Mean observed progress is−0.000204
-  and−0.000245, versus raw predicted+0.000616 and+0.000487, respectively.
-- **Faucet-open3 fails:** late frames show little visible change. The final
-  retrieved anchor is from `train/reach/00599`, with a60-step route span. Its
-  tail mean observed progress is−0.000410 versus predicted+0.001722. Cross-task
-  retrieval is permitted; this example motivates inspecting object-specific
-  support, not declaring every cross-task anchor invalid.
-- The other six inspected cases succeed: assembly0(86 actions), coffee-button0
-  (38), dial-turn0(89), door-close0(66), drawer-close4(78), handle-press0(15).
-  These are the fixed saved cases, not a representative success sample.
+Expert-history calibration also differs from policy-history recovery and
+arbitrary generated actions. The available traces cannot supply true outcomes
+for unexecuted chunks. These gaps are candidates for the next design, not
+license to treat world predictions as physical labels.
 
-No observed outcomes exist for rejected candidates or unexecuted full chunks.
-Training corrections on factual expert transitions remains different from
-calibrating arbitrary generated actions and recovery states. This distribution
-gap, the limited use of prefix evidence in ranking, proposal changes, and route
-support are hypotheses for further work. No new method, ablation or training
-restart has been launched based on this checkpoint.
+## Saved visual evidence
 
-## Evidence and continuation
+All ten complete contact sheets at the selected checkpoint were visually
+inspected at readable resolution; labels/panels are intact. Each contains five
+uniformly sampled recorded frames and the registered image goal. Initial-frame
+identity, trajectory lengths and published bytes were checked. Rendering made
+no new model or simulator calls. The fixed cases are illustrative, not a
+representative success/failure sample.
 
-See the [implemented formulation](LATENT_REVISION_RUN.md),
-[all-case analysis and paired regressions](reports/20261009-latent-revision/validation-review.json),
-[raw compressed checkpoint report](reports/20261009-latent-revision/run/validation/step_0005000.json.gz),
-and [W&B](https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/5thxkk6y).
-The5k optimization charge is0.752739GPUh; its registered validation costs
-0.567791GPUh. One-GPU preflight is separately0.005534GPUh. The source is frozen
-at899f8f2564e011ae87065a70acf28c50dade9997, with the same20k/28,800GPU-second ceiling.
-Training continues to its registered endpoint and periodic evaluations. The
-10k optimization charge is 1.573701 GPUh; the live compute snapshot may also
-include updates after that checkpoint.
+- [assembly/00000](reports/20261009-latent-revision/contact-sheets-step-20000/assembly-00000.png): success, 84 primitive actions.
+- [coffee-button/00000](reports/20261009-latent-revision/contact-sheets-step-20000/coffee-button-00000.png): success, 36 primitive actions.
+- [dial-turn/00000](reports/20261009-latent-revision/contact-sheets-step-20000/dial-turn-00000.png): success, 93 primitive actions.
+- [door-close/00000](reports/20261009-latent-revision/contact-sheets-step-20000/door-close-00000.png): success, 64 primitive actions.
+- [drawer-close/00004](reports/20261009-latent-revision/contact-sheets-step-20000/drawer-close-00004.png): success, 70 primitive actions.
+- [faucet-open/00003](reports/20261009-latent-revision/contact-sheets-step-20000/faucet-open-00003.png): failure, 200 primitive actions.
+- [handle-press/00000](reports/20261009-latent-revision/contact-sheets-step-20000/handle-press-00000.png): success, 15 primitive actions.
+- [pick-place/00000](reports/20261009-latent-revision/contact-sheets-step-20000/pick-place-00000.png): failure, 200 primitive actions.
+- [reach/00003](reports/20261009-latent-revision/contact-sheets-step-20000/reach-00003.png): failure, 200 primitive actions.
+- [reach/00005](reports/20261009-latent-revision/contact-sheets-step-20000/reach-00005.png): success, 50 primitive actions.
+
+Pick-place0 approaches the red object, then shows very similar gripper/object
+poses from action 50 through 200. The object remains near its starting table
+location, different from the registered goal. Faucet-open3 approaches the
+faucet region, but its later gripper positions drift right of it and the final
+arrangement differs from the goal. Reach3 remains offset from its goal with
+little visible change in the later sampled frames. All three fail at 200 actions.
+The views do not establish contact forces, a precise grasp failure mechanism,
+or the causal contribution of the latent workspace.
+
+Assembly0 succeeds in 84 actions, recovering from its 10k failure. Reach5 also
+succeeds, in 50 actions, after failing at 5k. Coffee-button0, dial-turn0,
+door-close0, drawer-close4 and handle-press0 are the other five saved successes.
+Task success follows the simulator criterion, not exact pixel equality with
+the goal image. All ten complete contact sheets were inspected at 1536×326;
+panels, case labels, action indices and goal captions are intact and readable.
+
+
+## Compute, verification and next direction
+
+All eight A800 GPUs were used with global batch 64 and seed 3072. Optimization
+used **3.243509 aggregate GPU-hours**, below the same
+8-GPU-hour ceiling, and stopped at the 20,000-update limit. Registered validation
+used **2.047476 GPU-hours**; training-only preflight used
+0.005534 GPU-hours. The new measured subtotal is
+**5.296518 GPU-hours**. Other held-GPU occupancy has a separate
+0.144280 GPU-hour upper bound.
+These are accounting components, not a complete cluster bill. Equal ceilings
+and update counts do not imply equal realized FLOPs: the previous candidate
+used 2.421563 optimization GPU-hours. No shared world/cache cost is counted twice.
+Known cumulative campaign components now total
+52.377571 GPU-hours.
+
+All four previous and six new behavioral tests passed. Full-size preflight
+verified causal inputs, identical main samples and unchanged world parameters.
+The final CPU-only audit checks immutable source, data-manifest, world and bank identities,
+finite best/final checkpoints, 401 unique scheduled training metric records,
+all four validation metric records, causal history lengths, the 480-world-step
+per-decision contract and the optimization ceiling. The
+[source](https://github.com/Abecid/LeFlow-/tree/899f8f2564e011ae87065a70acf28c50dade9997)
+was unchanged throughout this run. W&B synced and all owned workers exited;
+all eight GPUs were idle at the [final health check](reports/20261009-latent-revision/final-health.json).
+
+The evidence supports prioritizing **alignment between executed-prefix evidence
+and actual decision selection**, while preserving route-level goal value and
+necessary intermediate setbacks. Coverage of late recorded action chunks is a
+second concrete issue to address within the existing data. Better calibration
+alone is insufficient. Neither fix is claimed to work yet; no further method,
+seed, ablation, baseline rerun or final test has been launched.
+
+Reproduce the analysis without model or simulator calls:
+
+```sh
+python scripts/analysis/controller_grounded.py --repo . \
+  --run-dir docs/reports/20261009-latent-revision/run \
+  --output docs/reports/20261009-latent-revision/validation-review.json
+python scripts/analysis/latent_revision_details.py --repo .
+```
+
+Evidence: [all-case review](reports/20261009-latent-revision/validation-review.json),
+[extra failure diagnostics](reports/20261009-latent-revision/extra-diagnostics.json),
+[compute ledger](reports/20261009-latent-revision/compute-accounting.json),
+[postrun audit](reports/20261009-latent-revision/postrun-audit.json), and
+[W&B](https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/5thxkk6y).

@@ -1,0 +1,19 @@
+{
+  "checked_utc": "2026-10-09T22:39:59.022945+00:00",
+  "units": "aggregate GPU-hours",
+  "optimization": 3.2435090097784998,
+  "completed_registered_validation": 2.0474755409442715,
+  "training_only_preflight": 0.005533908985865613,
+  "charged_new_components": 5.296518459708636,
+  "other_reserved_occupancy_upper_bound": 0.14428007372817672,
+  "known_prior_campaign_subtotal": 47.081052883706164,
+  "known_cumulative_components": 52.3775713434148,
+  "cumulative_optimization": 35.035804035100675,
+  "cumulative_completed_validation": 17.189185501953794,
+  "optimization_limit": 8,
+  "updates": 20000,
+  "baseline_retraining_updates": 0,
+  "final_tests_read": false,
+  "all_infrastructure_runtime_total_available": false,
+  "scope": "Measured optimization, registered evaluation and preflight components. Other reserved occupancy is a separate upper bound, not billing. Shared pretrained encoder/world and prior campaign work are not charged twice. CPU route construction took 25.162232 seconds; no abandoned build or optimizer updates in preparation for this candidate."
+}
