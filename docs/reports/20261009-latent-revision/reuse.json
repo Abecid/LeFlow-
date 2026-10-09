@@ -1,0 +1,20 @@
+{
+  "encoder_sha256": "7ea9b7cb4a75d10644a8a8d42cff9e177b10dca8f02173f0eaf2b0bed82838c6",
+  "entries_sha256": "632005d660cdf000ee244461c5ffacee020d8a9d3321535ae0e3e15deb4508a8",
+  "new_trainable_components": "latent_revision fresh policy only",
+  "seed": 3072,
+  "source_code": "899f8f2564e011ae87065a70acf28c50dade9997",
+  "source_root": "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign",
+  "test_enabled": false,
+  "unchanged_fields": [
+    "entries",
+    "encoder",
+    "mean",
+    "std",
+    "goal_screening",
+    "expert_success"
+  ],
+  "validation_cases": 104,
+  "world_sha256": "ae3f910da43f0a43dd65945394444a0b11719ed042cdacffacc2faaf824ec5a3",
+  "world_source_manifest": "ce6e190b9b777ad34807c47c2dbeebae810f9cca52b440dbaf9e05043d69f1bc"
+}

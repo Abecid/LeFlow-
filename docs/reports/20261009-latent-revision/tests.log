@@ -1,0 +1,23 @@
+test_bank_rejects_evaluation_examples (test_execution.ExecutionTests.test_bank_rejects_evaluation_examples) ... ok
+test_exact_executed_prefix_and_fixed_prediction_budget (test_execution.ExecutionTests.test_exact_executed_prefix_and_fixed_prediction_budget) ... ok
+test_observed_execution_loss_backpropagates_to_policy_only (test_execution.ExecutionTests.test_observed_execution_loss_backpropagates_to_policy_only) ... ok
+test_terminal_window_does_not_reward_early_transient_match (test_execution.ExecutionTests.test_terminal_window_does_not_reward_early_transient_match) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.333s
+
+OK
+test_backprop_updates_policy_calibrator_not_world (test_latent_revision.RevisionTests.test_backprop_updates_policy_calibrator_not_world) ... ok
+test_dataset_draws_match_and_history_ends_at_current_state (test_latent_revision.RevisionTests.test_dataset_draws_match_and_history_ends_at_current_state) ... ok
+test_exact_prefix_budget_observation_order_and_episode_reset (test_latent_revision.RevisionTests.test_exact_prefix_budget_observation_order_and_episode_reset) ... ok
+test_future_outcomes_are_labels_not_prediction_inputs (test_latent_revision.RevisionTests.test_future_outcomes_are_labels_not_prediction_inputs) ... ok
+test_history_changes_workspace_but_masked_padding_does_not (test_latent_revision.RevisionTests.test_history_changes_workspace_but_masked_padding_does_not) ... /home/mtxu/adam/LeFlow-experiments/20261009-latent-revision/repo/tests/test_latent_revision.py:42: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:835.)
+  self.assertGreater(float((a-c).abs().max()),1e-5)
+ok
+test_prefix_prediction_has_no_unexecuted_suffix_dependency (test_latent_revision.RevisionTests.test_prefix_prediction_has_no_unexecuted_suffix_dependency) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.672s
+
+OK

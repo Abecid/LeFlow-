@@ -171,3 +171,30 @@ policy/calibrator gradients with a frozen world; and exact execution handoff,
 480-transition limit and memory reset. Full-size training-data forward/backward,
 real-sample equality and full encoder/controller latency remain prelaunch gates.
 Source will be frozen in an isolated server checkout before training starts.
+
+## Verified launch
+
+Execution source `899f8f2564e011ae87065a70acf28c50dade9997` is frozen in
+`/home/mtxu/adam/LeFlow-experiments/20261009-latent-revision/repo`.
+Coordinator1886479 was dispatched October9 at21:57:19UTC. The exact registered
+training reset rendered bitwise identically. All four old behavioral tests and
+six new tests passed on this source. The training-only full-size preflight
+verified eight exact old/new main-sample/action pairs and causal history ends;
+backpropagation left the world unchanged. It made zero optimizer updates or
+simulator policy calls.
+
+The new model has4,531,782 parameters. Full encoder/controller latency averaged
+78.58ms across five timed passes (76.57–81.31ms), with9.48GiB peak GPU allocation.
+The one-GPU preflight cost0.005534GPUh. Route index construction took25.16CPU
+seconds and produced the same130,662 states/209,109 routes from6,222 training
+episodes, occupying8.003GiB. Exact evidence is in the
+[preflight](reports/20261009-latent-revision/preflight.json),
+[reuse record](reports/20261009-latent-revision/reuse.json) and
+[index metadata](reports/20261009-latent-revision/route-bank.json).
+
+Eight-GPU training is streaming to
+[W&B run5thxkk6y](https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/5thxkk6y).
+It passed1,600 updates at approximately870–930 examples/second after the full
+objective became active. This is a launch snapshot, not a task-success result;
+the first registered validation is at5,000 updates. Future results will be
+reported against both the saved79/104 controller and historical references.

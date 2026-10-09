@@ -1,5 +1,18 @@
 # Active campaign progress
 
+## Latent revision training launched — October 9, 3:01 PM Pacific snapshot
+
+The isolated source is frozen at899f8f2. All10 behavioral tests, the bitwise
+training renderer reset, and eight real-sample equality/causal-history checks
+passed. Full controller preflight averaged78.58ms, peak9.48GiB, zero optimizer
+updates; cost0.005534GPUh. The4.532M-parameter fresh model is training on all8
+A800s with unchanged global64 and the registered20k/28,800GPU-second ceiling.
+[W&B run5thxkk6y](https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/5thxkk6y)
+passed1,600 updates at roughly870–930 examples/second with the full objective
+active. First task-success validation is pending at5k. Recorded training
+transition calibration is improving, which is not yet evidence of better
+closed-loop control. See [formulation and launch evidence](LATENT_REVISION_RUN.md).
+
 ## Latent revision authorized and implemented — October 9, 2026
 
 The user authorized one fresh latent-revision candidate after reviewing the
