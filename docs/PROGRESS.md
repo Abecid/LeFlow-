@@ -20,13 +20,17 @@
   (5.96888 GPU-hours); validation used 1,878.757 seconds (2.08751 GPU-hours),
   separately accounted. W&B verified the run finished:
   https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/9jhufn8j.
-- **HWM first validation active:** `hwm_adapted_3072` reached step 5,000,
-  charging 1,365.844 optimization seconds (1.51760 GPU-hours), with no
-  last-update overrun. Validation is charged separately at completion; no
-  complete first-round score exists yet. Its checkpoint shares the world hash,
-  manifest, protocol, code, seed and four-GPU allocation of the other heads.
-  W&B readback at 00:17 UTC confirmed step 4,950 online:
+- **HWM training resumed after its first validation:** `hwm_adapted_3072`
+  reached step 6,309, charging 1,720.914 optimization seconds (1.91213 GPU-hours)
+  and 607.415 validation seconds (0.67491 GPU-hours), separately accounted.
+  Its checkpoint shares the world hash, manifest, protocol, code, seed and
+  four-GPU allocation of the other heads. W&B readback at 00:32 UTC confirmed
+  step 6,050 and the completed first validation online:
   https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/cguncmvz.
+- **First HWM validation:** 7/104 successes (6.73%), retaining all 97 timeouts
+  as failures. It matches selected-world CEM's aggregate success count but
+  shares only two successful cases; each succeeds on five cases the other
+  fails. Three HWM validations remain before final testing can begin.
 - **LeFlow validation:** four rounds achieved 26/104 (25.00%), 20/104 (19.23%),
   25/104 (24.04%) and 27/104 (25.96%) successes. All 77 fourth-round timeouts
   remain failures. The step-20,000 checkpoint is selected; its step and SHA-256
@@ -2656,3 +2660,49 @@ premature final test reports. Saved updated HWM losses, compute usage, checkpoin
 metadata and online evidence. Next: preserve HWM's completed first validation
 and paired outcomes, then continue its three remaining registered validations.
 Final testing stays sealed; no follow-up experiment is queued.
+
+### 2026-10-09 00:31 UTC — first HWM validation: 7/104; paired failures preserved
+
+HWM step 5,000 completed its first validation with 7/104 successes (6.73%),
+retaining all 97 controller timeouts as failures. Handle-press achieved 4/8;
+coffee-button, door-close and drawer-close achieved 1/8 each. The other nine
+tasks had zero successes. Success within 50/100/200 primitive actions was
+1/3/7 out of 104. Mean controller time was 9.815 seconds/episode, mean step
+latency 156.89 ms and p95 161.09 ms; mean safe-boundary overrun was 0.01008
+seconds. Mean return was 113.755 and observed subgoal cosine was 0.029388.
+The first validation checkpoint is now the selected best.
+
+HWM matches selected-world CEM's 7/104 aggregate count but shares only two
+successful cases, with five HWM-only successes, five CEM-only successes and
+92 shared failures. HWM-only cases are coffee-button 00000, door-close 00003
+and handle-press 00001/00004/00005; CEM-only cases are drawer-close
+00002/00003/00004/00006 and handle-press 00000. Equal aggregate counts therefore
+hide different failure profiles. Against selected joint-flow (23/104), five
+cases succeeded under both, two only under HWM, eighteen only under joint-flow
+and 79 failed under both. HWM-only cases are coffee-button 00000 and
+handle-press 00005. Against selected LeFlow (27/104), five succeeded under both,
+two only under HWM, twenty-two only under LeFlow and 75 failed under both;
+HWM-only cases are coffee-button 00000 and drawer-close 00005. These are early
+HWM validation comparisons, not a final test ranking or evidence of variation
+across training seeds. No method, data, selection rule or budget was changed.
+
+The first validation charged 607.415 seconds (0.674905 GPU-hours), separately
+from optimization. Training resumed and the snapshot reached step 6,309 with
+1,720.914 charged optimization seconds (1.912127 GPU-hours), with no last-update
+overrun. At step 6,300, finite coarse-dynamics loss was 0.032492 and gradient
+norm 0.078942. Both best and last checkpoints are present at 44,490,453 bytes
+each. W&B API readback at 00:32:16 UTC verified `cguncmvz` running at step
+6,050 with the first complete validation online. The world, joint-flow and
+LeFlow runs remain finished with their results and final charges preserved.
+
+Supervisor 142087, launcher 489992 and ranks 489996/489997/489998/489999 remain
+healthy in clean frozen `repo-throughput` at `56419ed`, assigned only GPUs 0–3;
+4–7 remain empty. Both scope-change records retain the original authorization.
+Downloaded the snapshot through `target_server_2_cf`; verified finite metrics,
+monotonic training steps/charged time and all 104 unique paired IDs, episode
+hashes and reset seeds against selected LeFlow, joint-flow and selected-world
+CEM. All 13 tasks retain eight cases, seed 3072 and the 10-second cap; every
+timeout remains a failure. Saved the first validation, losses, compute usage,
+checkpoint metadata and online evidence. Next: complete HWM's three remaining
+registered validations. Final testing stays sealed; no test report exists and
+no follow-up experiment is queued.
