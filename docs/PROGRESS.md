@@ -1,60 +1,34 @@
 # Active campaign progress
 
-## Current verified state — October 9, 05:17 UTC
+## Current verified state — October 8, 10:28 PM Pacific
 
-- **Active scope is ours-only.** Finish the already-running compatible world,
-  then train exactly `joint_flow_consistent`, seed 3072, on GPUs 0–3. Baseline
-  retraining and the all-method final-test queue are cancelled. Spare GPUs do
-  not authorize jobs. See [OURS_ONLY_ITERATION](OURS_ONLY_ITERATION.md).
-- **World at 15,000 updates; two validations complete.** Its ledger records
-  2,014.204 optimization seconds (2.238004 GPU-hours) and 842.126 completed
-  validation seconds (0.935695 GPU-hours), separately charged. Only
-  `world_3072` exists; our head has not started.
-- **New-world CEM diagnostics: 23/104 at 5k, 24/104 at 10k.** The second round
-  succeeded on handle-press 8/8, coffee-button 7/8, drawer-close 7/8 and reach
-  2/8; the other nine tasks were zero. All 80 second-round timeouts remain
-  failures. World prediction loss improved from 0.012797 to 0.011090 versus
-  persistence 0.028101, and action identification reached 85.74%. These are
-  registered world diagnostics, not repaired-planner results. Include the
-  already-recorded CEM diagnostic for the finally selected world in the final
-  review; never hide it by quoting only historical CEM's 7/104.
-- **Frozen historical references:** LeFlow 27/104 (25.96%), HWM 8/104 (7.69%),
-  CEM with the old selected world 7/104 (6.73%), and our original method 23/104
-  (22.12%). All use the same selected validation resets. Representation/world
-  identities differ from this iteration, and historical LeFlow has a known
-  sampler restriction. Differences are descriptive full-pipeline comparisons,
-  not isolated sampler effects, common-world comparisons or corrected-SOTA claims.
-- **Coordinator verified:** ours-only PID 807392 is waiting for the world;
-  world launcher 780827 and workers continue unchanged. Cancelled parent 778158
-  remains stopped and must never be resumed; coordinator 795290 is absent.
-  The replacement will retire the cancelled parent after the world exits,
-  train only ours, save historical validation comparison/failure analysis,
-  then stop without final tests or another training run.
-- **Execution frozen:** `75e0815351eb25c63e495f87458f139bd5062259` in
-  `/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/repo`;
-  protocol `563c7d7d8b10664aa1ebf50db8f8a24fc015b50325ff1de82bcb736c7d411d51`.
-  Source/config/manifest checks pass. The original 11,650 selected entries,
-  cached features, reset IDs, goals, encoder and train-only statistics are reused.
-- **Per-run limits unchanged:** 7,200 optimization seconds OR 20,000 updates,
-  four GPUs, global batch 64/microbatch 4, four fixed 104-case validations,
-  10 controller seconds and 200 primitive actions per evaluation episode.
-  No new seeds, baseline runs, ablations, sweeps or automatic subsequent variants.
-- **Cumulative compute is retained:** original MetaWorld training used 21.112076
-  optimization GPU-hours and 9.050318 registered-validation GPU-hours. Including
-  this world's current ledger gives 23.350080 optimization and 9.986014 completed
-  validation GPU-hours; the bounded repair diagnostic separately used 0.136526
-  GPU-hours. These subtotals do not cover all shared preparation, preflights or
-  interrupted original test runtime. See [compute accounting](reports/20261009-repaired-comparison/compute-accounting.json).
-- **Preservation and logging:** the old `20261007-joint-flow` campaign remains
-  held, and its completion/compute hashes are unchanged. Its 236 partial test
-  records remain reserved and were not read by this monitor. No current test
-  report exists. W&B confirms [world 8vwksovs](https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/8vwksovs)
-  running in `vjepa21_metaworld_repair_v2_matched` with the frozen code and seed.
-  Reports are published from this separate desktop checkout to `origin/main`.
-- **Next:** complete this world, preserve its selected checkpoint and matching
-  CEM diagnostic, then monitor our one authorized head and paired validation
-  failure inventory. Pause the monitor after these findings are preserved and
-  published; any later experiment requires separate authorization.
+- Ours-only scope is unchanged: compatible world on GPUs0–3, then one fresh
+  joint_flow_consistent head, seed3072; GPUs4–7 idle. No baseline retraining,
+  extra seeds/ablations or final tests are queued. The head has not started.
+- World reached16,933/20,000 updates with three completed validations. Charged
+  optimization is2,269.677 seconds (2.521863 GPU-hours), completed validation
+  1,262.401 seconds (1.402667 GPU-hours). Frozen execution remains75e0815.
+- New-world CEM is23/104 at5k and24/104 at10k/15k. At15k prediction loss is
+  0.0100957 and action identification87.70%. All80 failed rollouts exhaust the
+  10-second controller allowance after68–70 primitive actions; nine tasks have
+  zero successes. These are world diagnostics, not repaired-planner results.
+- Frozen historical selected validation: LeFlow27/104, HWM8/104, old-world CEM7/104,
+  original ours23/104. Same reset/goal cases, but representation/world differences
+  and the old LeFlow sampler defect prevent an isolated-planner or corrected-SOTA
+  claim. Include the selected new world's already-recorded CEM result in review.
+- Exact manifest audit: world trains on7,800 episodes (6,240expert+1,560random);
+  heads use6,222 successful expert episodes. Validation pool650, periodic suite104,
+  reserved test3,200. The three current validation reports match historical case
+  IDs, reset seeds, episode hashes and model seed exactly. No test outcomes read.
+- Estimated world completion10:40–10:50PM Pacific; head plus review approximately
+  12:45–1:45AM October9. Estimates include evaluation; actual head speed remains
+  unmeasured. All original per-run budget ceilings remain in force.
+- Ours-only807392 is waiting, world780827 continues, cancelled778158 remains
+  stopped and795290 is absent. Never resume the cancelled queue. After our head,
+  preserve validation comparison and failure inventory, publish, and stop for
+  review without automatic subsequent experiments.
+- See [status, exact dataset, metric and fairness review](STATUS_DATASET_REVIEW_20261008.md),
+  [scope](OURS_ONLY_ITERATION.md), and [cumulative compute accounting](reports/20261009-repaired-comparison/compute-accounting.json).
 
 Earlier entries below record historical authorizations and states. The current
 ours-only scope above and `OURS_ONLY_ITERATION.md` supersede the all-method,
@@ -3360,3 +3334,22 @@ exchange; the fallback successfully preserved the compact snapshot. No test
 outcomes were inspected, and current final testing remains disabled. Next:
 finish the registered world rounds, then only the authorized repaired head and
 its validation failure analysis; preserve and publish that review before pausing.
+
+## October 8, 10:28 PM Pacific — exact dataset and third world validation review
+
+Read-only live snapshot verifies unchanged ours-only process scope and saves
+three full validation reports, finite/monotone training metrics and matching
+104-case identities. The third world round remains24/104; coffee-button/00002
+improves while drawer-close/00006 regresses. Prediction improves8.97% since10k
+without increasing aggregate CEM success. All80 failed cases hit controller
+budget after68–70 primitive actions. No proposed-head result is available yet.
+
+Counted exact dataset eligibility from the unchanged manifest: 7,800 world
+training episodes and6,222 successful expert episodes eligible for every learned
+planner (door-open462, all other tasks480). Test3,200 entries are reset/goal cases,
+not cached training trajectories. Documented custom goal-screened protocol,
+primary closed-loop success endpoint, equal-ceiling vs actual-compute distinction,
+world/representation confound, historical sampler defect, validation reuse and
+single-seed uncertainty. Updated cumulative accounting from the current ledger.
+No training/evaluation was launched, stopped or modified. Next remains world
+completion, only our repaired head, then publish its validation failure review.

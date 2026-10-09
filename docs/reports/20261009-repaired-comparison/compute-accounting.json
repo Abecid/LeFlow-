@@ -2,22 +2,22 @@
   "all_infrastructure_runtime_total_available": false,
   "baseline_retraining_updates": 0,
   "bounded_repair_diagnostic_gpu_hours": 0.13652564757193128,
-  "checked_at": "2026-10-09T05:17:18.164884+00:00",
-  "cumulative_completed_registered_validation_gpu_hours": 9.986013525277375,
-  "cumulative_optimization_gpu_hours": 23.350080203146987,
+  "checked_at": "2026-10-09T05:28:05.744208+00:00",
+  "cumulative_completed_registered_validation_gpu_hours": 10.45298556552786,
+  "cumulative_optimization_gpu_hours": 23.633939357383387,
   "current_campaign": "20261009-repaired-comparison",
-  "current_completed_validation_gpu_hours": 0.9356953789314462,
-  "current_optimization_gpu_hours": 2.238003959862722,
+  "current_completed_validation_gpu_hours": 1.4026674191819297,
+  "current_optimization_gpu_hours": 2.521863114099122,
   "current_run_ledgers": {
     "world_3072": {
       "budget_check": "optimizer boundaries; any last-update overrun is reported",
       "gpu_count": 4,
-      "step": 15000,
+      "step": 16933,
       "training_budget_seconds": 7200,
-      "training_gpu_hours": 2.238003959862722,
-      "training_seconds": 2014.20356387645,
-      "validation_gpu_hours": 0.9356953789314462,
-      "validation_seconds": 842.1258410383016
+      "training_gpu_hours": 2.521863114099122,
+      "training_seconds": 2269.6768026892096,
+      "validation_gpu_hours": 1.4026674191819297,
+      "validation_seconds": 1262.4006772637367
     }
   },
   "excluded_or_not_yet_finalized": [
@@ -26,11 +26,11 @@
     "Separate older PushT pilot is a different benchmark and is outside these MetaWorld subtotals."
   ],
   "gpu_count_per_model": 4,
-  "health_checked_at": "2026-10-09T05:15:17.779495+00:00",
+  "health_checked_at": "2026-10-09T05:28:05.744208+00:00",
   "historical_optimization_gpu_hours": 21.112076243284264,
   "historical_registered_validation_gpu_hours": 9.05031814634593,
   "interpretation": "Cumulative charged training and completed validation are retained across both MetaWorld campaigns. This is not a claim that the per-run allowance equals total R&D cost or that the known subtotal covers all infrastructure runtime.",
-  "known_charged_components_gpu_hours": 33.47261937599629,
+  "known_charged_components_gpu_hours": 34.22345057048317,
   "original_campaign": "20261007-joint-flow",
   "original_run_ledgers": {
     "hwm_adapted_3072": {
