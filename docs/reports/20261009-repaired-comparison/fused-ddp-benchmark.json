@@ -1,0 +1,41 @@
+{
+  "campaign_updates": 0,
+  "checkpoint_step": 6000,
+  "diagnostic_seconds": 3.2998454309999943,
+  "gpu_count": 4,
+  "ranks": [
+    {
+      "gradient_relative_l2": 1.7646150354266865e-06,
+      "loss_fused": 0.2905651330947876,
+      "loss_old": 0.2905651330947876,
+      "rank": 0,
+      "rng_identical": true
+    },
+    {
+      "gradient_relative_l2": 1.7646150354266865e-06,
+      "loss_fused": 0.18962211906909943,
+      "loss_old": 0.18962210416793823,
+      "rank": 1,
+      "rng_identical": true
+    },
+    {
+      "gradient_relative_l2": 1.7646150354266865e-06,
+      "loss_fused": 0.16097143292427063,
+      "loss_old": 0.16097144782543182,
+      "rank": 2,
+      "rng_identical": true
+    },
+    {
+      "gradient_relative_l2": 1.7646150354266865e-06,
+      "loss_fused": 0.1750946193933487,
+      "loss_old": 0.1750946342945099,
+      "rank": 3,
+      "rng_identical": true
+    }
+  ],
+  "seconds_per_update": {
+    "fused": 0.14311885833740234,
+    "original": 0.40754300355911255
+  },
+  "speedup": 2.8475842267993148
+}

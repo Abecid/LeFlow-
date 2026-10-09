@@ -1,0 +1,102 @@
+{
+  "actual_outcome": "Only launcher retired; independent training worker groups continued. No optimized child dispatched. All later updates preserved at final handoff.",
+  "archive": "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/throughput-handoff/step_0007000",
+  "checkpoint_sha256": "5da564799bff031518752e017e5c191bbdaf3033df5ac57218a3c2003019b9fc",
+  "checkpoint_step": 7000,
+  "child": {
+    "command": [
+      "/tmp/mtxu-flow-jepa-20261007/env/bin/python",
+      "-m",
+      "torch.distributed.run",
+      "--nnodes=1",
+      "--rdzv-backend=c10d",
+      "--rdzv-endpoint=127.0.0.1:0",
+      "--nproc_per_node=4",
+      "-m",
+      "flow_jepa.train",
+      "--config",
+      "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/repo/config/flow_metaworld_repair.json",
+      "--root",
+      "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign",
+      "--run-dir",
+      "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/joint_flow_consistent_3072",
+      "--method",
+      "joint_flow_consistent",
+      "--seed",
+      "3072",
+      "--world",
+      "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt"
+    ],
+    "cwd": "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/repo",
+    "pid": 858560,
+    "start_ticks": "984503591"
+  },
+  "completed_updates_discarded": 0,
+  "conservative_inflight_charge_seconds": 1.0,
+  "ledger": {
+    "budget_check": "optimizer boundaries; any last-update overrun is reported",
+    "gpu_count": 4,
+    "migration_inflight_allowance_seconds": 1.0,
+    "step": 7000,
+    "training_budget_seconds": 7200,
+    "training_gpu_hours": 2.8601636551424034,
+    "training_seconds": 2574.147289628163,
+    "validation_gpu_hours": 0.540563558867822,
+    "validation_seconds": 486.5072029810399
+  },
+  "observed_utc": "2026-10-09T06:33:21.702537+00:00",
+  "parent": {
+    "command": [
+      "/tmp/mtxu-flow-jepa-20261007/env/bin/python",
+      "-u",
+      "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/ours_only_continuation.py",
+      "--record",
+      "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison"
+    ],
+    "cwd": "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/repo",
+    "pid": 807392,
+    "start_ticks": "984212427"
+  },
+  "pid": 906402,
+  "prior_checkpoint_training_seconds": 2573.147289628163,
+  "prior_status": {
+    "baseline_retraining": false,
+    "child_pid": 858560,
+    "command": [
+      "/tmp/mtxu-flow-jepa-20261007/env/bin/python",
+      "-m",
+      "torch.distributed.run",
+      "--nnodes=1",
+      "--rdzv-backend=c10d",
+      "--rdzv-endpoint=127.0.0.1:0",
+      "--nproc_per_node=4",
+      "-m",
+      "flow_jepa.train",
+      "--config",
+      "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/repo/config/flow_metaworld_repair.json",
+      "--root",
+      "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign",
+      "--run-dir",
+      "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/joint_flow_consistent_3072",
+      "--method",
+      "joint_flow_consistent",
+      "--seed",
+      "3072",
+      "--world",
+      "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt"
+    ],
+    "execution_revision": "75e0815351eb25c63e495f87458f139bd5062259",
+    "final_test_enabled": false,
+    "methods_to_train": [
+      "joint_flow_consistent"
+    ],
+    "pid": 807392,
+    "script_sha256": "712a0f2b141ba8bf2daf35855bb74fec4a2664818ae9bb5160d842e7dd7a5857",
+    "started_utc": "2026-10-09T04:53:38.215707+00:00",
+    "state": "training_ours",
+    "updated_utc": "2026-10-09T05:42:09.926123+00:00",
+    "world_sha256": "ae3f910da43f0a43dd65945394444a0b11719ed042cdacffacc2faaf824ec5a3"
+  },
+  "runtime_manifest_sha256": "2fdf6147b67d5e0765c78258ec7f46e82155fbbb32d9a0d64f763a4120dba2d8",
+  "state": "checkpoint_preserved"
+}

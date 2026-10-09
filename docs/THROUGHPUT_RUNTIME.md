@@ -109,3 +109,20 @@ archives and retires those groups individually. The original launcher-only
 migration mode now fails closed. The later migration record supersedes the7000
 attempt and retains the failed attempt as separate evidence. Completion and
 real resumed throughput must be verified before treating the change as live.
+
+## Verified live outcome
+
+At11:40PM Pacific, the corrected handoff preserved step8000 and retired all old
+worker groups. Newcoordinator917422 resumed the same run via launcher920245.
+No completed update was discarded. At11:43PM, measured optimization throughput
+rose from158.18 to441.43 examples/second (**2.791x**). Runtime/source/data/world
+hashes and online W&B metadata were verified, with finite/monotone training logs.
+
+At11:46PM all8GPUs were active: training0–3 had advanced to10544 while evaluator
+926345 on4–7 processed the immutable10k checkpoint and had completed8 cases.
+Intermediate evaluation is therefore verified concurrent with training. The
+all8GPU final validation is scheduled after optimization and is not yet observed.
+Expected completion including evaluation is12:10–12:25AM Pacific October9 if
+current throughput holds. The27 tests and measured FP32/RNG/gradient checks remain
+bounded evidence of equivalent computation; they are not proof of identical
+floating-point trajectories or improved benchmark accuracy.

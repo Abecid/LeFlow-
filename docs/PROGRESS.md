@@ -1,51 +1,51 @@
 # Active campaign progress
 
-## Current verified state — October 9, 05:59 UTC
+## Current verified state — October 8, 11:46 PM Pacific
 
-- **World complete; only our repaired planner is training.** World reached
-  20,000 updates and all four registered validations. Ours-only coordinator
-  807392 handed off at 05:42:09 UTC to head launcher 858560, seed 3072, with four
-  verified ranks 858566–858569 on GPUs 0–3. GPUs 4–7 are idle. Baseline retraining,
-  final tests, extra seeds, ablations and subsequent variants remain disabled.
-- **Selected new-world CEM: 22/104 (21.15%).** Registered world selection uses
-  minimum validation prediction loss, selecting update 20,000 with loss 0.00974052
-  and action identification 87.70%. CEM rounds were 23 → 24 → 24 → 22; the intermediate
-  peak is not substituted for the selected checkpoint's result. All 82 final-round
-  failures exhausted the 10-second controller budget after 68–70 primitive actions.
-  Per-task successes: coffee-button 7, drawer-close 6, handle-press 7, reach 2;
-  the other nine tasks zero. This is a world diagnostic, not our planner's result.
-- **World checkpoint frozen for the head:** SHA-256
-  `ae3f910da43f0a43dd65945394444a0b11719ed042cdacffacc2faaf824ec5a3`.
-  CPU-read checkpoint metadata, the coordinator and online head configuration
-  agree on this identity. See [selected world and paired CEM evidence](reports/20261009-repaired-comparison/selected-world-diagnostic.json).
-- **Our head reached 3,111 updates** in the saved snapshot, with 993.535 charged
-  optimization seconds (1.103927 GPU-hours), finite losses and no optimization
-  overrun. Its first validation has not run. Online W&B confirms
-  [our repaired run rm46k69b](https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/rm46k69b)
-  running and [world 8vwksovs](https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/8vwksovs)
-  finished. Source/configuration/manifest remain frozen at 75e0815.
-- **Frozen historical selected validation:** LeFlow 27/104, HWM 8/104, old-world
-  CEM 7/104, original ours 23/104. Identical reset/goal cases are verified, but the
-  representation/world changes and old LeFlow sampler restriction prevent an
-  isolated-planner effect or corrected-SOTA claim. The selected new-world CEM 22
-  must accompany these historical references in the eventual planner review.
-- Exact manifest audit remains: world training 7,800 episodes
-  (6,240 expert + 1,560 random), planner training 6,222 successful expert episodes,
-  validation pool 650 with 104 fixed periodic cases, reserved final test 3,200.
-  Four GPUs, global batch 64/microbatch 4, and 7,200 optimization seconds OR 20,000 updates
-  remain the unchanged ceilings. No test outcomes were inspected.
-- **Cumulative charged compute:** 25.194774 optimization GPU-hours and 10.913087
-  completed registered-validation GPU-hours across both MetaWorld campaigns,
-  plus 0.136526 bounded repair-diagnostic GPU-hours. The completed new world used
-  2.978770 optimization and 1.862768 validation GPU-hours. Shared preparation,
-  preflights and interrupted old tests remain separately recorded exclusions,
-  not zero-cost assumptions. See [compute accounting](reports/20261009-repaired-comparison/compute-accounting.json).
-- **Next:** monitor only this head's four fixed validation rounds, preserve its
-  selection and paired failure inventory alongside the selected-world diagnostic
-  and historical references, publish the review, then pause this monitor.
-  No cancelled scheduler is resumed and no additional experiment is queued.
-- See [dataset, metrics and fairness review](STATUS_DATASET_REVIEW_20261008.md)
-  and [ours-only scope](OURS_ONLY_ITERATION.md) for the unchanged protocol limits.
+- **Optimized ours-only continuation is live.** Resumed the same run rm46k69b
+  at step 8,000 with model/AdamW/four RNG states and charged time retained. No
+  completed update was discarded. Global batch 64 and seed 3072 remain unchanged.
+- Physical microbatch 16 replaces four microbatches of 4 per training rank while
+  retaining their random draws and consistency subset. Actual post-resume
+  throughput is 441 examples/second versus 158 before; GPUs 0–3 were 91–97%
+  utilized. A copied four-GPU DDP benchmark measured 2.848x speedup and relative
+  gradient L2 difference 1.76e-6, with identical RNG on all ranks. FP32 unchanged.
+- **All available GPUs are authorized for this same run:** training 0–3,
+  intermediate validation 4–7 in parallel, then all 8 for the final validation
+  after optimization ends. All 8 were verified active: training advanced to 10,544
+  while evaluator 926345 processed the 10k checkpoint on 4–7. No extra seeds, baseline runs,
+  ablations, variants or final tests are queued.
+- At 11:46 PM Pacific the head reached 10,544 updates, with 3,362.079 charged
+  training seconds and 486.507 completed validation seconds. The ongoing 10k
+  validation is charged upon completion. The original 7,200-second four-GPU
+  allowance OR 20,000 updates remains intact, including one conservative second
+  charged for an interrupted in-flight update at migration.
+- Its first validation at 5k is 17/104 (16.35%). This score remains preserved.
+  The selected compatible world is 20k: CEM 22/104, prediction loss 0.0097405,
+  action identification 87.70%. All subsequent registered validation reports
+  must finish before final selection/failure review.
+- Coordinator 917422 and training launcher 920245 are active. The retired
+  original coordinator 807392, launcher 858560 and four old worker groups are
+  absent. Never restart them. The initial 7,000 handoff attempt retired only the
+  launcher; the GPU-idle gate blocked a duplicate launch, and the continuing
+  original workers were correctly captured/retired at 8,000. No later updates
+  were rolled back to 7,000.
+- Original model checkout remains 75e0815. The execution-only runtime is frozen
+  separately in repo-runtime/ with manifest SHA 431ae6e5e04be96360e62962395b0184e263320fac45e8e6deb2f4ed1cbc7f66.
+  Code is published in commits 77ccd80 and 29f3bea. Read
+  [throughput operation and evidence](THROUGHPUT_RUNTIME.md) before recovery.
+- Estimated finish including evaluation is 12:10–12:25 AM Pacific October 9,
+  conditional on continued measured throughput. Intermediate validation is
+  verified concurrent with training; eight-way final validation is scheduled
+  only after optimization ends.
+- Historical references stay LeFlow 27/104, HWM 8/104, old-world CEM 7/104,
+  original ours 23/104. World/representation and defective historical LeFlow
+  differences prevent an isolated planner or corrected-SOTA claim. The original
+  7,800 world-training /6,222 planner-eligible /650 validation /3,200 test entries
+  and fixed 104 periodic cases remain unchanged. No final-test outcomes read.
+- Next: finish only this repaired
+  head, preserve paired validation failure analysis including same-world CEM,
+  push results to origin/main and pause monitoring without another experiment.
 
 Earlier entries below record historical authorizations and states. The current
 ours-only scope above and `OURS_ONLY_ITERATION.md` supersede the all-method,
@@ -3437,3 +3437,55 @@ match. Updated cumulative optimization accounting to 25.194774 GPU-hours;
 completed registered validation remains 10.913087 GPU-hours, with the same
 separate diagnostic and cost exclusions. No intervention, new job or test was
 performed. The next meaningful checkpoint is the head's first validation.
+
+## October 8, 11:41 PM Pacific — live throughput migration verified
+
+User authorized all available GPUs to speed the same run, preserving data,
+objective and budgets. Added execution-only fused microbatches and asynchronous
+validation.27 relevant server tests passed. Copied real-checkpoint one-GPU and
+four-GPU checks each measured~2.85x forward/backward speedup. Every rank preserved
+CUDA RNG consumption; gradients and copied AdamW updates differed only by small
+FP32 roundoff. No research optimizer updates were taken by those diagnostics.
+
+Initialstep7000 migration exposed independent torchrun worker process groups;
+the idle-GPU gate prevented a duplicate launch while the original workers
+continued training. Corrected the handoff to verify and stop each rank group,
+archive the laterstep8000 checkpoint/ledger, and retire all old workers. Preserve
+the failed attempt separately. The same W&B run resumed at8000, advanced to8241,
+and logged~425 examples/second with training GPU utilization91–97%. Model, data,
+world hash, optimizer/RNG state, prior17/104 validation and charged usage persist.
+The migration adds one conservative optimization second, not a budget extension.
+
+Newcoordinator917422 launches only our four-rank optimized trainer and its
+registered validation workers. Intermediate evaluations use GPUs4–7 concurrently;
+final validation uses8 GPUs once training has stopped. Actual validation GPU-hours
+are converted to four-GPU-equivalent seconds in the legacy ledger, with wall time
+in each report. Runtime manifest hashes explicit overlay files over frozen model
+revision75e0815. The original model/data checkout is untouched. Nextverify the
+first asynchronous evaluation while training proceeds, then preserve the one-run
+failure review and stop. No extra baseline, seed, ablation or test was started.
+
+## October 8, 11:46 PM Pacific — all eight GPUs and parallel validation verified
+
+All8GPUs are active. Training on0–3 advanced to10544 while separate evaluator
+926345 on4–7 completed the first8 registered cases of checkpoint10000. No new
+case, method or seed was added; inference code and per-case limits are unchanged.
+Training continues instead of blocking on those evaluations. The first complete
+asynchronous aggregate is still pending; do not treat partial case logs as a
+new selected result. Final validation over8 GPUs remains scheduled after training.
+
+The11:43PM audit verified every runtime file hash, clean original and runtime
+tracked model sources, original manifestSHAce6e190b, selected worldSHAae3f910d,
+seed3072, four-rank checkpoint topology and unchanged globalbatch64. Checkpoint
+9000 records the explicit runtime manifest. Online W&B rm46k69b reports running
+and the matching physicalbatch16/runtimehash. Live charged optimization throughput
+is158.18→441.43 examples/second (2.791x), with finite losses and monotone training
+steps/charged usage. CPU visibility is112, leaving room for concurrent data and
+render workers. Updated the heartbeat with new process groups, runtime hashes,
+parallel evaluation/accounting rules and the same stop-after-review scope.
+
+All source, diagnostic and handoff evidence is preserved separately from raw
+models/data. The original failed launcher-only transition remains recorded;
+no duplicate training was started and no completed step was discarded. Next:
+complete this run, retain all four validation reports, paired failure review and
+same-world CEM22/104 alongside historical references, then pause monitoring.

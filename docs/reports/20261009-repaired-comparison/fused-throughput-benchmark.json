@@ -1,0 +1,32 @@
+{
+  "adam_parameter_max_abs": 1.1902375263161957e-07,
+  "benchmark_seconds": 4.631473248824477,
+  "campaign_optimizer_updates": 0,
+  "checkpoint_step": 4000,
+  "cuda_rng_identical": true,
+  "gradient_max_abs": 1.2668715498875827e-07,
+  "gradient_relative_l2": 2.6734790026239352e-06,
+  "objective_fused": [
+    0.32161080837249756,
+    {
+      "action_objective": 0.2714381217956543,
+      "generated_consistency": 0.012228962033987045,
+      "state_objective": 0.04894977807998657
+    }
+  ],
+  "objective_old": [
+    0.32161080837249756,
+    {
+      "action_objective": 0.2714381515979767,
+      "generated_consistency": 0.01222896296530962,
+      "state_objective": 0.04894977807998657
+    }
+  ],
+  "peak_memory_gib": 3.474783420562744,
+  "precision": "unchanged FP32; normal batch/reduction roundoff only",
+  "seconds_per_update": {
+    "micro16_fused": 0.12245568484067917,
+    "micro4_accumulate4": 0.34887520000338557
+  },
+  "speedup": 2.8489914572548365
+}

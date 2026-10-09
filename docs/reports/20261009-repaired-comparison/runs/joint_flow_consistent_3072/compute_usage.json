@@ -1,10 +1,11 @@
 {
   "budget_check": "optimizer boundaries; any last-update overrun is reported",
   "gpu_count": 4,
-  "step": 3111,
+  "step": 10544,
   "training_budget_seconds": 7200,
-  "training_gpu_hours": 1.1039272379854488,
-  "training_seconds": 993.5345141869038,
-  "validation_gpu_hours": 0.0,
-  "validation_seconds": 0.0
+  "training_gpu_hours": 3.7356431714341873,
+  "training_seconds": 3362.0788542907685,
+  "validation_gpu_hours": 0.540563558867822,
+  "validation_seconds": 486.5072029810399,
+  "validation_seconds_basis": "four-GPU equivalent; actual wall time in each async report"
 }

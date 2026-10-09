@@ -1,0 +1,593 @@
+{
+  "async_eval_logs": {
+    "step_0010000.log": "ed signature.\n  self.gen = func(*args, **kwds)\n/tmp/mtxu-flow-jepa-20261007/env/lib/python3.11/contextlib.py:105: FutureWarning: `torch.backends.cuda.sdp_kernel()` is deprecated. In the future, this context manager will be removed. Please see `torch.nn.attention.sdpa_kernel()` for the new context manager, with updated signature.\n  self.gen = func(*args, **kwds)\nMESA-EGL: warning: Not allowed to force software rendering when API explicitly selects a hardware device.\n/tmp/mtxu-flow-jepa-20261007/env/lib/python3.11/contextlib.py:105: FutureWarning: `torch.backends.cuda.sdp_kernel()` is deprecated. In the future, this context manager will be removed. Please see `torch.nn.attention.sdpa_kernel()` for the new context manager, with updated signature.\n  self.gen = func(*args, **kwds)\n/tmp/mtxu-flow-jepa-20261007/env/lib/python3.11/contextlib.py:105: FutureWarning: `torch.backends.cuda.sdp_kernel()` is deprecated. In the future, this context manager will be removed. Please see `torch.nn.attention.sdpa_kernel()` for the new context manager, with updated signature.\n  self.gen = func(*args, **kwds)\n{\"event\": \"evaluation_episode\", \"method\": \"joint_flow_consistent\", \"seed\": 3072, \"split\": \"validation\", \"episode\": \"validation/assembly/00000\", \"success\": false}\n{\"event\": \"evaluation_episode\", \"method\": \"joint_flow_consistent\", \"seed\": 3072, \"split\": \"validation\", \"episode\": \"validation/assembly/00003\", \"success\": false}\n{\"event\": \"evaluation_episode\", \"method\": \"joint_flow_consistent\", \"seed\": 3072, \"split\": \"validation\", \"episode\": \"validation/assembly/00002\", \"success\": false}\n{\"event\": \"evaluation_episode\", \"method\": \"joint_flow_consistent\", \"seed\": 3072, \"split\": \"validation\", \"episode\": \"validation/assembly/00001\", \"success\": false}\n{\"event\": \"evaluation_episode\", \"method\": \"joint_flow_consistent\", \"seed\": 3072, \"split\": \"validation\", \"episode\": \"validation/assembly/00004\", \"success\": false}\n{\"event\": \"evaluation_episode\", \"method\": \"joint_flow_consistent\", \"seed\": 3072, \"split\": \"validation\", \"episode\": \"validation/assembly/00007\", \"success\": false}\n{\"event\": \"evaluation_episode\", \"method\": \"joint_flow_consistent\", \"seed\": 3072, \"split\": \"validation\", \"episode\": \"validation/assembly/00005\", \"success\": false}\n{\"event\": \"evaluation_episode\", \"method\": \"joint_flow_consistent\", \"seed\": 3072, \"split\": \"validation\", \"episode\": \"validation/assembly/00006\", \"success\": false}\n"
+  },
+  "campaign/logs/ours_throughput_training.log": "ve\": 0.0351383276283741, \"step\": 10050, \"train/lr\": 5.011900711277775e-05, \"train/grad_norm\": 1.0643138885498047, \"budget/training_seconds\": 3286.9618872012943, \"budget/training_gpu_hours\": 3.652179874668105, \"budget/validation_gpu_hours\": 0.540563558867822, \"budget/fraction\": 0.5025, \"budget/last_update_overrun_seconds\": 0.0, \"train/consistency_weight\": 0.1, \"system/samples_per_second\": 436.375930581596, \"system/gpu_peak_memory_gib\": 3.4472975730895996}\n{\"train/action_objective\": 0.12898844480514526, \"train/generated_consistency\": 0.011341777630150318, \"train/loss\": 0.16821785271167755, \"train/state_objective\": 0.03809523582458496, \"step\": 10100, \"train/lr\": 4.9730262285205754e-05, \"train/grad_norm\": 0.7161787748336792, \"budget/training_seconds\": 3294.483559563756, \"budget/training_gpu_hours\": 3.660537288404173, \"budget/validation_gpu_hours\": 0.540563558867822, \"budget/fraction\": 0.505, \"budget/last_update_overrun_seconds\": 0.0, \"train/consistency_weight\": 0.1, \"system/samples_per_second\": 435.99319069413724, \"system/gpu_peak_memory_gib\": 3.4472975730895996}\n{\"train/action_objective\": 0.14043277502059937, \"train/generated_consistency\": 0.011569589376449585, \"train/loss\": 0.1791837513446808, \"train/state_objective\": 0.0375940203666687, \"step\": 10150, \"train/lr\": 4.9341564938681814e-05, \"train/grad_norm\": 1.4731049537658691, \"budget/training_seconds\": 3301.659735424444, \"budget/training_gpu_hours\": 3.668510817138271, \"budget/validation_gpu_hours\": 0.540563558867822, \"budget/fraction\": 0.5075, \"budget/last_update_overrun_seconds\": 0.0, \"train/consistency_weight\": 0.1, \"system/samples_per_second\": 436.12785106762965, \"system/gpu_peak_memory_gib\": 3.4472975730895996}\n{\"train/action_objective\": 0.13209879398345947, \"train/generated_consistency\": 0.01108324620872736, \"train/loss\": 0.169924795627594, \"train/state_objective\": 0.03671768307685852, \"step\": 10200, \"train/lr\": 4.895293904988914e-05, \"train/grad_norm\": 1.4394062757492065, \"budget/training_seconds\": 3310.616930156946, \"budget/training_gpu_hours\": 3.67846325572994, \"budget/validation_gpu_hours\": 0.540563558867822, \"budget/fraction\": 0.51, \"budget/last_update_overrun_seconds\": 0.0, \"train/consistency_weight\": 0.1, \"system/samples_per_second\": 433.87564848187276, \"system/gpu_peak_memory_gib\": 3.4472975730895996}\n{\"train/action_objective\": 0.14343294501304626, \"train/generated_consistency\": 0.012171790935099125, \"train/loss\": 0.18164744973182678, \"train/state_objective\": 0.036997318267822266, \"step\": 10250, \"train/lr\": 4.8564408591103196e-05, \"train/grad_norm\": 1.2388828992843628, \"budget/training_seconds\": 3317.907116793096, \"budget/training_gpu_hours\": 3.68656346310344, \"budget/validation_gpu_hours\": 0.540563558867822, \"budget/fraction\": 0.5125, \"budget/last_update_overrun_seconds\": 0.0, \"train/consistency_weight\": 0.1, \"system/samples_per_second\": 433.9147860503808, \"system/gpu_peak_memory_gib\": 3.4472975730895996}\n{\"train/action_objective\": 0.16527357697486877, \"train/generated_consistency\": 0.014243071898818016, \"train/loss\": 0.21038362383842468, \"train/state_objective\": 0.043685734272003174, \"step\": 10300, \"train/lr\": 4.817599752871279e-05, \"train/grad_norm\": 1.1398155689239502, \"budget/training_seconds\": 3325.508111346513, \"budget/training_gpu_hours\": 3.695009012607237, \"budget/validation_gpu_hours\": 0.540563558867822, \"budget/fraction\": 0.515, \"budget/last_update_overrun_seconds\": 0.0, \"train/consistency_weight\": 0.1, \"system/samples_per_second\": 433.56532570745105, \"system/gpu_peak_memory_gib\": 3.4472975730895996}\n{\"train/action_objective\": 0.16703248023986816, \"train/generated_consistency\": 0.012155193835496902, \"train/loss\": 0.2096593976020813, \"train/state_objective\": 0.04141140729188919, \"step\": 10350, \"train/lr\": 4.778772982174187e-05, \"train/grad_norm\": 1.6189100742340088, \"budget/training_seconds\": 3332.921261543408, \"budget/training_gpu_hours\": 3.703245846159342, \"budget/validation_gpu_hours\": 0.540563558867822, \"budget/fraction\": 0.5175, \"budget/last_update_overrun_seconds\": 0.0, \"train/consistency_weight\": 0.1, \"system/samples_per_second\": 433.4613175767031, \"system/gpu_peak_memory_gib\": 3.4472975730895996}\n{\"train/action_objective\": 0.10620081424713135, \"train/generated_consistency\": 0.011650152504444122, \"train/loss\": 0.14745363593101501, \"train/state_objective\": 0.04008781164884567, \"step\": 10400, \"train/lr\": 4.7399629420371446e-05, \"train/grad_norm\": 0.9413464665412903, \"budget/training_seconds\": 3340.6616307273507, \"budget/training_gpu_hours\": 3.711846256363723, \"budget/validation_gpu_hours\": 0.540563558867822, \"budget/fraction\": 0.52, \"budget/last_update_overrun_seconds\": 0.0, \"train/consistency_weight\": 0.1, \"system/samples_per_second\": 432.97022055482773, \"system/gpu_peak_memory_gib\": 3.4472975730895996}\n{\"train/action_objective\": 0.15267029404640198, \"train/generated_consistency\": 0.012661384418606758, \"train/loss\": 0.19429612159729004, \"train/state_objective\": 0.04035969451069832, \"step\": 10450, \"train/lr\": 4.701172026446243e-05, \"train/grad_norm\": 1.2495200634002686, \"budget/training_seconds\": 3348.123647240922, \"budget/training_gpu_hours\": 3.7201373858232465, \"budget/validation_gpu_hours\": 0.540563558867822, \"budget/fraction\": 0.5225, \"budget/last_update_overrun_seconds\": 0.0, \"train/consistency_weight\": 0.1, \"system/samples_per_second\": 432.83660564796054, \"system/gpu_peak_memory_gib\": 3.4472975730895996}\n{\"train/action_objective\": 0.1275017410516739, \"train/generated_consistency\": 0.011359133757650852, \"train/loss\": 0.16416075825691223, \"train/state_objective\": 0.03552310913801193, \"step\": 10500, \"train/lr\": 4.662402628207877e-05, \"train/grad_norm\": 0.9288221597671509, \"budget/training_seconds\": 3355.774357246235, \"budget/training_gpu_hours\": 3.728638174718039, \"budget/validation_gpu_hours\": 0.540563558867822, \"budget/fraction\": 0.525, \"budget/last_update_overrun_seconds\": 0.0, \"train/consistency_weight\": 0.1, \"system/samples_per_second\": 432.447153484839, \"system/gpu_peak_memory_gib\": 3.4472975730895996}\n",
+  "files": {
+    "fused-ddp-benchmark.json": {
+      "campaign_updates": 0,
+      "checkpoint_step": 6000,
+      "diagnostic_seconds": 3.2998454309999943,
+      "gpu_count": 4,
+      "ranks": [
+        {
+          "gradient_relative_l2": 1.7646150354266865e-06,
+          "loss_fused": 0.2905651330947876,
+          "loss_old": 0.2905651330947876,
+          "rank": 0,
+          "rng_identical": true
+        },
+        {
+          "gradient_relative_l2": 1.7646150354266865e-06,
+          "loss_fused": 0.18962211906909943,
+          "loss_old": 0.18962210416793823,
+          "rank": 1,
+          "rng_identical": true
+        },
+        {
+          "gradient_relative_l2": 1.7646150354266865e-06,
+          "loss_fused": 0.16097143292427063,
+          "loss_old": 0.16097144782543182,
+          "rank": 2,
+          "rng_identical": true
+        },
+        {
+          "gradient_relative_l2": 1.7646150354266865e-06,
+          "loss_fused": 0.1750946193933487,
+          "loss_old": 0.1750946342945099,
+          "rank": 3,
+          "rng_identical": true
+        }
+      ],
+      "seconds_per_update": {
+        "fused": 0.14311885833740234,
+        "original": 0.40754300355911255
+      },
+      "speedup": 2.8475842267993148
+    },
+    "fused-throughput-benchmark.json": {
+      "adam_parameter_max_abs": 1.1902375263161957e-07,
+      "benchmark_seconds": 4.631473248824477,
+      "campaign_optimizer_updates": 0,
+      "checkpoint_step": 4000,
+      "cuda_rng_identical": true,
+      "gradient_max_abs": 1.2668715498875827e-07,
+      "gradient_relative_l2": 2.6734790026239352e-06,
+      "objective_fused": [
+        0.32161080837249756,
+        {
+          "action_objective": 0.2714381217956543,
+          "generated_consistency": 0.012228962033987045,
+          "state_objective": 0.04894977807998657
+        }
+      ],
+      "objective_old": [
+        0.32161080837249756,
+        {
+          "action_objective": 0.2714381515979767,
+          "generated_consistency": 0.01222896296530962,
+          "state_objective": 0.04894977807998657
+        }
+      ],
+      "peak_memory_gib": 3.474783420562744,
+      "precision": "unchanged FP32; normal batch/reduction roundoff only",
+      "seconds_per_update": {
+        "micro16_fused": 0.12245568484067917,
+        "micro4_accumulate4": 0.34887520000338557
+      },
+      "speedup": 2.8489914572548365
+    },
+    "ours-only-status.json": {
+      "baseline_retraining": false,
+      "child_pid": 920245,
+      "command": [
+        "/tmp/mtxu-flow-jepa-20261007/env/bin/python",
+        "-m",
+        "torch.distributed.run",
+        "--nnodes=1",
+        "--rdzv-backend=c10d",
+        "--rdzv-endpoint=127.0.0.1:0",
+        "--nproc_per_node=4",
+        "-m",
+        "flow_jepa.runtime.train",
+        "--config",
+        "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/repo/config/flow_metaworld_repair.json",
+        "--root",
+        "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign",
+        "--run-dir",
+        "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/joint_flow_consistent_3072",
+        "--method",
+        "joint_flow_consistent",
+        "--seed",
+        "3072",
+        "--world",
+        "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt"
+      ],
+      "execution_revision": "75e0815351eb25c63e495f87458f139bd5062259",
+      "final_test_enabled": false,
+      "final_validation_gpus": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "methods_to_train": [
+        "joint_flow_consistent"
+      ],
+      "pid": 917422,
+      "runtime_manifest_sha256": "431ae6e5e04be96360e62962395b0184e263320fac45e8e6deb2f4ed1cbc7f66",
+      "script_sha256": "daf7e7b6f35e474949555939f2d2f9fd88a7ee314a9d374a1829814e2b1799fb",
+      "started_utc": "2026-10-09T06:37:23.664845+00:00",
+      "state": "training_ours_optimized",
+      "training_gpus": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "updated_utc": "2026-10-09T06:40:10.122979+00:00",
+      "validation_gpus": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "world_sha256": "ae3f910da43f0a43dd65945394444a0b11719ed042cdacffacc2faaf824ec5a3"
+    },
+    "runs/joint_flow_consistent_3072/async_validation/worker.json": {
+      "command": [
+        "/tmp/mtxu-flow-jepa-20261007/env/bin/python",
+        "-m",
+        "torch.distributed.run",
+        "--nnodes=1",
+        "--rdzv-backend=c10d",
+        "--rdzv-endpoint=127.0.0.1:0",
+        "--nproc_per_node=4",
+        "-m",
+        "flow_jepa.runtime.async_eval",
+        "--job",
+        "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/joint_flow_consistent_3072/async_validation/step_0010000.json"
+      ],
+      "devices": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "job": "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/joint_flow_consistent_3072/async_validation/step_0010000.json",
+      "pid": 926345
+    },
+    "runs/joint_flow_consistent_3072/compute_usage.json": {
+      "budget_check": "optimizer boundaries; any last-update overrun is reported",
+      "gpu_count": 4,
+      "step": 10544,
+      "training_budget_seconds": 7200,
+      "training_gpu_hours": 3.7356431714341873,
+      "training_seconds": 3362.0788542907685,
+      "validation_gpu_hours": 0.540563558867822,
+      "validation_seconds": 486.5072029810399,
+      "validation_seconds_basis": "four-GPU equivalent; actual wall time in each async report"
+    },
+    "runs/joint_flow_consistent_3072/run.json": {
+      "fixture": false,
+      "id": "rm46k69b",
+      "method": "joint_flow_consistent",
+      "protocol": "563c7d7d8b10664aa1ebf50db8f8a24fc015b50325ff1de82bcb736c7d411d51",
+      "seed": 3072,
+      "wandb_url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/rm46k69b"
+    },
+    "throughput-migration-attempt-7000.json": {
+      "actual_outcome": "Only launcher retired; independent training worker groups continued. No optimized child dispatched. All later updates preserved at final handoff.",
+      "archive": "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/throughput-handoff/step_0007000",
+      "checkpoint_sha256": "5da564799bff031518752e017e5c191bbdaf3033df5ac57218a3c2003019b9fc",
+      "checkpoint_step": 7000,
+      "child": {
+        "command": [
+          "/tmp/mtxu-flow-jepa-20261007/env/bin/python",
+          "-m",
+          "torch.distributed.run",
+          "--nnodes=1",
+          "--rdzv-backend=c10d",
+          "--rdzv-endpoint=127.0.0.1:0",
+          "--nproc_per_node=4",
+          "-m",
+          "flow_jepa.train",
+          "--config",
+          "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/repo/config/flow_metaworld_repair.json",
+          "--root",
+          "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign",
+          "--run-dir",
+          "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/joint_flow_consistent_3072",
+          "--method",
+          "joint_flow_consistent",
+          "--seed",
+          "3072",
+          "--world",
+          "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt"
+        ],
+        "cwd": "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/repo",
+        "pid": 858560,
+        "start_ticks": "984503591"
+      },
+      "completed_updates_discarded": 0,
+      "conservative_inflight_charge_seconds": 1.0,
+      "ledger": {
+        "budget_check": "optimizer boundaries; any last-update overrun is reported",
+        "gpu_count": 4,
+        "migration_inflight_allowance_seconds": 1.0,
+        "step": 7000,
+        "training_budget_seconds": 7200,
+        "training_gpu_hours": 2.8601636551424034,
+        "training_seconds": 2574.147289628163,
+        "validation_gpu_hours": 0.540563558867822,
+        "validation_seconds": 486.5072029810399
+      },
+      "observed_utc": "2026-10-09T06:33:21.702537+00:00",
+      "parent": {
+        "command": [
+          "/tmp/mtxu-flow-jepa-20261007/env/bin/python",
+          "-u",
+          "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/ours_only_continuation.py",
+          "--record",
+          "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison"
+        ],
+        "cwd": "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/repo",
+        "pid": 807392,
+        "start_ticks": "984212427"
+      },
+      "pid": 906402,
+      "prior_checkpoint_training_seconds": 2573.147289628163,
+      "prior_status": {
+        "baseline_retraining": false,
+        "child_pid": 858560,
+        "command": [
+          "/tmp/mtxu-flow-jepa-20261007/env/bin/python",
+          "-m",
+          "torch.distributed.run",
+          "--nnodes=1",
+          "--rdzv-backend=c10d",
+          "--rdzv-endpoint=127.0.0.1:0",
+          "--nproc_per_node=4",
+          "-m",
+          "flow_jepa.train",
+          "--config",
+          "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/repo/config/flow_metaworld_repair.json",
+          "--root",
+          "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign",
+          "--run-dir",
+          "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/joint_flow_consistent_3072",
+          "--method",
+          "joint_flow_consistent",
+          "--seed",
+          "3072",
+          "--world",
+          "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt"
+        ],
+        "execution_revision": "75e0815351eb25c63e495f87458f139bd5062259",
+        "final_test_enabled": false,
+        "methods_to_train": [
+          "joint_flow_consistent"
+        ],
+        "pid": 807392,
+        "script_sha256": "712a0f2b141ba8bf2daf35855bb74fec4a2664818ae9bb5160d842e7dd7a5857",
+        "started_utc": "2026-10-09T04:53:38.215707+00:00",
+        "state": "training_ours",
+        "updated_utc": "2026-10-09T05:42:09.926123+00:00",
+        "world_sha256": "ae3f910da43f0a43dd65945394444a0b11719ed042cdacffacc2faaf824ec5a3"
+      },
+      "runtime_manifest_sha256": "2fdf6147b67d5e0765c78258ec7f46e82155fbbb32d9a0d64f763a4120dba2d8",
+      "state": "checkpoint_preserved"
+    },
+    "throughput-migration-status.json": {
+      "checkpoint_step": 8000,
+      "pid": 917422,
+      "state": "ready_to_resume_all_workers_retired",
+      "updated_utc": "2026-10-09T06:40:07.612995+00:00"
+    },
+    "throughput-migration.json": {
+      "archive": "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/throughput-handoff/step_0008000",
+      "checkpoint_sha256": "31cb83b9c8441807430a21a681741e1c459b26cef1f220abc5c530c8aa4b0783",
+      "checkpoint_step": 8000,
+      "completed_updates_discarded": 0,
+      "conservative_inflight_charge_seconds": 1.0,
+      "correction": "Explicitly stopped all four independent torchrun worker process groups at a later checkpoint; no completed updates rolled back.",
+      "ledger": {
+        "budget_check": "optimizer boundaries; any last-update overrun is reported",
+        "gpu_count": 4,
+        "migration_inflight_allowance_seconds": 1.0,
+        "step": 8000,
+        "training_budget_seconds": 7200,
+        "training_gpu_hours": 3.3096941483289832,
+        "training_seconds": 2978.724733496085,
+        "validation_gpu_hours": 0.540563558867822,
+        "validation_seconds": 486.5072029810399
+      },
+      "observed_utc": "2026-10-09T06:40:07.093138+00:00",
+      "pid": 917422,
+      "runtime_manifest_sha256": "431ae6e5e04be96360e62962395b0184e263320fac45e8e6deb2f4ed1cbc7f66",
+      "state": "checkpoint_preserved_all_workers",
+      "workers": [
+        {
+          "command": [
+            "/tmp/mtxu-flow-jepa-20261007/env/bin/python",
+            "-u",
+            "-m",
+            "flow_jepa.train",
+            "--config",
+            "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/repo/config/flow_metaworld_repair.json",
+            "--root",
+            "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign",
+            "--run-dir",
+            "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/joint_flow_consistent_3072",
+            "--method",
+            "joint_flow_consistent",
+            "--seed",
+            "3072",
+            "--world",
+            "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt"
+          ],
+          "cwd": "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/repo",
+          "pid": 858566,
+          "start_ticks": "984503717"
+        },
+        {
+          "command": [
+            "/tmp/mtxu-flow-jepa-20261007/env/bin/python",
+            "-u",
+            "-m",
+            "flow_jepa.train",
+            "--config",
+            "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/repo/config/flow_metaworld_repair.json",
+            "--root",
+            "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign",
+            "--run-dir",
+            "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/joint_flow_consistent_3072",
+            "--method",
+            "joint_flow_consistent",
+            "--seed",
+            "3072",
+            "--world",
+            "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt"
+          ],
+          "cwd": "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/repo",
+          "pid": 858567,
+          "start_ticks": "984503717"
+        },
+        {
+          "command": [
+            "/tmp/mtxu-flow-jepa-20261007/env/bin/python",
+            "-u",
+            "-m",
+            "flow_jepa.train",
+            "--config",
+            "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/repo/config/flow_metaworld_repair.json",
+            "--root",
+            "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign",
+            "--run-dir",
+            "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/joint_flow_consistent_3072",
+            "--method",
+            "joint_flow_consistent",
+            "--seed",
+            "3072",
+            "--world",
+            "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt"
+          ],
+          "cwd": "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/repo",
+          "pid": 858568,
+          "start_ticks": "984503717"
+        },
+        {
+          "command": [
+            "/tmp/mtxu-flow-jepa-20261007/env/bin/python",
+            "-u",
+            "-m",
+            "flow_jepa.train",
+            "--config",
+            "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/repo/config/flow_metaworld_repair.json",
+            "--root",
+            "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign",
+            "--run-dir",
+            "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/joint_flow_consistent_3072",
+            "--method",
+            "joint_flow_consistent",
+            "--seed",
+            "3072",
+            "--world",
+            "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt"
+          ],
+          "cwd": "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/repo",
+          "pid": 858569,
+          "start_ticks": "984503717"
+        }
+      ]
+    },
+    "throughput-runtime.json": {
+      "base_model_revision": "75e0815351eb25c63e495f87458f139bd5062259",
+      "coordinator_revision": "verified_independent_worker_groups",
+      "files": {
+        "flow_jepa/runtime/__init__.py": "dbe032145b43112c91ace18f2f3945dd21c8fa918b23bc311fc4553821bf0664",
+        "flow_jepa/runtime/async_eval.py": "be043a5c340854c26170ba41994c5acbe022df9eb403ff6947c3e3a66b68a562",
+        "flow_jepa/runtime/fused_training.py": "abff020c062282b41ee3414ce1686c276f80b1bec6513fc7e734f91f8e8f0035",
+        "flow_jepa/runtime/train.py": "8e0d121582c9793c324c1985501e7d49eaa03153812ed589738a9a4331f6ba0b",
+        "scripts/benchmark_fused_training.py": "c1db767285cbff52110b1eecf2e2784404598b09bbc66aaccd4e60d7a50949ae",
+        "scripts/operations/ours_only_continuation.py": "712a0f2b141ba8bf2daf35855bb74fec4a2664818ae9bb5160d842e7dd7a5857",
+        "scripts/operations/parallel_flow_campaign.py": "746f61d05cb9ca1b9fea7438c8647dadc16fa11fe33432781be89c6bb870cdd2",
+        "scripts/operations/throughput_continuation.py": "daf7e7b6f35e474949555939f2d2f9fd88a7ee314a9d374a1829814e2b1799fb",
+        "tests_flow/test_throughput_runtime.py": "d0991e8e39b5a3b1ebde844ac2df47611e20511dbd41bcc7da0ba4bf153ae3e3"
+      },
+      "final_validation_gpus": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "global_batch": 64,
+      "intermediate_validation_gpus": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "original_micro_batch": 4,
+      "physical_micro_batch": 16,
+      "seed": 3072,
+      "tests_passed": 27,
+      "training_budget_seconds": 7200,
+      "training_gpus": [
+        0,
+        1,
+        2,
+        3
+      ]
+    }
+  },
+  "gpu_snapshot": "0, 4813, 84\n1, 4813, 97\n2, 4813, 91\n3, 4813, 97\n4, 2837, 63\n5, 2837, 46\n6, 2837, 22\n7, 2837, 79\n",
+  "latest_metrics": [
+    {
+      "budget/fraction": 0.5175,
+      "budget/last_update_overrun_seconds": 0.0,
+      "budget/training_gpu_hours": 3.703245846159342,
+      "budget/training_seconds": 3332.921261543408,
+      "budget/validation_gpu_hours": 0.540563558867822,
+      "step": 10350,
+      "system/gpu_peak_memory_gib": 3.4472975730895996,
+      "system/samples_per_second": 433.4613175767031,
+      "train/action_objective": 0.16703248023986816,
+      "train/consistency_weight": 0.1,
+      "train/generated_consistency": 0.012155193835496902,
+      "train/grad_norm": 1.6189100742340088,
+      "train/loss": 0.2096593976020813,
+      "train/lr": 4.778772982174187e-05,
+      "train/state_objective": 0.04141140729188919
+    },
+    {
+      "budget/fraction": 0.52,
+      "budget/last_update_overrun_seconds": 0.0,
+      "budget/training_gpu_hours": 3.711846256363723,
+      "budget/training_seconds": 3340.6616307273507,
+      "budget/validation_gpu_hours": 0.540563558867822,
+      "step": 10400,
+      "system/gpu_peak_memory_gib": 3.4472975730895996,
+      "system/samples_per_second": 432.97022055482773,
+      "train/action_objective": 0.10620081424713135,
+      "train/consistency_weight": 0.1,
+      "train/generated_consistency": 0.011650152504444122,
+      "train/grad_norm": 0.9413464665412903,
+      "train/loss": 0.14745363593101501,
+      "train/lr": 4.7399629420371446e-05,
+      "train/state_objective": 0.04008781164884567
+    },
+    {
+      "budget/fraction": 0.5225,
+      "budget/last_update_overrun_seconds": 0.0,
+      "budget/training_gpu_hours": 3.7201373858232465,
+      "budget/training_seconds": 3348.123647240922,
+      "budget/validation_gpu_hours": 0.540563558867822,
+      "step": 10450,
+      "system/gpu_peak_memory_gib": 3.4472975730895996,
+      "system/samples_per_second": 432.83660564796054,
+      "train/action_objective": 0.15267029404640198,
+      "train/consistency_weight": 0.1,
+      "train/generated_consistency": 0.012661384418606758,
+      "train/grad_norm": 1.2495200634002686,
+      "train/loss": 0.19429612159729004,
+      "train/lr": 4.701172026446243e-05,
+      "train/state_objective": 0.04035969451069832
+    },
+    {
+      "budget/fraction": 0.525,
+      "budget/last_update_overrun_seconds": 0.0,
+      "budget/training_gpu_hours": 3.728638174718039,
+      "budget/training_seconds": 3355.774357246235,
+      "budget/validation_gpu_hours": 0.540563558867822,
+      "step": 10500,
+      "system/gpu_peak_memory_gib": 3.4472975730895996,
+      "system/samples_per_second": 432.447153484839,
+      "train/action_objective": 0.1275017410516739,
+      "train/consistency_weight": 0.1,
+      "train/generated_consistency": 0.011359133757650852,
+      "train/grad_norm": 0.9288221597671509,
+      "train/loss": 0.16416075825691223,
+      "train/lr": 4.662402628207877e-05,
+      "train/state_objective": 0.03552310913801193
+    }
+  ],
+  "observed_utc": "2026-10-09T06:46:41.593760+00:00",
+  "processes": {
+    "917422": "S",
+    "920245": "S"
+  },
+  "throughput-continuation-v2.log": "",
+  "throughput-continuation.log": "Traceback (most recent call last):\n  File \"/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/repo-runtime/scripts/operations/throughput_continuation.py\", line 167, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/repo-runtime/scripts/operations/throughput_continuation.py\", line 122, in main\n    wait_idle(tuple(range(8)),seconds=90)\n  File \"/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/repo-runtime/scripts/operations/parallel_flow_campaign.py\", line 74, in wait_idle\n    raise RuntimeError(f'GPU pool {pool} is unexpectedly busy')\nRuntimeError: GPU pool (0, 1, 2, 3, 4, 5, 6, 7) is unexpectedly busy\n",
+  "validation": {
+    "step_0005000.json": {
+      "metrics": {
+        "controller_budget_exhausted_rate": 0.8365384615384616,
+        "controller_budget_overrun_seconds_mean": 0.018571178804939754,
+        "controller_seconds_per_episode_mean": 9.051361081100858,
+        "controller_step_latency_ms_mean": 208.9548396080997,
+        "controller_step_latency_ms_p95": 212.3362321406603,
+        "episodes": 104,
+        "expert_goal_failure_rate": 0.0,
+        "latency_ms_mean": 209.1228050223736,
+        "observed_subgoal_cosine": 0.01784723909335723,
+        "return_mean": 66.34376717007513,
+        "seen_success_macro": 0.16346153846153846,
+        "steps_to_success_capped_mean": 174.43269230769232,
+        "success_macro": 0.16346153846153846,
+        "success_within_100_primitive": 0.16346153846153846,
+        "success_within_200_primitive": 0.16346153846153846,
+        "success_within_50_primitive": 0.15384615384615385,
+        "task/assembly/ci95_high": 0.3244156195108769,
+        "task/assembly/ci95_low": 0.0,
+        "task/assembly/success": 0.0,
+        "task/button-press-topdown/ci95_high": 0.3244156195108769,
+        "task/button-press-topdown/ci95_low": 0.0,
+        "task/button-press-topdown/success": 0.0,
+        "task/coffee-button/ci95_high": 0.3244156195108769,
+        "task/coffee-button/ci95_low": 0.0,
+        "task/coffee-button/success": 0.0,
+        "task/dial-turn/ci95_high": 0.3244156195108769,
+        "task/dial-turn/ci95_low": 0.0,
+        "task/dial-turn/success": 0.0,
+        "task/door-close/ci95_high": 0.3244156195108769,
+        "task/door-close/ci95_low": 0.0,
+        "task/door-close/success": 0.0,
+        "task/door-open/ci95_high": 0.3244156195108769,
+        "task/door-open/ci95_low": 0.0,
+        "task/door-open/success": 0.0,
+        "task/drawer-close/ci95_high": 1.0,
+        "task/drawer-close/ci95_low": 0.6755843804891231,
+        "task/drawer-close/success": 1.0,
+        "task/drawer-open/ci95_high": 0.3244156195108769,
+        "task/drawer-open/ci95_low": 0.0,
+        "task/drawer-open/success": 0.0,
+        "task/faucet-open/ci95_high": 0.3244156195108769,
+        "task/faucet-open/ci95_low": 0.0,
+        "task/faucet-open/success": 0.0,
+        "task/handle-press/ci95_high": 1.0,
+        "task/handle-press/ci95_low": 0.6755843804891231,
+        "task/handle-press/success": 1.0,
+        "task/pick-place/ci95_high": 0.3244156195108769,
+        "task/pick-place/ci95_low": 0.0,
+        "task/pick-place/success": 0.0,
+        "task/plate-slide/ci95_high": 0.3244156195108769,
+        "task/plate-slide/ci95_low": 0.0,
+        "task/plate-slide/success": 0.0,
+        "task/reach/ci95_high": 0.4708948057698615,
+        "task/reach/ci95_low": 0.02241690886329617,
+        "task/reach/success": 0.125,
+        "world_predictions_mean": 102938.46153846153
+      },
+      "step": 5000
+    }
+  }
+}

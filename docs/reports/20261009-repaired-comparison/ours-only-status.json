@@ -1,6 +1,6 @@
 {
   "baseline_retraining": false,
-  "child_pid": 858560,
+  "child_pid": 920245,
   "command": [
     "/tmp/mtxu-flow-jepa-20261007/env/bin/python",
     "-m",
@@ -10,7 +10,7 @@
     "--rdzv-endpoint=127.0.0.1:0",
     "--nproc_per_node=4",
     "-m",
-    "flow_jepa.train",
+    "flow_jepa.runtime.train",
     "--config",
     "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/repo/config/flow_metaworld_repair.json",
     "--root",
@@ -26,13 +26,36 @@
   ],
   "execution_revision": "75e0815351eb25c63e495f87458f139bd5062259",
   "final_test_enabled": false,
+  "final_validation_gpus": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
   "methods_to_train": [
     "joint_flow_consistent"
   ],
-  "pid": 807392,
-  "script_sha256": "712a0f2b141ba8bf2daf35855bb74fec4a2664818ae9bb5160d842e7dd7a5857",
-  "started_utc": "2026-10-09T04:53:38.215707+00:00",
-  "state": "training_ours",
-  "updated_utc": "2026-10-09T05:42:09.926123+00:00",
+  "pid": 917422,
+  "runtime_manifest_sha256": "431ae6e5e04be96360e62962395b0184e263320fac45e8e6deb2f4ed1cbc7f66",
+  "script_sha256": "daf7e7b6f35e474949555939f2d2f9fd88a7ee314a9d374a1829814e2b1799fb",
+  "started_utc": "2026-10-09T06:37:23.664845+00:00",
+  "state": "training_ours_optimized",
+  "training_gpus": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "updated_utc": "2026-10-09T06:40:10.122979+00:00",
+  "validation_gpus": [
+    4,
+    5,
+    6,
+    7
+  ],
   "world_sha256": "ae3f910da43f0a43dd65945394444a0b11719ed042cdacffacc2faaf824ec5a3"
 }

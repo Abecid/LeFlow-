@@ -1,0 +1,66 @@
+{
+  "after_examples_per_optimization_second": 441.4341707945195,
+  "all_training_losses_finite": true,
+  "before_examples_per_optimization_second": 158.17939761544335,
+  "checkpoint_metadata": {
+    "code": "75e0815351eb25c63e495f87458f139bd5062259",
+    "execution_runtime": {
+      "manifest_sha256": "431ae6e5e04be96360e62962395b0184e263320fac45e8e6deb2f4ed1cbc7f66",
+      "name": "fused_fp32_async_eval",
+      "original_micro": 4,
+      "physical_micro": 16
+    },
+    "seed": 3072,
+    "step": 9000,
+    "training_seconds": 3134.357503261417,
+    "validation_round": 1,
+    "validation_seconds": 486.5072029810399,
+    "wandb_id": "rm46k69b",
+    "world_hash": "ae3f910da43f0a43dd65945394444a0b11719ed042cdacffacc2faaf824ec5a3",
+    "world_size": 4
+  },
+  "latest": {
+    "budget/fraction": 0.4675,
+    "budget/last_update_overrun_seconds": 0.0,
+    "budget/training_gpu_hours": 3.538723474685103,
+    "budget/training_seconds": 3184.8511272165924,
+    "budget/validation_gpu_hours": 0.540563558867822,
+    "step": 9350,
+    "system/gpu_peak_memory_gib": 3.4472975730895996,
+    "system/samples_per_second": 437.4223551477332,
+    "train/action_objective": 0.16863489151000977,
+    "train/consistency_weight": 0.1,
+    "train/generated_consistency": 0.01199301052838564,
+    "train/grad_norm": 1.3690868616104126,
+    "train/loss": 0.21015705168247223,
+    "train/lr": 5.555299544799868e-05,
+    "train/state_objective": 0.04032285884022713
+  },
+  "manifest_sha256": "ce6e190b9b777ad34807c47c2dbeebae810f9cca52b440dbaf9e05043d69f1bc",
+  "observed_utc": "2026-10-09T06:43:44.595892+00:00",
+  "online": {
+    "global_batch": 64,
+    "group": "vjepa21_metaworld_repair_v2_matched",
+    "id": "rm46k69b",
+    "physical_micro_batch": 16,
+    "runtime_hash": "431ae6e5e04be96360e62962395b0184e263320fac45e8e6deb2f4ed1cbc7f66",
+    "seed": 3072,
+    "state": "running"
+  },
+  "original_checkout_clean": true,
+  "runtime_file_hash_checks": {
+    "flow_jepa/runtime/__init__.py": true,
+    "flow_jepa/runtime/async_eval.py": true,
+    "flow_jepa/runtime/fused_training.py": true,
+    "flow_jepa/runtime/train.py": true,
+    "scripts/benchmark_fused_training.py": true,
+    "scripts/operations/ours_only_continuation.py": true,
+    "scripts/operations/parallel_flow_campaign.py": true,
+    "scripts/operations/throughput_continuation.py": true,
+    "tests_flow/test_throughput_runtime.py": true
+  },
+  "runtime_tracked_source_clean": true,
+  "step_and_usage_monotone": true,
+  "visible_cpu_count": 112,
+  "world_sha256": "ae3f910da43f0a43dd65945394444a0b11719ed042cdacffacc2faaf824ec5a3"
+}

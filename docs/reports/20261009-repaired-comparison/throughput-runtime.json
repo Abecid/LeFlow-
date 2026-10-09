@@ -1,0 +1,43 @@
+{
+  "base_model_revision": "75e0815351eb25c63e495f87458f139bd5062259",
+  "coordinator_revision": "verified_independent_worker_groups",
+  "files": {
+    "flow_jepa/runtime/__init__.py": "dbe032145b43112c91ace18f2f3945dd21c8fa918b23bc311fc4553821bf0664",
+    "flow_jepa/runtime/async_eval.py": "be043a5c340854c26170ba41994c5acbe022df9eb403ff6947c3e3a66b68a562",
+    "flow_jepa/runtime/fused_training.py": "abff020c062282b41ee3414ce1686c276f80b1bec6513fc7e734f91f8e8f0035",
+    "flow_jepa/runtime/train.py": "8e0d121582c9793c324c1985501e7d49eaa03153812ed589738a9a4331f6ba0b",
+    "scripts/benchmark_fused_training.py": "c1db767285cbff52110b1eecf2e2784404598b09bbc66aaccd4e60d7a50949ae",
+    "scripts/operations/ours_only_continuation.py": "712a0f2b141ba8bf2daf35855bb74fec4a2664818ae9bb5160d842e7dd7a5857",
+    "scripts/operations/parallel_flow_campaign.py": "746f61d05cb9ca1b9fea7438c8647dadc16fa11fe33432781be89c6bb870cdd2",
+    "scripts/operations/throughput_continuation.py": "daf7e7b6f35e474949555939f2d2f9fd88a7ee314a9d374a1829814e2b1799fb",
+    "tests_flow/test_throughput_runtime.py": "d0991e8e39b5a3b1ebde844ac2df47611e20511dbd41bcc7da0ba4bf153ae3e3"
+  },
+  "final_validation_gpus": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "global_batch": 64,
+  "intermediate_validation_gpus": [
+    4,
+    5,
+    6,
+    7
+  ],
+  "original_micro_batch": 4,
+  "physical_micro_batch": 16,
+  "seed": 3072,
+  "tests_passed": 27,
+  "training_budget_seconds": 7200,
+  "training_gpus": [
+    0,
+    1,
+    2,
+    3
+  ]
+}

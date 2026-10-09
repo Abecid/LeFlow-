@@ -7,7 +7,7 @@
   validation on4–7; use all8 for final validation after optimization stops.
   Preserve the original 7,200-second four-GPU optimization allowance, charged
   ledgers, seed3072, cases and four validation rounds. No baseline reruns, extra
-  seeds, new variants or final tests are authorized. Read THROUGHPUT_RUNTIME.md
+  seeds, new variants or final tests are authorized. Read docs/THROUGHPUT_RUNTIME.md
   and the migration/runtime manifests before recovery; never resume superseded
   coordinators807392/858560 after the checkpoint handoff is recorded.
 
