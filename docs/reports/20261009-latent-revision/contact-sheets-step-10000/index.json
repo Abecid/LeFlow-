@@ -1,0 +1,158 @@
+{
+  "checkpoint": 10000,
+  "kind": "Measured saved rollout frames, uniformly sampled; final panel is registered goal image",
+  "simulator_calls": 0,
+  "model_calls": 0,
+  "images": [
+    {
+      "id": "validation/assembly/00000",
+      "success": false,
+      "steps": 200,
+      "sampled_primitive_indices": [
+        0,
+        50,
+        100,
+        150,
+        200
+      ],
+      "file": "assembly-00000.png",
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261009-latent-revision/campaign/runs/latent_revision_3072/trajectories/step_0010000/assembly/00000.npz",
+      "registered_episode_sha256": "ae6a38f1d67af88faad34b26bacea0171494b2990b609d464a608aa3a47d000c"
+    },
+    {
+      "id": "validation/coffee-button/00000",
+      "success": true,
+      "steps": 36,
+      "sampled_primitive_indices": [
+        0,
+        9,
+        18,
+        27,
+        36
+      ],
+      "file": "coffee-button-00000.png",
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261009-latent-revision/campaign/runs/latent_revision_3072/trajectories/step_0010000/coffee-button/00000.npz",
+      "registered_episode_sha256": "c20ef40683da48a61f562cb821dd329f3c3183b5f89fbc5cf2d9d562e25f6f36"
+    },
+    {
+      "id": "validation/dial-turn/00000",
+      "success": true,
+      "steps": 101,
+      "sampled_primitive_indices": [
+        0,
+        25,
+        50,
+        75,
+        101
+      ],
+      "file": "dial-turn-00000.png",
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261009-latent-revision/campaign/runs/latent_revision_3072/trajectories/step_0010000/dial-turn/00000.npz",
+      "registered_episode_sha256": "529bd81d3b5ab086e102520e34627f901537fb4d90d19da6515ff014bca22121"
+    },
+    {
+      "id": "validation/door-close/00000",
+      "success": true,
+      "steps": 69,
+      "sampled_primitive_indices": [
+        0,
+        17,
+        34,
+        51,
+        69
+      ],
+      "file": "door-close-00000.png",
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261009-latent-revision/campaign/runs/latent_revision_3072/trajectories/step_0010000/door-close/00000.npz",
+      "registered_episode_sha256": "e310defe973604fb4ac870bbb03fec4a65e9dbf97ebc8e640231aac78809e251"
+    },
+    {
+      "id": "validation/drawer-close/00004",
+      "success": true,
+      "steps": 75,
+      "sampled_primitive_indices": [
+        0,
+        18,
+        37,
+        56,
+        75
+      ],
+      "file": "drawer-close-00004.png",
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261009-latent-revision/campaign/runs/latent_revision_3072/trajectories/step_0010000/drawer-close/00004.npz",
+      "registered_episode_sha256": "25631545f194be4f315ce035615c13d1e3d0b63bfe095b8bf9ceb9c777d67563"
+    },
+    {
+      "id": "validation/faucet-open/00003",
+      "success": false,
+      "steps": 200,
+      "sampled_primitive_indices": [
+        0,
+        50,
+        100,
+        150,
+        200
+      ],
+      "file": "faucet-open-00003.png",
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261009-latent-revision/campaign/runs/latent_revision_3072/trajectories/step_0010000/faucet-open/00003.npz",
+      "registered_episode_sha256": "d11379564a026d7bb35e572800f8c6308fc7431c9591861daff733ce6d68f654"
+    },
+    {
+      "id": "validation/handle-press/00000",
+      "success": true,
+      "steps": 16,
+      "sampled_primitive_indices": [
+        0,
+        4,
+        8,
+        12,
+        16
+      ],
+      "file": "handle-press-00000.png",
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261009-latent-revision/campaign/runs/latent_revision_3072/trajectories/step_0010000/handle-press/00000.npz",
+      "registered_episode_sha256": "ad17b50fdfddd958f89be5bed4c25ac90193f3ea164546f611ce04494dc294be"
+    },
+    {
+      "id": "validation/pick-place/00000",
+      "success": false,
+      "steps": 200,
+      "sampled_primitive_indices": [
+        0,
+        50,
+        100,
+        150,
+        200
+      ],
+      "file": "pick-place-00000.png",
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261009-latent-revision/campaign/runs/latent_revision_3072/trajectories/step_0010000/pick-place/00000.npz",
+      "registered_episode_sha256": "55144c315102dae629c26105188a63501873563cc2796de05908a223056c9ac1"
+    },
+    {
+      "id": "validation/reach/00003",
+      "success": false,
+      "steps": 200,
+      "sampled_primitive_indices": [
+        0,
+        50,
+        100,
+        150,
+        200
+      ],
+      "file": "reach-00003.png",
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261009-latent-revision/campaign/runs/latent_revision_3072/trajectories/step_0010000/reach/00003.npz",
+      "registered_episode_sha256": "14d14cc180361a114b59c40d1cd5b7dfeaae43e3daeb87038ce1358689c5603e"
+    },
+    {
+      "id": "validation/reach/00005",
+      "success": true,
+      "steps": 44,
+      "sampled_primitive_indices": [
+        0,
+        11,
+        22,
+        33,
+        44
+      ],
+      "file": "reach-00005.png",
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261009-latent-revision/campaign/runs/latent_revision_3072/trajectories/step_0010000/reach/00005.npz",
+      "registered_episode_sha256": "c77f93b793227b6832de6829c7a6ef65c287f86d229aab05f4c9b8b1b8165b40"
+    }
+  ]
+}

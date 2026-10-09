@@ -1,11 +1,37 @@
 # Latent revision: results and failure analysis
 
-October9,2026. **Training is ongoing; this is the first registered checkpoint.**
-The5k model scores **73/104 (70.19%)**, below the previous controller-grounded
-method's79/104. The remaining10k/15k/20k evaluations are still pending. Source
-and the registered algorithm remain unchanged throughout this run.
+October 9, 2026. **Training is ongoing; two registered checkpoints are complete.**
+The 10k model scores **75/104 (72.12%)**, up from 73/104 at 5k and still below
+the previous controller-grounded method's 79/104. The 15k and 20k evaluations
+remain pending. Source and the registered algorithm remain unchanged.
 
-## First checkpoint comparison
+## Second checkpoint: 10,000 updates
+
+The same 104 cases produce seven improvements and five regressions relative
+to 5k. Reach rises from 1/8 to 4/8, while assembly falls from 2/8 to 0/8.
+Compared with the saved 79/104 reference, five cases improve and nine regress.
+All 29 failures reach the 200-action cap; none exhausts the controller clock.
+
+Across 5,396 observed prefixes, corrections reduce MAE from 0.002907 to
+0.002141 (26.35%). Terminal penalties are positive in 12.78% of decisions and
+change the best anchor in the actual sampled pool in 25/5,500 decisions
+(0.455%). These are chosen-action diagnostics, not evidence that rejected
+candidates would execute better.
+
+All ten [10k contact sheets](reports/20261009-latent-revision/contact-sheets-step-10000/index.json)
+were visually inspected at full resolution and checked against the exported
+bytes. Assembly0 now stalls after its initial approach; reach5 now succeeds
+in 44 actions. Pick-place0 moves toward the target region but leaves the red
+object on the table, visibly different from the registered goal. Faucet-open3
+and reach3 still fail. The other five saved cases succeed. These observations
+are descriptive; sparse views do not establish contact forces or exact grasp
+failure causes.
+
+The earlier checkpoint evidence below is retained explicitly as the **5k**
+analysis. The machine-readable review contains both rounds and the currently
+selected 10k comparison.
+
+## First checkpoint comparison: 5,000 updates
 
 | Method | Selected/saved validation successes |
 | --- | ---: |
@@ -120,4 +146,6 @@ and [W&B](https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/5thxkk6y).
 The5k optimization charge is0.752739GPUh; its registered validation costs
 0.567791GPUh. One-GPU preflight is separately0.005534GPUh. The source is frozen
 at899f8f2564e011ae87065a70acf28c50dade9997, with the same20k/28,800GPU-second ceiling.
-Training continues to its registered endpoint and periodic evaluations.
+Training continues to its registered endpoint and periodic evaluations. The
+10k optimization charge is 1.573701 GPUh; the live compute snapshot may also
+include updates after that checkpoint.

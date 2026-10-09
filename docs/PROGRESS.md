@@ -1,5 +1,15 @@
 # Active campaign progress
 
+## Second latent-revision validation — October 9, 3:20 PM Pacific
+
+The 10k checkpoint scores **75/104**, versus 73 at 5k and the saved reference's
+79. Reach improves to 4/8, but assembly falls to 0/8. All 29 failures hit the
+200-action cap, with no timeouts. Corrected executed-prefix MAE is 26.35% lower
+than the raw forecast, while terminal penalties change the sampled-pool anchor
+in only 0.455% of decisions. All ten new contact sheets were inspected. See
+[the updated report](LATENT_REVISION_RESULTS.md). Training and scoring remain
+unchanged for the registered 15k and 20k rounds.
+
 ## First latent-revision validation — October9,3:09 PM Pacific
 
 The5k checkpoint scores **73/104**, below the saved controller-grounded79/104:
