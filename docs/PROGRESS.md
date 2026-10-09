@@ -1,5 +1,33 @@
 # Active campaign progress
 
+## Controller-grounded run complete; latent-reasoning review — October 9, 2026
+
+All20,000 updates and four fixed104 validations completed: **79,78,75,78**
+successes at5k/10k/15k/20k. The selected5k checkpoint scores **75.96%** versus
+saved LeFlow27/104, same-world CEM22/104 and HWM8/104. Case identities and reset
+seeds match, but historical representation/sampler confounds remain. These are
+development validation comparisons, not corrected-SOTA or final-test results.
+[Completed results and failure analysis](CONTROLLER_GROUNDED_RESULTS.md) include
+all-round/raw records, checkpoint hashes, inspected trajectories and limitations.
+
+Optimization used2.42156 aggregate GPUh; registered validation1.94079 GPUh;
+preflight0.00557 GPUh. Other reserved occupancy has a separate0.52109 GPUh upper
+bound. Known cumulative campaign components total47.08105 GPUh, not a complete
+infrastructure bill. The final CPU-only audit verified unchanged source/data/
+world/bank, finite best/final checkpoints,401 unique scheduled training entries
+and all four validations. W&B synced; normal completion was20:06:38UTC, and all
+eight GPUs were idle with owned workers gone at the subsequent health check.
+The same5k optimizer/RNG resumed after the preserved renderer startup failure;
+no update was lost/repeated. No baseline or final test was rerun.
+
+At the selected checkpoint all25 failures use the200-action limit; none times
+out. Nineteen failures have positive predicted but nonpositive observed mean
+prefix progress in their last20 decisions. The [LARC application review](LARC_APPLICATION_20261009.md)
+proposes execution-error-conditioned latent plan revision, distinguishes
+physical JEPA states from internal thought vectors, and audits closer RD-VLA/
+MPCoT prior art and actual code. This proposal is not implemented or trained.
+No subsequent candidate, ablation, seed, baseline rerun or final test is queued.
+
 ## First controller-grounded validation — October 9, 12:43 PM Pacific
 
 The first complete104-case validation at update5,000 scored **79/104 (75.96%)**.

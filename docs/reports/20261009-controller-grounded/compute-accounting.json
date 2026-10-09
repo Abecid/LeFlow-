@@ -1,0 +1,19 @@
+{
+  "checked_utc": "2026-10-09T20:07:06.133203+00:00",
+  "units": "aggregate GPU-hours",
+  "optimization": 2.421563360877335,
+  "completed_registered_validation": 1.9407914162344402,
+  "training_only_preflight": 0.005569234532304108,
+  "charged_new_components": 4.36792401164408,
+  "other_reserved_occupancy_upper_bound": 0.5210883606660025,
+  "known_prior_campaign_subtotal": 42.713128872062086,
+  "known_cumulative_components": 47.081052883706164,
+  "cumulative_optimization": 31.792295025322176,
+  "cumulative_completed_validation": 15.141709961009521,
+  "optimization_limit": 8,
+  "updates": 20000,
+  "baseline_retraining_updates": 0,
+  "final_tests_read": false,
+  "all_infrastructure_runtime_total_available": false,
+  "scope": "Charged training/evaluation/preflight subtotal; additional reserved-occupancy upper bound is separate, not billing. Historical setup and interrupted test infrastructure were not comprehensively totaled. CPU index: 184s abandoned threaded preparation plus 28.023s successful process build; neither optimized model parameters."
+}

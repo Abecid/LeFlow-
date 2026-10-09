@@ -1,5 +1,10 @@
 # First controller-grounded iteration
 
+**Completed:**20,000 updates, all four registered validations, selected5k79/104.
+See [final results](CONTROLLER_GROUNDED_RESULTS.md), including complete compute,
+checkpoint provenance, failure analysis and comparison limits. Sections below
+preserve the launch formulation and historical recovery record.
+
 Authorized October 9, 2026: implement, train one candidate from scratch, compare
 with saved baselines and inspect failure modes. This supersedes the research-only
 hold for this isolated iteration. No baseline reruns, seeds, automatic variants,
@@ -136,7 +141,7 @@ retaining spatial cost. LeFlow supplies the proposal/refinement precedent.
 HAC and later controller-aware HRL limit the novelty claim; no generic invention
 of subgoal reachability or planning consistency is claimed.
 
-Prelaunch status: source implemented, local compilation passed. Local behavioral
+Historical prelaunch status: source implemented, local compilation passed. Local behavioral
 tests could not import h5py; they will run in the established server environment.
 Real-data bounded forward/backward and full encoder/controller latency checks
 are required before launching optimization. Results and exact source identity
@@ -156,7 +161,8 @@ Source `74a0a715cc393ba26285deb4571006ee7bc4d286` is frozen in the isolated
 server checkout. Eight-GPU training began October9 at19:25UTC, with
 [W&B run s12cr0yl](https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/s12cr0yl).
 The data/window/index evidence is preserved beside the preflight report.
-First evaluation remains pending as of the initial launch report.
+First evaluation was pending at the initial launch report; all four rounds are
+now complete, as documented in the final results linked above.
 
 ### Renderer recovery at update5,000
 

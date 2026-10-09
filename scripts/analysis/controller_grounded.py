@@ -145,8 +145,35 @@ def analyze(args):
             key=(episode,anchor.get('start'),anchor.get('span'))
             if previous is not None:transitions+=1;switches+=key!=previous
             previous=key
+    round_reports=[load(path) for path in paths]
+    for report in round_reports:
+        assert len(report['records'])==104 and {r['id'] for r in report['records']}==set(byid)
+        assert report['metrics']['episodes']==104
+        assert np.isclose(report['metrics']['success_macro'],sum(r['success'] for r in report['records'])/104)
+        for record in report['records']:
+            for key in ('reset_seed','model_seed','episode_sha256'):
+                assert record[key]==byid[record['id']][key],(report['step'],record['id'],key)
+            assert record['steps']<=200
+            trace=record.get('controller_diagnostics',{}).get('decisions',[])
+            if trace and not record['controller_budget_exhausted']:
+                assert record['world_predictions']==480*len(trace)
+                assert record['steps'] in (2*len(trace),2*len(trace)-1)
+    if (new/'complete.json').exists():
+        complete=load(new/'complete.json')
+        assert [r['step'] for r in round_reports]==complete['validation_steps']
+        assert complete['best_step']==ours['step']
+        assert np.isclose(complete['best'],ours['metrics']['success_macro'])
+    changes=[]
+    for before,after in zip(round_reports,round_reports[1:]):
+        a={r['id']:r['success'] for r in before['records']}
+        b={r['id']:r['success'] for r in after['records']}
+        assert set(a)==set(b)
+        changes.append(dict(from_step=before['step'],to_step=after['step'],
+            improved=[i for i in a if not a[i] and b[i]],regressed=[i for i in a if a[i] and not b[i]]))
     result=dict(selected_step=ours['step'],source_report=str(p),source_sha256=sha(p),
-        rounds=[summary(load(p)) for p in paths],
+        rounds=[summary(report) for report in round_reports],
+        consecutive_round_case_changes=changes,
+        round_trace_summaries={str(report['step']):trace_summary(report['records']) for report in round_reports},
         selected=summary(ours),comparison=comparison,case_pairing_verified=True,
         diagnostics=dict(decisions=len(decisions),observed_prefixes=len(observed),
             response_changes_retrieval_rate=float(np.mean([d['response_changed_retrieval_choice'] for d in decisions])) if decisions else None,

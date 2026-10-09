@@ -1,5 +1,14 @@
 # Experiment continuity
 
+- Controller-grounded iteration completed October 9, 20:06 UTC: 20,000 updates,
+  all four fixed104 validations (79/78/75/78), selected5k79/104. All owned workers
+  exited; W&B synced and all8 GPUs were idle at the final inspection. Read
+  docs/CONTROLLER_GROUNDED_RESULTS.md and its postrun audit/compute ledger.
+  The latest LARC request is an applicability/design question, recorded in
+  docs/LARC_APPLICATION_20261009.md; no second candidate was authorized/launched.
+  Preserve completed results and sealed tests. No automatic further training,
+  ablations, seeds, baseline reruns or final tests. Earlier bullets are history.
+
 - Latest authorization, October 9: implement and run ONE first
   `controller_grounded` candidate, seed3072, from scratch, using the frozen
   selected world/cache and unchanged train/validation cases. The user's latest

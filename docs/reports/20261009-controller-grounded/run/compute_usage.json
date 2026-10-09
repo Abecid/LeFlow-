@@ -3,13 +3,16 @@
   "gpu_count": 8,
   "last_update_overrun_gpu_seconds": 0.0,
   "optimization_cap_gpu_seconds": 28800,
-  "optimization_gpu_hours": 0.7762081450720628,
-  "optimization_gpu_seconds": 2794.349322259426,
-  "step": 5774,
+  "optimization_gpu_hours": 2.421563360877335,
+  "optimization_gpu_seconds": 8717.628099158406,
+  "step": 20000,
   "stop_check": "optimizer boundary; final-update overrun reported",
-  "validation_gpu_hours": 0.4976771593756146,
-  "validation_gpu_seconds": 1791.6377737522125,
+  "validation_gpu_hours": 1.9407914162344402,
+  "validation_gpu_seconds": 6986.849098443985,
   "validation_steps": [
-    5000
+    5000,
+    10000,
+    15000,
+    20000
   ]
 }
