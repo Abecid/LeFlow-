@@ -75,6 +75,13 @@ def wait_idle(pool, seconds=60):
         time.sleep(2)
 
 
+def child_environment(pool):
+    # Match campaign.run's explicit CUDA selection before any availability probe.
+    return dict(os.environ, CUDA_VISIBLE_DEVICES=','.join(map(str,pool)),
+                FLOW_DEVICE='cuda', FLOW_EGL_DEVICES='0,0,0,0',
+                OMP_NUM_THREADS='2', WANDB_MODE='online', CUDA_MODULE_LOADING='LAZY')
+
+
 def run_queue(jobs, pools, start, finish, changed, *, sleep=time.sleep):
     """A pool is reused only after the previous child has exited and verified."""
     pending, active = list(jobs), {}
@@ -197,8 +204,7 @@ def main():
                         cmd += ['--checkpoint', str(root/'runs'/f'{method}_3072'/'best.pt')]
                 log = (root/'logs'/f'parallel_{phase}_{method}_3072.log').open('a')
                 logs.append(log)
-                env = dict(os.environ, CUDA_VISIBLE_DEVICES=','.join(map(str,pool)),
-                           FLOW_EGL_DEVICES='0,0,0,0', OMP_NUM_THREADS='2', WANDB_MODE='online')
+                env = child_environment(pool)
                 proc = subprocess.Popen(cmd,cwd=repo,env=env,stdin=subprocess.DEVNULL,
                                         stdout=log,stderr=subprocess.STDOUT,start_new_session=True)
                 children.append(proc)

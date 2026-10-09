@@ -18,7 +18,8 @@ for name in ('campaign.json', 'status.json', 'queue.json', 'allocation.json',
              'wandb.json', 'online-readback.json', 'gpu_preflight.json',
              'data_protocol.json', 'comparison.json', 'seed-scope-change.json',
              'compute-scope-change.json', 'throughput-scope-change.json',
-             'fresh-start.json', 'failure-analysis.json'):
+             'fresh-start.json', 'failure-analysis.json',
+             'parallel-allocation.json', 'parallel-status.json'):
     p = root / name
     if p.exists():
         files[name] = json.loads(p.read_text())

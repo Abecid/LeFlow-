@@ -9,6 +9,15 @@ scheduler = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(scheduler)
 
 
+def test_child_uses_four_visible_gpus_and_explicit_cuda(monkeypatch):
+    monkeypatch.setenv('MUJOCO_GL','egl')
+    env = scheduler.child_environment((4,5,6,7))
+    assert env['CUDA_VISIBLE_DEVICES'] == '4,5,6,7'
+    assert env['FLOW_DEVICE'] == 'cuda'
+    assert env['FLOW_EGL_DEVICES'] == '0,0,0,0'
+    assert env['MUJOCO_GL'] == 'egl'
+
+
 def test_two_pools_never_share_a_job_or_overlap_on_one_pool():
     active, events, started = set(), [], []
     class Process:

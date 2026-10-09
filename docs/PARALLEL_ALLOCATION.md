@@ -76,7 +76,8 @@ A killed coordinator must not be blindly restarted or followed by a parent
 resume while its children are alive. Inspect parallel-status.json and actual
 process identities first. Never restart the intentionally held old campaigns.
 
-Three focused scheduler tests cover two-pool dispatch without duplicate/overlap,
-no next-job dispatch on failure, and rejecting signals after PID identity change.
+Four focused scheduler tests cover two-pool dispatch without duplicate/overlap,
+no next-job dispatch on failure, rejecting signals after PID identity change, and matching the original explicit
+CUDA-device initialization and four-GPU visibility.
 The scheduler is being deployed; actual acquisition and world-continuation
 verification will be recorded after launch.
