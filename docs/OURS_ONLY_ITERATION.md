@@ -120,3 +120,12 @@ The diagnostic and paired case changes are preserved in
 [selected-world-diagnostic.json](reports/20261009-repaired-comparison/selected-world-diagnostic.json).
 All 82 failures hit the controller allowance; no physical cause is established.
 The repaired head has no completed validation yet at the 05:48 UTC snapshot.
+
+## Completed iteration — October 9, 07:22 UTC
+
+The authorized world and single repaired head are complete. Head rounds scored
+17,17,16,15 /104; earliest-best5k remains selected at17/104. W&B finished and all
+owned processes exited. Final testing remains reserved; no next variant is
+authorized. See [the final validation review](REPAIRED_VALIDATION_RESULTS.md) for
+paired failure cases, same-world CEM22, historical references, compute and limits.
+The monitor is to be paused after verified publication.

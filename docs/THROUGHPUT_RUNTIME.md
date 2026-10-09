@@ -126,3 +126,16 @@ Expected completion including evaluation is12:10–12:25AM Pacific October9 if
 current throughput holds. The27 tests and measured FP32/RNG/gradient checks remain
 bounded evidence of equivalent computation; they are not proof of identical
 floating-point trajectories or improved benchmark accuracy.
+
+## Completion verified — October 9, 07:22 UTC
+
+The same seed3072 head reached20,000 updates with4,751.897 charged four-GPU
+optimization seconds. Final registered validation actually ran on eight GPUs
+for280.063 seconds, charged0.622362 GPU-hours. Its15/104 score is preserved;
+training throughput improvements did not establish better accuracy. All four
+rounds are17,17,16,15, with best5k selected by the original tie-break rule.
+W&B finished and all owned processes exited; all eight GPUs were empty/idle.
+Transient upload retries resolved without intervention. The shutdown log's
+missing destroy_process_group warning is recorded for a future cleanup fix;
+no execution code was changed during this run or additional evaluation launched.
+See [final results](REPAIRED_VALIDATION_RESULTS.md).

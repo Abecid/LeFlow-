@@ -1,0 +1,52 @@
+{
+  "baseline_training_repeated": false,
+  "current_code": "75e0815351eb25c63e495f87458f139bd5062259",
+  "current_world_sha256": "ae3f910da43f0a43dd65945394444a0b11719ed042cdacffacc2faaf824ec5a3",
+  "historical_code": "56419ed14cf127d4b7a8ab09a9d68e6681d2edc0",
+  "interpretation": "Descriptive selected-validation comparison of a repaired full pipeline against frozen historical implementations. World/state representations and code differ; the old LeFlow sampler has a known defect. Not a common-world comparison, isolated sampler effect, unbiased test estimate or corrected-SOTA claim.",
+  "runtime_manifest_sha256": "431ae6e5e04be96360e62962395b0184e263320fac45e8e6deb2f4ed1cbc7f66",
+  "same_new_world_cem": {
+    "additional_evaluation_run": false,
+    "cases": 104,
+    "step": 20000,
+    "success": 0.21153846153846154,
+    "successes": 22
+  },
+  "split": "validation",
+  "table": {
+    "cem_long": {
+      "baseline_only_success": 0,
+      "cases": 104,
+      "ours_only_success": 10,
+      "selected_step": 20000,
+      "source_file": "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/runs/world_3072/validation/cem_step_0020000.json",
+      "success": 0.0673076923076923,
+      "successes": 7
+    },
+    "hwm_adapted": {
+      "baseline_only_success": 1,
+      "cases": 104,
+      "ours_only_success": 10,
+      "selected_step": 20000,
+      "source_file": "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/runs/hwm_adapted_3072/validation/step_0020000.json",
+      "success": 0.07692307692307693,
+      "successes": 8
+    },
+    "joint_flow_consistent": {
+      "cases": 104,
+      "selected_step": 5000,
+      "source_file": "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/joint_flow_consistent_3072/validation/step_0005000.json",
+      "success": 0.16346153846153846,
+      "successes": 17
+    },
+    "leflow_adapted": {
+      "baseline_only_success": 15,
+      "cases": 104,
+      "ours_only_success": 5,
+      "selected_step": 20000,
+      "source_file": "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/runs/leflow_adapted_3072/validation/step_0020000.json",
+      "success": 0.25961538461538464,
+      "successes": 27
+    }
+  }
+}

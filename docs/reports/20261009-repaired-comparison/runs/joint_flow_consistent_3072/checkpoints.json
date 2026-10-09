@@ -5,8 +5,8 @@
     "path": "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/joint_flow_consistent_3072/best.pt"
   },
   "last.pt": {
-    "bytes": 45397209,
-    "mtime_ns": 1791529074058610152,
+    "bytes": 45394329,
+    "mtime_ns": 1791530090875039611,
     "path": "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/joint_flow_consistent_3072/last.pt"
   }
 }

@@ -1,0 +1,60 @@
+{
+  "checkpoint_records": {
+    "best.pt": {
+      "metadata": {
+        "best": 0.16346153846153846,
+        "code": "75e0815351eb25c63e495f87458f139bd5062259",
+        "execution_runtime": null,
+        "fixture": false,
+        "manifest": "ce6e190b9b777ad34807c47c2dbeebae810f9cca52b440dbaf9e05043d69f1bc",
+        "method": "joint_flow_consistent",
+        "protocol": "563c7d7d8b10664aa1ebf50db8f8a24fc015b50325ff1de82bcb736c7d411d51",
+        "seed": 3072,
+        "step": 5000,
+        "training_seconds": 1749.6759752575308,
+        "validation_round": 1,
+        "validation_seconds": 486.5072029810399,
+        "wandb_id": "rm46k69b",
+        "world_hash": "ae3f910da43f0a43dd65945394444a0b11719ed042cdacffacc2faaf824ec5a3",
+        "world_size": 4
+      },
+      "path": "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/joint_flow_consistent_3072/best.pt",
+      "sha256": "2afbb9693eab1b91a589c287e5e8d6422d9b8c108775c2815c42ffd51e74151f"
+    },
+    "last.pt": {
+      "metadata": {
+        "best": 0.16346153846153846,
+        "code": "75e0815351eb25c63e495f87458f139bd5062259",
+        "execution_runtime": {
+          "manifest_sha256": "431ae6e5e04be96360e62962395b0184e263320fac45e8e6deb2f4ed1cbc7f66",
+          "name": "fused_fp32_async_eval",
+          "original_micro": 4,
+          "physical_micro": 16
+        },
+        "fixture": false,
+        "manifest": "ce6e190b9b777ad34807c47c2dbeebae810f9cca52b440dbaf9e05043d69f1bc",
+        "method": "joint_flow_consistent",
+        "protocol": "563c7d7d8b10664aa1ebf50db8f8a24fc015b50325ff1de82bcb736c7d411d51",
+        "seed": 3072,
+        "step": 20000,
+        "training_seconds": 4751.8968519978225,
+        "validation_round": 4,
+        "validation_seconds": 2059.048768635839,
+        "wandb_id": "rm46k69b",
+        "world_hash": "ae3f910da43f0a43dd65945394444a0b11719ed042cdacffacc2faaf824ec5a3",
+        "world_size": 4
+      },
+      "path": "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/joint_flow_consistent_3072/last.pt",
+      "sha256": "3e9c20d9943e9d40df7c6ad3ea18987da9ced48547f049a9c15acfa8e0e152f5"
+    }
+  },
+  "coordinator_state": "completed_validation_review",
+  "final_test_run": false,
+  "gpus": "0, 0, 0\n1, 0, 0\n2, 0, 0\n3, 0, 0\n4, 0, 0\n5, 0, 0\n6, 0, 0\n7, 0, 0\n",
+  "integrity_verified_at": "2026-10-09T07:16:56.094248+00:00",
+  "no_remaining_owned_processes": true,
+  "observed_utc": "2026-10-09T07:22:03.364541+00:00",
+  "scope": "No automatic subsequent run; all original datasets, ledgers and held campaigns preserved.",
+  "selected_step": 5000,
+  "wandb_state": "finished"
+}

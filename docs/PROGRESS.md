@@ -1,49 +1,46 @@
 # Active campaign progress
 
-## Current verified state — October 9, 12:00 AM Pacific
+## Current verified state — October 9, 12:22 AM Pacific
 
-- **Two of four registered planner validations are complete:** both 5k and 10k
-  scored **17/104 (16.35%)**, on exactly the same successful cases. Successes
-  are drawer-close 8/8, handle-press 8/8 and reach 1/8; the other ten tasks have
-  zero successes. All 87 failures in each round exhausted the 10-second
-  controller allowance. These are operational stopping reasons, not established
-  physical causes. The 5k checkpoint remains the provisional earliest tied best.
-- The selected new world's already-recorded CEM diagnostic is **22/104** at 20k,
-  versus the planner's interim 17/104. Historical selected references remain
-  LeFlow 27, original ours 23, HWM 8 and old-world CEM 7, each out of 104. These are
-  selected-validation references with one training seed; representation/world
-  differences and defective historical LeFlow sampling prevent an isolated
-  planner effect or corrected-SOTA claim. Final tests and held-out outcomes
-  remain reserved. Full paired case IDs are in
-  [the interim validation review](reports/20261009-repaired-comparison/interim-validation-review.json).
-- At the 07:00 UTC observation, the head reached 15,981 updates with 4,171.749
-  charged optimization seconds (4.635277 GPU-hours). Completed head validation
-  used 1.100539 GPU-hours; its 990.485 ledger seconds are four-GPU equivalents.
-  The 10k asynchronous evaluation took 503.978 wall seconds on four GPUs. The
-  original 7,200-second four-GPU optimization OR 20,000-update ceiling is intact,
-  including one conservative migration second and zero discarded completed updates.
-- Training continues on GPUs 0–3 under coordinator 917422 / launcher 920245; the
-  third registered evaluation at 15k runs on GPUs 4–7 via launcher 939245. Every
-  rank's PID, start time, process group and allocation were checked. Retired
-  workers/coordinators and cancelled baseline schedulers are absent. The final
-  registered validation is scheduled on all 8 GPUs after optimization stops;
-  no final test, baseline retraining, extra seed or next variant is queued.
-- W&B run rm46k69b is online and running with the same seed, world and runtime
-  identity; its asynchronous chart records validation/checkpoint_step 10000.
-  World 8vwksovs is finished. Both original and runtime tracked model sources
-  remain clean at 75e0815; every listed runtime file matches manifest
-  SHA 431ae6e5e04be96360e62962395b0184e263320fac45e8e6deb2f4ed1cbc7f66.
-  Configuration, data manifest and selected-world hashes match. The failed 7k
-  migration evidence and successful 8k handoff remain preserved separately.
-- Cumulative charged MetaWorld optimization is 28.726123 GPU-hours and completed
-  registered validation 12.013626 GPU-hours across the original and repaired
-  campaigns. Bounded repair diagnostics 0.136526 and measured throughput-check
-  sections 0.004953 GPU-hours are separate. In-progress validation, benchmark
-  setup/loading and other documented infrastructure exclusions are not silently
-  counted as zero. See the [compute record](reports/20261009-repaired-comparison/compute-accounting.json).
-- Next: finish the remaining two registered validations, preserve final selection
-  and paired failure review including same-world CEM, publish to origin/main,
-  then pause the monitor. No automatic new training or test campaign.
+- **Optimization and all four registered validations are complete.** The repaired
+  planner scored **17, 17, 16, 15 /104** at 5k, 10k, 15k, 20k. The earliest tied best
+  is checkpoint 5k, **17/104 (16.35%)**. See the
+  [completed validation review](REPAIRED_VALIDATION_RESULTS.md) and
+  [paired failure inventory](reports/20261009-repaired-comparison/final-validation-review.json).
+- Already-recorded same-world CEM is 22/104. Frozen historical selected references
+  are LeFlow 27, original ours 23, HWM 8 and old-world CEM 7. The repaired pipeline
+  does not improve the saved stronger reference scores in this iteration.
+  Historical world/representation differences and the defective old flow sampler
+  prevent an isolated planner/sampler effect or corrected-SOTA claim.
+- The selected planner has drawer-close 8, handle-press 8 and reach 1 successes;
+  all 87 failures exhaust the 10-second controller allowance, below 200 primitive
+  actions. All 104 case IDs/reset seeds/episode hashes/model seeds match. Final
+  tests and held-out results remain reserved. Paired-reset intervals are
+  descriptive, conditional on one seed and selection on these same cases.
+- Head optimization stopped at 20,000 updates after 4,751.897 seconds on four GPUs
+  (5.279885 GPU-hours), with no overrun. Four validations consumed 2.287832 GPU-hours.
+  The last registered validation used all 8 GPUs for 280.063 seconds after optimizer
+  updates ended. No completed update was discarded at migration; its conservative
+  one-second charge remains included. World/seed/data/objective and ceilings are unchanged.
+- Cumulative MetaWorld optimization is 29.370732 GPU-hours and registered validation
+  13.200919 GPU-hours, plus 0.136526 bounded repair diagnostics and 0.004953 measured
+  throughput checks. The 42.713129 known subtotal excludes incompletely totaled
+  infrastructure/setup and post-compute upload occupancy; see
+  [compute accounting](reports/20261009-repaired-comparison/compute-accounting.json).
+- Best checkpoint SHA 2afbb9693eab1b91a589c287e5e8d6422d9b8c108775c2815c42ffd51e74151f
+  is the 5k model, saved before the throughput migration. The retained 20k checkpoint
+  separately records runtime manifest 431ae6e5e04be96360e62962395b0184e263320fac45e8e6deb2f4ed1cbc7f66.
+  Both tracked execution trees, listed runtime hashes, configuration, manifest,
+  selected-world identity and held historical training/compute records verify.
+- At 07:22 UTC W&B was finished, the coordinator recorded
+  `completed_validation_review`, all owned worker/coordinator processes had exited,
+  and all 8 GPUs were empty/idle. Final upload retries resolved without intervention.
+  Automatic comparison/failure-analysis files are preserved alongside the richer
+  six-reference offline review. A missing explicit NCCL teardown warning was
+  recorded; independent checks confirm resources were released.
+- The authorized run and validation failure review are complete. Publish and
+  verify origin/main, then pause the existing monitor. Further diagnostics,
+  ablations, retraining or final tests require new authorization; none is queued.
 
 Earlier entries below record historical authorizations and states. The current
 ours-only scope above and `OURS_ONLY_ITERATION.md` supersede the all-method,
@@ -3486,7 +3483,7 @@ All source, diagnostic and handoff evidence is preserved separately from raw
 models/data. The original failed launcher-only transition remains recorded;
 no duplicate training was started and no completed step was discarded. Next:
 complete this run, retain all four validation reports, paired failure review and
-same-world CEM22/104 alongside historical references, then pause monitoring.
+same-world CEM 22/104 alongside historical references, then pause monitoring.
 
 ## October 9, 07:00 UTC — second planner validation and paired failures preserved
 
@@ -3523,3 +3520,57 @@ paired failure inventory, online readback, worker-group identities and cumulativ
 compute. The original 7k failed handoff and later 8k preserved checkpoint are
 retained. The final two registered reports and final validation failure review
 remain pending; only then publish completion and pause the monitor.
+
+## October 9, 07:18 UTC — completed validation results; upload shutdown pending
+
+The head completed the 20,000-update cap and all four fixed 104-case rounds.
+Successes were 17, 17, 16, 15; the earliest 5k checkpoint remains selected at 17/104.
+Its SHA, model/world/data identities and saved training state were CPU-verified.
+The selected checkpoint predates runtime fusion and is not relabeled. The 20k
+checkpoint separately includes the explicit runtime manifest.
+
+Third-round failure drawer-close/00005 regresses from 10k. At 20k, dial-turn/00006
+and drawer-close/00005 improve, while drawer-close/00002, handle-press/00002 and
+reach/00007 regress relative to 15k. All failures in all four rounds hit the
+controller allowance. Eight recorded CEM-only cases (seven coffee-button resets
+and reach/00003) and 15 historical LeFlow-only successes are preserved with exact
+reset/episode IDs. No physical mechanism is inferred from a timeout or latent
+score. Same-world CEM 22 and historical original-ours 23 remain visible alongside
+LeFlow 27/HWM 8/old-CEM 7; the old representation/world/sampler limitations remain.
+
+Generated final-validation-review.json offline from existing saved reports;
+no further optimization or environment rollout occurred. It includes all rounds,
+per-task/seen results, absent held-out outcomes, paired failure inventories and
+10,000 stratified paired-reset bootstrap draws. One training seed and validation
+selection bias remain explicit; adjusted intervals do not remove historical
+confounding. The separate analysis RNG is not a training seed.
+
+Final validation ran on eight GPUs for 280.063 seconds and was charged by actual
+GPU count. Final head cost is 5.279885 optimization plus 2.287832 validation GPU-hours.
+Cumulative accounting includes original and repaired runs, bounded diagnostics
+and the existing conservative migration charge without double counting. No
+budget extension, final test, baseline retraining or next variant was launched.
+
+At 07:18 UTC W&B was still uploading output/config/history/summary files; metrics
+through checkpoint 20k are already online. Training/evaluation completion is
+preserved even though the parent waits for process exit before generating its
+own review. No upload process was killed or code modified underneath it. The
+monitor will verify normal cleanup and preserve that final status before pausing.
+
+## October 9, 07:22 UTC — final upload and normal shutdown verified
+
+W&B finished syncing; the coordinator wrote historical-validation-comparison.json
+and validation-failure-analysis.json, recorded completed_validation_review, and
+exited normally. Independent /proc identities show no campaign trainer, input
+worker, evaluator or coordinator remains; all eight GPUs are empty/idle. Upload
+EOF/header-timeout retries resolved without a kill, restart or replay. The log's
+missing explicit NCCL teardown warning is preserved as a cleanup observation;
+no resources remained allocated at verification.
+
+Final checkpoint metadata and all four validation reports are preserved. The
+20k runtime metadata matches the frozen overlay; best 5k retains its original
+pre-throughput provenance. The reviewed Markdown result and JSON paired inventory
+report 17/104 without a favorable-result assumption, retain same-world CEM 22 and
+all historical references, and separate observed timeout conditions from unproven
+physical causes. Proposed diagnostics/ablations are not executed. After verifying
+publication, pause the monitor instead of starting another experiment.

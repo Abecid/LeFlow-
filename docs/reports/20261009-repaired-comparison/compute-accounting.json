@@ -2,22 +2,22 @@
   "all_infrastructure_runtime_total_available": false,
   "baseline_retraining_updates": 0,
   "bounded_repair_diagnostic_gpu_hours": 0.13652564757193128,
-  "checked_at": "2026-10-09T07:00:09.437809+00:00",
-  "cumulative_completed_registered_validation_gpu_hours": 12.01362562917173,
-  "cumulative_optimization_gpu_hours": 28.726123434073397,
+  "checked_at": "2026-10-09T07:22:03.364541+00:00",
+  "cumulative_completed_registered_validation_gpu_hours": 13.200918544775082,
+  "cumulative_optimization_gpu_hours": 29.37073166444484,
   "current_campaign": "20261009-repaired-comparison",
-  "current_completed_validation_gpu_hours": 2.9633074828257993,
-  "current_optimization_gpu_hours": 7.614047190789133,
+  "current_completed_validation_gpu_hours": 4.150600398429152,
+  "current_optimization_gpu_hours": 8.258655421160576,
   "current_run_ledgers": {
     "joint_flow_consistent_3072": {
       "budget_check": "optimizer boundaries; any last-update overrun is reported",
       "gpu_count": 4,
-      "step": 15981,
+      "step": 20000,
       "training_budget_seconds": 7200,
-      "training_gpu_hours": 4.63527716073725,
-      "training_seconds": 4171.749444663525,
-      "validation_gpu_hours": 1.1005390495475795,
-      "validation_seconds": 990.4851445928216,
+      "training_gpu_hours": 5.279885391108691,
+      "training_seconds": 4751.8968519978225,
+      "validation_gpu_hours": 2.2878319651509327,
+      "validation_seconds": 2059.048768635839,
       "validation_seconds_basis": "four-GPU equivalent; actual wall time in each async report"
     },
     "world_3072": {
@@ -32,16 +32,16 @@
     }
   },
   "excluded_or_not_yet_finalized": [
-    "Any later in-progress validation is excluded until its completed-validation ledger is written; current entries are timestamped snapshots.",
+    "All four current validation rounds are included. W&B upload/shutdown occupancy after computation is not optimization and is not comprehensively totaled.",
     "Shared preparation, preflights, and interrupted original final-test attempts are preserved separately but are not comprehensively totaled here.",
     "Separate older PushT pilot is a different benchmark and is outside these MetaWorld subtotals."
   ],
   "gpu_count_per_model": 4,
-  "health_checked_at": "2026-10-09T07:00:09.437809+00:00",
+  "health_checked_at": "2026-10-09T07:22:03.364541+00:00",
   "historical_optimization_gpu_hours": 21.112076243284264,
   "historical_registered_validation_gpu_hours": 9.05031814634593,
   "interpretation": "Cumulative charged training and completed validation are retained across both MetaWorld campaigns. This is not a claim that the per-run allowance equals total R&D cost or that the known subtotal covers all infrastructure runtime.",
-  "known_charged_components_gpu_hours": 40.88122772608729,
+  "known_charged_components_gpu_hours": 42.713128872062086,
   "migration_cost": {
     "completed_updates_discarded": 0,
     "conservative_inflight_optimization_seconds": 1,
@@ -101,6 +101,7 @@
     "scope": "Measured forward/backward/optimizer-equivalence sections only; setup/checkpoint loading and CPU tests excluded.",
     "single_gpu_measured_seconds": 4.631473248824477
   },
-  "timestamp_basis": "Report assembly time; current ledgers are the immediately preceding remote snapshot.",
+  "timestamp_basis": "Final completed ledgers rechecked after normal coordinator shutdown; no additional optimization or validation after step20000.",
+  "training_and_registered_validation_complete": true,
   "units": "GPU-hours"
 }

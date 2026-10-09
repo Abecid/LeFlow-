@@ -1,0 +1,11 @@
+{
+  "best": 0.16346153846153846,
+  "fixture": false,
+  "step": 20000,
+  "stop_reason": "update_limit",
+  "training_budget_seconds": 7200,
+  "training_gpu_hours": 5.279885391108691,
+  "training_seconds": 4751.8968519978225,
+  "validation_rounds": 4,
+  "validation_seconds": 2059.048768635839
+}
