@@ -3145,3 +3145,35 @@ GPUs. The original final-test journal retains 236 partial records; their outcome
 were not inspected for this work. Diagnostic source/scoring hashes exactly match
 the files published with the repair. Saved final-integrity.json. The existing
 monitor will be paused on completion so no stopped campaign is restarted.
+
+## 2026-10-09 — fresh repaired comparison authorized and prepared
+
+The latest user correction explicitly requests fresh training after repairs,
+matched training/evaluation data and compute ceilings, periodic eval logging,
+and failure-mode analysis. It supersedes the repair-stage no-training boundary
+for a NEW campaign; the original campaign remains held and unchanged.
+
+Enabled `flow_metaworld_repair.json`, documented the fixed protocol in
+REPAIRED_COMPARISON, and added automatic post-test failure inventories to the
+comparison artifact. All models start from scratch: shared static-state world,
+ours, LeFlow adaptation and HWM adaptation; CEM shares the new world. Same seed
+3072, GPUs 0–3, exact cache entries, 20,000-update/7,200-second per-model ceilings,
+104-case periodic validation and 3,200-case final test per method.
+
+59 CPU regression tests passed: the first run passed 56 and three failed solely
+because the temporary test archive lacked Git metadata required by provenance
+checks; all three passed after initializing that test-only checkout (10.56 s).
+Production code was not weakened to bypass provenance. Syntax and diff checks
+pass; explicit equality checks preserve tasks/data/encoder/seed/method scope,
+training ceilings, validation counts and controller/action budgets. The GPU
+preflight now uses the registered static state representation. No scientific
+training had started at this publication checkpoint.
+
+The fresh server root is 20261009-repaired-comparison. Reuse existing cache and
+frozen encoder through links; preserve original reset IDs, goals, statistics and
+hashes. Precreate local POSIX evaluation journal locks to avoid the old shared
+filesystem blocking-lock failure. New execution checkout will be frozen at this
+commit; later reporting commits will not modify it. At launch preparation the
+assigned GPUs were idle, persistent storage had about 98 GB free and scratch
+about 2.1 TB free. Next: verify real GPU preflight, manifest hashes, initial
+optimizer progress and online metric logging; then monitor all registered stages.

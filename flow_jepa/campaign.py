@@ -350,6 +350,8 @@ def main():
         ]
         comparison = compare(c, reports, seeds=seeds)
         save_json(root / "comparison.json", comparison)
+        from .failure_analysis import analyze
+        save_json(root / "failure-analysis.json", analyze(c, reports))
         result = wandb.init(
             project=c["wandb"]["project"],
             mode="online",
@@ -361,6 +363,7 @@ def main():
             result.summary[f"{method}/success"] = stats["success"]
         artifact = wandb.Artifact(c["name"] + "-comparison", type="evaluation")
         artifact.add_file(str(root / "comparison.json"))
+        artifact.add_file(str(root / "failure-analysis.json"))
         result.log_artifact(artifact)
         result.finish()
         save_json(

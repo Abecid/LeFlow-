@@ -1,5 +1,11 @@
 # Authorized repairs after baseline training
 
+> Latest authorization: the user has now explicitly requested training from
+> scratch and a matched final comparison. See [REPAIRED_COMPARISON](REPAIRED_COMPARISON.md).
+> The no-training boundary described below was valid during the repair stage;
+> the original campaign remains held, while the new campaign is authorized.
+
+
 The user's October 8 instruction supersedes the earlier automatic final-test
 queue. All four learned runs (shared world plus three heads) completed 20,000
 updates and four registered validations. No additional training is authorized.

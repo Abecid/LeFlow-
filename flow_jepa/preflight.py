@@ -13,7 +13,7 @@ from torch.nn.parallel import DistributedDataParallel as DDP
 from .common import barrier, config, distributed, gather, save_json, seed_all
 from .environment import collect_episode, make_env
 from .models import System
-from .vision import Encoder, history_clip
+from .vision import Encoder, state_clip
 
 
 def main():
@@ -46,7 +46,8 @@ def main():
     finally:
         env.close()
     clips = [
-        history_clip(sample["frames"], i, dc["history_frames"])
+        state_clip(sample["frames"], i, dc["history_frames"],
+                   c["model"].get("state_representation", "causal"))
         for i in range(0, len(sample["frames"]), dc["action_repeat"])
     ]
     z = torch.cat(

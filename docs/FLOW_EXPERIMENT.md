@@ -4,12 +4,11 @@ This is the active experiment. BTM is not part of its model, training, or campai
 Historical BTM files remain for reproducibility; do not launch `run_comparison.py`
 for this experiment.
 
-**Current execution override, October 9:** all registered training is complete.
-The user requested repairs and bounded validation diagnostics before further
-definitive comparison compute. Final testing is held; no additional training is
-authorized. Read [REPAIR_PLAN](REPAIR_PLAN.md) and [REPAIR_RESULTS](REPAIR_RESULTS.md).
-The launch instructions below describe the historical protocol, not permission
-to restart it.
+**Current execution override, October 9:** the user explicitly authorized fresh
+training after repairs, with the same compute ceilings and train/evaluation set.
+Follow [REPAIRED_COMPARISON](REPAIRED_COMPARISON.md) for the new static-state,
+endpoint-sampler campaign. The earlier campaign remains held. The causal-state
+architecture below is the historical original, not the repaired representation.
 
 ## Fixed scientific target
 

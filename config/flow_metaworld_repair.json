@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "name": "vjepa21_metaworld_repair_v2_untrained",
+  "name": "vjepa21_metaworld_repair_v2_matched",
   "training_tasks": [
     "assembly",
     "button-press-topdown",
@@ -113,8 +113,8 @@
     "mode": "online"
   },
   "execution": {
-    "training_enabled": false,
-    "test_enabled": false,
-    "note": "Untrained repair recipe. Existing checkpoints retain legacy protocol; no additional training authorized."
+    "training_enabled": true,
+    "test_enabled": true,
+    "note": "Fresh matched comparison explicitly authorized by the user's latest correction. Same seed, episodes and per-model ceilings; all learned models start from scratch. Old campaign remains held."
   }
 }

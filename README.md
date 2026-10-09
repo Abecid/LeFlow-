@@ -1,27 +1,25 @@
 # Joint flow planning with V-JEPA 2.1 (LeFlow fork)
 
-**Current status, October 9, 2026:** baseline training is complete. Full testing
-is held at the user's request while implementation defects are addressed.
-**No additional training is authorized.** Exactly one seed (3072), three baseline
-methods and our proposed method were registered; no ablations are queued.
+**Current status, October 9, 2026:** the user authorized a fresh matched
+comparison after repairs. The new campaign retrains the shared world model and
+all three learned methods from scratch on the exact original train/evaluation
+episodes, with seed 3072 and unchanged per-model training and controller budgets.
+CEM uses the same newly trained world model. No ablations or extra seeds.
 
-Selected validation success on the same 104 resets: **LeFlow 26.0%, ours 22.1%,
-HWM 7.7%, CEM 6.7%**. These are adaptations, not exact SOTA reproductions. The
-audit found a flow-output noise restriction affecting both learned flow methods;
-these results do not establish an advantage for our proposal.
+The prior selected validation results were LeFlow 26.0%, ours 22.1%, HWM 7.7%,
+and CEM 6.7%. They describe the old implementation, whose sampler had a confirmed
+noise restriction; they are not results for the repaired models. These methods
+are adaptations, not exact published-SOTA reproductions.
 
-- [Latest repairs and diagnostic findings](docs/REPAIR_RESULTS.md)
-- [Authorized plan and fixed compute/data constraints](docs/REPAIR_PLAN.md)
+- [Fresh comparison protocol, launch status and failure analysis](docs/REPAIRED_COMPARISON.md)
+- [Repairs and bounded diagnostic findings](docs/REPAIR_RESULTS.md)
 - [Implementation and literature-fidelity audit](docs/EVAL_AUDIT_20261009.md)
-- [Full progress and preserved experiment evidence](docs/PROGRESS.md)
+- [Progress and preserved experiment evidence](docs/PROGRESS.md)
 - [Original experiment protocol](docs/FLOW_EXPERIMENT.md)
 
-The repair recipe in `config/flow_metaworld_repair.json` disables training and
-full-test execution. Structural checks and short validation diagnostics use no
-optimizer updates. Existing checkpoint semantics and the frozen execution
-checkout remain unchanged. A repaired-model performance comparison would require
-separate authorization and identical original training/evaluation sets and
-per-method budgets; old weights must not be relabeled as repaired-model weights.
+The repaired recipe is enabled by the latest explicit authorization. Old weights
+are not reused as trained repaired-model weights. The original campaign remains
+held, and its partial test outcomes were not used for development.
 
 The research uses frozen V-JEPA 2.1 features for MetaWorld, with **no BTM**.
 Historical BTM scripts remain only for reproducibility.

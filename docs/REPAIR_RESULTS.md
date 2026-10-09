@@ -1,5 +1,11 @@
 # Sampler repair and executable-progress diagnostics
 
+> Latest authorization: the user has now explicitly requested training from
+> scratch and a matched final comparison. See [REPAIRED_COMPARISON](REPAIRED_COMPARISON.md).
+> The no-training boundary described below was valid during the repair stage;
+> the original campaign remains held, while the new campaign is authorized.
+
+
 All original training is complete. The final-test process tree was stopped at
 02:45:55 UTC on October 9 under the user's revised instruction. Completed
 training, all four validations per model, checkpoints and partially collected
