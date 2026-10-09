@@ -80,3 +80,32 @@ updates must be verified and recorded in PROGRESS before claiming deployment.
 After this run, preserve the historical-reference validation comparison, include
 already-recorded same-new-world CEM22/104 at20k, record failure modes and stop.
 No additional training or test campaign is automatically dispatched.
+
+## Four-GPU distributed check
+
+A bounded copy of the step6000 checkpoint was also checked on GPUs4–7 while the
+original job continued. Original gradient accumulation and the fused execution
+both used the actual four-rank data partition and DDP reduction. Every rank
+retained identical CUDA RNG state. The global relative gradient L2 difference
+was1.76e-6. Per-update forward/backward time was0.407543s original versus0.143119s
+fused, **2.848x** faster. No research optimizer updates were performed. The
+measured diagnostic portion took3.300s across four GPUs, excluding setup/loading.
+The exact one-campaign diagnostic source is preserved in
+scripts/operations/benchmark_fused_ddp.py; it writes a separate diagnostic record.
+
+## Handoff correction
+
+The first handoff attempt atstep7000 exposed that torchrun starts its rank workers
+in independent process groups. Stopping/killing only the launcher group did not
+retire those workers. The GPU-idle gate rejected the new launch, so no duplicate
+training was dispatched. The original four ranks kept training and saving their
+updates under the original ledger. The7000 checkpoint was preserved but was not
+used to roll back that later work.
+
+The corrected handoff identifies every rank by PID, start time, command and
+working directory, stops all four worker groups at an atomic checkpoint boundary,
+requires each leader to be stopped and the ledger/checkpoint step to match, then
+archives and retires those groups individually. The original launcher-only
+migration mode now fails closed. The later migration record supersedes the7000
+attempt and retains the failed attempt as separate evidence. Completion and
+real resumed throughput must be verified before treating the change as live.

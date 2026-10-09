@@ -104,8 +104,81 @@ def migrate(record):
             if alive(parent['pid']):checked_signal(parent,signal.SIGCONT)
 
 
+def migrate_detached_workers(record):
+    """Complete a handoff when torchrun workers have independent process groups."""
+    root=record/'campaign';run=root/'runs'/f'{METHOD}_3072'
+    prior=json.loads((root/'throughput-migration.json').read_text())
+    assert prior['checkpoint_step']==7000
+    for pid in [807392,858560,906402]:assert not alive(pid)
+    workers=[]
+    for pid in [858566,858567,858568,858569]:
+        item=identity(pid)
+        assert item['start_ticks']=='984503717' and item['cwd']==str(record/'repo')
+        assert 'flow_jepa.train' in item['command'] and str(run) in item['command']
+        assert os.getpgid(pid)==pid
+        workers.append(item)
+    spec=json.loads((root/'throughput-runtime.json').read_text())
+    for name,expected in spec['files'].items():
+        assert hashlib.sha256((record/'repo-runtime'/name).read_bytes()).hexdigest()==expected,name
+    libc=ctypes.CDLL(None,use_errno=True);fd=libc.inotify_init1(os.O_NONBLOCK)
+    if fd<0:raise OSError(ctypes.get_errno(),'inotify_init1')
+    wd=libc.inotify_add_watch(fd,os.fsencode(run),0x80)
+    if wd<0:raise OSError(ctypes.get_errno(),'inotify_add_watch')
+    def group_signal(sig):
+        for worker in workers:
+            assert identity(worker['pid'])==worker
+            os.killpg(worker['pid'],sig)
+    stopped=False;retired=False
+    save(root/'throughput-migration-status.json',dict(state='waiting_for_worker_checkpoint',pid=os.getpid(),workers=workers,started_utc=now()))
+    try:
+        deadline=time.monotonic()+1200
+        while time.monotonic()<deadline:
+            if not select.select([fd],[],[],2)[0]:
+                assert all(alive(x['pid']) for x in workers);continue
+            data=os.read(fd,65536);offset=0;found=False
+            while offset<len(data):
+                _,mask,_,length=struct.unpack_from('iIII',data,offset)
+                name=data[offset+16:offset+16+length].split(b'\0')[0];offset+=16+length
+                if mask&0x80 and name==b'last.pt':found=True
+            if not found:continue
+            group_signal(signal.SIGSTOP);stopped=True;time.sleep(.2)
+            assert all((Path('/proc')/str(w['pid'])/'stat').read_text().rsplit(')',1)[1].split()[0]=='T' for w in workers)
+            saved=torch.load(run/'last.pt',map_location='cpu',weights_only=False)
+            ledger=json.loads((run/'compute_usage.json').read_text())
+            if ledger['step']!=saved['step']:
+                group_signal(signal.SIGCONT);stopped=False;continue
+            assert saved['step']>=8000 and saved['step']<20000
+            assert saved['world_size']==4 and saved['seed']==3072 and saved['code']==BASE
+            assert len(list((run/'validation').glob('step_*.json')))==saved['validation_round']
+            archive=root/'throughput-handoff'/f'step_{saved["step"]:07d}';archive.mkdir(parents=True,exist_ok=False)
+            for name in ['last.pt','best.pt','compute_usage.json','run.json']:
+                if (run/name).exists():shutil.copy2(run/name,archive/name)
+            sha=hashlib.sha256((run/'last.pt').read_bytes()).hexdigest()
+            assert sha==hashlib.sha256((archive/'last.pt').read_bytes()).hexdigest()
+            save(root/'throughput-migration-attempt-7000.json',dict(prior,actual_outcome='Only launcher retired; independent training worker groups continued. No optimized child dispatched. All later updates preserved at final handoff.'))
+            ledger['training_seconds']+=1.0;ledger['training_gpu_hours']=ledger['training_seconds']*4/3600
+            ledger['migration_inflight_allowance_seconds']=1.0;save(run/'compute_usage.json',ledger)
+            event=dict(state='checkpoint_preserved_all_workers',pid=os.getpid(),observed_utc=now(),workers=workers,
+                checkpoint_step=saved['step'],checkpoint_sha256=sha,completed_updates_discarded=0,
+                conservative_inflight_charge_seconds=1.0,archive=str(archive),ledger=ledger,
+                runtime_manifest_sha256=hashlib.sha256((root/'throughput-runtime.json').read_bytes()).hexdigest(),
+                correction='Explicitly stopped all four independent torchrun worker process groups at a later checkpoint; no completed updates rolled back.')
+            save(root/'throughput-migration.json',event)
+            group_signal(signal.SIGKILL);retired=True;stopped=False
+            for _ in range(100):
+                if all(not alive(w['pid']) for w in workers):break
+                time.sleep(.1)
+            assert all(not alive(w['pid']) for w in workers)
+            save(root/'throughput-migration-status.json',dict(state='ready_to_resume_all_workers_retired',pid=os.getpid(),checkpoint_step=saved['step'],updated_utc=now()))
+            return
+        raise TimeoutError('No safe worker checkpoint boundary')
+    finally:
+        os.close(fd)
+        if stopped and not retired:group_signal(signal.SIGCONT)
+
+
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--record',required=True);p.add_argument('--migrate',action='store_true');a=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('--record',required=True);p.add_argument('--migrate',action='store_true');p.add_argument('--migrate-orphans',action='store_true');a=p.parse_args()
     record=Path(a.record).resolve();root=record/'campaign';repo=record/'repo-runtime';run=root/'runs'/f'{METHOD}_3072'
     lockdir=Path('/tmp')/f'flow-jepa-{os.getuid()}';locks=[];child=None;log=None
     lock=(lockdir/'repaired-20261009-throughput-migration.lock').open('a+')
@@ -116,9 +189,11 @@ def main():
         script_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),training_gpus=[0,1,2,3],validation_gpus=[4,5,6,7],final_validation_gpus=list(range(8)))
     def update(**kw):state.update(kw,updated_utc=now());save(root/'ours-only-status.json',state)
     try:
-        if a.migrate:migrate(record)
+        if a.migrate:
+            raise RuntimeError("Use explicit verified-worker migration; launcher-only mode is retired")
+        if a.migrate_orphans:migrate_detached_workers(record)
         assert (root/'throughput-migration.json').exists()
-        for pid in [807392,858560]:assert not alive(pid),'Old run still active'
+        for pid in [807392,858560,858566,858567,858568,858569]:assert not alive(pid),'Old run still active'
         wait_idle(tuple(range(8)),seconds=90)
         gpu,_=gpu_rows()
         for i in range(8):
