@@ -1,5 +1,13 @@
 # Experiment continuity
 
+- October10 latest request: research LaCT/TTT follow-ups and formulate/implement
+  the strongest justified adaptation. Implemented isolated `progress_ttt`; read
+  docs/PROGRESS_TTT.md. Scope is implementation plus train-data-only verification,
+  not an automatic second full training budget after the completed flow run.
+  Config training_enabled=false and test_enabled=false. Preserve prior runs and
+  references. One proposed candidate; no sweep, new seed, cross-case adaptation,
+  baseline retraining or sealed tests. New training is not running or queued.
+
 - Flow-reasoning run COMPLETED October 10, 07:21 UTC: one fresh seed3072,
   20,000 updates, four fixed104 validations79/75/76/76. Selected5k79/104 is below
   preserved execution-revision80/104. Exact source ca8430ec remains frozen in

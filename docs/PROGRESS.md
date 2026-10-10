@@ -1,3 +1,16 @@
+# October 10: progress TTT implementation
+
+The latest LaCT/TTT request is implemented as `progress_ttt`: a differentiable,
+episode-local fast-weight fit on actually observed prefix progress errors that
+conditions action flow and scoring. Reviewed LaCT, direct follow-ups FSM/REFINE,
+AdaJEPA, Sandwich-Residuals, SCOUT, JEPA-TTT, WCD, Beyond Visual Quality and R2D2.
+See [formulation, literature audit and verification](PROGRESS_TTT.md).
+A800 training-data preflight passes at 92.754 ms mean; no optimizer updates or
+evaluation episodes. All 29 behavior tests and eight-GPU backward checks pass; 72 runtime hashes and
+all bank tensors verified. Timed checks used 0.010649 GPU-hours; GPUs returned idle.
+Full training remains disabled; frozen baselines and the
+completed 79/104 flow result remain intact.
+
 # October 10, 00:22 Pacific — flow reasoning completed and audited
 
 The single fresh seed3072 run completed20,000 updates with four fixed104 scores

@@ -1,0 +1,179 @@
+{
+  "depths": [
+    1,
+    2,
+    3
+  ],
+  "global_batch": 64,
+  "gpu_count": 8,
+  "gpu_hours": 0.005443754725986057,
+  "gradient_sync_exact": true,
+  "optimizer_updates": 0,
+  "parameters_unchanged": true,
+  "rank_records": [
+    [
+      {
+        "depth": 1,
+        "forward_backward_seconds": 0.5656232889741659,
+        "loss": 1.7009084224700928,
+        "synchronized_gradient_elements": 5458664
+      },
+      {
+        "depth": 2,
+        "forward_backward_seconds": 0.07331780344247818,
+        "loss": 1.6325541734695435,
+        "synchronized_gradient_elements": 5577448
+      },
+      {
+        "depth": 3,
+        "forward_backward_seconds": 0.07768690027296543,
+        "loss": 1.5200233459472656,
+        "synchronized_gradient_elements": 5577448
+      }
+    ],
+    [
+      {
+        "depth": 1,
+        "forward_backward_seconds": 0.5663833431899548,
+        "loss": 1.5453579425811768,
+        "synchronized_gradient_elements": 5458664
+      },
+      {
+        "depth": 2,
+        "forward_backward_seconds": 0.07334337942302227,
+        "loss": 1.4448721408843994,
+        "synchronized_gradient_elements": 5577448
+      },
+      {
+        "depth": 3,
+        "forward_backward_seconds": 0.07771858014166355,
+        "loss": 1.7148972749710083,
+        "synchronized_gradient_elements": 5577448
+      }
+    ],
+    [
+      {
+        "depth": 1,
+        "forward_backward_seconds": 0.5639294143766165,
+        "loss": 1.5863926410675049,
+        "synchronized_gradient_elements": 5458664
+      },
+      {
+        "depth": 2,
+        "forward_backward_seconds": 0.07353284023702145,
+        "loss": 1.540234923362732,
+        "synchronized_gradient_elements": 5577448
+      },
+      {
+        "depth": 3,
+        "forward_backward_seconds": 0.07771196961402893,
+        "loss": 1.5216233730316162,
+        "synchronized_gradient_elements": 5577448
+      }
+    ],
+    [
+      {
+        "depth": 1,
+        "forward_backward_seconds": 0.565444391220808,
+        "loss": 1.6166024208068848,
+        "synchronized_gradient_elements": 5458664
+      },
+      {
+        "depth": 2,
+        "forward_backward_seconds": 0.07359320111572742,
+        "loss": 1.5296518802642822,
+        "synchronized_gradient_elements": 5577448
+      },
+      {
+        "depth": 3,
+        "forward_backward_seconds": 0.07770956307649612,
+        "loss": 1.6432284116744995,
+        "synchronized_gradient_elements": 5577448
+      }
+    ],
+    [
+      {
+        "depth": 1,
+        "forward_backward_seconds": 0.565509619191289,
+        "loss": 1.8023418188095093,
+        "synchronized_gradient_elements": 5458664
+      },
+      {
+        "depth": 2,
+        "forward_backward_seconds": 0.0735858604311943,
+        "loss": 1.8791544437408447,
+        "synchronized_gradient_elements": 5577448
+      },
+      {
+        "depth": 3,
+        "forward_backward_seconds": 0.07810564711689949,
+        "loss": 1.656131386756897,
+        "synchronized_gradient_elements": 5577448
+      }
+    ],
+    [
+      {
+        "depth": 1,
+        "forward_backward_seconds": 0.5679850354790688,
+        "loss": 1.333572506904602,
+        "synchronized_gradient_elements": 5458664
+      },
+      {
+        "depth": 2,
+        "forward_backward_seconds": 0.07355605438351631,
+        "loss": 1.380584955215454,
+        "synchronized_gradient_elements": 5577448
+      },
+      {
+        "depth": 3,
+        "forward_backward_seconds": 0.07807855494320393,
+        "loss": 1.3731929063796997,
+        "synchronized_gradient_elements": 5577448
+      }
+    ],
+    [
+      {
+        "depth": 1,
+        "forward_backward_seconds": 0.5686254594475031,
+        "loss": 1.6112706661224365,
+        "synchronized_gradient_elements": 5458664
+      },
+      {
+        "depth": 2,
+        "forward_backward_seconds": 0.07362096756696701,
+        "loss": 1.63865065574646,
+        "synchronized_gradient_elements": 5577448
+      },
+      {
+        "depth": 3,
+        "forward_backward_seconds": 0.07811631262302399,
+        "loss": 1.4483566284179688,
+        "synchronized_gradient_elements": 5577448
+      }
+    ],
+    [
+      {
+        "depth": 1,
+        "forward_backward_seconds": 0.5694541111588478,
+        "loss": 1.4156595468521118,
+        "synchronized_gradient_elements": 5458664
+      },
+      {
+        "depth": 2,
+        "forward_backward_seconds": 0.07361096329987049,
+        "loss": 1.3511675596237183,
+        "synchronized_gradient_elements": 5577448
+      },
+      {
+        "depth": 3,
+        "forward_backward_seconds": 0.07791364938020706,
+        "loss": 1.1688735485076904,
+        "synchronized_gradient_elements": 5577448
+      }
+    ]
+  ],
+  "seconds": 2.4496896266937256,
+  "simulator_episodes": 0,
+  "training_examples_only": true,
+  "world_gradients_absent": true
+}

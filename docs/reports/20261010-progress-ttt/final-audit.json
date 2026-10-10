@@ -1,0 +1,30 @@
+{
+  "bank_checked_keys": [
+    "raw",
+    "chunks",
+    "routes",
+    "episode",
+    "time",
+    "episode_ids",
+    "episode_hashes",
+    "mean",
+    "std"
+  ],
+  "bank_tensors_and_inventory_identical": true,
+  "compute_scope": "timed preflight and distributed check regions only; CPU preparation and process startup excluded",
+  "distributed_backward_passed": true,
+  "gpus_after_checks": "0, 0 %, 0 MiB\n1, 0 %, 0 MiB\n2, 0 %, 0 MiB\n3, 0 %, 0 MiB\n4, 0 %, 0 MiB\n5, 0 %, 0 MiB\n6, 0 %, 0 MiB\n7, 0 %, 0 MiB\n",
+  "latest_ttt_tests": 8,
+  "legacy_regression_tests": 21,
+  "measured_gpu_hours": 0.010648930992724168,
+  "optimizer_updates": 0,
+  "preflight_gate_passed": true,
+  "previous_compute_and_data_contract_unchanged": true,
+  "runtime_files_verified": 72,
+  "simulator_episodes": 0,
+  "source_bank_unchanged": true,
+  "test_enabled": false,
+  "training_enabled": false,
+  "unique_behavior_tests": 29,
+  "utc": "2026-10-10T09:02:17.631086+00:00"
+}

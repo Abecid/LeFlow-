@@ -1,0 +1,56 @@
+test_bank_rejects_evaluation_examples (test_execution.ExecutionTests.test_bank_rejects_evaluation_examples) ... ok
+test_exact_executed_prefix_and_fixed_prediction_budget (test_execution.ExecutionTests.test_exact_executed_prefix_and_fixed_prediction_budget) ... ok
+test_observed_execution_loss_backpropagates_to_policy_only (test_execution.ExecutionTests.test_observed_execution_loss_backpropagates_to_policy_only) ... ok
+test_terminal_window_does_not_reward_early_transient_match (test_execution.ExecutionTests.test_terminal_window_does_not_reward_early_transient_match) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.968s
+
+OK
+test_backprop_updates_policy_calibrator_not_world (test_latent_revision.RevisionTests.test_backprop_updates_policy_calibrator_not_world) ... ok
+test_dataset_draws_match_and_history_ends_at_current_state (test_latent_revision.RevisionTests.test_dataset_draws_match_and_history_ends_at_current_state) ... ok
+test_exact_prefix_budget_observation_order_and_episode_reset (test_latent_revision.RevisionTests.test_exact_prefix_budget_observation_order_and_episode_reset) ... ok
+test_future_outcomes_are_labels_not_prediction_inputs (test_latent_revision.RevisionTests.test_future_outcomes_are_labels_not_prediction_inputs) ... ok
+test_history_changes_workspace_but_masked_padding_does_not (test_latent_revision.RevisionTests.test_history_changes_workspace_but_masked_padding_does_not) ... /tmp/mtxu-progress-ttt-check-20261010/repo/tests/test_latent_revision.py:42: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:835.)
+  self.assertGreater(float((a-c).abs().max()),1e-5)
+ok
+test_prefix_prediction_has_no_unexecuted_suffix_dependency (test_latent_revision.RevisionTests.test_prefix_prediction_has_no_unexecuted_suffix_dependency) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 1.283s
+
+OK
+test_late_action_coverage_feasible_goals_and_same_episode_draws (test_execution_revision.AlignedTests.test_late_action_coverage_feasible_goals_and_same_episode_draws) ... ok
+test_prefix_error_changes_action_ranking_without_terminal_change (test_execution_revision.AlignedTests.test_prefix_error_changes_action_ranking_without_terminal_change) ... ok
+test_reuse_only_after_observation_exact_prefix_and_budget (test_execution_revision.AlignedTests.test_reuse_only_after_observation_exact_prefix_and_budget) ... ok
+test_stalls_require_repeated_observations_and_decay_locally (test_execution_revision.AlignedTests.test_stalls_require_repeated_observations_and_decay_locally) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.665s
+
+OK
+test_all_depths_train_flow_and_deep_evidence_with_world_frozen (test_flow_reasoning.FlowReasoningTests.test_all_depths_train_flow_and_deep_evidence_with_world_frozen) ... ok
+test_candidate_pairing_permutation_and_detached_world_evidence (test_flow_reasoning.FlowReasoningTests.test_candidate_pairing_permutation_and_detached_world_evidence) ... ok
+test_complete_flow_transport_uses_unrestricted_source_and_final_clamp (test_flow_reasoning.FlowReasoningTests.test_complete_flow_transport_uses_unrestricted_source_and_final_clamp) ... ok
+test_controller_uses_evidence_between_rounds_and_exact_execution_budget (test_flow_reasoning.FlowReasoningTests.test_controller_uses_evidence_between_rounds_and_exact_execution_budget) ... ok
+test_imagined_evidence_changes_generation_but_not_scoring_context (test_flow_reasoning.FlowReasoningTests.test_imagined_evidence_changes_generation_but_not_scoring_context) ... ok
+test_masked_history_is_ignored_and_observed_error_affects_context (test_flow_reasoning.FlowReasoningTests.test_masked_history_is_ignored_and_observed_error_affects_context) ... ok
+test_teacher_actions_and_future_labels_never_enter_deliberation (test_flow_reasoning.FlowReasoningTests.test_teacher_actions_and_future_labels_never_enter_deliberation) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 1.316s
+
+OK
+test_controller_stores_only_observed_prefixes_resets_and_fits_once (test_progress_ttt.ProgressTTTTests.test_controller_stores_only_observed_prefixes_resets_and_fits_once) ... ok
+test_fast_readout_can_change_flow_without_changing_physical_states (test_progress_ttt.ProgressTTTTests.test_fast_readout_can_change_flow_without_changing_physical_states) ... ok
+test_outer_gradients_reach_fast_features_prior_flow_and_readout (test_progress_ttt.ProgressTTTTests.test_outer_gradients_reach_fast_features_prior_flow_and_readout) ... ok
+test_padding_batch_isolation_and_no_parameter_mutation (test_progress_ttt.ProgressTTTTests.test_padding_batch_isolation_and_no_parameter_mutation) ... ok
+test_prefix_correction_ignores_action_suffix_and_search_revision (test_progress_ttt.ProgressTTTTests.test_prefix_correction_ignores_action_suffix_and_search_revision) ... ok
+test_ridge_optimum_gradient_and_empty_prior (test_progress_ttt.ProgressTTTTests.test_ridge_optimum_gradient_and_empty_prior) ... ok
+test_teacher_future_never_enters_fit_or_candidate_evidence (test_progress_ttt.ProgressTTTTests.test_teacher_future_never_enters_fit_or_candidate_evidence) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 1.490s
+
+OK

@@ -37,7 +37,7 @@ def run(args):
             if example['history_mask'][-1]:
                 assert torch.equal(example['history_next'][-1],example['z'][0])
         data_checks=dict(exact_previous_main_sample_checks=8,causal_history_end_checks=True)
-    if method in ('execution_revision','flow_reasoning'):
+    if method in ('execution_revision','flow_reasoning','progress_ttt'):
         from .revision import RevisionSegments
         previous=RevisionSegments(root,c,'latent_revision',3072,10000)
         specs=[data.sample_spec(i) for i in range(10000)]
@@ -55,7 +55,7 @@ def run(args):
             late_windows_in_first_10000=len(late),late_real_examples_checked=8,
             causal_history_end_checks=True,sampling_change='all valid five-step pre-success starts')
     world_hash_before={k:v.clone() for k,v in world.state_dict().items()}
-    loss,parts=model(batch,world,weight=0. if method=='flow_reasoning' else 0.1);loss.backward()
+    loss,parts=model(batch,world,weight=0. if method in ('flow_reasoning','progress_ttt') else 0.1);loss.backward()
     assert torch.isfinite(loss) and all(p.grad is None for p in world.parameters())
     assert all(torch.equal(v,world_hash_before[k]) for k,v in world.state_dict().items())
     bank=RouteBank(args.bank,c,file_hash(root/'manifest.json'),device)
@@ -65,14 +65,16 @@ def run(args):
         initial=f['initial_rgb'][:]
         goal=(torch.tensor(f['goal'][:],device=device).float()-bank.mean)/bank.std
     model.eval();controller=ControllerType(model,world,c,bank)
-    if method in ('latent_revision','execution_revision','flow_reasoning'):
+    if method in ('latent_revision','execution_revision','flow_reasoning','progress_ttt'):
         history=model.factual_history(batch,world)
         # Training transitions only; exercise the populated memory path for
         # latency, without pretending these are newly executed policy actions.
         for j in range(model.history_steps):
             if history['mask'][0,j]:
                 controller.history.append(tuple(history[k][0:1,j].clone() for k in ('start','next','predicted')))
-        if method in ('execution_revision','flow_reasoning'):
+                if method=='progress_ttt':
+                    controller.action_history.append(history['action'][0,j].clone())
+        if method in ('execution_revision','flow_reasoning','progress_ttt'):
             # Exercise warm-start and stall-memory compute using only recorded
             # training transitions. These are NOT new policy execution outcomes.
             controller.previous_plan=batch['a'][0].detach().clone()

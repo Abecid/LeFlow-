@@ -1,0 +1,13 @@
+test_controller_stores_only_observed_prefixes_resets_and_fits_once (test_progress_ttt.ProgressTTTTests.test_controller_stores_only_observed_prefixes_resets_and_fits_once) ... ok
+test_fast_correction_changes_action_selection_with_identical_world_costs (test_progress_ttt.ProgressTTTTests.test_fast_correction_changes_action_selection_with_identical_world_costs) ... ok
+test_fast_readout_can_change_flow_without_changing_physical_states (test_progress_ttt.ProgressTTTTests.test_fast_readout_can_change_flow_without_changing_physical_states) ... ok
+test_outer_gradients_reach_fast_features_prior_flow_and_readout (test_progress_ttt.ProgressTTTTests.test_outer_gradients_reach_fast_features_prior_flow_and_readout) ... ok
+test_padding_batch_isolation_and_no_parameter_mutation (test_progress_ttt.ProgressTTTTests.test_padding_batch_isolation_and_no_parameter_mutation) ... ok
+test_prefix_correction_ignores_action_suffix_and_search_revision (test_progress_ttt.ProgressTTTTests.test_prefix_correction_ignores_action_suffix_and_search_revision) ... ok
+test_ridge_optimum_gradient_and_empty_prior (test_progress_ttt.ProgressTTTTests.test_ridge_optimum_gradient_and_empty_prior) ... ok
+test_teacher_future_never_enters_fit_or_candidate_evidence (test_progress_ttt.ProgressTTTTests.test_teacher_future_never_enters_fit_or_candidate_evidence) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 1.459s
+
+OK

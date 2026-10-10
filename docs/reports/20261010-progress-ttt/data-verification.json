@@ -1,0 +1,8 @@
+{
+  "check_manifest": "12d1571b3957488343971f7b1631f9c8b714d658cabdfd9ad7fc6e42426b8cb6",
+  "entries_identical": true,
+  "source": "/home/mtxu/adam/LeFlow-experiments/20261010-flow-reasoning/campaign",
+  "source_manifest": "989c281ade24d22bef24b029e68be2d68c77e8f698956736b0fe5aec179ed6ca",
+  "test_enabled": false,
+  "training_enabled": false
+}

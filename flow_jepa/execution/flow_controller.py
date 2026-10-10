@@ -8,6 +8,9 @@ from .aligned import AlignedController
 
 
 class FlowReasoningController(AlignedController):
+    def plan_diagnostics(self, context, start, targets, actions, prefixes, chosen):
+        return {}
+
     @torch.no_grad()
     def plan(self, start, goal, *, budget=None):
         def check():
@@ -103,7 +106,8 @@ class FlowReasoningController(AlignedController):
             round_proposal_diversity=round_diversity, flow_solver_steps=self.model.flow_steps,
             flow_evaluations=rounds*self.model.flow_steps, scoring_context_fixed=True,
             retrieval_cpu_wall_ms=retrieval_ms, refinement_batches=rounds,
-            candidate_world_transitions=n*per*rounds*5))
+            candidate_world_transitions=n*per*rounds*5,
+            **self.plan_diagnostics(context, start, targets, best_actions, best_prefix, chosen)))
         self.proposed_plan = best_actions[chosen].detach().clone()
         self.pending = (prefix.detach(),start.detach(),target.detach())
         return best_actions[chosen,0], target[0], float(scores[chosen]), 5
