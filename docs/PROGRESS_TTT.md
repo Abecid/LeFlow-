@@ -1,9 +1,10 @@
 # Current execution status
 
-The user explicitly directed immediate training and evaluation after this
-implementation. The one-run configuration is now enabled; follow
-[the registered run](PROGRESS_TTT_RUN.md). The implementation-only status below
-is the historical preflight record.
+The authorized run is now **complete**: selected15k78/104, final20k74/104,
+below the preserved80/104 reference. Read [results and failure analysis](PROGRESS_TTT_RESULTS.md)
+and [research-angle review](FLOW_RESEARCH_ANGLE_20261010.md). The one-run
+authorization is fulfilled. The implementation-only status below is the
+historical preflight record, not the current execution status.
 
 # Execution-grounded progress TTT: literature, formulation and implementation
 

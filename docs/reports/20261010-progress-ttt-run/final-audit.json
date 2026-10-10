@@ -1,0 +1,94 @@
+{
+  "runtime_file_checksums_verified": 140,
+  "source": "8ae86855738370b06c8f59b96150ac68c389d010",
+  "run": {
+    "bank_hash": "b60ffdd71edbf9ecaac6c2640ab7df97a9ad64398063202d1cc82f1f2ce9f899",
+    "code": "8ae86855738370b06c8f59b96150ac68c389d010",
+    "id": "to9im8h6",
+    "manifest": "6874674cd472c153034557ad254895c7ac2d3808449f6706e2dccf00e1dcdc90",
+    "method": "progress_ttt",
+    "protocol": "b32fa74bb8469d13d5612481b6877e03da1b8c5c064dc857ec98819097992646",
+    "seed": 3072,
+    "wandb_url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/to9im8h6",
+    "world_hash": "ae3f910da43f0a43dd65945394444a0b11719ed042cdacffacc2faaf824ec5a3",
+    "world_size": 8
+  },
+  "rounds": [
+    {
+      "step": 5000,
+      "successes": 77
+    },
+    {
+      "step": 10000,
+      "successes": 76
+    },
+    {
+      "step": 15000,
+      "successes": 78
+    },
+    {
+      "step": 20000,
+      "successes": 74
+    }
+  ],
+  "checkpoints": {
+    "last": {
+      "step": 20000,
+      "sha256": "1ef63dfb2c933ea18d73a3ee88c8d18e7a3d7ab66af8005806ef7e5891a3d145",
+      "finite": true
+    },
+    "best": {
+      "step": 15000,
+      "sha256": "f61b91073256b6f8e65fe225285ec93d572bd8cd217bd0fb98678a92560f2f30",
+      "finite": true
+    }
+  },
+  "frozen_source_clean": true,
+  "data_and_world_identity_verified": true,
+  "identical_route_bank_tensors": true,
+  "training_metric_records": 401,
+  "validation_metric_records": 4,
+  "same_cases_across_rounds": true,
+  "causal_history_and_plan_reuse": true,
+  "episodic_fast_weights_and_reset_verified": true,
+  "score_reconstruction_verified": true,
+  "score_rounding_tolerance": 1e-07,
+  "world_transition_budget_verified": true,
+  "training_coverage_logging_verified": true,
+  "compute": {
+    "global_batch": 64,
+    "gpu_count": 8,
+    "last_update_overrun_gpu_seconds": 0.0,
+    "optimization_cap_gpu_seconds": 28800,
+    "optimization_gpu_hours": 3.542264837167329,
+    "optimization_gpu_seconds": 12752.153413802385,
+    "step": 20000,
+    "stop_check": "optimizer boundary; final-update overrun reported",
+    "validation_gpu_hours": 2.013267637433277,
+    "validation_gpu_seconds": 7247.763494759798,
+    "validation_steps": [
+      5000,
+      10000,
+      15000,
+      20000
+    ]
+  },
+  "complete": {
+    "best": 0.75,
+    "best_step": 15000,
+    "optimization_gpu_hours": 3.542264837167329,
+    "step": 20000,
+    "stop_reason": "update_limit",
+    "validation_gpu_hours": 2.013267637433277,
+    "validation_steps": [
+      5000,
+      10000,
+      15000,
+      20000
+    ],
+    "wall_seconds": 2529.3760199919343
+  },
+  "final_tests_read": false,
+  "model_calls": 0,
+  "simulator_calls": 0
+}

@@ -1,5 +1,10 @@
 # Progress TTT: one fresh training run and periodic evaluation
 
+**Completed:**20,000 updates; validation77/76/78/74; selected15k78/104.
+W&B finished, owned coordinator exited, source/checkpoints/data audit passed.
+Read [completed results](PROGRESS_TTT_RESULTS.md). The launch record below is
+historical; do not restart this run or interpret its old ETA as current status.
+
 October 10, 2026. The user explicitly directs immediate training and evaluation.
 This supersedes the implementation-only hold. The method and its 29 passing
 behavior tests are documented in [PROGRESS_TTT.md](PROGRESS_TTT.md).

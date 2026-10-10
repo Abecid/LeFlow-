@@ -1,0 +1,12 @@
+{
+  "bank_hash": "b60ffdd71edbf9ecaac6c2640ab7df97a9ad64398063202d1cc82f1f2ce9f899",
+  "code": "8ae86855738370b06c8f59b96150ac68c389d010",
+  "id": "to9im8h6",
+  "manifest": "6874674cd472c153034557ad254895c7ac2d3808449f6706e2dccf00e1dcdc90",
+  "method": "progress_ttt",
+  "protocol": "b32fa74bb8469d13d5612481b6877e03da1b8c5c064dc857ec98819097992646",
+  "seed": 3072,
+  "wandb_url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/to9im8h6",
+  "world_hash": "ae3f910da43f0a43dd65945394444a0b11719ed042cdacffacc2faaf824ec5a3",
+  "world_size": 8
+}

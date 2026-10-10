@@ -1,10 +1,28 @@
-# Progress TTT is running
+# October10: progress TTT completed; research angle reviewed
 
-Verified October10 09:41 UTC: 376 optimizer updates completed on all eight A800s;
-live logs through step350. Four fixed104 evaluations are automatic.
-[W&B](https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/to9im8h6).
-Frozen source8ae8685, coordinator2626472; no baseline training.
-See [run and launch evidence](PROGRESS_TTT_RUN.md).
+The authorized run finished20k updates and all four fixed104 validations:
+77/76/78/74. Selected15k78/104 remains below execution-revision80 and prior
+flow79. At15k the fast memory lowers executed-prefix MAE26% versus its prior,
+but this does not improve overall success. There are21 controller timeouts;
+mean102.5ms decisions sit above the approximate100ms threshold needed to use
+200 actions in10s. Matched-initial proposal dispersion falls61.5% across training.
+Read [results and paired failure analysis](PROGRESS_TTT_RESULTS.md).
+
+Final CPU audit passed:140 runtime hashes, frozen source/data/world/bank identity,
+best/last checkpoint integrity, logs, budgets, case pairing and causal adaptation.
+W&Bto9im8h6 is finished; coordinator2626472 exited; all8 GPUs were idle at readback.
+Optimization3.542265 GPUh; validation2.013268 GPUh; run preflight.005697 GPUh.
+Compressed records and reproducible analysis are published. No new simulator or
+model calls were made for completion analysis; no baseline was retrained.
+
+The latest request asks for the contribution and most useful diffusion/flow axis.
+[Research review](FLOW_RESEARCH_ANGLE_20261010.md) distinguishes our action-flow
+controller from LeFlow latent-path generation. It recommends reliable execution-
+grounded flow guidance, using QGF as a sampler reference, with PreferenceFlow,
+TraceFlow, FeedbackWM/FBFM and One-Step Flow Policy informing constraints and
+novelty. QGF code60ca92e was inspected. Guidance inside the flow solver remains
+a proposal; no new variant, training, scaling sweep or sealed test was launched.
+Earlier status entries below are historical.
 
 # October 10: launch progress TTT training and periodic evaluation
 

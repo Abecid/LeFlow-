@@ -1,11 +1,16 @@
 # Experiment continuity
 
-- ACTIVE progress_ttt training verified October10 09:41 UTC: all8 A800s, step376
-  and live metrics; W&Bto9im8h6. Frozen execution source8ae86855738370b06c8f59b96150ac68c389d010
-  at /home/mtxu/adam/LeFlow-experiments/20261010-progress-ttt/repo.
-  Coordinator2626472; four periodic fixed104 evaluations automatic. Continue
-  this job, never duplicate/restart from scratch or edit the frozen checkout.
-  Record final results/failure analysis when available. Baselines remain fixed.
+- Progress-TTT COMPLETED October10 10:22 UTC:20k updates, fixed104 scores77/76/78/74.
+  Selected15k78/104 is below execution-revision80 and flow-reasoning79. Read
+  docs/PROGRESS_TTT_RESULTS.md. Final CPU audit verified140 runtime hashes,
+  source/data/world/bank/checkpoints, causal adaptation/reset and budgets.
+  W&Bto9im8h6 is finished; coordinator2626472 exited; all8 GPUs idle at readback.
+  Frozen source8ae86855738370b06c8f59b96150ac68c389d010 remains at
+  /home/mtxu/adam/LeFlow-experiments/20261010-progress-ttt/repo.
+  Latest request is research-angle/prioritization; read
+  docs/FLOW_RESEARCH_ANGLE_20261010.md. Proposed clean-action flow guidance is
+  not implemented. No new training, ablation, inference-scaling sweep, baseline
+  retraining or sealed test is queued. Preserve completed runs and references.
 
 - October10 latest explicit direction: run the implemented progress_ttt candidate
   immediately with periodic evaluations. This supersedes the implementation-only
