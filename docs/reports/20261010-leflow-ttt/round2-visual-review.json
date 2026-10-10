@@ -1,0 +1,13 @@
+{
+  "checkpoint_step": 10000,
+  "compared_with": 5000,
+  "source": "Six evenly spaced actual saved frames per trajectory; no new model or environment calls",
+  "reviewed_cases": {
+    "validation/faucet-open/00003": "At5k success at126 actions. At10k the gripper reaches the faucet handle region by roughly80 actions, then subsequent frames through200 show little useful handle motion; task fails. This supports a persistent contact/manipulation stall, not a timeout.",
+    "validation/drawer-close/00004": "At5k unsuccessful after200 actions; at10k the gripper moves steadily against the drawer and the environment records success at38 actions."
+  },
+  "limits": [
+    "Two selected paired traces; not a causal ablation or aggregate explanation.",
+    "Contact forces and precise physical causes are not identifiable from these images."
+  ]
+}

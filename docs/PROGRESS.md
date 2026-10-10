@@ -1,3 +1,12 @@
+# October10:10k LeFlow-TTT regression to21/104;5k remains best27
+
+Second validation:21/104, no timeouts, versus27 at5k. Faucet-open drops8/8 to1/8;
+reach2/8 to0/8; improvements in coffee-button/drawer-close/handle-press do not
+compensate. At matched starting cases, latent-path dispersion drops41.2%; action
+dispersion drops7.3%. This is correlation, not causal proof of collapse. Observed
+outcome MSE improves slightly while success worsens. Preserve5k best;15k/20k
+remain scheduled, with unchanged budget/source. [Second-round evidence](reports/20261010-leflow-ttt/analysis-round-2.json).
+
 # October10: first direct LeFlow-TTT result27/104; training continues
 
 The5k validation completed27/104 versus LeFlow's saved best10k21/104 and
