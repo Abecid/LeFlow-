@@ -1,0 +1,15 @@
+{
+  "checkpoint_step": 5000,
+  "source": "Saved simulator frames; no new model or environment calls",
+  "reviewed_cases": {
+    "validation/assembly/00000": "Gripper wanders/oscillates without completing nut placement; task unsuccessful at200 actions. Last5 observed chunks: actual goal progress -0.001585, corrected predicted progress +0.011758.",
+    "validation/drawer-close/00004": "Gripper remains near the drawer; repeated frames show little drawer movement; task unsuccessful at200 actions. Last5 actual progress0.000835 versus corrected prediction0.008386.",
+    "validation/door-close/00000": "Gripper travels rightward and fails to close the door; unsuccessful at200 actions. Last5 actual progress0.000987 versus corrected prediction0.016943.",
+    "validation/faucet-open/00003": "Sustained motion toward faucet handle; environment reports success at primitive action126. Adapted outcome MSE on the last5 observed chunks is slightly worse than raw prediction despite task success."
+  },
+  "limitations": [
+    "Visual descriptions are observations of four selected traces, not aggregate causal evidence.",
+    "Predicted progress uses candidate commands before simulator clipping; selected clipped-action outcome MSE is logged separately.",
+    "Memory correction and generation conditioning were not separately ablated."
+  ]
+}

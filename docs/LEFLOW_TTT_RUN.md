@@ -133,3 +133,28 @@ case pairing and budget; compare all four milestones and selected checkpoints.
 Inspect whether lower support error transfers to actual subsequent outcomes,
 and whether any gain comes with candidate collapse, action clipping or timeouts.
 Do not automatically tune or retrain after seeing the first result.
+
+## First completed evaluation; run still active
+
+At5k:27/104(26.0%), versus selected LeFlow10k21/104(20.2%) and
+matched LeFlow5k14/104(13.5%). Against the selected reference,9 paired wins
+and3 regressions. Zero controller timeouts; mean decision104.74ms. Optimization
+charged through this checkpoint0.449786 GPUh versus0.400696 GPUh for LeFlow's
+selected10k checkpoint (and0.188169 GPUh for baseline5k). Thus update-matched
+and selected-checkpoint comparisons have different actual training costs.
+
+Faucet-open8/8 and drawer-close5/8 drive the gain. Eight tasks remain0/8.
+On executed chunks with prior history, adapted full-outcome MSE is0.013016
+versus learned prior0.013129:only0.86% lower. Raw-versus-corrected ranking changes
+7.44% of decisions, but that includes the static learned correction and does
+not isolate the online update. The completed action-flow/GMM project reference
+remains80/104, far above this direct LeFlow extension.
+
+Four saved trajectories were visually inspected. An assembly failure still
+expects progress while moving away in latent goal distance; the drawer and door
+failures show little useful completion despite positive predicted progress.
+The faucet success reaches its task at action126. See the saved
+[visual review](reports/20261010-leflow-ttt/round1-visual-review.json).
+No causal adaptation gain, monotonic inference scaling, native LeFlow benchmark
+improvement or broad state-of-the-art claim follows from this first round.
+The10k/15k/20k evaluations continue automatically on the frozen run.
