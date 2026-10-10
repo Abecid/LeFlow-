@@ -1,0 +1,12 @@
+{
+  "repository": "https://github.com/gaoyuezhou/dino_wm",
+  "revision": "0a9492fa12044b852ae9e001cc74604b79c8bb0c",
+  "source_file": "models/vit.py",
+  "source_sha256": "60c77bdb03f3b2d565bfdb1695c9c193a802236763d33a03e79ed382b51f0670",
+  "vendored_sha256": "f87f8cbaaf8834d4cc8a532aa7080a07cee6f66cba0992192ea11c6e9e5c8f6e",
+  "only_change": {
+    "before": "self.bias = generate_mask_matrix(NUM_PATCHES, NUM_FRAMES).to('cuda')",
+    "after": "self.register_buffer('bias', generate_mask_matrix(NUM_PATCHES, NUM_FRAMES), persistent=False)",
+    "reason": "Follow module device and support CPU tests; attention values and equations unchanged."
+  }
+}

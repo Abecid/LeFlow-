@@ -21,12 +21,58 @@ repair or extra action-refinement stage in LeFlow. CEM is the released solver.
 | LeFlow learning | Native velocity flow-matching MSE; native inverse MSE on **recorded** paths;0.1 frozen-world consistency; zero smoothness | Recorded-action normalization comes solely from eligible training episodes. Frozen full-spatial world predictions are compressed for consistency. The release trains inverse/consistency on recorded paths although paper prose describes generated paths; we follow executable release code |
 | LeFlow inference | H5,64 candidates,16 Euler steps, five-block receding execution; original spatial-world endpoint MSE ranking | One world block is two primitives here, versus five in native experiments. No action clipping before world scoring; environment retains its required action bounds |
 | Flat CEM | `stable-worldmodel==0.0.6`, exact installed `solver/cem.py` SHA256 `d88c86dcd1bd1e6d89221ac22079a3efe296cc7566532de0d36605e2f1536050`;300 samples,30 iterations,30 elites,H5,receding5,unit initial standard deviation | Shared world interface converts normalized actions to physical units and scores full-spatial endpoint MSE. Native optimized elite mean, unbiased elite standard deviation, mean candidate insertion; no our CEM changes |
-| HWM | [Author repository](https://github.com/kevinghst/HWM_PLDM/tree/e197375b844692a0a2e1342889f95a78edced07a) explicitly releases only PLDM DiverseMaze. [Paper](https://arxiv.org/html/2604.03208v2) describes robot/PushT variants | Robot code is unavailable. A paper-based port must be labeled as such, with all unspecified choices disclosed. Do not report the old simplified fixed-stride MLP version as faithful HWM. Implementation/registration pending |
+| HWM | [Author repository](https://github.com/kevinghst/HWM_PLDM/tree/e197375b844692a0a2e1342889f95a78edced07a) explicitly releases only PLDM DiverseMaze. [Paper](https://arxiv.org/html/2604.03208v2) describes robot/PushT variants | Robot code is unavailable. A paper-based port must be labeled as such, with all unspecified choices disclosed. Do not report the old simplified fixed-stride MLP version as faithful HWM. Paper-port architecture and controller below; formal registration follows preflight |
 
 Native LeFlow flow width512/depth4/8 heads and inverse width512/depth3 are retained.
 Its512-dimensional output is full rank at initialization; the historical1024-state/
 256-width sampler defect is absent without importing our noise-cancellation fix.
 The paper's trained spatial compression is the reason to use512 dimensions.
+
+
+## HWM paper-based port and controller-budget audit
+
+The retained high-level architecture follows the paper's PushT setting:10-layer,
+768-width,12-head,3072-MLP causal ViT,4-dimensional learned macro-actions,
+5 variable waypoints, and only L1 teacher-forcing loss. The Transformer body is
+from [DINO-WM source](https://github.com/gaoyuezhou/dino_wm/blob/0a9492fa12044b852ae9e001cc74604b79c8bb0c/models/vit.py),
+with one recorded device-placement change to its attention mask, verified by
+reconstructing the original source hash. No architecture/loss from our proposed
+policy is used. AdamW5e-4/weight decay0.01/no gradient clipping follows the released
+DINO-WM optimizer (default AdamW weight decay); global64/common step/compute caps
+replace its native epoch/batch schedule.
+
+Unreleased details necessarily remain explicit port choices: the action CLS
+Transformer is2 layers/256 width/4 heads, with a256-hidden MLP to4 dimensions.
+Shared1024-D visual patches project to758 channels and10 embedded macro-action
+channels concatenate before the768-D predictor; output projects back to1024.
+The shared benchmark has no proprioception. Segments cover13–35 cached blocks
+(26–70 primitive steps, aligned to the two-step cache); three random interior
+waypoints join the endpoints. These choices are not claimed to be author robotics
+code. The frozen fine-world architecture remains the common benchmark model,
+not the original DINO-WM or300M V-JEPA2-AC predictor.
+
+A discarded-weight, training-case-only check of the paper's Table12 d25 controller
+(high900×20,H2; low300×30,h5) measured **15.678 seconds per warm decision** on an
+A800. It cannot act under our entire-episode10-second allowance. No validation
+performance was used in choosing a replacement planning setting.
+
+For the fixed-budget run, use only settings listed in the paper's Appendix C d50
+compute study: high150 samples/10 iterations/H4/10 elites/standard-deviation
+momentum0.4; low150 samples/10 iterations/h5/10 elites/momentum0; execute5 fine
+blocks. These are the smallest published sample/iteration counts, selected before
+any validation evaluation. Momentum smooths the standard deviation, as stated in
+Appendix C; no candidate clipping/variance floor/best-sample replacement is added.
+The zero-momentum solver matches the pinned native CEM numerically in tests.
+This is a published low-compute configuration, **not the headline Table12 setting**.
+A later evaluation with longer common allowance could reuse exactly these trained
+weights with the headline planner; it would not require another training run.
+
+Six HWM tests passed: DINO source provenance, padding exclusion, temporal causality
+and past context, L1-only recorded-waypoint supervision, native CEM equivalence at
+zero momentum, and the published standard-deviation momentum equations. Its
+four-GPU native-setting preflight had finite gradients and exact reset RGB,
+preserved world weights, used0.091724GPUh and discarded all weights. The smaller
+planner must also pass the runtime preflight before formal launch.
 
 ## Locked comparison contract
 

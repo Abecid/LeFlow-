@@ -1,3 +1,25 @@
+# Baseline execution started — October 10 UTC / October 9 Pacific
+
+LeFlow and released CEM launched from frozen revision
+`564b52ffc86eba212aa6858f3a9f10390905a905`, which includes the concurrent project
+audit from origin/main without overwriting it. Server root:
+`/home/mtxu/adam/LeFlow-experiments/20261010-baseline-release`.
+LeFlow runs on GPUs0–3; CEM evaluates on4–7. LeFlow reached5000 updates and its
+first fixed104 evaluation. Its held-out adapter loss fell2.190→0.0372 over the
+2000 charged adapter updates; held-out flow/inverse losses at5000 are0.2777/0.1060.
+These diagnostics do not establish task success or convergence. Online log:
+[LeFlow own982ph](https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/own982ph).
+
+HWM is a separately labeled paper port, retaining the published causal high-level
+architecture and variable-waypoint action encoder. Six HWM tests passed; the
+native900×20/H2 plus300×30/h5 controller takes15.678s per decision, exceeding the
+shared10s whole-episode allowance before any action. Its discarded four-GPU
+preflight cost0.091724GPUh, with finite gradients and an exact TRAIN reset.
+Use the Appendix C d50 smallest published sample/iteration counts, without a
+validation sweep: high150×10/H4/std-momentum0.4; low150×10/h5/momentum0.
+The lower-compute preflight is queued behind CEM, not preempting active runs.
+HWM is not yet a formal training run at this checkpoint. Final tests remain sealed.
+
 # Corrected baseline audit — October 10 UTC / October 9 Pacific
 
 Latest user authorization supersedes the old baseline hold. Read

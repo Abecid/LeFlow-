@@ -1,0 +1,45 @@
+{
+  "controller_seconds": [
+    15.943623967468739,
+    15.681147651746869,
+    15.676666744053364,
+    15.677389787510037
+  ],
+  "controller_warm_mean_ms": 15678.401394436756,
+  "data_case": "train/assembly/00120",
+  "finite_gradients": true,
+  "gpu_count": 4,
+  "gpu_hours": 0.09172359890407986,
+  "method": "hwm_paper",
+  "native_full_dimension": null,
+  "peak_gpu_gib": 4.718212604522705,
+  "simulator_calls": 0,
+  "test_files_read": 0,
+  "train_reset_rgb_exact": true,
+  "training_checks": [
+    {
+      "loss": 0.9432475566864014,
+      "metrics": {
+        "macro_std": 0.1799049973487854,
+        "prediction_std": 0.5504746437072754,
+        "teacher_forcing_l1": 0.9432475566864014
+      },
+      "seconds": 0.5124248396605253,
+      "stage": "planner",
+      "update": 0
+    },
+    {
+      "loss": 0.8592122197151184,
+      "metrics": {
+        "macro_std": 0.18291401863098145,
+        "prediction_std": 0.5029756426811218,
+        "teacher_forcing_l1": 0.8592122197151184
+      },
+      "seconds": 0.0988779366016388,
+      "stage": "planner",
+      "update": 1
+    }
+  ],
+  "weights_discarded": true,
+  "world_unchanged": true
+}

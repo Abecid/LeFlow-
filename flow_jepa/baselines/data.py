@@ -78,4 +78,24 @@ class BaselineSegments(Dataset):
             z = (z - self.mean) / self.std
             actions = a[start:start+h]
             return dict(z=torch.from_numpy(z.copy()), a=torch.from_numpy(actions.copy()))
+        if self.method == 'hwm_paper':
+            cfg = self.c['baseline']['hwm']
+            span = int(rng.integers(cfg['segment_min_blocks'],cfg['segment_max_blocks']+1))
+            limit = row['steps']-span
+            if row.get('first_success_action') is not None:
+                limit = min(limit,row['first_success_action']//self.c['data']['action_repeat'])
+            start = int(rng.integers(limit+1))
+            interior = np.sort(rng.choice(np.arange(1,span),cfg['waypoints']-2,replace=False))
+            indices = np.concatenate(([0],interior,[span]))+start
+            z,a = self.read(row,indices)
+            z = (z-self.mean)/self.std
+            maximum = cfg['action_encoder']['maximum']
+            actions = np.zeros((len(indices)-1,maximum,4),np.float32)
+            lengths = []
+            for i,(left,right) in enumerate(zip(indices[:-1],indices[1:])):
+                chunk = a[left:right].reshape(-1,4)
+                actions[i,:len(chunk)] = chunk
+                lengths.append(len(chunk))
+            return dict(z=torch.from_numpy(z.copy()),a=torch.from_numpy(actions),
+                        lengths=torch.tensor(lengths,dtype=torch.long))
         raise ValueError(self.method)

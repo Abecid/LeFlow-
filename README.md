@@ -1,6 +1,11 @@
 # Execution-aware visual planning with V-JEPA 2.1 (LeFlow fork)
 
-**Current status, October 9, 2026:** the execution-revision iteration is complete.
+**Current status, October 10 UTC / October 9 Pacific:** corrected baseline work is
+authorized and underway. [Baseline source audit and locked protocol](docs/RELEASE_BASELINES.md)
+document pinned LeFlow/CEM implementations and the explicitly labeled HWM paper
+port. The historical baseline scores are not faithful-method superiority evidence.
+
+The execution-revision iteration is complete.
 Its four fixed validation rounds score **80, 78, 79 and 76 out of 104** at 5k,
 10k, 15k and 20k updates. The selected 5k checkpoint scores **76.92%**, versus
 the previous controller-grounded **79/104 (75.96%)** and latent-revision
@@ -24,7 +29,8 @@ generator**. The `flow_jepa` package and W&B project names are historical; this
 is neither the published Flow-JEPA dynamics model nor an unchanged LeFlow model.
 Historical LeFlow/HWM adaptations retain documented implementation differences;
 these development validation comparisons are not corrected-SOTA or final-test
-claims. No further training is queued.
+claims. Only the newly authorized corrected baseline work is active; our policy
+is not being retrained.
 
 - [Independent project, comparison and contribution audit](docs/PROJECT_AUDIT_20261010.md)
 - [Latest results, training-decline diagnosis and method lineage](docs/EXECUTION_REVISION_RESULTS.md)
@@ -38,8 +44,9 @@ claims. No further training is queued.
 
 The research uses frozen V-JEPA 2.1 features for MetaWorld, with **no BTM**.
 Historical BTM scripts remain only for reproducibility. Earlier scheduling
-records are historical; repeated baseline training and the old all-method
-queue remain cancelled. Final tests stay reserved.
+records are historical. The old all-method queue stays cancelled; the new baseline
+launchers have separate frozen source/configuration/checkpoint registries. Final
+tests stay reserved.
 
 Original LeFlow release documentation and attribution follow.
 

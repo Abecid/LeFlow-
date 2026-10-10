@@ -12,7 +12,7 @@ import numpy as np
 import torch
 from torch.utils.data import DataLoader
 
-from ..common import config, save_json, seed_all, distributed
+from ..common import config, save_json, seed_all, distributed, digest
 from ..vision import Encoder
 from ..budget import PlanningBudget
 from .data import BaselineSegments
@@ -28,7 +28,7 @@ def main(a):
     model = Model(c).to(device); world = load_world(c, a.world, device)
     before = {k: v.cpu().clone() for k, v in world.state_dict().items()}
     meta = json.loads((Path(c['baseline']['packed_cache']) / 'complete.json').read_text())
-    if method == 'leflow_release':
+    if hasattr(model,'action_mean'):
         model.action_mean.copy_(torch.tensor(meta['action_mean'], device=device))
         model.action_std.copy_(torch.tensor(meta['action_std'], device=device))
     details = []
@@ -80,7 +80,7 @@ def main(a):
         assert torch.isfinite(action).all() and np.isfinite(score)
     elapsed = torch.tensor(time.perf_counter()-began,device=device)
     if size > 1: dist.all_reduce(elapsed,op=dist.ReduceOp.MAX)
-    if rank == 0: save_json(a.output, dict(method=method, training_checks=details,
+    if rank == 0: save_json(a.output, dict(method=method, configuration=c, protocol=digest(c), training_checks=details,
         world_unchanged=True, finite_gradients=True, native_full_dimension=512 if method=='leflow_release' else None,
         controller_seconds=timings, controller_warm_mean_ms=1000*float(np.mean(timings[1:])),
         peak_gpu_gib=torch.cuda.max_memory_allocated()/2**30,

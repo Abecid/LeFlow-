@@ -24,6 +24,9 @@ from .leflow import LeFlow, LeFlowController
 def components(c):
     if c['primary_method'] == 'leflow_release':
         return LeFlow, LeFlowController
+    if c['primary_method'] == 'hwm_paper':
+        from .hwm import HWM,HWMController
+        return HWM,HWMController
     raise ValueError(c['primary_method'])
 
 
@@ -72,7 +75,7 @@ def train(a):
     model = Model(c).to(device)
     world = load_world(c, a.world, device)
     packed = json.loads((Path(bc['packed_cache']) / 'complete.json').read_text())
-    if method == 'leflow_release':
+    if hasattr(model,'action_mean'):
         model.action_mean.copy_(torch.tensor(packed['action_mean'], device=device))
         model.action_std.copy_(torch.tensor(packed['action_std'], device=device))
     identity = dict(code=git_revision(), protocol=digest(c), manifest=file_hash(root / 'manifest.json'),
@@ -139,7 +142,7 @@ def train(a):
                 optimization_cap_gpu_seconds=cap, validation_gpu_seconds=validation_seconds,
                 validation_gpu_hours=validation_seconds / 3600, validation_steps=eval_steps,
                 gpu_count=size, global_batch=batch, last_update_overrun_gpu_seconds=max(0., used-cap),
-                adapter_optimization_included=True))
+                adapter_optimization_included=bool(adapter_steps)))
 
     def snapshot(commit_last=True):
         rngs = [None] * size
@@ -231,7 +234,8 @@ def train(a):
             loss, parts = module(item, world)
             if not torch.isfinite(loss): raise FloatingPointError(f'Nonfinite loss at {step}')
             loss.backward()
-            norm = torch.nn.utils.clip_grad_norm_(model.parameters(), 1., error_if_nonfinite=True)
+            norm = torch.nn.utils.clip_grad_norm_(model.parameters(),
+                tc.get('gradient_clip') or float('inf'),error_if_nonfinite=True)
             optimizer.step()
             torch.cuda.synchronize(); seconds = maximum(time.perf_counter() - started)
             used += seconds * size; usage()
