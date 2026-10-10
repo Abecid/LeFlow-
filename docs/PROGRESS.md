@@ -1,3 +1,10 @@
+# October 10: launch progress TTT training and periodic evaluation
+
+The user explicitly directs training immediately. Registered one fresh
+`progress_ttt` seed3072 run using eight available A800s and the unchanged
+data, global batch64, optimization ceilings and four fixed104 validations.
+See [run registration](PROGRESS_TTT_RUN.md). Existing baselines remain fixed.
+
 # October 10: progress TTT implementation
 
 The latest LaCT/TTT request is implemented as `progress_ttt`: a differentiable,

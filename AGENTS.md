@@ -1,5 +1,13 @@
 # Experiment continuity
 
+- October10 latest explicit direction: run the implemented progress_ttt candidate
+  immediately with periodic evaluations. This supersedes the implementation-only
+  hold below. ONE fresh seed3072 run, all8 available GPUs, same successful expert
+  data and fixed104 cases, global64,20k-update/28,800 optimization GPU-second caps,
+  10s/200-action controller allowance. No baseline retraining, new seeds, variants,
+  ablations or sealed tests. Read docs/PROGRESS_TTT_RUN.md. Keep execution source
+  frozen and publish results/failures. Do not stop at implementation/preflight.
+
 - October10 latest request: research LaCT/TTT follow-ups and formulate/implement
   the strongest justified adaptation. Implemented isolated `progress_ttt`; read
   docs/PROGRESS_TTT.md. Scope is implementation plus train-data-only verification,

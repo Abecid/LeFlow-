@@ -110,9 +110,9 @@
     "mode": "online"
   },
   "execution": {
-    "training_enabled": false,
+    "training_enabled": true,
     "test_enabled": false,
-    "note": "Implementation and train-data-only preflight. Completed prior run is preserved. No fresh optimization run dispatched by this configuration."
+    "note": "User explicitly directs immediate training and periodic evaluation of this implemented candidate. One fresh seed3072 run; unchanged data/global64/20k updates/28800 optimization GPU-seconds and four fixed104 validations. Preserved baselines; no extra variants, seeds, ablations or sealed tests."
   },
   "controller_grounded": {
     "width": 256,

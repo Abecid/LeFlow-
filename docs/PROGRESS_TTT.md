@@ -1,3 +1,10 @@
+# Current execution status
+
+The user explicitly directed immediate training and evaluation after this
+implementation. The one-run configuration is now enabled; follow
+[the registered run](PROGRESS_TTT_RUN.md). The implementation-only status below
+is the historical preflight record.
+
 # Execution-grounded progress TTT: literature, formulation and implementation
 
 October 10, 2026. **Implemented; training-data-only verification completed. No new
