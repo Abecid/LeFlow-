@@ -1,3 +1,13 @@
+# Guided TTT active: preserve frozen source
+
+Verified October10 16:01 Pacific: step399 on all8 GPUs; W&Bdw8gnxtj.
+Execution source92fdae6120c568a6e13c7ca2e6013fbc72cb45bf at
+/home/mtxu/adam/LeFlow-experiments/20261010-guided-ttt/repo.
+Coordinator3464557, torchrun3466819. Do not duplicate or edit execution source.
+The same fixed104 evaluations dispatch automatically at5k/10k/15k/20k; analyze
+saved records and failure modes. Read docs/GUIDED_TTT_RUN.md and GUIDED_TTT.md.
+No new baseline, seed, variant, ablation, inference sweep or sealed test.
+
 # Latest authorization: execution-calibrated guided TTT
 
 October10 Pacific: user requests returning to our action-flow framework, applying

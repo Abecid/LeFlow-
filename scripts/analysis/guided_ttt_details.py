@@ -97,7 +97,7 @@ def main(args):
     chosen = max(reports, key=lambda r:(r['metrics']['success_macro'], -r['step']))
     byid = {r['id']:r for r in chosen['records']}
     refs = {
-        'progress_ttt':('20261010-progress-ttt/run/validation/step_0015000.json.gz', 78),
+        'progress_ttt':('20261010-progress-ttt-run/run/validation/step_0015000.json.gz', 78),
         'flow_reasoning':('20261010-flow-reasoning/run/validation/step_0005000.json.gz', 79),
         'execution_revision':('20261009-execution-revision/run/validation/step_0005000.json.gz', 80),
         'controller_grounded':('20261009-controller-grounded/run/validation/step_0005000.json.gz', 79),

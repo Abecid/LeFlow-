@@ -33,3 +33,23 @@ Verification evidence:
 Earlier3-round timing checks measured112–115ms; this motivated two rounds before
 any benchmark episode or training update. No performance sweep was run. Compute
 for checks is reported separately from the optimization budget.
+
+## Verified running
+
+At2026-10-10 16:01:37 Pacific (23:01:37 UTC), step399 had completed on all8 GPUs.
+Training metrics were logged through350. No task-success validation was complete.
+[Live W&B](https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/dw8gnxtj).
+Source92fdae6120c568a6e13c7ca2e6013fbc72cb45bf;143 deployed runtime hashes verified.
+Coordinator3464557; torchrun3466819. Source and all earlier runs remain frozen.
+[Launch evidence](reports/20261010-guided-ttt-run/launch-verification.json).
+
+The final-source coordinator repeated all behavior checks and measured96.94ms
+in its training-data preflight. A full Git bundle recovered an incomplete prior
+server clone before launch; no optimizer work was duplicated.
+
+Initial measured throughput is about559 examples/second on a deep update.
+Provisional ETA: first completed evaluation around13–15 minutes after training
+start, full cycle roughly50–60 minutes, assuming stable throughput and evaluation
+runtime. These are estimates, not results. A separate CPU-only continuation will
+analyze saved milestones and audit the finished run; it cannot launch training,
+model inference, additional variants, or sealed tests.

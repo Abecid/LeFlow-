@@ -1,3 +1,12 @@
+# October10 16:01 Pacific: guided TTT training verified
+
+Step399 completed on all8 GPUs. W&Bdw8gnxtj; immutable source92fdae6120c568a6e13c7ca2e6013fbc72cb45bf.
+[Run status](GUIDED_TTT_RUN.md), [method and publication scope](GUIDED_TTT.md).
+All final-source behavior checks and eight-GPU gradient verification passed.
+Same registered data/budgets; four fixed104 validations automatic. No new task
+success result yet. Existing80/79/78 versus LeFlow21 development scores remain
+valid only within their shared-world, reused-development comparison scope.
+
 # October10 Pacific: guided action-flow TTT candidate
 
 Returning to our action-flow framework at the user's request. New isolated
