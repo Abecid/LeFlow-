@@ -1,3 +1,12 @@
+# Active run: direct LeFlow TTT
+
+Training verified October10 16:34:54 UTC:step2013 on all8 GPUs; W&Bjkidk24s.
+Frozen source70c19323351b7fe2756f52ec6968b75f65abe7a2 at
+/home/mtxu/adam/LeFlow-experiments/20261010-leflow-ttt/repo.
+Coordinator3060649, torchrun3061775. Do not duplicate or edit running source.
+Four fixed104 evaluations are scheduled automatically. Continue monitoring,
+compare the preserved21/104 LeFlow port and analyze failures. No extra runs.
+
 # Latest authorization: direct LeFlow TTT candidate
 
 October10: user explicitly requests the strongest justified LaCT/follow-up TTT

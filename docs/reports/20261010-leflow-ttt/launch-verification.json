@@ -1,0 +1,177 @@
+{
+  "utc": "2026-10-10T16:34:54.605639+00:00",
+  "source": {
+    "commit": "70c19323351b7fe2756f52ec6968b75f65abe7a2",
+    "runtime_files_verified": 154,
+    "all_runtime_bytes_match_published_commit": true
+  },
+  "launcher": {
+    "pid": 3060649,
+    "source": "70c19323351b7fe2756f52ec6968b75f65abe7a2",
+    "utc": "2026-10-10T16:33:27.316448+00:00",
+    "command": [
+      "bash",
+      "scripts/operations/launch_leflow_ttt.sh"
+    ]
+  },
+  "compute_usage": {
+    "adapter_optimization_included": true,
+    "common_adapter": {
+      "adapter_optimization_gpu_seconds": 193.79706083983183,
+      "adapter_steps": 2000,
+      "baseline_source": "564b52ffc86eba212aa6858f3a9f10390905a905",
+      "policy_weights_inherited": false,
+      "source_checkpoint_sha256": "0ff04e0bbac8aa8f72cffd96c03af5963e62baa4b67b16d9e0875c3e59733ffe"
+    },
+    "global_batch": 64,
+    "gpu_count": 8,
+    "last_update_overrun_gpu_seconds": 0.0,
+    "optimization_cap_gpu_seconds": 28800,
+    "optimization_gpu_hours": 0.0573001931504243,
+    "optimization_gpu_seconds": 206.28069534152746,
+    "stage": "planner",
+    "step": 2013,
+    "validation_gpu_hours": 0.0005652687946955363,
+    "validation_gpu_seconds": 2.0349676609039307,
+    "validation_steps": []
+  },
+  "run": {
+    "code": "70c19323351b7fe2756f52ec6968b75f65abe7a2",
+    "common_adapter": {
+      "adapter_optimization_gpu_seconds": 193.79706083983183,
+      "adapter_steps": 2000,
+      "baseline_source": "564b52ffc86eba212aa6858f3a9f10390905a905",
+      "policy_weights_inherited": false,
+      "source_checkpoint_sha256": "0ff04e0bbac8aa8f72cffd96c03af5963e62baa4b67b16d9e0875c3e59733ffe"
+    },
+    "id": "jkidk24s",
+    "manifest": "2d0884a298ff8646d04342facef2ba519e4c52ebd5c6522a3f1f4084f03e9ace",
+    "method": "leflow_ttt",
+    "packed_entries": "a8b9b8a48a240541a16bb932886c157bc1da82e997e501ecfca5b6e2b44c562c",
+    "protocol": "1ab81a07a230c9a79ffb353c9ff10803ab61719bbf695f0e9817dab2b4fbc1b7",
+    "seed": 3072,
+    "wandb_url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/jkidk24s",
+    "world_hash": "ae3f910da43f0a43dd65945394444a0b11719ed042cdacffacc2faaf824ec5a3",
+    "world_size": 8
+  },
+  "launch": {
+    "code": "70c19323351b7fe2756f52ec6968b75f65abe7a2",
+    "command": [
+      "/tmp/mtxu-flow-jepa-20261007/env/bin/python",
+      "-m",
+      "torch.distributed.run",
+      "--standalone",
+      "--nproc-per-node=8",
+      "-m",
+      "flow_jepa.leflow_ttt.train",
+      "--config",
+      "/home/mtxu/adam/LeFlow-experiments/20261010-leflow-ttt/repo/config/flow_metaworld_leflow_ttt.json",
+      "--root",
+      "/home/mtxu/adam/LeFlow-experiments/20261010-leflow-ttt/campaign",
+      "--run-dir",
+      "/home/mtxu/adam/LeFlow-experiments/20261010-leflow-ttt/campaign/runs/leflow_ttt_3072",
+      "--world",
+      "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt"
+    ],
+    "config_sha256": "0f945ea05e80ca72c740c151470161e3538887aac2e40f6de705f4b38e19dba1",
+    "devices": [
+      [
+        "0",
+        "GPU-a303d11c-f1b5-e245-93f0-735a054671ce"
+      ],
+      [
+        "1",
+        "GPU-fc39ae51-86a1-df0a-8657-0d33620f5115"
+      ],
+      [
+        "2",
+        "GPU-85f3f7a6-107f-2921-13a5-76a94101f858"
+      ],
+      [
+        "3",
+        "GPU-64e751ee-abb6-120c-f346-311e789228c7"
+      ],
+      [
+        "4",
+        "GPU-563386b2-7077-ce8a-e0ac-6ecee897ff17"
+      ],
+      [
+        "5",
+        "GPU-e7c745ce-6ec5-bb28-ac2d-409588294891"
+      ],
+      [
+        "6",
+        "GPU-e6f62cbc-20db-8e64-9d97-076042fe934f"
+      ],
+      [
+        "7",
+        "GPU-9e462873-2235-e452-c25f-4a8937f7a92b"
+      ]
+    ],
+    "pid": 3060649,
+    "world_sha256": "ae3f910da43f0a43dd65945394444a0b11719ed042cdacffacc2faaf824ec5a3"
+  },
+  "worker": {
+    "command": [
+      "/tmp/mtxu-flow-jepa-20261007/env/bin/python",
+      "-m",
+      "torch.distributed.run",
+      "--standalone",
+      "--nproc-per-node=8",
+      "-m",
+      "flow_jepa.leflow_ttt.train",
+      "--config",
+      "/home/mtxu/adam/LeFlow-experiments/20261010-leflow-ttt/repo/config/flow_metaworld_leflow_ttt.json",
+      "--root",
+      "/home/mtxu/adam/LeFlow-experiments/20261010-leflow-ttt/campaign",
+      "--run-dir",
+      "/home/mtxu/adam/LeFlow-experiments/20261010-leflow-ttt/campaign/runs/leflow_ttt_3072",
+      "--world",
+      "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt"
+    ],
+    "pid": 3061775
+  },
+  "latest_metrics": [
+    {
+      "train/planner/action_outside_bounds": 0.0,
+      "train/planner/consistency_loss": 0.00012311304453760386,
+      "train/planner/fast_weight_delta": 0.10200629383325577,
+      "train/planner/flow_loss": 2.3451499938964844,
+      "train/planner/history_fraction": 0.56640625,
+      "train/planner/inner_steps": 1.0,
+      "train/planner/inverse_loss": 1.1727851629257202,
+      "train/planner/loss": 3.704237461090088,
+      "train/planner/outcome_loss": 1.1988716125488281,
+      "train/planner/recorded_adapted_outcome_mse": 0.011988715268671513,
+      "train/planner/recorded_raw_outcome_mse": 0.011965926736593246,
+      "train/planner/residual_reconstruction_loss": 1.3280508518218994,
+      "train/planner/support_loss_after": 0.3491204082965851,
+      "train/planner/support_loss_before": 0.36913663148880005,
+      "step": 2001,
+      "train/lr": 0.0001,
+      "train/grad_norm": 9.392127990722656,
+      "budget/optimization_gpu_hours": 0.055402818378061054,
+      "system/update_seconds": 0.7066356651484966,
+      "system/update_examples_per_second": 90.5700110488347,
+      "system/peak_gpu_gib": 0.46073246002197266
+    },
+    {
+      "step": 2001,
+      "heldout/planner/action_outside_bounds": 0.0,
+      "heldout/planner/consistency_loss": 0.00013428519832814345,
+      "heldout/planner/fast_weight_delta": 0.18648532987572253,
+      "heldout/planner/flow_loss": 1.9429915212094784,
+      "heldout/planner/history_fraction": 0.607421875,
+      "heldout/planner/inner_steps": 4.0,
+      "heldout/planner/inverse_loss": 1.1681219469755888,
+      "heldout/planner/loss": 3.3019454553723335,
+      "heldout/planner/outcome_loss": 1.2290949672460556,
+      "heldout/planner/recorded_adapted_outcome_mse": 0.01229094946756959,
+      "heldout/planner/recorded_raw_outcome_mse": 0.012262727919733152,
+      "heldout/planner/residual_reconstruction_loss": 1.3581822402775288,
+      "heldout/planner/support_loss_after": 0.3424943909049034,
+      "heldout/planner/support_loss_before": 0.37113641295582056
+    }
+  ],
+  "gpu_status": "0, 1525, 56\n1, 1525, 82\n2, 1525, 82\n3, 1525, 77\n4, 1525, 78\n5, 1525, 63\n6, 1525, 73\n7, 1525, 81\n"
+}

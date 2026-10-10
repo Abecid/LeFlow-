@@ -2,7 +2,9 @@
 
 October 10, 2026. One authorized seed3072 candidate, `leflow_ttt`. This is a
 new direct LeFlow extension, distinct from the completed action-flow `progress_ttt`.
-Implementation/preflight complete; formal launch status follows in PROGRESS.md.
+Implementation/preflight complete. Frozen source70c19323351b7fe2756f52ec6968b75f65abe7a2
+was dispatched at16:33:27 UTC; coordinator3060649. Optimizer/evaluation evidence
+is tracked in PROGRESS.md and the run reports. Dispatch alone is not training proof.
 
 ## Thesis and learning mechanism
 
@@ -86,6 +88,9 @@ verified identical at5k/10k/15k/20k. Only adapter weights are loaded from best.p
 flow, inverse and new memory parameters start fresh with seed3072. New candidate
 optimization is18,000 updates, yielding20,000 total charged updates. The same
 28,800 aggregate optimization GPU-second ceiling includes the common prefix.
+This matches caps and total update count, not necessarily consumed GPU time:
+the baseline used0.8524 optimization GPUh; meta-training adds work per query.
+Report both actual totals and avoid claiming equal consumed compute.
 Baseline policy weights and optimizer state are never inherited.
 
 Same6,222 successful expert episodes across13 MetaWorld tasks; unchanged

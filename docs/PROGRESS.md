@@ -7,8 +7,16 @@ predicted consequences. See [formulation and run registration](LEFLOW_TTT_RUN.md
 Seven behavior tests, causal sampling checks and eight-GPU backward checks pass.
 Reusing the identical frozen adapter avoids a representation confound; its
 original2k updates/GPU cost are charged. No baseline policy is loaded/retrained.
-Formal launch pending publication and clean deployment; status will be updated
-with actual optimizer/evaluation evidence. Earlier entries are historical.
+Training verified at16:34:54 UTC:step2013, all8 GPUs active, finite optimizer
+and held-out logs. The first2k updates are the charged common adapter prefix;
+18k fresh planner/memory updates remain in the registered20k total. No formal
+success evaluation yet. Four fixed104 evaluations are automatic at5k/10k/15k/20k.
+Frozen source70c19323351b7fe2756f52ec6968b75f65abe7a2;154 deployed runtime hashes
+verified. Coordinator3060649; torchrun3061775. [Live W&B](https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/jkidk24s).
+[Launch evidence](reports/20261010-leflow-ttt/launch-verification.json).
+Deployment recovered a slow transfer using a clean sparse GitHub checkout;
+no optimizer updates were lost/repeated. Preserve the running source.
+Earlier entries are historical.
 
 # October10: progress TTT completed; research angle reviewed
 
