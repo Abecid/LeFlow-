@@ -2,13 +2,20 @@
 
 The corrected **released CEM solver scores 24/104 (23.08%)** on the same development
 cases where the preserved execution-revision checkpoint scores 80/104 (76.92%).
-LeFlow is training: its first5k evaluation scores14/104 (13.46%), with no
-controller timeouts. This is an intermediate checkpoint, not its selected final
-baseline. HWM's paper-based port is training on GPUs4–7 from frozen revision
-`cde9c394c00e5be68348d6e80c1fd22d0e5c518d`; LeFlow uses GPUs0–3 from
-`564b52ffc86eba212aa6858f3a9f10390905a905`. At the03:27UTC inspection, LeFlow was
-at10k (second evaluation in progress) and HWM at4008 updates.
-[Verified status snapshot](reports/20261010-release-baselines/status-readback.json).
+The learned baselines are still running. LeFlow scores **14/104 at 5k and
+21/104 at 10k**, both with zero controller timeouts. HWM's paper-based port scores
+**2/104 and 3/104**, with 102 and 101 timeouts. Both reached 15k and started their
+third fixed validation. These are intermediate results, not final selections.
+At the 04:12 UTC inspection, the third evaluations had completed 41/104 LeFlow
+cases and 60/104 HWM cases. [Current readback](reports/20261010-release-baselines/status-current.json).
+
+The shared-filesystem journal-lock failure is repaired. Both runs resumed their
+10k optimizer/RNG state and reused the 52 already completed evaluation cases;
+no training was repeated. The frozen model sources remain LeFlow `564b52f` and
+HWM `cde9c39`, with the separately hashed infrastructure guard recorded in the
+[source and recovery audit](RELEASE_BASELINES.md). HWM now occupies GPUs 0–3 and
+LeFlow GPUs 4–7 after idle-device reacquisition.
+
 Do not substitute historical simplified LeFlow/HWM results into this comparison.
 
 This is a shared-backbone, fixed-budget MetaWorld comparison, not a reproduction
@@ -87,7 +94,7 @@ spending more on our model. This run does not add such an extension.
 - [Online readback](reports/20261010-release-baselines/online-readback.json): CEM finished
   at24/104; LeFlow’s first result matched its archived report.
 
-All17 targeted tests passed. Both learned methods stop at20k updates or8 optimizer
+All 20 targeted tests passed, including the shared-filesystem lock recovery checks. Both learned methods stop at20k updates or8 optimizer
 GPUh, include all learned adapters inside that allowance, and run four fixed104
 validations. No new seed, our-method retraining, ablation or final test is queued.
 Each successful worker completion creates a registry of source/configuration,
