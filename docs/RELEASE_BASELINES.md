@@ -72,7 +72,10 @@ and past context, L1-only recorded-waypoint supervision, native CEM equivalence 
 zero momentum, and the published standard-deviation momentum equations. Its
 four-GPU native-setting preflight had finite gradients and exact reset RGB,
 preserved world weights, used0.091724GPUh and discarded all weights. The smaller
-planner must also pass the runtime preflight before formal launch.
+planner passed its four-GPU preflight:4.55s mean warm decision,4.858s cold decision,
+3.47GiB peak/rank,0.042500GPUh. It can finish roughly two decisions per10-second
+episode, so timeout rates remain essential to interpretation. All17 baseline
+unit tests passed on the final source after adding coarse-prediction accounting.
 
 ## Locked comparison contract
 

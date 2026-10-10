@@ -1,0 +1,136 @@
+{
+  "code": "564b52ffc86eba212aa6858f3a9f10390905a905",
+  "config_sha256": "3e379651fe93e7df702e56597032d906e93cd4cc044ed905e90907f4c51837df",
+  "configuration": {
+    "baseline": {
+      "cem": {
+        "candidates": 300,
+        "elites": 30,
+        "horizon": 5,
+        "iterations": 30,
+        "receding_horizon": 5,
+        "var_scale": 1.0
+      },
+      "optimization_gpu_seconds": 28800,
+      "packed_cache": "/tmp/mtxu-baseline-release-20261010/data",
+      "world_sha256": "ae3f910da43f0a43dd65945394444a0b11719ed042cdacffacc2faaf824ec5a3"
+    },
+    "data": {
+      "action_repeat": 2,
+      "camera": "corner",
+      "goal_candidate_multiplier": 2,
+      "history_frames": 16,
+      "primitive_budget": 200,
+      "random_fraction": 0.2,
+      "render_size": 256,
+      "test_episodes_per_task": 200,
+      "train_episodes_per_task": 600,
+      "validation_episodes_per_task": 50
+    },
+    "diagnostics": {
+      "trajectory_case_ids": [
+        "validation/coffee-button/00000",
+        "validation/reach/00003",
+        "validation/door-close/00000",
+        "validation/dial-turn/00000",
+        "validation/drawer-close/00004",
+        "validation/handle-press/00000",
+        "validation/pick-place/00000",
+        "validation/assembly/00000",
+        "validation/faucet-open/00003",
+        "validation/reach/00005"
+      ]
+    },
+    "encoder": {
+      "architecture": "vit_large",
+      "batch_size": 2,
+      "checkpoint_key": "ema_encoder",
+      "checkpoint_sha256": "7ea9b7cb4a75d10644a8a8d42cff9e177b10dca8f02173f0eaf2b0bed82838c6",
+      "checkpoint_url": "https://dl.fbaipublicfiles.com/vjepa2/vjepa2_1_vitl_dist_vitG_384.pt",
+      "dim": 1024,
+      "input_size": 256,
+      "repository": "facebookresearch/vjepa2",
+      "revision": "204698b45b3712590f06245fbfba32d3be539812",
+      "token_grid": [
+        2,
+        4,
+        4
+      ]
+    },
+    "evaluation": {
+      "bootstrap_samples": 10000,
+      "budget_primitive": 200,
+      "controller_seconds_per_episode": 10.0
+    },
+    "execution": {
+      "execution_seeds": [
+        3072
+      ],
+      "test_enabled": false,
+      "training_enabled": true
+    },
+    "heldout_tasks": [
+      "window-open",
+      "handle-pull",
+      "push"
+    ],
+    "methods": [
+      "cem_release"
+    ],
+    "model": {
+      "depth": 4,
+      "heads": 4,
+      "state_representation": "static",
+      "width": 256
+    },
+    "name": "vjepa21_metaworld_release_baselines_v1",
+    "primary_baseline": "leflow_release",
+    "primary_method": "cem_release",
+    "schema": 1,
+    "seeds": [
+      3072
+    ],
+    "training": {
+      "budget_seconds": 7200,
+      "checkpoint_every": 1000,
+      "eval_every": 5000,
+      "global_batch": 64,
+      "gradient_clip": 1.0,
+      "learning_rate": 0.0001,
+      "log_every": 50,
+      "planner_steps": 20000,
+      "validation_episodes_per_task": 8,
+      "validation_rounds": 4,
+      "weight_decay": 0.0001,
+      "world_steps": 20000
+    },
+    "training_tasks": [
+      "assembly",
+      "button-press-topdown",
+      "coffee-button",
+      "dial-turn",
+      "door-close",
+      "door-open",
+      "drawer-close",
+      "drawer-open",
+      "faucet-open",
+      "handle-press",
+      "pick-place",
+      "plate-slide",
+      "reach"
+    ],
+    "wandb": {
+      "mode": "online",
+      "project": "flow-jepa-metaworld"
+    }
+  },
+  "files": {
+    "complete.json": "0fb3d2614d76fdd4c12e3605220f986306a6541789cf1d74d03ef2c4b8af3a8e",
+    "validation.json": "0fb3d2614d76fdd4c12e3605220f986306a6541789cf1d74d03ef2c4b8af3a8e"
+  },
+  "method": "cem_release",
+  "policy": "Reuse these files; no automatic baseline retraining.",
+  "seed": 3072,
+  "test_files_read": 0,
+  "world_sha256": "ae3f910da43f0a43dd65945394444a0b11719ed042cdacffacc2faaf824ec5a3"
+}

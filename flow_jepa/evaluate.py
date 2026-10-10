@@ -300,6 +300,8 @@ def summarize(records, c):
     result["controller_budget_overrun_seconds_mean"] = float(
         np.mean([r.get("controller_budget_overrun_seconds", 0.0) for r in records])
     )
+    if any(r.get("coarse_predictions", 0) for r in records):
+        result["coarse_predictions_mean"] = float(np.mean([r.get("coarse_predictions", 0) for r in records]))
     attained = [x for r in records for x in r["observed_subgoal_cosine"]]
     if attained:
         result["observed_subgoal_cosine"] = float(np.mean(attained))
@@ -374,7 +376,8 @@ def evaluate(
             controller_limit = c["evaluation"].get("controller_seconds_per_episode")
             controller_spent, exhausted = 0.0, False
             initial_calls = world.calls
-            initial_coarse = model.coarse.calls if method == "hwm_adapted" else 0
+            initial_coarse = (model.coarse.calls if method == "hwm_adapted"
+                              else model.calls if method == "hwm_paper" else 0)
             repeat, budget = (
                 c["data"]["action_repeat"],
                 c["evaluation"]["budget_primitive"],
@@ -451,7 +454,7 @@ def evaluate(
                     world_predictions=world.calls - initial_calls,
                     coarse_predictions=(model.coarse.calls - initial_coarse)
                     if method == "hwm_adapted"
-                    else 0,
+                    else (model.calls - initial_coarse) if method == "hwm_paper" else 0,
                     predicted_plan_cost=float(np.mean(scores)) if scores else None,
                     observed_subgoal_cosine=observed,
                     controller_budget_seconds=controller_limit,

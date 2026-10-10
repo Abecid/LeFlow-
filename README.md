@@ -32,6 +32,7 @@ these development validation comparisons are not corrected-SOTA or final-test
 claims. Only the newly authorized corrected baseline work is active; our policy
 is not being retrained.
 
+- [Corrected baseline results and resource-limit findings](docs/RELEASE_BASELINE_RESULTS.md)
 - [Independent project, comparison and contribution audit](docs/PROJECT_AUDIT_20261010.md)
 - [Latest results, training-decline diagnosis and method lineage](docs/EXECUTION_REVISION_RESULTS.md)
 - [Registered implementation and resource contract](docs/EXECUTION_REVISION_RUN.md)

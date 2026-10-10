@@ -1,3 +1,20 @@
+# CEM sealed; HWM preflight passed — October 10 UTC
+
+Released CEM completed once:24/104 (23.08%),0.514655 validation GPUh, no new
+training. All80 failures exhausted controller time. Its report hash matches the
+sealed server registry; all104 episode hashes/reset/model seeds match our stored
+80/104 evaluation. Paired outcomes:23 both successes,57 ours-only,1 CEM-only,
+23 neither. W&B finished and synced (`tupg6zpf`). See
+[the result report](RELEASE_BASELINE_RESULTS.md).
+
+HWM's Appendix C smaller planner passed four-GPU preflight:4.55s warm/4.858s cold
+per decision, finite gradients, unchanged frozen world, exact TRAIN reset RGB,
+3.47GiB peak/rank,0.042500GPUh; all weights discarded. This still permits only
+about two decisions under10s and cannot establish unrestricted method quality.
+All17 targeted baseline tests passed. Formal HWM source/config can now be frozen
+and launched on4–7; existing LeFlow source/run remains unchanged on0–3. Updated
+HWM accounting records high-level predictions separately from fine-world calls.
+
 # Baseline execution started — October 10 UTC / October 9 Pacific
 
 LeFlow and released CEM launched from frozen revision

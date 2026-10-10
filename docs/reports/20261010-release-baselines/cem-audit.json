@@ -1,0 +1,16 @@
+{
+  "cem_successes": 24,
+  "ours_successes": 80,
+  "n": 104,
+  "case_identity_verified": true,
+  "paired": {
+    "both": 23,
+    "ours_only": 57,
+    "cem_only": 1,
+    "neither": 23
+  },
+  "timeout_failures": 80,
+  "cem_wandb": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/tupg6zpf",
+  "cem_validation_gpu_hours": 0.5146546766493055,
+  "source_hash_verified": true
+}
