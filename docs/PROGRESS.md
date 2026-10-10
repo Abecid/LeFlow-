@@ -1,3 +1,15 @@
+# October 10, 00:02 Pacific — second validation: 75/104
+
+At 10k, success falls from 79 to 75/104. Assembly rises 0→1/8, door-open falls
+8→5/8 and reach 6→4/8; other task totals are unchanged. Timeouts remain ten.
+A saved-record-only matched-initial-state check finds final-round flow proposal
+diversity falls 0.05505→0.03478 (36.82%) and decreases in all 104 paired cases.
+This supports narrowing alternatives, not a proven entropy collapse or causal
+explanation. Across executed states, corrected prefix MAE improves slightly
+0.002123→0.002023 while raw optimistic stalled failure tails rise from 15/25 to
+21/29. Better calibration/fitting has not translated into better task success.
+The registered 15k/20k checkpoints continue; no code, data or budget changes.
+
 # October 9, 23:51 Pacific — first flow-reasoning validation: 79/104
 
 The 5k checkpoint scores 79/104 (75.96%) versus the frozen GMM best of 80/104.

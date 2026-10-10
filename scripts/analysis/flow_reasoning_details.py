@@ -18,6 +18,27 @@ def average(values):
     return mean(values) if values else None
 
 
+def initial_diversity(reports):
+    first = {r['id']:r for r in reports[0]['records']}
+    rows = []
+    for report in reports:
+        current = {r['id']:r for r in report['records']}
+        row = dict(step=report['step'])
+        for key in first:
+            old = first[key]['controller_diagnostics']['decisions'][0]
+            new = current[key]['controller_diagnostics']['decisions'][0]
+            assert new['history_valid_steps']==0 and not new['warm_start_available']
+            assert all(abs(a-b)<1e-6 for a,b in zip(old['candidate_route_costs'],new['candidate_route_costs']))
+        for index in range(3):
+            before = [first[k]['controller_diagnostics']['decisions'][0]['round_proposal_diversity'][index] for k in first]
+            after = [current[k]['controller_diagnostics']['decisions'][0]['round_proposal_diversity'][index] for k in first]
+            row[str(index)] = dict(mean=mean(after),relative_change=mean(after)/mean(before)-1,
+                                  decreased_cases=sum(b<a for a,b in zip(before,after)))
+        rows.append(row)
+    return dict(rounds=rows,paired_initial_routes_verified=True,history_empty=True,
+        interpretation='Same reset/goal and per-case seed. Round zero includes recorded proposals; later rounds are flow proposals. Diversity is not likelihood entropy or a causal attribution.')
+
+
 def summarize(report):
     records = report['records']
     assert len(records) == 104 and all(r['id'].startswith('validation/') for r in records)
@@ -108,6 +129,7 @@ def main(args):
             by_depth={str(d):{k:average(r[k] for r in rows if r['train/reasoning_depth']==d) for k in keys}
                       for d in (1, 2, 3)}))
     result = dict(selected_step=chosen['step'], rounds=[summarize(r) for r in reports],
+        initial_proposal_diversity=initial_diversity(reports),
         comparisons=comparisons, case_pairing_verified=True, training_windows=windows,
         compute=load(root/'compute_usage.json'), run=load(root/'run.json'),
         model_calls=0, simulator_calls=0, final_tests_read=False,
