@@ -1,3 +1,12 @@
+# October10:15k LeFlow-TTT ties27/104 with different task strengths
+
+The first three scores are27/21/27 out of104, all with zero timeouts. At15k,
+door-close improves to4/8, coffee-button8/8, drawer-close6/8 and handle-press8/8,
+but faucet-open falls to0/8 and reach is1/8. This is a shift across tasks, not
+uniform improvement or a monotonically deteriorating training curve. Select5k
+on the registered earliest-tie rule. Final20k training/evaluation remains active.
+[Third-round evidence](reports/20261010-leflow-ttt/analysis-round-3.json).
+
 # October10:10k LeFlow-TTT regression to21/104;5k remains best27
 
 Second validation:21/104, no timeouts, versus27 at5k. Faucet-open drops8/8 to1/8;

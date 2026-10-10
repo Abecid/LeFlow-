@@ -59,6 +59,11 @@ action history correction; measure clipping as a possible remaining mismatch.
   reproduce the paper's streaming EMA anchor or all normalization rules.
 - [SCOUT](https://arxiv.org/html/2609.36107): meta-train outcome-based adaptation
   for later expert action quality, rather than optimizing reconstruction alone.
+  SCOUT uses a GMM action policy; its geometric-flow decoder is not a
+  flow-matching generator. Its stated limitations explicitly leave generative
+  diffusion-policy integration and failures beyond hidden physical properties
+  open. Our adaptation targets LeFlow path generation and execution mismatch,
+  but effectiveness/novelty still require evidence.
   Official project repository c4b69fa6743df0e44ad51c85b07c289d96025973 exposed
   project content, not released training code. Our data are successful expert
   episodes and lack SCOUT's broader interaction coverage.
