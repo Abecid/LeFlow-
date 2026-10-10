@@ -1,0 +1,19 @@
+{
+  "code": "70c19323351b7fe2756f52ec6968b75f65abe7a2",
+  "common_adapter": {
+    "adapter_optimization_gpu_seconds": 193.79706083983183,
+    "adapter_steps": 2000,
+    "baseline_source": "564b52ffc86eba212aa6858f3a9f10390905a905",
+    "policy_weights_inherited": false,
+    "source_checkpoint_sha256": "0ff04e0bbac8aa8f72cffd96c03af5963e62baa4b67b16d9e0875c3e59733ffe"
+  },
+  "id": "jkidk24s",
+  "manifest": "2d0884a298ff8646d04342facef2ba519e4c52ebd5c6522a3f1f4084f03e9ace",
+  "method": "leflow_ttt",
+  "packed_entries": "a8b9b8a48a240541a16bb932886c157bc1da82e997e501ecfca5b6e2b44c562c",
+  "protocol": "1ab81a07a230c9a79ffb353c9ff10803ab61719bbf695f0e9817dab2b4fbc1b7",
+  "seed": 3072,
+  "wandb_url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/jkidk24s",
+  "world_hash": "ae3f910da43f0a43dd65945394444a0b11719ed042cdacffacc2faaf824ec5a3",
+  "world_size": 8
+}

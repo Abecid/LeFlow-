@@ -1,0 +1,31 @@
+{
+  "checkpoint_step": 20000,
+  "selected": true,
+  "source": "Six evenly spaced actual saved simulator frames per trajectory, visually inspected at1536x288; no new model/environment calls.",
+  "cases": {
+    "validation/faucet-open/00003": {
+      "success": true,
+      "first_success_primitive": 138,
+      "observation": "The gripper moves toward the faucet and eventually actuates it; the same case failed at10k."
+    },
+    "validation/drawer-close/00004": {
+      "success": true,
+      "first_success_primitive": 32,
+      "observation": "The gripper steadily moves against the drawer and closes it."
+    },
+    "validation/assembly/00000": {
+      "success": false,
+      "steps": 200,
+      "observation": "The gripper approaches or passes near the assembly object but does not complete placement."
+    },
+    "validation/door-close/00000": {
+      "success": false,
+      "steps": 200,
+      "observation": "The gripper remains near the door edge; sampled later frames show little useful closure."
+    }
+  },
+  "limits": [
+    "Illustrative selected traces, not aggregate causal evidence.",
+    "Exact contact forces are not identifiable from these images."
+  ]
+}

@@ -1,3 +1,19 @@
+# LeFlow-TTT completed; preserve this comparison
+
+October 10: the authorized seed3072 direct LeFlow-TTT run finished20k charged
+updates (2k shared adapter +18k fresh planner/memory), scores27/21/27/29 on the
+fixed104 development cases. Select20k29/104 vs frozen LeFlow21/104:12 paired wins,
+4 regressions; zero timeouts across all416 evaluations. Read
+`docs/LEFLOW_TTT_RESULTS.md`. Actual optimization2.437308 GPUh vs baseline0.852418:
+matched ceilings/updates, not equal consumed compute. TTT benefit and inference
+scaling are not isolated; no native-benchmark/SOTA/generalization claim.
+Final CPU audit passed; W&Bjkidk24s finished; owned workers exited and all8 GPUs
+idle at17:12:49 UTC. Frozen source70c19323351b7fe2756f52ec6968b75f65abe7a2 remains at
+/home/mtxu/adam/LeFlow-experiments/20261010-leflow-ttt/repo.
+The one-run authorization is fulfilled. Preserve baselines, source and sealed
+final tests. No automatic additional training, seed, variant, ablation, scaling
+sweep or final test. Earlier active-run/authorization entries below are history.
+
 # Active run: direct LeFlow TTT
 
 Training verified October10 16:34:54 UTC:step2013 on all8 GPUs; W&Bjkidk24s.

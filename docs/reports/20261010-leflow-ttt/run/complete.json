@@ -1,0 +1,25 @@
+{
+  "best": 0.27884615384615385,
+  "best_step": 20000,
+  "common_adapter": {
+    "adapter_optimization_gpu_seconds": 193.79706083983183,
+    "adapter_steps": 2000,
+    "baseline_source": "564b52ffc86eba212aa6858f3a9f10390905a905",
+    "policy_weights_inherited": false,
+    "source_checkpoint_sha256": "0ff04e0bbac8aa8f72cffd96c03af5963e62baa4b67b16d9e0875c3e59733ffe"
+  },
+  "convergence_established": false,
+  "new_optimizer_updates": 18000,
+  "optimization_gpu_hours": 2.4373079992189175,
+  "stage": "planner",
+  "step": 20000,
+  "stop_reason": "update_limit",
+  "validation_gpu_hours": 2.3738358717784287,
+  "validation_steps": [
+    5000,
+    10000,
+    15000,
+    20000
+  ],
+  "wall_seconds": 2180.897073715925
+}

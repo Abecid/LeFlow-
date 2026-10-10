@@ -1,0 +1,46 @@
+{
+  "source": "70c19323351b7fe2756f52ec6968b75f65abe7a2",
+  "runtime_files_verified": 56,
+  "registry_files_verified": 12,
+  "scores": [
+    [
+      5000,
+      27
+    ],
+    [
+      10000,
+      21
+    ],
+    [
+      15000,
+      27
+    ],
+    [
+      20000,
+      29
+    ]
+  ],
+  "selected_step": 20000,
+  "best_last_match_registered_checkpoints": true,
+  "exact_baseline_adapter_unchanged": true,
+  "common_adapter": {
+    "adapter_optimization_gpu_seconds": 193.79706083983183,
+    "adapter_steps": 2000,
+    "baseline_source": "564b52ffc86eba212aa6858f3a9f10390905a905",
+    "policy_weights_inherited": false,
+    "source_checkpoint_sha256": "0ff04e0bbac8aa8f72cffd96c03af5963e62baa4b67b16d9e0875c3e59733ffe"
+  },
+  "data_fields_identical": true,
+  "successful_expert_train_episodes": 6222,
+  "baseline_schedule_unchanged": true,
+  "world_hash_verified": true,
+  "case_pairing_verified": true,
+  "adaptation_episode_local": true,
+  "optimization_gpu_seconds": 8774.308797188103,
+  "validation_gpu_seconds": 8545.809138402343,
+  "wandb_state": "finished",
+  "wandb_url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/jkidk24s",
+  "model_calls": 0,
+  "simulator_calls": 0,
+  "test_files_read": 0
+}

@@ -1,3 +1,7 @@
+**Completed:** 20,000 charged updates; fixed104 scores27/21/27/29, selected20k29/104.
+Audits passed; W&B finished; owned workers exited. Read [final results](LEFLOW_TTT_RESULTS.md).
+The launch and intermediate-result entries below are historical; do not restart.
+
 # LeFlow with episodic nonlinear test-time memory
 
 October 10, 2026. One authorized seed3072 candidate, `leflow_ttt`. This is a

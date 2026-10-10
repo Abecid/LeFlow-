@@ -1,0 +1,20 @@
+{
+  "command": [
+    "/tmp/mtxu-flow-jepa-20261007/env/bin/python",
+    "-m",
+    "torch.distributed.run",
+    "--standalone",
+    "--nproc-per-node=8",
+    "-m",
+    "flow_jepa.leflow_ttt.train",
+    "--config",
+    "/home/mtxu/adam/LeFlow-experiments/20261010-leflow-ttt/repo/config/flow_metaworld_leflow_ttt.json",
+    "--root",
+    "/home/mtxu/adam/LeFlow-experiments/20261010-leflow-ttt/campaign",
+    "--run-dir",
+    "/home/mtxu/adam/LeFlow-experiments/20261010-leflow-ttt/campaign/runs/leflow_ttt_3072",
+    "--world",
+    "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt"
+  ],
+  "pid": 3061775
+}

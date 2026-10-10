@@ -1,0 +1,87 @@
+{
+  "source": "Actual saved simulator frames from fixed validation cases; six evenly spaced frames per trace.",
+  "execution_source": "70c19323351b7fe2756f52ec6968b75f65abe7a2",
+  "figures": [
+    {
+      "file": "5k-assembly.png",
+      "checkpoint": 5000,
+      "case": "00000",
+      "task": "assembly",
+      "sha256": "0cf0a7ab0c6bd1c89459415055a25f301e43567d39fdce5553532c4558dfcf73",
+      "visually_inspected": true
+    },
+    {
+      "file": "5k-drawer-close.png",
+      "checkpoint": 5000,
+      "case": "00004",
+      "task": "drawer-close",
+      "sha256": "3ed6129478eda4f78ad1b48967d4f01daff0c79aea22b86be0dd1552146a9cdb",
+      "visually_inspected": true
+    },
+    {
+      "file": "5k-door-close.png",
+      "checkpoint": 5000,
+      "case": "00000",
+      "task": "door-close",
+      "sha256": "eab3327ae2534a00e116833a2548b044e7ace8f38fb7b54ca6ed7ee1f9eadb6a",
+      "visually_inspected": true
+    },
+    {
+      "file": "5k-faucet-open.png",
+      "checkpoint": 5000,
+      "case": "00003",
+      "task": "faucet-open",
+      "sha256": "22fcdbc3d40bb2359e47d9837fb694e1af3ad3b91f52c65e67e095fdda9411d0",
+      "visually_inspected": true
+    },
+    {
+      "file": "10k-faucet-open.png",
+      "checkpoint": 10000,
+      "task": "faucet-open",
+      "case": "00003",
+      "sha256": "b8d76f48d4a8333892f0491f281bd77856a7669314e5fa88db3c3dac1c6409ea",
+      "visually_inspected": true
+    },
+    {
+      "file": "10k-drawer-close.png",
+      "checkpoint": 10000,
+      "task": "drawer-close",
+      "case": "00004",
+      "sha256": "d672a8843afe490c8a2839b0fd5c4efe38c08983146329086b0c8fadeef6f75b",
+      "visually_inspected": true
+    },
+    {
+      "file": "20k-faucet-open.png",
+      "checkpoint": 20000,
+      "task": "faucet-open",
+      "case": "00003",
+      "sha256": "b5970ea7f915ba8a7746053a88ca10235ae4324dae4c2d4e3f33b603ddaa8560",
+      "visually_inspected": true
+    },
+    {
+      "file": "20k-drawer-close.png",
+      "checkpoint": 20000,
+      "task": "drawer-close",
+      "case": "00004",
+      "sha256": "14f4ee957dcd73f7a090fe8dc96f0258b62af52ae73897382e8e4931af106b49",
+      "visually_inspected": true
+    },
+    {
+      "file": "20k-assembly.png",
+      "checkpoint": 20000,
+      "task": "assembly",
+      "case": "00000",
+      "sha256": "bb71ba02e0b3ae755c058abf7b9b64ba828d64b646a688d972a83fe2faddcd79",
+      "visually_inspected": true
+    },
+    {
+      "file": "20k-door-close.png",
+      "checkpoint": 20000,
+      "task": "door-close",
+      "case": "00000",
+      "sha256": "988b227f5303dc0826b010a1dfc5b76cf10461a1104f1be2c8168a1da001c16e",
+      "visually_inspected": true
+    }
+  ],
+  "illustrative_not_exhaustive": true
+}

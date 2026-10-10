@@ -1,3 +1,22 @@
+# October 10: LeFlow-TTT completed and audited — selected29/104
+
+The full fixed104 curve is27/21/27/29; select20k29/104(27.9%) vs frozen LeFlow's
+selected10k21/104(20.2%). There are12 paired wins and4 regressions. All416 evaluations
+have zero controller timeouts. Same data, total updates and compute ceilings;
+actual optimization2.437308 GPUh vs baseline0.852418, so consumed compute is not
+matched. Our earlier different controller remains80/104. Seven tasks still0/8;
+online memory improves selected observed outcome MSE only0.94%;33/75 failures
+remain optimistically scored despite nonpositive observed late progress.
+
+[Completed results, limitations and next direction](LEFLOW_TTT_RESULTS.md).
+Final CPU audit passed:56 runtime hashes,12 sealed artifact hashes, unchanged
+baseline adapter, world/data identity, selected/last checkpoints, cases and budgets.
+154 deployed files were checked at launch. W&Bjkidk24s is finished; all owned
+workers exited and all8 GPUs were idle at17:12:49 UTC. Selected20k visual traces
+were inspected as well as historical5k/10k traces. Source70c1932 remains frozen.
+No additional run, baseline retraining, ablation, scaling sweep or sealed test
+was launched. Earlier progress entries below are historical.
+
 # October10:15k LeFlow-TTT ties27/104 with different task strengths
 
 The first three scores are27/21/27 out of104, all with zero timeouts. At15k,
