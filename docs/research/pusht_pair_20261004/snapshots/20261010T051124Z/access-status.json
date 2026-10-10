@@ -1,0 +1,251 @@
+{
+  "scheduled_heartbeat_utc": "2026-10-10T05:10:57.595Z",
+  "status": "campaign_online_and_gpu_access_restored",
+  "fresh_campaign_records_verified": true,
+  "fresh_online_state_verified": true,
+  "fresh_gpu_process_mapping_verified": true,
+  "attempts": {
+    "campaign_collector": {
+      "count": 1,
+      "exit_codes": [
+        0
+      ],
+      "result": "Valid fresh payload with no errors"
+    },
+    "online_readback": {
+      "count": 1,
+      "exit_codes": [
+        0
+      ],
+      "result": "Valid fresh payload with no errors"
+    },
+    "gpu_process_query": {
+      "count": 1,
+      "exit_codes": [
+        0
+      ],
+      "result": "Valid fresh payload with no errors"
+    }
+  },
+  "fresh_campaign": {
+    "evidence_is_cached": false,
+    "collection_started_utc": "2026-10-10T05:11:24+00:00",
+    "collection_finished_utc": "2026-10-10T05:11:28+00:00",
+    "raw_snapshot_sha256": "a1b441f53667ed08c8bb004421a57c2f7c355de44b7a0fc5539f031607defa23",
+    "frozen_source_commit": "69babde283f504120dae3dfc6e9188a0e2242be4",
+    "manifest_sha256": "6410f2f196e6fd50a84ae82a192edc718ce169885144195cc63693faaa7f7f26",
+    "encoder_sha256": "48938400ae3464c9680731287f583a9cb516f55a8ec64ea13a91be47fb15b607",
+    "runs": {
+      "btm_3072": {
+        "saved_step": 23830,
+        "logged_step": 23830,
+        "selected_checkpoint_step": 1000,
+        "metric_rows": 2465,
+        "evaluation_records": 99,
+        "complete_three_offset_cycles": 33,
+        "completion_marker_present": false
+      },
+      "flow_3072": {
+        "saved_step": 23000,
+        "logged_step": 23040,
+        "selected_checkpoint_step": 1000,
+        "metric_rows": 2383,
+        "evaluation_records": 96,
+        "complete_three_offset_cycles": 32,
+        "completion_marker_present": false
+      }
+    },
+    "known_campaign_trainer_or_flow_controller_visible": false,
+    "process_scope": "Campaign name/path filters in accessible process namespace; original supervisor intentionally stopped.",
+    "collection_errors": [],
+    "completion": false,
+    "recovery": "not_verified",
+    "flow_updates_needed_from_saved_checkpoint": 830,
+    "full_config_provenance_metrics_evaluations_checkpoint_markers_unchanged_since_baseline": true
+  },
+  "comparison_baseline_sha256": "5689b20fc43a21befd9952b5d9f4ac6ff534c65a149003a31b1ea02836e12d77",
+  "comparison_baseline_collection_finished_utc": "2026-10-10T04:57:26+00:00",
+  "new_training_metrics_since_last_good": 0,
+  "new_evaluations_since_last_good": 0,
+  "fresh_online": {
+    "evidence_is_cached": false,
+    "observed_utc": "2026-10-10T05:11:24+00:00",
+    "runs": {
+      "btm": {
+        "run_id": "z78m0zk6",
+        "state": "finished",
+        "step": 23830,
+        "runtime_seconds": 8304,
+        "checked_utc": "2026-10-10T05:11:32+00:00"
+      },
+      "flow": {
+        "run_id": "g0u3w723",
+        "state": "finished",
+        "step": 23040,
+        "runtime_seconds": 9240,
+        "checked_utc": "2026-10-10T05:11:33+00:00"
+      }
+    },
+    "readback_sha256": "0fc99d3b760f85cd0a7c97ca9e420a0329aa92561c99d6a730fa033328bd8021",
+    "comparison_baseline_sha256": "e829b30f21b7630d8fbfe36ae9ee27efc35773a0dfc093a4ed56c69ac519aa8f",
+    "manifest_sha256": "6410f2f196e6fd50a84ae82a192edc718ce169885144195cc63693faaa7f7f26",
+    "cpu_probe": {
+      "source": "Actual frozen LatentSegments.__getitem__ reads on CPU",
+      "clips": 32,
+      "episode_ids": [
+        4,
+        5
+      ],
+      "spacing_counts": {
+        "1": 20,
+        "2": 11,
+        "4": 1
+      },
+      "loss_probe_512_unique_episodes": 28
+    },
+    "state_step_runtime_probe_unchanged_since_baseline": true
+  },
+  "fresh_hardware": {
+    "evidence_is_cached": false,
+    "observed_utc": "2026-10-10T05:11:22+00:00",
+    "finished_utc": "2026-10-10T05:11:22+00:00",
+    "gpu_query_sha256": "2c9e92409bd9e678fa4a6311064530fde153d6547ce6624f0418354c8ee92543",
+    "comparison_baseline_sha256": "98d7ee27ffdf413fec65c1a1d0d6d377f05268186393746e9ad7bd61d75d3a10",
+    "gpus": [
+      {
+        "index": 0,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 1,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 2,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 3,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 4,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 5,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 6,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 7,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      }
+    ],
+    "processes": [],
+    "collector_hardware": {
+      "observed_utc": "2026-10-10T05:11:28+00:00",
+      "units": {
+        "utilization.gpu": "%",
+        "memory.used": "MiB",
+        "memory.total": "MiB",
+        "power.draw": "W"
+      },
+      "gpus": [
+        {
+          "index": "0",
+          "name": "NVIDIA A800-SXM4-80GB",
+          "utilization.gpu": "0",
+          "memory.used": "0",
+          "memory.total": "81920",
+          "power.draw": "55.65"
+        },
+        {
+          "index": "1",
+          "name": "NVIDIA A800-SXM4-80GB",
+          "utilization.gpu": "0",
+          "memory.used": "0",
+          "memory.total": "81920",
+          "power.draw": "53.81"
+        },
+        {
+          "index": "2",
+          "name": "NVIDIA A800-SXM4-80GB",
+          "utilization.gpu": "0",
+          "memory.used": "0",
+          "memory.total": "81920",
+          "power.draw": "56.46"
+        },
+        {
+          "index": "3",
+          "name": "NVIDIA A800-SXM4-80GB",
+          "utilization.gpu": "0",
+          "memory.used": "0",
+          "memory.total": "81920",
+          "power.draw": "54.83"
+        },
+        {
+          "index": "4",
+          "name": "NVIDIA A800-SXM4-80GB",
+          "utilization.gpu": "0",
+          "memory.used": "0",
+          "memory.total": "81920",
+          "power.draw": "58.13"
+        },
+        {
+          "index": "5",
+          "name": "NVIDIA A800-SXM4-80GB",
+          "utilization.gpu": "0",
+          "memory.used": "0",
+          "memory.total": "81920",
+          "power.draw": "56.97"
+        },
+        {
+          "index": "6",
+          "name": "NVIDIA A800-SXM4-80GB",
+          "utilization.gpu": "0",
+          "memory.used": "0",
+          "memory.total": "81920",
+          "power.draw": "54.56"
+        },
+        {
+          "index": "7",
+          "name": "NVIDIA A800-SXM4-80GB",
+          "utilization.gpu": "0",
+          "memory.used": "0",
+          "memory.total": "81920",
+          "power.draw": "56.64"
+        }
+      ]
+    },
+    "process_identities_and_memory_unchanged_since_baseline": true,
+    "ownership_of_prior_unidentified_workloads": "unresolved",
+    "campaign_association_of_prior_unidentified_workloads": "not_established"
+  },
+  "current_campaign_recovery": "not_verified",
+  "current_campaign_completion": false,
+  "current_eta": null,
+  "prior_access_failure_cause": "unknown",
+  "research_goals_demonstrated_by_available_evidence": {
+    "higher_primary_success": false,
+    "controlled_efficiency_with_retained_success": false
+  },
+  "results_report": "20261006T050931Z",
+  "previous_monitoring_report": "20261010T045751Z",
+  "gpu_jobs_changed": false,
+  "credentials_modified_by_monitor": false,
+  "monitor_action": "keep_active",
+  "last_good_snapshots_preserved": true,
+  "independent_payload_audit": "passed"
+}
