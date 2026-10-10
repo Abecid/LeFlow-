@@ -24,7 +24,8 @@ def main(a):
                  'latent_revision':'flow_metaworld_revision.json',
                  'execution_revision':'flow_metaworld_aligned.json',
                  'flow_reasoning':'flow_metaworld_flow_reasoning.json',
-                 'progress_ttt':'flow_metaworld_progress_ttt.json'}[a.variant]
+                 'progress_ttt':'flow_metaworld_progress_ttt.json',
+                 'guided_ttt':'flow_metaworld_guided_ttt.json'}[a.variant]
     c=config(repo/'config'/config_name)
     if not c.get('execution', {}).get('training_enabled', False):
         raise RuntimeError('Training disabled in candidate config; use the train-data-only preflight')
@@ -62,17 +63,20 @@ def main(a):
     with (record/'tests.log').open('a') as log:
         subprocess.run([sys.executable,'-m','unittest','discover','-s','tests','-p','test_execution.py','-v'],
                        env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
-        if a.variant in ('latent_revision','execution_revision','flow_reasoning','progress_ttt'):
+        if a.variant in ('latent_revision','execution_revision','flow_reasoning','progress_ttt','guided_ttt'):
             subprocess.run([sys.executable,'-m','unittest','discover','-s','tests','-p','test_latent_revision.py','-v'],
                            env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
-        if a.variant in ('execution_revision','flow_reasoning','progress_ttt'):
+        if a.variant in ('execution_revision','flow_reasoning','progress_ttt','guided_ttt'):
             subprocess.run([sys.executable,'-m','unittest','discover','-s','tests','-p','test_execution_revision.py','-v'],
                            env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
-        if a.variant in ('flow_reasoning','progress_ttt'):
+        if a.variant in ('flow_reasoning','progress_ttt','guided_ttt'):
             subprocess.run([sys.executable,'-m','unittest','discover','-s','tests','-p','test_flow_reasoning.py','-v'],
                            env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
-        if a.variant=='progress_ttt':
+        if a.variant in ('progress_ttt','guided_ttt'):
             subprocess.run([sys.executable,'-m','unittest','discover','-s','tests','-p','test_progress_ttt.py','-v'],
+                           env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
+        if a.variant=='guided_ttt':
+            subprocess.run([sys.executable,'-m','unittest','discover','-s','tests','-p','test_guided_ttt.py','-v'],
                            env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
     if not Path(bank).exists():
         if a.reuse_bank:
@@ -120,7 +124,7 @@ def main(a):
 if __name__=='__main__':
     p=argparse.ArgumentParser()
     for name in ('record','previous','cache'):p.add_argument('--'+name,required=True)
-    p.add_argument('--variant',choices=['controller_grounded','latent_revision','execution_revision','flow_reasoning','progress_ttt'],default='controller_grounded')
+    p.add_argument('--variant',choices=['controller_grounded','latent_revision','execution_revision','flow_reasoning','progress_ttt','guided_ttt'],default='controller_grounded')
     p.add_argument('--reuse-bank')
     args=p.parse_args()
     try:main(args)

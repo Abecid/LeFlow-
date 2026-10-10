@@ -35,6 +35,10 @@ def component_types(c):
         from .revision import RevisionPolicy
         from .aligned import AlignedSegments, AlignedController
         return method,RevisionPolicy,AlignedSegments,AlignedController
+    if method=='guided_ttt':
+        from .guided_ttt import GuidedTTTPolicy, GuidedTTTController
+        from .aligned import AlignedSegments
+        return method,GuidedTTTPolicy,AlignedSegments,GuidedTTTController
     if method=='progress_ttt':
         from .progress_ttt import ProgressTTTPolicy, ProgressTTTController
         from .aligned import AlignedSegments
@@ -125,7 +129,7 @@ def train(args):
     elif (run_dir / 'run.json').exists():
         raise RuntimeError('Existing run without recoverable checkpoint')
     module = DDP(model, device_ids=[device.index], broadcast_buffers=False,
-                 find_unused_parameters=(method in ('flow_reasoning','progress_ttt'))) if size > 1 else model
+                 find_unused_parameters=(method in ('flow_reasoning','progress_ttt','guided_ttt'))) if size > 1 else model
     seed_all(3072 + 997 * rank)
     data = Dataset(root, c, method, 3072, steps * batch)
     data = Subset(data, range(start * batch, len(data)))
@@ -183,7 +187,7 @@ def train(args):
         # At a binding compute cap, use the last trained checkpoint for the
         # remaining scheduled validation slot; never extend optimization.
         return (step > 0 and step not in validation_steps and len(validation_steps) < 4
-                and (step % 5000 == 0 or (method in ('flow_reasoning','progress_ttt') and used >= cap)))
+                and (step % 5000 == 0 or (method in ('flow_reasoning','progress_ttt','guided_ttt') and used >= cap)))
 
     try:
         while (step < steps and used < cap) or validation_due():
@@ -197,7 +201,7 @@ def train(args):
                 for group in optimizer.param_groups: group['lr']=tc['learning_rate']*lr_factor
                 weight = 0.1 * min(1.0, max(0.0, (step-1000)/1000))
                 item = {k:v.to(device, non_blocking=True) for k,v in next(iterator).items()}
-                if method in ('flow_reasoning','progress_ttt'):
+                if method in ('flow_reasoning','progress_ttt','guided_ttt'):
                     weight = 0.
                     # All ranks use the same balanced depth, so one rank's
                     # deeper rollout cannot silently dominate every update.

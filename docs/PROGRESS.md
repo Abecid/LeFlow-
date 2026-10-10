@@ -1,3 +1,14 @@
+# October10 Pacific: guided action-flow TTT candidate
+
+Returning to our action-flow framework at the user's request. New isolated
+`guided_ttt` adds a factual prefix-cost surrogate, QGF-style clean-action guidance,
+causal prequential gating of episodic error fits, and outer action-gradient
+supervision. Read [formulation and publication scope](GUIDED_TTT.md).
+Seven new behavior tests pass; preliminary3-round latency112–115ms motivated
+using2rounds for this registered candidate. Eight-GPU no-update verification and
+final latency gate are in progress. No new optimizer updates yet. Preserve all
+baselines, prior runs and sealed tests; one fresh seed only.
+
 # October 10: LeFlow-TTT completed and audited — selected29/104
 
 The full fixed104 curve is27/21/27/29; select20k29/104(27.9%) vs frozen LeFlow's

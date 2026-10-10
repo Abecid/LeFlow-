@@ -1,3 +1,16 @@
+# Latest authorization: execution-calibrated guided TTT
+
+October10 Pacific: user requests returning to our action-flow framework, applying
+QGF-style clean-action guidance and training for TTT. ONE fresh `guided_ttt`
+seed3072 candidate is authorized under the unchanged global64,20k-update/
+28,800 optimization GPU-second ceilings, same6,222 expert episodes/fixed104
+cases,10s/200-action control limits. Read docs/GUIDED_TTT.md and its run report.
+Use all8 available GPUs; preserve every completed baseline and source checkout.
+No extra seed, variant, baseline retraining, automatic ablation/scaling sweep or
+sealed final test. This supersedes prior completed-run holds for this candidate
+only. Implement, verify and launch; report actual status without claiming success
+before evaluation. Online TTT is training; its offline outer loss also trains.
+
 # LeFlow-TTT completed; preserve this comparison
 
 October 10: the authorized seed3072 direct LeFlow-TTT run finished20k charged

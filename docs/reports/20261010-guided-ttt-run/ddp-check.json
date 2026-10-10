@@ -1,0 +1,205 @@
+{
+  "global_batch": 64,
+  "gpu_count": 8,
+  "gpu_hours": 0.005548815197414822,
+  "gradient_sync_exact": true,
+  "optimizer_updates": 0,
+  "parameters_unchanged": true,
+  "rank_records": [
+    [
+      {
+        "depth": 1,
+        "gradient_elements": 5462889,
+        "loss": 1.7484338283538818,
+        "seconds": 0.6469529662281275,
+        "unused_parameters": [
+          "imagined_type",
+          "evidence.0.weight",
+          "evidence.0.bias",
+          "evidence.1.weight",
+          "evidence.1.bias",
+          "evidence.3.weight",
+          "evidence.3.bias"
+        ]
+      },
+      {
+        "depth": 2,
+        "gradient_elements": 5581673,
+        "loss": 1.4398465156555176,
+        "seconds": 0.11774111166596413,
+        "unused_parameters": []
+      }
+    ],
+    [
+      {
+        "depth": 1,
+        "gradient_elements": 5462889,
+        "loss": 1.579399585723877,
+        "seconds": 0.6446146592497826,
+        "unused_parameters": [
+          "imagined_type",
+          "evidence.0.weight",
+          "evidence.0.bias",
+          "evidence.1.weight",
+          "evidence.1.bias",
+          "evidence.3.weight",
+          "evidence.3.bias"
+        ]
+      },
+      {
+        "depth": 2,
+        "gradient_elements": 5581673,
+        "loss": 1.59056556224823,
+        "seconds": 0.11792167089879513,
+        "unused_parameters": []
+      }
+    ],
+    [
+      {
+        "depth": 1,
+        "gradient_elements": 5462889,
+        "loss": 1.64582097530365,
+        "seconds": 0.644485779106617,
+        "unused_parameters": [
+          "imagined_type",
+          "evidence.0.weight",
+          "evidence.0.bias",
+          "evidence.1.weight",
+          "evidence.1.bias",
+          "evidence.3.weight",
+          "evidence.3.bias"
+        ]
+      },
+      {
+        "depth": 2,
+        "gradient_elements": 5581673,
+        "loss": 1.5383074283599854,
+        "seconds": 0.11780107952654362,
+        "unused_parameters": []
+      }
+    ],
+    [
+      {
+        "depth": 1,
+        "gradient_elements": 5462889,
+        "loss": 1.7074986696243286,
+        "seconds": 0.6073142178356647,
+        "unused_parameters": [
+          "imagined_type",
+          "evidence.0.weight",
+          "evidence.0.bias",
+          "evidence.1.weight",
+          "evidence.1.bias",
+          "evidence.3.weight",
+          "evidence.3.bias"
+        ]
+      },
+      {
+        "depth": 2,
+        "gradient_elements": 5581673,
+        "loss": 1.8960925340652466,
+        "seconds": 0.11791167221963406,
+        "unused_parameters": []
+      }
+    ],
+    [
+      {
+        "depth": 1,
+        "gradient_elements": 5462889,
+        "loss": 1.8626735210418701,
+        "seconds": 0.6470401603728533,
+        "unused_parameters": [
+          "imagined_type",
+          "evidence.0.weight",
+          "evidence.0.bias",
+          "evidence.1.weight",
+          "evidence.1.bias",
+          "evidence.3.weight",
+          "evidence.3.bias"
+        ]
+      },
+      {
+        "depth": 2,
+        "gradient_elements": 5581673,
+        "loss": 1.8173705339431763,
+        "seconds": 0.11811708100140095,
+        "unused_parameters": []
+      }
+    ],
+    [
+      {
+        "depth": 1,
+        "gradient_elements": 5462889,
+        "loss": 1.3746707439422607,
+        "seconds": 0.6104991752654314,
+        "unused_parameters": [
+          "imagined_type",
+          "evidence.0.weight",
+          "evidence.0.bias",
+          "evidence.1.weight",
+          "evidence.1.bias",
+          "evidence.3.weight",
+          "evidence.3.bias"
+        ]
+      },
+      {
+        "depth": 2,
+        "gradient_elements": 5581673,
+        "loss": 1.334681749343872,
+        "seconds": 0.11787107586860657,
+        "unused_parameters": []
+      }
+    ],
+    [
+      {
+        "depth": 1,
+        "gradient_elements": 5462889,
+        "loss": 1.6614302396774292,
+        "seconds": 0.6458086557686329,
+        "unused_parameters": [
+          "imagined_type",
+          "evidence.0.weight",
+          "evidence.0.bias",
+          "evidence.1.weight",
+          "evidence.1.bias",
+          "evidence.3.weight",
+          "evidence.3.bias"
+        ]
+      },
+      {
+        "depth": 2,
+        "gradient_elements": 5581673,
+        "loss": 1.4692498445510864,
+        "seconds": 0.1177869513630867,
+        "unused_parameters": []
+      }
+    ],
+    [
+      {
+        "depth": 1,
+        "gradient_elements": 5462889,
+        "loss": 1.4493306875228882,
+        "seconds": 0.6468339338898659,
+        "unused_parameters": [
+          "imagined_type",
+          "evidence.0.weight",
+          "evidence.0.bias",
+          "evidence.1.weight",
+          "evidence.1.bias",
+          "evidence.3.weight",
+          "evidence.3.bias"
+        ]
+      },
+      {
+        "depth": 2,
+        "gradient_elements": 5581673,
+        "loss": 1.4603557586669922,
+        "seconds": 0.11787866801023483,
+        "unused_parameters": []
+      }
+    ]
+  ],
+  "seconds": 2.49696683883667,
+  "simulator_episodes": 0,
+  "world_gradients_absent": true
+}
