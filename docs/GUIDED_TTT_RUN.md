@@ -53,3 +53,9 @@ start, full cycle roughly50–60 minutes, assuming stable throughput and evaluat
 runtime. These are estimates, not results. A separate CPU-only continuation will
 analyze saved milestones and audit the finished run; it cannot launch training,
 model inference, additional variants, or sealed tests.
+
+Latest archived readback at2026-10-10T23:04:32.986988+00:00: step2096, no completed validation yet.
+CPU analysis continuation PID3470133 is running, with three helper hashes
+verified against analysis source82099f229597b032ee864a3ab27a9f0781f771ee.
+[Latest health](reports/20261010-guided-ttt-run/latest-health.json),
+[analysis launch](reports/20261010-guided-ttt-run/analysis-launch.json).
