@@ -1,3 +1,16 @@
+# October 9, 23:40 Pacific — flow-reasoning training active
+
+The isolated coordinator launched optimization on all eight A800 GPUs from
+source `ca8430ecac26ecf11fdae4307981e095f61c937c`; W&B
+[6orbayjr](https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/6orbayjr).
+All 21 behavioral tests passed. Training-reset RGB is bitwise identical;
+full-size preflight preserved world weights and averaged 98.39 ms controller
+time (5.445M trainable parameters, 9.49 GiB peak allocation). Verified all 134
+deployed runtime hashes against the published commit. The first live snapshot
+reached 582 updates with finite losses; no success result was available yet.
+See [registration and launch evidence](FLOW_REASONING_RUN.md). Frozen baselines,
+data and ceilings are unchanged. No final tests or additional variants run.
+
 # October 9 Pacific — flow-reasoning implementation and first-run authorization
 
 The user authorized adopting the reviewed candidate-conditioned flow reasoner,

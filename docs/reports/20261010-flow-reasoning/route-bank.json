@@ -1,0 +1,14 @@
+{
+  "bytes": 8593428916,
+  "episodes": 6222,
+  "manifest": "989c281ade24d22bef24b029e68be2d68c77e8f698956736b0fe5aec179ed6ca",
+  "preparation_cpu_seconds": 21.911320757120848,
+  "protocol": "f34111e08dfe269e0f732ee060987bbc8d41a03c296b8d7dd3d4207802ec1b0d",
+  "routes": 209109,
+  "sha256": "c6916667488ec1e418e9dd980eebad6d5d8e588e76ff720bc5ae4ecc77247046",
+  "source_bank": "/tmp/mtxu-execution-revision-20261009/route_bank.pt",
+  "source_bank_sha256": "3b3b53bbd95b644ec753a5dcfba2e83141176535c5c634c3259ba849079e848a",
+  "states": 130662,
+  "train_only": true,
+  "transformation": "identity tensors; protocol/manifest metadata only"
+}

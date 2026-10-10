@@ -156,3 +156,29 @@ Compare paired wins/regressions against saved references, controller timeouts,
 optimistic nonprogressing failures and training-length behavior. Later rounds
 improving flow loss but failing to change actions or success is a possible
 negative result, to be reported rather than repaired with an automatic next run.
+
+## Verified launch
+
+Coordinator 2439186 launched at October 9, 23:38:55 Pacific (October 10,
+06:38:55 UTC). Optimization launched at 23:40:53 Pacific on all eight A800 GPUs.
+Frozen source: `ca8430ecac26ecf11fdae4307981e095f61c937c`, in
+`/home/mtxu/adam/LeFlow-experiments/20261010-flow-reasoning/repo`.
+The sparse execution checkout preserves the exact published commit; all 134
+runtime file checksums were independently compared with that commit.
+
+All 21 behavioral checks passed. The registered training reset rendered bitwise
+identically. Preflight checked 10,000 unchanged task/episode draws, feasible
+windows/goals, eight late real examples and causal histories. Full-size
+forward/backward preserved the world. The 5,445,162-parameter policy's complete
+controller averaged 98.39 ms across five measured decisions, with 9.49 GiB peak
+GPU allocation. Preflight used 0.005523 GPU-hours, zero optimizer updates and
+zero policy simulator episodes. The route bank reuses its original tensors;
+only its protocol/manifest metadata changes.
+
+The first live readback reached update 582 with finite training metrics and
+all eight workers active. Evaluation results were still pending. At the update
+cap, this run samples 1,280,000 windows with replacement; this is not an epoch
+count. Launch/health evidence does not establish task success or useful reasoning.
+
+[Online W&B run](https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/6orbayjr).
+[Verified launch and configuration](reports/20261010-flow-reasoning/).

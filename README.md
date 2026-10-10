@@ -1,6 +1,17 @@
 # Execution-aware visual planning with V-JEPA 2.1 (LeFlow fork)
 
-**Current status, October 10 UTC / October 9 Pacific:** corrected baselines are
+**Current status, October 9 Pacific / October 10 UTC:** one fresh
+**candidate-conditioned action-flow reasoner is training on all eight A800 GPUs**.
+It updates its workspace after inspecting predicted candidate outcomes, with
+fixed causal scoring and paired flow supervision. All 21 behavioral checks
+passed; full-controller preflight averaged 98.39 ms. Same seed, data, global
+batch and training/controller ceilings; task-success results are pending.
+[Registered method and run](docs/FLOW_REASONING_RUN.md),
+[verified launch evidence](docs/reports/20261010-flow-reasoning/), and
+[live metrics](https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/6orbayjr).
+No baseline retraining, extra seed or sealed final test is running.
+
+The corrected baselines are
 completed, verified and frozen. Selected development scores are **LeFlow21/104,
 HWM paper port5/104 and released CEM24/104**, versus our preserved80/104.
 [Full results, learning curves and compute](docs/RELEASE_BASELINE_RESULTS.md) and
@@ -9,7 +20,7 @@ These are shared-backbone MetaWorld ports under fixed training/controller limits
 HWM robot code is unavailable, convergence is not established, and CEM/HWM are
 strongly limited by controller time. This is not an authors' native-benchmark
 reproduction or an independent final-test SOTA claim. All20 tests passed and
-all workers finished; no new training or final test is queued.
+all baseline workers finished. These frozen references are reused below.
 
 The execution-revision iteration is complete.
 Its four fixed validation rounds score **80, 78, 79 and 76 out of 104** at 5k,
@@ -27,7 +38,7 @@ The cached V-JEPA 2.1 encoder features and fine world were frozen. Baselines
 were preserved; no baseline rerun, extra seed, ablation or final test was added.
 The run finished normally and all owned workers exited.
 
-The current candidate uses an execution-error-conditioned latent workspace,
+The previous best measured candidate uses an execution-error-conditioned latent workspace,
 a GMM action proposer, supported target retrieval and bounded CEM verification.
 It scores the executed prefix and terminal window, reuses shifted plans and
 penalizes repeated observed stalls. It has **no flow-matching or diffusion
@@ -35,7 +46,8 @@ generator**. The `flow_jepa` package and W&B project names are historical; this
 is neither the published Flow-JEPA dynamics model nor an unchanged LeFlow model.
 Historical LeFlow/HWM adaptations retain documented implementation differences;
 these development validation comparisons are not corrected-SOTA or final-test
-claims. The corrected baseline work is now complete; our policy was not retrained.
+claims. The corrected baseline work is complete; the new flow-reasoning run is
+separate from this preserved GMM reference.
 
 - [Corrected baseline results and resource-limit findings](docs/RELEASE_BASELINE_RESULTS.md)
 - [Independent project, comparison and contribution audit](docs/PROJECT_AUDIT_20261010.md)

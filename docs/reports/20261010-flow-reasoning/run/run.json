@@ -1,0 +1,12 @@
+{
+  "bank_hash": "c6916667488ec1e418e9dd980eebad6d5d8e588e76ff720bc5ae4ecc77247046",
+  "code": "ca8430ecac26ecf11fdae4307981e095f61c937c",
+  "id": "6orbayjr",
+  "manifest": "989c281ade24d22bef24b029e68be2d68c77e8f698956736b0fe5aec179ed6ca",
+  "method": "flow_reasoning",
+  "protocol": "f34111e08dfe269e0f732ee060987bbc8d41a03c296b8d7dd3d4207802ec1b0d",
+  "seed": 3072,
+  "wandb_url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/6orbayjr",
+  "world_hash": "ae3f910da43f0a43dd65945394444a0b11719ed042cdacffacc2faaf824ec5a3",
+  "world_size": 8
+}

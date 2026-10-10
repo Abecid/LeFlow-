@@ -1,5 +1,14 @@
 # Experiment continuity
 
+- Flow-reasoning run is ACTIVE: coordinator 2439186, execution source ca8430ec,
+  `/home/mtxu/adam/LeFlow-experiments/20261010-flow-reasoning/repo`, run directory
+  `campaign/runs/flow_reasoning_3072`, W&B 6orbayjr. Optimization launched October 9,
+  23:40:53 Pacific on all eight GPUs. All 21 checks passed; preflight 98.39 ms,
+  5,445,162 parameters. Runtime source is frozen (134 verified file hashes).
+  Continue observing this one authorized run and its fixed validations; do not
+  edit its execution checkout, restart training from scratch, expand its budget,
+  rerun baselines or open final tests. Publish reports from the local checkout.
+
 - Latest user authorization, October 9 Pacific: faithfully implement the
   candidate-conditioned flow-reasoning formulation and run ONE fresh training
   candidate with periodic validation. This supersedes completed-run holds for
