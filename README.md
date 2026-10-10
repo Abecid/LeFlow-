@@ -26,6 +26,7 @@ Historical LeFlow/HWM adaptations retain documented implementation differences;
 these development validation comparisons are not corrected-SOTA or final-test
 claims. No further training is queued.
 
+- [Independent project, comparison and contribution audit](docs/PROJECT_AUDIT_20261010.md)
 - [Latest results, training-decline diagnosis and method lineage](docs/EXECUTION_REVISION_RESULTS.md)
 - [Registered implementation and resource contract](docs/EXECUTION_REVISION_RUN.md)
 - [Previous latent-revision results](docs/LATENT_REVISION_RESULTS.md)

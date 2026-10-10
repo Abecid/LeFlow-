@@ -19,6 +19,20 @@ No formal training or new baseline success result is claimed at this checkpoint.
 
 # Active campaign progress
 
+## October 10 UTC — independent project and comparison audit
+
+Added [the project audit](PROJECT_AUDIT_20261010.md) and its
+[machine-readable recomputation](reports/20261010-project-audit.json). Recomputed
+all four validation success counts, task breakdowns, paired case changes,
+training-loss summaries and matched-initial proposal diversity directly from the
+archived records. Checked case identity across all eight internal reference rows.
+The audit distinguishes the current GMM controller from LeFlow/flow matching,
+traces dataset and representation changes, and checks the contribution against
+the primary papers. Historical baseline defects and incompatible external
+protocols preclude a SOTA claim. Preserved the concurrent method-identity review
+in e597609; it adds documentation but does not change experimental records.
+No training, simulator, model or final-test evaluation was run.
+
 ## October 9 — method identity and training-decline review
 
 Rechecked source, archived training metrics and all four saved validation rounds

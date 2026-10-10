@@ -1,0 +1,189 @@
+{
+  "audited_revision": "22a695aab2e39cc5fe5faee96a903107752ab8c8",
+  "audit_date_utc": "2026-10-10",
+  "rounds": [
+    {
+      "step": 5000,
+      "source": "docs/reports/20261009-execution-revision/run/validation/step_0005000.json.gz",
+      "source_sha256": "71fa4e3e75163ae6e3d6d776b2eeaa844134b20aaa2092feeb93e5e7b91fab9b",
+      "cases": 104,
+      "successes": 80,
+      "timeouts": 0,
+      "action_nll_last_500": -1.401902723312378,
+      "tasks": {
+        "assembly": 3,
+        "button-press-topdown": 8,
+        "coffee-button": 8,
+        "dial-turn": 7,
+        "door-close": 8,
+        "door-open": 6,
+        "drawer-close": 8,
+        "drawer-open": 8,
+        "faucet-open": 3,
+        "handle-press": 8,
+        "pick-place": 1,
+        "plate-slide": 8,
+        "reach": 4
+      },
+      "initial_proposal_diversity": 0.07522278434883517
+    },
+    {
+      "step": 10000,
+      "source": "docs/reports/20261009-execution-revision/run/validation/step_0010000.json.gz",
+      "source_sha256": "4a041adfa90a8095757715ec9a727abff8c11f261de12b35965e904f1b2b8b55",
+      "cases": 104,
+      "successes": 78,
+      "timeouts": 0,
+      "action_nll_last_500": -1.6795196175575255,
+      "tasks": {
+        "assembly": 0,
+        "button-press-topdown": 8,
+        "coffee-button": 8,
+        "dial-turn": 7,
+        "door-close": 8,
+        "door-open": 7,
+        "drawer-close": 8,
+        "drawer-open": 8,
+        "faucet-open": 3,
+        "handle-press": 8,
+        "pick-place": 0,
+        "plate-slide": 8,
+        "reach": 5
+      },
+      "initial_proposal_diversity": 0.0481537831409906
+    },
+    {
+      "step": 15000,
+      "source": "docs/reports/20261009-execution-revision/run/validation/step_0015000.json.gz",
+      "source_sha256": "fb4a3183e864e71e5eb1be5911c509918c77bf954ba05d1368346b81132de2f5",
+      "cases": 104,
+      "successes": 79,
+      "timeouts": 0,
+      "action_nll_last_500": -1.7865552067756654,
+      "tasks": {
+        "assembly": 0,
+        "button-press-topdown": 8,
+        "coffee-button": 8,
+        "dial-turn": 8,
+        "door-close": 8,
+        "door-open": 7,
+        "drawer-close": 8,
+        "drawer-open": 8,
+        "faucet-open": 2,
+        "handle-press": 8,
+        "pick-place": 2,
+        "plate-slide": 8,
+        "reach": 4
+      },
+      "initial_proposal_diversity": 0.037559485636078395
+    },
+    {
+      "step": 20000,
+      "source": "docs/reports/20261009-execution-revision/run/validation/step_0020000.json.gz",
+      "source_sha256": "8383b6cd6caefe757e50aeca2a5c53c4b1c5b49f3e48266dcd7e0a496b3c0eb0",
+      "cases": 104,
+      "successes": 76,
+      "timeouts": 0,
+      "action_nll_last_500": -1.82393159866333,
+      "tasks": {
+        "assembly": 0,
+        "button-press-topdown": 8,
+        "coffee-button": 8,
+        "dial-turn": 7,
+        "door-close": 8,
+        "door-open": 7,
+        "drawer-close": 8,
+        "drawer-open": 8,
+        "faucet-open": 3,
+        "handle-press": 8,
+        "pick-place": 0,
+        "plate-slide": 8,
+        "reach": 3
+      },
+      "initial_proposal_diversity": 0.03665675405556193
+    }
+  ],
+  "all_case_identities_match": true,
+  "paired_5k_to_20k": {
+    "lost": [
+      "validation/assembly/00005",
+      "validation/assembly/00006",
+      "validation/assembly/00007",
+      "validation/dial-turn/00002",
+      "validation/door-open/00007",
+      "validation/pick-place/00004",
+      "validation/reach/00001"
+    ],
+    "gained": [
+      "validation/dial-turn/00006",
+      "validation/door-open/00000",
+      "validation/door-open/00001"
+    ],
+    "net_success_change": -4,
+    "descriptive_exact_mcnemar_p": 0.34375,
+    "qualification": "Post-selection, repeatedly reused development cases and one training seed; not a confirmatory hypothesis test."
+  },
+  "references": [
+    {
+      "name": "historical_original_flow",
+      "source": "docs/reports/20261007-joint-flow/runs/joint_flow_consistent_3072/validation/step_0005000.json",
+      "sha256": "6711be05380e4edda43c65a0cefb6c7e34db8c94fe0426fa7d4eaf8f79ddad63",
+      "successes": 23,
+      "cases": 104,
+      "timeouts": 81
+    },
+    {
+      "name": "historical_leflow",
+      "source": "docs/reports/20261007-joint-flow/runs/leflow_adapted_3072/validation/step_0020000.json",
+      "sha256": "26b83fb691a3448bfef8b1fe3e0d5f348ab5eb867e290876785ba630f91373f2",
+      "successes": 27,
+      "cases": 104,
+      "timeouts": 77
+    },
+    {
+      "name": "historical_hwm",
+      "source": "docs/reports/20261007-joint-flow/runs/hwm_adapted_3072/validation/step_0020000.json",
+      "sha256": "2ad011395c3de28eabcd13c99e134b7f2177e7eb494496ef8ed8774ddde843d6",
+      "successes": 8,
+      "cases": 104,
+      "timeouts": 96
+    },
+    {
+      "name": "same_world_cem",
+      "source": "docs/reports/20261009-repaired-comparison/runs/world_3072/validation/cem_step_0020000.json",
+      "sha256": "d8efacf6d6be31a2cf3f2fde0d8e52be135395b28578532e480f3b07023ce6c3",
+      "successes": 22,
+      "cases": 104,
+      "timeouts": 82
+    },
+    {
+      "name": "repaired_flow",
+      "source": "docs/reports/20261009-repaired-comparison/runs/joint_flow_consistent_3072/validation/step_0005000.json",
+      "sha256": "be58bc0b76ddd1832981617a325381cdf460b20d6856c27d6b6b826ed2ad9a55",
+      "successes": 17,
+      "cases": 104,
+      "timeouts": 87
+    },
+    {
+      "name": "controller_grounded",
+      "source": "docs/reports/20261009-controller-grounded/run/validation/step_0005000.json.gz",
+      "sha256": "0c64a05b608a54f6971efd6dd3f2007bcac92900d3a5f1769d647873ada08ff9",
+      "successes": 79,
+      "cases": 104,
+      "timeouts": 0
+    },
+    {
+      "name": "latent_revision",
+      "source": "docs/reports/20261009-latent-revision/run/validation/step_0020000.json.gz",
+      "sha256": "656ceedba9a7a4808eaa57ef2141507b5e700c54d8acd349a672947f4fe36bae",
+      "successes": 77,
+      "cases": 104,
+      "timeouts": 0
+    }
+  ],
+  "model_calls": 0,
+  "simulator_calls": 0,
+  "training_runs": 0,
+  "final_test_results_read": false,
+  "additional_documentation_revision": "e59760911b4a1c73d573b65cc4be29a466fd04fc"
+}
