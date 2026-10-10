@@ -22,7 +22,8 @@ def main(a):
     root, repo = record/'campaign', record/'repo'
     config_name={'controller_grounded':'flow_metaworld_execution.json',
                  'latent_revision':'flow_metaworld_revision.json',
-                 'execution_revision':'flow_metaworld_aligned.json'}[a.variant]
+                 'execution_revision':'flow_metaworld_aligned.json',
+                 'flow_reasoning':'flow_metaworld_flow_reasoning.json'}[a.variant]
     c=config(repo/'config'/config_name)
     world=previous/'campaign/runs/world_3072/best.pt'
     run_dir=root/'runs'/f'{a.variant}_3072'
@@ -58,17 +59,25 @@ def main(a):
     with (record/'tests.log').open('a') as log:
         subprocess.run([sys.executable,'-m','unittest','discover','-s','tests','-p','test_execution.py','-v'],
                        env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
-        if a.variant in ('latent_revision','execution_revision'):
+        if a.variant in ('latent_revision','execution_revision','flow_reasoning'):
             subprocess.run([sys.executable,'-m','unittest','discover','-s','tests','-p','test_latent_revision.py','-v'],
                            env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
-        if a.variant=='execution_revision':
+        if a.variant in ('execution_revision','flow_reasoning'):
             subprocess.run([sys.executable,'-m','unittest','discover','-s','tests','-p','test_execution_revision.py','-v'],
                            env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
+        if a.variant=='flow_reasoning':
+            subprocess.run([sys.executable,'-m','unittest','discover','-s','tests','-p','test_flow_reasoning.py','-v'],
+                           env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
     if not Path(bank).exists():
-        status('building_train_only_route_index')
-        with (record/'bank.log').open('a') as log:
-            subprocess.run([sys.executable,'-u','-m','flow_jepa.execution.bank','--config',cfg,
-                '--root',str(root),'--output',bank],env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
+        if a.reuse_bank:
+            status('verifying_and_reusing_train_only_route_index')
+            from flow_jepa.execution.bank import reuse_bank
+            reuse_bank(a.reuse_bank, bank, c, root)
+        else:
+            status('building_train_only_route_index')
+            with (record/'bank.log').open('a') as log:
+                subprocess.run([sys.executable,'-u','-m','flow_jepa.execution.bank','--config',cfg,
+                    '--root',str(root),'--output',bank],env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
     shutil.copy2(bank+'.json',root/'route-bank.json')
     status('acquiring_idle_gpus')
     selected, held=acquire_gpus(8,root,wait_hours=1,required=8)
@@ -105,7 +114,8 @@ def main(a):
 if __name__=='__main__':
     p=argparse.ArgumentParser()
     for name in ('record','previous','cache'):p.add_argument('--'+name,required=True)
-    p.add_argument('--variant',choices=['controller_grounded','latent_revision','execution_revision'],default='controller_grounded')
+    p.add_argument('--variant',choices=['controller_grounded','latent_revision','execution_revision','flow_reasoning'],default='controller_grounded')
+    p.add_argument('--reuse-bank')
     args=p.parse_args()
     try:main(args)
     except Exception as error:

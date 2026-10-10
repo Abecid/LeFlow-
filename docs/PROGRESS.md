@@ -1,3 +1,15 @@
+# October 9 Pacific — flow-reasoning implementation and first-run authorization
+
+The user authorized adopting the reviewed candidate-conditioned flow reasoner,
+with one fresh training run and periodic evaluation. The new registration is
+[FLOW_REASONING_RUN.md](FLOW_REASONING_RUN.md). It preserves the frozen world,
+train/fixed-104 cases, seed 3072, global batch 64, 20k/8 optimizer-GPU-hour ceilings,
+and 10-second/200-action allowance. Baselines stay frozen and final tests sealed.
+Implementation adds full-Gaussian action flow, imagined-candidate workspace
+updates, fixed causal scoring, paired flow supervision and factual calibration.
+Training deliberation excludes teacher actions/future outcome labels. Tests and
+training-only preflight precede launch; no performance claim is established.
+
 # October 10 — reasoning, flow generation and test-time scaling design
 
 The [new literature/design review](REASONING_DIFFUSION_REVIEW_20261010.md)

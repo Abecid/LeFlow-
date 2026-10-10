@@ -14,6 +14,41 @@ from ..common import checkpoint, config, digest, file_hash, save_json
 from ..models import distance
 
 
+def reuse_bank(source, output, c, root):
+    """Rebind metadata after verifying the unchanged training inventory.
+
+    The source stays untouched; all tensors and recorded actions are reused
+    exactly, avoiding another pass through thousands of compressed episodes.
+    """
+    started = time.perf_counter()
+    source, output, root = Path(source), Path(output), Path(root)
+    if source.resolve() == output.resolve():
+        raise ValueError('Cannot overwrite a preserved route bank')
+    metadata = json.loads(Path(str(source)+'.json').read_text())
+    source_hash = file_hash(source)
+    if source_hash != metadata['sha256']:
+        raise ValueError('Source route-bank hash mismatch')
+    data = torch.load(source, map_location='cpu', mmap=True, weights_only=False)
+    manifest = json.loads((root/'manifest.json').read_text())
+    rows = [r for r in manifest['entries'] if r['split']=='train'
+            and r['mode']=='expert' and r['expert_success'] and r['steps']>=60]
+    if (data['episode_ids'] != [r['id'] for r in rows]
+            or data['episode_hashes'] != [r['sha256'] for r in rows]):
+        raise ValueError('Source route-bank training inventory differs')
+    for key in ('mean', 'std'):
+        if not torch.equal(data[key], torch.tensor(manifest[key])):
+            raise ValueError('Source route-bank normalization differs')
+    if data['manifest'] != metadata['manifest'] or data['protocol'] != metadata['protocol']:
+        raise ValueError('Source route-bank metadata differs')
+    data['manifest'], data['protocol'] = file_hash(root/'manifest.json'), digest(c)
+    checkpoint(output, data)
+    save_json(str(output)+'.json', dict(states=len(data['raw']), routes=len(data['routes']),
+        episodes=len(rows), manifest=data['manifest'], protocol=data['protocol'],
+        sha256=file_hash(output), preparation_cpu_seconds=time.perf_counter()-started,
+        bytes=output.stat().st_size, train_only=True, source_bank=str(source),
+        source_bank_sha256=source_hash, transformation='identity tensors; protocol/manifest metadata only'))
+
+
 def read_episode(path):
     # HDF5's global lock serializes threads. Independent processes decompress
     # episodes concurrently; dense reading avoids expensive strided selection.

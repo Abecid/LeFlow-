@@ -1,5 +1,16 @@
 # Experiment continuity
 
+- Latest user authorization, October 9 Pacific: faithfully implement the
+  candidate-conditioned flow-reasoning formulation and run ONE fresh training
+  candidate with periodic validation. This supersedes completed-run holds for
+  this candidate only. Follow docs/FLOW_REASONING_RUN.md. Preserve seed 3072,
+  global batch 64, the same train/fixed-104 validation cases, frozen encoder/world,
+  20,000-update/28,800 aggregate optimization GPU-second caps, and 10-second/
+  200-action controller allowance. Use all eight available GPUs. All new learned
+  modules start from scratch. Frozen baselines remain references; no baseline
+  retraining, extra seeds, automatic variants/ablations or sealed final tests.
+  Analyze the first result before a separate inference-scaling study.
+
 - Corrected baseline comparison completed October 10, 04:31 UTC. LeFlow's four
   scores are 14/21/19/14 out of 104; select10k (21/104). HWM paper-port scores
   2/3/5/5; select15k (5/104, earliest tie). Released CEM is24/104 with no extra

@@ -35,6 +35,11 @@ def component_types(c):
         from .revision import RevisionPolicy
         from .aligned import AlignedSegments, AlignedController
         return method,RevisionPolicy,AlignedSegments,AlignedController
+    if method=='flow_reasoning':
+        from .flow_reasoning import FlowReasoningPolicy
+        from .flow_controller import FlowReasoningController
+        from .aligned import AlignedSegments
+        return method,FlowReasoningPolicy,AlignedSegments,FlowReasoningController
     raise ValueError(f'Unsupported isolated candidate: {method}')
 
 
@@ -115,7 +120,8 @@ def train(args):
         used = max(used, ledger['optimization_gpu_seconds'])
     elif (run_dir / 'run.json').exists():
         raise RuntimeError('Existing run without recoverable checkpoint')
-    module = DDP(model, device_ids=[device.index], broadcast_buffers=False) if size > 1 else model
+    module = DDP(model, device_ids=[device.index], broadcast_buffers=False,
+                 find_unused_parameters=(method=='flow_reasoning')) if size > 1 else model
     seed_all(3072 + 997 * rank)
     data = Dataset(root, c, method, 3072, steps * batch)
     data = Subset(data, range(start * batch, len(data)))
@@ -169,9 +175,15 @@ def train(args):
         if size > 1: dist.barrier()
         return value
 
+    def validation_due():
+        # At a binding compute cap, use the last trained checkpoint for the
+        # remaining scheduled validation slot; never extend optimization.
+        return (step > 0 and step not in validation_steps and len(validation_steps) < 4
+                and (step % 5000 == 0 or (method=='flow_reasoning' and used >= cap)))
+
     try:
-        while (step < steps and used < cap) or (step > 0 and step % 5000 == 0 and step not in validation_steps):
-            pending_validation = step > 0 and step % 5000 == 0 and step not in validation_steps
+        while (step < steps and used < cap) or validation_due():
+            pending_validation = validation_due()
             if not pending_validation:
                 torch.cuda.synchronize(); started = time.perf_counter()
                 step += 1
@@ -181,7 +193,14 @@ def train(args):
                 for group in optimizer.param_groups: group['lr']=tc['learning_rate']*lr_factor
                 weight = 0.1 * min(1.0, max(0.0, (step-1000)/1000))
                 item = {k:v.to(device, non_blocking=True) for k,v in next(iterator).items()}
-                loss, parts = module(item, world, weight=weight)
+                if method=='flow_reasoning':
+                    weight = 0.
+                    # All ranks use the same balanced depth, so one rank's
+                    # deeper rollout cannot silently dominate every update.
+                    depth = 1+(step-1) % c['flow_reasoning']['rounds']
+                    loss, parts = module(item, world, weight=0., depth=depth)
+                else:
+                    loss, parts = module(item, world, weight=weight)
                 if 'sample_start' in item:
                     parts.update(sample_start_mean=item['sample_start'].float().mean(),
                                  late_window_fraction=(item['sample_start']>40).float().mean(),
@@ -209,7 +228,7 @@ def train(args):
                         print(json.dumps(log), flush=True)
                 if step == 1 or step % 1000 == 0 or used >= cap:
                     state = snapshot()
-            evaluate_now = step > 0 and step % 5000 == 0 and step not in validation_steps
+            evaluate_now = validation_due()
             if evaluate_now:
                 before_rng = rng_state()
                 torch.cuda.synchronize(); eval_start = time.perf_counter()
