@@ -29,3 +29,20 @@ Report success by checkpoint and task, controller timeouts/runtime, raw/prior/
 adapted executed-prefix error, fast-weight magnitude, proposal dispersion and
 selected reasoning round. A lower calibration error is not evidence of improved
 control. Analyze the first complete result before any further method changes.
+
+## Verified running
+
+At 2026-10-10T09:41:14.418044+00:00, optimization had completed 376 updates.
+All eight A800 GPUs were active; training metrics were logged through step 350.
+No validation was complete yet. Evaluations at5k/10k/15k/20k are dispatched by
+the training process automatically; there is no separate manual launch step.
+
+[Live W&B run](https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/to9im8h6).
+Frozen source: `8ae86855738370b06c8f59b96150ac68c389d010`; all140 runtime files verified.
+Coordinator PID2626472. The detached run continues independently of the SSH
+connection. Do not restart it or modify its execution checkout.
+
+Provisional ETA at launch: first completed evaluation about10 minutes; full
+cycle about40–50 minutes, based on initial optimizer speed and the preceding
+registered evaluation durations. These are estimates, not a completion claim.
+[Launch evidence](reports/20261010-progress-ttt-run/launch-verification.json).

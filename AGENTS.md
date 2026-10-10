@@ -1,5 +1,12 @@
 # Experiment continuity
 
+- ACTIVE progress_ttt training verified October10 09:41 UTC: all8 A800s, step376
+  and live metrics; W&Bto9im8h6. Frozen execution source8ae86855738370b06c8f59b96150ac68c389d010
+  at /home/mtxu/adam/LeFlow-experiments/20261010-progress-ttt/repo.
+  Coordinator2626472; four periodic fixed104 evaluations automatic. Continue
+  this job, never duplicate/restart from scratch or edit the frozen checkout.
+  Record final results/failure analysis when available. Baselines remain fixed.
+
 - October10 latest explicit direction: run the implemented progress_ttt candidate
   immediately with periodic evaluations. This supersedes the implementation-only
   hold below. ONE fresh seed3072 run, all8 available GPUs, same successful expert

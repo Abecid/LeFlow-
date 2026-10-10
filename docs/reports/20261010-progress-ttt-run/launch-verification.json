@@ -1,0 +1,185 @@
+{
+  "checked_utc": "2026-10-10T09:41:14.418044+00:00",
+  "source": {
+    "commit": "8ae86855738370b06c8f59b96150ac68c389d010",
+    "runtime_files_verified": 140,
+    "all_runtime_bytes_match_published_commit": true
+  },
+  "status": {
+    "code": "8ae86855738370b06c8f59b96150ac68c389d010",
+    "command": [
+      "/tmp/mtxu-flow-jepa-20261007/env/bin/python",
+      "-m",
+      "torch.distributed.run",
+      "--nnodes=1",
+      "--nproc_per_node=8",
+      "--rdzv-backend=c10d",
+      "--rdzv-endpoint=127.0.0.1:0",
+      "-m",
+      "flow_jepa.execution.train",
+      "--config",
+      "/home/mtxu/adam/LeFlow-experiments/20261010-progress-ttt/repo/config/flow_metaworld_progress_ttt.json",
+      "--root",
+      "/home/mtxu/adam/LeFlow-experiments/20261010-progress-ttt/campaign",
+      "--run-dir",
+      "/home/mtxu/adam/LeFlow-experiments/20261010-progress-ttt/campaign/runs/progress_ttt_3072",
+      "--world",
+      "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt",
+      "--bank",
+      "/tmp/mtxu-progress-ttt-20261010/route_bank.pt"
+    ],
+    "pid": 2626472,
+    "preflight_mean_ms": 89.7289127111435,
+    "status": "training",
+    "utc": "2026-10-10T09:40:29.715664+00:00"
+  },
+  "run": {
+    "bank_hash": "b60ffdd71edbf9ecaac6c2640ab7df97a9ad64398063202d1cc82f1f2ce9f899",
+    "code": "8ae86855738370b06c8f59b96150ac68c389d010",
+    "id": "to9im8h6",
+    "manifest": "6874674cd472c153034557ad254895c7ac2d3808449f6706e2dccf00e1dcdc90",
+    "method": "progress_ttt",
+    "protocol": "b32fa74bb8469d13d5612481b6877e03da1b8c5c064dc857ec98819097992646",
+    "seed": 3072,
+    "wandb_url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/to9im8h6",
+    "world_hash": "ae3f910da43f0a43dd65945394444a0b11719ed042cdacffacc2faaf824ec5a3",
+    "world_size": 8
+  },
+  "compute": {
+    "global_batch": 64,
+    "gpu_count": 8,
+    "last_update_overrun_gpu_seconds": 0.0,
+    "optimization_cap_gpu_seconds": 28800,
+    "optimization_gpu_hours": 0.06740144543349742,
+    "optimization_gpu_seconds": 242.64520356059074,
+    "step": 376,
+    "stop_check": "optimizer boundary; final-update overrun reported",
+    "validation_gpu_hours": 0.0,
+    "validation_gpu_seconds": 0.0,
+    "validation_steps": []
+  },
+  "allocation": {
+    "global_batch": 64,
+    "gpus": [
+      [
+        "0",
+        "GPU-a303d11c-f1b5-e245-93f0-735a054671ce"
+      ],
+      [
+        "1",
+        "GPU-fc39ae51-86a1-df0a-8657-0d33620f5115"
+      ],
+      [
+        "2",
+        "GPU-85f3f7a6-107f-2921-13a5-76a94101f858"
+      ],
+      [
+        "3",
+        "GPU-64e751ee-abb6-120c-f346-311e789228c7"
+      ],
+      [
+        "4",
+        "GPU-563386b2-7077-ce8a-e0ac-6ecee897ff17"
+      ],
+      [
+        "5",
+        "GPU-e7c745ce-6ec5-bb28-ac2d-409588294891"
+      ],
+      [
+        "6",
+        "GPU-e6f62cbc-20db-8e64-9d97-076042fe934f"
+      ],
+      [
+        "7",
+        "GPU-9e462873-2235-e452-c25f-4a8937f7a92b"
+      ]
+    ],
+    "optimization_gpu_seconds": 28800
+  },
+  "preflight": {
+    "bank_states": 130662,
+    "batch_loss": 1.7008628845214844,
+    "causal_history_end_checks": true,
+    "frozen_world_unchanged": true,
+    "full_controller_latency_ms": [
+      91.25950373709202,
+      89.58720229566097,
+      89.10220675170422,
+      89.24715593457222,
+      89.44849483668804
+    ],
+    "gpu_count": 1,
+    "gpu_hours": 0.005697335298690531,
+    "late_real_examples_checked": 8,
+    "late_windows_in_first_10000": 147,
+    "max_gpu_gib": 9.49293565750122,
+    "mean_ms": 89.7289127111435,
+    "method": "progress_ttt",
+    "optimizer_updates": 0,
+    "parameters": 5577448,
+    "parts": {
+      "calibration_loss": 0.028250133618712425,
+      "deepest_flow_loss": 1.6979608535766602,
+      "fast_weight_delta_norm": 0.28582948446273804,
+      "flow_loss": 1.6980170011520386,
+      "history_fraction": 0.90625,
+      "paired_flow_improvement": 0.00012254714965820312,
+      "paired_flow_regression": 8.363276720046997e-05,
+      "reasoning_depth": 3.0,
+      "recorded_corrected_prefix_mae": 0.0021986360661685467,
+      "recorded_corrected_terminal_mae": 0.0030654361471533775,
+      "recorded_patch_prefix_mae": 0.0036709243431687355,
+      "recorded_prior_prefix_mae": 0.0018266974948346615,
+      "recorded_raw_prefix_mae": 0.0018266974948346615,
+      "recorded_raw_terminal_mae": 0.0030654361471533775,
+      "shallow_flow_loss": 1.6980834007263184
+    },
+    "same_task_episode_draws": 10000,
+    "sampling_change": "all valid five-step pre-success starts",
+    "seconds": 20.510406656190753,
+    "simulator_episodes": 0,
+    "training_examples_only": true,
+    "window_and_goal_bounds_checked": 10000
+  },
+  "latest_metrics": {
+    "train/calibration_loss": 0.023166561499238014,
+    "train/deepest_flow_loss": 1.1645207405090332,
+    "train/fast_weight_delta_norm": 0.23528212308883667,
+    "train/flow_loss": 1.1651357412338257,
+    "train/goal_offset_mean": 29.921875,
+    "train/history_fraction": 0.86328125,
+    "train/late_window_fraction": 0.0,
+    "train/loss": 1.1677110195159912,
+    "train/paired_flow_improvement": 0.0012301765382289886,
+    "train/paired_flow_regression": 0.001034206710755825,
+    "train/reasoning_depth": 2.0,
+    "train/recorded_corrected_prefix_mae": 0.0015036362456157804,
+    "train/recorded_corrected_terminal_mae": 0.002351841190829873,
+    "train/recorded_patch_prefix_mae": 0.0030837615486234426,
+    "train/recorded_prior_prefix_mae": 0.0017481808317825198,
+    "train/recorded_raw_prefix_mae": 0.0018610503757372499,
+    "train/recorded_raw_terminal_mae": 0.0028202456887811422,
+    "train/sample_start_mean": 15.078125,
+    "train/shallow_flow_loss": 1.1657508611679077,
+    "step": 350,
+    "train/lr": 3.497397294158865e-05,
+    "train/execution_weight": 0.0,
+    "train/grad_norm": 1.4118751287460327,
+    "budget/optimization_gpu_hours": 0.06295431321279871,
+    "system/update_seconds": 0.0713984314352274,
+    "system/update_examples_per_second": 896.3782356767985,
+    "system/peak_gpu_gib": 0.3224778175354004
+  },
+  "logged_training_steps": [
+    1,
+    50,
+    100,
+    150,
+    200,
+    250,
+    300,
+    350
+  ],
+  "gpu_readback": "0, 36 %, 1341 MiB\n1, 56 %, 1341 MiB\n2, 53 %, 1341 MiB\n3, 57 %, 1341 MiB\n4, 51 %, 1341 MiB\n5, 56 %, 1341 MiB\n6, 53 %, 1341 MiB\n7, 55 %, 1341 MiB\n",
+  "coordinator_alive": true
+}

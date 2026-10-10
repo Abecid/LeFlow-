@@ -1,3 +1,11 @@
+# Progress TTT is running
+
+Verified October10 09:41 UTC: 376 optimizer updates completed on all eight A800s;
+live logs through step350. Four fixed104 evaluations are automatic.
+[W&B](https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/to9im8h6).
+Frozen source8ae8685, coordinator2626472; no baseline training.
+See [run and launch evidence](PROGRESS_TTT_RUN.md).
+
 # October 10: launch progress TTT training and periodic evaluation
 
 The user explicitly directs training immediately. Registered one fresh
