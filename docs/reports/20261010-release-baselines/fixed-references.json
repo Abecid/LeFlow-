@@ -1,0 +1,54 @@
+{
+  "schema": 1,
+  "seed": 3072,
+  "primary_metric": "Macro task success within200 primitives and10 controller seconds",
+  "reuse_policy": "Reuse these fixed references for the unchanged benchmark; never retrain automatically.",
+  "methods": {
+    "leflow_release": {
+      "source_commit": "564b52ffc86eba212aa6858f3a9f10390905a905",
+      "configuration_sha256": "95bc1f340cfa304573244ede801bc9b6654aba2d03a1e78f3ba97ef5228aa039",
+      "selected_step": 10000,
+      "selected_checkpoint": "/home/mtxu/adam/LeFlow-experiments/20261010-baseline-release/leflow_3072/best.pt",
+      "checkpoint_sha256": "0ff04e0bbac8aa8f72cffd96c03af5963e62baa4b67b16d9e0875c3e59733ffe",
+      "world": "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt",
+      "world_sha256": "ae3f910da43f0a43dd65945394444a0b11719ed042cdacffacc2faaf824ec5a3",
+      "registry": "/home/mtxu/adam/LeFlow-experiments/20261010-baseline-release/leflow_3072/registry.json",
+      "registry_sha256": "10270d94af7c983b55f085f8eede5a4eee5414709df2624b1081bcc574463a1f",
+      "successes": 21,
+      "cases": 104,
+      "wandb_url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/own982ph",
+      "runtime_guard_sha256": "3ed0ada4a8b923667cdf13af3280ba0e9451c044db97d497fdf3113facd13f94"
+    },
+    "hwm_paper": {
+      "source_commit": "cde9c394c00e5be68348d6e80c1fd22d0e5c518d",
+      "configuration_sha256": "891a7aa769f7c9b09e151d97a7df4bd0b7f905ba2a745b6fb3ee6d496a2535fe",
+      "selected_step": 15000,
+      "selected_checkpoint": "/home/mtxu/adam/LeFlow-experiments/20261010-baseline-release/hwm_3072/best.pt",
+      "checkpoint_sha256": "5f8a5d418dc9433be99e138026ef4e8248e7beb4bf493b16861387803c8ffcdb",
+      "world": "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt",
+      "world_sha256": "ae3f910da43f0a43dd65945394444a0b11719ed042cdacffacc2faaf824ec5a3",
+      "registry": "/home/mtxu/adam/LeFlow-experiments/20261010-baseline-release/hwm_3072/registry.json",
+      "registry_sha256": "563410c50f16f808d626fccff461d65cae222df973480dee4fef014cfec9905d",
+      "successes": 5,
+      "cases": 104,
+      "wandb_url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/8gpcqqc2",
+      "runtime_guard_sha256": "3ed0ada4a8b923667cdf13af3280ba0e9451c044db97d497fdf3113facd13f94"
+    },
+    "cem_release": {
+      "source_commit": "564b52ffc86eba212aa6858f3a9f10390905a905",
+      "configuration_sha256": "3e379651fe93e7df702e56597032d906e93cd4cc044ed905e90907f4c51837df",
+      "selected_step": null,
+      "selected_checkpoint": "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt",
+      "checkpoint_sha256": "ae3f910da43f0a43dd65945394444a0b11719ed042cdacffacc2faaf824ec5a3",
+      "world": "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt",
+      "world_sha256": "ae3f910da43f0a43dd65945394444a0b11719ed042cdacffacc2faaf824ec5a3",
+      "registry": "/home/mtxu/adam/LeFlow-experiments/20261010-baseline-release/cem_3072/registry.json",
+      "registry_sha256": "494e50cffd50813c2451e12a6cad6b193890730492f76aea788896e0042ae28f",
+      "successes": 24,
+      "cases": 104,
+      "wandb_url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/tupg6zpf",
+      "runtime_guard_sha256": null
+    }
+  },
+  "paired_case_set_sha256": "e54b9f703d638009bec73aad480c532edabf613e14dce7d5e4f75d901b92dad5"
+}

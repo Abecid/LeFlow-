@@ -21,12 +21,13 @@ repair or extra action-refinement stage in LeFlow. CEM is the released solver.
 | LeFlow learning | Native velocity flow-matching MSE; native inverse MSE on **recorded** paths;0.1 frozen-world consistency; zero smoothness | Recorded-action normalization comes solely from eligible training episodes. Frozen full-spatial world predictions are compressed for consistency. The release trains inverse/consistency on recorded paths although paper prose describes generated paths; we follow executable release code |
 | LeFlow inference | H5,64 candidates,16 Euler steps, five-block receding execution; original spatial-world endpoint MSE ranking | One world block is two primitives here, versus five in native experiments. No action clipping before world scoring; environment retains its required action bounds |
 | Flat CEM | `stable-worldmodel==0.0.6`, exact installed `solver/cem.py` SHA256 `d88c86dcd1bd1e6d89221ac22079a3efe296cc7566532de0d36605e2f1536050`;300 samples,30 iterations,30 elites,H5,receding5,unit initial standard deviation | Shared world interface converts normalized actions to physical units and scores full-spatial endpoint MSE. Native optimized elite mean, unbiased elite standard deviation, mean candidate insertion; no our CEM changes |
-| HWM | [Author repository](https://github.com/kevinghst/HWM_PLDM/tree/e197375b844692a0a2e1342889f95a78edced07a) explicitly releases only PLDM DiverseMaze. [Paper](https://arxiv.org/html/2604.03208v2) describes robot/PushT variants | Robot code is unavailable. A paper-based port must be labeled as such, with all unspecified choices disclosed. Do not report the old simplified fixed-stride MLP version as faithful HWM. Paper-port architecture and controller below; formal registration follows preflight |
+| HWM | [Author repository](https://github.com/kevinghst/HWM_PLDM/tree/e197375b844692a0a2e1342889f95a78edced07a) explicitly releases only PLDM DiverseMaze. [Paper](https://arxiv.org/html/2604.03208v2) describes robot/PushT variants | Robot code is unavailable. A paper-based port must be labeled as such, with all unspecified choices disclosed. Do not report the old simplified fixed-stride MLP version as faithful HWM. Paper-port architecture and registered controller below; completed results are in RELEASE_BASELINE_RESULTS.md |
 
 Native LeFlow flow width512/depth4/8 heads and inverse width512/depth3 are retained.
-Its512-dimensional output is full rank at initialization; the historical1024-state/
-256-width sampler defect is absent without importing our noise-cancellation fix.
-The paper's trained spatial compression is the reason to use512 dimensions.
+Its 512×512 output projection matrix is full rank at initialization; the former
+1024-state/256-width mismatch is absent without importing our noise-cancellation
+fix. The released LayerNorm and all other native operations remain unchanged.
+The paper's trained spatial compression is the reason to use 512 dimensions.
 
 
 ## HWM paper-based port and controller-budget audit

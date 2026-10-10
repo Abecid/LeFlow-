@@ -1,0 +1,19 @@
+{
+  "adapter_optimization_included": true,
+  "global_batch": 64,
+  "gpu_count": 4,
+  "last_update_overrun_gpu_seconds": 0.0,
+  "optimization_cap_gpu_seconds": 28800,
+  "optimization_gpu_hours": 0.8524177146785789,
+  "optimization_gpu_seconds": 3068.703772842884,
+  "stage": "planner",
+  "step": 20000,
+  "validation_gpu_hours": 2.4360253854737515,
+  "validation_gpu_seconds": 8769.691387705505,
+  "validation_steps": [
+    5000,
+    10000,
+    15000,
+    20000
+  ]
+}

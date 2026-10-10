@@ -1,0 +1,229 @@
+{
+  "active_owned_training_workers": [],
+  "final_tests_enabled": false,
+  "gpu_readback": [
+    "0, 0 MiB, 0 %",
+    "1, 0 MiB, 0 %",
+    "2, 0 MiB, 0 %",
+    "3, 0 MiB, 0 %",
+    "4, 0 MiB, 0 %",
+    "5, 0 MiB, 0 %",
+    "6, 0 MiB, 0 %",
+    "7, 0 MiB, 0 %"
+  ],
+  "guard_sha256": "3ed0ada4a8b923667cdf13af3280ba0e9451c044db97d497fdf3113facd13f94",
+  "methods": {
+    "cem": {
+      "checkpoint_and_report_hashes_verified": true,
+      "completed_validation_gpu_hours": 0.5146546766493055,
+      "curves": [
+        {
+          "controller_seconds_mean": 8.667932711541653,
+          "paired_with_ours": {
+            "baseline_only": 1,
+            "both": 23,
+            "neither": 23,
+            "ours_only": 57
+          },
+          "step": null,
+          "successes": 24,
+          "timeouts": 80
+        }
+      ],
+      "optimizer_gpu_hours": 0.0,
+      "other_occupancy_scope": "Startup/checkpoint I/O, interrupted evaluation and cleanup stalls; not additional optimizer training.",
+      "other_worker_occupancy_gpu_hours": 0.30605732017093235,
+      "registry_sha256": "494e50cffd50813c2451e12a6cad6b193890730492f76aea788896e0042ae28f",
+      "selected_step": null,
+      "source": "564b52ffc86eba212aa6858f3a9f10390905a905",
+      "successes": 24,
+      "taskwise": {
+        "assembly": 0,
+        "button-press-topdown": 0,
+        "coffee-button": 8,
+        "dial-turn": 0,
+        "door-close": 3,
+        "door-open": 0,
+        "drawer-close": 3,
+        "drawer-open": 0,
+        "faucet-open": 0,
+        "handle-press": 8,
+        "pick-place": 0,
+        "plate-slide": 0,
+        "reach": 2
+      },
+      "wandb": {
+        "final_success": 0.2307692307692308,
+        "id": "tupg6zpf",
+        "state": "finished",
+        "url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/tupg6zpf"
+      },
+      "worker_reserved_gpu_hours": 0.8207119968202379
+    },
+    "hwm": {
+      "checkpoint_and_report_hashes_verified": true,
+      "completed_validation_gpu_hours": 1.5413080431955557,
+      "curves": [
+        {
+          "controller_seconds_mean": 10.488240509437254,
+          "paired_with_ours": {
+            "both": 2,
+            "neither": 24,
+            "ours_only": 78
+          },
+          "step": 5000,
+          "successes": 2,
+          "timeouts": 102
+        },
+        {
+          "controller_seconds_mean": 10.469037909436828,
+          "paired_with_ours": {
+            "both": 3,
+            "neither": 24,
+            "ours_only": 77
+          },
+          "step": 10000,
+          "successes": 3,
+          "timeouts": 101
+        },
+        {
+          "controller_seconds_mean": 10.442322601349307,
+          "paired_with_ours": {
+            "both": 5,
+            "neither": 24,
+            "ours_only": 75
+          },
+          "step": 15000,
+          "successes": 5,
+          "timeouts": 99
+        },
+        {
+          "controller_seconds_mean": 10.443728052079678,
+          "paired_with_ours": {
+            "both": 5,
+            "neither": 24,
+            "ours_only": 75
+          },
+          "step": 20000,
+          "successes": 5,
+          "timeouts": 99
+        }
+      ],
+      "optimizer_gpu_hours": 2.0773389685754147,
+      "other_occupancy_scope": "Startup/checkpoint I/O, interrupted evaluation and cleanup stalls; not additional optimizer training.",
+      "other_worker_occupancy_gpu_hours": 0.87281338547253,
+      "registry_sha256": "563410c50f16f808d626fccff461d65cae222df973480dee4fef014cfec9905d",
+      "selected_step": 15000,
+      "source": "cde9c394c00e5be68348d6e80c1fd22d0e5c518d",
+      "successes": 5,
+      "taskwise": {
+        "assembly": 0,
+        "button-press-topdown": 0,
+        "coffee-button": 0,
+        "dial-turn": 0,
+        "door-close": 0,
+        "door-open": 0,
+        "drawer-close": 1,
+        "drawer-open": 0,
+        "faucet-open": 0,
+        "handle-press": 4,
+        "pick-place": 0,
+        "plate-slide": 0,
+        "reach": 0
+      },
+      "wandb": {
+        "final_success": 0.04807692307692308,
+        "id": "8gpcqqc2",
+        "state": "finished",
+        "url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/8gpcqqc2"
+      },
+      "worker_reserved_gpu_hours": 4.4914603972435
+    },
+    "leflow": {
+      "checkpoint_and_report_hashes_verified": true,
+      "completed_validation_gpu_hours": 2.4360253854737515,
+      "curves": [
+        {
+          "controller_seconds_mean": 1.6757793905070195,
+          "paired_with_ours": {
+            "baseline_only": 1,
+            "both": 13,
+            "neither": 23,
+            "ours_only": 67
+          },
+          "step": 5000,
+          "successes": 14,
+          "timeouts": 0
+        },
+        {
+          "controller_seconds_mean": 1.5752160345526556,
+          "paired_with_ours": {
+            "baseline_only": 4,
+            "both": 17,
+            "neither": 20,
+            "ours_only": 63
+          },
+          "step": 10000,
+          "successes": 21,
+          "timeouts": 0
+        },
+        {
+          "controller_seconds_mean": 1.600417170745249,
+          "paired_with_ours": {
+            "baseline_only": 3,
+            "both": 16,
+            "neither": 21,
+            "ours_only": 64
+          },
+          "step": 15000,
+          "successes": 19,
+          "timeouts": 0
+        },
+        {
+          "controller_seconds_mean": 1.636302159848408,
+          "paired_with_ours": {
+            "baseline_only": 1,
+            "both": 13,
+            "neither": 23,
+            "ours_only": 67
+          },
+          "step": 20000,
+          "successes": 14,
+          "timeouts": 0
+        }
+      ],
+      "optimizer_gpu_hours": 0.8524177146785789,
+      "other_occupancy_scope": "Startup/checkpoint I/O, interrupted evaluation and cleanup stalls; not additional optimizer training.",
+      "other_worker_occupancy_gpu_hours": 2.742736532723325,
+      "registry_sha256": "10270d94af7c983b55f085f8eede5a4eee5414709df2624b1081bcc574463a1f",
+      "selected_step": 10000,
+      "source": "564b52ffc86eba212aa6858f3a9f10390905a905",
+      "successes": 21,
+      "taskwise": {
+        "assembly": 0,
+        "button-press-topdown": 0,
+        "coffee-button": 6,
+        "dial-turn": 0,
+        "door-close": 0,
+        "door-open": 0,
+        "drawer-close": 1,
+        "drawer-open": 0,
+        "faucet-open": 4,
+        "handle-press": 7,
+        "pick-place": 0,
+        "plate-slide": 0,
+        "reach": 3
+      },
+      "wandb": {
+        "final_success": 0.1346153846153846,
+        "id": "own982ph",
+        "state": "finished",
+        "url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/own982ph"
+      },
+      "worker_reserved_gpu_hours": 6.031179632875655
+    }
+  },
+  "our_reference": "/home/mtxu/adam/LeFlow-experiments/20261009-execution-revision/campaign/runs/execution_revision_3072/validation/step_0005000.json",
+  "our_reference_sha256": "568cce5088b75e5c21e020b075d339aaa7b615c03da1383b8d1c26b08b73242a",
+  "utc": "2026-10-10T04:30:53.052844+00:00"
+}

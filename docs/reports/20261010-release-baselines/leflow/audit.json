@@ -1,0 +1,83 @@
+{
+  "checkpoint_and_report_hashes_verified": true,
+  "completed_validation_gpu_hours": 2.4360253854737515,
+  "curves": [
+    {
+      "controller_seconds_mean": 1.6757793905070195,
+      "paired_with_ours": {
+        "baseline_only": 1,
+        "both": 13,
+        "neither": 23,
+        "ours_only": 67
+      },
+      "step": 5000,
+      "successes": 14,
+      "timeouts": 0
+    },
+    {
+      "controller_seconds_mean": 1.5752160345526556,
+      "paired_with_ours": {
+        "baseline_only": 4,
+        "both": 17,
+        "neither": 20,
+        "ours_only": 63
+      },
+      "step": 10000,
+      "successes": 21,
+      "timeouts": 0
+    },
+    {
+      "controller_seconds_mean": 1.600417170745249,
+      "paired_with_ours": {
+        "baseline_only": 3,
+        "both": 16,
+        "neither": 21,
+        "ours_only": 64
+      },
+      "step": 15000,
+      "successes": 19,
+      "timeouts": 0
+    },
+    {
+      "controller_seconds_mean": 1.636302159848408,
+      "paired_with_ours": {
+        "baseline_only": 1,
+        "both": 13,
+        "neither": 23,
+        "ours_only": 67
+      },
+      "step": 20000,
+      "successes": 14,
+      "timeouts": 0
+    }
+  ],
+  "optimizer_gpu_hours": 0.8524177146785789,
+  "other_occupancy_scope": "Startup/checkpoint I/O, interrupted evaluation and cleanup stalls; not additional optimizer training.",
+  "other_worker_occupancy_gpu_hours": 2.742736532723325,
+  "registry_sha256": "10270d94af7c983b55f085f8eede5a4eee5414709df2624b1081bcc574463a1f",
+  "selected_step": 10000,
+  "source": "564b52ffc86eba212aa6858f3a9f10390905a905",
+  "successes": 21,
+  "taskwise": {
+    "assembly": 0,
+    "button-press-topdown": 0,
+    "coffee-button": 6,
+    "dial-turn": 0,
+    "door-close": 0,
+    "door-open": 0,
+    "drawer-close": 1,
+    "drawer-open": 0,
+    "faucet-open": 4,
+    "handle-press": 7,
+    "pick-place": 0,
+    "plate-slide": 0,
+    "reach": 3
+  },
+  "wandb": {
+    "final_success": 0.1346153846153846,
+    "id": "own982ph",
+    "state": "finished",
+    "url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/own982ph"
+  },
+  "worker_reserved_gpu_hours": 6.031179632875655
+}

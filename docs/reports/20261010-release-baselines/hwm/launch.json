@@ -1,0 +1,41 @@
+{
+  "code": "cde9c394c00e5be68348d6e80c1fd22d0e5c518d",
+  "command": [
+    "/tmp/mtxu-flow-jepa-20261007/env/bin/python",
+    "-m",
+    "torch.distributed.run",
+    "--standalone",
+    "--nproc-per-node=4",
+    "-m",
+    "flow_jepa.baselines.train",
+    "--config",
+    "/home/mtxu/adam/LeFlow-experiments/20261010-baseline-release/repo-hwm-bundle/config/flow_metaworld_hwm_paper.json",
+    "--root",
+    "/home/mtxu/adam/LeFlow-experiments/20261010-baseline-release/hwm-data",
+    "--run-dir",
+    "/home/mtxu/adam/LeFlow-experiments/20261010-baseline-release/hwm_3072",
+    "--world",
+    "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt"
+  ],
+  "config_sha256": "891a7aa769f7c9b09e151d97a7df4bd0b7f905ba2a745b6fb3ee6d496a2535fe",
+  "devices": [
+    [
+      "0",
+      "GPU-a303d11c-f1b5-e245-93f0-735a054671ce"
+    ],
+    [
+      "1",
+      "GPU-fc39ae51-86a1-df0a-8657-0d33620f5115"
+    ],
+    [
+      "2",
+      "GPU-85f3f7a6-107f-2921-13a5-76a94101f858"
+    ],
+    [
+      "3",
+      "GPU-64e751ee-abb6-120c-f346-311e789228c7"
+    ]
+  ],
+  "pid": 2266131,
+  "world_sha256": "ae3f910da43f0a43dd65945394444a0b11719ed042cdacffacc2faaf824ec5a3"
+}

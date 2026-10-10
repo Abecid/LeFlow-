@@ -1,0 +1,68 @@
+[
+  {
+    "attempt": "recovery-001",
+    "process-exit.json": {
+      "returncode": 1,
+      "wall_seconds": 3334.7149925231934
+    },
+    "recovery.json": {
+      "checkpoint_sha256": "c13eeb4c9cccd92a4e5ca848c57512478d5e1763266bac5bc172f47ffc8c714b",
+      "interrupted_torchrun_pid": 2197762,
+      "journal_cases": 52,
+      "reason": "Ranks2/3 blocked in exception cleanup; ranks0/1 waiting in evaluation all_gather. Resume same saved run/cases, no new optimization budget.",
+      "step": 10000,
+      "utc": "2026-10-10T03:46:07.470418+00:00"
+    },
+    "runtime.json": {
+      "change": "Exception reporting before failed NCCL teardown only; model/evaluation/data code remains frozen.",
+      "command": [
+        "/tmp/mtxu-flow-jepa-20261007/env/bin/python",
+        "-m",
+        "flow_jepa.baselines.launch",
+        "--config",
+        "/home/mtxu/adam/LeFlow-experiments/20261010-baseline-release/repo/config/flow_metaworld_leflow_release.json",
+        "--root",
+        "/home/mtxu/adam/LeFlow-experiments/20261010-baseline-release/leflow-data",
+        "--run-dir",
+        "/home/mtxu/adam/LeFlow-experiments/20261010-baseline-release/leflow_3072",
+        "--world",
+        "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt"
+      ],
+      "guard_sha256": "5729b0486e2deb7bd8f53ce2d4289898bb3cfe35680b7dca44c06f5723474c80",
+      "pid": 2258007
+    }
+  },
+  {
+    "attempt": "recovery-002",
+    "process-exit.json": {
+      "returncode": 1,
+      "wall_seconds": 33.84255528450012
+    },
+    "recovery.json": {
+      "checkpoint_sha256": "c13eeb4c9cccd92a4e5ca848c57512478d5e1763266bac5bc172f47ffc8c714b",
+      "journal_cases": 52,
+      "reason": "Shared filesystem returned EAGAIN for a blocking journal flock; retry preserves lock semantics. Resume same checkpoint, optimizer/RNG, cases and budgets.",
+      "step": 10000,
+      "stopped_torchrun_pids": [],
+      "utc": "2026-10-10T03:53:48.910171+00:00"
+    },
+    "runtime.json": {
+      "command": [
+        "/tmp/mtxu-flow-jepa-20261007/env/bin/python",
+        "-m",
+        "flow_jepa.baselines.launch",
+        "--config",
+        "/home/mtxu/adam/LeFlow-experiments/20261010-baseline-release/repo/config/flow_metaworld_leflow_release.json",
+        "--root",
+        "/home/mtxu/adam/LeFlow-experiments/20261010-baseline-release/leflow-data",
+        "--run-dir",
+        "/home/mtxu/adam/LeFlow-experiments/20261010-baseline-release/leflow_3072",
+        "--world",
+        "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt"
+      ],
+      "guard_sha256": "3ed0ada4a8b923667cdf13af3280ba0e9451c044db97d497fdf3113facd13f94",
+      "pid": 2265942,
+      "source_unchanged": "564b52ffc86eba212aa6858f3a9f10390905a905"
+    }
+  }
+]

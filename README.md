@@ -1,9 +1,15 @@
 # Execution-aware visual planning with V-JEPA 2.1 (LeFlow fork)
 
-**Current status, October 10 UTC / October 9 Pacific:** corrected baseline work is
-authorized and underway. [Baseline source audit and locked protocol](docs/RELEASE_BASELINES.md)
-document pinned LeFlow/CEM implementations and the explicitly labeled HWM paper
-port. The historical baseline scores are not faithful-method superiority evidence.
+**Current status, October 10 UTC / October 9 Pacific:** corrected baselines are
+completed, verified and frozen. Selected development scores are **LeFlow21/104,
+HWM paper port5/104 and released CEM24/104**, versus our preserved80/104.
+[Full results, learning curves and compute](docs/RELEASE_BASELINE_RESULTS.md) and
+[the source/adaptation audit](docs/RELEASE_BASELINES.md) record the exact scope.
+These are shared-backbone MetaWorld ports under fixed training/controller limits.
+HWM robot code is unavailable, convergence is not established, and CEM/HWM are
+strongly limited by controller time. This is not an authors' native-benchmark
+reproduction or an independent final-test SOTA claim. All20 tests passed and
+all workers finished; no new training or final test is queued.
 
 The execution-revision iteration is complete.
 Its four fixed validation rounds score **80, 78, 79 and 76 out of 104** at 5k,
@@ -29,8 +35,7 @@ generator**. The `flow_jepa` package and W&B project names are historical; this
 is neither the published Flow-JEPA dynamics model nor an unchanged LeFlow model.
 Historical LeFlow/HWM adaptations retain documented implementation differences;
 these development validation comparisons are not corrected-SOTA or final-test
-claims. Only the newly authorized corrected baseline work is active; our policy
-is not being retrained.
+claims. The corrected baseline work is now complete; our policy was not retrained.
 
 - [Corrected baseline results and resource-limit findings](docs/RELEASE_BASELINE_RESULTS.md)
 - [Independent project, comparison and contribution audit](docs/PROJECT_AUDIT_20261010.md)

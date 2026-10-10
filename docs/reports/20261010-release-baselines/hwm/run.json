@@ -1,0 +1,12 @@
+{
+  "code": "cde9c394c00e5be68348d6e80c1fd22d0e5c518d",
+  "id": "8gpcqqc2",
+  "manifest": "2624352118fa3b752e2cfa056d39a41594046d7467d361ece564e3b750ea4f11",
+  "method": "hwm_paper",
+  "packed_entries": "a8b9b8a48a240541a16bb932886c157bc1da82e997e501ecfca5b6e2b44c562c",
+  "protocol": "e7d12e171fdabb42a0d049eaf081f3af83fc0b9c16826d6957dfffd5060e7a28",
+  "seed": 3072,
+  "wandb_url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/8gpcqqc2",
+  "world_hash": "ae3f910da43f0a43dd65945394444a0b11719ed042cdacffacc2faaf824ec5a3",
+  "world_size": 4
+}

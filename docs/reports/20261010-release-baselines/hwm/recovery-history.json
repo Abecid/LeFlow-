@@ -1,0 +1,37 @@
+[
+  {
+    "attempt": "recovery-001",
+    "process-exit.json": {
+      "returncode": 1,
+      "wall_seconds": 2007.6166293621063
+    },
+    "recovery.json": {
+      "checkpoint_sha256": "6c81c599338b45b7be198e2d2c6f339bb22b8ffe50d5f2706b0dc4b5c52e6eb9",
+      "journal_cases": 52,
+      "reason": "Shared filesystem returned EAGAIN for a blocking journal flock; retry preserves lock semantics. Resume same checkpoint, optimizer/RNG, cases and budgets.",
+      "step": 10000,
+      "stopped_torchrun_pids": [
+        2230320
+      ],
+      "utc": "2026-10-10T03:53:51.640177+00:00"
+    },
+    "runtime.json": {
+      "command": [
+        "/tmp/mtxu-flow-jepa-20261007/env/bin/python",
+        "-m",
+        "flow_jepa.baselines.launch",
+        "--config",
+        "/home/mtxu/adam/LeFlow-experiments/20261010-baseline-release/repo-hwm-bundle/config/flow_metaworld_hwm_paper.json",
+        "--root",
+        "/home/mtxu/adam/LeFlow-experiments/20261010-baseline-release/hwm-data",
+        "--run-dir",
+        "/home/mtxu/adam/LeFlow-experiments/20261010-baseline-release/hwm_3072",
+        "--world",
+        "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt"
+      ],
+      "guard_sha256": "3ed0ada4a8b923667cdf13af3280ba0e9451c044db97d497fdf3113facd13f94",
+      "pid": 2266131,
+      "source_unchanged": "cde9c394c00e5be68348d6e80c1fd22d0e5c518d"
+    }
+  }
+]

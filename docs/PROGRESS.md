@@ -1,3 +1,23 @@
+# October 10, 04:31 UTC — corrected baselines complete, verified and frozen
+
+LeFlow scores14/21/19/14 at5k/10k/15k/20k and selects10k21/104. HWM's paper port
+scores2/3/5/5 and selects15k5/104. CEM is24/104. Our preserved reference remains
+80/104; its gain over our previous internal reference is still only one case.
+All runs are finished online, owned workers exited, and all8 GPUs were idle.
+The independent final audit verified every registry file hash, selected checkpoint
+model tensors, all104 paired episode/reset/model identities, original budgets,
+and no repeated logged optimizer steps. The downloaded evidence archive SHA256
+is `abfe7fc515c2a8a51023dd67caab3e40b990f42a2a5f2e7375fe98c31b85256e`.
+
+Actual optimizer use: LeFlow0.8524GPUh, HWM2.0773GPUh, CEM0 extra training.
+Controller timeouts: selectedLeFlow0, HWM99 and CEM80. Interrupted worker occupancy
+is separately disclosed. Both held-out objectives still declined through20k;
+LeFlow task success instead regressed after10k. Convergence is not established.
+Read docs/RELEASE_BASELINE_RESULTS.md and its final-audit.json for the full curves,
+fidelity limits, per-task outcomes, compute and fixed checkpoint paths. All20
+baseline/lock tests passed. Reuse these references; no new seed, training run,
+variant, ablation or final test is authorized or queued.
+
 # October 10, 04:12 UTC — recovery verified and both third evaluations active
 
 LeFlow's first two checkpoints score 14/104 and 21/104, with no timeouts. HWM's

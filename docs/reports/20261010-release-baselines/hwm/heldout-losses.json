@@ -1,0 +1,149 @@
+[
+  {
+    "heldout/planner/loss": 0.80647312104702,
+    "heldout/planner/macro_std": 0.21021814737468958,
+    "heldout/planner/prediction_std": 0.3495376016944647,
+    "heldout/planner/teacher_forcing_l1": 0.80647312104702,
+    "step": 1
+  },
+  {
+    "heldout/planner/loss": 0.0884811389259994,
+    "heldout/planner/macro_std": 4.191902071237564,
+    "heldout/planner/prediction_std": 0.9617771469056606,
+    "heldout/planner/teacher_forcing_l1": 0.0884811389259994,
+    "step": 1000
+  },
+  {
+    "heldout/planner/loss": 0.0749246533960104,
+    "heldout/planner/macro_std": 5.102276235818863,
+    "heldout/planner/prediction_std": 0.9643868431448936,
+    "heldout/planner/teacher_forcing_l1": 0.0749246533960104,
+    "step": 2000
+  },
+  {
+    "heldout/planner/loss": 0.07019322086125612,
+    "heldout/planner/macro_std": 5.801014244556427,
+    "heldout/planner/prediction_std": 0.9642840474843979,
+    "heldout/planner/teacher_forcing_l1": 0.07019322086125612,
+    "step": 3000
+  },
+  {
+    "heldout/planner/loss": 0.06613388983532786,
+    "heldout/planner/macro_std": 6.342256158590317,
+    "heldout/planner/prediction_std": 0.9663662798702717,
+    "heldout/planner/teacher_forcing_l1": 0.06613388983532786,
+    "step": 4000
+  },
+  {
+    "heldout/planner/loss": 0.06382281938567758,
+    "heldout/planner/macro_std": 7.061999469995499,
+    "heldout/planner/prediction_std": 0.9660313948988914,
+    "heldout/planner/teacher_forcing_l1": 0.06382281938567758,
+    "step": 5000
+  },
+  {
+    "heldout/planner/loss": 0.06224332610145211,
+    "heldout/planner/macro_std": 7.900663256645203,
+    "heldout/planner/prediction_std": 0.9655317328870296,
+    "heldout/planner/teacher_forcing_l1": 0.06224332610145211,
+    "step": 6000
+  },
+  {
+    "heldout/planner/loss": 0.0608590985648334,
+    "heldout/planner/macro_std": 8.287513226270676,
+    "heldout/planner/prediction_std": 0.9664664715528488,
+    "heldout/planner/teacher_forcing_l1": 0.0608590985648334,
+    "step": 7000
+  },
+  {
+    "heldout/planner/loss": 0.05940394615754485,
+    "heldout/planner/macro_std": 8.776682734489441,
+    "heldout/planner/prediction_std": 0.9680108577013016,
+    "heldout/planner/teacher_forcing_l1": 0.05940394615754485,
+    "step": 8000
+  },
+  {
+    "heldout/planner/loss": 0.058073495514690876,
+    "heldout/planner/macro_std": 9.188780725002289,
+    "heldout/planner/prediction_std": 0.9669565744698048,
+    "heldout/planner/teacher_forcing_l1": 0.058073495514690876,
+    "step": 9000
+  },
+  {
+    "heldout/planner/loss": 0.05728051345795393,
+    "heldout/planner/macro_std": 9.585561573505402,
+    "heldout/planner/prediction_std": 0.9672863855957985,
+    "heldout/planner/teacher_forcing_l1": 0.05728051345795393,
+    "step": 10000
+  },
+  {
+    "heldout/planner/loss": 0.05684946244582534,
+    "heldout/planner/macro_std": 9.927940905094147,
+    "heldout/planner/prediction_std": 0.9664059653878212,
+    "heldout/planner/teacher_forcing_l1": 0.05684946244582534,
+    "step": 11000
+  },
+  {
+    "heldout/planner/loss": 0.05589721747674048,
+    "heldout/planner/macro_std": 10.412966847419739,
+    "heldout/planner/prediction_std": 0.9671075716614723,
+    "heldout/planner/teacher_forcing_l1": 0.05589721747674048,
+    "step": 12000
+  },
+  {
+    "heldout/planner/loss": 0.055950568057596684,
+    "heldout/planner/macro_std": 10.996447443962097,
+    "heldout/planner/prediction_std": 0.9675710797309875,
+    "heldout/planner/teacher_forcing_l1": 0.055950568057596684,
+    "step": 13000
+  },
+  {
+    "heldout/planner/loss": 0.05643756245262921,
+    "heldout/planner/macro_std": 11.231411874294281,
+    "heldout/planner/prediction_std": 0.9666560031473637,
+    "heldout/planner/teacher_forcing_l1": 0.05643756245262921,
+    "step": 14000
+  },
+  {
+    "heldout/planner/loss": 0.05503674456849694,
+    "heldout/planner/macro_std": 11.797891020774841,
+    "heldout/planner/prediction_std": 0.9672906845808029,
+    "heldout/planner/teacher_forcing_l1": 0.05503674456849694,
+    "step": 15000
+  },
+  {
+    "heldout/planner/loss": 0.05396269937045872,
+    "heldout/planner/macro_std": 12.02818763256073,
+    "heldout/planner/prediction_std": 0.9667890258133411,
+    "heldout/planner/teacher_forcing_l1": 0.05396269937045872,
+    "step": 16000
+  },
+  {
+    "heldout/planner/loss": 0.054635111009702086,
+    "heldout/planner/macro_std": 12.279423117637634,
+    "heldout/planner/prediction_std": 0.9665125720202923,
+    "heldout/planner/teacher_forcing_l1": 0.054635111009702086,
+    "step": 17000
+  },
+  {
+    "heldout/planner/loss": 0.053389458917081356,
+    "heldout/planner/macro_std": 12.475826919078827,
+    "heldout/planner/prediction_std": 0.9676680900156498,
+    "heldout/planner/teacher_forcing_l1": 0.053389458917081356,
+    "step": 18000
+  },
+  {
+    "heldout/planner/loss": 0.053555279271677136,
+    "heldout/planner/macro_std": 12.987919807434082,
+    "heldout/planner/prediction_std": 0.9677717350423336,
+    "heldout/planner/teacher_forcing_l1": 0.053555279271677136,
+    "step": 19000
+  },
+  {
+    "heldout/planner/loss": 0.05290057463571429,
+    "heldout/planner/macro_std": 13.315072357654572,
+    "heldout/planner/prediction_std": 0.967929519712925,
+    "heldout/planner/teacher_forcing_l1": 0.05290057463571429,
+    "step": 20000
+  }
+]

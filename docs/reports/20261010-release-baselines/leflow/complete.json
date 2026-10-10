@@ -1,0 +1,17 @@
+{
+  "best": 0.20192307692307693,
+  "best_step": 10000,
+  "convergence_established": false,
+  "optimization_gpu_hours": 0.8524177146785789,
+  "stage": "planner",
+  "step": 20000,
+  "stop_reason": "update_limit",
+  "validation_gpu_hours": 2.4360253854737515,
+  "validation_steps": [
+    5000,
+    10000,
+    15000,
+    20000
+  ],
+  "wall_seconds": 2038.228217145428
+}

@@ -1,0 +1,12 @@
+{
+  "code": "564b52ffc86eba212aa6858f3a9f10390905a905",
+  "id": "own982ph",
+  "manifest": "1f937f0a9b03c1071264fcf611d73557fa8dae9c30f85e863fecd0c3585a63a9",
+  "method": "leflow_release",
+  "packed_entries": "a8b9b8a48a240541a16bb932886c157bc1da82e997e501ecfca5b6e2b44c562c",
+  "protocol": "b0327b8d84a9dc8f679689641163ddb890eb1557024b67be249bde248c16cedc",
+  "seed": 3072,
+  "wandb_url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/own982ph",
+  "world_hash": "ae3f910da43f0a43dd65945394444a0b11719ed042cdacffacc2faaf824ec5a3",
+  "world_size": 4
+}

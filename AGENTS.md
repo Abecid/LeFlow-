@@ -1,27 +1,30 @@
 # Experiment continuity
 
-- Baseline recovery, October 10: both sources remain frozen, but use
-  `PYTHONPATH=/tmp/mtxu-baseline-runtime-guard-v2:<execution-checkout>` when
-  resuming these same workers. The guard retries transient shared-filesystem
-  journal-lock EAGAIN and exposes errors before NCCL teardown. It changes no
-  algorithm or training state. Both resumed from 10k with 52 journaled cases;
-  source/hash/attempt records are in `recovery-*` under each run. LeFlow launcher
-  is2265942, HWM2266131. Never start a fresh run or discard their saved journals.
-  Read the runtime-recovery section in docs/RELEASE_BASELINES.md. Count interrupted
-  process occupancy separately from optimizer and successful-validation compute.
+- Corrected baseline comparison completed October 10, 04:31 UTC. LeFlow's four
+  scores are 14/21/19/14 out of 104; select10k (21/104). HWM paper-port scores
+  2/3/5/5; select15k (5/104, earliest tie). Released CEM is24/104 with no extra
+  head training. Our preserved execution-revision reference remains80/104.
+  Both learned runs completed20k updates under the original ceilings. All20 tests
+  passed; checkpoint/report hashes, selected model tensors, paired cases and
+  finished W&B runs were independently verified. All8 GPUs were idle afterward.
+  The authorization is fulfilled. No automatic new training, baseline restart,
+  variant, seed, ablation or final test. Read docs/RELEASE_BASELINE_RESULTS.md
+  and its final audit. Reuse these frozen references for the unchanged benchmark.
 
-- Active corrected baselines: server root
+- Frozen baseline root:
   `/home/mtxu/adam/LeFlow-experiments/20261010-baseline-release`.
-  LeFlow `leflow_3072`, GPUs0–3, frozen source564b52f (`repo`), W&Bown982ph.
-  HWM `hwm_3072`, GPUs4–7, frozen sourcecde9c39 (`repo-hwm-bundle`), W&B8gpcqqc2.
-  Both are running, not completed. Do not edit these execution trees or relaunch
-  them fresh. Resume only the same run with its original source/configuration.
-  CEM completed24/104, registry verified, W&Btupg6zpf finished; never rerun it
-  automatically. Native HWM default exceeded10s before acting; the registered
-  paper-port uses Appendix C smaller planning settings, not headline defaults.
-  Read docs/RELEASE_BASELINE_RESULTS.md and docs/RELEASE_BASELINES.md. Preserve
-  the same caps/cases. Final tests and our-method retraining remain disabled.
-
+  LeFlow `leflow_3072`, source564b52f (`repo`), W&Bown982ph.
+  HWM `hwm_3072`, sourcecde9c39 (`repo-hwm-bundle`), W&B8gpcqqc2.
+  CEM `cem_3072`, source564b52f, W&Btupg6zpf. Registries and optimizer states
+  are preserved. The10k journal-lock recovery repeated no optimizer updates;
+  retain its separate runtime-guard hash/recovery records. A future authorized
+  resume of the original workers uses
+  `PYTHONPATH=/tmp/mtxu-baseline-runtime-guard-v2:<execution-checkout>`; restore
+  the exact guard from scripts/operations/baseline_runtime_guard if needed.
+  Never edit frozen execution trees or discard journals. HWM is a paper port,
+  not released robot code. These are fixed-budget shared-world results, not
+  native-benchmark or matched-convergence superiority claims. Later bullets
+  below are historical authorization and execution records.
 
 - Latest user authorization, October 9 (Pacific): repair baseline fidelity and
   run the relevant corrected baselines once. This supersedes older no-baseline-

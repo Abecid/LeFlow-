@@ -1,0 +1,167 @@
+[
+  {
+    "heldout/adapter/compact_std": 0.277161555364728,
+    "heldout/adapter/loss": 2.190163716673851,
+    "heldout/adapter/reconstruction_cosine": 0.9331061355769634,
+    "heldout/adapter/reconstruction_mse": 1.2570575922727585,
+    "step": 1
+  },
+  {
+    "heldout/adapter/compact_std": 0.047732003731653094,
+    "heldout/adapter/loss": 0.07428092509508133,
+    "heldout/adapter/reconstruction_cosine": 0.0262080846587196,
+    "heldout/adapter/reconstruction_mse": 0.04807284171693027,
+    "step": 1000
+  },
+  {
+    "heldout/adapter/compact_std": 0.06359930732287467,
+    "heldout/adapter/loss": 0.03718521585687995,
+    "heldout/adapter/reconstruction_cosine": 0.013149204140063375,
+    "heldout/adapter/reconstruction_mse": 0.02403601142577827,
+    "step": 2000
+  },
+  {
+    "heldout/planner/action_outside_bounds": 0.1339843776077032,
+    "heldout/planner/consistency_loss": 9.072196507986519e-05,
+    "heldout/planner/flow_loss": 0.6611887216567993,
+    "heldout/planner/inverse_loss": 0.23090657033026218,
+    "heldout/planner/loss": 0.8921043686568737,
+    "step": 3000
+  },
+  {
+    "heldout/planner/action_outside_bounds": 0.16699218936264515,
+    "heldout/planner/consistency_loss": 8.798094904705067e-05,
+    "heldout/planner/flow_loss": 0.38485040701925755,
+    "heldout/planner/inverse_loss": 0.14727408904582262,
+    "heldout/planner/loss": 0.5321332942694426,
+    "step": 4000
+  },
+  {
+    "heldout/planner/action_outside_bounds": 0.17988281697034836,
+    "heldout/planner/consistency_loss": 8.69474392857228e-05,
+    "heldout/planner/flow_loss": 0.2777100121602416,
+    "heldout/planner/inverse_loss": 0.10604097414761782,
+    "heldout/planner/loss": 0.3837596867233515,
+    "step": 5000
+  },
+  {
+    "heldout/planner/action_outside_bounds": 0.17753906454890966,
+    "heldout/planner/consistency_loss": 8.664526785651105e-05,
+    "heldout/planner/flow_loss": 0.22377645689994097,
+    "heldout/planner/inverse_loss": 0.09403968648985028,
+    "heldout/planner/loss": 0.3178248144686222,
+    "step": 6000
+  },
+  {
+    "heldout/planner/action_outside_bounds": 0.16601562732830644,
+    "heldout/planner/consistency_loss": 8.682304769536131e-05,
+    "heldout/planner/flow_loss": 0.17047523520886898,
+    "heldout/planner/inverse_loss": 0.09062538994476199,
+    "heldout/planner/loss": 0.26110930647701025,
+    "step": 7000
+  },
+  {
+    "heldout/planner/action_outside_bounds": 0.19179687928408384,
+    "heldout/planner/consistency_loss": 8.666055282446905e-05,
+    "heldout/planner/flow_loss": 0.1502755917608738,
+    "heldout/planner/inverse_loss": 0.07721659680828452,
+    "heldout/planner/loss": 0.22750085219740868,
+    "step": 8000
+  },
+  {
+    "heldout/planner/action_outside_bounds": 0.24355469178408384,
+    "heldout/planner/consistency_loss": 8.626558110336191e-05,
+    "heldout/planner/flow_loss": 0.1341077135875821,
+    "heldout/planner/inverse_loss": 0.06983084487728775,
+    "heldout/planner/loss": 0.20394718926399946,
+    "step": 9000
+  },
+  {
+    "heldout/planner/action_outside_bounds": 0.19921875465661287,
+    "heldout/planner/consistency_loss": 8.602462276030565e-05,
+    "heldout/planner/flow_loss": 0.11497422680258751,
+    "heldout/planner/inverse_loss": 0.06688868976198137,
+    "heldout/planner/loss": 0.18187152035534382,
+    "step": 10000
+  },
+  {
+    "heldout/planner/action_outside_bounds": 0.20234375353902578,
+    "heldout/planner/consistency_loss": 8.611290422777529e-05,
+    "heldout/planner/flow_loss": 0.10655572591349483,
+    "heldout/planner/inverse_loss": 0.06168397283181548,
+    "heldout/planner/loss": 0.1682483102194965,
+    "step": 11000
+  },
+  {
+    "heldout/planner/action_outside_bounds": 0.20136719197034836,
+    "heldout/planner/consistency_loss": 8.595590543336584e-05,
+    "heldout/planner/flow_loss": 0.09904253575950861,
+    "heldout/planner/inverse_loss": 0.05738780042156577,
+    "heldout/planner/loss": 0.15643893042579293,
+    "step": 12000
+  },
+  {
+    "heldout/planner/action_outside_bounds": 0.2041015662252903,
+    "heldout/planner/consistency_loss": 8.626253020338481e-05,
+    "heldout/planner/flow_loss": 0.09423574572429061,
+    "heldout/planner/inverse_loss": 0.060083591379225254,
+    "heldout/planner/loss": 0.15432796720415354,
+    "step": 13000
+  },
+  {
+    "heldout/planner/action_outside_bounds": 0.21806640923023224,
+    "heldout/planner/consistency_loss": 8.612760211690329e-05,
+    "heldout/planner/flow_loss": 0.09038376365788281,
+    "heldout/planner/inverse_loss": 0.06409721565432847,
+    "heldout/planner/loss": 0.15448959171772003,
+    "step": 14000
+  },
+  {
+    "heldout/planner/action_outside_bounds": 0.2199218776077032,
+    "heldout/planner/consistency_loss": 8.608155167166842e-05,
+    "heldout/planner/flow_loss": 0.08318078983575106,
+    "heldout/planner/inverse_loss": 0.05521592847071588,
+    "heldout/planner/loss": 0.13840532675385475,
+    "step": 15000
+  },
+  {
+    "heldout/planner/action_outside_bounds": 0.19443359691649675,
+    "heldout/planner/consistency_loss": 8.56794345054368e-05,
+    "heldout/planner/flow_loss": 0.07689665351063013,
+    "heldout/planner/inverse_loss": 0.053322763880714774,
+    "heldout/planner/loss": 0.13022798718884587,
+    "step": 16000
+  },
+  {
+    "heldout/planner/action_outside_bounds": 0.18271484784781933,
+    "heldout/planner/consistency_loss": 8.56775632200879e-05,
+    "heldout/planner/flow_loss": 0.07946150377392769,
+    "heldout/planner/inverse_loss": 0.0474565252661705,
+    "heldout/planner/loss": 0.12692659813910723,
+    "step": 17000
+  },
+  {
+    "heldout/planner/action_outside_bounds": 0.2086914088577032,
+    "heldout/planner/consistency_loss": 8.564339304939494e-05,
+    "heldout/planner/flow_loss": 0.07607536786235869,
+    "heldout/planner/inverse_loss": 0.04857397172600031,
+    "heldout/planner/loss": 0.12465790519490838,
+    "step": 18000
+  },
+  {
+    "heldout/planner/action_outside_bounds": 0.20068359840661287,
+    "heldout/planner/consistency_loss": 8.606101209807093e-05,
+    "heldout/planner/flow_loss": 0.07103358232416213,
+    "heldout/planner/inverse_loss": 0.05712335743010044,
+    "heldout/planner/loss": 0.1281655440106988,
+    "step": 19000
+  },
+  {
+    "heldout/planner/action_outside_bounds": 0.18046875204890966,
+    "heldout/planner/consistency_loss": 8.587917909608223e-05,
+    "heldout/planner/flow_loss": 0.06878554401919246,
+    "heldout/planner/inverse_loss": 0.04530855594202876,
+    "heldout/planner/loss": 0.1141026895493269,
+    "step": 20000
+  }
+]

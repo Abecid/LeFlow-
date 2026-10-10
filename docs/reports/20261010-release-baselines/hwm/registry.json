@@ -1,0 +1,165 @@
+{
+  "code": "cde9c394c00e5be68348d6e80c1fd22d0e5c518d",
+  "config_sha256": "891a7aa769f7c9b09e151d97a7df4bd0b7f905ba2a745b6fb3ee6d496a2535fe",
+  "configuration": {
+    "baseline": {
+      "hwm": {
+        "action_encoder": {
+          "depth": 2,
+          "heads": 4,
+          "maximum": 70,
+          "width": 256
+        },
+        "high": {
+          "candidates": 150,
+          "elites": 10,
+          "horizon": 4,
+          "iterations": 10,
+          "var_ema": 0.4
+        },
+        "low": {
+          "candidates": 150,
+          "elites": 10,
+          "horizon": 5,
+          "iterations": 10,
+          "receding_horizon": 5,
+          "var_ema": 0.0
+        },
+        "planning_recipe": "HWM Appendix C d50 smallest published sample/iteration choices; std momentum0.4 high/0 low. Chosen for common10s cap, no validation sweep.",
+        "segment_max_blocks": 35,
+        "segment_min_blocks": 13,
+        "waypoints": 5
+      },
+      "optimization_gpu_seconds": 28800,
+      "packed_cache": "/tmp/mtxu-baseline-release-20261010/data",
+      "world_sha256": "ae3f910da43f0a43dd65945394444a0b11719ed042cdacffacc2faaf824ec5a3"
+    },
+    "data": {
+      "action_repeat": 2,
+      "camera": "corner",
+      "goal_candidate_multiplier": 2,
+      "history_frames": 16,
+      "primitive_budget": 200,
+      "random_fraction": 0.2,
+      "render_size": 256,
+      "test_episodes_per_task": 200,
+      "train_episodes_per_task": 600,
+      "validation_episodes_per_task": 50
+    },
+    "diagnostics": {
+      "trajectory_case_ids": [
+        "validation/coffee-button/00000",
+        "validation/reach/00003",
+        "validation/door-close/00000",
+        "validation/dial-turn/00000",
+        "validation/drawer-close/00004",
+        "validation/handle-press/00000",
+        "validation/pick-place/00000",
+        "validation/assembly/00000",
+        "validation/faucet-open/00003",
+        "validation/reach/00005"
+      ]
+    },
+    "encoder": {
+      "architecture": "vit_large",
+      "batch_size": 2,
+      "checkpoint_key": "ema_encoder",
+      "checkpoint_sha256": "7ea9b7cb4a75d10644a8a8d42cff9e177b10dca8f02173f0eaf2b0bed82838c6",
+      "checkpoint_url": "https://dl.fbaipublicfiles.com/vjepa2/vjepa2_1_vitl_dist_vitG_384.pt",
+      "dim": 1024,
+      "input_size": 256,
+      "repository": "facebookresearch/vjepa2",
+      "revision": "204698b45b3712590f06245fbfba32d3be539812",
+      "token_grid": [
+        2,
+        4,
+        4
+      ]
+    },
+    "evaluation": {
+      "bootstrap_samples": 10000,
+      "budget_primitive": 200,
+      "controller_seconds_per_episode": 10.0
+    },
+    "execution": {
+      "execution_seeds": [
+        3072
+      ],
+      "test_enabled": false,
+      "training_enabled": true
+    },
+    "heldout_tasks": [
+      "window-open",
+      "handle-pull",
+      "push"
+    ],
+    "methods": [
+      "hwm_paper"
+    ],
+    "model": {
+      "depth": 4,
+      "heads": 4,
+      "state_representation": "static",
+      "width": 256
+    },
+    "name": "vjepa21_metaworld_release_baselines_v1",
+    "primary_baseline": "leflow_release",
+    "primary_method": "hwm_paper",
+    "schema": 1,
+    "seeds": [
+      3072
+    ],
+    "training": {
+      "budget_seconds": 7200,
+      "checkpoint_every": 1000,
+      "eval_every": 5000,
+      "global_batch": 64,
+      "gradient_clip": null,
+      "learning_rate": 0.0005,
+      "log_every": 50,
+      "planner_steps": 20000,
+      "validation_episodes_per_task": 8,
+      "validation_rounds": 4,
+      "weight_decay": 0.01,
+      "world_steps": 20000
+    },
+    "training_tasks": [
+      "assembly",
+      "button-press-topdown",
+      "coffee-button",
+      "dial-turn",
+      "door-close",
+      "door-open",
+      "drawer-close",
+      "drawer-open",
+      "faucet-open",
+      "handle-press",
+      "pick-place",
+      "plate-slide",
+      "reach"
+    ],
+    "wandb": {
+      "mode": "online",
+      "project": "flow-jepa-metaworld"
+    }
+  },
+  "files": {
+    "best.pt": "5f8a5d418dc9433be99e138026ef4e8248e7beb4bf493b16861387803c8ffcdb",
+    "checkpoints/step_0005000.pt": "15c4c878727a995749daccfed15d2f5ffa431d7ff1b5ad9658299851e1b8a437",
+    "checkpoints/step_0010000.pt": "09997a82e1bec86d4ee1bbcb38cdfb6a002706775f9b4c17579f3566d4135001",
+    "checkpoints/step_0015000.pt": "20f332b1bf1c7755fe9f59a7361d354e93344dd433e6387df8b10c17f6d13f97",
+    "checkpoints/step_0020000.pt": "06f2d374505bfc93f356a0b94deac0fb677e5e5640eaf2a54a5c380983d5b072",
+    "complete.json": "e6275ffbb2b69af8d4c2f1210526a5a160ebfdf250e62439563803f899499779",
+    "compute_usage.json": "b3b74e3d7f6e55d5d02ae4fc3ff963b91f9504330f4925a046b7c94f5a451d19",
+    "last.pt": "3880eb36d1e6854bf7464a60f271a8459f31e0097154a5af3d3f53570b37c874",
+    "validation/step_0005000.json": "6661b95f20347078c7b989659b1ef615f3bf1c3cecdb9af55793713b460eb0ef",
+    "validation/step_0010000.json": "ae6cbc87a06ae2292afb6570d3119310e351c353f2ede63ade4a94f3874f103d",
+    "validation/step_0015000.json": "0a889ea12b63a94f1f5d723c662f9fd34c76e489b104980ee89c314778b83979",
+    "validation/step_0020000.json": "49b0913cfc0bccd54fa90670d07963de64420f0706d2e0996cd5b397af5d5fd2"
+  },
+  "method": "hwm_paper",
+  "policy": "Reuse these files; no automatic baseline retraining.",
+  "seed": 3072,
+  "test_files_read": 0,
+  "world_sha256": "ae3f910da43f0a43dd65945394444a0b11719ed042cdacffacc2faaf824ec5a3"
+}

@@ -1,0 +1,47 @@
+{
+  "checkpoint_and_report_hashes_verified": true,
+  "completed_validation_gpu_hours": 0.5146546766493055,
+  "curves": [
+    {
+      "controller_seconds_mean": 8.667932711541653,
+      "paired_with_ours": {
+        "baseline_only": 1,
+        "both": 23,
+        "neither": 23,
+        "ours_only": 57
+      },
+      "step": null,
+      "successes": 24,
+      "timeouts": 80
+    }
+  ],
+  "optimizer_gpu_hours": 0.0,
+  "other_occupancy_scope": "Startup/checkpoint I/O, interrupted evaluation and cleanup stalls; not additional optimizer training.",
+  "other_worker_occupancy_gpu_hours": 0.30605732017093235,
+  "registry_sha256": "494e50cffd50813c2451e12a6cad6b193890730492f76aea788896e0042ae28f",
+  "selected_step": null,
+  "source": "564b52ffc86eba212aa6858f3a9f10390905a905",
+  "successes": 24,
+  "taskwise": {
+    "assembly": 0,
+    "button-press-topdown": 0,
+    "coffee-button": 8,
+    "dial-turn": 0,
+    "door-close": 3,
+    "door-open": 0,
+    "drawer-close": 3,
+    "drawer-open": 0,
+    "faucet-open": 0,
+    "handle-press": 8,
+    "pick-place": 0,
+    "plate-slide": 0,
+    "reach": 2
+  },
+  "wandb": {
+    "final_success": 0.2307692307692308,
+    "id": "tupg6zpf",
+    "state": "finished",
+    "url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/tupg6zpf"
+  },
+  "worker_reserved_gpu_hours": 0.8207119968202379
+}

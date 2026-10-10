@@ -1,0 +1,157 @@
+{
+  "code": "564b52ffc86eba212aa6858f3a9f10390905a905",
+  "config_sha256": "95bc1f340cfa304573244ede801bc9b6654aba2d03a1e78f3ba97ef5228aa039",
+  "configuration": {
+    "baseline": {
+      "leflow": {
+        "adapter_steps": 2000,
+        "candidates": 64,
+        "flow": {
+          "depth": 4,
+          "dropout": 0.0,
+          "hidden_dim": 512,
+          "max_horizon": 20,
+          "time_dim": 64
+        },
+        "flow_steps": 16,
+        "horizon": 5,
+        "inverse": {
+          "depth": 3,
+          "dropout": 0.0,
+          "hidden_dim": 512
+        },
+        "receding_horizon": 5
+      },
+      "optimization_gpu_seconds": 28800,
+      "packed_cache": "/tmp/mtxu-baseline-release-20261010/data",
+      "world_sha256": "ae3f910da43f0a43dd65945394444a0b11719ed042cdacffacc2faaf824ec5a3"
+    },
+    "data": {
+      "action_repeat": 2,
+      "camera": "corner",
+      "goal_candidate_multiplier": 2,
+      "history_frames": 16,
+      "primitive_budget": 200,
+      "random_fraction": 0.2,
+      "render_size": 256,
+      "test_episodes_per_task": 200,
+      "train_episodes_per_task": 600,
+      "validation_episodes_per_task": 50
+    },
+    "diagnostics": {
+      "trajectory_case_ids": [
+        "validation/coffee-button/00000",
+        "validation/reach/00003",
+        "validation/door-close/00000",
+        "validation/dial-turn/00000",
+        "validation/drawer-close/00004",
+        "validation/handle-press/00000",
+        "validation/pick-place/00000",
+        "validation/assembly/00000",
+        "validation/faucet-open/00003",
+        "validation/reach/00005"
+      ]
+    },
+    "encoder": {
+      "architecture": "vit_large",
+      "batch_size": 2,
+      "checkpoint_key": "ema_encoder",
+      "checkpoint_sha256": "7ea9b7cb4a75d10644a8a8d42cff9e177b10dca8f02173f0eaf2b0bed82838c6",
+      "checkpoint_url": "https://dl.fbaipublicfiles.com/vjepa2/vjepa2_1_vitl_dist_vitG_384.pt",
+      "dim": 1024,
+      "input_size": 256,
+      "repository": "facebookresearch/vjepa2",
+      "revision": "204698b45b3712590f06245fbfba32d3be539812",
+      "token_grid": [
+        2,
+        4,
+        4
+      ]
+    },
+    "evaluation": {
+      "bootstrap_samples": 10000,
+      "budget_primitive": 200,
+      "controller_seconds_per_episode": 10.0
+    },
+    "execution": {
+      "execution_seeds": [
+        3072
+      ],
+      "test_enabled": false,
+      "training_enabled": true
+    },
+    "heldout_tasks": [
+      "window-open",
+      "handle-pull",
+      "push"
+    ],
+    "methods": [
+      "leflow_release"
+    ],
+    "model": {
+      "depth": 4,
+      "heads": 4,
+      "state_representation": "static",
+      "width": 256
+    },
+    "name": "vjepa21_metaworld_release_baselines_v1",
+    "primary_baseline": "leflow_release",
+    "primary_method": "leflow_release",
+    "schema": 1,
+    "seeds": [
+      3072
+    ],
+    "training": {
+      "budget_seconds": 7200,
+      "checkpoint_every": 1000,
+      "eval_every": 5000,
+      "global_batch": 64,
+      "gradient_clip": 1.0,
+      "learning_rate": 0.0001,
+      "log_every": 50,
+      "planner_steps": 20000,
+      "validation_episodes_per_task": 8,
+      "validation_rounds": 4,
+      "weight_decay": 0.0001,
+      "world_steps": 20000
+    },
+    "training_tasks": [
+      "assembly",
+      "button-press-topdown",
+      "coffee-button",
+      "dial-turn",
+      "door-close",
+      "door-open",
+      "drawer-close",
+      "drawer-open",
+      "faucet-open",
+      "handle-press",
+      "pick-place",
+      "plate-slide",
+      "reach"
+    ],
+    "wandb": {
+      "mode": "online",
+      "project": "flow-jepa-metaworld"
+    }
+  },
+  "files": {
+    "best.pt": "0ff04e0bbac8aa8f72cffd96c03af5963e62baa4b67b16d9e0875c3e59733ffe",
+    "checkpoints/step_0005000.pt": "56771ffa8e267527f1f76c08b54ca37d0e78f872190c6ba33a3dcafbc9a243a3",
+    "checkpoints/step_0010000.pt": "ff5c0d6930e393614663c4f996c72a7a81900e815cddc7900d2a288faef3475d",
+    "checkpoints/step_0015000.pt": "b7981a780802c736849ca6d2856f5bb95fce826a78686422d1c96abdab5ac98d",
+    "checkpoints/step_0020000.pt": "c38cb1d3631ceda312245a879758d507331e1ebeaefb43a18629ad9db01eeeec",
+    "complete.json": "52e38ff83ac524713276c033273edfd9d8701bfad738286acdbcd5e49472a31f",
+    "compute_usage.json": "fdb9f5260c3e4963668d4210c4893adff97a2eed2d471a0c7283b49bc32babeb",
+    "last.pt": "fcfb9d506fe8e52dac25fb3c6014ebfd96aacd9ff529404345c3c837a57ee14c",
+    "validation/step_0005000.json": "e727532579ad49f10b2787497b623beff317229f400ff5d92b98575b9b7db1ea",
+    "validation/step_0010000.json": "ce90450916125c0c10d15bf90c496fdadf0e94fe912584d638fdf2cdc1e8d868",
+    "validation/step_0015000.json": "ca687dddb3b4da3f78838114d41183c0f25c2164bfa5c33309c8a2ec24aad5cb",
+    "validation/step_0020000.json": "8aed9532e0112bfa43b25b1cf66e3e5bb7c6ad81d669606276e84de85538b75c"
+  },
+  "method": "leflow_release",
+  "policy": "Reuse these files; no automatic baseline retraining.",
+  "seed": 3072,
+  "test_files_read": 0,
+  "world_sha256": "ae3f910da43f0a43dd65945394444a0b11719ed042cdacffacc2faaf824ec5a3"
+}
