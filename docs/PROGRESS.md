@@ -1,5 +1,26 @@
 # Active campaign progress
 
+## October 9 — method identity and training-decline review
+
+Rechecked source, archived training metrics and all four saved validation rounds
+for the user's diagnosis request, without new model/simulator calls. The latest
+run is complete at 80/78/79/76 successes; selected5k80/104. Pairing5k with20k
+finds seven regressions and three improvements. Demonstration NLL improves while
+matched-initial proposal diversity falls51%; expert-to-policy state-distribution
+mismatch and inadequate recovery are hypotheses, not causally isolated results.
+No timeout, identity change or nonfinite checkpoint explains the regression.
+
+Updated the [result report](EXECUTION_REVISION_RESULTS.md) with task/data lineage,
+training-versus-control diagnostics and the actual model identity. Corrected the
+stale README, which still displayed the preceding latent-revision run and a
+flow-planning title. The current model is GMM/retrieval/CEM plus error-conditioned
+revision on frozen V-JEPA2.1 features and a frozen learned predictor; it contains
+no flow/diffusion generator. The earlier task change was LeWM/PushT/BTM setup to
+V-JEPA2.1/MetaWorld; recent policies keep the same episodes and fixed104 cases.
+The newest sampler changes within-episode coverage only. Current calibration
+gains do not establish a latent-reasoning or flow-specific task-success benefit.
+No training, baseline rerun, ablation, extra seed or final test was launched.
+
 ## Latent revision complete — October 9, 3:40 PM Pacific
 
 All 20,000 updates and four validations completed: **73/75/74/77 successes**.

@@ -1,28 +1,34 @@
-# Joint flow planning with V-JEPA 2.1 (LeFlow fork)
+# Execution-aware visual planning with V-JEPA 2.1 (LeFlow fork)
 
-**Current status, October 9, 2026:** the authorized latent-revision iteration
-is complete. Its four fixed validation rounds score **73, 75, 74 and 77 out of
-104** at 5k, 10k, 15k and 20k updates. The selected 20k checkpoint scores
-**74.04%**, below our previous controller-grounded method's **79/104 (75.96%)**.
-The new method improves executed-prefix prediction calibration, but does not
-improve the primary task-success result.
+**Current status, October 9, 2026:** the execution-revision iteration is complete.
+Its four fixed validation rounds score **80, 78, 79 and 76 out of 104** at 5k,
+10k, 15k and 20k updates. The selected 5k checkpoint scores **76.92%**, versus
+the previous controller-grounded **79/104 (75.96%)** and latent-revision
+**77/104 (74.04%)**. The one-case best-checkpoint gain is not reliable superiority.
+Later training improves demonstration fit while initial proposal diversity falls
+about 51%; the causes of the task-success regression remain unisolated.
 
 One fresh seed-3072 policy was trained on all eight A800 GPUs using the same
 6,222 successful expert episodes, global batch 64, 20k-update/8-optimization-GPUh
 ceilings, fixed 104 validation cases and 10-second/200-action controller limits.
-Actual optimization used 3.243509 GPUh; registered validation used 2.047476 GPUh.
+Actual optimization used 3.233375 GPUh; registered validation used 1.945972 GPUh.
 The cached V-JEPA 2.1 encoder features and fine world were frozen. Baselines
 were preserved; no baseline rerun, extra seed, ablation or final test was added.
 The run finished normally and all owned workers exited.
 
 The current candidate uses an execution-error-conditioned latent workspace,
 a GMM action proposer, supported target retrieval and bounded CEM verification.
+It scores the executed prefix and terminal window, reuses shifted plans and
+penalizes repeated observed stalls. It has **no flow-matching or diffusion
+generator**. The `flow_jepa` package and W&B project names are historical; this
+is neither the published Flow-JEPA dynamics model nor an unchanged LeFlow model.
 Historical LeFlow/HWM adaptations retain documented implementation differences;
 these development validation comparisons are not corrected-SOTA or final-test
 claims. No further training is queued.
 
-- [Completed latent-revision results and failure analysis](docs/LATENT_REVISION_RESULTS.md)
-- [Registered implementation and resource contract](docs/LATENT_REVISION_RUN.md)
+- [Latest results, training-decline diagnosis and method lineage](docs/EXECUTION_REVISION_RESULTS.md)
+- [Registered implementation and resource contract](docs/EXECUTION_REVISION_RUN.md)
+- [Previous latent-revision results](docs/LATENT_REVISION_RESULTS.md)
 - [Previous strongest controller-grounded result](docs/CONTROLLER_GROUNDED_RESULTS.md)
 - [Latent-reasoning literature and code review](docs/LARC_APPLICATION_20261009.md)
 - [Progress and preserved experiment evidence](docs/PROGRESS.md)

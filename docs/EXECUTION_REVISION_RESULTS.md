@@ -13,6 +13,62 @@ model-seed variation, repeated development or checkpoint selection. Against
 77/104, seven cases improve and four regress. All case IDs, reset seeds, episode
 hashes and training seeds match the saved references.
 
+## What model and task these results describe
+
+The current method is a 4.53M-parameter GMM action policy with an execution-error
+workspace, training-route retrieval and bounded CEM search. It is trained from
+scratch over a frozen V-JEPA 2.1 ViT-L image encoder and a separately trained,
+now-frozen action-conditioned latent predictor. It is not a fine-tuned LeFlow
+checkpoint, the published Flow-JEPA dynamics model, or V-JEPA2-AC used as-is.
+There is no flow-matching or diffusion objective in the current policy.
+
+The project began with a LeWM/PushT flow-versus-BTM setup and CPU fixture checks.
+The user then removed BTM and authorized V-JEPA 2.1/MetaWorld joint state-action
+flow planning. That is the major early task/backbone change. The original
+MetaWorld run and its representation repair precede the three recent policies:
+controller-grounded, latent revision and execution revision. All three recent
+policies share the same frozen world, features, normalization, episode inventory
+and validation cases. The flow-to-GMM change happened at controller-grounded;
+the latest iteration changes within-episode sampling, not tasks or episodes.
+Older causal video-history features were replaced by repeated-current-image
+features during the earlier world/goal-alignment repair. Historical LeFlow/HWM
+scores therefore do not share the current world/representation.
+
+The custom image-goal task uses current RGB and one final goal image to control
+13 MetaWorld v3 manipulation tasks, including assembly and pick-place. The full
+offline training split is 7,800 episodes (600/task): 6,240 scripted-expert and
+1,560 random episodes, each with 200 primitive actions, totaling 1,560,000
+recorded transitions. The world uses both modes; current policy and retrieval
+use the same 6,222 successful expert episodes. No privileged state or expert
+test-time subgoal sequence enters the policy. There are 650 validation episodes;
+the same fixed 104 are used for these four checkpoint evaluations. Goals are
+screened for constructibility with the scripted expert before model training.
+These results are not an unconditional reset-distribution success rate.
+
+The selected method is evaluated by task-macro environment success under the
+200-action/10-second cumulative-controller allowance. Latent costs, returns and
+calibration are diagnostics, not substitutes for task success. The reserved
+3,200-case final test covers the 13 seen tasks and window-open, handle-pull and
+push; it was not run or read in this iteration. Reusing these development cases
+does not establish a long-horizon generalization or published-SOTA result.
+
+[LeFlow](https://arxiv.org/html/2608.24855v1) learns a goal-conditioned flow over
+latent path interiors, decodes transitions into actions and ranks frozen-world
+rollouts. Its main backbone is LeWM, and its reported benchmarks are TwoRoom,
+PushT, Reacher and OGBench-Cube, not this MetaWorld split. The separate
+[Flow-JEPA paper](https://arxiv.org/abs/2608.29029) instead uses flow matching for
+action-conditioned future-state prediction. Neither name accurately describes
+the current GMM policy's learning objective.
+
+Our current hypothesis is that observed prediction-execution discrepancies can
+improve selection of the action prefix a bounded controller will actually
+execute. The recent mechanism makes prefix corrections affect inner action
+search and outer target choice. Its numerical calibration benefit is measured;
+a robust task-success benefit attributable to latent reasoning or this mechanism
+is not. Retrieval, GMM proposals and plan reuse are supporting choices, not
+independent novelty claims. A return to a flow-specific claim would require an
+actual flow component and evidence for its benefit.
+
 ## Implemented changes and preserved budget
 
 The [registered candidate](EXECUTION_REVISION_RUN.md) makes four fixed changes:
@@ -114,6 +170,47 @@ The bundled run cannot isolate which repair caused the one-case net improvement.
 **More training did not improve task success.** Assembly scores 3/8 at 5k and
 0/8 at each later checkpoint. Pick-place scores 1/8, 0/8, 2/8 and 0/8. Lower
 training loss does not establish better recovery or executable planning.
+
+An additional read-only review pairs 5k with 20k: seven cases regress and three
+improve, giving the net four-success decline (3.85 percentage points). Regressions
+are assembly5/6/7, dial-turn2, door-open7, pick-place4 and reach1; improvements
+are dial-turn6 and door-open0/1. This is not a monotonic decline at every saved
+checkpoint, and a small selected-development-set difference does not establish
+a general training-length effect.
+
+| Checkpoint | Success /104 | Training action NLL | Initial proposal diversity | Online corrected-prefix MAE |
+| --- | ---: | ---: | ---: | ---: |
+| 5k | 80 | -1.40190 | 0.07522 | 0.002003 |
+| 10k | 78 | -1.67952 | 0.04815 | 0.002028 |
+| 15k | 79 | -1.78656 | 0.03756 | 0.002112 |
+| 20k | 76 | -1.82393 | 0.03666 | 0.002120 |
+
+Training NLL is the mean of ten logged minibatches in the final 500 updates
+before each checkpoint; lower is better and continuous-density NLL may be
+negative. Training calibration loss similarly falls from 0.004948 to 0.003809.
+These are sampled training statistics, not a fixed held-out action-likelihood
+test. Online MAE uses executed prefixes from different policy-induced states;
+its change is not a same-state causal comparison. Values come from the saved
+[diagnostics](reports/20261009-execution-revision/extra-diagnostics.json) and
+[initial-state analysis](reports/20261009-execution-revision/initial-proposal-diversity.json).
+
+The leading explanation is a mismatch between better fitting expert actions
+and maintaining useful alternatives/recovery under a small candidate budget.
+The policy's Gaussian scales are learned within [0.05,0.5], but the saved
+diversity statistic does not separate scale shrinkage, mixture weights and
+component means. Training histories/calibration use successful expert episodes;
+evaluation can enter stalled or failed-contact states that those histories do
+not cover. The objective supervises action likelihood and latent prediction
+error, not environment success. A hand approaching the goal while leaving an
+object behind is compatible with a misleading visual-distance objective.
+These are supported hypotheses, not proven causes or evidence that mixture
+entropy collapsed. No new model or simulator calls were used for this review.
+
+Numeric instability, changed validation identities, different world weights and
+controller time exhaustion are not supported explanations: the final audit
+verified finite checkpoints and matching identities, and every round has zero
+controller timeouts. We have no measured basis for solving this by simply
+training longer. The selected 5k checkpoint remains preserved.
 
 A matched-initial-state diagnostic provides a concrete lead: initial proposal
 diversity falls from **0.07522 at 5k to 0.03666 at 20k**, about **51%**, and is
