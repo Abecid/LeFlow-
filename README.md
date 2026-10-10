@@ -1,16 +1,20 @@
 # Execution-aware visual planning with V-JEPA 2.1 (LeFlow fork)
 
-**Current status, October 9 Pacific / October 10 UTC:** one fresh
-**candidate-conditioned action-flow reasoner is training on all eight A800 GPUs**.
-It updates its workspace after inspecting predicted candidate outcomes, with
-fixed causal scoring and paired flow supervision. All 21 behavioral checks
-passed; full-controller preflight averaged 98.39 ms. Same seed, data, global
-batch and training/controller ceilings. The first 5k validation scores **79/104**
-versus the preserved GMM best of 80/104; three registered checkpoints remain.
-[Registered method and run](docs/FLOW_REASONING_RUN.md),
-[verified launch evidence](docs/reports/20261010-flow-reasoning/), and
-[live metrics](https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/6orbayjr).
-No baseline retraining, extra seed or sealed final test is running.
+**Current status, October 10:** the fresh **candidate-conditioned action-flow
+reasoner completed 20,000 updates and all four validations: 79, 75, 76 and 76/104**.
+The selected 5k model scores **75.96%**, below the preserved GMM best of **80/104
+(76.92%)**. It updates its workspace from predicted candidate outcomes before
+generating the next plan, with fixed causal scoring and paired flow supervision.
+This implements the intended feedback path, but does not demonstrate useful
+test-time scaling or a performance gain. More training narrows alternatives;
+the new controller also has higher latency and ten selected-model timeouts.
+[Completed results and failure analysis](docs/FLOW_REASONING_RESULTS.md),
+[registered method](docs/FLOW_REASONING_RUN.md),
+[raw evidence and audits](docs/reports/20261010-flow-reasoning/), and
+[training metrics](https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/6orbayjr).
+The same seed, data, batch and training/controller ceilings were preserved.
+Frozen baselines were reused. No extra seed, next variant, ablation or final test
+was run; the first candidate is complete.
 
 The corrected baselines are
 completed, verified and frozen. Selected development scores are **LeFlow21/104,

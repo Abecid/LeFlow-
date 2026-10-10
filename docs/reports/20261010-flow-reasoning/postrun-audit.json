@@ -1,0 +1,93 @@
+{
+  "runtime_file_checksums_verified": 134,
+  "source": "ca8430ecac26ecf11fdae4307981e095f61c937c",
+  "run": {
+    "bank_hash": "c6916667488ec1e418e9dd980eebad6d5d8e588e76ff720bc5ae4ecc77247046",
+    "code": "ca8430ecac26ecf11fdae4307981e095f61c937c",
+    "id": "6orbayjr",
+    "manifest": "989c281ade24d22bef24b029e68be2d68c77e8f698956736b0fe5aec179ed6ca",
+    "method": "flow_reasoning",
+    "protocol": "f34111e08dfe269e0f732ee060987bbc8d41a03c296b8d7dd3d4207802ec1b0d",
+    "seed": 3072,
+    "wandb_url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/6orbayjr",
+    "world_hash": "ae3f910da43f0a43dd65945394444a0b11719ed042cdacffacc2faaf824ec5a3",
+    "world_size": 8
+  },
+  "rounds": [
+    {
+      "step": 5000,
+      "successes": 79
+    },
+    {
+      "step": 10000,
+      "successes": 75
+    },
+    {
+      "step": 15000,
+      "successes": 76
+    },
+    {
+      "step": 20000,
+      "successes": 76
+    }
+  ],
+  "checkpoints": {
+    "last": {
+      "step": 20000,
+      "sha256": "192aea2e3db9317c91e6408fcd70ddde6c84b7944fd8d0a199cab5203bc8b4e5",
+      "finite": true
+    },
+    "best": {
+      "step": 5000,
+      "sha256": "88d7ba394d7c7050c11d5263f917030ddf8bf9f217bf8c7982f44a3442ddbd3e",
+      "finite": true
+    }
+  },
+  "frozen_source_clean": true,
+  "data_and_world_identity_verified": true,
+  "identical_route_bank_tensors": true,
+  "training_metric_records": 401,
+  "validation_metric_records": 4,
+  "same_cases_across_rounds": true,
+  "causal_history_and_plan_reuse": true,
+  "score_reconstruction_verified": true,
+  "score_rounding_tolerance": 1e-07,
+  "world_transition_budget_verified": true,
+  "training_coverage_logging_verified": true,
+  "compute": {
+    "global_batch": 64,
+    "gpu_count": 8,
+    "last_update_overrun_gpu_seconds": 0.0,
+    "optimization_cap_gpu_seconds": 28800,
+    "optimization_gpu_hours": 3.165801214766171,
+    "optimization_gpu_seconds": 11396.884373158216,
+    "step": 20000,
+    "stop_check": "optimizer boundary; final-update overrun reported",
+    "validation_gpu_hours": 2.080300091451241,
+    "validation_gpu_seconds": 7489.080329224467,
+    "validation_steps": [
+      5000,
+      10000,
+      15000,
+      20000
+    ]
+  },
+  "complete": {
+    "best": 0.7596153846153846,
+    "best_step": 5000,
+    "optimization_gpu_hours": 3.165801214766171,
+    "step": 20000,
+    "stop_reason": "update_limit",
+    "validation_gpu_hours": 2.080300091451241,
+    "validation_steps": [
+      5000,
+      10000,
+      15000,
+      20000
+    ],
+    "wall_seconds": 2390.286018634215
+  },
+  "final_tests_read": false,
+  "model_calls": 0,
+  "simulator_calls": 0
+}

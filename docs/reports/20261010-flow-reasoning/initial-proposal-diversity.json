@@ -1,0 +1,82 @@
+{
+  "rounds": [
+    {
+      "step": 5000,
+      "0": {
+        "mean": 0.060361454012588814,
+        "relative_change": 0.0,
+        "decreased_cases": 0
+      },
+      "1": {
+        "mean": 0.054922528815670654,
+        "relative_change": 0.0,
+        "decreased_cases": 0
+      },
+      "2": {
+        "mean": 0.05505128914060501,
+        "relative_change": 0.0,
+        "decreased_cases": 0
+      }
+    },
+    {
+      "step": 10000,
+      "0": {
+        "mean": 0.03856491412107761,
+        "relative_change": -0.36110031224505257,
+        "decreased_cases": 103
+      },
+      "1": {
+        "mean": 0.0342910152931626,
+        "relative_change": -0.37564755242335846,
+        "decreased_cases": 104
+      },
+      "2": {
+        "mean": 0.03478181066636283,
+        "relative_change": -0.36819262165636946,
+        "decreased_cases": 104
+      }
+    },
+    {
+      "step": 15000,
+      "0": {
+        "mean": 0.028942309078187324,
+        "relative_change": -0.52051670140101,
+        "decreased_cases": 104
+      },
+      "1": {
+        "mean": 0.025299694201049324,
+        "relative_change": -0.5393567130537744,
+        "decreased_cases": 104
+      },
+      "2": {
+        "mean": 0.025803753094246182,
+        "relative_change": -0.5312779501249913,
+        "decreased_cases": 104
+      }
+    },
+    {
+      "step": 20000,
+      "0": {
+        "mean": 0.02490287085171216,
+        "relative_change": -0.5874375251709727,
+        "decreased_cases": 104
+      },
+      "1": {
+        "mean": 0.022184486706884436,
+        "relative_change": -0.5960767432734326,
+        "decreased_cases": 104
+      },
+      "2": {
+        "mean": 0.022626554414343376,
+        "relative_change": -0.5889913793561945,
+        "decreased_cases": 104
+      }
+    }
+  ],
+  "paired_case_identity_verified": true,
+  "history_empty": true,
+  "model_calls": 0,
+  "simulator_calls": 0,
+  "final_tests_read": false,
+  "interpretation": "Matched initial reset/goal and per-case seed. Round zero includes recorded proposals; later rounds are flow proposals. This is diversity, not a likelihood entropy estimate or causal attribution."
+}

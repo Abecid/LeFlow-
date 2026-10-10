@@ -1,3 +1,30 @@
+# October 10, 00:22 Pacific — flow reasoning completed and audited
+
+The single fresh seed3072 run completed20,000 updates with four fixed104 scores
+79/75/76/76. Select5k79/104 versus preserved GMM80/104; five paired wins and six
+regressions. This implements candidate-to-workspace feedback and conditioned flow
+generation but does not establish a performance gain or useful test-time scaling.
+Read [the complete report](FLOW_REASONING_RESULTS.md).
+
+Matched-initial final-round proposal diversity falls58.90% from5k to20k, lower
+on all104 cases. Online corrected-prefix MAE improves0.002123→0.001793 while
+success declines79→76. The selected model has10 timeouts and99.42ms mean decisions
+versus the GMM's zero and86.74ms. All ten full contact sheets were inspected at
+1536×326; pick-place0 moves toward the goal while leaving its object behind.
+These observations identify leads, not causal attributions or a reasoning ablation.
+
+All21 behavioral checks and the final source/data/world/bank/checkpoint/budget
+and case-pairing audit passed. Verified134 frozen runtime hashes,401 unique training
+logs and four validations. Optimization3.165801GPUh, validation2.080300GPUh,
+preflight0.005523GPUh; total new measured5.251625GPUh. Known cumulative components
+70.395501GPUh, with infrastructure occupancy disclosed separately. W&B6orbayjr is
+finished; owned workers exited and all8 GPUs were idle at07:22:07 UTC. Source
+ca8430ec is frozen. Raw evidence archive SHA256:
+77ef7e89ac9d733002184bec7855be60796804223d7633f5e136c8690dfc1db1.
+
+The authorized first run is complete. No baseline retraining, extra seed,
+automatic variant, ablation, inference-scaling study or sealed test was added.
+
 # October 10, 00:02 Pacific — second validation: 75/104
 
 At 10k, success falls from 79 to 75/104. Assembly rises 0→1/8, door-open falls

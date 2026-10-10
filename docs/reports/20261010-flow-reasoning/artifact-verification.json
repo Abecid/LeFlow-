@@ -1,0 +1,83 @@
+{
+  "checked_utc": "2026-10-10T07:27:04.255205+00:00",
+  "source_archive_sha256": "77ef7e89ac9d733002184bec7855be60796804223d7633f5e136c8690dfc1db1",
+  "local_archive_copies_verified": 2,
+  "extracted_archive_members_verified": 24,
+  "all_contact_sheets_visually_inspected": true,
+  "images": [
+    {
+      "file": "contact-sheets-step-5000/assembly-00000.png",
+      "sha256": "ced00104ec6487e2fdd3476e47234233d9d6879229dafdd4dee64da3beb8f34d",
+      "width": 1536,
+      "height": 326,
+      "visually_inspected_complete_original_resolution": true
+    },
+    {
+      "file": "contact-sheets-step-5000/coffee-button-00000.png",
+      "sha256": "c99193b7d4113a2f411ed764255000ad54f3d5578cc17ccfdbe5b25f172fd488",
+      "width": 1536,
+      "height": 326,
+      "visually_inspected_complete_original_resolution": true
+    },
+    {
+      "file": "contact-sheets-step-5000/dial-turn-00000.png",
+      "sha256": "00f98ab1c65981b6491f8017978d5f453c67d859d6dcf874d468c9697ba3b5ad",
+      "width": 1536,
+      "height": 326,
+      "visually_inspected_complete_original_resolution": true
+    },
+    {
+      "file": "contact-sheets-step-5000/door-close-00000.png",
+      "sha256": "3a33c85893acc6f25de05cac8b3bb122b52f0f6d27e763f73c4ad12607b254c9",
+      "width": 1536,
+      "height": 326,
+      "visually_inspected_complete_original_resolution": true
+    },
+    {
+      "file": "contact-sheets-step-5000/drawer-close-00004.png",
+      "sha256": "6bdcf9988b5aa156fa7978a98cec4ff7fe20b1adb14f94e0b00571e8ded602cb",
+      "width": 1536,
+      "height": 326,
+      "visually_inspected_complete_original_resolution": true
+    },
+    {
+      "file": "contact-sheets-step-5000/faucet-open-00003.png",
+      "sha256": "b7d0f94a62ef7347afc5cb16f89799a66819dc68715268b92bf5cbdf38a9aad4",
+      "width": 1536,
+      "height": 326,
+      "visually_inspected_complete_original_resolution": true
+    },
+    {
+      "file": "contact-sheets-step-5000/handle-press-00000.png",
+      "sha256": "27fcd2f8b84f061ee1ecdc015eb91b2b8da0c93ee17d42a0d698ff9ae90c2ce6",
+      "width": 1536,
+      "height": 326,
+      "visually_inspected_complete_original_resolution": true
+    },
+    {
+      "file": "contact-sheets-step-5000/pick-place-00000.png",
+      "sha256": "5dbef292ad5551f8d006722b8b51de4a24d2510c222d17697474ef24cd0f989e",
+      "width": 1536,
+      "height": 326,
+      "visually_inspected_complete_original_resolution": true
+    },
+    {
+      "file": "contact-sheets-step-5000/reach-00003.png",
+      "sha256": "8895aeb29b59731f6fa8b6d2c2fb5bf7e21709251933a40f2c111b3a3424843c",
+      "width": 1536,
+      "height": 326,
+      "visually_inspected_complete_original_resolution": true
+    },
+    {
+      "file": "contact-sheets-step-5000/reach-00005.png",
+      "sha256": "01ab673c90e9d7744b0a4ef2b8bef3317b12e318d55ada15fe3ba1569e4d0b4e",
+      "width": 1536,
+      "height": 326,
+      "visually_inspected_complete_original_resolution": true
+    }
+  ],
+  "final_markdown_relative_links_verified": true,
+  "report_text_rechecked": true,
+  "report_sha256": "97d2cf60b21f1b73507a2c323c16bd64ec3e5bea3cfb227c666e80c8b4013ace",
+  "analysis_assertions_passed": true
+}

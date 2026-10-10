@@ -182,3 +182,12 @@ count. Launch/health evidence does not establish task success or useful reasonin
 
 [Online W&B run](https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/6orbayjr).
 [Verified launch and configuration](reports/20261010-flow-reasoning/).
+
+## Completion
+
+The registered run completed October 10, 07:21 UTC after 20,000 updates. The
+four development scores are 79/75/76/76 out of 104; select 5k at 79/104. This is
+one case below the strongest preserved GMM reference. Read the
+[completed results and failure analysis](FLOW_REASONING_RESULTS.md). The launch
+registration above is preserved as history; no extra candidate or test-time
+scaling evaluation was added.

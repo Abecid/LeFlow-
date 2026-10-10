@@ -95,6 +95,11 @@ def main(args):
         'hwm_paper_port':('20261010-release-baselines/hwm/validation/step_0015000.json.gz', 5),
         'cem_release':('20261010-release-baselines/cem/validation.json', 24),
     }
+    last_byid = {r['id']:r for r in reports[-1]['records']}
+    selected_to_last = dict(
+        selected_step=chosen['step'], last_step=reports[-1]['step'],
+        improvements=[k for k in byid if last_byid[k]['success'] and not byid[k]['success']],
+        regressions=[k for k in byid if byid[k]['success'] and not last_byid[k]['success']])
     comparisons = {}
     for name, (relative, expected) in refs.items():
         path = repo/'docs/reports'/relative
@@ -130,7 +135,8 @@ def main(args):
                       for d in (1, 2, 3)}))
     result = dict(selected_step=chosen['step'], rounds=[summarize(r) for r in reports],
         initial_proposal_diversity=initial_diversity(reports),
-        comparisons=comparisons, case_pairing_verified=True, training_windows=windows,
+        comparisons=comparisons, selected_to_last=selected_to_last,
+        case_pairing_verified=True, training_windows=windows,
         compute=load(root/'compute_usage.json'), run=load(root/'run.json'),
         model_calls=0, simulator_calls=0, final_tests_read=False,
         limits=['Repeatedly used development cases; selected checkpoint; one model seed.',

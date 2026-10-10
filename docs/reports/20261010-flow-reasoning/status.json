@@ -1,28 +1,8 @@
 {
   "code": "ca8430ecac26ecf11fdae4307981e095f61c937c",
-  "command": [
-    "/tmp/mtxu-flow-jepa-20261007/env/bin/python",
-    "-m",
-    "torch.distributed.run",
-    "--nnodes=1",
-    "--nproc_per_node=8",
-    "--rdzv-backend=c10d",
-    "--rdzv-endpoint=127.0.0.1:0",
-    "-m",
-    "flow_jepa.execution.train",
-    "--config",
-    "/home/mtxu/adam/LeFlow-experiments/20261010-flow-reasoning/repo/config/flow_metaworld_flow_reasoning.json",
-    "--root",
-    "/home/mtxu/adam/LeFlow-experiments/20261010-flow-reasoning/campaign",
-    "--run-dir",
-    "/home/mtxu/adam/LeFlow-experiments/20261010-flow-reasoning/campaign/runs/flow_reasoning_3072",
-    "--world",
-    "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt",
-    "--bank",
-    "/tmp/mtxu-flow-reasoning-20261010/route_bank.pt"
-  ],
   "pid": 2439186,
-  "preflight_mean_ms": 98.39228168129921,
-  "status": "training",
-  "utc": "2026-10-10T06:40:53.071645+00:00"
+  "run_dir": "/home/mtxu/adam/LeFlow-experiments/20261010-flow-reasoning/campaign/runs/flow_reasoning_3072",
+  "status": "completed_validation_ready_for_analysis",
+  "utc": "2026-10-10T07:21:06.909063+00:00",
+  "wall_seconds": 2529.176930565387
 }

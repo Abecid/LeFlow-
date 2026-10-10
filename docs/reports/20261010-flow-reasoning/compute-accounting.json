@@ -1,0 +1,29 @@
+{
+  "units": "aggregate GPU-hours",
+  "checked_utc": "2026-10-10T07:22:07.795332+00:00",
+  "optimization": 3.165801214766171,
+  "completed_registered_validation": 2.080300091451241,
+  "training_only_preflight": 0.005523254773062136,
+  "charged_new_components": 5.251624560990474,
+  "other_reserved_occupancy_upper_bound": 0.16317411359296052,
+  "reservation_start_utc": "2026-10-10T06:40:30.249660+00:00",
+  "reservation_end_utc": "2026-10-10T07:21:06.909063+00:00",
+  "optimization_limit": 8,
+  "updates": 20000,
+  "baseline_retraining_updates": 0,
+  "final_tests_read": false,
+  "all_infrastructure_runtime_total_available": false,
+  "route_bank_preparation_cpu_seconds": 21.911320757120848,
+  "scope": "Measured optimization, registered validation and one-GPU preflight. Remaining held occupancy is an upper bound, not a cluster bill. Frozen world/cache are reused and not charged twice.",
+  "known_prior_campaign_subtotal": 65.14387636664065,
+  "known_cumulative_components": 70.39550092763113,
+  "cumulative_optimization": 44.36473728946721,
+  "cumulative_completed_validation": 25.707446180553074,
+  "prior_component_sources": {
+    "docs/reports/20261009-execution-revision/compute-accounting.json": "19ad57d838737c877235de5f95ba062a8bde46e9dcefd75045ca93c81f6d6b4f",
+    "docs/reports/20261010-release-baselines/final-audit.json": "3e013f9bd80b5394304d6b2ec299d9c7c1846f059ea9cf02c6940103e670f412",
+    "docs/reports/20261010-release-baselines/hwm-budget-ddp-preflight.json": "170a14f27ce0de19bd6e2208b758e4c8098cbfab25c57c6d5fcfcd0f7631e97e",
+    "docs/reports/20261010-release-baselines/hwm-native-ddp-preflight.json": "13766c9b9693dd9c3af7e87ef7a326bd772b0af436911a0049199d822a8b0ab6",
+    "docs/reports/20261010-release-baselines/leflow-ddp-preflight.json": "3e06d5f6444f2594e60af1dc2a405a84d1f855d4b74426e0502b0eb3ecd69859"
+  }
+}
