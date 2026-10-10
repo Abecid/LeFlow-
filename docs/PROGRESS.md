@@ -1,3 +1,16 @@
+# October10: first direct LeFlow-TTT result27/104; training continues
+
+The5k validation completed27/104 versus LeFlow's saved best10k21/104 and
+matched5k14/104. Paired against the selected baseline:9 wins,3 regressions;
+no controller timeouts;104.74ms mean decision time. Drawer-close5/8 and
+faucet-open8/8 account for most improvement. Eight tasks still have zero success.
+With observed history, outcome MSE improves only0.86% versus the learned prior;
+this run does not isolate online adaptation's causal contribution. No useful
+inference-scaling curve or publication-level superiority claim is established.
+The10k/15k/20k validations remain queued in the active run; do not restart it.
+[First round analysis](reports/20261010-leflow-ttt/analysis-round-1.json).
+Read-only analysis supervisor3067708 collects subsequent rounds and final audit.
+
 # October10: direct LeFlow nonlinear TTT candidate
 
 The latest request authorizes one direct LeFlow extension. Implemented isolated

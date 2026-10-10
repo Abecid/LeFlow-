@@ -1,0 +1,1006 @@
+{
+  "selected_step": 5000,
+  "rounds": [
+    {
+      "step": 5000,
+      "successes": 27,
+      "tasks": {
+        "assembly": 0,
+        "button-press-topdown": 0,
+        "coffee-button": 5,
+        "dial-turn": 0,
+        "door-close": 0,
+        "door-open": 0,
+        "drawer-close": 5,
+        "drawer-open": 0,
+        "faucet-open": 8,
+        "handle-press": 7,
+        "pick-place": 0,
+        "plate-slide": 0,
+        "reach": 2
+      },
+      "timeouts": 0,
+      "metrics": {
+        "controller_budget_exhausted_rate": 0.0,
+        "controller_budget_overrun_seconds_mean": 0.0,
+        "controller_seconds_per_episode_mean": 1.7462743628017892,
+        "controller_step_latency_ms_mean": 104.73617862248331,
+        "controller_step_latency_ms_p95": 109.8861020989716,
+        "episodes": 104,
+        "expert_goal_failure_rate": 0.0,
+        "latency_ms_mean": 104.6080175069666,
+        "observed_subgoal_cosine": 0.08139540116228391,
+        "return_mean": 204.37951118719172,
+        "seen_success_macro": 0.25961538461538464,
+        "steps_to_success_capped_mean": 166.34615384615384,
+        "success_macro": 0.25961538461538464,
+        "success_within_100_primitive": 0.18269230769230768,
+        "success_within_200_primitive": 0.25961538461538464,
+        "success_within_50_primitive": 0.15384615384615385,
+        "task/assembly/ci95_high": 0.3244156195108769,
+        "task/assembly/ci95_low": 0.0,
+        "task/assembly/success": 0.0,
+        "task/button-press-topdown/ci95_high": 0.3244156195108769,
+        "task/button-press-topdown/ci95_low": 0.0,
+        "task/button-press-topdown/success": 0.0,
+        "task/coffee-button/ci95_high": 0.863158240538479,
+        "task/coffee-button/ci95_low": 0.30573785458380187,
+        "task/coffee-button/success": 0.625,
+        "task/dial-turn/ci95_high": 0.3244156195108769,
+        "task/dial-turn/ci95_low": 0.0,
+        "task/dial-turn/success": 0.0,
+        "task/door-close/ci95_high": 0.3244156195108769,
+        "task/door-close/ci95_low": 0.0,
+        "task/door-close/success": 0.0,
+        "task/door-open/ci95_high": 0.3244156195108769,
+        "task/door-open/ci95_low": 0.0,
+        "task/door-open/success": 0.0,
+        "task/drawer-close/ci95_high": 0.863158240538479,
+        "task/drawer-close/ci95_low": 0.30573785458380187,
+        "task/drawer-close/success": 0.625,
+        "task/drawer-open/ci95_high": 0.3244156195108769,
+        "task/drawer-open/ci95_low": 0.0,
+        "task/drawer-open/success": 0.0,
+        "task/faucet-open/ci95_high": 1.0,
+        "task/faucet-open/ci95_low": 0.6755843804891231,
+        "task/faucet-open/success": 1.0,
+        "task/handle-press/ci95_high": 0.9775830911367038,
+        "task/handle-press/ci95_low": 0.5291051942301386,
+        "task/handle-press/success": 0.875,
+        "task/pick-place/ci95_high": 0.3244156195108769,
+        "task/pick-place/ci95_low": 0.0,
+        "task/pick-place/success": 0.0,
+        "task/plate-slide/ci95_high": 0.3244156195108769,
+        "task/plate-slide/ci95_low": 0.0,
+        "task/plate-slide/success": 0.0,
+        "task/reach/ci95_high": 0.5907301208974108,
+        "task/reach/ci95_low": 0.07147768885802763,
+        "task/reach/success": 0.25,
+        "world_predictions_mean": 5418.75
+      },
+      "decisions": 1734,
+      "outcomes": {
+        "all": {
+          "raw_outcome_mse": 0.01303811100771525,
+          "prior_outcome_mse": 0.013054934919788931,
+          "adapted_outcome_mse": 0.012948950608346634,
+          "actual_progress": 0.009236857841259863,
+          "count": 1630,
+          "adaptation_improves_prior_fraction": 0.6779141104294478
+        },
+        "with_history": {
+          "raw_outcome_mse": 0.013112423486969779,
+          "prior_outcome_mse": 0.013128913155827687,
+          "adapted_outcome_mse": 0.01301570579825826,
+          "actual_progress": 0.0075088089373485135,
+          "count": 1526,
+          "adaptation_improves_prior_fraction": 0.7241153342070773
+        }
+      },
+      "decision_means": {
+        "support_loss_before": 0.7161803034917293,
+        "support_loss_after": 0.6213353470294396,
+        "fast_weight_delta": 0.37874853152957894,
+        "adaptation_changed_selection": 0.07439446366782007,
+        "mean_correction_norm": 0.007169413857667942,
+        "action_outside_bounds": 0.011779348882782082,
+        "selected_action_clipping_fraction": 0.0192762402851981,
+        "latent_path_diversity": 0.40948585404519255,
+        "action_diversity": 0.3407806108567129
+      },
+      "first_decision_means": {
+        "latent_path_diversity": 0.4092913711300263,
+        "action_diversity": 0.3449934758245945,
+        "selected_action_clipping_fraction": 0.014182692536940942
+      },
+      "failures": [
+        {
+          "id": "validation/assembly/00000",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": -0.0015624146908521652,
+          "tail_raw_progress": 0.012979120016098022,
+          "tail_corrected_progress": 0.012581542134284973,
+          "tail_outcome_mse": 0.009999182657338679,
+          "selected_clipping": 0.016250000242143868
+        },
+        {
+          "id": "validation/assembly/00001",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": -0.003414388746023178,
+          "tail_raw_progress": 0.005034003406763077,
+          "tail_corrected_progress": 0.004762792959809303,
+          "tail_outcome_mse": 0.008863947005011141,
+          "selected_clipping": 0.00875000013038516
+        },
+        {
+          "id": "validation/assembly/00002",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": -0.002544572576880455,
+          "tail_raw_progress": 0.0031738560646772385,
+          "tail_corrected_progress": 0.0030956044793128967,
+          "tail_outcome_mse": 0.005369456193875521,
+          "selected_clipping": 0.00875000013038516
+        },
+        {
+          "id": "validation/assembly/00003",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": -0.0016983682289719582,
+          "tail_raw_progress": 0.0049203382804989815,
+          "tail_corrected_progress": 0.004747743718326092,
+          "tail_outcome_mse": 0.006744075566530228,
+          "selected_clipping": 0.015000000316649675
+        },
+        {
+          "id": "validation/assembly/00004",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": -0.0026854127645492554,
+          "tail_raw_progress": 0.007113775238394737,
+          "tail_corrected_progress": 0.006890019401907921,
+          "tail_outcome_mse": 0.007920048432424664,
+          "selected_clipping": 0.016250000335276127
+        },
+        {
+          "id": "validation/assembly/00005",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": -0.0008631795644760132,
+          "tail_raw_progress": 0.00981949269771576,
+          "tail_corrected_progress": 0.009582843631505966,
+          "tail_outcome_mse": 0.00834130693692714,
+          "selected_clipping": 0.018750000186264514
+        },
+        {
+          "id": "validation/assembly/00006",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": -2.6984140276908875e-05,
+          "tail_raw_progress": 0.003928853198885918,
+          "tail_corrected_progress": 0.003764782100915909,
+          "tail_outcome_mse": 0.006323290057480335,
+          "selected_clipping": 0.026250000577419996
+        },
+        {
+          "id": "validation/assembly/00007",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": -0.009305868297815323,
+          "tail_raw_progress": 0.005590397864580154,
+          "tail_corrected_progress": 0.005237855017185211,
+          "tail_outcome_mse": 0.008701199549250305,
+          "selected_clipping": 0.02125000050291419
+        },
+        {
+          "id": "validation/button-press-topdown/00000",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": -0.00017767399549484253,
+          "tail_raw_progress": 0.006731044501066208,
+          "tail_corrected_progress": 0.005980733782052994,
+          "tail_outcome_mse": 0.009091436630114913,
+          "selected_clipping": 0.03375000050291419
+        },
+        {
+          "id": "validation/button-press-topdown/00001",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": 0.0036358460783958435,
+          "tail_raw_progress": 0.02446753904223442,
+          "tail_corrected_progress": 0.023925745859742165,
+          "tail_outcome_mse": 0.010341657092794776,
+          "selected_clipping": 0.023750000447034837
+        },
+        {
+          "id": "validation/button-press-topdown/00002",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": 0.007644064724445343,
+          "tail_raw_progress": 0.023456163704395294,
+          "tail_corrected_progress": 0.022803615778684616,
+          "tail_outcome_mse": 0.013462403789162636,
+          "selected_clipping": 0.022500000335276125
+        },
+        {
+          "id": "validation/button-press-topdown/00003",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": 0.005088109523057938,
+          "tail_raw_progress": 0.006299333646893501,
+          "tail_corrected_progress": 0.006168201565742493,
+          "tail_outcome_mse": 0.005520137550774962,
+          "selected_clipping": 0.02125000050291419
+        },
+        {
+          "id": "validation/button-press-topdown/00004",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": -0.014596080407500267,
+          "tail_raw_progress": 0.014201611280441284,
+          "tail_corrected_progress": 0.01376788504421711,
+          "tail_outcome_mse": 0.040431386558339,
+          "selected_clipping": 0.023750000447034837
+        },
+        {
+          "id": "validation/button-press-topdown/00005",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": 0.0014213677495718002,
+          "tail_raw_progress": 0.008696161210536957,
+          "tail_corrected_progress": 0.008334564045071602,
+          "tail_outcome_mse": 0.0064486582996323705,
+          "selected_clipping": 0.02125000050291419
+        },
+        {
+          "id": "validation/button-press-topdown/00006",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": 0.00026723556220531464,
+          "tail_raw_progress": 0.026930348947644234,
+          "tail_corrected_progress": 0.026237796992063522,
+          "tail_outcome_mse": 0.03258545510470867,
+          "selected_clipping": 0.026250000577419996
+        },
+        {
+          "id": "validation/button-press-topdown/00007",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": -0.003717619925737381,
+          "tail_raw_progress": 0.003726322203874588,
+          "tail_corrected_progress": 0.003505013883113861,
+          "tail_outcome_mse": 0.009222488850355148,
+          "selected_clipping": 0.02500000046566129
+        },
+        {
+          "id": "validation/coffee-button/00001",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": -0.0005999160930514336,
+          "tail_raw_progress": 0.005509102717041969,
+          "tail_corrected_progress": 0.0055832648649811745,
+          "tail_outcome_mse": 0.0058801412815228105,
+          "selected_clipping": 0.013750000204890967
+        },
+        {
+          "id": "validation/coffee-button/00003",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": -0.01569030061364174,
+          "tail_raw_progress": 0.003219224512577057,
+          "tail_corrected_progress": 0.002732258290052414,
+          "tail_outcome_mse": 0.015466383891180158,
+          "selected_clipping": 0.0062500000931322575
+        },
+        {
+          "id": "validation/coffee-button/00007",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": -0.0016407892107963562,
+          "tail_raw_progress": 0.008079463616013527,
+          "tail_corrected_progress": 0.007878001779317856,
+          "tail_outcome_mse": 0.00730968767311424,
+          "selected_clipping": 0.00875000013038516
+        },
+        {
+          "id": "validation/dial-turn/00000",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": 0.000610101968050003,
+          "tail_raw_progress": 0.0037905704230070114,
+          "tail_corrected_progress": 0.003644034266471863,
+          "tail_outcome_mse": 0.008838612004183233,
+          "selected_clipping": 0.03250000076368451
+        },
+        {
+          "id": "validation/dial-turn/00001",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": 0.0014151781797409058,
+          "tail_raw_progress": 0.00897962599992752,
+          "tail_corrected_progress": 0.008803807199001312,
+          "tail_outcome_mse": 0.007780408952385187,
+          "selected_clipping": 0.018750000465661287
+        },
+        {
+          "id": "validation/dial-turn/00002",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": 0.001957312226295471,
+          "tail_raw_progress": 0.004885431379079819,
+          "tail_corrected_progress": 0.004823632538318634,
+          "tail_outcome_mse": 0.00903623178601265,
+          "selected_clipping": 0.02000000039115548
+        },
+        {
+          "id": "validation/dial-turn/00003",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": 0.001104947179555893,
+          "tail_raw_progress": 0.004762493073940277,
+          "tail_corrected_progress": 0.004638493061065674,
+          "tail_outcome_mse": 0.009276400203816593,
+          "selected_clipping": 0.018750000279396772
+        },
+        {
+          "id": "validation/dial-turn/00004",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": -0.0066927652806043625,
+          "tail_raw_progress": 0.006926599889993668,
+          "tail_corrected_progress": 0.0067892614752054214,
+          "tail_outcome_mse": 0.010845932178199291,
+          "selected_clipping": 0.02000000039115548
+        },
+        {
+          "id": "validation/dial-turn/00005",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": -0.0019509121775627136,
+          "tail_raw_progress": 0.007713761180639267,
+          "tail_corrected_progress": 0.007773289456963539,
+          "tail_outcome_mse": 0.01097542920615524,
+          "selected_clipping": 0.02125000050291419
+        },
+        {
+          "id": "validation/dial-turn/00006",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": -0.0011134333908557892,
+          "tail_raw_progress": 0.0049039386212825775,
+          "tail_corrected_progress": 0.004768054932355881,
+          "tail_outcome_mse": 0.0075693572871387005,
+          "selected_clipping": 0.016250000335276127
+        },
+        {
+          "id": "validation/dial-turn/00007",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": -0.002185169607400894,
+          "tail_raw_progress": 0.0063491277396678925,
+          "tail_corrected_progress": 0.006154824048280716,
+          "tail_outcome_mse": 0.013673417270183563,
+          "selected_clipping": 0.02000000039115548
+        },
+        {
+          "id": "validation/door-close/00000",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": -0.0014597028493881226,
+          "tail_raw_progress": 0.01664942502975464,
+          "tail_corrected_progress": 0.016206681728363037,
+          "tail_outcome_mse": 0.007303116726689041,
+          "selected_clipping": 0.04500000094994903
+        },
+        {
+          "id": "validation/door-close/00001",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": 0.0004660896956920624,
+          "tail_raw_progress": 0.02582128345966339,
+          "tail_corrected_progress": 0.024956125766038895,
+          "tail_outcome_mse": 0.006577239837497473,
+          "selected_clipping": 0.032500000484287736
+        },
+        {
+          "id": "validation/door-close/00002",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": 0.0005439445376396179,
+          "tail_raw_progress": 0.020112335681915283,
+          "tail_corrected_progress": 0.019618168473243713,
+          "tail_outcome_mse": 0.007662277319468558,
+          "selected_clipping": 0.04875000091269612
+        },
+        {
+          "id": "validation/door-close/00003",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": -0.0005074068903923035,
+          "tail_raw_progress": 0.012978561222553253,
+          "tail_corrected_progress": 0.013365570455789566,
+          "tail_outcome_mse": 0.005719773820601404,
+          "selected_clipping": 0.04250000100582838
+        },
+        {
+          "id": "validation/door-close/00004",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": -0.0036517083644866943,
+          "tail_raw_progress": 0.028612174093723297,
+          "tail_corrected_progress": 0.025884773582220078,
+          "tail_outcome_mse": 0.01173908612690866,
+          "selected_clipping": 0.04000000059604645
+        },
+        {
+          "id": "validation/door-close/00005",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": 0.004182338714599609,
+          "tail_raw_progress": 0.022410541772842407,
+          "tail_corrected_progress": 0.021709181368350983,
+          "tail_outcome_mse": 0.010690678842365742,
+          "selected_clipping": 0.05000000121071935
+        },
+        {
+          "id": "validation/door-close/00006",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": 0.0007259920239448547,
+          "tail_raw_progress": 0.02064754068851471,
+          "tail_corrected_progress": 0.020110439509153366,
+          "tail_outcome_mse": 0.004148139385506511,
+          "selected_clipping": 0.04000000087544322
+        },
+        {
+          "id": "validation/door-close/00007",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": -0.0011217035353183746,
+          "tail_raw_progress": 0.015203684568405151,
+          "tail_corrected_progress": 0.01501864567399025,
+          "tail_outcome_mse": 0.004197509842924774,
+          "selected_clipping": 0.04500000113621354
+        },
+        {
+          "id": "validation/door-open/00000",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": -0.0005673319101333618,
+          "tail_raw_progress": 0.046335265040397644,
+          "tail_corrected_progress": 0.044588834047317505,
+          "tail_outcome_mse": 0.0249328650534153,
+          "selected_clipping": 0.020000000298023225
+        },
+        {
+          "id": "validation/door-open/00001",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": -0.0008754953742027283,
+          "tail_raw_progress": 0.026655524969100952,
+          "tail_corrected_progress": 0.025585748255252838,
+          "tail_outcome_mse": 0.018410746240988374,
+          "selected_clipping": 0.02250000024214387
+        },
+        {
+          "id": "validation/door-open/00002",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": -0.00019624829292297363,
+          "tail_raw_progress": 0.014747224748134613,
+          "tail_corrected_progress": 0.01327117532491684,
+          "tail_outcome_mse": 0.015845001209527254,
+          "selected_clipping": 0.02000000048428774
+        },
+        {
+          "id": "validation/door-open/00003",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": -0.0013916566967964172,
+          "tail_raw_progress": 0.010405503213405609,
+          "tail_corrected_progress": 0.010719865560531616,
+          "tail_outcome_mse": 0.0052201165817677975,
+          "selected_clipping": 0.02125000050291419
+        },
+        {
+          "id": "validation/door-open/00004",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": 0.007777132093906403,
+          "tail_raw_progress": 0.036252886056900024,
+          "tail_corrected_progress": 0.03490520268678665,
+          "tail_outcome_mse": 0.020313954912126064,
+          "selected_clipping": 0.027500000689178704
+        },
+        {
+          "id": "validation/door-open/00005",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": 0.0005644187331199646,
+          "tail_raw_progress": 0.02085386961698532,
+          "tail_corrected_progress": 0.020679116249084473,
+          "tail_outcome_mse": 0.022218418307602406,
+          "selected_clipping": 0.0287500006146729
+        },
+        {
+          "id": "validation/door-open/00006",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": 0.0012323558330535889,
+          "tail_raw_progress": 0.01060628890991211,
+          "tail_corrected_progress": 0.010714076459407806,
+          "tail_outcome_mse": 0.007826219080016017,
+          "selected_clipping": 0.021250000409781932
+        },
+        {
+          "id": "validation/door-open/00007",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": -0.0005274638533592224,
+          "tail_raw_progress": 0.007598541676998138,
+          "tail_corrected_progress": 0.007511474192142487,
+          "tail_outcome_mse": 0.005844360217452049,
+          "selected_clipping": 0.0350000006146729
+        },
+        {
+          "id": "validation/drawer-close/00004",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": 0.0006255973130464554,
+          "tail_raw_progress": 0.008266905322670937,
+          "tail_corrected_progress": 0.00789802148938179,
+          "tail_outcome_mse": 0.003979776753112674,
+          "selected_clipping": 0.011250000167638063
+        },
+        {
+          "id": "validation/drawer-close/00006",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": 0.00020020082592964172,
+          "tail_raw_progress": 0.004741117358207703,
+          "tail_corrected_progress": 0.004574665799736977,
+          "tail_outcome_mse": 0.004610236792359501,
+          "selected_clipping": 0.021250000596046446
+        },
+        {
+          "id": "validation/drawer-close/00007",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": -0.0005685705691576004,
+          "tail_raw_progress": 0.007497308775782585,
+          "tail_corrected_progress": 0.007143720984458923,
+          "tail_outcome_mse": 0.002537198131904006,
+          "selected_clipping": 0.01750000035390258
+        },
+        {
+          "id": "validation/drawer-open/00000",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": -0.00109916552901268,
+          "tail_raw_progress": 0.008405344560742378,
+          "tail_corrected_progress": 0.008254220709204674,
+          "tail_outcome_mse": 0.008134104078635573,
+          "selected_clipping": 0.0037500000558793544
+        },
+        {
+          "id": "validation/drawer-open/00001",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": 0.002434549853205681,
+          "tail_raw_progress": 0.007986266165971756,
+          "tail_corrected_progress": 0.008295826613903046,
+          "tail_outcome_mse": 0.008436489384621382,
+          "selected_clipping": 0.00875000013038516
+        },
+        {
+          "id": "validation/drawer-open/00002",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": 0.0013063587248325348,
+          "tail_raw_progress": 0.006415504962205887,
+          "tail_corrected_progress": 0.006273619830608368,
+          "tail_outcome_mse": 0.007973134983330965,
+          "selected_clipping": 0.00875000013038516
+        },
+        {
+          "id": "validation/drawer-open/00003",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": 0.0015063881874084473,
+          "tail_raw_progress": 0.008669741451740265,
+          "tail_corrected_progress": 0.008419839665293694,
+          "tail_outcome_mse": 0.008020721725188196,
+          "selected_clipping": 0.005000000074505806
+        },
+        {
+          "id": "validation/drawer-open/00004",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": -0.00047709420323371887,
+          "tail_raw_progress": 0.005391847342252731,
+          "tail_corrected_progress": 0.0054280199110507965,
+          "tail_outcome_mse": 0.009558685938827693,
+          "selected_clipping": 0.00875000013038516
+        },
+        {
+          "id": "validation/drawer-open/00005",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": 0.003811461851000786,
+          "tail_raw_progress": 0.009057141840457916,
+          "tail_corrected_progress": 0.009119322523474693,
+          "tail_outcome_mse": 0.01156837516464293,
+          "selected_clipping": 0.007500000111758709
+        },
+        {
+          "id": "validation/drawer-open/00006",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": 0.0018601957708597183,
+          "tail_raw_progress": 0.008802160620689392,
+          "tail_corrected_progress": 0.00882246345281601,
+          "tail_outcome_mse": 0.010177215794101357,
+          "selected_clipping": 0.01000000024214387
+        },
+        {
+          "id": "validation/drawer-open/00007",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": 0.0006589442491531372,
+          "tail_raw_progress": 0.008415976539254189,
+          "tail_corrected_progress": 0.008588181808590889,
+          "tail_outcome_mse": 0.009277367033064365,
+          "selected_clipping": 0.0037500000558793544
+        },
+        {
+          "id": "validation/handle-press/00005",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": -0.0014711860567331314,
+          "tail_raw_progress": 0.004608312621712685,
+          "tail_corrected_progress": 0.004299765452742577,
+          "tail_outcome_mse": 0.004361756844446063,
+          "selected_clipping": 0.0037500000558793544
+        },
+        {
+          "id": "validation/pick-place/00000",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": 0.005501303821802139,
+          "tail_raw_progress": 0.005283977836370468,
+          "tail_corrected_progress": 0.005065403878688812,
+          "tail_outcome_mse": 0.009888123022392392,
+          "selected_clipping": 0.016250000428408386
+        },
+        {
+          "id": "validation/pick-place/00001",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": -0.005515381693840027,
+          "tail_raw_progress": 0.013632278889417648,
+          "tail_corrected_progress": 0.013065911829471588,
+          "tail_outcome_mse": 0.011164379771798849,
+          "selected_clipping": 0.0225000006146729
+        },
+        {
+          "id": "validation/pick-place/00002",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": -0.0031443312764167786,
+          "tail_raw_progress": 0.008658921346068382,
+          "tail_corrected_progress": 0.008262518793344498,
+          "tail_outcome_mse": 0.009990071295760572,
+          "selected_clipping": 0.02125000050291419
+        },
+        {
+          "id": "validation/pick-place/00003",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": 4.8412010073661804e-05,
+          "tail_raw_progress": 0.002115910407155752,
+          "tail_corrected_progress": 0.001996162347495556,
+          "tail_outcome_mse": 0.007510834955610335,
+          "selected_clipping": 0.022500000335276125
+        },
+        {
+          "id": "validation/pick-place/00004",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": 0.00032296404242515564,
+          "tail_raw_progress": 0.006901799701154232,
+          "tail_corrected_progress": 0.0067397113889455795,
+          "tail_outcome_mse": 0.0175901863258332,
+          "selected_clipping": 0.016250000335276127
+        },
+        {
+          "id": "validation/pick-place/00005",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": 0.0010267077013850212,
+          "tail_raw_progress": 0.005414806306362152,
+          "tail_corrected_progress": 0.005170420743525028,
+          "tail_outcome_mse": 0.008662011241540313,
+          "selected_clipping": 0.012500000186264515
+        },
+        {
+          "id": "validation/pick-place/00006",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": -0.003958504647016525,
+          "tail_raw_progress": 0.013380732387304306,
+          "tail_corrected_progress": 0.012912064790725708,
+          "tail_outcome_mse": 0.016142136184498668,
+          "selected_clipping": 0.016250000335276127
+        },
+        {
+          "id": "validation/pick-place/00007",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": 0.0010325117036700249,
+          "tail_raw_progress": 0.0037429211661219597,
+          "tail_corrected_progress": 0.0036159567534923553,
+          "tail_outcome_mse": 0.006256010034121573,
+          "selected_clipping": 0.017500000447034834
+        },
+        {
+          "id": "validation/plate-slide/00000",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": -0.00020137429237365723,
+          "tail_raw_progress": 0.04667658358812332,
+          "tail_corrected_progress": 0.04541214741766453,
+          "tail_outcome_mse": 0.026426389813423157,
+          "selected_clipping": 0.0062500000931322575
+        },
+        {
+          "id": "validation/plate-slide/00001",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": 0.0004822388291358948,
+          "tail_raw_progress": 0.03793494775891304,
+          "tail_corrected_progress": 0.036839570850133896,
+          "tail_outcome_mse": 0.017076243413612247,
+          "selected_clipping": 0.02000000039115548
+        },
+        {
+          "id": "validation/plate-slide/00002",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": -0.0004602260887622833,
+          "tail_raw_progress": 0.0021097837015986443,
+          "tail_corrected_progress": 0.0018995879217982292,
+          "tail_outcome_mse": 0.003718348452821374,
+          "selected_clipping": 0.010000000149011612
+        },
+        {
+          "id": "validation/plate-slide/00003",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": -0.0005562491714954376,
+          "tail_raw_progress": 0.03549257293343544,
+          "tail_corrected_progress": 0.03502628207206726,
+          "tail_outcome_mse": 0.024538975208997726,
+          "selected_clipping": 0.020000000298023225
+        },
+        {
+          "id": "validation/plate-slide/00004",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": -0.00012722238898277283,
+          "tail_raw_progress": 0.02885061874985695,
+          "tail_corrected_progress": 0.027996346354484558,
+          "tail_outcome_mse": 0.017566231545060873,
+          "selected_clipping": 0.011250000167638063
+        },
+        {
+          "id": "validation/plate-slide/00005",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": -0.0005325395613908768,
+          "tail_raw_progress": 0.0030245091766119003,
+          "tail_corrected_progress": 0.0028812000527977943,
+          "tail_outcome_mse": 0.0027171929832547903,
+          "selected_clipping": 0.016250000428408386
+        },
+        {
+          "id": "validation/plate-slide/00006",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": 0.0023210234940052032,
+          "tail_raw_progress": 0.04168619401752949,
+          "tail_corrected_progress": 0.04055304452776909,
+          "tail_outcome_mse": 0.017318733036518097,
+          "selected_clipping": 0.01750000026077032
+        },
+        {
+          "id": "validation/plate-slide/00007",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": 0.002337023615837097,
+          "tail_raw_progress": 0.03918003290891647,
+          "tail_corrected_progress": 0.03714708611369133,
+          "tail_outcome_mse": 0.018120678141713142,
+          "selected_clipping": 0.016250000335276127
+        },
+        {
+          "id": "validation/reach/00000",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": -0.008076202124357224,
+          "tail_raw_progress": 0.009189276024699211,
+          "tail_corrected_progress": 0.008574790321290493,
+          "tail_outcome_mse": 0.017956647090613842,
+          "selected_clipping": 0.031250000651925805
+        },
+        {
+          "id": "validation/reach/00001",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": -0.00033664796501398087,
+          "tail_raw_progress": 0.0015350538305938244,
+          "tail_corrected_progress": 0.001436527818441391,
+          "tail_outcome_mse": 0.0057766184327192605,
+          "selected_clipping": 0.015000000223517418
+        },
+        {
+          "id": "validation/reach/00002",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": -0.0015434697270393372,
+          "tail_raw_progress": 0.0023787030950188637,
+          "tail_corrected_progress": 0.0023030228912830353,
+          "tail_outcome_mse": 0.006544242263771594,
+          "selected_clipping": 0.015000000223517418
+        },
+        {
+          "id": "validation/reach/00004",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": -0.0015651872381567955,
+          "tail_raw_progress": 0.002039301907643676,
+          "tail_corrected_progress": 0.0019512716680765152,
+          "tail_outcome_mse": 0.008354262448847294,
+          "selected_clipping": 0.013750000298023224
+        },
+        {
+          "id": "validation/reach/00006",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": -0.0005567283369600773,
+          "tail_raw_progress": 0.0028736679814755917,
+          "tail_corrected_progress": 0.0028787655755877495,
+          "tail_outcome_mse": 0.006855375831946731,
+          "selected_clipping": 0.0062500000931322575
+        },
+        {
+          "id": "validation/reach/00007",
+          "steps": 200,
+          "timeout": false,
+          "tail_actual_progress": 0.00026159733533859253,
+          "tail_raw_progress": 0.0014675799757242203,
+          "tail_corrected_progress": 0.0013036783784627914,
+          "tail_outcome_mse": 0.006570550496689975,
+          "selected_clipping": 0.015000000223517418
+        }
+      ]
+    }
+  ],
+  "comparison_to_selected_leflow": {
+    "candidate_step": 5000,
+    "reference_step": 10000,
+    "wins": [
+      "validation/coffee-button/00002",
+      "validation/drawer-close/00000",
+      "validation/drawer-close/00002",
+      "validation/drawer-close/00003",
+      "validation/drawer-close/00005",
+      "validation/faucet-open/00002",
+      "validation/faucet-open/00003",
+      "validation/faucet-open/00004",
+      "validation/faucet-open/00007"
+    ],
+    "regressions": [
+      "validation/coffee-button/00001",
+      "validation/coffee-button/00007",
+      "validation/reach/00001"
+    ],
+    "both_success": 18,
+    "both_failure": 74,
+    "difference_pp": 5.769230769230769,
+    "case_pairing_verified": true
+  },
+  "matched_milestones": [
+    {
+      "candidate_step": 5000,
+      "reference_step": 5000,
+      "wins": [
+        "validation/drawer-close/00000",
+        "validation/drawer-close/00001",
+        "validation/drawer-close/00002",
+        "validation/drawer-close/00003",
+        "validation/faucet-open/00002",
+        "validation/faucet-open/00003",
+        "validation/faucet-open/00004",
+        "validation/faucet-open/00005",
+        "validation/faucet-open/00006",
+        "validation/handle-press/00001",
+        "validation/handle-press/00003",
+        "validation/handle-press/00004",
+        "validation/handle-press/00006",
+        "validation/handle-press/00007",
+        "validation/reach/00003"
+      ],
+      "regressions": [
+        "validation/coffee-button/00001",
+        "validation/drawer-close/00006"
+      ],
+      "both_success": 12,
+      "both_failure": 75,
+      "difference_pp": 12.5,
+      "case_pairing_verified": true
+    }
+  ],
+  "selected_to_last": {
+    "candidate_step": 5000,
+    "reference_step": 5000,
+    "wins": [],
+    "regressions": [],
+    "both_success": 27,
+    "both_failure": 77,
+    "difference_pp": 0.0,
+    "case_pairing_verified": true
+  },
+  "complete": null,
+  "compute": {
+    "adapter_optimization_included": true,
+    "common_adapter": {
+      "adapter_optimization_gpu_seconds": 193.79706083983183,
+      "adapter_steps": 2000,
+      "baseline_source": "564b52ffc86eba212aa6858f3a9f10390905a905",
+      "policy_weights_inherited": false,
+      "source_checkpoint_sha256": "0ff04e0bbac8aa8f72cffd96c03af5963e62baa4b67b16d9e0875c3e59733ffe"
+    },
+    "global_batch": 64,
+    "gpu_count": 8,
+    "last_update_overrun_gpu_seconds": 0.0,
+    "optimization_cap_gpu_seconds": 28800,
+    "optimization_gpu_hours": 0.44978605994954707,
+    "optimization_gpu_seconds": 1619.2298158183694,
+    "stage": "planner",
+    "step": 5000,
+    "validation_gpu_hours": 0.002185242556863361,
+    "validation_gpu_seconds": 7.866873204708099,
+    "validation_steps": []
+  },
+  "run": {
+    "code": "70c19323351b7fe2756f52ec6968b75f65abe7a2",
+    "common_adapter": {
+      "adapter_optimization_gpu_seconds": 193.79706083983183,
+      "adapter_steps": 2000,
+      "baseline_source": "564b52ffc86eba212aa6858f3a9f10390905a905",
+      "policy_weights_inherited": false,
+      "source_checkpoint_sha256": "0ff04e0bbac8aa8f72cffd96c03af5963e62baa4b67b16d9e0875c3e59733ffe"
+    },
+    "id": "jkidk24s",
+    "manifest": "2d0884a298ff8646d04342facef2ba519e4c52ebd5c6522a3f1f4084f03e9ace",
+    "method": "leflow_ttt",
+    "packed_entries": "a8b9b8a48a240541a16bb932886c157bc1da82e997e501ecfca5b6e2b44c562c",
+    "protocol": "1ab81a07a230c9a79ffb353c9ff10803ab61719bbf695f0e9817dab2b4fbc1b7",
+    "seed": 3072,
+    "wandb_url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/jkidk24s",
+    "world_hash": "ae3f910da43f0a43dd65945394444a0b11719ed042cdacffacc2faaf824ec5a3",
+    "world_size": 8
+  },
+  "model_calls": 0,
+  "simulator_calls": 0,
+  "final_tests_read": false,
+  "limits": [
+    "One seed; repeatedly used development cases; checkpoint selection.",
+    "Fixed-budget released-code MetaWorld port; not native LeFlow benchmark or convergence claim.",
+    "Observed prediction errors cover executed actions only; no counterfactual action labels.",
+    "Raw-versus-corrected argmin includes the learned prior, not isolated online adaptation.",
+    "No ablation or inference-depth sweep establishes a causal TTT/scaling benefit."
+  ]
+}
