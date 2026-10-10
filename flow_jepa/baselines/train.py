@@ -263,6 +263,15 @@ def train(a):
                 validation_gpu_hours=validation_seconds/3600, wall_seconds=time.perf_counter()-began,
                 stop_reason='update_limit' if step == steps else 'compute_cap',
                 convergence_established=False))
+    except BaseException:
+        # NCCL teardown can wait forever if peers are still evaluating. Report
+        # the original error first and let torchrun terminate sibling workers.
+        import sys
+        import traceback
+        traceback.print_exc()
+        sys.stderr.flush()
+        sys.stdout.flush()
+        os._exit(1)
     finally:
         if wandb_run is not None: wandb_run.finish()
         if dist.is_initialized(): dist.destroy_process_group()

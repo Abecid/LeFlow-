@@ -132,6 +132,33 @@ made durable before advancing resume state. A final registry hashes reports and
 checkpoints; launching a sealed baseline verifies its files and exits without
 retraining. Preflight and validation compute are reported separately.
 
+### October 10 runtime recovery (no algorithm change)
+
+At the second validation, the shared filesystem returned `EAGAIN` from a blocking
+`flock` on the episode journal's identity lock. Two ranks entered NCCL teardown
+before printing the exception, leaving the other ranks waiting for evaluation
+records. The error-reporting recovery exposed this exact traceback. Both methods
+had durable 10,000-update checkpoints and 52 completed second-validation cases.
+
+Both resume the same source, optimizer/RNG state, training ledger and per-case
+journals. LeFlow's checkpoint hash stayed identical across the diagnostic retry;
+no optimizer updates were repeated. A narrowly scoped runtime guard retries the
+intended blocking journal lock for up to 30 seconds and reports exceptions before
+collective teardown. It changes no model, objective, sampler, controller, seed or
+case. The original source checkouts remain untouched. The deployed guard SHA256 is
+`3ed0ada4a8b923667cdf13af3280ba0e9451c044db97d497fdf3113facd13f94`;
+its exact [source](../scripts/operations/baseline_runtime_guard/sitecustomize.py)
+and [recovery records](reports/20261010-release-baselines/recovery-readback.json)
+are preserved alongside the method source pins. Future training source includes
+the equivalent lock retry and error reporting directly.
+
+Three targeted lock tests passed, including persistent contention and unexpected
+I/O errors. A four-process test on the actual shared filesystem completed 100
+lock acquisitions with zero lost counter updates and no GPU work. The original
+17 method/evaluation tests remain unchanged. Interrupted worker occupancy will be
+reported separately; it is not extra optimizer training and must not be hidden in
+the successful-validation ledger.
+
 ## What these results can establish
 
 104 development cases suffice to catch large failures. One case is0.96 percentage

@@ -1,5 +1,15 @@
 # Experiment continuity
 
+- Baseline recovery, October 10: both sources remain frozen, but use
+  `PYTHONPATH=/tmp/mtxu-baseline-runtime-guard-v2:<execution-checkout>` when
+  resuming these same workers. The guard retries transient shared-filesystem
+  journal-lock EAGAIN and exposes errors before NCCL teardown. It changes no
+  algorithm or training state. Both resumed from 10k with 52 journaled cases;
+  source/hash/attempt records are in `recovery-*` under each run. LeFlow launcher
+  is2265942, HWM2266131. Never start a fresh run or discard their saved journals.
+  Read the runtime-recovery section in docs/RELEASE_BASELINES.md. Count interrupted
+  process occupancy separately from optimizer and successful-validation compute.
+
 - Active corrected baselines: server root
   `/home/mtxu/adam/LeFlow-experiments/20261010-baseline-release`.
   LeFlow `leflow_3072`, GPUs0–3, frozen source564b52f (`repo`), W&Bown982ph.

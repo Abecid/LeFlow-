@@ -1,0 +1,178 @@
+{
+  "utc": "2026-10-10T03:54:30.920885+00:00",
+  "lock_test": {
+    "utc": "2026-10-10T03:53:48.123608+00:00",
+    "processes": 4,
+    "acquisitions": 100,
+    "lost_updates": 0,
+    "all_exit_codes": 0,
+    "gpu_usage": 0,
+    "guard_sha256": "3ed0ada4a8b923667cdf13af3280ba0e9451c044db97d497fdf3113facd13f94"
+  },
+  "runs": {
+    "leflow": {
+      "usage": {
+        "adapter_optimization_included": true,
+        "global_batch": 64,
+        "gpu_count": 4,
+        "last_update_overrun_gpu_seconds": 0.0,
+        "optimization_cap_gpu_seconds": 28800,
+        "optimization_gpu_hours": 0.4006962518994179,
+        "optimization_gpu_seconds": 1442.5065068379045,
+        "stage": "planner",
+        "step": 10000,
+        "validation_gpu_hours": 0.6483790840560364,
+        "validation_gpu_seconds": 2334.164702601731,
+        "validation_steps": [
+          5000
+        ]
+      },
+      "recovery": {
+        "recovery-001": {
+          "process-exit.json": {
+            "returncode": 1,
+            "wall_seconds": 3334.7149925231934
+          },
+          "recovery.json": {
+            "utc": "2026-10-10T03:46:07.470418+00:00",
+            "checkpoint_sha256": "c13eeb4c9cccd92a4e5ca848c57512478d5e1763266bac5bc172f47ffc8c714b",
+            "step": 10000,
+            "reason": "Ranks2/3 blocked in exception cleanup; ranks0/1 waiting in evaluation all_gather. Resume same saved run/cases, no new optimization budget.",
+            "journal_cases": 52,
+            "interrupted_torchrun_pid": 2197762
+          },
+          "runtime.json": {
+            "pid": 2258007,
+            "guard_sha256": "5729b0486e2deb7bd8f53ce2d4289898bb3cfe35680b7dca44c06f5723474c80",
+            "command": [
+              "/tmp/mtxu-flow-jepa-20261007/env/bin/python",
+              "-m",
+              "flow_jepa.baselines.launch",
+              "--config",
+              "/home/mtxu/adam/LeFlow-experiments/20261010-baseline-release/repo/config/flow_metaworld_leflow_release.json",
+              "--root",
+              "/home/mtxu/adam/LeFlow-experiments/20261010-baseline-release/leflow-data",
+              "--run-dir",
+              "/home/mtxu/adam/LeFlow-experiments/20261010-baseline-release/leflow_3072",
+              "--world",
+              "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt"
+            ],
+            "change": "Exception reporting before failed NCCL teardown only; model/evaluation/data code remains frozen."
+          }
+        },
+        "recovery-002": {
+          "process-exit.json": {
+            "returncode": 1,
+            "wall_seconds": 33.84255528450012
+          },
+          "recovery.json": {
+            "utc": "2026-10-10T03:53:48.910171+00:00",
+            "checkpoint_sha256": "c13eeb4c9cccd92a4e5ca848c57512478d5e1763266bac5bc172f47ffc8c714b",
+            "step": 10000,
+            "journal_cases": 52,
+            "reason": "Shared filesystem returned EAGAIN for a blocking journal flock; retry preserves lock semantics. Resume same checkpoint, optimizer/RNG, cases and budgets.",
+            "stopped_torchrun_pids": []
+          },
+          "runtime.json": {
+            "pid": 2265942,
+            "command": [
+              "/tmp/mtxu-flow-jepa-20261007/env/bin/python",
+              "-m",
+              "flow_jepa.baselines.launch",
+              "--config",
+              "/home/mtxu/adam/LeFlow-experiments/20261010-baseline-release/repo/config/flow_metaworld_leflow_release.json",
+              "--root",
+              "/home/mtxu/adam/LeFlow-experiments/20261010-baseline-release/leflow-data",
+              "--run-dir",
+              "/home/mtxu/adam/LeFlow-experiments/20261010-baseline-release/leflow_3072",
+              "--world",
+              "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt"
+            ],
+            "guard_sha256": "3ed0ada4a8b923667cdf13af3280ba0e9451c044db97d497fdf3113facd13f94",
+            "source_unchanged": "564b52ffc86eba212aa6858f3a9f10390905a905"
+          }
+        }
+      },
+      "journal_counts": {
+        "step_0005000": 104,
+        "step_0010000": 52
+      },
+      "latest_log": [
+        "  time      : 2026-10-10_03:48:06",
+        "  host      : pt-2ac024078f514165b7f51494a988acb7-worker-0.pt-2ac024078f514165b7f51494a988acb7.ns-iag00ac-3560e4d6.svc.cluster.local",
+        "  rank      : 3 (local_rank: 3)",
+        "  exitcode  : 1 (pid: 2259242)",
+        "  error_file: <N/A>",
+        "  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html",
+        "============================================================"
+      ]
+    },
+    "hwm": {
+      "usage": {
+        "adapter_optimization_included": false,
+        "global_batch": 64,
+        "gpu_count": 4,
+        "last_update_overrun_gpu_seconds": 0.0,
+        "optimization_cap_gpu_seconds": 28800,
+        "optimization_gpu_hours": 1.0329261231650082,
+        "optimization_gpu_seconds": 3718.534043394029,
+        "stage": "planner",
+        "step": 10000,
+        "validation_gpu_hours": 0.39702063378360536,
+        "validation_gpu_seconds": 1429.2742816209793,
+        "validation_steps": [
+          5000
+        ]
+      },
+      "recovery": {
+        "recovery-001": {
+          "process-exit.json": {
+            "returncode": 1,
+            "wall_seconds": 2007.6166293621063
+          },
+          "recovery.json": {
+            "utc": "2026-10-10T03:53:51.640177+00:00",
+            "checkpoint_sha256": "6c81c599338b45b7be198e2d2c6f339bb22b8ffe50d5f2706b0dc4b5c52e6eb9",
+            "step": 10000,
+            "journal_cases": 52,
+            "reason": "Shared filesystem returned EAGAIN for a blocking journal flock; retry preserves lock semantics. Resume same checkpoint, optimizer/RNG, cases and budgets.",
+            "stopped_torchrun_pids": [
+              2230320
+            ]
+          },
+          "runtime.json": {
+            "pid": 2266131,
+            "command": [
+              "/tmp/mtxu-flow-jepa-20261007/env/bin/python",
+              "-m",
+              "flow_jepa.baselines.launch",
+              "--config",
+              "/home/mtxu/adam/LeFlow-experiments/20261010-baseline-release/repo-hwm-bundle/config/flow_metaworld_hwm_paper.json",
+              "--root",
+              "/home/mtxu/adam/LeFlow-experiments/20261010-baseline-release/hwm-data",
+              "--run-dir",
+              "/home/mtxu/adam/LeFlow-experiments/20261010-baseline-release/hwm_3072",
+              "--world",
+              "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt"
+            ],
+            "guard_sha256": "3ed0ada4a8b923667cdf13af3280ba0e9451c044db97d497fdf3113facd13f94",
+            "source_unchanged": "cde9c394c00e5be68348d6e80c1fd22d0e5c518d"
+          }
+        }
+      },
+      "journal_counts": {
+        "step_0005000": 104,
+        "step_0010000": 52
+      },
+      "latest_log": [
+        "    result = self._invoke_run(role)",
+        "             ^^^^^^^^^^^^^^^^^^^^^^",
+        "  File \"/tmp/mtxu-flow-jepa-20261007/env/lib/python3.11/site-packages/torch/distributed/elastic/agent/server/api.py\", line 879, in _invoke_run",
+        "    time.sleep(monitor_interval)",
+        "  File \"/tmp/mtxu-flow-jepa-20261007/env/lib/python3.11/site-packages/torch/distributed/elastic/multiprocessing/api.py\", line 84, in _terminate_process_handler",
+        "    raise SignalException(f\"Process {os.getpid()} got signal: {sigval}\", sigval=sigval)",
+        "torch.distributed.elastic.multiprocessing.api.SignalException: Process 2230320 got signal: 15"
+      ]
+    }
+  }
+}

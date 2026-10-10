@@ -4009,3 +4009,18 @@ W&B synced and all owned workers exited; eight GPUs were empty/idle at
 2026-10-09T23:50:16.141415+00:00. Published all results, failures and compact raw evidence.
 No baseline was retrained and no extra seed, variant, ablation or final test ran.
 The authorized run is complete; further experiments require a new user request.
+# October 10, 03:54 UTC — preserve and recover the corrected baseline runs
+
+Both learned baselines reached 10,000 updates. A shared-filesystem `EAGAIN` on the
+second evaluation's journal identity lock caused two workers to enter cleanup,
+which hid the exception in NCCL teardown. The diagnostic retry exposed the actual
+lock error. Both 10k checkpoints and 52 completed evaluation cases per method
+remain intact. Resume the same runs with the recorded lock/error-reporting guard;
+no new model run, optimizer update repetition, seed or budget extension.
+
+The guard passed a four-process/100-acquisition test on the server filesystem;
+three local lock tests passed. Frozen method sources and configurations remain
+unchanged. See `docs/RELEASE_BASELINES.md` and the recovery readback. HWM's first
+5k result is 2/104 with 102 controller timeouts; LeFlow's first is 14/104 with no
+timeouts. Both held-out losses are still improving at 10k. These are incomplete
+development runs, not final selected baselines or evidence of convergence.

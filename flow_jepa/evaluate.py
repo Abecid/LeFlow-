@@ -196,7 +196,8 @@ class EpisodeJournal:
         self.path, self.identity = Path(path), identity
         self.path.mkdir(parents=True, exist_ok=True)
         with (self.path / "identity.lock").open("a+") as lock:
-            fcntl.flock(lock, fcntl.LOCK_EX)
+            from .filelock import exclusive_lock
+            exclusive_lock(lock)
             metadata = self.path / "identity.json"
             if metadata.exists():
                 if json.loads(metadata.read_text()) != identity:
