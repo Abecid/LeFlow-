@@ -1,5 +1,19 @@
 # Experiment continuity
 
+- Latest user authorization, October 9 (Pacific): repair baseline fidelity and
+  run the relevant corrected baselines once. This supersedes older no-baseline-
+  rerun holds. Read docs/RELEASE_BASELINES.md. LeFlow uses pinned release
+  modules and its Appendix-E adapter; CEM uses the pinned released solver.
+  HWM robotics code is not released: label any implementation a paper-based
+  shared-backbone port, never an exact author-code reproduction. No techniques
+  from our policy may enter baseline heads/controllers. Preserve seed3072,
+  identical episodes/fixed104, global64,20k/28,800 optimizer-GPU-second caps
+  (including any adapter learning), four validations,10s/200-action limits.
+  All8 GPUs may be used non-preemptively. Do not retrain our candidate or open
+  final tests. Freeze source/config/checkpoints/reports in a hashed registry
+  and reuse completed baselines. No automatic seeds, sweeps or budget extension.
+  Older completed-run bullets below describe historical authorization only.
+
 - Execution-revision iteration completed October 9: one fresh seed3072 run,
   20,000 updates and all four fixed104 validations (80/78/79/76). Selected5k
   scores80/104 versus controller-grounded79 and latent-revision77. This is a

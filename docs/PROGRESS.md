@@ -1,3 +1,22 @@
+# Corrected baseline audit — October 10 UTC / October 9 Pacific
+
+Latest user authorization supersedes the old baseline hold. Read
+[RELEASE_BASELINES.md](RELEASE_BASELINES.md). LeFlow source modules are pinned and
+verbatim; its Appendix-E512-dimensional spatial adapter avoids the historical
+rank-deficient1024-dimensional sampler without our endpoint-flow repair. Released
+five-block receding execution is preserved. The common evaluator now supports
+method-specific execution chunks with the same200-action/time limits. Native
+stable-worldmodel0.0.6 CEM replaces our custom CEM for this baseline.
+
+11 targeted server tests passed. Four-GPU discarded-weight LeFlow preflight passed:
+finite gradients, frozen-world immutability, exact TRAIN reset RGB, stage transition,
+87.70ms warm controller call,1.73GiB peak/rank,0.02527 aggregate GPUh. Earlier
+single-GPU preflight cost0.0046402GPUh; both discarded all weights. CPU packing
+verified original file hashes and every copied value;42.36GiB feature cache, no
+precision reduction/test reads. Formal runs are ready to launch from the following
+clean commit, on GPUs0–3 (LeFlow) and4–7 (CEM); HWM paper-port audit remains pending.
+No formal training or new baseline success result is claimed at this checkpoint.
+
 # Active campaign progress
 
 ## October 9 — method identity and training-decline review

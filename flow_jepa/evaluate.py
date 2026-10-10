@@ -379,7 +379,8 @@ def evaluate(
                 c["data"]["action_repeat"],
                 c["evaluation"]["budget_primitive"],
             )
-            for t in range(budget // repeat):
+            t = 0
+            while t < budget // repeat:
                 if device.type == "cuda":
                     torch.cuda.synchronize(device)
                 started = time.perf_counter()
@@ -399,7 +400,11 @@ def evaluate(
                             observed.append(float(distance(z, target[None])))
                     pending = [(due, target) for due, target in pending if due > t]
                     action, subgoal, score, h = controller.plan(z, goal[None], budget=clock)
-                    actions = action.cpu().numpy().reshape(repeat, 4)
+                    execution_blocks = int(getattr(controller, 'execution_blocks', 1))
+                    if execution_blocks < 1 or action.numel() != execution_blocks * repeat * 4:
+                        raise ValueError('Controller action shape disagrees with registered execution prefix')
+                    actions = action.cpu().numpy().reshape(execution_blocks * repeat, 4)
+                    actions = actions[:budget-t*repeat]
                     if device.type == "cuda":
                         torch.cuda.synchronize(device)
                     if clock is not None:
@@ -427,6 +432,7 @@ def evaluate(
                         break
                 if stop:
                     break
+                t += len(actions) // repeat
             records.append(
                 dict(
                     id=row["id"],

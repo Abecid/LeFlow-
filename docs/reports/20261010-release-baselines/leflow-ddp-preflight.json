@@ -1,0 +1,69 @@
+{
+  "controller_seconds": [
+    0.261070741340518,
+    0.09043299779295921,
+    0.08910691738128662,
+    0.08355522900819778
+  ],
+  "controller_warm_mean_ms": 87.69838139414787,
+  "data_case": "train/assembly/00120",
+  "finite_gradients": true,
+  "gpu_count": 4,
+  "gpu_hours": 0.02527015897962782,
+  "method": "leflow_release",
+  "native_full_dimension": 512,
+  "peak_gpu_gib": 1.7254981994628906,
+  "simulator_calls": 0,
+  "test_files_read": 0,
+  "train_reset_rgb_exact": true,
+  "training_checks": [
+    {
+      "loss": 2.387392044067383,
+      "metrics": {
+        "compact_std": 0.32762208580970764,
+        "reconstruction_cosine": 1.0126097202301025,
+        "reconstruction_mse": 1.3747824430465698
+      },
+      "seconds": 0.4765550959855318,
+      "stage": "adapter",
+      "update": 0
+    },
+    {
+      "loss": 2.206145763397217,
+      "metrics": {
+        "compact_std": 0.23474150896072388,
+        "reconstruction_cosine": 0.9347057342529297,
+        "reconstruction_mse": 1.271440029144287
+      },
+      "seconds": 0.06953385286033154,
+      "stage": "adapter",
+      "update": 1
+    },
+    {
+      "loss": 3.41939377784729,
+      "metrics": {
+        "action_outside_bounds": 0.0,
+        "consistency_loss": 0.005447614472359419,
+        "flow_loss": 2.3533146381378174,
+        "inverse_loss": 1.0655344724655151
+      },
+      "seconds": 0.08783744461834431,
+      "stage": "planner",
+      "update": 0
+    },
+    {
+      "loss": 2.7922937870025635,
+      "metrics": {
+        "action_outside_bounds": 0.0,
+        "consistency_loss": 0.0051984055899083614,
+        "flow_loss": 1.9863617420196533,
+        "inverse_loss": 0.8054122924804688
+      },
+      "seconds": 0.032564932480454445,
+      "stage": "planner",
+      "update": 1
+    }
+  ],
+  "weights_discarded": true,
+  "world_unchanged": true
+}

@@ -1,0 +1,20 @@
+{
+  "repository": "https://github.com/hsiangwei0903/LeFlow",
+  "revision": "f1fe192e41ec6f20de25cd1054ede40a8cbdcfa5",
+  "source_file": "latent_planner.py",
+  "source_sha256": "a98997fdbcf37c168f7808347ffb164c4be3517aead21c1f1bd18f6f17b4281e",
+  "verbatim_symbols": [
+    "SinusoidalTimeEmbedding",
+    "LatentPathFlow",
+    "InverseDynamics",
+    "flow_matching_loss",
+    "inverse_dynamics_loss"
+  ],
+  "symbol_sha256": {
+    "SinusoidalTimeEmbedding": "2fe1f29cd5051928d298a623a51042b47dff5f73b4fa26b7944e01c844c652fd",
+    "LatentPathFlow": "8d49c794f3841657d5f5c47b1d455db1847bbcfa572203cf4adadaeb30fb1777",
+    "InverseDynamics": "693e32bceb7d2e8865fcf84dfeee7e9a20881e13a3e5a5fde3fab3ef83eb67c1",
+    "flow_matching_loss": "7224dbe1cf2c60b7955b587455695368081d78872a3a389953ce4c0f1e97779c",
+    "inverse_dynamics_loss": "8b0d5f08ceac667409654f060ed0ef91cfc9a2a1646271a29c9bcf66a24dda1e"
+  }
+}

@@ -1,0 +1,134 @@
+{
+  "schema": 1,
+  "name": "vjepa21_metaworld_release_baselines_v1",
+  "training_tasks": [
+    "assembly",
+    "button-press-topdown",
+    "coffee-button",
+    "dial-turn",
+    "door-close",
+    "door-open",
+    "drawer-close",
+    "drawer-open",
+    "faucet-open",
+    "handle-press",
+    "pick-place",
+    "plate-slide",
+    "reach"
+  ],
+  "heldout_tasks": [
+    "window-open",
+    "handle-pull",
+    "push"
+  ],
+  "seeds": [
+    3072
+  ],
+  "data": {
+    "train_episodes_per_task": 600,
+    "validation_episodes_per_task": 50,
+    "test_episodes_per_task": 200,
+    "random_fraction": 0.2,
+    "primitive_budget": 200,
+    "action_repeat": 2,
+    "camera": "corner",
+    "render_size": 256,
+    "history_frames": 16,
+    "goal_candidate_multiplier": 2
+  },
+  "encoder": {
+    "repository": "facebookresearch/vjepa2",
+    "revision": "204698b45b3712590f06245fbfba32d3be539812",
+    "architecture": "vit_large",
+    "checkpoint_url": "https://dl.fbaipublicfiles.com/vjepa2/vjepa2_1_vitl_dist_vitG_384.pt",
+    "checkpoint_key": "ema_encoder",
+    "input_size": 256,
+    "token_grid": [
+      2,
+      4,
+      4
+    ],
+    "dim": 1024,
+    "batch_size": 2,
+    "checkpoint_sha256": "7ea9b7cb4a75d10644a8a8d42cff9e177b10dca8f02173f0eaf2b0bed82838c6"
+  },
+  "model": {
+    "width": 256,
+    "depth": 4,
+    "heads": 4,
+    "state_representation": "static"
+  },
+  "training": {
+    "world_steps": 20000,
+    "planner_steps": 20000,
+    "global_batch": 64,
+    "learning_rate": 0.0001,
+    "weight_decay": 0.0001,
+    "gradient_clip": 1.0,
+    "log_every": 50,
+    "checkpoint_every": 1000,
+    "eval_every": 5000,
+    "validation_episodes_per_task": 8,
+    "budget_seconds": 7200,
+    "validation_rounds": 4
+  },
+  "evaluation": {
+    "budget_primitive": 200,
+    "bootstrap_samples": 10000,
+    "controller_seconds_per_episode": 10.0
+  },
+  "methods": [
+    "leflow_release"
+  ],
+  "primary_method": "leflow_release",
+  "primary_baseline": "leflow_release",
+  "wandb": {
+    "project": "flow-jepa-metaworld",
+    "mode": "online"
+  },
+  "execution": {
+    "training_enabled": true,
+    "test_enabled": false,
+    "execution_seeds": [
+      3072
+    ]
+  },
+  "diagnostics": {
+    "trajectory_case_ids": [
+      "validation/coffee-button/00000",
+      "validation/reach/00003",
+      "validation/door-close/00000",
+      "validation/dial-turn/00000",
+      "validation/drawer-close/00004",
+      "validation/handle-press/00000",
+      "validation/pick-place/00000",
+      "validation/assembly/00000",
+      "validation/faucet-open/00003",
+      "validation/reach/00005"
+    ]
+  },
+  "baseline": {
+    "world_sha256": "ae3f910da43f0a43dd65945394444a0b11719ed042cdacffacc2faaf824ec5a3",
+    "optimization_gpu_seconds": 28800,
+    "packed_cache": "/tmp/mtxu-baseline-release-20261010/data",
+    "leflow": {
+      "horizon": 5,
+      "candidates": 64,
+      "flow_steps": 16,
+      "adapter_steps": 2000,
+      "flow": {
+        "hidden_dim": 512,
+        "depth": 4,
+        "max_horizon": 20,
+        "time_dim": 64,
+        "dropout": 0.0
+      },
+      "inverse": {
+        "hidden_dim": 512,
+        "depth": 3,
+        "dropout": 0.0
+      },
+      "receding_horizon": 5
+    }
+  }
+}
