@@ -1,3 +1,18 @@
+# October 10 — method identity and frontier-literature review
+
+Read [the current formulation and direction review](METHOD_DIRECTION_20261010.md).
+Our selected80/104 controller uses a GMM and trained recurrent error workspace;
+it has no flow-matching/diffusion objective. Its one-case gain over79/104 does
+not isolate a reasoning benefit. Newly checked Feedback World Model, FBFM,
+Flow-JEPA, Action-to-Action Flow Matching and the October8 LeWAM by Hegde et al.
+narrow the novelty claim: feedback, flow-JEPA integration, previous-action flow
+sources and noise-space planning already have close precedents. The proposed
+capability is effective plan revision after execution contradicts predictions;
+its distinct learning mechanism and benefit remain unresolved. The review
+separates measured results from future flow, contact and adaptive-compute ideas.
+Checked the actual selected run's model/controller/config against frozen source.
+No model, training, simulation, ablation or final-test calls were made.
+
 # October 10, 04:31 UTC — corrected baselines complete, verified and frozen
 
 LeFlow scores14/21/19/14 at5k/10k/15k/20k and selects10k21/104. HWM's paper port
