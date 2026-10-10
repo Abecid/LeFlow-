@@ -1,3 +1,18 @@
+# October 10 — reasoning, flow generation and test-time scaling design
+
+The [new literature/design review](REASONING_DIFFUSION_REVIEW_20261010.md)
+revisits LARC and adds ELASTIC, IPR, ThinkJEPA, generative predictive control and
+compositional diffusion planning. Verified a concrete current-code gap: the
+workspace is prepared before search and does not update from fresh candidate
+rollouts. The proposed first flow candidate couples generation, JEPA prediction
+and latent revision, reusing the existing 480-world-transition ceiling. Paired
+flow-loss supervision and factual error calibration must keep teacher actions
+and future labels out of the deliberation inputs. Scaling would be evaluated
+with the same weights and measured controller time, separately from solver
+steps and candidate width. No new training/evaluation is launched. IPR source
+was inspected; LARC resource buttons and compositional-planning code remain
+unreleased/placeholders in the checked source scope. Baselines stay frozen.
+
 # October 10 — method identity and frontier-literature review
 
 Read [the current formulation and direction review](METHOD_DIRECTION_20261010.md).
