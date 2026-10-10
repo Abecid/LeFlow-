@@ -1,3 +1,16 @@
+# Latest authorization: direct LeFlow TTT candidate
+
+October10: user explicitly requests the strongest justified LaCT/follow-up TTT
+adaptation directly within LeFlow, with training and comparison. This supersedes
+completed-run holds for ONE `leflow_ttt` seed3072 candidate only. Read
+`docs/LEFLOW_TTT_RUN.md`. Reuse the exact frozen baseline adapter with its original
+2k-update/GPU charge; initialize flow/inverse/memory fresh and train18k more,
+20k total/global64/28,800 optimization GPU-seconds, same data/fixed104/controller
+limits. Use all8 idle GPUs. Four periodic validations, analyze failures, preserve
+source and baselines, publish evidence to origin main. No additional seeds,
+variants, baseline retraining, scaling sweeps or sealed tests automatically.
+Do not stop at implementation/preflight; launch and verify actual training.
+
 # Experiment continuity
 
 - Progress-TTT COMPLETED October10 10:22 UTC:20k updates, fixed104 scores77/76/78/74.

@@ -1,3 +1,15 @@
+# October10: direct LeFlow nonlinear TTT candidate
+
+The latest request authorizes one direct LeFlow extension. Implemented isolated
+`leflow_ttt`, retaining the latent-path flow/inverse and planner schedule while
+meta-training nonlinear episodic outcome memory to condition proposals and rank
+predicted consequences. See [formulation and run registration](LEFLOW_TTT_RUN.md).
+Seven behavior tests, causal sampling checks and eight-GPU backward checks pass.
+Reusing the identical frozen adapter avoids a representation confound; its
+original2k updates/GPU cost are charged. No baseline policy is loaded/retrained.
+Formal launch pending publication and clean deployment; status will be updated
+with actual optimizer/evaluation evidence. Earlier entries are historical.
+
 # October10: progress TTT completed; research angle reviewed
 
 The authorized run finished20k updates and all four fixed104 validations:
