@@ -5,7 +5,8 @@
 It updates its workspace after inspecting predicted candidate outcomes, with
 fixed causal scoring and paired flow supervision. All 21 behavioral checks
 passed; full-controller preflight averaged 98.39 ms. Same seed, data, global
-batch and training/controller ceilings; task-success results are pending.
+batch and training/controller ceilings. The first 5k validation scores **79/104**
+versus the preserved GMM best of 80/104; three registered checkpoints remain.
 [Registered method and run](docs/FLOW_REASONING_RUN.md),
 [verified launch evidence](docs/reports/20261010-flow-reasoning/), and
 [live metrics](https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/6orbayjr).

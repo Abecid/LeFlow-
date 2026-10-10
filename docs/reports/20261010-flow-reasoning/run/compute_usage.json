@@ -1,0 +1,15 @@
+{
+  "global_batch": 64,
+  "gpu_count": 8,
+  "last_update_overrun_gpu_seconds": 0.0,
+  "optimization_cap_gpu_seconds": 28800,
+  "optimization_gpu_hours": 0.9362932116165757,
+  "optimization_gpu_seconds": 3370.6555618196726,
+  "step": 5981,
+  "stop_check": "optimizer boundary; final-update overrun reported",
+  "validation_gpu_hours": 0.5280007535219192,
+  "validation_gpu_seconds": 1900.8027126789093,
+  "validation_steps": [
+    5000
+  ]
+}

@@ -1,3 +1,16 @@
+# October 9, 23:51 Pacific — first flow-reasoning validation: 79/104
+
+The 5k checkpoint scores 79/104 (75.96%) versus the frozen GMM best of 80/104.
+Paired cases show five wins and six regressions. Assembly drops 3/8 to 0/8,
+while door-open rises to 8/8 and reach to 6/8. Ten cases exhaust controller time,
+after 188–198 primitive actions; this does not prove extra actions would solve
+them. Mean decision latency is 99.42 ms, and 15/25 failures retain optimistic,
+nonprogressing late behavior (nine after learned correction). Later rounds
+supply the selected candidate in 1,829/5,103 decisions, about 35.84%; that is a
+decision-change diagnostic, not causal evidence of benefit. Training continues
+unchanged toward the other registered checkpoints. The source and data remain
+frozen. [Paired analysis](reports/20261010-flow-reasoning/validation-review.json).
+
 # October 9, 23:40 Pacific — flow-reasoning training active
 
 The isolated coordinator launched optimization on all eight A800 GPUs from
