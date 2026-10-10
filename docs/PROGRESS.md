@@ -1,3 +1,20 @@
+# Both learned baseline runs active — October 10,03:27UTC
+
+HWM is actually training (not merely queued):4008 updates on GPUs4–7, finite losses,
+about700 windows/second, global64. Its source is frozen at `cde9c39`, deployed via a
+verified49KiB Git bundle after the server’s GitHub connection failed. Both failed
+deployment attempts stopped before any HWM training; only one formal HWM run exists.
+[HWM online run](https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/8gpcqqc2).
+LeFlow is at10k and its second validation; first5k scores14/104 with no timeouts.
+CEM is finished/synced at24/104; a fresh read reverified every registry file hash.
+The online API independently confirmed CEM’s result and LeFlow’s first result.
+
+All17 tests passed. Config comparisons confirmed identical data/encoder/task/seed,
+shared-world dimensions, global batch/update ceiling and controller limits across
+our stored method and all three baselines. Source/protocol distinctions and native
+HWM runtime limitations remain explicit in [the results](RELEASE_BASELINE_RESULTS.md).
+No further training beyond these two baseline runs, extra seeds or tests are queued.
+
 # CEM sealed; HWM preflight passed — October 10 UTC
 
 Released CEM completed once:24/104 (23.08%),0.514655 validation GPUh, no new

@@ -1,0 +1,322 @@
+{
+  "timestamp_utc": "2026-10-10T03:27:03.533544+00:00",
+  "methods": {
+    "leflow": {
+      "run": {
+        "code": "564b52ffc86eba212aa6858f3a9f10390905a905",
+        "id": "own982ph",
+        "manifest": "1f937f0a9b03c1071264fcf611d73557fa8dae9c30f85e863fecd0c3585a63a9",
+        "method": "leflow_release",
+        "packed_entries": "a8b9b8a48a240541a16bb932886c157bc1da82e997e501ecfca5b6e2b44c562c",
+        "protocol": "b0327b8d84a9dc8f679689641163ddb890eb1557024b67be249bde248c16cedc",
+        "seed": 3072,
+        "wandb_url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/own982ph",
+        "world_hash": "ae3f910da43f0a43dd65945394444a0b11719ed042cdacffacc2faaf824ec5a3",
+        "world_size": 4
+      },
+      "compute_usage": {
+        "adapter_optimization_included": true,
+        "global_batch": 64,
+        "gpu_count": 4,
+        "last_update_overrun_gpu_seconds": 0.0,
+        "optimization_cap_gpu_seconds": 28800,
+        "optimization_gpu_hours": 0.4006962518994179,
+        "optimization_gpu_seconds": 1442.5065068379045,
+        "stage": "planner",
+        "step": 10000,
+        "validation_gpu_hours": 0.6483790840560364,
+        "validation_gpu_seconds": 2334.164702601731,
+        "validation_steps": [
+          5000
+        ]
+      },
+      "launch": {
+        "code": "564b52ffc86eba212aa6858f3a9f10390905a905",
+        "command": [
+          "/tmp/mtxu-flow-jepa-20261007/env/bin/python",
+          "-m",
+          "torch.distributed.run",
+          "--standalone",
+          "--nproc-per-node=4",
+          "-m",
+          "flow_jepa.baselines.train",
+          "--config",
+          "/home/mtxu/adam/LeFlow-experiments/20261010-baseline-release/repo/config/flow_metaworld_leflow_release.json",
+          "--root",
+          "/home/mtxu/adam/LeFlow-experiments/20261010-baseline-release/leflow-data",
+          "--run-dir",
+          "/home/mtxu/adam/LeFlow-experiments/20261010-baseline-release/leflow_3072",
+          "--world",
+          "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt"
+        ],
+        "config_sha256": "95bc1f340cfa304573244ede801bc9b6654aba2d03a1e78f3ba97ef5228aa039",
+        "devices": [
+          [
+            "0",
+            "GPU-a303d11c-f1b5-e245-93f0-735a054671ce"
+          ],
+          [
+            "1",
+            "GPU-fc39ae51-86a1-df0a-8657-0d33620f5115"
+          ],
+          [
+            "2",
+            "GPU-85f3f7a6-107f-2921-13a5-76a94101f858"
+          ],
+          [
+            "3",
+            "GPU-64e751ee-abb6-120c-f346-311e789228c7"
+          ]
+        ],
+        "pid": 2196457,
+        "world_sha256": "ae3f910da43f0a43dd65945394444a0b11719ed042cdacffacc2faaf824ec5a3"
+      },
+      "evaluations": [
+        {
+          "step": 5000,
+          "successes": 14,
+          "metrics": {
+            "controller_budget_exhausted_rate": 0.0,
+            "controller_budget_overrun_seconds_mean": 0.0,
+            "controller_seconds_per_episode_mean": 1.6757793905070195,
+            "controller_step_latency_ms_mean": 91.48611895681366,
+            "controller_step_latency_ms_p95": 94.85677443444729,
+            "episodes": 104,
+            "expert_goal_failure_rate": 0.0,
+            "latency_ms_mean": 91.42490493926954,
+            "observed_subgoal_cosine": 0.0809672252874385,
+            "return_mean": 233.99925631593084,
+            "seen_success_macro": 0.1346153846153846,
+            "steps_to_success_capped_mean": 183.47115384615384,
+            "success_macro": 0.1346153846153846,
+            "success_within_100_primitive": 0.09615384615384616,
+            "success_within_200_primitive": 0.1346153846153846,
+            "success_within_50_primitive": 0.0673076923076923,
+            "task/assembly/ci95_high": 0.3244156195108769,
+            "task/assembly/ci95_low": 0.0,
+            "task/assembly/success": 0.0,
+            "task/button-press-topdown/ci95_high": 0.3244156195108769,
+            "task/button-press-topdown/ci95_low": 0.0,
+            "task/button-press-topdown/success": 0.0,
+            "task/coffee-button/ci95_high": 0.9285223111419724,
+            "task/coffee-button/ci95_low": 0.40926987910258916,
+            "task/coffee-button/success": 0.75,
+            "task/dial-turn/ci95_high": 0.3244156195108769,
+            "task/dial-turn/ci95_low": 0.0,
+            "task/dial-turn/success": 0.0,
+            "task/door-close/ci95_high": 0.3244156195108769,
+            "task/door-close/ci95_low": 0.0,
+            "task/door-close/success": 0.0,
+            "task/door-open/ci95_high": 0.3244156195108769,
+            "task/door-open/ci95_low": 0.0,
+            "task/door-open/success": 0.0,
+            "task/drawer-close/ci95_high": 0.5907301208974108,
+            "task/drawer-close/ci95_low": 0.07147768885802763,
+            "task/drawer-close/success": 0.25,
+            "task/drawer-open/ci95_high": 0.3244156195108769,
+            "task/drawer-open/ci95_low": 0.0,
+            "task/drawer-open/success": 0.0,
+            "task/faucet-open/ci95_high": 0.6942621454161981,
+            "task/faucet-open/ci95_low": 0.13684175946152105,
+            "task/faucet-open/success": 0.375,
+            "task/handle-press/ci95_high": 0.5907301208974108,
+            "task/handle-press/ci95_low": 0.07147768885802763,
+            "task/handle-press/success": 0.25,
+            "task/pick-place/ci95_high": 0.3244156195108769,
+            "task/pick-place/ci95_low": 0.0,
+            "task/pick-place/success": 0.0,
+            "task/plate-slide/ci95_high": 0.3244156195108769,
+            "task/plate-slide/ci95_low": 0.0,
+            "task/plate-slide/success": 0.0,
+            "task/reach/ci95_high": 0.4708948057698615,
+            "task/reach/ci95_low": 0.02241690886329617,
+            "task/reach/success": 0.125,
+            "world_predictions_mean": 5861.538461538462
+          }
+        }
+      ]
+    },
+    "hwm": {
+      "run": {
+        "code": "cde9c394c00e5be68348d6e80c1fd22d0e5c518d",
+        "id": "8gpcqqc2",
+        "manifest": "2624352118fa3b752e2cfa056d39a41594046d7467d361ece564e3b750ea4f11",
+        "method": "hwm_paper",
+        "packed_entries": "a8b9b8a48a240541a16bb932886c157bc1da82e997e501ecfca5b6e2b44c562c",
+        "protocol": "e7d12e171fdabb42a0d049eaf081f3af83fc0b9c16826d6957dfffd5060e7a28",
+        "seed": 3072,
+        "wandb_url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/8gpcqqc2",
+        "world_hash": "ae3f910da43f0a43dd65945394444a0b11719ed042cdacffacc2faaf824ec5a3",
+        "world_size": 4
+      },
+      "compute_usage": {
+        "adapter_optimization_included": false,
+        "global_batch": 64,
+        "gpu_count": 4,
+        "last_update_overrun_gpu_seconds": 0.0,
+        "optimization_cap_gpu_seconds": 28800,
+        "optimization_gpu_hours": 0.4130793192672233,
+        "optimization_gpu_seconds": 1487.0855493620038,
+        "stage": "planner",
+        "step": 4008,
+        "validation_gpu_hours": 0.0014342936356034543,
+        "validation_gpu_seconds": 5.163457088172436,
+        "validation_steps": []
+      },
+      "launch": {
+        "code": "cde9c394c00e5be68348d6e80c1fd22d0e5c518d",
+        "command": [
+          "/tmp/mtxu-flow-jepa-20261007/env/bin/python",
+          "-m",
+          "torch.distributed.run",
+          "--standalone",
+          "--nproc-per-node=4",
+          "-m",
+          "flow_jepa.baselines.train",
+          "--config",
+          "/home/mtxu/adam/LeFlow-experiments/20261010-baseline-release/repo-hwm-bundle/config/flow_metaworld_hwm_paper.json",
+          "--root",
+          "/home/mtxu/adam/LeFlow-experiments/20261010-baseline-release/hwm-data",
+          "--run-dir",
+          "/home/mtxu/adam/LeFlow-experiments/20261010-baseline-release/hwm_3072",
+          "--world",
+          "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt"
+        ],
+        "config_sha256": "891a7aa769f7c9b09e151d97a7df4bd0b7f905ba2a745b6fb3ee6d496a2535fe",
+        "devices": [
+          [
+            "4",
+            "GPU-563386b2-7077-ce8a-e0ac-6ecee897ff17"
+          ],
+          [
+            "5",
+            "GPU-e7c745ce-6ec5-bb28-ac2d-409588294891"
+          ],
+          [
+            "6",
+            "GPU-e6f62cbc-20db-8e64-9d97-076042fe934f"
+          ],
+          [
+            "7",
+            "GPU-9e462873-2235-e452-c25f-4a8937f7a92b"
+          ]
+        ],
+        "pid": 2229030,
+        "world_sha256": "ae3f910da43f0a43dd65945394444a0b11719ed042cdacffacc2faaf824ec5a3"
+      },
+      "evaluations": []
+    },
+    "cem": {
+      "launch": {
+        "code": "564b52ffc86eba212aa6858f3a9f10390905a905",
+        "command": [
+          "/tmp/mtxu-flow-jepa-20261007/env/bin/python",
+          "-m",
+          "torch.distributed.run",
+          "--standalone",
+          "--nproc-per-node=4",
+          "-m",
+          "flow_jepa.baselines.eval_cem",
+          "--config",
+          "/home/mtxu/adam/LeFlow-experiments/20261010-baseline-release/repo/config/flow_metaworld_cem_release.json",
+          "--root",
+          "/home/mtxu/adam/LeFlow-experiments/20261010-baseline-release/cem-data",
+          "--run-dir",
+          "/home/mtxu/adam/LeFlow-experiments/20261010-baseline-release/cem_3072",
+          "--world",
+          "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt"
+        ],
+        "config_sha256": "3e379651fe93e7df702e56597032d906e93cd4cc044ed905e90907f4c51837df",
+        "devices": [
+          [
+            "4",
+            "GPU-563386b2-7077-ce8a-e0ac-6ecee897ff17"
+          ],
+          [
+            "5",
+            "GPU-e7c745ce-6ec5-bb28-ac2d-409588294891"
+          ],
+          [
+            "6",
+            "GPU-e6f62cbc-20db-8e64-9d97-076042fe934f"
+          ],
+          [
+            "7",
+            "GPU-9e462873-2235-e452-c25f-4a8937f7a92b"
+          ]
+        ],
+        "pid": 2196458,
+        "world_sha256": "ae3f910da43f0a43dd65945394444a0b11719ed042cdacffacc2faaf824ec5a3"
+      },
+      "process-exit": {
+        "returncode": 0,
+        "wall_seconds": 738.6407971382141
+      },
+      "evaluations": [
+        {
+          "step": null,
+          "successes": 24,
+          "metrics": {
+            "controller_budget_exhausted_rate": 0.7692307692307693,
+            "controller_budget_overrun_seconds_mean": 0.010732993196982604,
+            "controller_seconds_per_episode_mean": 8.667932711541653,
+            "controller_step_latency_ms_mean": 1011.7452323236048,
+            "controller_step_latency_ms_p95": 1060.8112383633852,
+            "episodes": 104,
+            "expert_goal_failure_rate": 0.0,
+            "latency_ms_mean": 1018.3089862667167,
+            "observed_subgoal_cosine": 0.07362481465343068,
+            "return_mean": 91.6042070216479,
+            "seen_success_macro": 0.23076923076923078,
+            "steps_to_success_capped_mean": 162.53846153846155,
+            "success_macro": 0.23076923076923078,
+            "success_within_100_primitive": 0.23076923076923078,
+            "success_within_200_primitive": 0.23076923076923078,
+            "success_within_50_primitive": 0.17307692307692307,
+            "task/assembly/ci95_high": 0.3244156195108769,
+            "task/assembly/ci95_low": 0.0,
+            "task/assembly/success": 0.0,
+            "task/button-press-topdown/ci95_high": 0.3244156195108769,
+            "task/button-press-topdown/ci95_low": 0.0,
+            "task/button-press-topdown/success": 0.0,
+            "task/coffee-button/ci95_high": 1.0,
+            "task/coffee-button/ci95_low": 0.6755843804891231,
+            "task/coffee-button/success": 1.0,
+            "task/dial-turn/ci95_high": 0.3244156195108769,
+            "task/dial-turn/ci95_low": 0.0,
+            "task/dial-turn/success": 0.0,
+            "task/door-close/ci95_high": 0.6942621454161981,
+            "task/door-close/ci95_low": 0.13684175946152105,
+            "task/door-close/success": 0.375,
+            "task/door-open/ci95_high": 0.3244156195108769,
+            "task/door-open/ci95_low": 0.0,
+            "task/door-open/success": 0.0,
+            "task/drawer-close/ci95_high": 0.6942621454161981,
+            "task/drawer-close/ci95_low": 0.13684175946152105,
+            "task/drawer-close/success": 0.375,
+            "task/drawer-open/ci95_high": 0.3244156195108769,
+            "task/drawer-open/ci95_low": 0.0,
+            "task/drawer-open/success": 0.0,
+            "task/faucet-open/ci95_high": 0.3244156195108769,
+            "task/faucet-open/ci95_low": 0.0,
+            "task/faucet-open/success": 0.0,
+            "task/handle-press/ci95_high": 1.0,
+            "task/handle-press/ci95_low": 0.6755843804891231,
+            "task/handle-press/success": 1.0,
+            "task/pick-place/ci95_high": 0.3244156195108769,
+            "task/pick-place/ci95_low": 0.0,
+            "task/pick-place/success": 0.0,
+            "task/plate-slide/ci95_high": 0.3244156195108769,
+            "task/plate-slide/ci95_low": 0.0,
+            "task/plate-slide/success": 0.0,
+            "task/reach/ci95_high": 0.5907301208974108,
+            "task/reach/ci95_low": 0.07147768885802763,
+            "task/reach/success": 0.25,
+            "world_predictions_mean": 367393.26923076925
+          }
+        }
+      ],
+      "registry_verified": true
+    }
+  }
+}

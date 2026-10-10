@@ -1,5 +1,18 @@
 # Experiment continuity
 
+- Active corrected baselines: server root
+  `/home/mtxu/adam/LeFlow-experiments/20261010-baseline-release`.
+  LeFlow `leflow_3072`, GPUs0–3, frozen source564b52f (`repo`), W&Bown982ph.
+  HWM `hwm_3072`, GPUs4–7, frozen sourcecde9c39 (`repo-hwm-bundle`), W&B8gpcqqc2.
+  Both are running, not completed. Do not edit these execution trees or relaunch
+  them fresh. Resume only the same run with its original source/configuration.
+  CEM completed24/104, registry verified, W&Btupg6zpf finished; never rerun it
+  automatically. Native HWM default exceeded10s before acting; the registered
+  paper-port uses Appendix C smaller planning settings, not headline defaults.
+  Read docs/RELEASE_BASELINE_RESULTS.md and docs/RELEASE_BASELINES.md. Preserve
+  the same caps/cases. Final tests and our-method retraining remain disabled.
+
+
 - Latest user authorization, October 9 (Pacific): repair baseline fidelity and
   run the relevant corrected baselines once. This supersedes older no-baseline-
   rerun holds. Read docs/RELEASE_BASELINES.md. LeFlow uses pinned release

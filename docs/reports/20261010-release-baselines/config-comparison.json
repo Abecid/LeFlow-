@@ -1,0 +1,37 @@
+{
+  "files": [
+    "config/flow_metaworld_aligned.json",
+    "config/flow_metaworld_leflow_release.json",
+    "config/flow_metaworld_hwm_paper.json",
+    "config/flow_metaworld_cem_release.json"
+  ],
+  "same_sections": [
+    "schema",
+    "training_tasks",
+    "heldout_tasks",
+    "data",
+    "encoder",
+    "seeds"
+  ],
+  "same_world_fields": [
+    "width",
+    "depth",
+    "heads",
+    "state_representation"
+  ],
+  "same_training_fields": [
+    "global_batch",
+    "planner_steps"
+  ],
+  "same_control_fields": [
+    "budget_primitive",
+    "controller_seconds_per_episode"
+  ],
+  "test_enabled": false,
+  "method_specific_changes": [
+    "native head architectures/losses/optimizer settings",
+    "native or paper-listed controller settings",
+    "method-specific offline window sampling"
+  ],
+  "claim": "shared-backbone fixed-budget ports, not native benchmark reproductions"
+}

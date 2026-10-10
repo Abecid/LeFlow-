@@ -1,0 +1,18 @@
+[
+  {
+    "method": "cem",
+    "id": "tupg6zpf",
+    "state": "finished",
+    "success_macro": 0.2307692307692308,
+    "validation_step": null,
+    "step": null
+  },
+  {
+    "method": "leflow",
+    "id": "own982ph",
+    "state": "running",
+    "success_macro": 0.1346153846153846,
+    "validation_step": 5000,
+    "step": 10000
+  }
+]
