@@ -1,6 +1,14 @@
-# Guided TTT: one fresh action-flow run
+# Guided TTT: completed action-flow run
 
-October10 Pacific. [Formulation and claim limits](GUIDED_TTT.md).
+Completed October10 16:52 Pacific; verified October11. All20k updates and four
+fixed104 validations finished:72/70/72/75, selected20k75/104. W&Bdw8gnxtj is finished;
+final source/data/checkpoint/budget audit passed and owned workers exited.
+[Completed results and failure analysis](GUIDED_TTT_RESULTS.md),
+[full evidence](reports/20261010-guided-ttt/),
+[formulation and claim limits](GUIDED_TTT.md).
+No new training is queued. The remainder is the preserved preflight/launch history.
+
+## Historical launch record
 
 Preflight passed on recorded training data: seven new behavior tests, finite
 gradients with the frozen world unchanged, causal history/window checks, and

@@ -1,20 +1,21 @@
 # Execution-aware visual planning with V-JEPA 2.1 (LeFlow fork)
 
-**Current status, October 10:** the fresh **candidate-conditioned action-flow
-reasoner completed 20,000 updates and all four validations: 79, 75, 76 and 76/104**.
-The selected 5k model scores **75.96%**, below the preserved GMM best of **80/104
-(76.92%)**. It updates its workspace from predicted candidate outcomes before
-generating the next plan, with fixed causal scoring and paired flow supervision.
-This implements the intended feedback path, but does not demonstrate useful
-test-time scaling or a performance gain. More training narrows alternatives;
-the new controller also has higher latency and ten selected-model timeouts.
-[Completed results and failure analysis](docs/FLOW_REASONING_RESULTS.md),
-[registered method](docs/FLOW_REASONING_RUN.md),
-[raw evidence and audits](docs/reports/20261010-flow-reasoning/), and
-[training metrics](https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/6orbayjr).
+**Current status, October 11:** guided action-flow TTT completed20k updates and
+all four fixed104 evaluations: **72, 70, 72, 75**. Its selected final model scores
+**72.12%**, below the preserved execution-revision GMM's **80/104 (76.92%)**,
+reasoning-conditioned flow's79/104 and progress-TTT's78/104. All29 final failures
+exhausted the controller allowance; mean decision latency was103.46ms.
+Adaptation improved executed-prefix prediction error, but this iteration does
+not establish better task success or useful inference scaling.
+
+[Completed results and failure analysis](docs/GUIDED_TTT_RESULTS.md),
+[full metrics, evaluations and audit](docs/reports/20261010-guided-ttt/),
+[method](docs/GUIDED_TTT.md), and
+[all preserved runs and completion-publication policy](docs/RESULTS_INDEX.md).
 The same seed, data, batch and training/controller ceilings were preserved.
-Frozen baselines were reused. No extra seed, next variant, ablation or final test
-was run; the first candidate is complete.
+W&B is finished and the final audit passed. Every future completed run, including
+baselines, must have its metrics/findings committed and verified on origin/main.
+No additional run, ablation or sealed test was launched for this review.
 
 The corrected baselines are
 completed, verified and frozen. Selected development scores are **LeFlow21/104,
@@ -56,7 +57,7 @@ separate from this preserved GMM reference.
 
 - [Corrected baseline results and resource-limit findings](docs/RELEASE_BASELINE_RESULTS.md)
 - [Independent project, comparison and contribution audit](docs/PROJECT_AUDIT_20261010.md)
-- [Latest results, training-decline diagnosis and method lineage](docs/EXECUTION_REVISION_RESULTS.md)
+- [Execution-revision results, training-decline diagnosis and method lineage](docs/EXECUTION_REVISION_RESULTS.md)
 - [Registered implementation and resource contract](docs/EXECUTION_REVISION_RUN.md)
 - [Previous latent-revision results](docs/LATENT_REVISION_RESULTS.md)
 - [Previous strongest controller-grounded result](docs/CONTROLLER_GROUNDED_RESULTS.md)

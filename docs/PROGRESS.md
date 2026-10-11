@@ -1,3 +1,27 @@
+# October11: guided TTT completed, audited and published
+
+Full fixed104 curve72/70/72/75 at5k/10k/15k/20k; selected20k75/104 (72.12%),
+below preserved execution-revision80, action-flow79 and progress-TTT78.
+[Results and failure analysis](GUIDED_TTT_RESULTS.md),
+[complete logs/evaluations/audit](reports/20261010-guided-ttt/),
+[all comparison runs and publication policy](RESULTS_INDEX.md).
+
+All29 selected-model failures time out after182–198 primitive actions; mean
+latency103.46ms versus86.74ms for the80/104 controller. Signed prefix MAE improves
+7.92% over the prior, but optimistic stalls and weak surrogate prediction remain.
+No causal TTT/guidance benefit or useful inference scaling is established.
+All ten saved20k contact sheets were inspected. The final source/data/checkpoint/
+budget audit passed; downloaded analysis independently reproduced. W&Bdw8gnxtj
+is finished; owned coordinator, trainer launcher and analysis worker exited.
+Optimization4.594631GPUh, validation2.165615GPUh; same data/ceilings/cases.
+
+Standing user requirement now explicitly makes publication part of every run's
+completion, including baselines. The results ledger verifies95 artifacts and37
+104-case evaluations across ten preserved comparisons. An existing project
+monitor provides a15-minute publication fallback and cannot start experiments.
+No new training/evaluation was run or queued; source/baselines/final tests remain
+preserved. Earlier entries below are historical snapshots.
+
 # October10 16:01 Pacific: guided TTT training verified
 
 Step399 completed on all8 GPUs. W&Bdw8gnxtj; immutable source92fdae6120c568a6e13c7ca2e6013fbc72cb45bf.

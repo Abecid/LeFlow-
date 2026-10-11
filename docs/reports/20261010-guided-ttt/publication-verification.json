@@ -1,0 +1,11 @@
+{
+  "completed_runs": 10,
+  "artifacts_verified": 95,
+  "validation_reports_verified": 37,
+  "cases_per_report": 104,
+  "all_case_identities_match": true,
+  "active_runs": 0,
+  "model_calls": 0,
+  "simulator_calls": 0,
+  "final_tests_read": false
+}

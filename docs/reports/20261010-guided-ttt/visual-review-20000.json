@@ -1,0 +1,29 @@
+{
+  "checkpoint": 20000,
+  "all_ten_contact_sheets_visually_inspected": true,
+  "files": {
+    "assembly-00000.png": "a608b22fb38f61834b35c2ae375c93d6b118406f378f2772fb6e7313b0ea03b9",
+    "drawer-close-00004.png": "85d08effc7dee052a7398b6f3fbbe2d572bb160f3f0224c726482b73e4404a02",
+    "faucet-open-00003.png": "ea18e7a0de589337a0092a3b4c862874c86f8756b0a05cefaec76fa266e4dccc",
+    "dial-turn-00000.png": "e3eec49dcc60087448a0c7418a2010ee1c9b706257ec122a484e76e4f185b244",
+    "pick-place-00000.png": "5d372a5110d11dfa3f7c75a55fe48ada913f5a75e363579deea09bfbc496cdd5",
+    "door-close-00000.png": "c6c5a303fbd1f501b5ce29cb29523d084314590953cd599cf019f7a1fc318152",
+    "reach-00003.png": "5252a4c7075e90e86d14d4ce08d7ef103da314f477b54b1b9cda8b7d189aee9b",
+    "index.json": "1f7d61ef4fd9b636bff292609af49974c5f78d32615e7a342b4d2612ef2ba84a",
+    "reach-00005.png": "38eda3fad978ba3ad7c21f6458373f8031fbe219eee0d9c248fd26a49aadfa4a",
+    "coffee-button-00000.png": "38eefe2e49f324059222309042ae6b6551d5fb204b99ecdc904acee946d390fd",
+    "handle-press-00000.png": "806c48fd443e3edd31f59248b54894934ff42e15dde70d710fd5db1995fff56c"
+  },
+  "evidence": "Saved measured rollout frames at five uniformly sampled times plus registered goal; no new model or simulator calls.",
+  "observations": {
+    "pick-place/00000": "The gripper moves toward the goal marker while the red object remains on the table in all five sampled rollout frames; the registered goal shows the object at the gripper.",
+    "faucet-open/00003": "The gripper approaches the handle, but the later sampled images show little visible change and do not match the registered target handle orientation.",
+    "assembly/00000": "The gripper changes position near the ring/fixture but the final sampled configuration differs from the registered goal; no successful assembly is established.",
+    "reach/00003": "The gripper appears near the target in the final frames but the episode fails the task criterion; a single view cannot establish the 3D error or threshold cause.",
+    "success_examples": "Coffee-button, dial-turn, door-close, drawer-close, handle-press and reach/00005 show progress in saved images and are labeled successful by the recorded environment criterion."
+  },
+  "limitations": [
+    "Uniform samples do not establish intermediate contact events or continuous motion.",
+    "Images are diagnostics, not new evaluations or causal evidence for guidance/TTT."
+  ]
+}

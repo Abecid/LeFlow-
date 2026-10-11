@@ -1,0 +1,535 @@
+{
+  "schema_version": 1,
+  "scope": "Current shared-world MetaWorld fixed-104 development comparisons; historical campaigns remain linked in RESULTS_INDEX.md.",
+  "publication_contract": "A run is publication-complete only when these artifacts and its findings report are committed and verified on origin/main. Local ledger membership alone does not prove remote publication.",
+  "active_runs": [],
+  "completed_runs": [
+    {
+      "run_key": "dw8gnxtj",
+      "method": "guided_ttt",
+      "label": "Guided action-flow TTT",
+      "seed": 3072,
+      "trained_head": true,
+      "source": "92fdae6120c568a6e13c7ca2e6013fbc72cb45bf",
+      "wandb_url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/dw8gnxtj",
+      "report": "docs/GUIDED_TTT_RESULTS.md",
+      "evidence_directory": "docs/reports/20261010-guided-ttt/run",
+      "complete_artifact": "docs/reports/20261010-guided-ttt/run/complete.json",
+      "metrics_artifact": "docs/reports/20261010-guided-ttt/run/metrics.jsonl.gz",
+      "selected_step": 20000,
+      "selected_successes": 75,
+      "curve": [
+        {
+          "step": 5000,
+          "successes": 72,
+          "timeouts": 31,
+          "artifact": "docs/reports/20261010-guided-ttt/run/validation/step_0005000.json.gz"
+        },
+        {
+          "step": 10000,
+          "successes": 70,
+          "timeouts": 32,
+          "artifact": "docs/reports/20261010-guided-ttt/run/validation/step_0010000.json.gz"
+        },
+        {
+          "step": 15000,
+          "successes": 72,
+          "timeouts": 31,
+          "artifact": "docs/reports/20261010-guided-ttt/run/validation/step_0015000.json.gz"
+        },
+        {
+          "step": 20000,
+          "successes": 75,
+          "timeouts": 29,
+          "artifact": "docs/reports/20261010-guided-ttt/run/validation/step_0020000.json.gz"
+        }
+      ],
+      "optimization_gpu_hours": 4.594631382901635,
+      "validation_gpu_hours": 2.165615062659813,
+      "artifact_sha256": {
+        "docs/reports/20261010-guided-ttt/run/metrics.jsonl.gz": "6cfd802d1896f225b8d52da4bc0ec4205ff50f6a1637812f5ccc20104630e060",
+        "docs/reports/20261010-guided-ttt/run/compute_usage.json": "dbd71f880624bf6f768378a6aefd8ea57a9cb6a4fbb5e9f493a6cfbda133d5fe",
+        "docs/reports/20261010-guided-ttt/run/complete.json": "05c6ec065377468c581ec720dd0d93817eab983bd26072ac34e73eae68525766",
+        "docs/reports/20261010-guided-ttt/run/run.json": "6cb839d26497b106109184cd52b2e4496bcf77b9e260858e1608de19d553ff0a",
+        "docs/reports/20261010-guided-ttt/run/validation/step_0010000.json.gz": "fcf933598f598ae3faa1fab5df0ea27b96afa962f8c79078797c8e9244053bcf",
+        "docs/reports/20261010-guided-ttt/run/validation/step_0015000.json.gz": "2d6a0e38a431e1309b934cc3bbccbfb4f71b38d2b2940af78b86bf55304fb89f",
+        "docs/reports/20261010-guided-ttt/run/validation/step_0020000.json.gz": "05efd117f7227dda217f19a16e854c681aff2ba11f93c765bba2b57e560a2bcd",
+        "docs/reports/20261010-guided-ttt/run/validation/step_0005000.json.gz": "575357a3d3cd78a4a33e12d71cc4a62665639bac177cb3375f3d77cabbd69612"
+      }
+    },
+    {
+      "run_key": "tyytbnn1",
+      "method": "execution_revision",
+      "label": "Execution revision (GMM)",
+      "seed": 3072,
+      "trained_head": true,
+      "source": "8be2808eaa09e539d30d07ee3760fc7b59717793",
+      "wandb_url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/tyytbnn1",
+      "report": "docs/EXECUTION_REVISION_RESULTS.md",
+      "evidence_directory": "docs/reports/20261009-execution-revision/run",
+      "complete_artifact": "docs/reports/20261009-execution-revision/run/complete.json",
+      "metrics_artifact": "docs/reports/20261009-execution-revision/run/metrics.jsonl.gz",
+      "selected_step": 5000,
+      "selected_successes": 80,
+      "curve": [
+        {
+          "step": 5000,
+          "successes": 80,
+          "timeouts": 0,
+          "artifact": "docs/reports/20261009-execution-revision/run/validation/step_0005000.json.gz"
+        },
+        {
+          "step": 10000,
+          "successes": 78,
+          "timeouts": 0,
+          "artifact": "docs/reports/20261009-execution-revision/run/validation/step_0010000.json.gz"
+        },
+        {
+          "step": 15000,
+          "successes": 79,
+          "timeouts": 0,
+          "artifact": "docs/reports/20261009-execution-revision/run/validation/step_0015000.json.gz"
+        },
+        {
+          "step": 20000,
+          "successes": 76,
+          "timeouts": 0,
+          "artifact": "docs/reports/20261009-execution-revision/run/validation/step_0020000.json.gz"
+        }
+      ],
+      "optimization_gpu_hours": 3.233375356346369,
+      "validation_gpu_hours": 1.9459724818294246,
+      "artifact_sha256": {
+        "docs/reports/20261009-execution-revision/run/metrics.jsonl.gz": "35e2923921f82b77676e38f3611193120eeb0779845392837ced7728ffb9e485",
+        "docs/reports/20261009-execution-revision/run/compute_usage.json": "0e3975717f07657f53be877a1dd08d98940d0e4edf3f749650b90e7d8a60fa76",
+        "docs/reports/20261009-execution-revision/run/complete.json": "fd4893e162cb07b3eeae74ebb6b799aa3a4c3a6c258fcdcb4a0ecb302657078d",
+        "docs/reports/20261009-execution-revision/run/run.json": "fb409db501a49b7df53b1caa17b30acb9126546f9af0623713683328f10057a8",
+        "docs/reports/20261009-execution-revision/run/validation/step_0010000.json.gz": "4a041adfa90a8095757715ec9a727abff8c11f261de12b35965e904f1b2b8b55",
+        "docs/reports/20261009-execution-revision/run/validation/step_0015000.json.gz": "fb4a3183e864e71e5eb1be5911c509918c77bf954ba05d1368346b81132de2f5",
+        "docs/reports/20261009-execution-revision/run/validation/step_0020000.json.gz": "8383b6cd6caefe757e50aeca2a5c53c4b1c5b49f3e48266dcd7e0a496b3c0eb0",
+        "docs/reports/20261009-execution-revision/run/validation/step_0005000.json.gz": "71fa4e3e75163ae6e3d6d776b2eeaa844134b20aaa2092feeb93e5e7b91fab9b"
+      }
+    },
+    {
+      "run_key": "6orbayjr",
+      "method": "flow_reasoning",
+      "label": "Reasoning-conditioned action flow",
+      "seed": 3072,
+      "trained_head": true,
+      "source": "ca8430ecac26ecf11fdae4307981e095f61c937c",
+      "wandb_url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/6orbayjr",
+      "report": "docs/FLOW_REASONING_RESULTS.md",
+      "evidence_directory": "docs/reports/20261010-flow-reasoning/run",
+      "complete_artifact": "docs/reports/20261010-flow-reasoning/run/complete.json",
+      "metrics_artifact": "docs/reports/20261010-flow-reasoning/run/metrics.jsonl.gz",
+      "selected_step": 5000,
+      "selected_successes": 79,
+      "curve": [
+        {
+          "step": 5000,
+          "successes": 79,
+          "timeouts": 10,
+          "artifact": "docs/reports/20261010-flow-reasoning/run/validation/step_0005000.json.gz"
+        },
+        {
+          "step": 10000,
+          "successes": 75,
+          "timeouts": 10,
+          "artifact": "docs/reports/20261010-flow-reasoning/run/validation/step_0010000.json.gz"
+        },
+        {
+          "step": 15000,
+          "successes": 76,
+          "timeouts": 9,
+          "artifact": "docs/reports/20261010-flow-reasoning/run/validation/step_0015000.json.gz"
+        },
+        {
+          "step": 20000,
+          "successes": 76,
+          "timeouts": 10,
+          "artifact": "docs/reports/20261010-flow-reasoning/run/validation/step_0020000.json.gz"
+        }
+      ],
+      "optimization_gpu_hours": 3.165801214766171,
+      "validation_gpu_hours": 2.080300091451241,
+      "artifact_sha256": {
+        "docs/reports/20261010-flow-reasoning/run/metrics.jsonl.gz": "a407b3bfd9fc5fcfa407c18e1939a4ee724e5e278c80c1082467fba4dbbe8373",
+        "docs/reports/20261010-flow-reasoning/run/compute_usage.json": "6774867eb6a5fc3b8f21e7061816abca1bd17d4b53cd6cdab164ead9da9bbec3",
+        "docs/reports/20261010-flow-reasoning/run/complete.json": "516423009574c3e9489fd2cac7f7436fcc0ad5a8458fa9d633ce90b0ae068277",
+        "docs/reports/20261010-flow-reasoning/run/run.json": "d2887ba05486368eeee9f433e18b57bb6b43fb0e0ef6380b3c819e11e7a6d44e",
+        "docs/reports/20261010-flow-reasoning/run/validation/step_0010000.json.gz": "b655843a29b455b75b0a04cb0bcdd39279491d5ef5121e7b2bdd0306a4055173",
+        "docs/reports/20261010-flow-reasoning/run/validation/step_0015000.json.gz": "4192407fa41a44643675239462dd9813b5f45e46b2798db9dcbf9e44e7acfaee",
+        "docs/reports/20261010-flow-reasoning/run/validation/step_0020000.json.gz": "62d5a42ef86e12635f5afa9234f7459b7862739f2cfd7a3b582ec928582d2bc9",
+        "docs/reports/20261010-flow-reasoning/run/validation/step_0005000.json.gz": "8c8cd3dc71b57ee9c168809df8464a039b2c72e0490b833f7ec4a25ad7dc4868"
+      }
+    },
+    {
+      "run_key": "to9im8h6",
+      "method": "progress_ttt",
+      "label": "Flow + episodic adaptation",
+      "seed": 3072,
+      "trained_head": true,
+      "source": "8ae86855738370b06c8f59b96150ac68c389d010",
+      "wandb_url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/to9im8h6",
+      "report": "docs/PROGRESS_TTT_RESULTS.md",
+      "evidence_directory": "docs/reports/20261010-progress-ttt-run/run",
+      "complete_artifact": "docs/reports/20261010-progress-ttt-run/run/complete.json",
+      "metrics_artifact": "docs/reports/20261010-progress-ttt-run/run/metrics.jsonl.gz",
+      "selected_step": 15000,
+      "selected_successes": 78,
+      "curve": [
+        {
+          "step": 5000,
+          "successes": 77,
+          "timeouts": 23,
+          "artifact": "docs/reports/20261010-progress-ttt-run/run/validation/step_0005000.json.gz"
+        },
+        {
+          "step": 10000,
+          "successes": 76,
+          "timeouts": 23,
+          "artifact": "docs/reports/20261010-progress-ttt-run/run/validation/step_0010000.json.gz"
+        },
+        {
+          "step": 15000,
+          "successes": 78,
+          "timeouts": 21,
+          "artifact": "docs/reports/20261010-progress-ttt-run/run/validation/step_0015000.json.gz"
+        },
+        {
+          "step": 20000,
+          "successes": 74,
+          "timeouts": 25,
+          "artifact": "docs/reports/20261010-progress-ttt-run/run/validation/step_0020000.json.gz"
+        }
+      ],
+      "optimization_gpu_hours": 3.542264837167329,
+      "validation_gpu_hours": 2.013267637433277,
+      "artifact_sha256": {
+        "docs/reports/20261010-progress-ttt-run/run/metrics.jsonl.gz": "06c510874a0c9c21806990ecee19fe998f08137e8980be995233446d22833db0",
+        "docs/reports/20261010-progress-ttt-run/run/compute_usage.json": "1e6ca1fd7a3a5dd63116883bac6fca9a09439eccfa1f8d4e5e0ff54978f42e89",
+        "docs/reports/20261010-progress-ttt-run/run/complete.json": "54c7b6b0ec66e3af0f6f44f5b01f8d97076abe83f646fd2b4f0bf969786345c5",
+        "docs/reports/20261010-progress-ttt-run/run/run.json": "4617e28064d6304e0ec334082d3863e936c8a6344c99d2db48c46c53567cd36d",
+        "docs/reports/20261010-progress-ttt-run/run/validation/step_0010000.json.gz": "804609adf67f074181f3392bb7b091648d15f898909247a36d5fa6c667040f4e",
+        "docs/reports/20261010-progress-ttt-run/run/validation/step_0015000.json.gz": "4de86f52f125173a5bb5c1ddca0ed9ecdcd368b622e6d1bc615d868b39982a8b",
+        "docs/reports/20261010-progress-ttt-run/run/validation/step_0020000.json.gz": "2c9069ea2bf4b66c7b20281e5c4bd3b1a084cd247c8617963420284668602a06",
+        "docs/reports/20261010-progress-ttt-run/run/validation/step_0005000.json.gz": "f9378b3b8630ff5dc21bea202a3b402357f0393fcd4a6f89a51e8f652bea0a59"
+      }
+    },
+    {
+      "run_key": "s12cr0yl",
+      "method": "controller_grounded",
+      "label": "Controller-grounded planner",
+      "seed": 3072,
+      "trained_head": true,
+      "source": "74a0a715cc393ba26285deb4571006ee7bc4d286",
+      "wandb_url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/s12cr0yl",
+      "report": "docs/CONTROLLER_GROUNDED_RESULTS.md",
+      "evidence_directory": "docs/reports/20261009-controller-grounded/run",
+      "complete_artifact": "docs/reports/20261009-controller-grounded/run/complete.json",
+      "metrics_artifact": "docs/reports/20261009-controller-grounded/run/metrics.jsonl.gz",
+      "selected_step": 5000,
+      "selected_successes": 79,
+      "curve": [
+        {
+          "step": 5000,
+          "successes": 79,
+          "timeouts": 0,
+          "artifact": "docs/reports/20261009-controller-grounded/run/validation/step_0005000.json.gz"
+        },
+        {
+          "step": 10000,
+          "successes": 78,
+          "timeouts": 0,
+          "artifact": "docs/reports/20261009-controller-grounded/run/validation/step_0010000.json.gz"
+        },
+        {
+          "step": 15000,
+          "successes": 75,
+          "timeouts": 0,
+          "artifact": "docs/reports/20261009-controller-grounded/run/validation/step_0015000.json.gz"
+        },
+        {
+          "step": 20000,
+          "successes": 78,
+          "timeouts": 0,
+          "artifact": "docs/reports/20261009-controller-grounded/run/validation/step_0020000.json.gz"
+        }
+      ],
+      "optimization_gpu_hours": 2.421563360877335,
+      "validation_gpu_hours": 1.9407914162344402,
+      "artifact_sha256": {
+        "docs/reports/20261009-controller-grounded/run/metrics.jsonl.gz": "297b3b40c19841ee3b76b176683e523e87d3f525041884628112ad408c088799",
+        "docs/reports/20261009-controller-grounded/run/compute_usage.json": "b985e436be1f4341fdf08cb5c054e83cb71b597e6c2c96a1203def16bff5b747",
+        "docs/reports/20261009-controller-grounded/run/complete.json": "7b5d7d0bbc4978b1959d58e1361daa9675facde9ff9ff34bacbf8772b4575f38",
+        "docs/reports/20261009-controller-grounded/run/run.json": "79548d57f07265dba0befe2c1fa9468f4c61a693331e06b0faecc2c4e4ea1894",
+        "docs/reports/20261009-controller-grounded/run/validation/step_0010000.json.gz": "114a4e012f13e830f30b536799e47ad0d74981c3308fd7220baa3346d3f32cf3",
+        "docs/reports/20261009-controller-grounded/run/validation/step_0015000.json.gz": "9f97f00952e89584bb5cb1e96f6f68e29ebddf946c2dd46705d327ea8ae9cf98",
+        "docs/reports/20261009-controller-grounded/run/validation/step_0020000.json.gz": "ab0c3e27d9ef87c1604ed2e66945fd8babfa4fcab056d17303b6d3be9a896a73",
+        "docs/reports/20261009-controller-grounded/run/validation/step_0005000.json.gz": "0c64a05b608a54f6971efd6dd3f2007bcac92900d3a5f1769d647873ada08ff9"
+      }
+    },
+    {
+      "run_key": "5thxkk6y",
+      "method": "latent_revision",
+      "label": "Latent revision",
+      "seed": 3072,
+      "trained_head": true,
+      "source": "899f8f2564e011ae87065a70acf28c50dade9997",
+      "wandb_url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/5thxkk6y",
+      "report": "docs/LATENT_REVISION_RESULTS.md",
+      "evidence_directory": "docs/reports/20261009-latent-revision/run",
+      "complete_artifact": "docs/reports/20261009-latent-revision/run/complete.json",
+      "metrics_artifact": "docs/reports/20261009-latent-revision/run/metrics.jsonl.gz",
+      "selected_step": 20000,
+      "selected_successes": 77,
+      "curve": [
+        {
+          "step": 5000,
+          "successes": 73,
+          "timeouts": 0,
+          "artifact": "docs/reports/20261009-latent-revision/run/validation/step_0005000.json.gz"
+        },
+        {
+          "step": 10000,
+          "successes": 75,
+          "timeouts": 0,
+          "artifact": "docs/reports/20261009-latent-revision/run/validation/step_0010000.json.gz"
+        },
+        {
+          "step": 15000,
+          "successes": 74,
+          "timeouts": 0,
+          "artifact": "docs/reports/20261009-latent-revision/run/validation/step_0015000.json.gz"
+        },
+        {
+          "step": 20000,
+          "successes": 77,
+          "timeouts": 0,
+          "artifact": "docs/reports/20261009-latent-revision/run/validation/step_0020000.json.gz"
+        }
+      ],
+      "optimization_gpu_hours": 3.2435090097784998,
+      "validation_gpu_hours": 2.0474755409442715,
+      "artifact_sha256": {
+        "docs/reports/20261009-latent-revision/run/metrics.jsonl.gz": "43a3e11b7274622b9a7c9c67d1ae157fed91804125ea0f7ff819548f1656d3c2",
+        "docs/reports/20261009-latent-revision/run/compute_usage.json": "4e28a375a3ea3039e75b448b1ead21a01559a0db80c49d8072b71ab609c2fb85",
+        "docs/reports/20261009-latent-revision/run/complete.json": "cc75f395d70ac92cef68d547b2f43b393602180a0bdc6f8ac0866182670abb0b",
+        "docs/reports/20261009-latent-revision/run/run.json": "9d235fb2a039ce723a8836b1871a4d2fed8ba17fb88a61c5759ad14c018ad14a",
+        "docs/reports/20261009-latent-revision/run/validation/step_0010000.json.gz": "562d35223ef7eddce2590ff87ebf263c366b141a05122e5f503fcb6a12a525a4",
+        "docs/reports/20261009-latent-revision/run/validation/step_0015000.json.gz": "81c7134a374930ddcbe0ad19e7bcc3a39d38b4880138c5d96f341cffb8b986d8",
+        "docs/reports/20261009-latent-revision/run/validation/step_0020000.json.gz": "656ceedba9a7a4808eaa57ef2141507b5e700c54d8acd349a672947f4fe36bae",
+        "docs/reports/20261009-latent-revision/run/validation/step_0005000.json.gz": "3bcfe3f15ba1abc4d7bdccfea55ab562d0c0c2ca682edf8deae66da2425e620c"
+      }
+    },
+    {
+      "run_key": "jkidk24s",
+      "method": "leflow_ttt",
+      "label": "Direct LeFlow TTT",
+      "seed": 3072,
+      "trained_head": true,
+      "source": "70c19323351b7fe2756f52ec6968b75f65abe7a2",
+      "wandb_url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/jkidk24s",
+      "report": "docs/LEFLOW_TTT_RESULTS.md",
+      "evidence_directory": "docs/reports/20261010-leflow-ttt/run",
+      "complete_artifact": "docs/reports/20261010-leflow-ttt/run/complete.json",
+      "metrics_artifact": "docs/reports/20261010-leflow-ttt/run/metrics.jsonl.gz",
+      "selected_step": 20000,
+      "selected_successes": 29,
+      "curve": [
+        {
+          "step": 5000,
+          "successes": 27,
+          "timeouts": 0,
+          "artifact": "docs/reports/20261010-leflow-ttt/run/validation/step_0005000.json.gz"
+        },
+        {
+          "step": 10000,
+          "successes": 21,
+          "timeouts": 0,
+          "artifact": "docs/reports/20261010-leflow-ttt/run/validation/step_0010000.json.gz"
+        },
+        {
+          "step": 15000,
+          "successes": 27,
+          "timeouts": 0,
+          "artifact": "docs/reports/20261010-leflow-ttt/run/validation/step_0015000.json.gz"
+        },
+        {
+          "step": 20000,
+          "successes": 29,
+          "timeouts": 0,
+          "artifact": "docs/reports/20261010-leflow-ttt/run/validation/step_0020000.json.gz"
+        }
+      ],
+      "optimization_gpu_hours": 2.4373079992189175,
+      "validation_gpu_hours": 2.3738358717784287,
+      "artifact_sha256": {
+        "docs/reports/20261010-leflow-ttt/run/registry.json": "a7569fe7dc02900718cac5315e946c960a34e9bcaf88e68456f48cd0aa6c08a5",
+        "docs/reports/20261010-leflow-ttt/run/process-exit.json": "6242765c5a6ce3d10a4f4083234efbff41b0a8b1a5a778fff6cbd9aa777b7b6f",
+        "docs/reports/20261010-leflow-ttt/run/metrics.jsonl.gz": "811a0a2e6f57e66381d8ce136e91267ed0ad0975396b8b36808f979d8d41cd60",
+        "docs/reports/20261010-leflow-ttt/run/compute_usage.json": "9683599f33a3986cdb906991bc8810baf0fb78ca0676d9d5c5a8926eaa664510",
+        "docs/reports/20261010-leflow-ttt/run/runtime-source.json": "f14914b63370b5770bdd748de83d7e5cb387def61eff0546553d9bbceab51473",
+        "docs/reports/20261010-leflow-ttt/run/worker.json": "6a126759f44c804f48f6537b9571d15ef425f3f95a14ad8cb1df07bb87ea173b",
+        "docs/reports/20261010-leflow-ttt/run/complete.json": "ae676e9f3fc3fba58a58db5d476eda8d8d1ffa12af08c381ebc20db73ae3d410",
+        "docs/reports/20261010-leflow-ttt/run/launch.json": "5767b67c955700eb26d0d6de76911c50dc966ffe876da9161eca0c321f9ee121",
+        "docs/reports/20261010-leflow-ttt/run/run.json": "82ad7002dad79f7859df6597591c02ee50f96ba4f04c6eae462bed204b635230",
+        "docs/reports/20261010-leflow-ttt/run/validation/step_0010000.json.gz": "e28d4edabdc5cbd48c74d09875ee4c06e88f0e7875055398f5723eca585113c7",
+        "docs/reports/20261010-leflow-ttt/run/validation/step_0015000.json.gz": "cd22bdf17dac5536101a40959cc7af332134631fe76562b53b782125d2f0b33a",
+        "docs/reports/20261010-leflow-ttt/run/validation/step_0020000.json.gz": "b91dadb029234f2136f182b9c3f219aaa01ff39e011e0550aa4a6fe24cbc8c07",
+        "docs/reports/20261010-leflow-ttt/run/validation/step_0005000.json.gz": "fd85a4ad7a8ae2a09d073808e8373ceba7da8ed24ec962710fd7ae3df3da57da"
+      }
+    },
+    {
+      "run_key": "own982ph",
+      "method": "leflow_release",
+      "label": "LeFlow release-module/spatial port",
+      "seed": 3072,
+      "trained_head": true,
+      "source": "564b52ffc86eba212aa6858f3a9f10390905a905",
+      "wandb_url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/own982ph",
+      "report": "docs/RELEASE_BASELINE_RESULTS.md",
+      "evidence_directory": "docs/reports/20261010-release-baselines/leflow",
+      "complete_artifact": "docs/reports/20261010-release-baselines/leflow/complete.json",
+      "metrics_artifact": "docs/reports/20261010-release-baselines/leflow/metrics.jsonl",
+      "selected_step": 10000,
+      "selected_successes": 21,
+      "curve": [
+        {
+          "step": 5000,
+          "successes": 14,
+          "timeouts": 0,
+          "artifact": "docs/reports/20261010-release-baselines/leflow/validation/step_0005000.json.gz"
+        },
+        {
+          "step": 10000,
+          "successes": 21,
+          "timeouts": 0,
+          "artifact": "docs/reports/20261010-release-baselines/leflow/validation/step_0010000.json.gz"
+        },
+        {
+          "step": 15000,
+          "successes": 19,
+          "timeouts": 0,
+          "artifact": "docs/reports/20261010-release-baselines/leflow/validation/step_0015000.json.gz"
+        },
+        {
+          "step": 20000,
+          "successes": 14,
+          "timeouts": 0,
+          "artifact": "docs/reports/20261010-release-baselines/leflow/validation/step_0020000.json.gz"
+        }
+      ],
+      "optimization_gpu_hours": 0.8524177146785789,
+      "validation_gpu_hours": 2.4360253854737515,
+      "artifact_sha256": {
+        "docs/reports/20261010-release-baselines/leflow/recovery-history.json": "6292b33b00794d5ba02e21524441d8cdbeb950495c5dcb79ebf7c1e09cfc002f",
+        "docs/reports/20261010-release-baselines/leflow/audit.json": "38cc217d28a72f934cdfcd1411ec3c1fa5d5edd39aec7d96d283db713ebdb9e3",
+        "docs/reports/20261010-release-baselines/leflow/registry.json": "10270d94af7c983b55f085f8eede5a4eee5414709df2624b1081bcc574463a1f",
+        "docs/reports/20261010-release-baselines/leflow/process-exit.json": "6d54ff644aca65f1667047b3825fd9d632212c8c484fc8339185ffe71b84e067",
+        "docs/reports/20261010-release-baselines/leflow/compute_usage.json": "fdb9f5260c3e4963668d4210c4893adff97a2eed2d471a0c7283b49bc32babeb",
+        "docs/reports/20261010-release-baselines/leflow/complete.json": "52e38ff83ac524713276c033273edfd9d8701bfad738286acdbcd5e49472a31f",
+        "docs/reports/20261010-release-baselines/leflow/heldout-losses.json": "4a2cac4d91faa78d291cddd92716ab0ee4f1606c03b9f3abfce1bd9a3f6ca96e",
+        "docs/reports/20261010-release-baselines/leflow/launch.json": "f88e68f7c80eaf54fe9b2cd75b3afcebae1bc0559ade84f83399108c7f9f152c",
+        "docs/reports/20261010-release-baselines/leflow/metrics.jsonl": "92a2a871c970c170217a615e1be88845d4a9675cafaff5b3cbb9ac566689ad50",
+        "docs/reports/20261010-release-baselines/leflow/run.json": "51a3cd98d44063dcf10fb9cb981c61aa8eab45d837cd3c4f1b35c3d460a9337d",
+        "docs/reports/20261010-release-baselines/leflow/validation/step_0010000.json.gz": "506a2857ec7b9f19782d0df27bdbad3d8a72f464ebda3a47ab20b85f8a98e713",
+        "docs/reports/20261010-release-baselines/leflow/validation/step_0015000.json.gz": "8238eec51ec7bd026d3c5174597a553fa9799477d8881baed3daa567948dd075",
+        "docs/reports/20261010-release-baselines/leflow/validation/step_0020000.json.gz": "a95dad7c094f4a0e528d049f3546ab8a17556eab3e7590e8ef3d5c92370ceb4e",
+        "docs/reports/20261010-release-baselines/leflow/validation/step_0005000.json.gz": "45a81cd81c47067957033d9f1803792733508884027d6e944713e33749b7a1ed"
+      }
+    },
+    {
+      "run_key": "8gpcqqc2",
+      "method": "hwm_paper",
+      "label": "HWM paper port",
+      "seed": 3072,
+      "trained_head": true,
+      "source": "cde9c394c00e5be68348d6e80c1fd22d0e5c518d",
+      "wandb_url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/8gpcqqc2",
+      "report": "docs/RELEASE_BASELINE_RESULTS.md",
+      "evidence_directory": "docs/reports/20261010-release-baselines/hwm",
+      "complete_artifact": "docs/reports/20261010-release-baselines/hwm/complete.json",
+      "metrics_artifact": "docs/reports/20261010-release-baselines/hwm/metrics.jsonl",
+      "selected_step": 15000,
+      "selected_successes": 5,
+      "curve": [
+        {
+          "step": 5000,
+          "successes": 2,
+          "timeouts": 102,
+          "artifact": "docs/reports/20261010-release-baselines/hwm/validation/step_0005000.json.gz"
+        },
+        {
+          "step": 10000,
+          "successes": 3,
+          "timeouts": 101,
+          "artifact": "docs/reports/20261010-release-baselines/hwm/validation/step_0010000.json.gz"
+        },
+        {
+          "step": 15000,
+          "successes": 5,
+          "timeouts": 99,
+          "artifact": "docs/reports/20261010-release-baselines/hwm/validation/step_0015000.json.gz"
+        },
+        {
+          "step": 20000,
+          "successes": 5,
+          "timeouts": 99,
+          "artifact": "docs/reports/20261010-release-baselines/hwm/validation/step_0020000.json.gz"
+        }
+      ],
+      "optimization_gpu_hours": 2.0773389685754147,
+      "validation_gpu_hours": 1.5413080431955557,
+      "artifact_sha256": {
+        "docs/reports/20261010-release-baselines/hwm/recovery-history.json": "32638e7ef2d699ea7ae598cf7601d7b1d4f8049cba3d3e802e32010e982b384f",
+        "docs/reports/20261010-release-baselines/hwm/audit.json": "64bf122dae8d0012b0ff4f6cccce877e35621c36406af00102e5f22e0671becd",
+        "docs/reports/20261010-release-baselines/hwm/registry.json": "563410c50f16f808d626fccff461d65cae222df973480dee4fef014cfec9905d",
+        "docs/reports/20261010-release-baselines/hwm/process-exit.json": "15875572f1ae2d51c747cc0fc426dd1e165621dc29af203d7a0d40a71e664133",
+        "docs/reports/20261010-release-baselines/hwm/compute_usage.json": "b3b74e3d7f6e55d5d02ae4fc3ff963b91f9504330f4925a046b7c94f5a451d19",
+        "docs/reports/20261010-release-baselines/hwm/complete.json": "e6275ffbb2b69af8d4c2f1210526a5a160ebfdf250e62439563803f899499779",
+        "docs/reports/20261010-release-baselines/hwm/heldout-losses.json": "88166fda894a84955f339f09cd5cf3e186cd215e910b64994546ad62122c5ff9",
+        "docs/reports/20261010-release-baselines/hwm/launch.json": "7f53cbb6b89db2cad8c0186a3d5f68af32e84f412ad2690d43e1562862376b80",
+        "docs/reports/20261010-release-baselines/hwm/metrics.jsonl": "217b6c943330fbaa1aaf73bfe1465a347d8925195a417bc14598016c11c144e8",
+        "docs/reports/20261010-release-baselines/hwm/run.json": "05e9fc6dac425bad9a64eea8efd14d6c22219be77e3db4f0f8a8da9c5d6448e6",
+        "docs/reports/20261010-release-baselines/hwm/validation/step_0010000.json.gz": "484dc976d6a879b95829264d521dbaf86fe7ba9d2220682ebdd5c6544c409926",
+        "docs/reports/20261010-release-baselines/hwm/validation/step_0015000.json.gz": "56b7bf19e165d123b9aa32b88f5eb773a3a48f82d7e203144ca14071354120ff",
+        "docs/reports/20261010-release-baselines/hwm/validation/step_0020000.json.gz": "f3e4b391abe672d2e124e4afd60bc57467893eb66b2f85a7a744243623cf4996",
+        "docs/reports/20261010-release-baselines/hwm/validation/step_0005000.json.gz": "25101e5471b14355ae2d6a91dc4456945270cbd540cd00c3cad97df22636dce3"
+      }
+    },
+    {
+      "run_key": "tupg6zpf",
+      "method": "cem_release",
+      "label": "Released CEM",
+      "seed": 3072,
+      "trained_head": false,
+      "source": "564b52ffc86eba212aa6858f3a9f10390905a905",
+      "wandb_url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/tupg6zpf",
+      "report": "docs/RELEASE_BASELINE_RESULTS.md",
+      "evidence_directory": "docs/reports/20261010-release-baselines/cem",
+      "complete_artifact": "docs/reports/20261010-release-baselines/cem/complete.json",
+      "metrics_artifact": null,
+      "selected_step": 0,
+      "selected_successes": 24,
+      "curve": [
+        {
+          "step": 0,
+          "successes": 24,
+          "timeouts": 80,
+          "artifact": "docs/reports/20261010-release-baselines/cem/validation.json"
+        }
+      ],
+      "optimization_gpu_hours": 0.0,
+      "validation_gpu_hours": 0.5146546766493055,
+      "artifact_sha256": {
+        "docs/reports/20261010-release-baselines/cem/audit.json": "bd6847dc6c4b12395ebae75a443e3039c7343273b7763de29d05857677ff0200",
+        "docs/reports/20261010-release-baselines/cem/registry.json": "494e50cffd50813c2451e12a6cad6b193890730492f76aea788896e0042ae28f",
+        "docs/reports/20261010-release-baselines/cem/process-exit.json": "316337724aaeb886458195c0ed35a3048ca6ec872e237e5dbaa1b286f36ee7d6",
+        "docs/reports/20261010-release-baselines/cem/complete.json": "0fb3d2614d76fdd4c12e3605220f986306a6541789cf1d74d03ef2c4b8af3a8e",
+        "docs/reports/20261010-release-baselines/cem/validation.json": "0fb3d2614d76fdd4c12e3605220f986306a6541789cf1d74d03ef2c4b8af3a8e",
+        "docs/reports/20261010-release-baselines/cem/launch.json": "2ef8ab8c9863db699c3df22f64412b64dddaca22ab2d8ae871e73e610af58ef5"
+      }
+    }
+  ]
+}

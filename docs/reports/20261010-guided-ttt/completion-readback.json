@@ -1,0 +1,30 @@
+{
+  "utc": "2026-10-11T07:05:17.398445+00:00",
+  "wandb_state": "finished",
+  "wandb_url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/dw8gnxtj",
+  "owned_processes": {
+    "3464557": null,
+    "3466819": null,
+    "3470133": null
+  },
+  "frozen_source": "92fdae6120c568a6e13c7ca2e6013fbc72cb45bf",
+  "frozen_source_status": "",
+  "status": {
+    "code": "92fdae6120c568a6e13c7ca2e6013fbc72cb45bf",
+    "pid": 3464557,
+    "run_dir": "/home/mtxu/adam/LeFlow-experiments/20261010-guided-ttt/campaign/runs/guided_ttt_3072",
+    "status": "completed_validation_ready_for_analysis",
+    "utc": "2026-10-10T23:52:07.096096+00:00",
+    "wall_seconds": 3207.6572235208005
+  },
+  "analysis_status": {
+    "state": "complete",
+    "pid": 3470133,
+    "utc": "2026-10-10T23:52:28.462079+00:00",
+    "rounds": 4,
+    "final_tests_read": false,
+    "model_calls": 0,
+    "simulator_calls": 0
+  },
+  "gpu_usage": "0, 0 %, 0 MiB\n1, 0 %, 0 MiB\n2, 0 %, 0 MiB\n3, 0 %, 0 MiB\n4, 100 %, 27057 MiB\n5, 100 %, 27057 MiB\n6, 100 %, 10081 MiB\n7, 100 %, 27057 MiB\n"
+}

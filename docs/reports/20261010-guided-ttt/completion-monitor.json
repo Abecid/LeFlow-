@@ -1,0 +1,10 @@
+{
+  "id": "continue-flow-jepa-campaign-and-preserve-results",
+  "kind": "heartbeat",
+  "name": "Publish completed LeFlow experiment results",
+  "status": "ACTIVE",
+  "rrule": "FREQ=MINUTELY;INTERVAL=15",
+  "target_thread_id": "01a1179f-f228-76e1-b27b-339ff3800e47",
+  "updated_at": 1791702817327,
+  "prompt_sha256": "84dc33fef2fd7f205635d6cc0ef7c970103da207b27892798bf50eacb027a349"
+}

@@ -1,3 +1,33 @@
+# Standing requirement: publish every completed run
+
+October11 user requirement: always log and push results, findings and evaluation
+metrics for every completed training run, including baselines, to origin/main.
+Publication is part of completion. Follow docs/RESULTS_INDEX.md; register future
+authorized runs in docs/results-ledger.json before launch. Preserve all periodic
+metrics, all registered evaluations, negative results, failure evidence, source/
+data/checkpoint hashes and actual compute. Update the report/index/PROGRESS;
+verify artifacts, commit, push without force, and verify the remote commit and
+report contents. A local commit alone is not publication. Preserve source trees,
+credentials/data/model exclusions and concurrent work. Report and retry push
+failures rather than silently stopping at analysis. The existing project monitor
+provides a15-minute completion-publication fallback; it cannot authorize runs.
+
+# Guided TTT complete: selected75/104, previous best80/104 retained
+
+Finished October10 16:52 Pacific, verified October11:20k updates, four fixed104
+scores72/70/72/75. All29 final failures exhausted the controller allowance;
+103.46ms mean decision latency. Adapted executed-prefix MAE improves7.92% over
+prior, but overall success is below80/79/78 preserved references. Read
+GUIDED_TTT_RESULTS.md and RESULTS_INDEX.md under docs. Final CPU audit passed143
+runtime hashes, source/data/bank/checkpoint identity and budgets; W&Bdw8gnxtj
+finished and owned coordinator/trainer/analysis PIDs exited. Optimization4.594631
+GPUh, validation2.165615GPUh. Source92fdae6120c568a6e13c7ca2e6013fbc72cb45bf remains
+frozen at /home/mtxu/adam/LeFlow-experiments/20261010-guided-ttt/repo.
+No training is queued in this campaign. The one-run authorization is fulfilled.
+Preserve baselines, completed runs and sealed final tests. No automatic additional
+training, seeds, variants, ablations, inference sweeps or final tests. Entries
+below are chronological history and do not override this completed status.
+
 # Guided TTT active: preserve frozen source
 
 Verified October10 16:01 Pacific: step399 on all8 GPUs; W&Bdw8gnxtj.
