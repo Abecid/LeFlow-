@@ -1,3 +1,13 @@
+# Review hold after verified shifted-repair publication
+
+Completion published and all273 evidence blobs/49 reports remotely verified at
+aab136e. Shifted repair79/78/74/78 selects5k79, below80. Read
+docs/SHIFTED_REPAIR_TTT_REVIEW.md: no further specific evidence-supported
+correction is justified now, so stop launches for review under the standing rule.
+No candidate is active. Never restart completed runs or treat idle GPUs as
+permission. Keep completion monitoring available for later authorized registered
+work; no baseline work, data expansion, sweeps or sealed tests.
+
 # Shifted repair completed: selected5k79/104;80 reference retained
 
 Curve79/78/74/78, zero timeouts; all25/26/30/26 failures reach200 actions.

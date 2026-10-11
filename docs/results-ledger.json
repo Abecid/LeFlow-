@@ -113,9 +113,15 @@
         "docs/reports/20261011-shifted-repair-ttt/tests.log.gz": "8c4ba44d95c30098cae28cc15b05b13be125b762b4021ad5d3f6aa5a13b83377",
         "docs/reports/20261011-shifted-repair-ttt/visual-review-20000.json": "7797565f4e76c9f0041c64dbec9bed48e89ba0805ce591b01fabc3620bb99358",
         "docs/reports/20261011-shifted-repair-ttt/visual-review-5000.json": "00ae03b41b79932f7deb3c3bf205e47049510a01083ae047d9feb1ec66cf3798",
-        "docs/SHIFTED_REPAIR_TTT_RESULTS.md": "268e129ba714f5085cc118a8a478b72d2e775fbc050df18def7b71a285da21e3",
-        "docs/SHIFTED_REPAIR_TTT.md": "e3b45bdffa84d2ef68d930c3532dfda2201f6fbed935fbbd832ee73522ed6e5e"
-      }
+        "docs/SHIFTED_REPAIR_TTT_RESULTS.md": "9a3a68e90a4c37a4c17ca50888a5af70e8c09472181ce5078aa003054241b14a",
+        "docs/SHIFTED_REPAIR_TTT.md": "a0851c08044613cc000c0121b7548158a67b568f50ef0bb6606b7040e9f87531",
+        "docs/reports/20261011-shifted-repair-ttt/publication-verification.json": "b3c82426d81008698a861bcd0c4655bf5f07ffaacd70bee368583c44074761b7",
+        "docs/SHIFTED_REPAIR_TTT_REVIEW.md": "f35d021e3ba83ddf62f6f85a8878aa365c9387f266940d93d3de888f4d970fbf"
+      },
+      "publication_commit": "aab136e797a05feea9b2318fa7512beab332287b",
+      "publication_verification_artifact": "docs/reports/20261011-shifted-repair-ttt/publication-verification.json",
+      "post_publication_decision": "review_hold_no_supported_next_candidate",
+      "review": "docs/SHIFTED_REPAIR_TTT_REVIEW.md"
     },
     {
       "run_key": "6wpx3jcv",

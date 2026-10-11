@@ -12,9 +12,11 @@ component causality/generalization.
 [Shifted repair completed](SHIFTED_REPAIR_TTT_RESULTS.md); all four evaluations,
 full metrics, failure evidence,20 inspected contact sheets, checkpoint hashes
 and actual compute are preserved. Source/data audit and process/online completion
-are verified. No next candidate is queued. The80/104 reference remains; publish
-and verify completion before deciding whether one further concrete correction
-is supported. Historical completed runs and frozen baselines remain untouched.
+are verified. Completion is remotely verified at aab136e (273 artifact blobs/49 reports).
+[Further launches are held for review](SHIFTED_REPAIR_TTT_REVIEW.md): no specific
+supported correction is justified now. The80/104 reference remains. Monitoring
+stays available for later authorized registered work; historical runs and frozen
+baselines remain untouched.
 
 ## Preserved comparisons
 

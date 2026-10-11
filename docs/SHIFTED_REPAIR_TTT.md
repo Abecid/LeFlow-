@@ -1,3 +1,10 @@
+# Published and held for review
+
+Completion was remotely verified at aab136e. Read the
+[post-publication decision](SHIFTED_REPAIR_TTT_REVIEW.md): no further specific
+correction meets the evidence gate now, so hold launches for review. The completion
+monitor remains available for later authorized registered work.
+
 # Completed:79/78/74/78, selected5k79/104
 
 [Final findings and evidence](SHIFTED_REPAIR_TTT_RESULTS.md) supersede all interim

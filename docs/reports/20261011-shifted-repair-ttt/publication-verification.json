@@ -1,0 +1,13 @@
+{
+  "remote_commit": "aab136e797a05feea9b2318fa7512beab332287b",
+  "artifacts": 273,
+  "reports": 49,
+  "completed": 13,
+  "active": 0,
+  "all_case_identities_match": true,
+  "verified_utc": "2026-10-11T23:36:26.872175+00:00",
+  "verification": "Live ls-remote matched HEAD/origin/main; every ledger artifact Git blob was SHA256 checked; all49 reports and104 case identities verified; final report blob matched local exact text.",
+  "model_calls": 0,
+  "simulator_calls": 0,
+  "final_tests_read": false
+}

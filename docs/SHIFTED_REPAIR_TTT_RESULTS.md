@@ -178,5 +178,7 @@ actions; other scores are model proxies.
 One seed, repeatedly reused development cases, checkpoint selection, differing
 four/eight-rank random streams, baseline ports and matched ceilings rather than
 equal consumed compute prevent generalization, component causality or SOTA
-claims. Publish this negative result before a further decision. No new candidate
-is queued by this report; no baseline retraining or sealed-test work is permitted.
+claims. Completion was remotely verified at aab136e. The
+[post-publication review](SHIFTED_REPAIR_TTT_REVIEW.md) holds further launches
+because no specific supported correction remains at this review. No baseline
+retraining or sealed-test work is permitted.

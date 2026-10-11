@@ -1,3 +1,17 @@
+# October11: completion publication verified; further launches held for review
+
+Shifted repair is published at[aab136e](https://github.com/Abecid/LeFlow-/commit/aab136e797a05feea9b2318fa7512beab332287b).
+Live origin/main and273 artifact blobs/49 reports across13 completed entries
+verified; all104 case identities agree. W&B finished and all owned workers exited.
+
+[Post-publication review](SHIFTED_REPAIR_TTT_REVIEW.md) finds no further concrete
+correction justified now: shifted anchors are used, teacher clipping/loss fall
+without success gain, diversity contracts in both improving and regressing runs,
+and existing stall feedback does not reveal unobserved counterfactual outcomes.
+Hold launches for review under the user's stopping rule. No candidate active;
+monitor remains available for subsequent explicitly authorized registered work.
+Known measured cumulative components98.593936GPUh. Baselines/data/tests preserved.
+
 # October11: shifted repair completes79/78/74/78; selected5k79
 
 All416 evaluations have zero timeouts; failures exhaust200 actions. The selected
