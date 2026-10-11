@@ -1,22 +1,19 @@
 # Results and completion publication
 
-Updated October 11, 2026. The latest guided-TTT run completed at20k with
-**75/104**. The preserved best controller remains **80/104**. All scores below
+Updated October 11, 2026. The latest repair-flow run completed20k with
+**80/73/75/75**, selecting5k80/104. The preserved best controller remains **80/104**. All scores below
 use the same104 development cases and seed3072; the final suite is sealed.
 These are custom MetaWorld shared-world comparisons, with the release/port
 limitations described in each report. They do not establish native-benchmark
 SOTA, convergence, isolated component gains or generalization.
 
-## Active iteration
+## Current iteration status
 
-[Execution-conditioned flow repair](REPAIR_FLOW_TTT.md) is registered under the
-October11 iterative-improvement request. It preserves the best verified proposal,
-learns bounded action corrections and removes the weak surrogate-gradient loop.
-Its first two evaluations are **80/104 at5k and73/104 at10k**, zero timeouts.
-Selected5k ties the preserved best with6 paired wins and6 regressions;10k loses
-seven cases versus5k and gains none. Two evaluations remain; this run is still
-active. [Interim analysis](reports/20261011-repair-flow-ttt/analysis-round-2.json).
-All previous results below remain frozen.
+[Repair-flow TTT completed](REPAIR_FLOW_TTT_RESULTS.md), tying80/104 with six
+paired wins/six regressions against the preserved GMM80 reference. All four
+evaluations, full metrics, failures, visual review and compute are preserved.
+No run is active at this completion snapshot. The authorized sequential loop
+may consider one concrete evidence-supported correction after publication.
 
 ## Preserved comparisons
 
@@ -28,7 +25,8 @@ checkpoint, with earliest ties.
 
 | Method and findings | Success curve /104 | Selected | Optimization GPUh |
 | --- | --- | ---: | ---: |
-| [Guided action-flow TTT, latest](GUIDED_TTT_RESULTS.md) | 72 / 70 / 72 / 75 | 75 at20k | 4.595 |
+| [Repair-flow TTT, latest](REPAIR_FLOW_TTT_RESULTS.md) | 80 / 73 / 75 / 75 | 80 at5k | 1.620 |
+| [Guided action-flow TTT](GUIDED_TTT_RESULTS.md) | 72 / 70 / 72 / 75 | 75 at20k | 4.595 |
 | [Execution revision, GMM](EXECUTION_REVISION_RESULTS.md) | 80 / 78 / 79 / 76 | 80 at5k | 3.233 |
 | [Reasoning-conditioned action flow](FLOW_REASONING_RESULTS.md) | 79 / 75 / 76 / 76 | 79 at5k | 3.166 |
 | [Flow + episodic adaptation](PROGRESS_TTT_RESULTS.md) | 77 / 76 / 78 / 74 | 78 at15k | 3.542 |
@@ -49,8 +47,8 @@ controller does not use a diffusion/flow generator.
 
 The machine-readable [results ledger](results-ledger.json) points to each run's
 identity, complete marker, metrics, all evaluations and SHA256 hashes. Its
-read-only verifier checks95 evidence artifacts,37 evaluation reports and all
-104 case identities across the ten current comparisons. Run
+read-only verifier checks the hashed evidence artifacts,41 evaluation reports and all
+104 case identities across the eleven current comparisons. Run
 `python3 scripts/analysis/verify_result_publications.py` from the repository.
 It invokes no models or simulators and does not read final-test outcomes.
 

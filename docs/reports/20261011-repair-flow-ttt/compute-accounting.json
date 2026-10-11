@@ -1,0 +1,96 @@
+{
+  "units": "aggregate GPU-hours",
+  "known_prior_campaign_subtotal": 70.39550092763113,
+  "additional_completed_runs": [
+    {
+      "method": "progress_ttt",
+      "charged_optimization_gpu_hours": 3.542264837167329,
+      "inherited_already_charged_gpu_hours": 0.0,
+      "incremental_optimization_gpu_hours": 3.542264837167329,
+      "validation_gpu_hours": 2.013267637433277
+    },
+    {
+      "method": "leflow_ttt",
+      "charged_optimization_gpu_hours": 2.4373079992189175,
+      "inherited_already_charged_gpu_hours": 0.05383251689995328,
+      "incremental_optimization_gpu_hours": 2.383475482318964,
+      "validation_gpu_hours": 2.3738358717784287
+    },
+    {
+      "method": "guided_ttt",
+      "charged_optimization_gpu_hours": 4.594631382901635,
+      "inherited_already_charged_gpu_hours": 0.0,
+      "incremental_optimization_gpu_hours": 4.594631382901635,
+      "validation_gpu_hours": 2.165615062659813
+    },
+    {
+      "method": "repair_flow_ttt",
+      "charged_optimization_gpu_hours": 1.6195924839646452,
+      "inherited_already_charged_gpu_hours": 0.0,
+      "incremental_optimization_gpu_hours": 1.6195924839646452,
+      "validation_gpu_hours": 1.815225299037993
+    }
+  ],
+  "additional_bounded_checks": [
+    {
+      "source": "docs/reports/20261010-progress-ttt-run/launch-verification.json",
+      "gpu_hours": 0.005697335298690531,
+      "optimizer_updates": 0
+    },
+    {
+      "source": "docs/reports/20261010-leflow-ttt/ddp-check.json",
+      "gpu_hours": 0.009908680386013455,
+      "optimizer_updates": 0
+    },
+    {
+      "source": "docs/reports/20261010-guided-ttt/campaign/preflight.json",
+      "gpu_hours": 0.005745051798100273,
+      "optimizer_updates": 0
+    },
+    {
+      "source": "docs/reports/20261011-repair-flow-ttt/preflight.json",
+      "gpu_hours": 0.0057951305713504556,
+      "optimizer_updates": 0
+    },
+    {
+      "source": "docs/reports/20261011-repair-flow-ttt/ddp-check.json",
+      "gpu_hours": 0.0029903814527723525,
+      "optimizer_updates": 0
+    },
+    {
+      "source": "docs/reports/20261011-repair-flow-ttt/diagnostics.json",
+      "gpu_hours": 0.00046866816882457996,
+      "optimizer_updates": 0
+    },
+    {
+      "source": "docs/reports/20261011-repair-flow-ttt/diagnostics-corrected.json",
+      "gpu_hours": 0.0004760106647801068,
+      "optimizer_updates": 0
+    }
+  ],
+  "cumulative_optimization": 56.50470147581978,
+  "cumulative_completed_validation": 34.075390051462584,
+  "known_cumulative_components": 90.93449024323375,
+  "source_sha256": {
+    "docs/reports/20261010-flow-reasoning/compute-accounting.json": "de60356cf971484b5ce8896c152b27f3fb3b9008878724ecfab449a85bdbd226",
+    "docs/reports/20261010-progress-ttt-run/run/compute_usage.json": "1e6ca1fd7a3a5dd63116883bac6fca9a09439eccfa1f8d4e5e0ff54978f42e89",
+    "docs/reports/20261010-leflow-ttt/run/compute_usage.json": "9683599f33a3986cdb906991bc8810baf0fb78ca0676d9d5c5a8926eaa664510",
+    "docs/reports/20261010-guided-ttt/run/compute_usage.json": "dbd71f880624bf6f768378a6aefd8ea57a9cb6a4fbb5e9f493a6cfbda133d5fe",
+    "docs/reports/20261011-repair-flow-ttt/run/compute_usage.json": "1ea1fc5a794429fe6f06d86c59706d20417896417faa7452858caf79149ed981",
+    "docs/reports/20261010-progress-ttt-run/launch-verification.json": "6adb4f9b8e107928cee197726725ed1d9b1bd1a2419e9ddf154bf7935d181714",
+    "docs/reports/20261010-leflow-ttt/ddp-check.json": "89522a22490e58444cb2633f539707aab4c177f3321dc99fb9bc901179dd857f",
+    "docs/reports/20261010-guided-ttt/campaign/preflight.json": "89f325f0e42b9cbbff8ed695a77b55906bb9b7f0ab63cc15bcb5d80f5328a97a",
+    "docs/reports/20261011-repair-flow-ttt/preflight.json": "3769e609409cb56725c6e8542d337a0011ef8d224341ce3e0610b69e7d1826d4",
+    "docs/reports/20261011-repair-flow-ttt/ddp-check.json": "67e1c137d9276d30db22ef819183c64b5950cee214b8ccf24edea23b8a495f2d",
+    "docs/reports/20261011-repair-flow-ttt/diagnostics.json": "91b1e075f3d8bd5fa6f06eb1cbb0674da61d8ac43e6a1a99496dea03d3c60e6f",
+    "docs/reports/20261011-repair-flow-ttt/diagnostics-corrected.json": "25d6e7d508ef6bdf100cd66b6246722c3906a90881bc7c25c49792c1018307f2"
+  },
+  "all_infrastructure_runtime_total_available": false,
+  "scope": "Known measured components through completed repair_flow_ttt. Shared world and adapter are counted once; per-run charged allowances remain unchanged.",
+  "exclusions": [
+    "Not a full cluster bill; CPU collection/render/audit, unquantified old implementation checks and unused GPU reservations are not converted into measured GPU compute.",
+    "LeFlow-TTT preflight seconds lack an explicit GPU charge; retained in its report but not guessed here."
+  ],
+  "baseline_retraining_updates": 0,
+  "final_tests_read": false
+}

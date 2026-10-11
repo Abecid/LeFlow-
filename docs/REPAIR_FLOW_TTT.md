@@ -1,3 +1,10 @@
+# Completion:80/73/75/75, selected5k80/104
+
+The run is complete; [final findings and evidence](REPAIR_FLOW_TTT_RESULTS.md)
+supersede the interim status below. Zero timeouts; ties preserved GMM80 with six
+paired wins/six regressions. Source/data/checkpoint audit passed, W&B finished,
+all owned processes exited. No next candidate has launched at this snapshot.
+
 # Execution-conditioned flow repair: evidence and registered experiment
 
 October11,2026. Active candidate `repair_flow_ttt` scored **80/104 at5k and

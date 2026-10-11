@@ -1,3 +1,13 @@
+# Repair-flow completed: selected80/104, final75/104
+
+October11 13:50 Pacific verification: all four fixed104 rounds are80/73/75/75,
+zero timeouts. Selected5k ties GMM80 with six wins/six regressions. All owned
+processes exited; W&B r3y7nepq finished. Source481bb767 and150 hashes passed the
+final audit. Read docs/REPAIR_FLOW_TTT_RESULTS.md and the completed ledger entry.
+No candidate is currently active. Publish this result before considering one
+specific evidence-backed next correction under the October11 authorization.
+Earlier active entries below are historical; never restart the completed run.
+
 # Latest observed result: repair-flow80/73 at5k/10k;15k evaluation active
 
 October11 13:30 Pacific:10k scores73/104 with zero timeouts, seven regressions and

@@ -1,0 +1,97 @@
+{
+  "utc": "2026-10-11T20:50:03.109960+00:00",
+  "status": {
+    "code": "481bb7679aa3f43e938fd3991f3be57ba59f0ed0",
+    "pid": 739421,
+    "run_dir": "/home/mtxu/adam/LeFlow-experiments/20261011-repair-flow-ttt/campaign/runs/repair_flow_ttt_3072",
+    "status": "completed_validation_ready_for_analysis",
+    "utc": "2026-10-11T20:48:47.081303+00:00",
+    "wall_seconds": 3276.4756725020707
+  },
+  "failure_marker_present": false,
+  "owned_processes": [
+    {
+      "pid": 739421,
+      "expected_start_ticks": 1006895449,
+      "present": false
+    },
+    {
+      "pid": 741958,
+      "expected_start_ticks": 1006908347,
+      "present": false
+    },
+    {
+      "pid": 741981,
+      "expected_start_ticks": 1006908485,
+      "present": false
+    },
+    {
+      "pid": 741982,
+      "expected_start_ticks": 1006908485,
+      "present": false
+    },
+    {
+      "pid": 741983,
+      "expected_start_ticks": 1006908485,
+      "present": false
+    },
+    {
+      "pid": 741984,
+      "expected_start_ticks": 1006908485,
+      "present": false
+    }
+  ],
+  "wandb": {
+    "id": "r3y7nepq",
+    "state": "finished",
+    "summary": {
+      "step": 20000,
+      "budget/optimization_gpu_hours": 1.6195924839646452,
+      "validation/checkpoint_step": 20000,
+      "validation/success_macro": 0.7211538461538461
+    }
+  },
+  "checkpoints": {
+    "step_0005000.pt": {
+      "path": "/home/mtxu/adam/LeFlow-experiments/20261011-repair-flow-ttt/campaign/runs/repair_flow_ttt_3072/checkpoints/step_0005000.pt",
+      "sha256": "1d373981a9d261b1d8ba454542442df98b7ea19b248fa6428e924d7c8f459981"
+    },
+    "step_0010000.pt": {
+      "path": "/home/mtxu/adam/LeFlow-experiments/20261011-repair-flow-ttt/campaign/runs/repair_flow_ttt_3072/checkpoints/step_0010000.pt",
+      "sha256": "2411e1d585585ce6d5c896805e83ccdc79b265557b439f34eacee3ae7123fd4c"
+    },
+    "step_0015000.pt": {
+      "path": "/home/mtxu/adam/LeFlow-experiments/20261011-repair-flow-ttt/campaign/runs/repair_flow_ttt_3072/checkpoints/step_0015000.pt",
+      "sha256": "9e23b0754996d221975a4bc25aa071cc35ae71b4a099005da079b9a331876a18"
+    },
+    "step_0020000.pt": {
+      "path": "/home/mtxu/adam/LeFlow-experiments/20261011-repair-flow-ttt/campaign/runs/repair_flow_ttt_3072/checkpoints/step_0020000.pt",
+      "sha256": "7f87abe2f8c29c406c2a337d9cb586a48028a3f8ed4410031dbe4f7b9f34dd0b"
+    }
+  },
+  "saved_trajectory_hashes": {
+    "trajectories/step_0005000/assembly/00000.npz": "202e8fcc48618f4031b3617bd461bad5bd0da5f2e52680929270ccb2dbe308ae",
+    "trajectories/step_0005000/coffee-button/00000.npz": "ecce39e70e071d10de35e3ff887a0c6bfe421a710b02ce6418cdc9691dfd0e8e",
+    "trajectories/step_0005000/dial-turn/00000.npz": "7f971c18cfc40c62114dd8df9078ecc7dd6d6b376311231b244b946ef2ca9aaf",
+    "trajectories/step_0005000/door-close/00000.npz": "3d5263dab37676b4dc13960ebd227c3a5856b4875cd0bc4c9e9bac535976a8a9",
+    "trajectories/step_0005000/drawer-close/00004.npz": "71aafa65800305209c3bdfd144811c03057a67d48f417590311db93152fe89ba",
+    "trajectories/step_0005000/faucet-open/00003.npz": "e4490fe30900df95956db1c712a86fc769f9275639023ec67b74a00718ae0857",
+    "trajectories/step_0005000/handle-press/00000.npz": "c2c5a866c3dcf3ebd91045b77591792f37f31981165f099d7f600e94678f590c",
+    "trajectories/step_0005000/pick-place/00000.npz": "969829b9c2085d1e4c2bfabaf22f76c006fd6a151f9658ee90801d28fd89555a",
+    "trajectories/step_0005000/reach/00003.npz": "f6a7c8544a5c4f62ae719f8df51ecf9ee44b696daf31f272b731f33f840bcf30",
+    "trajectories/step_0005000/reach/00005.npz": "71194222c7da38f411675edae607bc3d123b8f1caa594637c5adf8ef772049ce",
+    "trajectories/step_0020000/assembly/00000.npz": "e8711e3e75552265cc11a18dcbd91989b0f764337529d923aebe391bc303a2a3",
+    "trajectories/step_0020000/coffee-button/00000.npz": "2ec522967c3476d9c260b5b6c4e6330b7c1882ce7f15c7421b1da21ce89ed1dd",
+    "trajectories/step_0020000/dial-turn/00000.npz": "8480d93afb32a8e1be6b5047faf0406fa767d4f0ee8c52ac032633d8c8f33027",
+    "trajectories/step_0020000/door-close/00000.npz": "3e5847c5f8560e26b7352685601898722fe8517e1061089298f03572d9ff93f3",
+    "trajectories/step_0020000/drawer-close/00004.npz": "5bf3e0df5d15246367b2399f8c3a280897d0e78fc46b2dde0db73496b4ccf94d",
+    "trajectories/step_0020000/faucet-open/00003.npz": "1ed57b99dc5d452bdde50c165b81c2ae83bbb43dadefa819449412a4c2e8ed7d",
+    "trajectories/step_0020000/handle-press/00000.npz": "7c68ff93106a442ecb7be4acfe2d97fae8f665e1df1d47e1f8025ba793865808",
+    "trajectories/step_0020000/pick-place/00000.npz": "17c3581061cee58126be970afd575834fd36d895b7e64cbc8028d783bdf5dcff",
+    "trajectories/step_0020000/reach/00003.npz": "0910390297f5c8b373a12ec785e675cd8b783b80d844c9f1475f168cb518d849",
+    "trajectories/step_0020000/reach/00005.npz": "1f19b710d53d5ce19fa519e66d07d28c0fc0f24efc30f05adbcddbee72a2c85a"
+  },
+  "model_calls": 0,
+  "simulator_calls": 0,
+  "final_tests_read": false
+}

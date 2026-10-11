@@ -2,87 +2,105 @@
   "schema_version": 1,
   "scope": "Current shared-world MetaWorld fixed-104 development comparisons; historical campaigns remain linked in RESULTS_INDEX.md.",
   "publication_contract": "A run is publication-complete only when these artifacts and its findings report are committed and verified on origin/main. Local ledger membership alone does not prove remote publication.",
-  "active_runs": [
+  "active_runs": [],
+  "completed_runs": [
     {
-      "run_key": "20261011-repair-flow-ttt",
+      "run_key": "r3y7nepq",
       "method": "repair_flow_ttt",
+      "label": "Execution-conditioned residual flow repair",
       "seed": 3072,
-      "status": "training",
+      "trained_head": true,
       "source": "481bb7679aa3f43e938fd3991f3be57ba59f0ed0",
-      "server_record": "/home/mtxu/adam/LeFlow-experiments/20261011-repair-flow-ttt",
-      "server_run": "/home/mtxu/adam/LeFlow-experiments/20261011-repair-flow-ttt/campaign/runs/repair_flow_ttt_3072",
-      "report": "docs/REPAIR_FLOW_TTT.md",
-      "expected_validation_steps": [
-        5000,
-        10000,
-        15000,
-        20000
-      ],
-      "training_contract": {
-        "expert_episodes": 6222,
-        "global_batch": 64,
-        "maximum_updates": 20000,
-        "optimization_gpu_seconds": 28800,
-        "controller_seconds": 10,
-        "primitive_actions": 200,
-        "validation_cases": 104,
-        "planned_gpus": 4,
-        "final_tests_enabled": false
-      },
-      "coordinator_pid": 739421,
-      "launcher_utc": "2026-10-11T19:54:08.373216+00:00",
-      "runtime_hash_count": 150,
-      "cache": "/tmp/mtxu-repair-flow-ttt-20261011",
-      "followup": "continue-flow-jepa-campaign-and-preserve-results",
-      "wandb_id": "r3y7nepq",
       "wandb_url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/r3y7nepq",
-      "worker_pid": 741958,
-      "verified_utc": "2026-10-11T20:30:05.566509+00:00",
-      "verified_step": 15000,
-      "observed_validation_steps": [
-        5000,
-        10000
-      ],
-      "interim_selected_step": 5000,
-      "interim_selected_successes": 80,
-      "preserved_evaluations": [
+      "report": "docs/REPAIR_FLOW_TTT_RESULTS.md",
+      "evidence_directory": "docs/reports/20261011-repair-flow-ttt/run",
+      "complete_artifact": "docs/reports/20261011-repair-flow-ttt/run/complete.json",
+      "metrics_artifact": "docs/reports/20261011-repair-flow-ttt/run/metrics.jsonl.gz",
+      "selected_step": 5000,
+      "selected_successes": 80,
+      "curve": [
         {
           "step": 5000,
           "successes": 80,
           "timeouts": 0,
-          "artifact": "docs/reports/20261011-repair-flow-ttt/run/validation/step_0005000.json.gz",
-          "checkpoint": {
-            "path": "/home/mtxu/adam/LeFlow-experiments/20261011-repair-flow-ttt/campaign/runs/repair_flow_ttt_3072/checkpoints/step_0005000.pt",
-            "sha256": "1d373981a9d261b1d8ba454542442df98b7ea19b248fa6428e924d7c8f459981"
-          }
+          "artifact": "docs/reports/20261011-repair-flow-ttt/run/validation/step_0005000.json.gz"
         },
         {
           "step": 10000,
           "successes": 73,
           "timeouts": 0,
-          "artifact": "docs/reports/20261011-repair-flow-ttt/run/validation/step_0010000.json.gz",
-          "checkpoint": {
-            "path": "/home/mtxu/adam/LeFlow-experiments/20261011-repair-flow-ttt/campaign/runs/repair_flow_ttt_3072/checkpoints/step_0010000.pt",
-            "sha256": "2411e1d585585ce6d5c896805e83ccdc79b265557b439f34eacee3ae7123fd4c"
-          }
+          "artifact": "docs/reports/20261011-repair-flow-ttt/run/validation/step_0010000.json.gz"
+        },
+        {
+          "step": 15000,
+          "successes": 75,
+          "timeouts": 0,
+          "artifact": "docs/reports/20261011-repair-flow-ttt/run/validation/step_0015000.json.gz"
+        },
+        {
+          "step": 20000,
+          "successes": 75,
+          "timeouts": 0,
+          "artifact": "docs/reports/20261011-repair-flow-ttt/run/validation/step_0020000.json.gz"
         }
       ],
-      "interim_artifact_sha256": {
-        "docs/REPAIR_FLOW_TTT.md": "90032925927df89c6dc98fcddb2eda750d9155349818c6b01e0063939eb56226",
+      "optimization_gpu_hours": 1.6195924839646452,
+      "validation_gpu_hours": 1.815225299037993,
+      "server_record": "/home/mtxu/adam/LeFlow-experiments/20261011-repair-flow-ttt",
+      "artifact_sha256": {
+        "docs/reports/20261011-repair-flow-ttt/analysis/final-audit.json": "49c1ca3ecfb458608cd0ceb4e4d22246c00ba52833f30e66415eed793a3f275a",
         "docs/reports/20261011-repair-flow-ttt/analysis-round-1.json": "80f2a26736c4e2c96aa9822256c0e7c66b37aba501e6c53d3dec2abe7c1571b5",
         "docs/reports/20261011-repair-flow-ttt/analysis-round-2.json": "2a503572e7ed87368ded5291a28a22492c28b61cb8257213e7d042a79be9dc47",
-        "docs/reports/20261011-repair-flow-ttt/run/compute_usage.json": "735c4ae502cd2b166308a846a3ade0aba392eb04db592e094dc05faa0a4009fb",
-        "docs/reports/20261011-repair-flow-ttt/run/metrics.jsonl.gz": "8e9d3376d0035cbb4856a4f8a7f9873f44462bc4df4a921fe4225cf9b35ac86b",
+        "docs/reports/20261011-repair-flow-ttt/analysis-round-3.json": "27c50a6c85b279c30aecd800b38c696e648108da9263c1971e001fae0a0ff6df",
+        "docs/reports/20261011-repair-flow-ttt/analysis-round-4.json": "6ace2a761c6d225f4d7b60070630f6e921558cf3011175732377a6b8e3f7e777",
+        "docs/reports/20261011-repair-flow-ttt/compute-accounting.json": "e69f6d491b8425454342c5d97f1965d6c407417816f9c0034609dd6d80506a98",
+        "docs/reports/20261011-repair-flow-ttt/contact-sheets-20000/assembly-00000.png": "63797f0a8c2812a36cdd427498a43598cd04942d09d1659fb00c5036ac47ca19",
+        "docs/reports/20261011-repair-flow-ttt/contact-sheets-20000/coffee-button-00000.png": "15b6e733f6cfb205291f92c39f211440f4ba036eb1d2455d8ba59c6ee343b375",
+        "docs/reports/20261011-repair-flow-ttt/contact-sheets-20000/dial-turn-00000.png": "0b67b70af96c2bb3e890c545fbf29d3ba2feef61aace4a15ad555d4426070728",
+        "docs/reports/20261011-repair-flow-ttt/contact-sheets-20000/door-close-00000.png": "3edd54fe376b92e9cda3981709419c555d7928b48777c707f9284b34f3f70bd0",
+        "docs/reports/20261011-repair-flow-ttt/contact-sheets-20000/drawer-close-00004.png": "ff6e74c600a21c984ac249f431a5032386258f6ef3460e21c36564ab9a115b0e",
+        "docs/reports/20261011-repair-flow-ttt/contact-sheets-20000/faucet-open-00003.png": "2748418ccc22b74529ab98d3be0b9ca5315bf8ab28b0ed57f851f22faca8a9d3",
+        "docs/reports/20261011-repair-flow-ttt/contact-sheets-20000/handle-press-00000.png": "6365474a89483e29063348867c0e868cc1f630ea0d79ded05f9f17dbb902de26",
+        "docs/reports/20261011-repair-flow-ttt/contact-sheets-20000/index.json": "17af84f614333f283d92ef50f6af7e93b499911f1acafd36d33091b297f220c1",
+        "docs/reports/20261011-repair-flow-ttt/contact-sheets-20000/pick-place-00000.png": "367ff3eb83690dc14a30625ea1d5d8c02902423a486960ba815095f925af9ac3",
+        "docs/reports/20261011-repair-flow-ttt/contact-sheets-20000/reach-00003.png": "38ea79ae66d04581f3a637b9e38f4bd123f7ef3bec0761249d4a7f754cc50742",
+        "docs/reports/20261011-repair-flow-ttt/contact-sheets-20000/reach-00005.png": "4f652a723b0cc68099180baa3f8931d0c9f2553e11e158e6f202cf958aa71ec7",
+        "docs/reports/20261011-repair-flow-ttt/contact-sheets-5000/assembly-00000.png": "8e391908c9fa34064eb9a9070b35237892e19139a985528c11b5884d28baceaa",
+        "docs/reports/20261011-repair-flow-ttt/contact-sheets-5000/coffee-button-00000.png": "b7216ece756bb8b7a7b2f53a93e1a122ba12a6d59ceb716321df3580025b2d46",
+        "docs/reports/20261011-repair-flow-ttt/contact-sheets-5000/dial-turn-00000.png": "6b29339758f0539f8113484c9ce4830dc2f3ea0dbc6584778617a0472e9fd0fb",
+        "docs/reports/20261011-repair-flow-ttt/contact-sheets-5000/door-close-00000.png": "600f29e58af76d40657be5e9e79451e8617fa9b1ac4c623b6ca0d297cbf2d26c",
+        "docs/reports/20261011-repair-flow-ttt/contact-sheets-5000/drawer-close-00004.png": "6c22922da700c407644eec446748fdba3652effe89a48949f638534cd2d1fe2a",
+        "docs/reports/20261011-repair-flow-ttt/contact-sheets-5000/faucet-open-00003.png": "387b94502d35dff96394212989c8822fe8f2d2bfea77ad25de4f6d8dad35eac6",
+        "docs/reports/20261011-repair-flow-ttt/contact-sheets-5000/handle-press-00000.png": "12d3c9fbc4fdf2a06fd14238540d641030a342d4936fae44865a0a7c12ab2d02",
+        "docs/reports/20261011-repair-flow-ttt/contact-sheets-5000/index.json": "79e8b51c7ceff0a7737560cfcaaa06b2527e22ee2e3f712bc63244864dfb399e",
+        "docs/reports/20261011-repair-flow-ttt/contact-sheets-5000/pick-place-00000.png": "ea6ceb37f9e30134a1496a53bfb80ef150ca9c9bed08f409f0d85bfce3d56376",
+        "docs/reports/20261011-repair-flow-ttt/contact-sheets-5000/reach-00003.png": "580a9bacfb32bc5638479c349d49a14eef45624119f11bde0153a75d75b2a09b",
+        "docs/reports/20261011-repair-flow-ttt/contact-sheets-5000/reach-00005.png": "7c9ae73dda07c83b16f52145f0c5cf3e96c2f4962cb8855f69680cadf1361957",
+        "docs/reports/20261011-repair-flow-ttt/ddp-check.json": "67e1c137d9276d30db22ef819183c64b5950cee214b8ccf24edea23b8a495f2d",
+        "docs/reports/20261011-repair-flow-ttt/diagnostics-corrected.json": "25d6e7d508ef6bdf100cd66b6246722c3906a90881bc7c25c49792c1018307f2",
+        "docs/reports/20261011-repair-flow-ttt/diagnostics.json": "91b1e075f3d8bd5fa6f06eb1cbb0674da61d8ac43e6a1a99496dea03d3c60e6f",
+        "docs/reports/20261011-repair-flow-ttt/final-health.json": "b01d7bbcafc0ec14efd2ec5cbe0088aadbaef4b1941161697daf2c4d7d8092ec",
+        "docs/reports/20261011-repair-flow-ttt/launch-health.json": "87036e2fe9f667096a5968ce58bfcfbc99bbacc39ea09e880f991f89cf9af0dc",
+        "docs/reports/20261011-repair-flow-ttt/preflight.json": "3769e609409cb56725c6e8542d337a0011ef8d224341ce3e0610b69e7d1826d4",
+        "docs/reports/20261011-repair-flow-ttt/run/complete.json": "b12e60b652f88184b9c0bb0113568c72d83b4727b6309f0493fedea60f14c6ed",
+        "docs/reports/20261011-repair-flow-ttt/run/compute_usage.json": "1ea1fc5a794429fe6f06d86c59706d20417896417faa7452858caf79149ed981",
+        "docs/reports/20261011-repair-flow-ttt/run/metrics.jsonl.gz": "a521a2ad1e4d624746bbb96958ca55882df3dcae35c937bf612e4130efb02d0d",
         "docs/reports/20261011-repair-flow-ttt/run/run.json": "0b767630a2f6da2c68666deba4e0617310364708efa6139ddba2b93c2004f644",
         "docs/reports/20261011-repair-flow-ttt/run/validation/step_0005000.json.gz": "b1cd99f487e85e47b77046beac62b07da534a17dfdf553c29a6fae168fbad4d7",
         "docs/reports/20261011-repair-flow-ttt/run/validation/step_0010000.json.gz": "8ad09a60b8e36528edc4a92658e3dae02e322f5eba950956e098ea8fa166e980",
+        "docs/reports/20261011-repair-flow-ttt/run/validation/step_0015000.json.gz": "1b123883f50b9467948b71e349fa0d259c105b018c7da5373422570fbcbba914",
+        "docs/reports/20261011-repair-flow-ttt/run/validation/step_0020000.json.gz": "67233739fba6c803694a1d872ec6e276226d67d8b172e6619f68fe80b5def5d3",
+        "docs/reports/20261011-repair-flow-ttt/runtime-files.json": "d8fdb10e3b5a8ba1e48423c68da70c6cb2efb1d5b095ac239690cb2bf08f2e07",
+        "docs/reports/20261011-repair-flow-ttt/tests.log": "af17a82271b0ba106150d0ae7c974bd925b14a531df0ff36fa155ae74843ef36",
+        "docs/reports/20261011-repair-flow-ttt/transfer-checksums.json": "6eb5f36fef59218dba73ca8a2398545f5382808ae83a6e04d5e1407052cd6b67",
         "docs/reports/20261011-repair-flow-ttt/verification-round-1.json": "9c84862f0930fe90c4d7b54d5d916175b5a0748fedec3668d42b92ddad6a3ba5",
-        "docs/reports/20261011-repair-flow-ttt/verification-round-2.json": "bf24b761645d54906cd15afb673aa0b34b08408f7310d428860ef01ffb75c0fa"
-      },
-      "interim_scope": "First two registered evaluations preserved; run active at15k. Final evaluation completion, tensor/bank audit and final publication remain pending."
-    }
-  ],
-  "completed_runs": [
+        "docs/reports/20261011-repair-flow-ttt/verification-round-2.json": "bf24b761645d54906cd15afb673aa0b34b08408f7310d428860ef01ffb75c0fa",
+        "docs/reports/20261011-repair-flow-ttt/visual-review-20000.json": "63b5540922ab175ced88b7265c8ec9fdba5c454de161c139265100b2abaf666e",
+        "docs/reports/20261011-repair-flow-ttt/visual-review-5000.json": "bb1904b9619cb9ebb09de4c0674a13a28a76e3296bd3f3f801d99dc3786ada1a",
+        "docs/REPAIR_FLOW_TTT_RESULTS.md": "7cd172ecf192cc1b3de904173ba9e7c8712f5f8f77d8ded3f1fb437f7fca5791",
+        "docs/REPAIR_FLOW_TTT.md": "76ccf340afe6a66c044eed25115ac73a86b52fa9547cc0533b607b7fc4a88751"
+      }
+    },
     {
       "run_key": "dw8gnxtj",
       "method": "guided_ttt",

@@ -1,0 +1,86 @@
+{
+  "checkpoint": 20000,
+  "images_inspected": 10,
+  "all_saved_contact_sheets_inspected": true,
+  "readable_resolution": [
+    1536,
+    326
+  ],
+  "observations": [
+    {
+      "id": "validation/assembly/00000",
+      "file": "contact-sheets-20000/assembly-00000.png",
+      "success": false,
+      "steps": 200,
+      "observation": "The hand approaches the ring/peg region, withdraws at action150, then returns near the region by200. The ring remains visibly separate from the registered goal configuration."
+    },
+    {
+      "id": "validation/coffee-button/00000",
+      "file": "contact-sheets-20000/coffee-button-00000.png",
+      "success": true,
+      "steps": 36,
+      "observation": "The hand approaches the machine/button region; recorded success at36 actions."
+    },
+    {
+      "id": "validation/dial-turn/00000",
+      "file": "contact-sheets-20000/dial-turn-00000.png",
+      "success": true,
+      "steps": 85,
+      "observation": "The hand engages the dial region; recorded success at85 actions."
+    },
+    {
+      "id": "validation/door-close/00000",
+      "file": "contact-sheets-20000/door-close-00000.png",
+      "success": true,
+      "steps": 61,
+      "observation": "The door visibly rotates toward its closed configuration; recorded success at61 actions."
+    },
+    {
+      "id": "validation/drawer-close/00004",
+      "file": "contact-sheets-20000/drawer-close-00004.png",
+      "success": true,
+      "steps": 70,
+      "observation": "The drawer appears retracted in the final sampled frame; recorded success at70 actions."
+    },
+    {
+      "id": "validation/faucet-open/00003",
+      "file": "contact-sheets-20000/faucet-open-00003.png",
+      "success": false,
+      "steps": 200,
+      "observation": "The hand reaches the handle region. Late sampled frames change little; the registered criterion remains unmet. This view does not establish contact forces or exact handle rotation."
+    },
+    {
+      "id": "validation/handle-press/00000",
+      "file": "contact-sheets-20000/handle-press-00000.png",
+      "success": true,
+      "steps": 15,
+      "observation": "The hand moves into the handle region; recorded success at15 actions."
+    },
+    {
+      "id": "validation/pick-place/00000",
+      "file": "contact-sheets-20000/pick-place-00000.png",
+      "success": false,
+      "steps": 200,
+      "observation": "The red object stays on the table in all five sampled frames while the hand moves toward the goal-marker region; no placement is visible."
+    },
+    {
+      "id": "validation/reach/00003",
+      "file": "contact-sheets-20000/reach-00003.png",
+      "success": false,
+      "steps": 200,
+      "observation": "The hand approaches the target region, with little late visible progress; recorded failure persists. Single-view proximity does not establish3D target distance."
+    },
+    {
+      "id": "validation/reach/00005",
+      "file": "contact-sheets-20000/reach-00005.png",
+      "success": true,
+      "steps": 48,
+      "observation": "The hand approaches the target; recorded success at48 actions."
+    }
+  ],
+  "limits": [
+    "All ten exact saved PNGs visually inspected at readable resolution; no missing labels or clipping observed.",
+    "Uniform sampled single-view images cannot establish force/contact mechanics or causal failure mechanisms. Labels come from registered episode records.",
+    "No model or simulator invoked; no sealed test outcomes read."
+  ]
+}

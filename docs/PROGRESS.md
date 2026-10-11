@@ -1,3 +1,21 @@
+# October11 13:50 Pacific: repair-flow completed and verified
+
+Full curve80/73/75/75, select5k80/104; six paired wins/six regressions versus
+GMM80, no development improvement. All416 evaluations have zero timeouts;
+selected24 and final29 failures reach200 actions. Repairs are used55.85% at5k
+and47.41% at20k. Better calibration/action losses do not yield better success;
+initial global/residual dispersion falls61.94%/57.30%. These are associations,
+not causal or physical-ground-truth findings. All twenty selected/final contact
+sheets inspected; pick-place0 visibly leaves the object on the table.
+
+[Completed findings](REPAIR_FLOW_TTT_RESULTS.md). Final audit passed150 runtime
+hashes, source/data/bank/world/checkpoints, causal history/reset and budgets.
+W&B r3y7nepq finished; all owned processes exited. Optimization1.619592GPUh,
+validation1.815225GPUh; bounded checks and cumulative compute retained separately.
+Preserved800 training logs and all four full evaluations losslessly. No model,
+simulator or test call for analysis. Publication is required before the next
+iteration decision; no next candidate is active at this completion snapshot.
+
 # October11 13:30 Pacific: repair-flow10k regresses to73/104
 
 Registered curve80/73 at5k/10k, zero timeouts in both; retain5k. Ten-k loses seven
