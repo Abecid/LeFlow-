@@ -1,0 +1,77 @@
+{
+  "checkpoint_step": 10000,
+  "groups": {
+    "success": {
+      "episodes": 78,
+      "decisions": 2606,
+      "anchor_source_counts": {
+        "retrieved": 871,
+        "generated": 795,
+        "shifted": 940
+      },
+      "selected_repair_by_anchor": {
+        "generated": 455,
+        "shifted": 354,
+        "retrieved": 328
+      },
+      "stall_changed_pool_anchor": 18,
+      "applied_stall_penalty_positive": 68,
+      "action_limit_failures": 0
+    },
+    "failure": {
+      "episodes": 26,
+      "decisions": 2600,
+      "anchor_source_counts": {
+        "retrieved": 534,
+        "generated": 797,
+        "shifted": 1269
+      },
+      "selected_repair_by_anchor": {
+        "retrieved": 240,
+        "generated": 426,
+        "shifted": 473
+      },
+      "stall_changed_pool_anchor": 46,
+      "applied_stall_penalty_positive": 667,
+      "action_limit_failures": 26
+    }
+  },
+  "selected_repair_decisions": 2276,
+  "all_decisions": 5206,
+  "case_ids": [
+    "validation/assembly/00001",
+    "validation/assembly/00002",
+    "validation/assembly/00003",
+    "validation/assembly/00006",
+    "validation/assembly/00007",
+    "validation/dial-turn/00000",
+    "validation/door-open/00000",
+    "validation/door-open/00001",
+    "validation/faucet-open/00001",
+    "validation/faucet-open/00002",
+    "validation/faucet-open/00003",
+    "validation/faucet-open/00005",
+    "validation/faucet-open/00006",
+    "validation/faucet-open/00007",
+    "validation/pick-place/00000",
+    "validation/pick-place/00001",
+    "validation/pick-place/00002",
+    "validation/pick-place/00003",
+    "validation/pick-place/00005",
+    "validation/pick-place/00006",
+    "validation/pick-place/00007",
+    "validation/reach/00000",
+    "validation/reach/00001",
+    "validation/reach/00003",
+    "validation/reach/00006",
+    "validation/reach/00007"
+  ],
+  "limits": [
+    "Anchor source is the logged incumbent provenance before residual repair, not a random treatment.",
+    "Generated/retrieved/shifted groups visit different states and have different episode lengths; counts do not identify causal failure mechanisms.",
+    "Stall counters and progress scores are controller/latent diagnostics, not contact-force or physical-state truth."
+  ],
+  "model_calls": 0,
+  "simulator_calls": 0,
+  "final_tests_read": false
+}

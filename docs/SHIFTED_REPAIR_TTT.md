@@ -1,3 +1,59 @@
+# Second evaluation: 78/104 at 10k; 5k remains selected
+
+Verified October 11 at 22:55 UTC: the second registered development round scores
+**78/104**, after 79/104 at 5k. Both rounds have zero controller timeouts; all 26
+10k failures reach 200 primitive actions. There are **four paired gains and five
+regressions** from 5k. Gains: dial-turn/00006, door-open/00005,
+faucet-open/00000 and reach/00004. Regressions: dial-turn/00000,
+door-open/00000, door-open/00001, reach/00000 and reach/00003; all IDs have the
+`validation/` prefix. Door-open falls from 7/8 to 6/8, faucet-open rises from
+1/8 to 2/8, and reach falls from 4/8 to 3/8. The provisional selection remains
+5k at 79/104, below the preserved 80/104 references. The registered 15k and 20k
+rounds continue without changing training or selection rules.
+
+Deep-update shifted-anchor eligibility/selection near 10k is **95.63%/52.03%**;
+retrieved selection is 16.56%. Repair-flow loss falls from .423991 to .290391,
+teacher clipping from 7.57% to 4.52%, and anchor/teacher action MSE from
+.037524/.024477 to .031185/.021137. Deep calibration loss falls from .027099 to
+.025243. Corrected executed-prefix MAE improves from .0016209 to .0015998
+(1.30%), while success falls by one case. Training-action labels and model
+calibration proxies do not establish executable success or physical failure causes.
+
+Repairs are selected for 2,276/5,206 decisions (**43.72%**, versus 49.68% at 5k).
+Anchor provenance is 1,592 generated, 1,405 retrieved and 2,209 shifted (**42.43%**).
+At paired initial observations with empty history and matching retrieved route
+costs, first-round proposal spread decreases **42.65%** and second-round spread
+**33.43%** relative to 5k; 103/104 and 104/104 cases respectively decrease.
+This measured contraction is neither likelihood entropy nor evidence that it
+caused the success change. At the last 20 decisions of failed cases, raw scores
+are optimistic with nonpositive observed latent progress in 18/26 failures;
+corrected scores show that pattern in 14/26. Controller stall penalties and latent
+progress remain proxies, not physical contact measurements.
+
+[Complete 10k report](reports/20261011-shifted-repair-ttt/run/validation/step_0010000.json.gz),
+[all-round analysis and selected-reference pairs](reports/20261011-shifted-repair-ttt/analysis-round-2.json),
+[10k pairs against every preserved reference](reports/20261011-shifted-repair-ttt/latest-paired-round-2.json),
+[anchor/stall observations](reports/20261011-shifted-repair-ttt/anchor-outcomes-round-2.json),
+and [source/process/online evidence](reports/20261011-shifted-repair-ttt/interim-health-round-2.json)
+preserve negatives as well as gains. All 146 frozen runtime hashes, live owned
+PID/start identities and report/run identities pass; W&B `8yy6nh9f` reports
+78/104 at 10k and remains running. Both reports use the same 104 case identities
+as the frozen comparisons. The previous 5k report is byte-identical; all prior
+training log bytes remain an exact prefix of the updated lossless archive.
+There are 489 periodic training records through step 12201 and two evaluation
+records. Mean 10k decision latency is 84.94 ms. Checkpoint
+`/home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/campaign/runs/shifted_repair_ttt_3072/checkpoints/step_0010000.pt`
+has SHA256 `6dc2769051a7732adc82663712c8d48a4a47a047654fafabdd93a36e2bd18023`.
+
+The copied compute record at step 12247 charges 1.373507 optimization GPUh and
+0.921573 registered evaluation GPUh; all startup checks and setup bring
+[known cumulative measured components](reports/20261011-shifted-repair-ttt/compute-accounting-round-2.json)
+to **96.838035 GPUh**. This remains a partial run snapshot, not a full cluster
+bill. Reused development cases, one seed, checkpoint selection and the offline
+previous-plan approximation still prevent claims of generalization, isolated
+component benefit or SOTA. No new candidate, baseline work or sealed test is
+part of this interim analysis.
+
 # First evaluation: 79/104 at 5k; training continues
 
 Verified October 11 at 22:42 UTC: the first fixed 104-case development round

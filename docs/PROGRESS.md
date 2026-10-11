@@ -1,3 +1,20 @@
+# October 11, 15:55 Pacific: shifted repair 10k scores 78/104
+
+Curve so far: 79/78, zero timeouts; retain 5k79. The second round gains four and
+loses five cases versus 5k; all 26 failures reach 200 actions. Shifted training
+anchors remain selected (52.03% of deep examples). Teacher clipping falls to
+4.52%, calibration/action losses improve, and executed-prefix corrected MAE
+improves 1.30%, without higher task success. Initial global/residual proposal
+spread contracts 42.65%/33.43%; this is observational, not a physical cause.
+
+[Second-round findings and evidence](SHIFTED_REPAIR_TTT.md) preserve both full
+reports, 489 periodic training records, paired IDs versus 5k and every frozen
+reference, checkpoint hashes and stall/anchor diagnostics. All 146 runtime hashes,
+owned process identities and online 10k score pass verification. At step
+12247, charges are 1.373507 optimization GPUh and 0.921573 validation GPUh;
+known cumulative components 96.838035 GPUh including startup. The same run continues
+through its registered 15k/20k evaluations, with no new jobs or final-test access.
+
 # October 11, 15:42 Pacific: shifted repair scores 79/104 at 5k
 
 First registered evaluation: 79/104, zero timeouts, 25 action-limit failures.

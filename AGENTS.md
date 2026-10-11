@@ -1,3 +1,15 @@
+# Shifted repair: 79/78 at 5k/10k; retain 5k and finish the run
+
+October 11, 15:55 Pacific: 10k scores 78/104 with zero timeouts and 26 action-limit
+failures; four gains/five regressions versus 5k79. Better calibration/action loss
+and less teacher clipping did not increase success; initial proposal spread
+contracts. Read docs/SHIFTED_REPAIR_TTT.md and analysis-round-2.json. Source
+2ae5a6c, all 146 hashes, coordinator905872/launcher908541 and four ranks verified;
+W&B agrees. Training healthy at step 12247; registered 15k/20k rounds remain.
+No frozen-code edits, duplicate coordinator, new candidate, baseline work or
+sealed tests. Publish completion before any next decision under the standing
+finite-compute authorization. The improvement-over-80 threshold is not met.
+
 # Shifted repair first evaluation: 79/104; preserve the active run
 
 October 11, 15:42 Pacific: first 5k evaluation scores 79/104, zero timeouts;
