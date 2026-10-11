@@ -1,0 +1,341 @@
+{
+  "utc": "2026-10-11T22:06:20.482001+00:00",
+  "source": "3bdfb49e7c9d4952da7494e50c8dc2530197641e",
+  "source_clean": true,
+  "runtime_hash_count": 137,
+  "status": {
+    "code": "3bdfb49e7c9d4952da7494e50c8dc2530197641e",
+    "pid": 819165,
+    "run_dir": "/home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/campaign/runs/retrieval_repair_ttt_3072",
+    "status": "completed_validation_ready_for_analysis",
+    "utc": "2026-10-11T22:04:17.532710+00:00",
+    "wall_seconds": 3547.8145583402365
+  },
+  "compute": {
+    "global_batch": 64,
+    "gpu_count": 4,
+    "last_update_overrun_gpu_seconds": 0.0,
+    "optimization_cap_gpu_seconds": 28800,
+    "optimization_gpu_hours": 1.748655913176222,
+    "optimization_gpu_seconds": 6295.161287434399,
+    "step": 20000,
+    "stop_check": "optimizer boundary; final-update overrun reported",
+    "validation_gpu_hours": 1.834349136967212,
+    "validation_gpu_seconds": 6603.656893081963,
+    "validation_steps": [
+      5000,
+      10000,
+      15000,
+      20000
+    ]
+  },
+  "worker": {
+    "command": [
+      "/tmp/mtxu-flow-jepa-20261007/env/bin/python",
+      "-m",
+      "torch.distributed.run",
+      "--nnodes=1",
+      "--nproc_per_node=4",
+      "--rdzv-backend=c10d",
+      "--rdzv-endpoint=127.0.0.1:0",
+      "-m",
+      "flow_jepa.execution.train",
+      "--config",
+      "/home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/repo/config/flow_metaworld_retrieval_repair_ttt.json",
+      "--root",
+      "/home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/campaign",
+      "--run-dir",
+      "/home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/campaign/runs/retrieval_repair_ttt_3072",
+      "--world",
+      "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt",
+      "--bank",
+      "/tmp/mtxu-retrieval-repair-ttt-20261011/route_bank.pt"
+    ],
+    "pid": 821683
+  },
+  "processes": [
+    {
+      "pid": 819165,
+      "present": false
+    },
+    {
+      "pid": 821683,
+      "present": false
+    },
+    {
+      "pid": 821698,
+      "present": false
+    },
+    {
+      "pid": 821699,
+      "present": false
+    },
+    {
+      "pid": 821700,
+      "present": false
+    },
+    {
+      "pid": 821701,
+      "present": false
+    },
+    {
+      "pid": 821769,
+      "present": false
+    },
+    {
+      "pid": 821779,
+      "present": false
+    },
+    {
+      "pid": 821785,
+      "present": false
+    },
+    {
+      "pid": 821794,
+      "present": false
+    },
+    {
+      "pid": 821964,
+      "present": false
+    },
+    {
+      "pid": 821771,
+      "present": false
+    },
+    {
+      "pid": 821776,
+      "present": false
+    },
+    {
+      "pid": 821786,
+      "present": false
+    },
+    {
+      "pid": 821793,
+      "present": false
+    },
+    {
+      "pid": 821770,
+      "present": false
+    },
+    {
+      "pid": 821778,
+      "present": false
+    },
+    {
+      "pid": 821787,
+      "present": false
+    },
+    {
+      "pid": 821795,
+      "present": false
+    },
+    {
+      "pid": 821768,
+      "present": false
+    },
+    {
+      "pid": 821777,
+      "present": false
+    },
+    {
+      "pid": 821784,
+      "present": false
+    },
+    {
+      "pid": 821792,
+      "present": false
+    }
+  ],
+  "complete": {
+    "best": 0.7692307692307693,
+    "best_step": 20000,
+    "optimization_gpu_hours": 1.748655913176222,
+    "step": 20000,
+    "stop_reason": "update_limit",
+    "validation_gpu_hours": 1.834349136967212,
+    "validation_steps": [
+      5000,
+      10000,
+      15000,
+      20000
+    ],
+    "wall_seconds": 3265.565935144201
+  },
+  "saved_trajectory_hashes": {
+    "trajectories/step_0005000/assembly/00000.npz": "7a2da63e4a8eeea3f7f9237e5808d489310abb9e9d12903d6cdc14eea17090cc",
+    "trajectories/step_0005000/coffee-button/00000.npz": "fc0e0ae02c74643bc04ef690ee430261c05b98ec363fed16d1ce0aa52942bb93",
+    "trajectories/step_0005000/dial-turn/00000.npz": "a50e33d721e4b76ecf26ee20821d7ea0e385f9182fc87300f098da9aad5fa346",
+    "trajectories/step_0005000/door-close/00000.npz": "56e7e247eb9190a354edbf3858ad58a2d2e1d3cf2813a32ef4b720da41db9058",
+    "trajectories/step_0005000/drawer-close/00004.npz": "b6a8029927d7ad037889e14de22fb5eff56f0fd131343a986e133daa04228a32",
+    "trajectories/step_0005000/faucet-open/00003.npz": "c806ab9a829d520c62a9efd1479df95b57443e79c3b52c5603ff7c5c04cf285a",
+    "trajectories/step_0005000/handle-press/00000.npz": "1d64c26cd83abdf157119cdf7597e88d53e1cc20ffafc329294ab7b8f2c691ea",
+    "trajectories/step_0005000/pick-place/00000.npz": "3205105d87b03f37316114aa98c06f1ae2504035990eef67f35a9940e34cbd82",
+    "trajectories/step_0005000/reach/00003.npz": "bf7bd61ad86dfdabc41b0bcf80633cea4805f0c351b2ca9b7b7581eacff196bc",
+    "trajectories/step_0005000/reach/00005.npz": "c47bd3d9e5c5af4769e1166d55757118e4d0ca62c1806f18c2f609c05b4dc4c8",
+    "trajectories/step_0010000/assembly/00000.npz": "2640b89c994158e302cdf1d2554f0a5b111c8657b814ac7b189b59f61af406d2",
+    "trajectories/step_0010000/coffee-button/00000.npz": "1a1075c70e93b7a1b98feed3add7fd81c14ef63d4a5d8fc502b565b126f9a503",
+    "trajectories/step_0010000/dial-turn/00000.npz": "5609303d1b7c0002717ffe36592bff5c5f3757a7cf9c818bf79ffb0aa1726836",
+    "trajectories/step_0010000/door-close/00000.npz": "dff98e05aaab1df8cabc632b96bb04c0c58ffb91608f9dd1de4eb7c4d2ca6cb0",
+    "trajectories/step_0010000/drawer-close/00004.npz": "9f1aeca61213d65485a23e396691cca18f65f436cb44de30cb4f16d434a3393c",
+    "trajectories/step_0010000/faucet-open/00003.npz": "fe0dc35b7271a971a6626a77c128d51c02ca6d6073d50b673dbfa0373c3fac9a",
+    "trajectories/step_0010000/handle-press/00000.npz": "9f6efcfc198a6c4776d2477e72bf7c1ba5087358b89f88a2645f5bc4c9895b9f",
+    "trajectories/step_0010000/pick-place/00000.npz": "57958dabc94582c0ae8cc928c43e7cfc897f457607786cd1281148b737028cf9",
+    "trajectories/step_0010000/reach/00003.npz": "08116fa610d9ebe0ec172ae0db3ba6fba7ac342deac4eab4bfb7f5bbdc285c44",
+    "trajectories/step_0010000/reach/00005.npz": "19a74da482ff7c1f385c8c81bdc89a260e5249a3863d1fc798b5d9ace6e30414",
+    "trajectories/step_0015000/assembly/00000.npz": "37dc38fff6a7b8d9cb2cfedc2297f4bd811399858deeef8cec90ac3baccba9ba",
+    "trajectories/step_0015000/coffee-button/00000.npz": "c65e2b2747fd5f1edbe6ed9ffe4f983f688b741ee71d61729b03b3be1611074e",
+    "trajectories/step_0015000/dial-turn/00000.npz": "56de228006c7d6493aecd1bdeec7f702ea69dc3d83af2c4a154fb5781c67655c",
+    "trajectories/step_0015000/door-close/00000.npz": "80b00b51c725c730c76020134772abdca8cfeaebefc861a5e92b4ce3300402d2",
+    "trajectories/step_0015000/drawer-close/00004.npz": "a3ecb6deff895d9efb573314e06532856c87b8a39c0c0977c0075d68cd16ab99",
+    "trajectories/step_0015000/faucet-open/00003.npz": "5bbdc94f9dce336a7dc148b2658009e29f569417c466611a08075b6da6e627e7",
+    "trajectories/step_0015000/handle-press/00000.npz": "99356a7727c8c38b6ef3cd92c3a211a82be0a7e7e8638764d2d150f3b68b7a48",
+    "trajectories/step_0015000/pick-place/00000.npz": "57d1ba4d94fd69d88bd34ecbdbada77c02ebbfddc158212569eeada51fc12253",
+    "trajectories/step_0015000/reach/00003.npz": "16a3f21e2519b32f6cb1c30357fe998301f2cec3b1fcb058209564b94e318a73",
+    "trajectories/step_0015000/reach/00005.npz": "5c25b176810c4fb9266de96a66ec46755b0edf2a210d1d2a86779af60fd653ed",
+    "trajectories/step_0020000/assembly/00000.npz": "728b75dce2f69f180e9a4739600d0b45eb3ca6950ef2d14ab927d68a6d65dfb3",
+    "trajectories/step_0020000/coffee-button/00000.npz": "349ac3a8b41cfddb3305cec22873c5cfade41599ded593212048a5d4ba05a6b6",
+    "trajectories/step_0020000/dial-turn/00000.npz": "0aa1b150c24efd43e333dc58491c503bfb83237fc489509479a506f78903344e",
+    "trajectories/step_0020000/door-close/00000.npz": "a6264a49477dcc4dc4190f0d1ae89a46cab6599fe67e2a3211e5e53866a8835e",
+    "trajectories/step_0020000/drawer-close/00004.npz": "45743b142cc5a7ac5dcbecb82d1ff96050deccce366da32b6afd4b46032e53fe",
+    "trajectories/step_0020000/faucet-open/00003.npz": "4e1ad5b530d5e2ac5feb38bcb727f2d4c28d3c8c126885453edf3e24676df168",
+    "trajectories/step_0020000/handle-press/00000.npz": "cffdb7007a8084369760ef7e716031bb03a8e3c58aac4a284ca3ed2ed9199fd3",
+    "trajectories/step_0020000/pick-place/00000.npz": "5fb2ccaccd665d87aac6d20b41d1f41237c8b011fbc182f21d2140151e06cd1e",
+    "trajectories/step_0020000/reach/00003.npz": "63cf0672be8609fe8c7916bb47e3a5835f3c6a696389653330927896461721ca",
+    "trajectories/step_0020000/reach/00005.npz": "356ae776bd5c3cf10e058a1f19fa10334b117f2d1d2daf0790a2a908360c79e2"
+  },
+  "checkpoints": {
+    "checkpoints/step_0005000.pt": {
+      "bytes": 77830705,
+      "sha256": "36e54249892eb0c8778a586076fd5de113935333490e5775ddeec6377ec992c4"
+    },
+    "checkpoints/step_0010000.pt": {
+      "bytes": 77830705,
+      "sha256": "ebedc1650c9df7ae0ca390220ee9d9eb6507e58c1a9d7e20da7ad435ef684691"
+    },
+    "checkpoints/step_0015000.pt": {
+      "bytes": 77830705,
+      "sha256": "a791e98baf88093e33ef1421562868240464edfecb77c303293e31852c2c2f5e"
+    },
+    "checkpoints/step_0020000.pt": {
+      "bytes": 77830705,
+      "sha256": "6e391aa1766badcac2787da52530442dc62d3d441698f5534f8f37732eba52f0"
+    },
+    "last.pt": {
+      "bytes": 77797537,
+      "sha256": "870fd1e01ae27486ce0b771c50a73823899dec531bc30531cedb3319558a6b42"
+    },
+    "best.pt": {
+      "bytes": 77797537,
+      "sha256": "1a4f6f69b57e0bf009b9fc3731c642aa4ffd01d12275a34969b32a2222609532"
+    }
+  },
+  "last_metric_step": 20000,
+  "training_rows": 800,
+  "finite_metrics": true,
+  "monotone_optimization_charge": true,
+  "source_files": {
+    "run/run.json": {
+      "bytes": 562,
+      "sha256": "3e6126bcf14268f8eb3307d9cbcad29ef516933ed3275b13e795405a4facb980"
+    },
+    "run/compute_usage.json": {
+      "bytes": 470,
+      "sha256": "f6a987b59f1e945162e8cada959d1f638b7a4e059b0345e391e51cceedf6f9d9"
+    },
+    "run/retrieval-setup.json": {
+      "bytes": 290,
+      "sha256": "564e21a7fc03a05195eb8e4500c952e6ca9f14522998177a196109276ea76d53"
+    },
+    "run/metrics.jsonl": {
+      "bytes": 1094874,
+      "sha256": "ed565a9b8eeac618af673229f911db9774a7b98e7f3724f6caf5d9199989ebb3"
+    },
+    "run/complete.json": {
+      "bytes": 304,
+      "sha256": "367ff3fe741341d9b5f3ac3561fefe8f201e889cb4e04a838eba504a21e922b9"
+    },
+    "run/validation/step_0005000.json": {
+      "bytes": 30447149,
+      "sha256": "1c83b043aaaace1f5eeaa15c462fab6931d21573a3fbec554cc7ee91ea9e39d2"
+    },
+    "run/validation/step_0010000.json": {
+      "bytes": 28525126,
+      "sha256": "8979136324f9d50f9dfce6921a30d61f85b385551b8873c590e3e480d3e8e7ab"
+    },
+    "run/validation/step_0015000.json": {
+      "bytes": 28555176,
+      "sha256": "301f29d3ffbf54a0b19382414f9c2d2425c243a0c2422064d7d0ef356d66c021"
+    },
+    "run/validation/step_0020000.json": {
+      "bytes": 28442908,
+      "sha256": "2657020cd84df98436c643a684e6f1bf5f025e10ee84bf14153736ae03d56e25"
+    }
+  },
+  "wandb": {
+    "id": "6wpx3jcv",
+    "state": "finished",
+    "summary": {
+      "budget/optimization_gpu_hours": 1.748655913176222,
+      "step": 20000,
+      "train/loss": 0.2838916778564453,
+      "validation/checkpoint_step": 20000,
+      "validation/controller_budget_exhausted_rate": 0,
+      "validation/controller_budget_overrun_seconds_mean": 0,
+      "validation/controller_seconds_per_episode_mean": 4.275463616582924,
+      "validation/controller_step_latency_ms_mean": 85.72358128487065,
+      "validation/controller_step_latency_ms_p95": 89.15328271687031,
+      "validation/episodes": 104,
+      "validation/expert_goal_failure_rate": 0,
+      "validation/latency_ms_mean": 85.68415626901682,
+      "validation/observed_subgoal_cosine": 0.018043109017638007,
+      "validation/return_mean": 275.6785999279097,
+      "validation/seen_success_macro": 0.7692307692307693,
+      "validation/steps_to_success_capped_mean": 99.6346153846154,
+      "validation/success_macro": 0.7692307692307693,
+      "validation/success_within_100_primitive": 0.6826923076923077,
+      "validation/success_within_200_primitive": 0.7692307692307693,
+      "validation/success_within_50_primitive": 0.19230769230769232,
+      "validation/task/assembly/ci95_high": 0.7847874731755582,
+      "validation/task/assembly/ci95_low": 0.21521252682444184,
+      "validation/task/assembly/success": 0.5,
+      "validation/task/button-press-topdown/ci95_high": 1,
+      "validation/task/button-press-topdown/ci95_low": 0.6755843804891231,
+      "validation/task/button-press-topdown/success": 1,
+      "validation/task/coffee-button/ci95_high": 1,
+      "validation/task/coffee-button/ci95_low": 0.6755843804891231,
+      "validation/task/coffee-button/success": 1,
+      "validation/task/dial-turn/ci95_high": 0.9775830911367038,
+      "validation/task/dial-turn/ci95_low": 0.5291051942301386,
+      "validation/task/dial-turn/success": 0.875,
+      "validation/task/door-close/ci95_high": 1,
+      "validation/task/door-close/ci95_low": 0.6755843804891231,
+      "validation/task/door-close/success": 1,
+      "validation/task/door-open/ci95_high": 1,
+      "validation/task/door-open/ci95_low": 0.6755843804891231,
+      "validation/task/door-open/success": 1,
+      "validation/task/drawer-close/ci95_high": 1,
+      "validation/task/drawer-close/ci95_low": 0.6755843804891231,
+      "validation/task/drawer-close/success": 1,
+      "validation/task/drawer-open/ci95_high": 1,
+      "validation/task/drawer-open/ci95_low": 0.6755843804891231,
+      "validation/task/drawer-open/success": 1,
+      "validation/task/faucet-open/ci95_high": 0.6942621454161981,
+      "validation/task/faucet-open/ci95_low": 0.13684175946152105,
+      "validation/task/faucet-open/success": 0.375,
+      "validation/task/handle-press/ci95_high": 1,
+      "validation/task/handle-press/ci95_low": 0.6755843804891231,
+      "validation/task/handle-press/success": 1,
+      "validation/task/pick-place/ci95_high": 0.4708948057698615,
+      "validation/task/pick-place/ci95_low": 0.02241690886329617,
+      "validation/task/pick-place/success": 0.125,
+      "validation/task/plate-slide/ci95_high": 1,
+      "validation/task/plate-slide/ci95_low": 0.6755843804891231,
+      "validation/task/plate-slide/success": 1,
+      "validation/task/reach/ci95_high": 0.4708948057698615,
+      "validation/task/reach/ci95_low": 0.02241690886329617,
+      "validation/task/reach/success": 0.125,
+      "validation/world_predictions_mean": 15960
+    }
+  }
+}

@@ -1,3 +1,11 @@
+# Completed: 75/77/79/80, selected 20k80/104
+
+[Final findings and preserved evidence](RETRIEVAL_REPAIR_TTT_RESULTS.md) supersede
+all interim status below. The run is complete, tying the preserved80/104; all416
+episodes have zero timeouts. Source/data/checkpoint audit passed, W&B6wpx3jcv
+finished, and owned processes exited. No new run is active at this completion
+snapshot. Preserve source and baselines; publication precedes a next decision.
+
 # Second evaluation: 77/104; run remains active
 
 At the 21:42 UTC collection, the registered development curve is **75 / 77**

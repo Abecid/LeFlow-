@@ -1,3 +1,20 @@
+# October11: retrieval-repair completed and verified, 75/77/79/80
+
+Selected20k80/104 ties both repair-flow and execution-revision80. Zero timeouts
+across all416 episodes; all24 final failures reach200 actions. Full periodic
+metrics, four reports, paired case IDs, provenance, teacher clipping and
+20 inspected contact sheets are preserved. [Final report](RETRIEVAL_REPAIR_TTT_RESULTS.md).
+
+The candidate exposes training to cross-episode retrieved anchors but does not
+cover shifted prior plans. Better training losses and changing proposal spread
+do not establish physical progress or causality. No development improvement
+over80; no sealed test. Source137 hashes/data/bank/checkpoint audit passes,
+W&B finished and all recorded owned processes exited. Optimization
+1.748656 GPUh, validation1.834349 GPUh; known cumulative
+measured components94.530290 GPUh with startup costs retained separately.
+No next candidate active at this snapshot; publish completion before a further
+evidence-backed decision within the authorized sequential loop.
+
 # October 11, 14:42 Pacific: retrieval-repair reaches 77/104 at 10k
 
 The first two registered rounds are 75/77, with zero timeouts. The 10k model

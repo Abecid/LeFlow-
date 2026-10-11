@@ -1,3 +1,13 @@
+# Retrieval-repair completed: selected20k80/104, tie retained
+
+October11 completion: curve75/77/79/80, zero timeouts; all24 final failures
+reach200 actions. Source3bdfb49 and137 runtime hashes/data/checkpoints passed
+final CPU audit; W&B6wpx3jcv finished and all owned processes exited. Read
+docs/RETRIEVAL_REPAIR_TTT_RESULTS.md and the completed ledger entry. Never
+restart this completed run. No run is active at this completion snapshot.
+Publish all evidence before considering one supported next correction under
+the October11 authorization. The80/104 review threshold is not exceeded.
+
 # Retrieval-repair at 75/77; 15k evaluation active
 
 October 11, 14:42 Pacific: two fixed104 rounds score75/77 with zero timeouts;

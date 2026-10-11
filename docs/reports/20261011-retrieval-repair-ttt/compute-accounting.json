@@ -1,0 +1,43 @@
+{
+  "complete": true,
+  "units": "aggregate GPU-hours",
+  "prior_artifact": "docs/reports/20261011-repair-flow-ttt/compute-accounting.json",
+  "prior_sha256": "e69f6d491b8425454342c5d97f1965d6c407417816f9c0034609dd6d80506a98",
+  "prior_known_components": 90.93449024323375,
+  "current_optimization_gpu_hours": 1.748655913176222,
+  "current_registered_validation_gpu_hours": 1.834349136967212,
+  "current_bounded_checks_and_setup": [
+    {
+      "artifact": "docs/reports/20261011-retrieval-repair-ttt/preflight.json",
+      "sha256": "44e24cdc7bd9558f7c376575309d5ae95115d8d2bec6ac3fe20be026fced0310",
+      "gpu_hours": 0.005974793981036378
+    },
+    {
+      "artifact": "docs/reports/20261011-retrieval-repair-ttt/ddp-check.json",
+      "sha256": "848f03ec18fcef44aea645b4e0f000ea8e738f066eb40b0eabbbfbd707191cf6",
+      "gpu_hours": 0.004536533885531956
+    },
+    {
+      "artifact": "docs/reports/20261011-retrieval-repair-ttt/run/retrieval-setup.json",
+      "sha256": "564e21a7fc03a05195eb8e4500c952e6ca9f14522998177a196109276ea76d53",
+      "gpu_hours": 0.0022834232966932985
+    }
+  ],
+  "cumulative_optimization": 58.253357388996,
+  "cumulative_completed_validation": 35.909739188429796,
+  "known_cumulative_components": 94.53029004454044,
+  "last_update_overrun_gpu_seconds": 0.0,
+  "optimization_cap_gpu_seconds": 28800,
+  "source_sha256": {
+    "docs/reports/20261011-retrieval-repair-ttt/run/compute_usage.json": "f6a987b59f1e945162e8cada959d1f638b7a4e059b0345e391e51cceedf6f9d9"
+  },
+  "all_infrastructure_runtime_total_available": false,
+  "limits": [
+    "Known measured components, not a complete cluster bill.",
+    "Shared world and adapter are counted once. Each per-run charged allowance is unchanged.",
+    "Per-update retrieval is inside optimization; startup retrieval and bounded no-update checks are separate.",
+    "CPU analysis/render work, unquantified historical checks and unused reservations are not guessed."
+  ],
+  "baseline_retraining_updates": 0,
+  "final_tests_read": false
+}
