@@ -1,3 +1,15 @@
+# Shifted repair first evaluation: 79/104; preserve the active run
+
+October 11, 15:42 Pacific: first 5k evaluation scores 79/104, zero timeouts;
+all 25 failures reach 200 actions. Six gains/seven regressions versus selected
+retrieval-repair 80. Shifted anchors are selected in 54.84% of deep training
+examples near 5k and supply 47.02% of deployment anchors. These are observations,
+not a physical-cause or causal-improvement claim. Read docs/SHIFTED_REPAIR_TTT.md
+and its saved analysis. Source 2ae5a6c and 146 hashes, all six process identities
+and online score verified; training healthy at step 8561. Keep the remaining
+10k/15k/20k evaluations unchanged. No next candidate until completion and verified
+publication; no frozen-source edits, baseline work or sealed tests.
+
 # Verified active run: shifted_repair_ttt
 
 Source2ae5a6c and146 runtime hashes verified, coordinator905872, launcher908541,

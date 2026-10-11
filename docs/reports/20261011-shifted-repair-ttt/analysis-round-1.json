@@ -1,0 +1,842 @@
+{
+  "selected_step": 5000,
+  "rounds": [
+    {
+      "step": 5000,
+      "successes": 79,
+      "per_task": {
+        "assembly": 3,
+        "button-press-topdown": 8,
+        "coffee-button": 8,
+        "dial-turn": 7,
+        "door-close": 8,
+        "door-open": 7,
+        "drawer-close": 8,
+        "drawer-open": 8,
+        "faucet-open": 1,
+        "handle-press": 8,
+        "pick-place": 1,
+        "plate-slide": 8,
+        "reach": 4
+      },
+      "timeouts": 0,
+      "metrics": {
+        "controller_budget_exhausted_rate": 0.0,
+        "controller_budget_overrun_seconds_mean": 0.0,
+        "controller_seconds_per_episode_mean": 4.366357918542165,
+        "controller_step_latency_ms_mean": 85.74418873270112,
+        "controller_step_latency_ms_p95": 89.68057949095964,
+        "episodes": 104,
+        "expert_goal_failure_rate": 0.0,
+        "latency_ms_mean": 85.55177925348292,
+        "observed_subgoal_cosine": 0.017161557933321876,
+        "return_mean": 242.24060615147346,
+        "seen_success_macro": 0.7596153846153846,
+        "steps_to_success_capped_mean": 101.65384615384616,
+        "success_macro": 0.7596153846153846,
+        "success_within_100_primitive": 0.6538461538461539,
+        "success_within_200_primitive": 0.7596153846153846,
+        "success_within_50_primitive": 0.23076923076923078,
+        "task/assembly/ci95_high": 0.6942621454161981,
+        "task/assembly/ci95_low": 0.13684175946152105,
+        "task/assembly/success": 0.375,
+        "task/button-press-topdown/ci95_high": 1.0,
+        "task/button-press-topdown/ci95_low": 0.6755843804891231,
+        "task/button-press-topdown/success": 1.0,
+        "task/coffee-button/ci95_high": 1.0,
+        "task/coffee-button/ci95_low": 0.6755843804891231,
+        "task/coffee-button/success": 1.0,
+        "task/dial-turn/ci95_high": 0.9775830911367038,
+        "task/dial-turn/ci95_low": 0.5291051942301386,
+        "task/dial-turn/success": 0.875,
+        "task/door-close/ci95_high": 1.0,
+        "task/door-close/ci95_low": 0.6755843804891231,
+        "task/door-close/success": 1.0,
+        "task/door-open/ci95_high": 0.9775830911367038,
+        "task/door-open/ci95_low": 0.5291051942301386,
+        "task/door-open/success": 0.875,
+        "task/drawer-close/ci95_high": 1.0,
+        "task/drawer-close/ci95_low": 0.6755843804891231,
+        "task/drawer-close/success": 1.0,
+        "task/drawer-open/ci95_high": 1.0,
+        "task/drawer-open/ci95_low": 0.6755843804891231,
+        "task/drawer-open/success": 1.0,
+        "task/faucet-open/ci95_high": 0.4708948057698615,
+        "task/faucet-open/ci95_low": 0.02241690886329617,
+        "task/faucet-open/success": 0.125,
+        "task/handle-press/ci95_high": 1.0,
+        "task/handle-press/ci95_low": 0.6755843804891231,
+        "task/handle-press/success": 1.0,
+        "task/pick-place/ci95_high": 0.4708948057698615,
+        "task/pick-place/ci95_low": 0.02241690886329617,
+        "task/pick-place/success": 0.125,
+        "task/plate-slide/ci95_high": 1.0,
+        "task/plate-slide/ci95_low": 0.6755843804891231,
+        "task/plate-slide/success": 1.0,
+        "task/reach/ci95_high": 0.7847874731755582,
+        "task/reach/ci95_low": 0.21521252682444186,
+        "task/reach/success": 0.5,
+        "world_predictions_mean": 16295.384615384615
+      },
+      "decisions": 5296,
+      "observed_prefixes": 5192,
+      "selected_round_counts": {
+        "0": 2665,
+        "1": 2631
+      },
+      "mean_round_candidate_changes": [
+        0.0,
+        0.1294097325021086
+      ],
+      "mean_round_proposal_diversity": [
+        0.11980412800211088,
+        0.04120914894332012
+      ],
+      "mean_predicted_cost_improvement": 7.585037673409927e-05,
+      "prior_prefix_mae": 0.0026391323902363044,
+      "fast_weight_delta_norm_mean": 0.5310668572910086,
+      "adapted_vs_prior_changed": 0.002050288724850496,
+      "raw_prefix_mae": 0.002531283093797178,
+      "corrected_prefix_mae": 0.0016209172711937972,
+      "selected_source_observational_groups": {
+        "incumbent": {
+          "decisions": 2665,
+          "observed": 2619,
+          "mean_observed_progress": 0.0029628333337277843,
+          "raw_prefix_mae": 0.0025013623949042166,
+          "corrected_prefix_mae": 0.0015985460865868553,
+          "optimistic_stall_fraction": 0.21191294387170675
+        },
+        "repair": {
+          "decisions": 2631,
+          "observed": 2573,
+          "mean_observed_progress": 0.0030071297034279547,
+          "raw_prefix_mae": 0.002561738713851848,
+          "corrected_prefix_mae": 0.0016436884070218502,
+          "optimistic_stall_fraction": 0.21570151574038088
+        }
+      },
+      "repair_anchor_provenance": {
+        "generated": 1487,
+        "shifted": 2490,
+        "retrieved": 1319
+      },
+      "incumbent_selected_fraction": 0.5032099697885196,
+      "selected_repair_linf_mean": 0.09688181673834984,
+      "selected_repair_linf_max": 0.2500000298023224,
+      "surrogate_gradient_evaluations": 0,
+      "optimistic_stall_failures": 19,
+      "corrected_optimistic_stall_failures": 12,
+      "failure_tails": [
+        {
+          "id": "validation/assembly/00001",
+          "timeout": false,
+          "actual": -3.6786163323803954e-05,
+          "predicted": 0.0007850150332639092,
+          "corrected": 0.0002122999806153147,
+          "goal_cost_change": 0.0006989371031522751
+        },
+        {
+          "id": "validation/assembly/00002",
+          "timeout": false,
+          "actual": 0.00026238778311955303,
+          "predicted": 0.0005509924927824422,
+          "corrected": 0.0003744199087745265,
+          "goal_cost_change": -0.004985367879271507
+        },
+        {
+          "id": "validation/assembly/00003",
+          "timeout": false,
+          "actual": -6.293427003057379e-05,
+          "predicted": 0.0010799640103390342,
+          "corrected": 6.949725119691146e-05,
+          "goal_cost_change": 0.001195751130580902
+        },
+        {
+          "id": "validation/assembly/00006",
+          "timeout": false,
+          "actual": 9.988218938049518e-05,
+          "predicted": 0.0034171375200936667,
+          "corrected": 0.0016008547360175534,
+          "goal_cost_change": 0.0026440471410751343
+        },
+        {
+          "id": "validation/assembly/00007",
+          "timeout": false,
+          "actual": -0.000141359963699391,
+          "predicted": 0.0010244165008005343,
+          "corrected": -7.698086923674534e-05,
+          "goal_cost_change": 0.0026858393102884293
+        },
+        {
+          "id": "validation/dial-turn/00006",
+          "timeout": false,
+          "actual": 0.0006749948584719709,
+          "predicted": 0.0066724268621519995,
+          "corrected": 0.0019031518972233723,
+          "goal_cost_change": -0.004193957895040512
+        },
+        {
+          "id": "validation/door-open/00005",
+          "timeout": false,
+          "actual": 0.00011302011185570766,
+          "predicted": 0.0027663530291695345,
+          "corrected": 0.0005785300347365831,
+          "goal_cost_change": 0.009543240070343018
+        },
+        {
+          "id": "validation/faucet-open/00000",
+          "timeout": false,
+          "actual": -0.00012021894125561965,
+          "predicted": 0.002415309611119722,
+          "corrected": 0.000472309263913255,
+          "goal_cost_change": 0.0022841598838567734
+        },
+        {
+          "id": "validation/faucet-open/00001",
+          "timeout": false,
+          "actual": -0.0002730724058653179,
+          "predicted": 0.0006524101880035902,
+          "corrected": 3.507282388837714e-05,
+          "goal_cost_change": 0.00518837571144104
+        },
+        {
+          "id": "validation/faucet-open/00002",
+          "timeout": false,
+          "actual": -5.786464010414324e-05,
+          "predicted": 0.0030064136770210767,
+          "corrected": 0.0005910972035244891,
+          "goal_cost_change": 0.0010994281619787216
+        },
+        {
+          "id": "validation/faucet-open/00003",
+          "timeout": false,
+          "actual": -1.483224332332611e-05,
+          "predicted": 0.002771979982131406,
+          "corrected": 0.0004923546588734576,
+          "goal_cost_change": 0.0002818126231431961
+        },
+        {
+          "id": "validation/faucet-open/00005",
+          "timeout": false,
+          "actual": -7.218671472449052e-05,
+          "predicted": 0.0014100841393596248,
+          "corrected": 0.00034454474715810076,
+          "goal_cost_change": 0.0013715475797653198
+        },
+        {
+          "id": "validation/faucet-open/00006",
+          "timeout": false,
+          "actual": 1.4683721881163747e-05,
+          "predicted": 0.001666654685610219,
+          "corrected": 0.0003703735572727103,
+          "goal_cost_change": -0.0002789907157421112
+        },
+        {
+          "id": "validation/faucet-open/00007",
+          "timeout": false,
+          "actual": 0.0001989854009527909,
+          "predicted": 0.0026747559834467737,
+          "corrected": 0.000961725453012868,
+          "goal_cost_change": -0.0037807226181030273
+        },
+        {
+          "id": "validation/pick-place/00000",
+          "timeout": false,
+          "actual": -0.00041545653029492025,
+          "predicted": 0.0004525846360545409,
+          "corrected": -3.3082342461535807e-05,
+          "goal_cost_change": 0.007893674075603485
+        },
+        {
+          "id": "validation/pick-place/00001",
+          "timeout": false,
+          "actual": -2.497307171947078e-05,
+          "predicted": 0.0010278853342721337,
+          "corrected": 0.00020261608848446295,
+          "goal_cost_change": 2.2279098629951477e-05
+        },
+        {
+          "id": "validation/pick-place/00002",
+          "timeout": false,
+          "actual": -0.00069509593671874,
+          "predicted": 0.0007539870903680199,
+          "corrected": -0.0003796419815013283,
+          "goal_cost_change": 0.01320682279765606
+        },
+        {
+          "id": "validation/pick-place/00003",
+          "timeout": false,
+          "actual": -0.0005190748917429071,
+          "predicted": 0.005266287609150535,
+          "corrected": -0.00013739360790503653,
+          "goal_cost_change": 0.009862422943115234
+        },
+        {
+          "id": "validation/pick-place/00005",
+          "timeout": false,
+          "actual": -0.0004994112410043415,
+          "predicted": 0.0028718376630230955,
+          "corrected": 0.00028543507582262943,
+          "goal_cost_change": 0.013440471142530441
+        },
+        {
+          "id": "validation/pick-place/00006",
+          "timeout": false,
+          "actual": -0.0003349399684291137,
+          "predicted": 3.526771539135983e-05,
+          "corrected": -0.00015337088782536355,
+          "goal_cost_change": 0.00636385940015316
+        },
+        {
+          "id": "validation/pick-place/00007",
+          "timeout": false,
+          "actual": -0.0003810560232714603,
+          "predicted": 0.002141921339850677,
+          "corrected": 0.00041038092029722114,
+          "goal_cost_change": 0.010301981121301651
+        },
+        {
+          "id": "validation/reach/00001",
+          "timeout": false,
+          "actual": -0.0001355134146778207,
+          "predicted": 0.00020293842412923512,
+          "corrected": 1.7969673009295212e-05,
+          "goal_cost_change": 0.0025747548788785934
+        },
+        {
+          "id": "validation/reach/00004",
+          "timeout": false,
+          "actual": -8.864485119518481e-05,
+          "predicted": 0.00023513395143182655,
+          "corrected": 9.18306606380563e-05,
+          "goal_cost_change": 0.0016842521727085114
+        },
+        {
+          "id": "validation/reach/00006",
+          "timeout": false,
+          "actual": -0.000155976434287272,
+          "predicted": 0.0004966781523666883,
+          "corrected": -2.260153230867888e-05,
+          "goal_cost_change": 0.002963552251458168
+        },
+        {
+          "id": "validation/reach/00007",
+          "timeout": false,
+          "actual": -0.00014870260891161467,
+          "predicted": 0.00028712988684051916,
+          "corrected": -9.076944307277077e-05,
+          "goal_cost_change": 0.0028253495693206787
+        }
+      ]
+    }
+  ],
+  "initial_proposal_diversity": {
+    "rounds": [
+      {
+        "step": 5000,
+        "0": {
+          "mean": 0.06628907797858119,
+          "relative_change": 0.0,
+          "decreased_cases": 0
+        },
+        "1": {
+          "mean": 0.028420415402461704,
+          "relative_change": 0.0,
+          "decreased_cases": 0
+        }
+      }
+    ],
+    "paired_initial_routes_verified": true,
+    "history_empty": true,
+    "interpretation": "Same reset/goal and per-case seed. Round zero includes recorded proposals; round one mixes an exact incumbent and bounded residual flow proposals. Diversity is not likelihood entropy or a causal attribution."
+  },
+  "comparisons": {
+    "guided_ttt": {
+      "successes": 75,
+      "wins": [
+        "validation/assembly/00000",
+        "validation/assembly/00004",
+        "validation/door-open/00001",
+        "validation/door-open/00004",
+        "validation/pick-place/00004",
+        "validation/plate-slide/00001",
+        "validation/reach/00003"
+      ],
+      "regressions": [
+        "validation/dial-turn/00006",
+        "validation/door-open/00005",
+        "validation/faucet-open/00007"
+      ],
+      "difference_pp": 3.8461538461538463,
+      "source": "docs/reports/20261010-guided-ttt/run/validation/step_0020000.json.gz",
+      "sha256": "05efd117f7227dda217f19a16e854c681aff2ba11f93c765bba2b57e560a2bcd"
+    },
+    "progress_ttt": {
+      "successes": 78,
+      "wins": [
+        "validation/assembly/00000",
+        "validation/assembly/00005",
+        "validation/door-open/00001",
+        "validation/pick-place/00004",
+        "validation/reach/00000",
+        "validation/reach/00002",
+        "validation/reach/00003"
+      ],
+      "regressions": [
+        "validation/assembly/00006",
+        "validation/dial-turn/00006",
+        "validation/door-open/00005",
+        "validation/faucet-open/00001",
+        "validation/faucet-open/00007",
+        "validation/reach/00004"
+      ],
+      "difference_pp": 0.9615384615384616,
+      "source": "docs/reports/20261010-progress-ttt-run/run/validation/step_0015000.json.gz",
+      "sha256": "4de86f52f125173a5bb5c1ddca0ed9ecdcd368b622e6d1bc615d868b39982a8b"
+    },
+    "flow_reasoning": {
+      "successes": 79,
+      "wins": [
+        "validation/assembly/00000",
+        "validation/assembly/00004",
+        "validation/assembly/00005",
+        "validation/dial-turn/00001",
+        "validation/dial-turn/00002",
+        "validation/reach/00003"
+      ],
+      "regressions": [
+        "validation/dial-turn/00006",
+        "validation/door-open/00005",
+        "validation/faucet-open/00007",
+        "validation/reach/00001",
+        "validation/reach/00004",
+        "validation/reach/00007"
+      ],
+      "difference_pp": 0.0,
+      "source": "docs/reports/20261010-flow-reasoning/run/validation/step_0005000.json.gz",
+      "sha256": "8c8cd3dc71b57ee9c168809df8464a039b2c72e0490b833f7ec4a25ad7dc4868"
+    },
+    "execution_revision": {
+      "successes": 80,
+      "wins": [
+        "validation/assembly/00000",
+        "validation/assembly/00004",
+        "validation/door-open/00000",
+        "validation/door-open/00001",
+        "validation/reach/00003"
+      ],
+      "regressions": [
+        "validation/assembly/00006",
+        "validation/assembly/00007",
+        "validation/door-open/00005",
+        "validation/faucet-open/00000",
+        "validation/faucet-open/00007",
+        "validation/reach/00001"
+      ],
+      "difference_pp": -0.9615384615384616,
+      "source": "docs/reports/20261009-execution-revision/run/validation/step_0005000.json.gz",
+      "sha256": "71fa4e3e75163ae6e3d6d776b2eeaa844134b20aaa2092feeb93e5e7b91fab9b"
+    },
+    "controller_grounded": {
+      "successes": 79,
+      "wins": [
+        "validation/assembly/00000",
+        "validation/assembly/00004",
+        "validation/assembly/00005",
+        "validation/plate-slide/00000",
+        "validation/plate-slide/00004",
+        "validation/reach/00000",
+        "validation/reach/00003",
+        "validation/reach/00005"
+      ],
+      "regressions": [
+        "validation/assembly/00001",
+        "validation/assembly/00002",
+        "validation/assembly/00006",
+        "validation/door-open/00005",
+        "validation/faucet-open/00000",
+        "validation/faucet-open/00001",
+        "validation/faucet-open/00007",
+        "validation/reach/00006"
+      ],
+      "difference_pp": 0.0,
+      "source": "docs/reports/20261009-controller-grounded/run/validation/step_0005000.json.gz",
+      "sha256": "0c64a05b608a54f6971efd6dd3f2007bcac92900d3a5f1769d647873ada08ff9"
+    },
+    "leflow_release": {
+      "successes": 21,
+      "wins": [
+        "validation/assembly/00000",
+        "validation/assembly/00004",
+        "validation/assembly/00005",
+        "validation/button-press-topdown/00000",
+        "validation/button-press-topdown/00001",
+        "validation/button-press-topdown/00002",
+        "validation/button-press-topdown/00003",
+        "validation/button-press-topdown/00004",
+        "validation/button-press-topdown/00005",
+        "validation/button-press-topdown/00006",
+        "validation/button-press-topdown/00007",
+        "validation/coffee-button/00002",
+        "validation/coffee-button/00003",
+        "validation/dial-turn/00000",
+        "validation/dial-turn/00001",
+        "validation/dial-turn/00002",
+        "validation/dial-turn/00003",
+        "validation/dial-turn/00004",
+        "validation/dial-turn/00005",
+        "validation/dial-turn/00007",
+        "validation/door-close/00000",
+        "validation/door-close/00001",
+        "validation/door-close/00002",
+        "validation/door-close/00003",
+        "validation/door-close/00004",
+        "validation/door-close/00005",
+        "validation/door-close/00006",
+        "validation/door-close/00007",
+        "validation/door-open/00000",
+        "validation/door-open/00001",
+        "validation/door-open/00002",
+        "validation/door-open/00003",
+        "validation/door-open/00004",
+        "validation/door-open/00006",
+        "validation/door-open/00007",
+        "validation/drawer-close/00000",
+        "validation/drawer-close/00002",
+        "validation/drawer-close/00003",
+        "validation/drawer-close/00004",
+        "validation/drawer-close/00005",
+        "validation/drawer-close/00006",
+        "validation/drawer-close/00007",
+        "validation/drawer-open/00000",
+        "validation/drawer-open/00001",
+        "validation/drawer-open/00002",
+        "validation/drawer-open/00003",
+        "validation/drawer-open/00004",
+        "validation/drawer-open/00005",
+        "validation/drawer-open/00006",
+        "validation/drawer-open/00007",
+        "validation/faucet-open/00004",
+        "validation/handle-press/00005",
+        "validation/pick-place/00004",
+        "validation/plate-slide/00000",
+        "validation/plate-slide/00001",
+        "validation/plate-slide/00002",
+        "validation/plate-slide/00003",
+        "validation/plate-slide/00004",
+        "validation/plate-slide/00005",
+        "validation/plate-slide/00006",
+        "validation/plate-slide/00007",
+        "validation/reach/00000",
+        "validation/reach/00002"
+      ],
+      "regressions": [
+        "validation/faucet-open/00000",
+        "validation/faucet-open/00001",
+        "validation/faucet-open/00005",
+        "validation/faucet-open/00006",
+        "validation/reach/00001"
+      ],
+      "difference_pp": 55.76923076923077,
+      "source": "docs/reports/20261010-release-baselines/leflow/validation/step_0010000.json.gz",
+      "sha256": "506a2857ec7b9f19782d0df27bdbad3d8a72f464ebda3a47ab20b85f8a98e713"
+    },
+    "hwm_paper_port": {
+      "successes": 5,
+      "wins": [
+        "validation/assembly/00000",
+        "validation/assembly/00004",
+        "validation/assembly/00005",
+        "validation/button-press-topdown/00000",
+        "validation/button-press-topdown/00001",
+        "validation/button-press-topdown/00002",
+        "validation/button-press-topdown/00003",
+        "validation/button-press-topdown/00004",
+        "validation/button-press-topdown/00005",
+        "validation/button-press-topdown/00006",
+        "validation/button-press-topdown/00007",
+        "validation/coffee-button/00000",
+        "validation/coffee-button/00001",
+        "validation/coffee-button/00002",
+        "validation/coffee-button/00003",
+        "validation/coffee-button/00004",
+        "validation/coffee-button/00005",
+        "validation/coffee-button/00006",
+        "validation/coffee-button/00007",
+        "validation/dial-turn/00000",
+        "validation/dial-turn/00001",
+        "validation/dial-turn/00002",
+        "validation/dial-turn/00003",
+        "validation/dial-turn/00004",
+        "validation/dial-turn/00005",
+        "validation/dial-turn/00007",
+        "validation/door-close/00000",
+        "validation/door-close/00001",
+        "validation/door-close/00002",
+        "validation/door-close/00003",
+        "validation/door-close/00004",
+        "validation/door-close/00005",
+        "validation/door-close/00006",
+        "validation/door-close/00007",
+        "validation/door-open/00000",
+        "validation/door-open/00001",
+        "validation/door-open/00002",
+        "validation/door-open/00003",
+        "validation/door-open/00004",
+        "validation/door-open/00006",
+        "validation/door-open/00007",
+        "validation/drawer-close/00000",
+        "validation/drawer-close/00001",
+        "validation/drawer-close/00002",
+        "validation/drawer-close/00003",
+        "validation/drawer-close/00005",
+        "validation/drawer-close/00006",
+        "validation/drawer-close/00007",
+        "validation/drawer-open/00000",
+        "validation/drawer-open/00001",
+        "validation/drawer-open/00002",
+        "validation/drawer-open/00003",
+        "validation/drawer-open/00004",
+        "validation/drawer-open/00005",
+        "validation/drawer-open/00006",
+        "validation/drawer-open/00007",
+        "validation/faucet-open/00004",
+        "validation/handle-press/00001",
+        "validation/handle-press/00002",
+        "validation/handle-press/00003",
+        "validation/handle-press/00007",
+        "validation/pick-place/00004",
+        "validation/plate-slide/00000",
+        "validation/plate-slide/00001",
+        "validation/plate-slide/00002",
+        "validation/plate-slide/00003",
+        "validation/plate-slide/00004",
+        "validation/plate-slide/00005",
+        "validation/plate-slide/00006",
+        "validation/plate-slide/00007",
+        "validation/reach/00000",
+        "validation/reach/00002",
+        "validation/reach/00003",
+        "validation/reach/00005"
+      ],
+      "regressions": [],
+      "difference_pp": 71.15384615384616,
+      "source": "docs/reports/20261010-release-baselines/hwm/validation/step_0015000.json.gz",
+      "sha256": "56b7bf19e165d123b9aa32b88f5eb773a3a48f82d7e203144ca14071354120ff"
+    },
+    "cem_release": {
+      "successes": 24,
+      "wins": [
+        "validation/assembly/00000",
+        "validation/assembly/00004",
+        "validation/assembly/00005",
+        "validation/button-press-topdown/00000",
+        "validation/button-press-topdown/00001",
+        "validation/button-press-topdown/00002",
+        "validation/button-press-topdown/00003",
+        "validation/button-press-topdown/00004",
+        "validation/button-press-topdown/00005",
+        "validation/button-press-topdown/00006",
+        "validation/button-press-topdown/00007",
+        "validation/dial-turn/00000",
+        "validation/dial-turn/00001",
+        "validation/dial-turn/00002",
+        "validation/dial-turn/00003",
+        "validation/dial-turn/00004",
+        "validation/dial-turn/00005",
+        "validation/dial-turn/00007",
+        "validation/door-close/00000",
+        "validation/door-close/00001",
+        "validation/door-close/00002",
+        "validation/door-close/00003",
+        "validation/door-close/00006",
+        "validation/door-open/00000",
+        "validation/door-open/00001",
+        "validation/door-open/00002",
+        "validation/door-open/00003",
+        "validation/door-open/00004",
+        "validation/door-open/00006",
+        "validation/door-open/00007",
+        "validation/drawer-close/00001",
+        "validation/drawer-close/00002",
+        "validation/drawer-close/00003",
+        "validation/drawer-close/00004",
+        "validation/drawer-close/00005",
+        "validation/drawer-open/00000",
+        "validation/drawer-open/00001",
+        "validation/drawer-open/00002",
+        "validation/drawer-open/00003",
+        "validation/drawer-open/00004",
+        "validation/drawer-open/00005",
+        "validation/drawer-open/00006",
+        "validation/drawer-open/00007",
+        "validation/faucet-open/00004",
+        "validation/pick-place/00004",
+        "validation/plate-slide/00000",
+        "validation/plate-slide/00001",
+        "validation/plate-slide/00002",
+        "validation/plate-slide/00003",
+        "validation/plate-slide/00004",
+        "validation/plate-slide/00005",
+        "validation/plate-slide/00006",
+        "validation/plate-slide/00007",
+        "validation/reach/00000",
+        "validation/reach/00002",
+        "validation/reach/00003"
+      ],
+      "regressions": [
+        "validation/reach/00006"
+      ],
+      "difference_pp": 52.88461538461539,
+      "source": "docs/reports/20261010-release-baselines/cem/validation.json",
+      "sha256": "0fb3d2614d76fdd4c12e3605220f986306a6541789cf1d74d03ef2c4b8af3a8e"
+    },
+    "repair_flow_ttt": {
+      "successes": 80,
+      "wins": [
+        "validation/assembly/00000",
+        "validation/assembly/00004",
+        "validation/dial-turn/00002",
+        "validation/reach/00003"
+      ],
+      "regressions": [
+        "validation/dial-turn/00006",
+        "validation/door-open/00005",
+        "validation/faucet-open/00001",
+        "validation/pick-place/00003",
+        "validation/reach/00007"
+      ],
+      "difference_pp": -0.9615384615384616,
+      "source": "docs/reports/20261011-repair-flow-ttt/run/validation/step_0005000.json.gz",
+      "sha256": "b1cd99f487e85e47b77046beac62b07da534a17dfdf553c29a6fae168fbad4d7"
+    },
+    "retrieval_repair_ttt": {
+      "successes": 80,
+      "wins": [
+        "validation/assembly/00004",
+        "validation/dial-turn/00007",
+        "validation/faucet-open/00004",
+        "validation/reach/00000",
+        "validation/reach/00002",
+        "validation/reach/00003"
+      ],
+      "regressions": [
+        "validation/assembly/00001",
+        "validation/assembly/00006",
+        "validation/dial-turn/00006",
+        "validation/door-open/00005",
+        "validation/faucet-open/00000",
+        "validation/faucet-open/00002",
+        "validation/faucet-open/00007"
+      ],
+      "difference_pp": -0.9615384615384616,
+      "source": "docs/reports/20261011-retrieval-repair-ttt/run/validation/step_0020000.json.gz",
+      "sha256": "dc09c844cb46da2c0d5fba62fe42f230e23fc6d826347386f6270565bddb13d5"
+    }
+  },
+  "selected_to_last": {
+    "selected_step": 5000,
+    "last_step": 5000,
+    "improvements": [],
+    "regressions": []
+  },
+  "case_pairing_verified": true,
+  "training_windows": [
+    {
+      "step": 5000,
+      "entries": 20,
+      "metrics": {
+        "train/flow_loss": 0.1677713595330715,
+        "train/repair_flow_loss": 0.211995467543602,
+        "train/repair_anchor_action_mse": 0.01876205252483487,
+        "train/repair_teacher_action_mse": 0.012238528346642852,
+        "train/repair_teacher_action_improvement": 0.006523524085059762,
+        "train/repair_target_clipped_fraction": 0.0378710936754942,
+        "train/calibration_loss": 0.0262193045578897,
+        "train/recorded_raw_prefix_mae": 0.002023376332363114,
+        "train/recorded_corrected_prefix_mae": 0.0017084687948226928,
+        "train/recorded_prior_prefix_mae": 0.0022414438717532903,
+        "system/update_examples_per_second": 833.1653875333161,
+        "train/retrieval_eligible_fraction": 0.875,
+        "train/retrieved_anchor_fraction": 0.075,
+        "train/shifted_eligible_fraction": 0.9765625,
+        "train/shifted_anchor_fraction": 0.27421875
+      },
+      "by_depth": {
+        "1": {
+          "train/flow_loss": 0.17497197091579436,
+          "train/repair_flow_loss": 0.0,
+          "train/repair_anchor_action_mse": 0.0,
+          "train/repair_teacher_action_mse": 0.0,
+          "train/repair_teacher_action_improvement": 0.0,
+          "train/repair_target_clipped_fraction": 0.0,
+          "train/calibration_loss": 0.02533952295780182,
+          "train/recorded_raw_prefix_mae": 0.0019986147759482264,
+          "train/recorded_corrected_prefix_mae": 0.0017044648760929705,
+          "train/recorded_prior_prefix_mae": 0.002221887547057122,
+          "system/update_examples_per_second": 1186.4459180120507,
+          "train/retrieval_eligible_fraction": 0.875,
+          "train/retrieved_anchor_fraction": 0.0,
+          "train/shifted_eligible_fraction": 0.9703125,
+          "train/shifted_anchor_fraction": 0.0
+        },
+        "2": {
+          "train/flow_loss": 0.16057074815034866,
+          "train/repair_flow_loss": 0.423990935087204,
+          "train/repair_anchor_action_mse": 0.03752410504966974,
+          "train/repair_teacher_action_mse": 0.024477056693285704,
+          "train/repair_teacher_action_improvement": 0.013047048170119525,
+          "train/repair_target_clipped_fraction": 0.0757421873509884,
+          "train/calibration_loss": 0.02709908615797758,
+          "train/recorded_raw_prefix_mae": 0.002048137888778001,
+          "train/recorded_corrected_prefix_mae": 0.0017124727135524153,
+          "train/recorded_prior_prefix_mae": 0.0022610001964494587,
+          "system/update_examples_per_second": 479.8848570545814,
+          "train/retrieval_eligible_fraction": 0.875,
+          "train/retrieved_anchor_fraction": 0.15,
+          "train/shifted_eligible_fraction": 0.9828125,
+          "train/shifted_anchor_fraction": 0.5484375
+        }
+      }
+    }
+  ],
+  "compute": {
+    "global_batch": 64,
+    "gpu_count": 4,
+    "last_update_overrun_gpu_seconds": 0.0,
+    "optimization_cap_gpu_seconds": 28800,
+    "optimization_gpu_hours": 0.9627813105761177,
+    "optimization_gpu_seconds": 3466.0127180740237,
+    "step": 8561,
+    "stop_check": "optimizer boundary; final-update overrun reported",
+    "validation_gpu_hours": 0.4723785296455026,
+    "validation_gpu_seconds": 1700.5627067238092,
+    "validation_steps": [
+      5000
+    ]
+  },
+  "run": {
+    "bank_hash": "d9a45fd33cbf09e88fd6200f3a807fe95df3a74b97478dc497f80d758b6a9b5b",
+    "code": "2ae5a6c97bebe56b0b1f889cb34996d34cbf03d6",
+    "id": "8yy6nh9f",
+    "manifest": "630452762a9be73da3d3dca9d77deb573c363519f5f974f566b325e6031084d2",
+    "method": "shifted_repair_ttt",
+    "protocol": "a809ba2e04b1c875a4250a3bc7db3c33d3616df7552c708cb26bf4797af8d38a",
+    "seed": 3072,
+    "wandb_url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/8yy6nh9f",
+    "world_hash": "ae3f910da43f0a43dd65945394444a0b11719ed042cdacffacc2faaf824ec5a3",
+    "world_size": 4
+  },
+  "model_calls": 0,
+  "simulator_calls": 0,
+  "final_tests_read": false,
+  "limits": [
+    "Repeatedly used development cases; selected checkpoint; one model seed.",
+    "Round score improvement is a selection property, not physical progress.",
+    "Only executed prefixes have real outcome labels.",
+    "No inference-depth counterfactual or causal attribution from these traces.",
+    "Incumbent/repair groups are selected observations, not randomized counterfactuals.",
+    "Teacher interpolation contains the action target; teacher MSE gain can be positive before training."
+  ]
+}

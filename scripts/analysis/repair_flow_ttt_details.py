@@ -118,8 +118,11 @@ def main(args):
         'hwm_paper_port':('20261010-release-baselines/hwm/validation/step_0015000.json.gz', 5),
         'cem_release':('20261010-release-baselines/cem/validation.json', 24),
     }
-    if load(root/'run.json')['method']=='retrieval_repair_ttt':
+    method = load(root/'run.json')['method']
+    if method in ('retrieval_repair_ttt', 'shifted_repair_ttt'):
         refs['repair_flow_ttt']=('20261011-repair-flow-ttt/run/validation/step_0005000.json.gz',80)
+    if method == 'shifted_repair_ttt':
+        refs['retrieval_repair_ttt']=('20261011-retrieval-repair-ttt/run/validation/step_0020000.json.gz',80)
     last_byid = {r['id']:r for r in reports[-1]['records']}
     selected_to_last = dict(
         selected_step=chosen['step'], last_step=reports[-1]['step'],
@@ -154,7 +157,8 @@ def main(args):
             'train/repair_target_clipped_fraction', 'train/calibration_loss',
             'train/recorded_raw_prefix_mae', 'train/recorded_corrected_prefix_mae',
             'train/recorded_prior_prefix_mae', 'system/update_examples_per_second']
-    keys += [k for k in ('train/retrieval_eligible_fraction','train/retrieved_anchor_fraction')
+    keys += [k for k in ('train/retrieval_eligible_fraction','train/retrieved_anchor_fraction',
+                         'train/shifted_eligible_fraction','train/shifted_anchor_fraction')
              if all(k in row for row in train_logs)]
     windows = []
     for report in reports:

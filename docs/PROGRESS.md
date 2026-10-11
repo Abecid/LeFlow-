@@ -1,3 +1,21 @@
+# October 11, 15:42 Pacific: shifted repair scores 79/104 at 5k
+
+First registered evaluation: 79/104, zero timeouts, 25 action-limit failures.
+Six gains/seven regressions versus retrieval-repair 80; four/five versus
+repair-flow 80; five/six versus execution revision 80. Shifted plans are selected
+as anchors in 54.84% of deep training examples near 5k. Deployment anchors are
+47.02% shifted; repairs supply 49.68% of decisions. Corrected prefix MAE is worse
+than the predecessor's 5k result while success is four cases higher; these proxies
+do not establish physical causes or a component benefit.
+
+[Findings and complete first-round evidence](SHIFTED_REPAIR_TTT.md) preserve
+343 training records, the fixed 104-case report, exact paired failures, checkpoint
+hashes and controller/latent diagnostics. All 146 runtime hashes and live owned
+process identities match; W&B agrees with the score. Partial charges at step
+8561: 0.962781 optimization GPUh, 0.472379 evaluation GPUh;
+known cumulative measured components 95.978114 GPUh including startup checks.
+The remaining three registered rounds continue within the unchanged allowance.
+
 # October11: shifted-plan training verified on four idle GPUs
 
 Fresh seed3072 `shifted_repair_ttt` is running, source2ae5a6c/W&B8yy6nh9f,

@@ -1,3 +1,61 @@
+# First evaluation: 79/104 at 5k; training continues
+
+Verified October 11 at 22:42 UTC: the first fixed 104-case development round
+scores **79/104**, with **zero controller timeouts**. All 25 failures reach 200
+primitive actions. Against the completed selected retrieval-repair reference
+(80/104), it gains six cases and loses seven; against repair-flow (80), four/five;
+against execution revision (80), five/six. It gains seven/loses three against
+guided-TTT (75), seven/six against progress-TTT (78), and six/six against flow
+reasoning (79). Exact paired case IDs are retained in the analysis. The registered
+10k, 15k and 20k rounds remain pending at this snapshot. This is an interim result;
+the unchanged run continues and the threshold for stopping further launches has
+not been exceeded.
+
+Shifted anchors are eligible for 98.28% and selected for **54.84%** of deep-update
+examples in the final 500-update window before 5k. Retrieved anchors are selected
+for 15.00%. These figures establish that the added training path is exercised;
+they do not establish that it repairs a physical failure mechanism. Shallow
+updates have zero anchor selections by design and are reported separately.
+Deep repair-flow loss is .423991, teacher clipping 7.57%, and anchor/teacher action
+MSE .037524/.024477. The teacher uses the recorded action label, so its lower MSE
+is not independent evidence of action-generation quality.
+
+During deployment, repairs supply 2,631/5,296 decisions (**49.68%**). Anchor
+provenance is 1,487 generated, 1,319 retrieved and 2,490 shifted (**47.02%**).
+Corrected executed-prefix MAE is .0016209, versus .0026391 before episodic
+adaptation. Compared with the predecessor's 5k checkpoint (75/104), corrected
+MAE is 3.85% higher while success is four cases higher. This is an observed
+cross-run association, not an isolated effect of the new training path. Raw
+scores remain optimistic while observed latent progress is nonpositive in the
+last 20 decisions of 19/25 failures; corrected scores have that pattern in 12/25.
+Latent scores and controller stall counters are not physical ground truth.
+Per-task results remain weak for assembly (3/8), faucet-open (1/8) and pick-place
+(1/8); reach scores 4/8. The complete task breakdown and negative cases are kept.
+
+[Full 5k report](reports/20261011-shifted-repair-ttt/run/validation/step_0005000.json.gz),
+[paired failures and training diagnostics](reports/20261011-shifted-repair-ttt/analysis-round-1.json),
+[anchor and stall observations](reports/20261011-shifted-repair-ttt/anchor-outcomes-round-1.json),
+and [source/process/online verification](reports/20261011-shifted-repair-ttt/interim-health-round-1.json)
+are preserved. Source remains clean at `2ae5a6c`, with all 146 runtime hashes
+matching. The coordinator, launcher and four rank PID/start identities are live
+and verified. W&B `8yy6nh9f` is running and reports the same 5k score. Mean decision
+latency is 85.74 ms. The immutable 5k checkpoint is retained at
+`/home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/campaign/runs/shifted_repair_ttt_3072/checkpoints/step_0005000.pt`,
+SHA256 `901e57c711cb0a1ee8df39892b02b40df4fef10ef12e5c6fef6bfc31912e51f4`.
+Report source, protocol, manifest, world and bank identities match the registered
+run; the frozen configuration hash and reference case pairing are verified. All 343 periodic training records through
+step 8551, plus the registered evaluation record, are preserved losslessly;
+finite losses and monotone optimization charges passed verification.
+
+At step 8561, charges are 0.962781 optimization GPUh and
+0.472379 registered evaluation GPUh. Including startup checks and retrieval
+setup, [known cumulative measured components](reports/20261011-shifted-repair-ttt/compute-accounting-round-1.json)
+are **95.978114 GPUh**. This is a partial snapshot, not final run cost or
+a full cluster bill. One seed, repeated development use, checkpoint selection,
+offline prior-plan approximation, and method-port limitations prevent claims of
+independent generalization, component causality or SOTA. Frozen execution,
+baselines, original allowances and sealed final tests remain preserved.
+
 # Training verified: causal shifted-plan repair
 
 Readback 2026-10-11T22:21:20.018932+00:00: frozen source `2ae5a6c97bebe56b0b1f889cb34996d34cbf03d6`, all146 runtime
