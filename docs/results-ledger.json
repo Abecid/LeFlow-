@@ -7,8 +7,8 @@
       "run_key": "20261011-retrieval-repair-ttt",
       "method": "retrieval_repair_ttt",
       "seed": 3072,
-      "status": "registered_pending_freeze",
-      "source": null,
+      "status": "frozen_pending_preflight",
+      "source": "3bdfb49e7c9d4952da7494e50c8dc2530197641e",
       "server_record": "/home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt",
       "server_run": "/home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/campaign/runs/retrieval_repair_ttt_3072",
       "report": "docs/RETRIEVAL_REPAIR_TTT.md",
@@ -31,7 +31,8 @@
       },
       "preceding_publication_commit": "15852d5c4fa550c22c0f6b6d9142bd7435593792",
       "known_prior_campaign_gpu_hours": 90.93449024323375,
-      "followup": "continue-flow-jepa-campaign-and-preserve-results"
+      "followup": "continue-flow-jepa-campaign-and-preserve-results",
+      "runtime_hash_count": 137
     }
   ],
   "completed_runs": [
