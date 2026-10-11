@@ -1,0 +1,215 @@
+{
+  "utc": "2026-10-11T21:28:14.718320+00:00",
+  "source": "3bdfb49e7c9d4952da7494e50c8dc2530197641e",
+  "source_clean": true,
+  "runtime_hash_count": 137,
+  "status": {
+    "code": "3bdfb49e7c9d4952da7494e50c8dc2530197641e",
+    "command": [
+      "/tmp/mtxu-flow-jepa-20261007/env/bin/python",
+      "-m",
+      "torch.distributed.run",
+      "--nnodes=1",
+      "--nproc_per_node=4",
+      "--rdzv-backend=c10d",
+      "--rdzv-endpoint=127.0.0.1:0",
+      "-m",
+      "flow_jepa.execution.train",
+      "--config",
+      "/home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/repo/config/flow_metaworld_retrieval_repair_ttt.json",
+      "--root",
+      "/home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/campaign",
+      "--run-dir",
+      "/home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/campaign/runs/retrieval_repair_ttt_3072",
+      "--world",
+      "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt",
+      "--bank",
+      "/tmp/mtxu-retrieval-repair-ttt-20261011/route_bank.pt"
+    ],
+    "pid": 819165,
+    "preflight_mean_ms": 79.61382173622648,
+    "status": "training",
+    "utc": "2026-10-11T21:07:21.894900+00:00"
+  },
+  "compute": {
+    "global_batch": 64,
+    "gpu_count": 4,
+    "last_update_overrun_gpu_seconds": 0.0,
+    "optimization_cap_gpu_seconds": 28800,
+    "optimization_gpu_hours": 0.8504987526188295,
+    "optimization_gpu_seconds": 3061.795509427786,
+    "step": 9772,
+    "stop_check": "optimizer boundary; final-update overrun reported",
+    "validation_gpu_hours": 0.5046768805798557,
+    "validation_gpu_seconds": 1816.8367700874805,
+    "validation_steps": [
+      5000
+    ]
+  },
+  "worker": {
+    "command": [
+      "/tmp/mtxu-flow-jepa-20261007/env/bin/python",
+      "-m",
+      "torch.distributed.run",
+      "--nnodes=1",
+      "--nproc_per_node=4",
+      "--rdzv-backend=c10d",
+      "--rdzv-endpoint=127.0.0.1:0",
+      "-m",
+      "flow_jepa.execution.train",
+      "--config",
+      "/home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/repo/config/flow_metaworld_retrieval_repair_ttt.json",
+      "--root",
+      "/home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/campaign",
+      "--run-dir",
+      "/home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/campaign/runs/retrieval_repair_ttt_3072",
+      "--world",
+      "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt",
+      "--bank",
+      "/tmp/mtxu-retrieval-repair-ttt-20261011/route_bank.pt"
+    ],
+    "pid": 821683
+  },
+  "processes": [
+    {
+      "pid": 819165,
+      "present": true,
+      "state": "S",
+      "start_ticks": 1007321350,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m scripts.operations.controller_grounded --record /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt --variant retrieval_repair_ttt --gpus 4 --previous /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison --cache /tmp/mtxu-retrieval-repair-ttt-20261011 --reuse-bank /tmp/mtxu-flow-reasoning-20261010/route_bank.pt "
+    },
+    {
+      "pid": 821683,
+      "present": true,
+      "state": "S",
+      "start_ticks": 1007334803,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -m torch.distributed.run --nnodes=1 --nproc_per_node=4 --rdzv-backend=c10d --rdzv-endpoint=127.0.0.1:0 -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/repo/config/flow_metaworld_retrieval_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/campaign/runs/retrieval_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-retrieval-repair-ttt-20261011/route_bank.pt "
+    },
+    {
+      "pid": 821698,
+      "present": true,
+      "state": "S",
+      "start_ticks": 1007334944,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/repo/config/flow_metaworld_retrieval_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/campaign/runs/retrieval_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-retrieval-repair-ttt-20261011/route_bank.pt "
+    },
+    {
+      "pid": 821699,
+      "present": true,
+      "state": "S",
+      "start_ticks": 1007334944,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/repo/config/flow_metaworld_retrieval_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/campaign/runs/retrieval_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-retrieval-repair-ttt-20261011/route_bank.pt "
+    },
+    {
+      "pid": 821700,
+      "present": true,
+      "state": "S",
+      "start_ticks": 1007334944,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/repo/config/flow_metaworld_retrieval_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/campaign/runs/retrieval_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-retrieval-repair-ttt-20261011/route_bank.pt "
+    },
+    {
+      "pid": 821701,
+      "present": true,
+      "state": "S",
+      "start_ticks": 1007334944,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/repo/config/flow_metaworld_retrieval_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/campaign/runs/retrieval_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-retrieval-repair-ttt-20261011/route_bank.pt "
+    }
+  ],
+  "checkpoints": {
+    "checkpoints/step_0005000.pt": {
+      "bytes": 77830705,
+      "sha256": "36e54249892eb0c8778a586076fd5de113935333490e5775ddeec6377ec992c4"
+    }
+  },
+  "last_metric_step": 9751,
+  "training_rows": 391,
+  "finite_metrics": true,
+  "monotone_optimization_charge": true,
+  "source_files": {
+    "run/run.json": {
+      "bytes": 562,
+      "sha256": "3e6126bcf14268f8eb3307d9cbcad29ef516933ed3275b13e795405a4facb980"
+    },
+    "run/compute_usage.json": {
+      "bytes": 440,
+      "sha256": "600eb42863c267fe51bff506fa02d4afe2c694a6e92d190b5dc8b8726ba15176"
+    },
+    "run/retrieval-setup.json": {
+      "bytes": 290,
+      "sha256": "564e21a7fc03a05195eb8e4500c952e6ca9f14522998177a196109276ea76d53"
+    },
+    "run/metrics.jsonl": {
+      "bytes": 531654,
+      "sha256": "6ec86376c2a6c925fb291b1b09e3b759877f3a0e23d45cdd6f008d80baad143e"
+    },
+    "run/validation/step_0005000.json": {
+      "bytes": 30447149,
+      "sha256": "1c83b043aaaace1f5eeaa15c462fab6931d21573a3fbec554cc7ee91ea9e39d2"
+    }
+  },
+  "wandb": {
+    "id": "6wpx3jcv",
+    "state": "running",
+    "summary": {
+      "budget/optimization_gpu_hours": 0.8357499313457972,
+      "step": 9601,
+      "train/loss": 0.12253659963607788,
+      "validation/checkpoint_step": 5000,
+      "validation/controller_budget_exhausted_rate": 0,
+      "validation/controller_budget_overrun_seconds_mean": 0,
+      "validation/controller_seconds_per_episode_mean": 4.5725305788218975,
+      "validation/controller_step_latency_ms_mean": 85.65259009320557,
+      "validation/controller_step_latency_ms_p95": 89.55927025526762,
+      "validation/episodes": 104,
+      "validation/expert_goal_failure_rate": 0,
+      "validation/latency_ms_mean": 85.6062404943145,
+      "validation/observed_subgoal_cosine": 0.016575715342826775,
+      "validation/return_mean": 287.34757918465937,
+      "validation/seen_success_macro": 0.7211538461538461,
+      "validation/steps_to_success_capped_mean": 106.7403846153846,
+      "validation/success_macro": 0.7211538461538461,
+      "validation/success_within_100_primitive": 0.6442307692307693,
+      "validation/success_within_200_primitive": 0.7211538461538461,
+      "validation/success_within_50_primitive": 0.19230769230769232,
+      "validation/task/assembly/ci95_high": 0.6942621454161981,
+      "validation/task/assembly/ci95_low": 0.13684175946152105,
+      "validation/task/assembly/success": 0.375,
+      "validation/task/button-press-topdown/ci95_high": 1,
+      "validation/task/button-press-topdown/ci95_low": 0.6755843804891231,
+      "validation/task/button-press-topdown/success": 1,
+      "validation/task/coffee-button/ci95_high": 1,
+      "validation/task/coffee-button/ci95_low": 0.6755843804891231,
+      "validation/task/coffee-button/success": 1,
+      "validation/task/dial-turn/ci95_high": 1,
+      "validation/task/dial-turn/ci95_low": 0.6755843804891231,
+      "validation/task/dial-turn/success": 1,
+      "validation/task/door-close/ci95_high": 0.9775830911367038,
+      "validation/task/door-close/ci95_low": 0.5291051942301386,
+      "validation/task/door-close/success": 0.875,
+      "validation/task/door-open/ci95_high": 0.9775830911367038,
+      "validation/task/door-open/ci95_low": 0.5291051942301386,
+      "validation/task/door-open/success": 0.875,
+      "validation/task/drawer-close/ci95_high": 1,
+      "validation/task/drawer-close/ci95_low": 0.6755843804891231,
+      "validation/task/drawer-close/success": 1,
+      "validation/task/drawer-open/ci95_high": 1,
+      "validation/task/drawer-open/ci95_low": 0.6755843804891231,
+      "validation/task/drawer-open/success": 1,
+      "validation/task/faucet-open/ci95_high": 0.3244156195108769,
+      "validation/task/faucet-open/ci95_low": 0,
+      "validation/task/faucet-open/success": 0,
+      "validation/task/handle-press/ci95_high": 1,
+      "validation/task/handle-press/ci95_low": 0.6755843804891231,
+      "validation/task/handle-press/success": 1,
+      "validation/task/pick-place/ci95_high": 0.4708948057698615,
+      "validation/task/pick-place/ci95_low": 0.02241690886329617,
+      "validation/task/pick-place/success": 0.125,
+      "validation/task/plate-slide/ci95_high": 1,
+      "validation/task/plate-slide/ci95_low": 0.6755843804891231,
+      "validation/task/plate-slide/success": 1,
+      "validation/task/reach/ci95_high": 0.4708948057698615,
+      "validation/task/reach/ci95_low": 0.02241690886329617,
+      "validation/task/reach/success": 0.125,
+      "validation/world_predictions_mean": 17083.076923076922
+    }
+  }
+}

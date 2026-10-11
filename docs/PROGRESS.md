@@ -1,3 +1,21 @@
+# October11 14:28 Pacific: retrieval-repair5k scores75/104
+
+First registered round75/104 with zero timeouts; all29 failures reach200 actions.
+Three wins/eight regressions versus repair-flow80; four/nine versus GMM80.
+Repairs selected53.37%; anchor provenance44.74% shifted,26.69% retrieved and
+28.57% generated. Training does select retrieved anchors (30.94% of deep examples
+near5k), but shifted training coverage remains absent. Those selected groups are
+observational, not causal comparisons. Corrected prefix error falls7.55% versus
+old repair-flow5k while success falls five cases; latent scores are not physical
+failure explanations. [Full evidence and limits](RETRIEVAL_REPAIR_TTT.md).
+
+Source137 hashes, process identities and online5k score verified; healthy beyond
+9772 updates. Preserved391 training records and the complete104-case report with
+paired failures against all frozen references. Snapshot.850860 optimization GPUh,
+.504677 validation GPUh; known cumulative measured components92.302822GPUh,
+including startup checks/setup. Remaining10k/15k/20k rounds continue under the
+same allowance. No new variant, baseline work or test access.
+
 # October11 14:08 Pacific: retrieval-repair training verified
 
 The single next candidate is running on GPUs0–3, source3bdfb49, W&B6wpx3jcv.

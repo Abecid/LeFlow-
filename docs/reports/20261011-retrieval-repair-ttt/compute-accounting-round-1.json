@@ -1,0 +1,35 @@
+{
+  "snapshot_utc": "2026-10-11T21:28:14.718320+00:00",
+  "complete": false,
+  "units": "aggregate GPU-hours",
+  "prior_known_components": 90.93449024323375,
+  "prior_artifact": "docs/reports/20261011-repair-flow-ttt/compute-accounting.json",
+  "prior_sha256": "e69f6d491b8425454342c5d97f1965d6c407417816f9c0034609dd6d80506a98",
+  "current_optimization_gpu_hours": 0.8508599851777157,
+  "current_registered_validation_gpu_hours": 0.5046768805798557,
+  "current_bounded_checks_and_setup": [
+    {
+      "artifact": "docs/reports/20261011-retrieval-repair-ttt/preflight.json",
+      "gpu_hours": 0.005974793981036378,
+      "sha256": "44e24cdc7bd9558f7c376575309d5ae95115d8d2bec6ac3fe20be026fced0310"
+    },
+    {
+      "artifact": "docs/reports/20261011-retrieval-repair-ttt/ddp-check.json",
+      "gpu_hours": 0.004536533885531956,
+      "sha256": "848f03ec18fcef44aea645b4e0f000ea8e738f066eb40b0eabbbfbd707191cf6"
+    },
+    {
+      "artifact": "docs/reports/20261011-retrieval-repair-ttt/run/retrieval-setup.json",
+      "gpu_hours": 0.0022834232966932985,
+      "sha256": "564e21a7fc03a05195eb8e4500c952e6ca9f14522998177a196109276ea76d53"
+    }
+  ],
+  "known_cumulative_components": 92.30282186015458,
+  "optimization_cap_gpu_seconds": 28800,
+  "last_update_overrun_gpu_seconds": 0.0,
+  "limits": [
+    "Partial snapshot of the active run, not its final cost or a complete cluster bill.",
+    "CPU work, unused GPU reservations and unquantified historical costs are not guessed.",
+    "Per-update training retrieval is already inside optimization; setup and no-update checks are separate."
+  ]
+}

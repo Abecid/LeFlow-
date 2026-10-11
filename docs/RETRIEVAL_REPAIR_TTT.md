@@ -1,3 +1,54 @@
+# First evaluation:75/104 at5k; training continues
+
+Verified October11 at21:28UTC: the first fixed104 development round scores
+**75/104**, below the preserved repair-flow and execution-revision references
+at80/104. Against repair-flow there are **three paired wins and eight regressions**;
+against execution-revision, four wins and nine regressions. All29 failures reach
+200 primitive actions, with **zero controller timeouts**. Mean decision latency
+is85.65ms. The remaining10k/15k/20k rounds are pending at this snapshot; this is
+an interim result, not completed training or evidence to change the active run.
+
+Repairs supply2,963/5,552 decisions (53.37%). Repair-anchor provenance is1,586
+generated,1,482 retrieved and2,484 shifted (44.74%). Among failure decisions,
+1,476/2,900 anchors are shifted (50.90%); episode lengths and visited states
+confound that proportion. This confirms deployment uses shifted anchors, but
+does not establish that missing shifted-plan training caused failures.
+Retrieved actions are selected as training anchors in30.94% of deep-update
+examples in the final500-update window before5k; eligible fraction is87.5%.
+Deep teacher residual clipping is6.87%, repair-flow loss.427065, and anchor/teacher
+action MSE.032702/.021947. The teacher contains the recorded action label;
+its lower MSE is not measured action-generation quality.
+
+Corrected executed-prefix MAE is.0015608 versus prior.0025887, and is
+7.55% lower than old repair-flow's5k corrected MAE, while success is five
+cases lower. Better calibration does not establish better control. Raw model
+scores have optimistic/nonpositive-observed latent-progress tails in20/29
+failures, corrected scores in12/29. These are latent proxies, not contact-force
+or physical-cause measurements. Per-task successes are preserved in the full
+analysis: assembly3/8, faucet-open0/8, pick-place1/8 and reach1/8 remain weak.
+
+[Full first report](reports/20261011-retrieval-repair-ttt/run/validation/step_0005000.json.gz),
+[paired cases and training diagnostics](reports/20261011-retrieval-repair-ttt/analysis-round-1.json),
+[anchor observations](reports/20261011-retrieval-repair-ttt/anchor-outcomes-round-1.json),
+and [source/process/online verification](reports/20261011-retrieval-repair-ttt/interim-health-round-1.json).
+All case identities match the frozen references; source remains clean at3bdfb49
+with137 matching runtime hashes. Owned coordinator819165, launcher821683 and
+four ranks remain verified; W&B6wpx3jcv is running and publishes the same5k score.
+At the compute snapshot, training had9776 updates with.850860 optimization GPUh
+and.504677 evaluation GPUh. All391 periodic training records through9751 and the
+registered evaluation record are preserved losslessly. Collection spans advancing
+updates: health observed9772 and the subsequently copied compute record9776.
+The5k checkpoint remains
+on the server at`campaign/runs/retrieval_repair_ttt_3072/checkpoints/step_0005000.pt`,
+SHA256`36e54249892eb0c8778a586076fd5de113935333490e5775ddeec6377ec992c4`.
+
+[Measured cumulative components](reports/20261011-retrieval-repair-ttt/compute-accounting-round-1.json)
+now total92.302822 GPUh at this partial snapshot, including all
+recorded preflight, no-update checks and retrieval setup. Allowances remain
+unchanged. Reused development cases, one seed, checkpoint selection and baseline
+port limitations prevent independent generalization, causal-component or SOTA
+claims. No baseline rerun, new candidate or sealed test was launched.
+
 # Training verified: retrieval-conditioned residual flow
 
 Readback 2026-10-11T21:08:12.257335+00:00: source `3bdfb49e7c9d4952da7494e50c8dc2530197641e` is clean and all137

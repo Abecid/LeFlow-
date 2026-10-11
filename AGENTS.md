@@ -1,3 +1,13 @@
+# Retrieval-repair first evaluation75/104; preserve active run
+
+October11 14:28 Pacific: first5k round75/104, zero timeouts,29 action-limit
+failures. Three paired wins/eight regressions versus repair-flow80. Training
+healthy at9772 updates; source3bdfb49 and137 hashes, coordinator819165 and
+launcher821683 verified. W&B6wpx3jcv reports the same score. Three registered
+rounds remain; no additional candidate until completion analysis/publication.
+Read docs/RETRIEVAL_REPAIR_TTT.md and analysis-round-1.json. Do not restart,
+modify frozen execution code or infer causal gains from proxy improvements.
+
 # Verified active run: retrieval_repair_ttt on GPUs0–3
 
 October11 14:08 Pacific: source3bdfb49e7c9d4952da7494e50c8dc2530197641e is
