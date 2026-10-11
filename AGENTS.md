@@ -1,3 +1,15 @@
+# Shifted repair: 79/78/74; retain 5k and complete final evaluation
+
+October 11, 16:10 Pacific: 15k scores 74/104 with zero timeouts; all 30 failures
+reach 200 actions. Two gains/seven regressions versus selected 5k79, including
+three assembly and three reach regressions. Shifted anchors remain selected
+in training (57.66% of deep examples); falling losses did not improve success.
+Read docs/SHIFTED_REPAIR_TTT.md and analysis-round-3.json. Source 2ae5a6c,
+146 hashes and all owned process identities verified; W&B agrees. Training
+healthy at step 17109; final registered 20k round remains. Do not edit or
+restart the frozen run. No next candidate until complete analysis/publication;
+no baseline work or sealed tests. Improvement over 80 has not been observed.
+
 # Shifted repair: 79/78 at 5k/10k; retain 5k and finish the run
 
 October 11, 15:55 Pacific: 10k scores 78/104 with zero timeouts and 26 action-limit

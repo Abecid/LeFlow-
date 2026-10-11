@@ -14,9 +14,9 @@ full metrics, failure evidence, checkpoint hashes and actual compute are preserv
 Completion publication was remotely verified at9a0d2de. One
 [causal shifted-plan training correction](SHIFTED_REPAIR_TTT.md) is verified
 training on four GPUs after 45 tests, an 80.18ms preflight and
-distributed checks. Its first two evaluations score **79/78**, with zero timeouts.
-The 10k checkpoint gains four cases and loses five against 5k; 5k79 remains
-selected, below the preserved 80. The registered 15k/20k rounds are pending. Preserve
+distributed checks. Its first three evaluations score **79/78/74**, with zero
+timeouts. The 15k checkpoint gains two cases and loses seven against 5k; 5k79
+remains selected, below the preserved 80. The final registered 20k round is pending. Preserve
 all baselines and the original per-candidate limits. Earlier repair-flow also
 selected80/104; these ties do not establish improvement.
 

@@ -1,3 +1,67 @@
+# Third evaluation: 74/104 at 15k; retain 5k79
+
+Verified October 11 at 23:10 UTC: the development curve is **79/78/74** at
+5k/10k/15k. All three rounds have zero controller timeouts; all 30 failures at
+15k reach 200 primitive actions. Against selected 5k, 15k has **two paired gains
+and seven regressions**. Gains are dial-turn/00006 and door-open/00005.
+Regressions are assembly/00000, assembly/00004, assembly/00005,
+door-open/00001, reach/00000, reach/00002 and reach/00003; all use the
+`validation/` prefix. Assembly falls from 3/8 to 0/8 and reach from 4/8 to 1/8;
+dial-turn rises from 7/8 to 8/8. Faucet-open and pick-place remain 1/8. The
+provisional selection stays 5k79, below the preserved 80/104 references. The same
+run continues to its final registered 20k evaluation with unchanged limits.
+
+The shifted training path remains active: deep-update anchor eligibility is
+96.41% and selected fraction **57.66%** near 15k, versus 54.84% at 5k and 52.03%
+at 10k. Retrieved selection is 13.75%. Improvements in training losses continue
+without improved development success:
+
+| Checkpoint | Success /104 | Deep repair loss | Teacher clipping | Deep calibration loss |
+| --- | ---: | ---: | ---: | ---: |
+| 5k | 79 | .423991 | 7.57% | .027099 |
+| 10k | 78 | .290391 | 4.52% | .025243 |
+| 15k | 74 | .253010 | 4.38% | .024627 |
+
+At 15k, anchor/teacher action MSE is .028780/.019235. The teacher contains the
+recorded action target; its lower error is not independent control evidence.
+Corrected executed-prefix MAE is .0016547, up from .0015998 at 10k and .0016209
+at 5k. Those trajectory aggregates include changed visited states. Neither
+training loss nor calibration alone explains the measured success change.
+
+Repairs supply 2,396/5,497 decisions (**43.59%**). Anchor provenance is 1,468
+generated, 1,565 retrieved and 2,464 shifted (**44.82%**). At matched initial
+states with empty history and identical route costs, proposal spread has fallen
+**58.27%** in the first round and **46.74%** in the residual round versus 5k;
+both decrease on 103/104 cases. This is an observed contraction, not likelihood
+entropy or a causal diagnosis. Raw optimistic/nonpositive-observed latent tails
+occur in 18/30 failed cases, and corrected tails in 9/30. Controller stall
+penalties and these scores are proxies, not physical contact measurements.
+
+[Full 15k report](reports/20261011-shifted-repair-ttt/run/validation/step_0015000.json.gz),
+[three-round analysis and selected-reference pairs](reports/20261011-shifted-repair-ttt/analysis-round-3.json),
+[15k pairs against frozen references](reports/20261011-shifted-repair-ttt/latest-paired-round-3.json),
+[10k-to-15k pairs](reports/20261011-shifted-repair-ttt/previous-round-pairs-3.json),
+[anchor/stall observations](reports/20261011-shifted-repair-ttt/anchor-outcomes-round-3.json),
+and [source/process/online evidence](reports/20261011-shifted-repair-ttt/interim-health-round-3.json)
+retain every negative result. All 146 frozen runtime hashes, owned PID/start
+identities and report/run identities pass verification; online W&B `8yy6nh9f`
+agrees with the 15k result and remains running. Fixed case identities match
+across all reports and preserved references. Prior reports remain byte-identical;
+all prior training bytes are retained. The lossless archive now includes
+685 periodic training records through step 17101 and three evaluation records.
+The mean 15k decision latency is 84.57 ms. Checkpoint
+`/home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/campaign/runs/shifted_repair_ttt_3072/checkpoints/step_0015000.pt`
+has SHA256 `df5547f431f7eb1845ce5ffc0e73209643e543966bc2936f21d4a666eca68725`.
+
+At copied step 17109, charges are 1.911940 optimization GPUh and
+1.373377 evaluation GPUh. Startup gates/setup are included separately in
+[known cumulative measured components](reports/20261011-shifted-repair-ttt/compute-accounting-round-3.json),
+now **97.828271 GPUh**. This is a partial snapshot rather than final run cost or
+a full cluster bill. One seed, repeatedly reused development cases, checkpoint
+selection, the offline prior-plan approximation and baseline-port limitations
+still prevent independent generalization, isolated component or SOTA claims.
+No new candidate, baseline work or sealed test is authorized by this interim result.
+
 # Second evaluation: 78/104 at 10k; 5k remains selected
 
 Verified October 11 at 22:55 UTC: the second registered development round scores

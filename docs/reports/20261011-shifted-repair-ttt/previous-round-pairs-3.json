@@ -1,0 +1,16 @@
+{
+  "from_step": 10000,
+  "to_step": 15000,
+  "wins": [
+    "validation/dial-turn/00000",
+    "validation/door-open/00000"
+  ],
+  "regressions": [
+    "validation/assembly/00000",
+    "validation/assembly/00004",
+    "validation/assembly/00005",
+    "validation/faucet-open/00000",
+    "validation/reach/00002",
+    "validation/reach/00004"
+  ]
+}

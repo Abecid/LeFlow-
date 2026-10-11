@@ -1,3 +1,20 @@
+# October 11, 16:10 Pacific: shifted repair 15k falls to 74/104
+
+Curve 79/78/74, zero timeouts; retain 5k79. The third round gains two and loses
+seven cases versus 5k, including three assembly and three reach regressions.
+All 30 failures reach the action limit. Shifted anchors are selected in 57.66%
+of deep training examples; repair/calibration losses and clipping keep falling
+without increased success. Corrected deployment-prefix error rises; initial
+proposal spread contracts 58.27%/46.74% versus 5k. These observations do not
+identify physical causes or isolate a component effect.
+
+[Findings and preserved evidence](SHIFTED_REPAIR_TTT.md) include three full
+reports, 685 periodic training records, paired IDs, checkpoint hashes and
+stall/anchor diagnostics. Frozen runtime146 hashes, owned processes and online
+score verified. Partial charges at step 17109: 1.911940 optimization GPUh,
+1.373377 evaluation GPUh; known cumulative components 97.828271 GPUh.
+The unchanged run continues through the final registered 20k evaluation.
+
 # October 11, 15:55 Pacific: shifted repair 10k scores 78/104
 
 Curve so far: 79/78, zero timeouts; retain 5k79. The second round gains four and
