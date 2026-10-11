@@ -1,0 +1,11 @@
+{
+  "source": "2ae5a6c97bebe56b0b1f889cb34996d34cbf03d6",
+  "pid": 905872,
+  "start_ticks": 1007760082,
+  "utc": "2026-10-11T22:18:14.698590+00:00",
+  "runtime_files_verified": 146,
+  "command": [
+    "bash",
+    "/home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/launch.sh"
+  ]
+}

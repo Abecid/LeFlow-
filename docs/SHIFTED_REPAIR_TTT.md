@@ -1,3 +1,30 @@
+# Training verified: causal shifted-plan repair
+
+Readback 2026-10-11T22:21:20.018932+00:00: frozen source `2ae5a6c97bebe56b0b1f889cb34996d34cbf03d6`, all146 runtime
+hashes verified. Coordinator905872/start1007760082 and training launcher908541/
+start1007773717 own ranks908565–908568 on GPUs0–3. The run had at least
+1,134 updates at the 22:22:46 UTC compute readback, with finite saved losses. Online W&B
+[8yy6nh9f](https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/8yy6nh9f) is running and reports step851,
+loss0.623025; collection/upload times differ and this is not an
+exact synchronized counter. The first fixed104 evaluation is pending.
+
+All45 final-source tests, unchanged sampled-byte/history/exclusion checks, the
+80.18ms full-controller preflight and four-rank no-update synchronized-gradient
+check passed. Parameters remain6,466,320 and deployment computation is unchanged.
+Bounded preflight0.005931GPUh and DDP check0.004606GPUh,
+plus retrieval setup, are preserved separately. Per-update prior planning and
+retrieval remain inside the original optimization allowance. Current charged
+optimization0.131150GPUh; known cumulative measured
+components94.674104GPUh at this partial snapshot. This is not final run cost or a
+complete cluster bill. [Launch verification](reports/20261011-shifted-repair-ttt/launch-verification.json)
+and [compute accounting](reports/20261011-shifted-repair-ttt/compute-accounting.json)
+preserve exact identities and separate costs.
+
+No checkpoint result or success improvement is claimed. The same authorized
+seed3072/global64/20k-or28800 GPU-second run continues with four registered
+validations, frozen baselines and sealed tests. Do not edit execution source or
+dispatch another candidate while it is active.
+
 # Causal previous-plan training correction
 
 One candidate, `shifted_repair_ttt`, is registered under the October11 sequential

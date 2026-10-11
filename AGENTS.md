@@ -1,3 +1,13 @@
+# Verified active run: shifted_repair_ttt
+
+Source2ae5a6c and146 runtime hashes verified, coordinator905872, launcher908541,
+ranks908565–908568 on GPUs0–3, W&B8yy6nh9f. At least1134 finite updates;
+all45 tests,80.18ms preflight and4-rank no-update gradient checks passed.
+Read docs/SHIFTED_REPAIR_TTT.md and the active ledger. Preserve frozen execution
+and the original allowance; no duplicate run or further candidate while active.
+First fixed104 evaluation pending. Prior retrieval-repair75/77/79/80 is published
+at9a0d2de; never restart it.
+
 # Current registered correction: shifted_repair_ttt
 
 Retrieval-repair completion75/77/79/80 is remotely published at9a0d2de, all206

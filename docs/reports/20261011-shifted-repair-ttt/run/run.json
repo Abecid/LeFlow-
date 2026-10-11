@@ -1,0 +1,12 @@
+{
+  "bank_hash": "d9a45fd33cbf09e88fd6200f3a807fe95df3a74b97478dc497f80d758b6a9b5b",
+  "code": "2ae5a6c97bebe56b0b1f889cb34996d34cbf03d6",
+  "id": "8yy6nh9f",
+  "manifest": "630452762a9be73da3d3dca9d77deb573c363519f5f974f566b325e6031084d2",
+  "method": "shifted_repair_ttt",
+  "protocol": "a809ba2e04b1c875a4250a3bc7db3c33d3616df7552c708cb26bf4797af8d38a",
+  "seed": 3072,
+  "wandb_url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/8yy6nh9f",
+  "world_hash": "ae3f910da43f0a43dd65945394444a0b11719ed042cdacffacc2faaf824ec5a3",
+  "world_size": 4
+}

@@ -7,8 +7,8 @@
       "run_key": "20261011-shifted-repair-ttt",
       "method": "shifted_repair_ttt",
       "seed": 3072,
-      "status": "registered_pending_freeze",
-      "source": null,
+      "status": "training_verified",
+      "source": "2ae5a6c97bebe56b0b1f889cb34996d34cbf03d6",
       "server_record": "/home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt",
       "server_run": "/home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/campaign/runs/shifted_repair_ttt_3072",
       "report": "docs/SHIFTED_REPAIR_TTT.md",
@@ -31,7 +31,31 @@
       },
       "preceding_publication_commit": "9a0d2de6866f2b77ad36f4dcea3f684fd474f8d4",
       "known_prior_campaign_gpu_hours": 94.53029004454044,
-      "followup": "continue-flow-jepa-campaign-and-preserve-results"
+      "followup": "continue-flow-jepa-campaign-and-preserve-results",
+      "wandb_id": "8yy6nh9f",
+      "wandb_url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/8yy6nh9f",
+      "launcher_pid": 905872,
+      "launcher_start_ticks": 1007760082,
+      "training_launcher_pid": 908541,
+      "training_launcher_start_ticks": 1007773717,
+      "launch_verification": "docs/reports/20261011-shifted-repair-ttt/launch-verification.json",
+      "artifact_sha256": {
+        "docs/reports/20261011-shifted-repair-ttt/compute-accounting.json": "0704e5273066e3bcee7e721903df71f625e30dfd484e88b441ee3bfd645ecc5c",
+        "docs/reports/20261011-shifted-repair-ttt/ddp-check.json": "b31b266021679dc9381b4f176db9b13cf727eec4c035d168e03ed0c53c637135",
+        "docs/reports/20261011-shifted-repair-ttt/launch-verification.json": "337851a25504a77badb9e81c66a45e0b31bb1e977e93a3123eab6925bc0b2c9b",
+        "docs/reports/20261011-shifted-repair-ttt/launcher.json": "fa4a86dae2d38939cac75031676efff413c35b77824b0c287ba156ec2c2b366c",
+        "docs/reports/20261011-shifted-repair-ttt/online-progress.json": "10e47b243384795a14b56f439b4fb7a0f16d41b3ce54252c61812389f9dc3eab",
+        "docs/reports/20261011-shifted-repair-ttt/preflight.json": "e0f0cff492a11ef035c8c95702fb49040b90a859875d4c2aac27c1c5275804b3",
+        "docs/reports/20261011-shifted-repair-ttt/reuse.json": "cc3d5286b9956b678c39e67807e7b84b7779ac98000e59215506809a55974f22",
+        "docs/reports/20261011-shifted-repair-ttt/route-bank.json": "9e0d60659cf562cadbdc65351f3db8b6560dbdc900b94dbf610e802c7ed72a01",
+        "docs/reports/20261011-shifted-repair-ttt/run/compute_usage.json": "666aa0e26f576233e876dd31f2d89b2a023e4df434eb698849a2795cf97b2b25",
+        "docs/reports/20261011-shifted-repair-ttt/run/metrics.jsonl.gz": "e99a17b0acd358394c3e25d224d216d1ab1a9b07fea911fb03e92283a8c1dc38",
+        "docs/reports/20261011-shifted-repair-ttt/run/retrieval-setup.json": "d81083d6769d399e10a8d5ef06d49131debfcba25640706f4aca2f6299db3845",
+        "docs/reports/20261011-shifted-repair-ttt/run/run.json": "0d43445c31a87b130d7cad63134c3d4011574f242b0e9ae2d2afbdbb85b1412d",
+        "docs/reports/20261011-shifted-repair-ttt/runtime-files.json": "94fdfe7287bb9ca6605f69a88be1f58a2b4612a30bde02a4f99a207cdbb20185",
+        "docs/reports/20261011-shifted-repair-ttt/tests.log.gz": "8c4ba44d95c30098cae28cc15b05b13be125b762b4021ad5d3f6aa5a13b83377",
+        "docs/SHIFTED_REPAIR_TTT.md": "3085d3886bce0a71ca31950428f431784c639ba4554cc35280a7ad71a7302e70"
+      }
     }
   ],
   "completed_runs": [

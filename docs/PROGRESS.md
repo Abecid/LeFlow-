@@ -1,3 +1,18 @@
+# October11: shifted-plan training verified on four idle GPUs
+
+Fresh seed3072 `shifted_repair_ttt` is running, source2ae5a6c/W&B8yy6nh9f,
+coordinator905872 and launcher908541 verified. All146 runtime hashes,45 tests,
+80.18ms cached-data preflight and four-rank synchronized-gradient checks pass.
+At least1134 finite updates at readback; online logging verified, first evaluation
+pending. [Method, launch and limits](SHIFTED_REPAIR_TTT.md).
+
+Same data/global64/20k-or28800 aggregate GPU-second cap/four104 validations and
+controller allowance. Frozen baselines untouched; no sealed tests. Additional
+prior-plan/retrieval compute is charged inside each update. Startup gates/setup
+are separate; known cumulative measured components94.674104GPUh at the snapshot.
+This offline correction covers one omitted plan-construction path; no physical
+causal explanation or performance improvement is established yet.
+
 # October11: retrieval-repair publication verified; shifted-plan correction registered
 
 Completion is published to origin/main at9a0d2de; verified206 artifact hashes
