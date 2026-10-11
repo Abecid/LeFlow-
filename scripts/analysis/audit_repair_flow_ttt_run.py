@@ -13,8 +13,9 @@ from flow_jepa.common import digest, file_hash
 def main(args):
     torch.set_num_threads(2)
     record=Path(args.record);repo=record/'repo';root=record/'campaign'
-    run=root/'runs/repair_flow_ttt_3072'
-    c=json.loads((repo/'config/flow_metaworld_repair_flow_ttt.json').read_text())
+    method=getattr(args,'method','repair_flow_ttt')
+    run=root/'runs'/f'{method}_3072'
+    c=json.loads((repo/'config'/f'flow_metaworld_{method}.json').read_text())
     manifest=json.loads((root/'manifest.json').read_text())
     reuse=json.loads((root/'reuse.json').read_text())
     dispatch=json.loads((record/'launcher.json').read_text())
@@ -100,6 +101,7 @@ def main(args):
                 assert d['repair_solver_steps']==4 and d['repair_radius']==.25
                 assert d['selected_distance_from_incumbent_linf']<=.250001
                 assert d['refinement_source']=='world_verified_incumbent'
+                if method=='retrieval_repair_ttt': assert d['repair_anchor_source'] in ('generated','retrieved','shifted')
                 rc=d['round_best_scores']
                 assert len(rc)==2 and all(b<=a for a,b in zip(rc,rc[1:]))
                 assert d['history_valid_steps']==min(i,4)
@@ -133,4 +135,5 @@ def main(args):
 if __name__=='__main__':
     parser=argparse.ArgumentParser()
     for name in ('record','bank','previous-bank','output'):parser.add_argument('--'+name,required=True)
+    parser.add_argument('--method',choices=['repair_flow_ttt','retrieval_repair_ttt'],default='repair_flow_ttt')
     main(parser.parse_args())

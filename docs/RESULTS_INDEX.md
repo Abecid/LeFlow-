@@ -12,8 +12,10 @@ SOTA, convergence, isolated component gains or generalization.
 [Repair-flow TTT completed](REPAIR_FLOW_TTT_RESULTS.md), tying80/104 with six
 paired wins/six regressions against the preserved GMM80 reference. All four
 evaluations, full metrics, failures, visual review and compute are preserved.
-No run is active at this completion snapshot. The authorized sequential loop
-may consider one concrete evidence-supported correction after publication.
+The completion was verified on origin/main at15852d5. One next candidate,
+[retrieval-conditioned repair](RETRIEVAL_REPAIR_TTT.md), is registered and gated
+by final checks; consult the active ledger for launch status. It adds the missing
+cross-episode retrieved proposal to training, with unchanged data and budgets.
 
 ## Preserved comparisons
 

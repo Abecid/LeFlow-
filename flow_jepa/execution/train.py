@@ -35,6 +35,9 @@ def component_types(c):
         from .revision import RevisionPolicy
         from .aligned import AlignedSegments, AlignedController
         return method,RevisionPolicy,AlignedSegments,AlignedController
+    if method=='retrieval_repair_ttt':
+        from .retrieval_repair import RetrievalRepairPolicy, RetrievalRepairController, RetrievalRepairSegments
+        return method,RetrievalRepairPolicy,RetrievalRepairSegments,RetrievalRepairController
     if method=='repair_flow_ttt':
         from .repair_flow_ttt import RepairFlowTTTPolicy, RepairFlowTTTController
         from .aligned import AlignedSegments
@@ -133,7 +136,7 @@ def train(args):
     elif (run_dir / 'run.json').exists():
         raise RuntimeError('Existing run without recoverable checkpoint')
     module = DDP(model, device_ids=[device.index], broadcast_buffers=False,
-                 find_unused_parameters=(method in ('flow_reasoning','progress_ttt','guided_ttt','repair_flow_ttt'))) if size > 1 else model
+                 find_unused_parameters=(method in ('flow_reasoning','progress_ttt','guided_ttt','repair_flow_ttt','retrieval_repair_ttt'))) if size > 1 else model
     seed_all(3072 + 997 * rank)
     data = Dataset(root, c, method, 3072, steps * batch)
     data = Subset(data, range(start * batch, len(data)))
@@ -158,6 +161,21 @@ def train(args):
     if size > 1:
         value = [run_id]; dist.broadcast_object_list(value, src=0); run_id=value[0]
     encoder, bank = None, None
+    training_retrieval = None
+    if method == 'retrieval_repair_ttt':
+        from .retrieval_repair import TrainingRetrieval
+        torch.cuda.synchronize(); setup_started = time.perf_counter()
+        bank = RouteBank(args.bank, c, manifest_hash, device)
+        training_retrieval = TrainingRetrieval(bank)
+        torch.cuda.synchronize(); setup_seconds = time.perf_counter()-setup_started
+        setup_value = torch.tensor(setup_seconds,device=device,dtype=torch.float64)
+        if size > 1: dist.all_reduce(setup_value,op=dist.ReduceOp.MAX)
+        if rank == 0:
+            setup_path=run_dir/'retrieval-setup.json'
+            setup_records=json.loads(setup_path.read_text())['attempts'] if setup_path.exists() else []
+            setup_records.append(dict(seconds=float(setup_value),gpu_count=size,
+                gpu_hours=float(setup_value)*size/3600,optimizer_updates=0,bank_hash=identity['bank_hash']))
+            save_json(setup_path,dict(attempts=setup_records,gpu_hours=sum(x['gpu_hours'] for x in setup_records)))
     began = time.perf_counter(); step = start
     cap = c['controller_grounded']['optimization_gpu_seconds']
 
@@ -191,7 +209,7 @@ def train(args):
         # At a binding compute cap, use the last trained checkpoint for the
         # remaining scheduled validation slot; never extend optimization.
         return (step > 0 and step not in validation_steps and len(validation_steps) < 4
-                and (step % 5000 == 0 or (method in ('flow_reasoning','progress_ttt','guided_ttt','repair_flow_ttt') and used >= cap)))
+                and (step % 5000 == 0 or (method in ('flow_reasoning','progress_ttt','guided_ttt','repair_flow_ttt','retrieval_repair_ttt') and used >= cap)))
 
     try:
         while (step < steps and used < cap) or validation_due():
@@ -205,11 +223,13 @@ def train(args):
                 for group in optimizer.param_groups: group['lr']=tc['learning_rate']*lr_factor
                 weight = 0.1 * min(1.0, max(0.0, (step-1000)/1000))
                 item = {k:v.to(device, non_blocking=True) for k,v in next(iterator).items()}
-                if method in ('flow_reasoning','progress_ttt','guided_ttt','repair_flow_ttt'):
+                if method in ('flow_reasoning','progress_ttt','guided_ttt','repair_flow_ttt','retrieval_repair_ttt'):
                     weight = 0.
                     # All ranks use the same balanced depth, so one rank's
                     # deeper rollout cannot silently dominate every update.
                     depth = 1+(step-1) % c['flow_reasoning']['rounds']
+                    if training_retrieval is not None and depth == 2:
+                        item = training_retrieval.augment(item)
                     loss, parts = module(item, world, weight=0., depth=depth)
                 else:
                     loss, parts = module(item, world, weight=weight)
@@ -246,7 +266,7 @@ def train(args):
                 torch.cuda.synchronize(); eval_start = time.perf_counter()
                 if encoder is None:
                     encoder = Encoder(c['encoder'], root, device)
-                    bank = RouteBank(args.bank, c, manifest_hash, device)
+                    if bank is None: bank = RouteBank(args.bank, c, manifest_hash, device)
                 model.eval()
                 controller = ControllerType(model, world, c, bank)
                 journal = EpisodeJournal(Path(args.bank).parent/'journals'/f'step_{step:07d}',

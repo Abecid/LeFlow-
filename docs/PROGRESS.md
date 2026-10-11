@@ -1,3 +1,18 @@
+# October11: published repair-flow; one retrieval-training correction registered
+
+Repair-flow80/73/75/75 is published to origin/main at15852d5; all146 ledger
+artifacts and41 reports verified remotely. It ties GMM80, with six paired wins
+and six regressions. Known measured cumulative components90.934490GPUh.
+
+Code review confirms a missing retrieved-action slot in residual training,
+although deployment can use that slot as the incumbent. Registered exactly one
+correction, `retrieval_repair_ttt`, with cross-episode retrieval and unchanged
+controller/architecture/data/budgets. This does not fix shifted-plan coverage or
+prove the cause of physical failures. [Method and scope](RETRIEVAL_REPAIR_TTT.md).
+Five new CPU behavior checks pass; final-source inherited tests, cached-data
+preflight and distributed gradient verification gate launch. No new evaluation
+result or optimization is claimed by this registration snapshot.
+
 # October11 13:50 Pacific: repair-flow completed and verified
 
 Full curve80/73/75/75, select5k80/104; six paired wins/six regressions versus

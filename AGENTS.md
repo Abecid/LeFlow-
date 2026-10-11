@@ -1,3 +1,13 @@
+# Current registered candidate: retrieval_repair_ttt
+
+Repair-flow completion is remotely published at15852d5;80/73/75/75 ties80.
+The next single evidence-backed correction trains residuals with a cross-episode
+retrieved slot, excluding the current episode. Read docs/RETRIEVAL_REPAIR_TTT.md
+and the active ledger for frozen source and process status. Same seed3072/data/
+global64/20k-or28800 GPU-second ceiling/four104 validations/controller allowance.
+No baseline training or test access. Do not restart completed repair_flow_ttt.
+Verify the new candidate's launch status before any recovery or duplicate dispatch.
+
 # Repair-flow completed: selected80/104, final75/104
 
 October11 13:50 Pacific verification: all four fixed104 rounds are80/73/75/75,

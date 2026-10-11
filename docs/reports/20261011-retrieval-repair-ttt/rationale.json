@@ -1,0 +1,51 @@
+{
+  "comparison_publication_commit": "15852d5c4fa550c22c0f6b6d9142bd7435593792",
+  "model_calls": 0,
+  "simulator_calls": 0,
+  "final_tests_read": false,
+  "rounds": [
+    {
+      "step": 5000,
+      "source": "docs/reports/20261011-repair-flow-ttt/run/validation/step_0005000.json.gz",
+      "sha256": "b1cd99f487e85e47b77046beac62b07da534a17dfdf553c29a6fae168fbad4d7",
+      "groups": {
+        "all": {
+          "decisions": 5173,
+          "shifted_prefix_exact_matches": 1206,
+          "retrieved_target_selected": 4158,
+          "unchanged_incumbent": 2284
+        },
+        "failed": {
+          "decisions": 2400,
+          "shifted_prefix_exact_matches": 703,
+          "retrieved_target_selected": 1411,
+          "unchanged_incumbent": 1067
+        }
+      }
+    },
+    {
+      "step": 20000,
+      "source": "docs/reports/20261011-repair-flow-ttt/run/validation/step_0020000.json.gz",
+      "sha256": "67233739fba6c803694a1d872ec6e276226d67d8b172e6619f68fe80b5def5d3",
+      "groups": {
+        "all": {
+          "decisions": 5351,
+          "shifted_prefix_exact_matches": 1412,
+          "retrieved_target_selected": 4097,
+          "unchanged_incumbent": 2814
+        },
+        "failed": {
+          "decisions": 2900,
+          "shifted_prefix_exact_matches": 919,
+          "retrieved_target_selected": 1658,
+          "unchanged_incumbent": 1531
+        }
+      }
+    }
+  ],
+  "limits": [
+    "Retrieved target does not identify which action source supplied the repair anchor; the old run did not log that provenance.",
+    "An exact shifted-prefix match is not unique provenance or causal benefit.",
+    "Code establishes the training/deployment missing retrieved slot. Saved failures motivate testing the correction, not causal attribution."
+  ]
+}

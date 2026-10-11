@@ -61,13 +61,17 @@ class RepairFlowTTTPolicy(ProgressTTTPolicy):
         repaired = (anchor + self.repair_radius*residual.clamp(-1, 1)).clamp(-1, 1)
         return torch.cat((anchor, repaired), 1)
 
+    def training_contexts(self, batch, world, history, depth):
+        z = batch['z']
+        return self.deliberate(z[:, 0], z[:, 2], z[:, 3], history, world, depth)
+
     def forward(self, batch, world=None, weight=0., depth=None):
         if weight:
             raise ValueError('Generated actions cannot receive inherited expert-outcome labels')
         depth = self.rounds if depth is None else depth
         z, actions = batch['z'], batch['a']
         history = self.factual_history(batch, world)
-        contexts = self.deliberate(z[:, 0], z[:, 2], z[:, 3], history, world, depth)
+        contexts = self.training_contexts(batch, world, history, depth)
         noise = torch.randn_like(actions)
         time = torch.rand(len(z), device=z.device)
         noisy = (1-time[:, None, None])*noise + time[:, None, None]*actions

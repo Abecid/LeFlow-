@@ -15,13 +15,20 @@ def main(a):
     torch.cuda.set_device(rank); torch.set_num_threads(2); dist.init_process_group('nccl')
     began = time.perf_counter(); seed_all(3072); device = torch.device('cuda', rank)
     c = config(a.config); method, Policy, Dataset, _ = component_types(c)
-    assert method in ('guided_ttt','repair_flow_ttt')
+    assert method in ('guided_ttt','repair_flow_ttt','retrieval_repair_ttt')
     model = Policy(c).to(device); world, _ = load_world(c, a.world, device)
     original = {k:v.clone() for k,v in model.state_dict().items()}
     wrapped = DDP(model, device_ids=[rank], broadcast_buffers=False, find_unused_parameters=True)
     ds = Dataset(a.root, c, method, 3072, 640)
     rows = [ds[rank*(64//size)+i] for i in range(64//size)]
     batch = {k:torch.stack([r[k] for r in rows]).to(device) for k in rows[0]}
+    if method == 'retrieval_repair_ttt':
+        from .bank import RouteBank
+        from .retrieval_repair import TrainingRetrieval
+        from ..common import file_hash
+        from pathlib import Path
+        bank=RouteBank(a.bank,c,file_hash(Path(a.root)/'manifest.json'),device)
+        batch=TrainingRetrieval(bank).augment(batch)
     seed_all(3072+997*rank); records = []
     for depth in range(1, c['flow_reasoning']['rounds']+1):
         wrapped.zero_grad(set_to_none=True)
@@ -52,4 +59,5 @@ def main(a):
 if __name__ == '__main__':
     p = argparse.ArgumentParser()
     for k in ('config','root','world','output'): p.add_argument('--'+k, required=True)
+    p.add_argument('--bank')
     main(p.parse_args())

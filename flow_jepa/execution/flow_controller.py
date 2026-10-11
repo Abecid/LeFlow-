@@ -8,6 +8,9 @@ from .aligned import AlignedController
 
 
 class FlowReasoningController(AlignedController):
+    def initial_pool_context(self, context, actions, recorded):
+        return context
+
     def plan_diagnostics(self, context, start, targets, actions, prefixes, chosen):
         return {}
 
@@ -30,6 +33,7 @@ class FlowReasoningController(AlignedController):
         actions[:7, -1] = recorded
         if self.previous_plan is not None:
             actions[:, 1, :-1] = self.previous_plan[1:]
+        context = self.initial_pool_context(context, actions, recorded)
         initial_actions = actions.clone()
         stalls, stall_counts = self.stall_penalties(start, targets)
         best_cost = start.new_full((n,), float('inf'))
