@@ -1,3 +1,15 @@
+# October11 12:56 Pacific: repair-flow training verified
+
+Fresh `repair_flow_ttt` is running on GPUs0–3, step353 at readback, online W&B
+[r3y7nepq](https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/r3y7nepq).
+Immutable source481bb7679aa3f43e938fd3991f3be57ba59f0ed0; coordinator739421,
+worker741958. All34 behavior tests,150 runtime hashes and4-rank no-update gradient
+checks passed. Full-controller preflight79.77ms; real evaluation pending.
+Same global64/data/fixed104 and20k/28800 optimizer-GPU-second caps. Baselines and
+sealed tests preserved. Read [run and failure analysis](REPAIR_FLOW_TTT.md).
+The existing15-minute continuation follows the newly authorized sequential loop,
+publishes each complete result, then decides one evidence-backed correction.
+
 # October11: failure analysis and registered flow-repair iteration
 
 Latest user authorization permits sequential evidence-driven improvements, one

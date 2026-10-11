@@ -15,9 +15,10 @@ validation tuning is not independent generalization evidence.
 Current registered candidate: repair_flow_ttt. Read docs/REPAIR_FLOW_TTT.md and the
 active ledger entry. Use4 idle GPUs while others are occupied; global64 and aggregate
 cap stay fixed. This changes rank random-stream assignment from prior8-GPU runs;
-record it, never claim bitwise identical optimization. No optimization has started
-at this registration stage. Run verified preflight/distributed checks and launch
-immediately on success, then record actual source, PIDs, W&B and metrics.
+record it, never claim bitwise identical optimization. Training verified October11 12:56:56 Pacific atstep353. Source481bb7679aa3f43e938fd3991f3be57ba59f0ed0, coordinator739421,
+worker741958, W&Br3y7nepq; runtime150 hashes. All34 tests, real-data preflight
+79.77ms and4-rank no-update gradient checks passed. Do not duplicate or edit the
+running source. Read the current ledger and run report before any continuation.
 
 # Standing requirement: publish every completed run
 

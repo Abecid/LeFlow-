@@ -159,3 +159,35 @@ audit hashes/cases/budgets, analyze paired wins/losses, timeout/stall/contact be
 incumbent-selection fraction and teacher-target clipping. Publish to origin/main.
 Only then decide the next specific correction under the user's iterative request.
 No blind queue, extra seeds, hyperparameter sweep, baseline rerun or sealed test.
+
+## Launch record
+
+October11 12:54 Pacific: deployed immutable source
+`481bb7679aa3f43e938fd3991f3be57ba59f0ed0`;150 runtime file hashes verified.
+Coordinator PID739421 entered pre-training checks. This is not yet confirmation
+of optimizer updates. Existing15-minute follow-up now handles the user-authorized
+sequential failure-analysis/implementation/training loop and publication, with
+unchanged per-run constraints. The first numerical result remains pending.
+
+Verified at12:56:56 Pacific: optimizer step353, worker741958, W&B
+[r3y7nepq](https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/r3y7nepq),
+no failure. All34 CPU tests passed;4-rank no-update gradient synchronization exact,
+all parameters unchanged by checks, world gradients absent. Preflight mean79.77ms
+(12 measured probes),9.50GiB peak including frozen encoder. Preflight.005795GPUh
+and distributed check.002990GPUh are recorded separately. Healthy training logs
+include both depths. No development evaluation has completed at this snapshot.
+
+Read-only follow-up helpers added outside the frozen execution source:
+`scripts/analysis/repair_flow_ttt_details.py` analyzes all saved evaluations and
+paired reference outcomes; `scripts/analysis/audit_repair_flow_ttt_run.py` verifies
+source, data, route-bank tensors, checkpoints, both logged depths, causal histories,
+incumbent/radius bounds,12 flow/320 world accounting and compute. Run them on saved
+records after completion; their final checks are not yet claimed to have passed.
+
+Interpretation guard: `repair_teacher_action_improvement` evaluates a clean
+estimate from a teacher-interpolated point that already contains part of the
+action target. It is positive even in preflight before any update; it is not a
+generation-quality gain. Analyze it with that baseline limitation, the residual
+clipping fraction, selected-repair frequency and actual registered task success.
+Comparisons between selected incumbent/repair decisions are observational, not
+randomized evidence of the repair's causal effect.
