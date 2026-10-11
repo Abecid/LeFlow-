@@ -1,24 +1,20 @@
 # Results and completion publication
 
-Updated October11,2026. The latest retrieval-repair run completes with
-**75/77/79/80**, selecting20k80/104 and tying the preserved best **80/104**.
-All scores use the same104 development cases and seed3072; final tests remain
-sealed. These selected custom MetaWorld comparisons retain the method-port,
-one-seed, reused-development and matched-ceiling limitations in each report.
-They establish neither native-benchmark SOTA nor component causality/generalization.
+Updated October11,2026. Shifted-plan repair completes **79/78/74/78**, selecting
+5k79/104, below the preserved best **80/104**. All scores use the same104
+development cases and seed3072; final tests remain sealed. These selected custom
+MetaWorld comparisons retain the method-port, one-seed, reused-development and
+matched-ceiling limitations. They establish neither native-benchmark SOTA nor
+component causality/generalization.
 
 ## Current iteration status
 
-[Retrieval-repair completed](RETRIEVAL_REPAIR_TTT_RESULTS.md); all four evaluations,
-full metrics, failure evidence, checkpoint hashes and actual compute are preserved.
-Completion publication was remotely verified at9a0d2de. One
-[causal shifted-plan training correction](SHIFTED_REPAIR_TTT.md) is verified
-training on four GPUs after 45 tests, an 80.18ms preflight and
-distributed checks. Its first three evaluations score **79/78/74**, with zero
-timeouts. The 15k checkpoint gains two cases and loses seven against 5k; 5k79
-remains selected, below the preserved 80. The final registered 20k round is pending. Preserve
-all baselines and the original per-candidate limits. Earlier repair-flow also
-selected80/104; these ties do not establish improvement.
+[Shifted repair completed](SHIFTED_REPAIR_TTT_RESULTS.md); all four evaluations,
+full metrics, failure evidence,20 inspected contact sheets, checkpoint hashes
+and actual compute are preserved. Source/data audit and process/online completion
+are verified. No next candidate is queued. The80/104 reference remains; publish
+and verify completion before deciding whether one further concrete correction
+is supported. Historical completed runs and frozen baselines remain untouched.
 
 ## Preserved comparisons
 
@@ -30,7 +26,8 @@ checkpoint, with earliest ties.
 
 | Method and findings | Success curve /104 | Selected | Optimization GPUh |
 | --- | --- | ---: | ---: |
-| [Retrieval-conditioned repair, latest](RETRIEVAL_REPAIR_TTT_RESULTS.md) | 75 / 77 / 79 / 80 | 80 at20k | 1.749 |
+| [Shifted-plan repair, latest](SHIFTED_REPAIR_TTT_RESULTS.md) | 79 / 78 / 74 / 78 | 79 at5k | 2.233 |
+| [Retrieval-conditioned repair](RETRIEVAL_REPAIR_TTT_RESULTS.md) | 75 / 77 / 79 / 80 | 80 at20k | 1.749 |
 | [Repair-flow TTT](REPAIR_FLOW_TTT_RESULTS.md) | 80 / 73 / 75 / 75 | 80 at5k | 1.620 |
 | [Guided action-flow TTT](GUIDED_TTT_RESULTS.md) | 72 / 70 / 72 / 75 | 75 at20k | 4.595 |
 | [Execution revision, GMM](EXECUTION_REVISION_RESULTS.md) | 80 / 78 / 79 / 76 | 80 at5k | 3.233 |
@@ -53,8 +50,8 @@ controller does not use a diffusion/flow generator.
 
 The machine-readable [results ledger](results-ledger.json) points to each run's
 identity, complete marker, metrics, all evaluations and SHA256 hashes. Its
-read-only verifier checks the hashed evidence artifacts,45 evaluation reports and all
-104 case identities across the twelve current comparisons. Run
+read-only verifier checks the hashed evidence artifacts,49 evaluation reports and all
+104 case identities across the thirteen current comparisons. Run
 `python3 scripts/analysis/verify_result_publications.py` from the repository.
 It invokes no models or simulators and does not read final-test outcomes.
 

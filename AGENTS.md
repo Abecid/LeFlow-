@@ -1,3 +1,12 @@
+# Shifted repair completed: selected5k79/104;80 reference retained
+
+Curve79/78/74/78, zero timeouts; all25/26/30/26 failures reach200 actions.
+Source2ae5a6c and146 hashes/data/checkpoints passed audit; W&B8yy6nh9f finished
+and all recorded owned processes exited. Read docs/SHIFTED_REPAIR_TTT_RESULTS.md
+and the completed ledger. Never restart this run. No candidate active at this
+completion snapshot. Publish/verify evidence before another evidence-backed
+decision; no speculative queue, baseline work or sealed tests.
+
 # Shifted repair: 79/78/74; retain 5k and complete final evaluation
 
 October 11, 16:10 Pacific: 15k scores 74/104 with zero timeouts; all 30 failures

@@ -1,3 +1,19 @@
+# October11: shifted repair completes79/78/74/78; selected5k79
+
+All416 evaluations have zero timeouts; failures exhaust200 actions. The selected
+model has6 gains/7 regressions against retrieval80,4/5 against repair-flow80 and
+5/6 against execution-revision80. Shifted anchors are used substantially, yet
+falling training losses do not improve development success. Assembly/reach
+regressions and persistent pick-place/faucet failures are preserved in paired IDs
+and20 inspected saved contact sheets. [Final report](SHIFTED_REPAIR_TTT_RESULTS.md).
+
+CPU source/data/bank/checkpoint/controller audit passes; W&B finished and all
+owned processes exited. Optimization2.232976 GPUh,
+evaluation1.818006 GPUh; known measured cumulative
+components98.593936 GPUh, with startup charges separate.
+Full800 periodic records/four reports preserved. No improvement over80 or final
+test claim; no new candidate active. Publish before a further supported decision.
+
 # October 11, 16:10 Pacific: shifted repair 15k falls to 74/104
 
 Curve 79/78/74, zero timeouts; retain 5k79. The third round gains two and loses

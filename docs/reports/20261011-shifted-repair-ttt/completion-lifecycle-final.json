@@ -1,0 +1,185 @@
+{
+  "utc": "2026-10-11T23:31:26.261182+00:00",
+  "status": {
+    "code": "2ae5a6c97bebe56b0b1f889cb34996d34cbf03d6",
+    "pid": 905872,
+    "run_dir": "/home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/campaign/runs/shifted_repair_ttt_3072",
+    "status": "completed_validation_ready_for_analysis",
+    "utc": "2026-10-11T23:28:52.704552+00:00",
+    "wall_seconds": 4235.807682257146
+  },
+  "processes": [
+    {
+      "pid": 905872,
+      "present": false
+    },
+    {
+      "pid": 908541,
+      "present": false
+    },
+    {
+      "pid": 908565,
+      "present": false
+    },
+    {
+      "pid": 908566,
+      "present": false
+    },
+    {
+      "pid": 908567,
+      "present": false
+    },
+    {
+      "pid": 908568,
+      "present": false
+    },
+    {
+      "pid": 908830,
+      "present": false
+    },
+    {
+      "pid": 908838,
+      "present": false
+    },
+    {
+      "pid": 908846,
+      "present": false
+    },
+    {
+      "pid": 908857,
+      "present": false
+    },
+    {
+      "pid": 908938,
+      "present": false
+    },
+    {
+      "pid": 908828,
+      "present": false
+    },
+    {
+      "pid": 908836,
+      "present": false
+    },
+    {
+      "pid": 908844,
+      "present": false
+    },
+    {
+      "pid": 908852,
+      "present": false
+    },
+    {
+      "pid": 908832,
+      "present": false
+    },
+    {
+      "pid": 908841,
+      "present": false
+    },
+    {
+      "pid": 908850,
+      "present": false
+    },
+    {
+      "pid": 908860,
+      "present": false
+    },
+    {
+      "pid": 908829,
+      "present": false
+    },
+    {
+      "pid": 908837,
+      "present": false
+    },
+    {
+      "pid": 908845,
+      "present": false
+    },
+    {
+      "pid": 908855,
+      "present": false
+    }
+  ],
+  "wandb": {
+    "id": "8yy6nh9f",
+    "state": "finished",
+    "summary": {
+      "budget/optimization_gpu_hours": 2.2329762297785942,
+      "step": 20000,
+      "validation/checkpoint_step": 20000,
+      "validation/controller_budget_exhausted_rate": 0,
+      "validation/controller_budget_overrun_seconds_mean": 0,
+      "validation/controller_seconds_per_episode_mean": 4.229265879051616,
+      "validation/controller_step_latency_ms_mean": 84.56905430135899,
+      "validation/controller_step_latency_ms_p95": 87.71069161593914,
+      "validation/episodes": 104,
+      "validation/expert_goal_failure_rate": 0,
+      "validation/latency_ms_mean": 84.51790871693608,
+      "validation/observed_subgoal_cosine": 0.016545929083124335,
+      "validation/return_mean": 262.41767009900775,
+      "validation/seen_success_macro": 0.75,
+      "validation/steps_to_success_capped_mean": 99.8846153846154,
+      "validation/success_macro": 0.75,
+      "validation/success_within_100_primitive": 0.6923076923076923,
+      "validation/success_within_200_primitive": 0.75,
+      "validation/success_within_50_primitive": 0.22115384615384617,
+      "validation/task/assembly/ci95_high": 0.6942621454161981,
+      "validation/task/assembly/ci95_low": 0.13684175946152105,
+      "validation/task/assembly/success": 0.375,
+      "validation/task/button-press-topdown/ci95_high": 1,
+      "validation/task/button-press-topdown/ci95_low": 0.6755843804891231,
+      "validation/task/button-press-topdown/success": 1,
+      "validation/task/coffee-button/ci95_high": 1,
+      "validation/task/coffee-button/ci95_low": 0.6755843804891231,
+      "validation/task/coffee-button/success": 1,
+      "validation/task/dial-turn/ci95_high": 1,
+      "validation/task/dial-turn/ci95_low": 0.6755843804891231,
+      "validation/task/dial-turn/success": 1,
+      "validation/task/door-close/ci95_high": 1,
+      "validation/task/door-close/ci95_low": 0.6755843804891231,
+      "validation/task/door-close/success": 1,
+      "validation/task/door-open/ci95_high": 0.9775830911367038,
+      "validation/task/door-open/ci95_low": 0.5291051942301386,
+      "validation/task/door-open/success": 0.875,
+      "validation/task/drawer-close/ci95_high": 1,
+      "validation/task/drawer-close/ci95_low": 0.6755843804891231,
+      "validation/task/drawer-close/success": 1,
+      "validation/task/drawer-open/ci95_high": 1,
+      "validation/task/drawer-open/ci95_low": 0.6755843804891231,
+      "validation/task/drawer-open/success": 1,
+      "validation/task/faucet-open/ci95_high": 0.4708948057698615,
+      "validation/task/faucet-open/ci95_low": 0.02241690886329617,
+      "validation/task/faucet-open/success": 0.125,
+      "validation/task/handle-press/ci95_high": 1,
+      "validation/task/handle-press/ci95_low": 0.6755843804891231,
+      "validation/task/handle-press/success": 1,
+      "validation/task/pick-place/ci95_high": 0.4708948057698615,
+      "validation/task/pick-place/ci95_low": 0.02241690886329617,
+      "validation/task/pick-place/success": 0.125,
+      "validation/task/plate-slide/ci95_high": 1,
+      "validation/task/plate-slide/ci95_low": 0.6755843804891231,
+      "validation/task/plate-slide/success": 1,
+      "validation/task/reach/ci95_high": 0.5907301208974108,
+      "validation/task/reach/ci95_low": 0.07147768885802763,
+      "validation/task/reach/success": 0.25,
+      "validation/world_predictions_mean": 16003.076923076924
+    }
+  },
+  "training_log_tail": "a\nwandb: uploading output.log; uploading wandb-summary.json; uploading config.yaml\nwandb: uploading output.log; uploading wandb-summary.json; uploading config.yaml; uploading data\nwandb: uploading output.log; uploading wandb-summary.json; uploading config.yaml\nwandb: uploading output.log; uploading wandb-summary.json; uploading config.yaml; uploading data\nwandb: uploading output.log; uploading wandb-summary.json; uploading config.yaml\nwandb: uploading output.log; uploading wandb-summary.json; uploading config.yaml; uploading data\nwandb: uploading output.log; uploading data\nwandb: uploading data\nwandb: \nwandb: Run history:\nwandb:     budget/optimization_gpu_hours \u2581\u2582\u2582\u2582\u2582\u2582\u2583\u2583\u2583\u2583\u2583\u2583\u2583\u2583\u2583\u2583\u2584\u2584\u2584\u2584\u2584\u2584\u2585\u2585\u2585\u2585\u2586\u2586\u2586\u2586\u2586\u2587\u2587\u2587\u2587\u2587\u2587\u2587\u2588\u2588\nwandb:                              step \u2581\u2581\u2581\u2581\u2581\u2582\u2582\u2582\u2583\u2583\u2583\u2583\u2584\u2584\u2584\u2585\u2585\u2585\u2585\u2585\u2585\u2586\u2586\u2586\u2586\u2586\u2587\u2587\u2587\u2587\u2587\u2587\u2587\u2587\u2587\u2588\u2588\u2588\u2588\u2588\nwandb:               system/peak_gpu_gib \u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\nwandb: system/update_examples_per_second \u2582\u2582\u2588\u2581\u2587\u2582\u2588\u2582\u2588\u2582\u2588\u2582\u2587\u2582\u2581\u2582\u2582\u2581\u2586\u2582\u2582\u2582\u2586\u2587\u2582\u2582\u2582\u2582\u2582\u2582\u2588\u2587\u2587\u2581\u2587\u2582\u2582\u2586\u2587\u2582\nwandb:             system/update_seconds \u2587\u2586\u2581\u2587\u2582\u2581\u2586\u2586\u2581\u2581\u2585\u2586\u2586\u2581\u2586\u2586\u2586\u2581\u2586\u2586\u2582\u2586\u2586\u2581\u2586\u2586\u2586\u2581\u2581\u2581\u2588\u2586\u2588\u2581\u2586\u2586\u2586\u2581\u2586\u2586\nwandb:            train/calibration_loss \u2583\u2586\u2585\u2585\u2584\u2586\u2584\u2582\u2585\u2587\u2584\u2581\u2586\u2584\u2583\u2584\u2585\u2588\u2585\u2584\u2584\u2584\u2585\u2586\u2584\u2585\u2583\u2584\u2584\u2586\u2588\u2585\u2582\u2585\u2585\u2586\u2583\u2586\u2583\u2586\nwandb:            train/execution_weight \u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\nwandb:      train/fast_weight_delta_norm \u2582\u2581\u2583\u2585\u2584\u2585\u2584\u2584\u2584\u2585\u2585\u2585\u2586\u2585\u2585\u2586\u2586\u2586\u2585\u2586\u2588\u2587\u2587\u2587\u2586\u2586\u2586\u2587\u2586\u2585\u2587\u2587\u2587\u2586\u2586\u2586\u2586\u2587\u2587\u2587\nwandb:                   train/flow_loss \u2588\u2587\u2586\u2585\u2583\u2582\u2582\u2582\u2582\u2582\u2582\u2582\u2582\u2582\u2582\u2581\u2582\u2582\u2581\u2581\u2581\u2581\u2582\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\nwandb:            train/goal_offset_mean \u2583\u2587\u2586\u2588\u2584\u2586\u2586\u2581\u2584\u2586\u2584\u2584\u2583\u2583\u2582\u2584\u2585\u2584\u2587\u2584\u2583\u2583\u2584\u2584\u2582\u2582\u2585\u2586\u2586\u2587\u2586\u2586\u2582\u2586\u2583\u2586\u2585\u2583\u2585\u2585\nwandb:                               +79 ...\nwandb: \nwandb: Run summary:\nwandb:     budget/optimization_gpu_hours 2.23298\nwandb:                              step 20000\nwandb:               system/peak_gpu_gib 11.52736\nwandb: system/update_examples_per_second 496.54682\nwandb:             system/update_seconds 0.12889\nwandb:            train/calibration_loss 0.02558\nwandb:            train/execution_weight 0\nwandb:      train/fast_weight_delta_norm 0.44947\nwandb:                   train/flow_loss 0.07838\nwandb:            train/goal_offset_mean 29.92188\nwandb:                               +79 ...\nwandb: \nwandb: \ud83d\ude80 View run shifted_repair_ttt_3072 at: https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/8yy6nh9f\nwandb: \u2b50\ufe0f View project at: https://wandb.ai/attentionx2023/flow-jepa-metaworld\nwandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)\nwandb: Find logs at: /home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/campaign/runs/shifted_repair_ttt_3072/wandb/run-20261011_222042-8yy6nh9f/logs\n",
+  "debug_log_files": [
+    {
+      "path": "/home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/campaign/runs/shifted_repair_ttt_3072/wandb/debug-internal.log",
+      "bytes": 1233,
+      "last_modified": 1791761330.4434454,
+      "error_lines": []
+    },
+    {
+      "path": "/home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/campaign/runs/shifted_repair_ttt_3072/wandb/run-20261011_222042-8yy6nh9f/logs/debug-internal.log",
+      "bytes": 1233,
+      "last_modified": 1791761330.4434454,
+      "error_lines": []
+    }
+  ]
+}

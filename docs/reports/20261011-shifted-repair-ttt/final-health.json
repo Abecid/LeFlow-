@@ -1,0 +1,433 @@
+{
+  "utc": "2026-10-11T23:25:56.250843+00:00",
+  "source": "2ae5a6c97bebe56b0b1f889cb34996d34cbf03d6",
+  "source_clean": true,
+  "runtime_hash_count": 146,
+  "status": {
+    "code": "2ae5a6c97bebe56b0b1f889cb34996d34cbf03d6",
+    "command": [
+      "/tmp/mtxu-flow-jepa-20261007/env/bin/python",
+      "-m",
+      "torch.distributed.run",
+      "--nnodes=1",
+      "--nproc_per_node=4",
+      "--rdzv-backend=c10d",
+      "--rdzv-endpoint=127.0.0.1:0",
+      "-m",
+      "flow_jepa.execution.train",
+      "--config",
+      "/home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/repo/config/flow_metaworld_shifted_repair_ttt.json",
+      "--root",
+      "/home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/campaign",
+      "--run-dir",
+      "/home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/campaign/runs/shifted_repair_ttt_3072",
+      "--world",
+      "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt",
+      "--bank",
+      "/tmp/mtxu-shifted-repair-ttt-20261011/route_bank.pt"
+    ],
+    "pid": 905872,
+    "preflight_mean_ms": 80.17851365730166,
+    "status": "training",
+    "utc": "2026-10-11T22:20:31.038805+00:00"
+  },
+  "compute": {
+    "global_batch": 64,
+    "gpu_count": 4,
+    "last_update_overrun_gpu_seconds": 0.0,
+    "optimization_cap_gpu_seconds": 28800,
+    "optimization_gpu_hours": 2.2329762297785942,
+    "optimization_gpu_seconds": 8038.71442720294,
+    "step": 20000,
+    "stop_check": "optimizer boundary; final-update overrun reported",
+    "validation_gpu_hours": 1.818005705786248,
+    "validation_gpu_seconds": 6544.820540830493,
+    "validation_steps": [
+      5000,
+      10000,
+      15000,
+      20000
+    ]
+  },
+  "worker": {
+    "command": [
+      "/tmp/mtxu-flow-jepa-20261007/env/bin/python",
+      "-m",
+      "torch.distributed.run",
+      "--nnodes=1",
+      "--nproc_per_node=4",
+      "--rdzv-backend=c10d",
+      "--rdzv-endpoint=127.0.0.1:0",
+      "-m",
+      "flow_jepa.execution.train",
+      "--config",
+      "/home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/repo/config/flow_metaworld_shifted_repair_ttt.json",
+      "--root",
+      "/home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/campaign",
+      "--run-dir",
+      "/home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/campaign/runs/shifted_repair_ttt_3072",
+      "--world",
+      "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt",
+      "--bank",
+      "/tmp/mtxu-shifted-repair-ttt-20261011/route_bank.pt"
+    ],
+    "pid": 908541
+  },
+  "processes": [
+    {
+      "pid": 905872,
+      "present": true,
+      "identity_matches": true,
+      "state": "S",
+      "start_ticks": 1007760082,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m scripts.operations.controller_grounded --record /home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt --variant shifted_repair_ttt --gpus 4 --previous /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison --cache /tmp/mtxu-shifted-repair-ttt-20261011 --reuse-bank /tmp/mtxu-flow-reasoning-20261010/route_bank.pt "
+    },
+    {
+      "pid": 908541,
+      "present": true,
+      "identity_matches": true,
+      "state": "S",
+      "start_ticks": 1007773717,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -m torch.distributed.run --nnodes=1 --nproc_per_node=4 --rdzv-backend=c10d --rdzv-endpoint=127.0.0.1:0 -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/repo/config/flow_metaworld_shifted_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/campaign/runs/shifted_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-shifted-repair-ttt-20261011/route_bank.pt "
+    },
+    {
+      "pid": 908565,
+      "present": true,
+      "identity_matches": true,
+      "state": "S",
+      "start_ticks": 1007773826,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/repo/config/flow_metaworld_shifted_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/campaign/runs/shifted_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-shifted-repair-ttt-20261011/route_bank.pt "
+    },
+    {
+      "pid": 908566,
+      "present": true,
+      "identity_matches": true,
+      "state": "S",
+      "start_ticks": 1007773826,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/repo/config/flow_metaworld_shifted_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/campaign/runs/shifted_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-shifted-repair-ttt-20261011/route_bank.pt "
+    },
+    {
+      "pid": 908567,
+      "present": false
+    },
+    {
+      "pid": 908568,
+      "present": true,
+      "identity_matches": true,
+      "state": "S",
+      "start_ticks": 1007773827,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/repo/config/flow_metaworld_shifted_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/campaign/runs/shifted_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-shifted-repair-ttt-20261011/route_bank.pt "
+    },
+    {
+      "pid": 908830,
+      "present": true,
+      "identity_matches": true,
+      "state": "S",
+      "start_ticks": 1007774157,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/repo/config/flow_metaworld_shifted_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/campaign/runs/shifted_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-shifted-repair-ttt-20261011/route_bank.pt "
+    },
+    {
+      "pid": 908838,
+      "present": true,
+      "identity_matches": true,
+      "state": "S",
+      "start_ticks": 1007774158,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/repo/config/flow_metaworld_shifted_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/campaign/runs/shifted_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-shifted-repair-ttt-20261011/route_bank.pt "
+    },
+    {
+      "pid": 908846,
+      "present": true,
+      "identity_matches": true,
+      "state": "S",
+      "start_ticks": 1007774159,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/repo/config/flow_metaworld_shifted_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/campaign/runs/shifted_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-shifted-repair-ttt-20261011/route_bank.pt "
+    },
+    {
+      "pid": 908857,
+      "present": true,
+      "identity_matches": true,
+      "state": "S",
+      "start_ticks": 1007774160,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/repo/config/flow_metaworld_shifted_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/campaign/runs/shifted_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-shifted-repair-ttt-20261011/route_bank.pt "
+    },
+    {
+      "pid": 908938,
+      "present": true,
+      "identity_matches": true,
+      "state": "S",
+      "start_ticks": 1007774916,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/lib/python3.11/site-packages/wandb/bin/wandb-core --port-filename /tmp/tmps458lgcl/port-908565.txt --pid 908565 "
+    },
+    {
+      "pid": 908828,
+      "present": true,
+      "identity_matches": true,
+      "state": "S",
+      "start_ticks": 1007774157,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/repo/config/flow_metaworld_shifted_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/campaign/runs/shifted_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-shifted-repair-ttt-20261011/route_bank.pt "
+    },
+    {
+      "pid": 908836,
+      "present": true,
+      "identity_matches": true,
+      "state": "S",
+      "start_ticks": 1007774158,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/repo/config/flow_metaworld_shifted_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/campaign/runs/shifted_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-shifted-repair-ttt-20261011/route_bank.pt "
+    },
+    {
+      "pid": 908844,
+      "present": true,
+      "identity_matches": true,
+      "state": "S",
+      "start_ticks": 1007774159,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/repo/config/flow_metaworld_shifted_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/campaign/runs/shifted_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-shifted-repair-ttt-20261011/route_bank.pt "
+    },
+    {
+      "pid": 908852,
+      "present": true,
+      "identity_matches": true,
+      "state": "S",
+      "start_ticks": 1007774159,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/repo/config/flow_metaworld_shifted_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/campaign/runs/shifted_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-shifted-repair-ttt-20261011/route_bank.pt "
+    },
+    {
+      "pid": 908832,
+      "present": false
+    },
+    {
+      "pid": 908841,
+      "present": false
+    },
+    {
+      "pid": 908850,
+      "present": false
+    },
+    {
+      "pid": 908860,
+      "present": false
+    },
+    {
+      "pid": 908829,
+      "present": true,
+      "identity_matches": true,
+      "state": "S",
+      "start_ticks": 1007774157,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/repo/config/flow_metaworld_shifted_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/campaign/runs/shifted_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-shifted-repair-ttt-20261011/route_bank.pt "
+    },
+    {
+      "pid": 908837,
+      "present": true,
+      "identity_matches": true,
+      "state": "S",
+      "start_ticks": 1007774158,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/repo/config/flow_metaworld_shifted_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/campaign/runs/shifted_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-shifted-repair-ttt-20261011/route_bank.pt "
+    },
+    {
+      "pid": 908845,
+      "present": true,
+      "identity_matches": true,
+      "state": "S",
+      "start_ticks": 1007774159,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/repo/config/flow_metaworld_shifted_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/campaign/runs/shifted_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-shifted-repair-ttt-20261011/route_bank.pt "
+    },
+    {
+      "pid": 908855,
+      "present": true,
+      "identity_matches": true,
+      "state": "S",
+      "start_ticks": 1007774160,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/repo/config/flow_metaworld_shifted_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/campaign/runs/shifted_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-shifted-repair-ttt-20261011/route_bank.pt "
+    }
+  ],
+  "complete": {
+    "best": 0.7596153846153846,
+    "best_step": 5000,
+    "optimization_gpu_hours": 2.2329762297785942,
+    "step": 20000,
+    "stop_reason": "update_limit",
+    "validation_gpu_hours": 1.818005705786248,
+    "validation_steps": [
+      5000,
+      10000,
+      15000,
+      20000
+    ],
+    "wall_seconds": 3688.454044558108
+  },
+  "saved_trajectory_hashes": {
+    "trajectories/step_0005000/assembly/00000.npz": "0d29b751bf304c99f6055a6012b27ff97afd76560a89a4ac0845637709bfb37d",
+    "trajectories/step_0005000/coffee-button/00000.npz": "2eb38b584f3e97919e52bf667d5a71a7b76bab465422dbb210bdc0454a8a6ac4",
+    "trajectories/step_0005000/dial-turn/00000.npz": "ed86a261a4baa624f7e534cf9b05542efc8319304a55767c9b891e32167f3b25",
+    "trajectories/step_0005000/door-close/00000.npz": "ca2ae16d61b32b6d30eace0a1943d633ee885406f2ccee4fd88ebe2494f0fb8f",
+    "trajectories/step_0005000/drawer-close/00004.npz": "97bc7df49648fea0fde410d9d17178a010164ae5f150835f3c0a38c7f4c1b035",
+    "trajectories/step_0005000/faucet-open/00003.npz": "f538c67db26d8f3664d4b870c1459b453ca59d2eb67c16943c664a7809271c43",
+    "trajectories/step_0005000/handle-press/00000.npz": "7bd55591d6e4ba00b007bf8bd25091f94b43bfe506bd9a2013a91c5cfe0d45c9",
+    "trajectories/step_0005000/pick-place/00000.npz": "6b017760da7996550116f224682baf0816822aeb7c5a44c8811998c5c3ed5202",
+    "trajectories/step_0005000/reach/00003.npz": "bfb6ed22ecd213c450f257e97cb3e1e42de0e1390a937a6dbe297d378a470b94",
+    "trajectories/step_0005000/reach/00005.npz": "de4e64aaee9bd6c4945c915214f0cdf91bd72e8f248f209d9066340f4667c242",
+    "trajectories/step_0010000/assembly/00000.npz": "73bb9e847f1b6940ff7825cd2ba20da547fabca9846287ca45c166d4f3f5ebac",
+    "trajectories/step_0010000/coffee-button/00000.npz": "b5d628495ef45413dfe99edb7cb385cd0af8020eb02d75a73ffa98de7e684b7c",
+    "trajectories/step_0010000/dial-turn/00000.npz": "c2f2887f753578e7ee9da2ffde7efd89bb610c81216127c0b2831166ef939ec4",
+    "trajectories/step_0010000/door-close/00000.npz": "a4d5e64886dfc5de7668b5da688b8ff050781418c73c2cfec3ba771eee571d8e",
+    "trajectories/step_0010000/drawer-close/00004.npz": "99672dcaded46a169e877d711636fddae5b18ae7265990bde8142f9110163b51",
+    "trajectories/step_0010000/faucet-open/00003.npz": "b69341e649cad139f981f3a9e980dddce668607a95ce9c414aa0ced8839918a1",
+    "trajectories/step_0010000/handle-press/00000.npz": "82c1ebd0308b7d8777c60eff04fe5a19f09b9cf722466e3d7d03537dfa44dfa9",
+    "trajectories/step_0010000/pick-place/00000.npz": "5af8908efabb1e1d173e5450b448c3f602e2b3bb09fc0da87e079b7585261e22",
+    "trajectories/step_0010000/reach/00003.npz": "89bfc36fb8e69fc60abaf17ad863eb64360e9ffe5ab86dff9d6ef167bd3a8347",
+    "trajectories/step_0010000/reach/00005.npz": "f791d0e929a5eb3657963c628b414a9d9f5a9f23a56f839afd495ce267b954ff",
+    "trajectories/step_0015000/assembly/00000.npz": "099b8f0ab75bfc111453fb15d10c77099613c8cf6e02c7d9f54aa62c662e22ad",
+    "trajectories/step_0015000/coffee-button/00000.npz": "3cab250ebb786c50938d2789cd7e722177f8cfb285453d769e4c738ffeda2e83",
+    "trajectories/step_0015000/dial-turn/00000.npz": "e9ef4a5e2a850f79bff05bc1e5cd32f5a7d2f46c815cdad43f31b013a6e471db",
+    "trajectories/step_0015000/door-close/00000.npz": "1b8b5ff1892174c9663beb9ad142fc921167534beec53f71d23e5f5621c91620",
+    "trajectories/step_0015000/drawer-close/00004.npz": "686d778c5cef4af730482bfb29dcca883dbcbf37f622c8c0254aca157aa111c9",
+    "trajectories/step_0015000/faucet-open/00003.npz": "85d46425b4e4e108e55c2043d685313d1380dfa7a3cf165c5d6cf11908aa5d79",
+    "trajectories/step_0015000/handle-press/00000.npz": "4c11865cb17e575b0eccf9114ec8a6849cd887416c297b22b514ecdb06289899",
+    "trajectories/step_0015000/pick-place/00000.npz": "679f6bec1b801567ca8ac547cf8231525f91594deb53e4ab4590456c4c0e6016",
+    "trajectories/step_0015000/reach/00003.npz": "a29bb262f5e2c5cf6a5ce7fd3e2c76968d70ffdcee6d4ef3cd6867501eb8d21d",
+    "trajectories/step_0015000/reach/00005.npz": "58db096c71c5e8a47e14546fcff539f9c83908306ae041e291745c4c6077153d",
+    "trajectories/step_0020000/assembly/00000.npz": "0fcf5e036123b8da77b317773dfdc5397f31aa877ae56eb44c10c236616bdbc1",
+    "trajectories/step_0020000/coffee-button/00000.npz": "26af2959e797aca2aa6ae6ef3db6c45786169db178306ecbf79fc9caa19ce876",
+    "trajectories/step_0020000/dial-turn/00000.npz": "66f1d15c61bbbc71dec36c836c3e73d422afcd2afc5d25b030b80c19e30dacf9",
+    "trajectories/step_0020000/door-close/00000.npz": "1806d5da470f5dca6d76e73ea0a063ba0146af59e692cca0d5c8d93812c8e5ed",
+    "trajectories/step_0020000/drawer-close/00004.npz": "44e7e59e781abd50515f1b3b12e3883a274fbbc28b35203aaaa4baa0738c7570",
+    "trajectories/step_0020000/faucet-open/00003.npz": "2378392ace27d013106083393b7ce681cad29f275e19c29b9c78a94eb7ff8144",
+    "trajectories/step_0020000/handle-press/00000.npz": "cd282c7336c5e89a8e0cd6a6da5df3ba21e33acfda806593649dc0713e42dc41",
+    "trajectories/step_0020000/pick-place/00000.npz": "9e1527c0fcddbf52273504edcba6e15500fb077199a40331f628912324d97b19",
+    "trajectories/step_0020000/reach/00003.npz": "4b10222a3bf4a690125b2d98615960f194763a920d32c1594a77e57bd601a787",
+    "trajectories/step_0020000/reach/00005.npz": "da325ee3b47baa11e78c28c2ff4acdb42dcc4e0ad27154694c4f2c0c2d18eeef"
+  },
+  "checkpoints": {
+    "checkpoints/step_0005000.pt": {
+      "bytes": 77830705,
+      "sha256": "901e57c711cb0a1ee8df39892b02b40df4fef10ef12e5c6fef6bfc31912e51f4"
+    },
+    "checkpoints/step_0010000.pt": {
+      "bytes": 77830705,
+      "sha256": "6dc2769051a7732adc82663712c8d48a4a47a047654fafabdd93a36e2bd18023"
+    },
+    "checkpoints/step_0015000.pt": {
+      "bytes": 77830705,
+      "sha256": "df5547f431f7eb1845ce5ffc0e73209643e543966bc2936f21d4a666eca68725"
+    },
+    "checkpoints/step_0020000.pt": {
+      "bytes": 77830705,
+      "sha256": "c0d130a6802388b32612f804fc4c6e3ed7fea77bd0c493e7925af9d003fb4622"
+    },
+    "last.pt": {
+      "bytes": 77797537,
+      "sha256": "a448da06a5ea346a0cd0fc2d7d55ee995075047f21a1d516036541b08b378774"
+    },
+    "best.pt": {
+      "bytes": 77797537,
+      "sha256": "1ef1471b6a1a23ab01fb75890ef8dc1d81f341a74d1cf2e0c8a9501f25a01ad9"
+    }
+  },
+  "last_metric_step": 20000,
+  "training_rows": 800,
+  "finite_metrics": true,
+  "monotone_optimization_charge": true,
+  "source_files": {
+    "run/run.json": {
+      "bytes": 560,
+      "sha256": "0d43445c31a87b130d7cad63134c3d4011574f242b0e9ae2d2afbdbb85b1412d"
+    },
+    "run/compute_usage.json": {
+      "bytes": 470,
+      "sha256": "3e840764e6d3cc2742d90145a5f7deec8ccb938d62bebf91d1fe39a49f2f17fc"
+    },
+    "run/retrieval-setup.json": {
+      "bytes": 290,
+      "sha256": "d81083d6769d399e10a8d5ef06d49131debfcba25640706f4aca2f6299db3845"
+    },
+    "run/metrics.jsonl": {
+      "bytes": 1161511,
+      "sha256": "271d611fe90ec975cbeeec4686a3674d42b49d0a7439ef5b6374be7ee88049af"
+    },
+    "run/complete.json": {
+      "bytes": 304,
+      "sha256": "1d6cfdc0df2f1553e88ca194d014ecec9fd36089c721358e9d5112fbcd33068a"
+    },
+    "run/validation/step_0005000.json": {
+      "bytes": 29034979,
+      "sha256": "ff8728b2df192f7070fb8e36615aad0169d1bc573b8c8532625af0a92840fd22"
+    },
+    "run/validation/step_0010000.json": {
+      "bytes": 28553422,
+      "sha256": "c001e7b562c251450222b3ad4b4d1b513be74ea4f6ca29da5ab72a56e4af1061"
+    },
+    "run/validation/step_0015000.json": {
+      "bytes": 30134753,
+      "sha256": "73fd0274c8001aaf8a98cc054b9e2e344710b3b87cb5c27ce8683b0dc9acf269"
+    },
+    "run/validation/step_0020000.json": {
+      "bytes": 28515447,
+      "sha256": "d0a6ef5d8ecb5f675c059c7332f971774a13bf84a6775f52d9085a58e2c76469"
+    }
+  },
+  "wandb": {
+    "id": "8yy6nh9f",
+    "state": "running",
+    "summary": {
+      "budget/optimization_gpu_hours": 2.2329762297785942,
+      "step": 20000,
+      "train/loss": 0.24654889106750488,
+      "validation/checkpoint_step": 20000,
+      "validation/controller_budget_exhausted_rate": 0,
+      "validation/controller_budget_overrun_seconds_mean": 0,
+      "validation/controller_seconds_per_episode_mean": 4.229265879051616,
+      "validation/controller_step_latency_ms_mean": 84.56905430135899,
+      "validation/controller_step_latency_ms_p95": 87.71069161593914,
+      "validation/episodes": 104,
+      "validation/expert_goal_failure_rate": 0,
+      "validation/latency_ms_mean": 84.51790871693608,
+      "validation/observed_subgoal_cosine": 0.016545929083124335,
+      "validation/return_mean": 262.41767009900775,
+      "validation/seen_success_macro": 0.75,
+      "validation/steps_to_success_capped_mean": 99.8846153846154,
+      "validation/success_macro": 0.75,
+      "validation/success_within_100_primitive": 0.6923076923076923,
+      "validation/success_within_200_primitive": 0.75,
+      "validation/success_within_50_primitive": 0.22115384615384617,
+      "validation/task/assembly/ci95_high": 0.6942621454161981,
+      "validation/task/assembly/ci95_low": 0.13684175946152105,
+      "validation/task/assembly/success": 0.375,
+      "validation/task/button-press-topdown/ci95_high": 1,
+      "validation/task/button-press-topdown/ci95_low": 0.6755843804891231,
+      "validation/task/button-press-topdown/success": 1,
+      "validation/task/coffee-button/ci95_high": 1,
+      "validation/task/coffee-button/ci95_low": 0.6755843804891231,
+      "validation/task/coffee-button/success": 1,
+      "validation/task/dial-turn/ci95_high": 1,
+      "validation/task/dial-turn/ci95_low": 0.6755843804891231,
+      "validation/task/dial-turn/success": 1,
+      "validation/task/door-close/ci95_high": 1,
+      "validation/task/door-close/ci95_low": 0.6755843804891231,
+      "validation/task/door-close/success": 1,
+      "validation/task/door-open/ci95_high": 0.9775830911367038,
+      "validation/task/door-open/ci95_low": 0.5291051942301386,
+      "validation/task/door-open/success": 0.875,
+      "validation/task/drawer-close/ci95_high": 1,
+      "validation/task/drawer-close/ci95_low": 0.6755843804891231,
+      "validation/task/drawer-close/success": 1,
+      "validation/task/drawer-open/ci95_high": 1,
+      "validation/task/drawer-open/ci95_low": 0.6755843804891231,
+      "validation/task/drawer-open/success": 1,
+      "validation/task/faucet-open/ci95_high": 0.4708948057698615,
+      "validation/task/faucet-open/ci95_low": 0.02241690886329617,
+      "validation/task/faucet-open/success": 0.125,
+      "validation/task/handle-press/ci95_high": 1,
+      "validation/task/handle-press/ci95_low": 0.6755843804891231,
+      "validation/task/handle-press/success": 1,
+      "validation/task/pick-place/ci95_high": 0.4708948057698615,
+      "validation/task/pick-place/ci95_low": 0.02241690886329617,
+      "validation/task/pick-place/success": 0.125,
+      "validation/task/plate-slide/ci95_high": 1,
+      "validation/task/plate-slide/ci95_low": 0.6755843804891231,
+      "validation/task/plate-slide/success": 1,
+      "validation/task/reach/ci95_high": 0.5907301208974108,
+      "validation/task/reach/ci95_low": 0.07147768885802763,
+      "validation/task/reach/success": 0.25,
+      "validation/world_predictions_mean": 16003.076923076924
+    }
+  }
+}

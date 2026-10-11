@@ -1,0 +1,43 @@
+{
+  "complete": true,
+  "units": "aggregate GPU-hours",
+  "prior_artifact": "docs/reports/20261011-retrieval-repair-ttt/compute-accounting.json",
+  "prior_sha256": "7155e754b1b944b7792bb18881edc3e688611044991170ba4334dd5ac9aa2143",
+  "prior_known_components": 94.53029004454044,
+  "current_optimization_gpu_hours": 2.2329762297785942,
+  "current_registered_validation_gpu_hours": 1.818005705786248,
+  "current_bounded_checks_and_setup": [
+    {
+      "artifact": "docs/reports/20261011-shifted-repair-ttt/preflight.json",
+      "sha256": "e0f0cff492a11ef035c8c95702fb49040b90a859875d4c2aac27c1c5275804b3",
+      "gpu_hours": 0.005930716347777181
+    },
+    {
+      "artifact": "docs/reports/20261011-shifted-repair-ttt/ddp-check.json",
+      "sha256": "b31b266021679dc9381b4f176db9b13cf727eec4c035d168e03ed0c53c637135",
+      "gpu_hours": 0.004605524804857042
+    },
+    {
+      "artifact": "docs/reports/20261011-shifted-repair-ttt/run/retrieval-setup.json",
+      "sha256": "d81083d6769d399e10a8d5ef06d49131debfcba25640706f4aca2f6299db3845",
+      "gpu_hours": 0.0021279398144947157
+    }
+  ],
+  "cumulative_optimization": 60.486333618774594,
+  "cumulative_completed_validation": 37.727744894216045,
+  "known_cumulative_components": 98.59393616107242,
+  "last_update_overrun_gpu_seconds": 0.0,
+  "optimization_cap_gpu_seconds": 28800,
+  "source_sha256": {
+    "docs/reports/20261011-shifted-repair-ttt/run/compute_usage.json": "3e840764e6d3cc2742d90145a5f7deec8ccb938d62bebf91d1fe39a49f2f17fc"
+  },
+  "all_infrastructure_runtime_total_available": false,
+  "limits": [
+    "Known measured components, not a complete cluster bill.",
+    "Shared world and adapter counted once.",
+    "Previous-plan construction and per-update retrieval are inside optimization; startup checks/setup are separate.",
+    "CPU work, final logging wait, unused reservations and unquantified historical costs are not guessed."
+  ],
+  "baseline_retraining_updates": 0,
+  "final_tests_read": false
+}

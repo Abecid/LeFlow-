@@ -1,3 +1,11 @@
+# Completed:79/78/74/78, selected5k79/104
+
+[Final findings and evidence](SHIFTED_REPAIR_TTT_RESULTS.md) supersede all interim
+status below. Four rounds complete, zero timeouts; all failures reach200 actions.
+Source/data/checkpoint audit passes; W&B8yy6nh9f finished and owned processes
+exited. No improvement over80. Preserve this negative result and frozen source;
+publish completion before a next decision. No next candidate is queued.
+
 # Third evaluation: 74/104 at 15k; retain 5k79
 
 Verified October 11 at 23:10 UTC: the development curve is **79/78/74** at

@@ -1,0 +1,107 @@
+{
+  "step": 20000,
+  "images_inspected": 10,
+  "resolution": [
+    1536,
+    326
+  ],
+  "source": "Saved rollout RGB and cached registered goal; no simulation or model inference.",
+  "images": [
+    {
+      "id": "validation/assembly/00000",
+      "file": "docs/reports/20261011-shifted-repair-ttt/contact-sheets-20000/assembly-00000.png",
+      "sha256": "440ee3562bc05c57434a882cc7bc86117c76f0666faa33a89d7eed763943d121",
+      "visual_inspection_complete": true,
+      "readable_labels": true,
+      "no_clipping_or_overlap": true,
+      "observation": "Hand reaches toward the ring, but the sampled views after50 show little ring/hand change; logged failure, versus selected5k success."
+    },
+    {
+      "id": "validation/coffee-button/00000",
+      "file": "docs/reports/20261011-shifted-repair-ttt/contact-sheets-20000/coffee-button-00000.png",
+      "sha256": "88db15c1758ac7330097a9987092c6816c6924a95ee638d2073b258d3d7a71dd",
+      "visual_inspection_complete": true,
+      "readable_labels": true,
+      "no_clipping_or_overlap": true,
+      "observation": "Saved frames and registered goal inspected; labels readable, six panels complete. Logged success agrees with the illustrated end-of-episode behavior; precise3D/contact causes are not inferred."
+    },
+    {
+      "id": "validation/dial-turn/00000",
+      "file": "docs/reports/20261011-shifted-repair-ttt/contact-sheets-20000/dial-turn-00000.png",
+      "sha256": "e069d8ed1cbbb2e9e7d8f92cc380012e8af887f661c6de93fe915c9454e1e251",
+      "visual_inspection_complete": true,
+      "readable_labels": true,
+      "no_clipping_or_overlap": true,
+      "observation": "Saved frames and registered goal inspected; labels readable, six panels complete. Logged success agrees with the illustrated end-of-episode behavior; precise3D/contact causes are not inferred."
+    },
+    {
+      "id": "validation/door-close/00000",
+      "file": "docs/reports/20261011-shifted-repair-ttt/contact-sheets-20000/door-close-00000.png",
+      "sha256": "808d4a4e9e9816e64766a98a286652ca3a4bf20c22398841767e991ce00fa187",
+      "visual_inspection_complete": true,
+      "readable_labels": true,
+      "no_clipping_or_overlap": true,
+      "observation": "Saved frames and registered goal inspected; labels readable, six panels complete. Logged success agrees with the illustrated end-of-episode behavior; precise3D/contact causes are not inferred."
+    },
+    {
+      "id": "validation/drawer-close/00004",
+      "file": "docs/reports/20261011-shifted-repair-ttt/contact-sheets-20000/drawer-close-00004.png",
+      "sha256": "3e030387cbe54514c27976100d8a94f4e0091fcea109f092aca178aa53525488",
+      "visual_inspection_complete": true,
+      "readable_labels": true,
+      "no_clipping_or_overlap": true,
+      "observation": "Saved frames and registered goal inspected; labels readable, six panels complete. Logged success agrees with the illustrated end-of-episode behavior; precise3D/contact causes are not inferred."
+    },
+    {
+      "id": "validation/faucet-open/00003",
+      "file": "docs/reports/20261011-shifted-repair-ttt/contact-sheets-20000/faucet-open-00003.png",
+      "sha256": "0b738d8a36122c0c37db9b176d6b2dca77f47a572768ac6d5a9c042d62266d86",
+      "visual_inspection_complete": true,
+      "readable_labels": true,
+      "no_clipping_or_overlap": true,
+      "observation": "Little visible late change after approaching the handle; logged failure."
+    },
+    {
+      "id": "validation/handle-press/00000",
+      "file": "docs/reports/20261011-shifted-repair-ttt/contact-sheets-20000/handle-press-00000.png",
+      "sha256": "6405f86a85f62b10fa78ebc01393edc67165cb7b0d169e33f1fb09b5cba1c1ac",
+      "visual_inspection_complete": true,
+      "readable_labels": true,
+      "no_clipping_or_overlap": true,
+      "observation": "Saved frames and registered goal inspected; labels readable, six panels complete. Logged success agrees with the illustrated end-of-episode behavior; precise3D/contact causes are not inferred."
+    },
+    {
+      "id": "validation/pick-place/00000",
+      "file": "docs/reports/20261011-shifted-repair-ttt/contact-sheets-20000/pick-place-00000.png",
+      "sha256": "3175c364fe122f9e39e8da341695bc36cea286c00f151e86e4c2cc1d3ad8b02b",
+      "visual_inspection_complete": true,
+      "readable_labels": true,
+      "no_clipping_or_overlap": true,
+      "observation": "The red cube remains on the tabletop while the hand moves toward the goal region; logged failure."
+    },
+    {
+      "id": "validation/reach/00003",
+      "file": "docs/reports/20261011-shifted-repair-ttt/contact-sheets-20000/reach-00003.png",
+      "sha256": "8be1b66ae069e9079ccef6a3b55d1c531a435b1398458f346782b299ac17eb3a",
+      "visual_inspection_complete": true,
+      "readable_labels": true,
+      "no_clipping_or_overlap": true,
+      "observation": "Late hand position changes little and remains offset from the target appearance in this view; logged failure versus5k success."
+    },
+    {
+      "id": "validation/reach/00005",
+      "file": "docs/reports/20261011-shifted-repair-ttt/contact-sheets-20000/reach-00005.png",
+      "sha256": "f780c2ca52d2ce11b7b563d0602c1cb2a3d90d4c8803f6adfbf548d251a52d5b",
+      "visual_inspection_complete": true,
+      "readable_labels": true,
+      "no_clipping_or_overlap": true,
+      "observation": "Saved frames and registered goal inspected; labels readable, six panels complete. Logged success agrees with the illustrated end-of-episode behavior; precise3D/contact causes are not inferred."
+    }
+  ],
+  "limits": [
+    "Uniformly sampled single-view RGB cannot establish contact force, precise3D errors or causal failure mechanism.",
+    "Fixed saved illustrative cases do not cover every failure; success labels come from registered evaluation records."
+  ],
+  "model_calls": 0,
+  "simulator_calls": 0
+}

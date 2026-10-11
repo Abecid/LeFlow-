@@ -1,0 +1,206 @@
+{
+  "utc": "2026-10-11T23:27:55.933600+00:00",
+  "status": {
+    "code": "2ae5a6c97bebe56b0b1f889cb34996d34cbf03d6",
+    "command": [
+      "/tmp/mtxu-flow-jepa-20261007/env/bin/python",
+      "-m",
+      "torch.distributed.run",
+      "--nnodes=1",
+      "--nproc_per_node=4",
+      "--rdzv-backend=c10d",
+      "--rdzv-endpoint=127.0.0.1:0",
+      "-m",
+      "flow_jepa.execution.train",
+      "--config",
+      "/home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/repo/config/flow_metaworld_shifted_repair_ttt.json",
+      "--root",
+      "/home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/campaign",
+      "--run-dir",
+      "/home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/campaign/runs/shifted_repair_ttt_3072",
+      "--world",
+      "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt",
+      "--bank",
+      "/tmp/mtxu-shifted-repair-ttt-20261011/route_bank.pt"
+    ],
+    "pid": 905872,
+    "preflight_mean_ms": 80.17851365730166,
+    "status": "training",
+    "utc": "2026-10-11T22:20:31.038805+00:00"
+  },
+  "processes": [
+    {
+      "pid": 905872,
+      "present": true,
+      "identity_matches": true,
+      "state": "S",
+      "start_ticks": 1007760082,
+      "wchan": "0"
+    },
+    {
+      "pid": 908541,
+      "present": true,
+      "identity_matches": true,
+      "state": "S",
+      "start_ticks": 1007773717,
+      "wchan": "hrtimer_nanosleep"
+    },
+    {
+      "pid": 908565,
+      "present": true,
+      "identity_matches": true,
+      "state": "S",
+      "start_ticks": 1007773826,
+      "wchan": "0"
+    },
+    {
+      "pid": 908566,
+      "present": true,
+      "identity_matches": true,
+      "state": "S",
+      "start_ticks": 1007773826,
+      "wchan": "0"
+    },
+    {
+      "pid": 908567,
+      "present": false
+    },
+    {
+      "pid": 908568,
+      "present": true,
+      "identity_matches": true,
+      "state": "S",
+      "start_ticks": 1007773827,
+      "wchan": "0"
+    },
+    {
+      "pid": 908830,
+      "present": true,
+      "identity_matches": true,
+      "state": "S",
+      "start_ticks": 1007774157,
+      "wchan": "0"
+    },
+    {
+      "pid": 908838,
+      "present": true,
+      "identity_matches": true,
+      "state": "S",
+      "start_ticks": 1007774158,
+      "wchan": "0"
+    },
+    {
+      "pid": 908846,
+      "present": true,
+      "identity_matches": true,
+      "state": "S",
+      "start_ticks": 1007774159,
+      "wchan": "0"
+    },
+    {
+      "pid": 908857,
+      "present": true,
+      "identity_matches": true,
+      "state": "S",
+      "start_ticks": 1007774160,
+      "wchan": "0"
+    },
+    {
+      "pid": 908938,
+      "present": true,
+      "identity_matches": true,
+      "state": "S",
+      "start_ticks": 1007774916,
+      "wchan": "0"
+    },
+    {
+      "pid": 908828,
+      "present": true,
+      "identity_matches": true,
+      "state": "S",
+      "start_ticks": 1007774157,
+      "wchan": "0"
+    },
+    {
+      "pid": 908836,
+      "present": true,
+      "identity_matches": true,
+      "state": "S",
+      "start_ticks": 1007774158,
+      "wchan": "0"
+    },
+    {
+      "pid": 908844,
+      "present": true,
+      "identity_matches": true,
+      "state": "S",
+      "start_ticks": 1007774159,
+      "wchan": "0"
+    },
+    {
+      "pid": 908852,
+      "present": true,
+      "identity_matches": true,
+      "state": "S",
+      "start_ticks": 1007774159,
+      "wchan": "0"
+    },
+    {
+      "pid": 908832,
+      "present": false
+    },
+    {
+      "pid": 908841,
+      "present": false
+    },
+    {
+      "pid": 908850,
+      "present": false
+    },
+    {
+      "pid": 908860,
+      "present": false
+    },
+    {
+      "pid": 908829,
+      "present": true,
+      "identity_matches": true,
+      "state": "S",
+      "start_ticks": 1007774157,
+      "wchan": "0"
+    },
+    {
+      "pid": 908837,
+      "present": true,
+      "identity_matches": true,
+      "state": "S",
+      "start_ticks": 1007774158,
+      "wchan": "0"
+    },
+    {
+      "pid": 908845,
+      "present": true,
+      "identity_matches": true,
+      "state": "S",
+      "start_ticks": 1007774159,
+      "wchan": "0"
+    },
+    {
+      "pid": 908855,
+      "present": true,
+      "identity_matches": true,
+      "state": "S",
+      "start_ticks": 1007774160,
+      "wchan": "0"
+    }
+  ],
+  "wandb": {
+    "id": "8yy6nh9f",
+    "state": "running",
+    "step": 20000,
+    "validation_step": 20000,
+    "success": 0.75
+  },
+  "training_log_tail": "low\": 0.5291051942301386, \"task/door-open/ci95_high\": 0.9775830911367038, \"task/drawer-close/success\": 1.0, \"task/drawer-close/ci95_low\": 0.6755843804891231, \"task/drawer-close/ci95_high\": 1.0, \"task/drawer-open/success\": 1.0, \"task/drawer-open/ci95_low\": 0.6755843804891231, \"task/drawer-open/ci95_high\": 1.0, \"task/faucet-open/success\": 0.125, \"task/faucet-open/ci95_low\": 0.02241690886329617, \"task/faucet-open/ci95_high\": 0.4708948057698615, \"task/handle-press/success\": 1.0, \"task/handle-press/ci95_low\": 0.6755843804891231, \"task/handle-press/ci95_high\": 1.0, \"task/pick-place/success\": 0.125, \"task/pick-place/ci95_low\": 0.02241690886329617, \"task/pick-place/ci95_high\": 0.4708948057698615, \"task/plate-slide/success\": 1.0, \"task/plate-slide/ci95_low\": 0.6755843804891231, \"task/plate-slide/ci95_high\": 1.0, \"task/reach/success\": 0.25, \"task/reach/ci95_low\": 0.07147768885802763, \"task/reach/ci95_high\": 0.5907301208974108, \"success_macro\": 0.75, \"seen_success_macro\": 0.75, \"episodes\": 104, \"expert_goal_failure_rate\": 0.0, \"latency_ms_mean\": 84.51790871693608, \"controller_step_latency_ms_mean\": 84.56905430135899, \"controller_step_latency_ms_p95\": 87.71069161593914, \"return_mean\": 262.41767009900775, \"success_within_50_primitive\": 0.22115384615384615, \"success_within_100_primitive\": 0.6923076923076923, \"success_within_200_primitive\": 0.75, \"steps_to_success_capped_mean\": 99.88461538461539, \"world_predictions_mean\": 16003.076923076924, \"controller_seconds_per_episode_mean\": 4.229265879051616, \"controller_budget_exhausted_rate\": 0.0, \"controller_budget_overrun_seconds_mean\": 0.0, \"observed_subgoal_cosine\": 0.016545929083124335}}\nwandb: updating run metadata\nwandb: uploading output.log; uploading wandb-summary.json\nwandb: uploading output.log; uploading wandb-summary.json; uploading config.yaml\nwandb: uploading output.log; uploading wandb-summary.json; uploading config.yaml; uploading history steps 803-803, summary, console lines 915-915\nwandb: uploading output.log; uploading wandb-summary.json; uploading config.yaml\nwandb: uploading output.log; uploading wandb-summary.json; uploading config.yaml; uploading data\nwandb: uploading output.log; uploading wandb-summary.json; uploading config.yaml\nwandb: uploading output.log; uploading wandb-summary.json; uploading config.yaml; uploading data\nwandb: uploading output.log; uploading wandb-summary.json; uploading config.yaml\nwandb: uploading output.log; uploading wandb-summary.json; uploading config.yaml; uploading data\nwandb: uploading output.log; uploading wandb-summary.json; uploading config.yaml\nwandb: uploading output.log; uploading wandb-summary.json; uploading config.yaml; uploading data\nwandb: uploading output.log; uploading wandb-summary.json; uploading config.yaml\nwandb: uploading output.log; uploading wandb-summary.json; uploading config.yaml; uploading data\nwandb: uploading output.log; uploading wandb-summary.json; uploading config.yaml\nwandb: uploading output.log; uploading wandb-summary.json; uploading config.yaml; uploading data\nwandb: uploading output.log; uploading wandb-summary.json; uploading config.yaml\nwandb: uploading output.log; uploading wandb-summary.json; uploading config.yaml; uploading data\nwandb: uploading output.log; uploading wandb-summary.json; uploading config.yaml\nwandb: uploading output.log; uploading wandb-summary.json; uploading config.yaml; uploading data\nwandb: uploading output.log; uploading wandb-summary.json; uploading config.yaml\nwandb: uploading output.log; uploading wandb-summary.json; uploading config.yaml; uploading data\nwandb: uploading output.log; uploading wandb-summary.json; uploading config.yaml\nwandb: uploading output.log; uploading wandb-summary.json; uploading config.yaml; uploading data\nwandb: uploading output.log; uploading wandb-summary.json; uploading config.yaml\nwandb: uploading output.log; uploading wandb-summary.json; uploading config.yaml; uploading data\nwandb: uploading output.log; uploading wandb-summary.json; uploading config.yaml\n",
+  "launcher_log_tail": "MESA-EGL: warning: Not allowed to force software rendering when API explicitly selects a hardware device.\nTraining reset RGB exactly matches registered cache\nWaiting for idle authorized GPUs; existing jobs are never stopped.\nWaiting for idle authorized GPUs; existing jobs are never stopped.\n"
+}
