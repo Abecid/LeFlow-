@@ -1,10 +1,68 @@
 # Execution-conditioned flow repair: evidence and registered experiment
 
-October11,2026. Registered fresh candidate `repair_flow_ttt`, pending verified
-launch. No result is claimed. The strongest measured reference remains the
-execution-revision GMM controller,80/104. The question for this iteration is
-whether execution-conditioned local flow repair can make additional planning
-computation useful within the same physical controller allowance.
+October11,2026. Active candidate `repair_flow_ttt` scored **80/104 at5k**,
+tying the preserved execution-revision GMM controller. Three registered evaluations
+remain; this is an interim result, not a completed run. The question for this
+iteration is whether execution-conditioned local flow repair can make additional
+planning computation useful within the same physical controller allowance.
+
+## First registered evaluation:80/104 at5k
+
+Readback October11 13:14 Pacific: training healthy atstep8668, with source and
+process identities unchanged. The5k report contains all104 fixed cases:80 successes,
+zero timeouts,86.46ms mean decision time (89.88ms p95). All24 failures use the full
+200-action allowance. This ties the GMM reference and improves over the selected
+flow79, progress78 and guided75 references; it does not exceed the stopping-for-review
+threshold. The existing run continues to its remaining registered evaluations.
+
+| Preserved reference | Successes | Repair-flow paired wins | Paired regressions |
+| --- | ---: | ---: | ---: |
+| Execution revision |80|6|6|
+| Flow reasoning |79|4|3|
+| Progress TTT |78|7|5|
+| Guided TTT |75|7|2|
+
+Case IDs, reset/model seeds, episode hashes and tasks match every reference.
+The six regressions against GMM are assembly6/7, dial-turn2, faucet-open0/7 and
+reach1; the six gains are dial-turn6, door-open0/1, faucet-open1, pick-place3 and
+reach7. Task success remains weak for assembly1/8, faucet-open2/8, pick-place2/8
+and reach4/8; dial-turn7/8, and the other eight tasks are8/8.
+
+Local repairs are selected on2889/5173 decisions (55.85%); the exact incumbent
+is retained on44.15%. All saved decisions preserve the incumbent, keep action
+corrections within.25, and use12 flow evaluations/320 world transitions with fixed
+scoring context. Selected repairs and incumbents have similar mean observed latent
+prefix progress (.002913 and.002908), but these selected groups cannot establish a
+causal repair benefit. Full-world ranking guarantees a non-worsening predicted
+score, not physical progress.
+
+Corrected executed-prefix MAE is.001688 versus.002637 for the prior (35.97% lower).
+Fifteen of24 failures have optimistic raw predicted progress with nonpositive
+observed latent progress over their final20 decisions; five remain after correction.
+These are latent proxies. No new contact-video review or physical-cause conclusion
+is claimed. In the deep-update logs immediately before5k, repair-target coordinates
+clip at7.79%, repair-flow loss averages.4393, and anchor action MSE.02870. Analyze
+depths separately: shallow updates have no repair loss. Teacher-interpolated action
+MSE includes target information and does not certify generated-action quality.
+One checkpoint cannot establish that calibration or teacher loss predicts success.
+
+[Saved-record analysis](reports/20261011-repair-flow-ttt/analysis-round-1.json),
+[complete first evaluation](reports/20261011-repair-flow-ttt/run/validation/step_0005000.json.gz)
+and [interim verification](reports/20261011-repair-flow-ttt/verification-round-1.json)
+preserve negative outcomes and checkpoint/source/data identities. The metric snapshot
+contains every periodic log throughstep9251; its compute snapshot isstep9296,
+optimization.747117GPUh plus first validation.470445GPUh. These are cumulative
+within this run and are not final totals. Preflight.005795GPUh, distributed check
+.002990GPUh and earlier diagnostic costs remain separate; no allowance was reset.
+W&B reports the first80/104 while training remains active. Source481bb767 and all
+150 runtime hashes are checked without modifying the execution checkout.
+
+The104 cases are repeatedly reused development data, with one training seed and
+checkpoint selection. Four versus eight training ranks changes RNG assignment.
+This new formulation and latency change do not isolate a component's effect or
+establish independent generalization, novelty, useful inference scaling or SOTA.
+No further candidate is selected or launched before this run completes and is
+fully analyzed and published. Final tests remain sealed.
 
 ## What failed
 

@@ -1,3 +1,17 @@
+# October11 13:14 Pacific: first repair-flow result ties80/104
+
+The5k registered evaluation scores80/104, zero timeouts,86.46ms mean decision
+latency. Against the selected80/104 GMM reference there are6 paired wins and6
+regressions; against flow79/progress78/guided75 the pairs are4/3,7/5 and7/2.
+All24 failures reach200 primitive actions. Repairs are chosen55.85% of decisions;
+corrected prefix MAE improves35.97% over the prior, without proving causal benefit.
+Assembly1/8, faucet-open2/8, pick-place2/8 and reach4/8 remain weak. Deep-update
+teacher residual clipping averages7.79% before5k; teacher-interpolated loss is not
+generation quality. [Interim findings and full evidence](REPAIR_FLOW_TTT.md).
+Training remains healthy under the original cap; three registered evaluations
+remain. Source481bb767,150 hashes and owned process identities verified, W&B
+r3y7nepq online. No run completion or final audit is claimed; no new candidate.
+
 # October11 12:56 Pacific: repair-flow training verified
 
 Fresh `repair_flow_ttt` is running on GPUs0–3, step353 at readback, online W&B

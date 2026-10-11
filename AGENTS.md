@@ -1,3 +1,13 @@
+# Latest observed result: repair-flow5k ties80/104; run remains active
+
+October11 13:14 Pacific: first fixed104 evaluation80 successes, zero timeouts,
+86.46ms mean decision latency. Six paired wins/six regressions against preserved
+GMM80. Training healthy beyond8k; three registered evaluations remain. Read the
+first-evaluation section of docs/REPAIR_FLOW_TTT.md and analysis-round-1.json.
+Preserve running source481bb767 and coordinator739421/worker741958. This interim
+tie is not completion or evidence to change this run. Finish the registered run,
+then audit/analyze/publish before choosing any authorized next correction.
+
 # Latest authorization: sequential failure-driven iterations (October11)
 
 The user explicitly asks to keep analyzing failures, implementing corrections and

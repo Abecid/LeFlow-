@@ -1,0 +1,89 @@
+{
+  "utc": "2026-10-11T20:16:26.039787+00:00",
+  "scope": "interim first-evaluation verification; final checkpoint tensor/bank audit remains pending",
+  "source": "481bb7679aa3f43e938fd3991f3be57ba59f0ed0",
+  "frozen_source_clean": true,
+  "runtime_hashes_verified": 150,
+  "manifest_hash_verified": "135dd863aa64b200b85a3ec075e721d8991dda4ebc4d940002efd396412012cc",
+  "evaluation_identity_matches_run": true,
+  "evaluation": {
+    "path": "/home/mtxu/adam/LeFlow-experiments/20261011-repair-flow-ttt/campaign/runs/repair_flow_ttt_3072/validation/step_0005000.json",
+    "raw_sha256": "add80e03d73386150c9ff1ab072b703ccc51c29f8292fa5490760d978b2921c9",
+    "step": 5000,
+    "successes": 80,
+    "failures_at_200_actions": 24,
+    "timeouts": 0
+  },
+  "checkpoint": {
+    "path": "/home/mtxu/adam/LeFlow-experiments/20261011-repair-flow-ttt/campaign/runs/repair_flow_ttt_3072/checkpoints/step_0005000.pt",
+    "sha256": "1d373981a9d261b1d8ba454542442df98b7ea19b248fa6428e924d7c8f459981"
+  },
+  "owned_processes": [
+    {
+      "pid": 739421,
+      "start_ticks": 1006895449,
+      "state": "S",
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m scripts.operations.controller_grounded --record /home/mtxu/adam/LeFlow-experiments/20261011-repair-flow-ttt --variant repair_flow_ttt --gpus 4 --previous /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison --cache /tmp/mtxu-repair-flow-ttt-20261011 --reuse-bank /tmp/mtxu-flow-reasoning-20261010/route_bank.pt "
+    },
+    {
+      "pid": 741958,
+      "start_ticks": 1006908347,
+      "state": "S",
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -m torch.distributed.run --nnodes=1 --nproc_per_node=4 --rdzv-backend=c10d --rdzv-endpoint=127.0.0.1:0 -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261011-repair-flow-ttt/repo/config/flow_metaworld_repair_flow_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261011-repair-flow-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261011-repair-flow-ttt/campaign/runs/repair_flow_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-repair-flow-ttt-20261011/route_bank.pt "
+    },
+    {
+      "pid": 741981,
+      "start_ticks": 1006908485,
+      "state": "R",
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261011-repair-flow-ttt/repo/config/flow_metaworld_repair_flow_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261011-repair-flow-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261011-repair-flow-ttt/campaign/runs/repair_flow_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-repair-flow-ttt-20261011/route_bank.pt "
+    },
+    {
+      "pid": 741982,
+      "start_ticks": 1006908485,
+      "state": "S",
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261011-repair-flow-ttt/repo/config/flow_metaworld_repair_flow_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261011-repair-flow-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261011-repair-flow-ttt/campaign/runs/repair_flow_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-repair-flow-ttt-20261011/route_bank.pt "
+    },
+    {
+      "pid": 741983,
+      "start_ticks": 1006908485,
+      "state": "R",
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261011-repair-flow-ttt/repo/config/flow_metaworld_repair_flow_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261011-repair-flow-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261011-repair-flow-ttt/campaign/runs/repair_flow_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-repair-flow-ttt-20261011/route_bank.pt "
+    },
+    {
+      "pid": 741984,
+      "start_ticks": 1006908485,
+      "state": "R",
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261011-repair-flow-ttt/repo/config/flow_metaworld_repair_flow_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261011-repair-flow-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261011-repair-flow-ttt/campaign/runs/repair_flow_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-repair-flow-ttt-20261011/route_bank.pt "
+    }
+  ],
+  "finite_and_monotone_training": true,
+  "latest_logged_step": 10000,
+  "compute": {
+    "global_batch": 64,
+    "gpu_count": 4,
+    "last_update_overrun_gpu_seconds": 0.0,
+    "optimization_cap_gpu_seconds": 28800,
+    "optimization_gpu_hours": 0.8054113754650785,
+    "optimization_gpu_seconds": 2899.4809516742826,
+    "step": 10000,
+    "stop_check": "optimizer boundary; final-update overrun reported",
+    "validation_gpu_hours": 0.4704450045588116,
+    "validation_gpu_seconds": 1693.6020164117217,
+    "validation_steps": [
+      5000
+    ]
+  },
+  "complete_marker_present": false,
+  "failure_marker_present": false,
+  "model_calls": 0,
+  "simulator_calls": 0,
+  "final_tests_read": false,
+  "online_verification": {
+    "utc": "2026-10-11T20:15:17.550063+00:00",
+    "wandb_id": "r3y7nepq",
+    "state": "running",
+    "step": 9051,
+    "validation/checkpoint_step": 5000,
+    "validation/success_macro": 0.7692307692307693
+  }
+}

@@ -37,8 +37,35 @@
       "wandb_id": "r3y7nepq",
       "wandb_url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/r3y7nepq",
       "worker_pid": 741958,
-      "verified_utc": "2026-10-11T19:56:56.825910+00:00",
-      "verified_step": 353
+      "verified_utc": "2026-10-11T20:16:26.039787+00:00",
+      "verified_step": 10000,
+      "observed_validation_steps": [
+        5000
+      ],
+      "interim_selected_step": 5000,
+      "interim_selected_successes": 80,
+      "preserved_evaluations": [
+        {
+          "step": 5000,
+          "successes": 80,
+          "timeouts": 0,
+          "artifact": "docs/reports/20261011-repair-flow-ttt/run/validation/step_0005000.json.gz",
+          "checkpoint": {
+            "path": "/home/mtxu/adam/LeFlow-experiments/20261011-repair-flow-ttt/campaign/runs/repair_flow_ttt_3072/checkpoints/step_0005000.pt",
+            "sha256": "1d373981a9d261b1d8ba454542442df98b7ea19b248fa6428e924d7c8f459981"
+          }
+        }
+      ],
+      "interim_artifact_sha256": {
+        "docs/reports/20261011-repair-flow-ttt/analysis-round-1.json": "80f2a26736c4e2c96aa9822256c0e7c66b37aba501e6c53d3dec2abe7c1571b5",
+        "docs/reports/20261011-repair-flow-ttt/verification-round-1.json": "9c84862f0930fe90c4d7b54d5d916175b5a0748fedec3668d42b92ddad6a3ba5",
+        "docs/reports/20261011-repair-flow-ttt/run/run.json": "0b767630a2f6da2c68666deba4e0617310364708efa6139ddba2b93c2004f644",
+        "docs/reports/20261011-repair-flow-ttt/run/compute_usage.json": "72d9a410b52180ffaed88737814c0c82274a034d81fd07e4322727b611088878",
+        "docs/reports/20261011-repair-flow-ttt/run/metrics.jsonl.gz": "7529ccfe2416068cac45054173f1c3154ffa0659ec1dd123ef05c98901139ae0",
+        "docs/reports/20261011-repair-flow-ttt/run/validation/step_0005000.json.gz": "b1cd99f487e85e47b77046beac62b07da534a17dfdf553c29a6fae168fbad4d7",
+        "docs/REPAIR_FLOW_TTT.md": "4c70331b2fb0910a33844e659f32217e64f6982538bb6222f28689b0d8dfd3b9"
+      },
+      "interim_scope": "First registered evaluation preserved; training/remaining evaluations active. Full completion audit and final publication remain pending."
     }
   ],
   "completed_runs": [

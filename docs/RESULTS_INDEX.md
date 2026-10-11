@@ -12,7 +12,10 @@ SOTA, convergence, isolated component gains or generalization.
 [Execution-conditioned flow repair](REPAIR_FLOW_TTT.md) is registered under the
 October11 iterative-improvement request. It preserves the best verified proposal,
 learns bounded action corrections and removes the weak surrogate-gradient loop.
-Its performance is not yet measured. All previous results below remain frozen.
+Its first5k evaluation is **80/104**, zero timeouts, tying the preserved best
+with6 paired wins and6 regressions. Three evaluations remain; this run is still
+active. [Interim analysis](reports/20261011-repair-flow-ttt/analysis-round-1.json).
+All previous results below remain frozen.
 
 ## Preserved comparisons
 
@@ -93,8 +96,12 @@ completes**. Reporting is part of completion, not a later optional task.
 
 The project completion monitor is configured to check every15 minutes as a
 fallback to immediate publication by the active agent. It remains quiet when
-there is no actionable change and may publish saved results only. It does not
-authorize new training, baseline retraining, variants, seeds, ablations,
-inference sweeps or sealed tests. Scheduled execution depends on the Codex host
+there is no actionable change. The October11 user request now authorizes one
+failure-supported next correction only after the active run is completed, analyzed
+and published, under the unchanged data/seed/budget/evaluation contract. Stop new
+launches for review after an improvement over80/104 or when no concrete supported
+correction remains. The monitor itself supplies no additional authorization; no
+baseline retraining, extra seeds, blind sweeps or sealed tests are allowed.
+Scheduled execution depends on the Codex host
 being available and able to reach the server and GitHub; an outage must never be
 reported as a successful push.
