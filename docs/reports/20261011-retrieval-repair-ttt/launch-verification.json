@@ -1,0 +1,682 @@
+{
+  "checked_utc": "2026-10-11T21:08:12.257335+00:00",
+  "source": "3bdfb49e7c9d4952da7494e50c8dc2530197641e",
+  "runtime_files_verified": 137,
+  "frozen_source_clean": true,
+  "launcher": {
+    "source": "3bdfb49e7c9d4952da7494e50c8dc2530197641e",
+    "pid": 819165,
+    "start_ticks": 1007321350,
+    "utc": "2026-10-11T21:05:07.381353+00:00",
+    "runtime_files_verified": 137,
+    "command": [
+      "bash",
+      "/home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/launch.sh"
+    ]
+  },
+  "status": {
+    "code": "3bdfb49e7c9d4952da7494e50c8dc2530197641e",
+    "command": [
+      "/tmp/mtxu-flow-jepa-20261007/env/bin/python",
+      "-m",
+      "torch.distributed.run",
+      "--nnodes=1",
+      "--nproc_per_node=4",
+      "--rdzv-backend=c10d",
+      "--rdzv-endpoint=127.0.0.1:0",
+      "-m",
+      "flow_jepa.execution.train",
+      "--config",
+      "/home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/repo/config/flow_metaworld_retrieval_repair_ttt.json",
+      "--root",
+      "/home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/campaign",
+      "--run-dir",
+      "/home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/campaign/runs/retrieval_repair_ttt_3072",
+      "--world",
+      "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt",
+      "--bank",
+      "/tmp/mtxu-retrieval-repair-ttt-20261011/route_bank.pt"
+    ],
+    "pid": 819165,
+    "preflight_mean_ms": 79.61382173622648,
+    "status": "training",
+    "utc": "2026-10-11T21:07:21.894900+00:00"
+  },
+  "worker": {
+    "command": [
+      "/tmp/mtxu-flow-jepa-20261007/env/bin/python",
+      "-m",
+      "torch.distributed.run",
+      "--nnodes=1",
+      "--nproc_per_node=4",
+      "--rdzv-backend=c10d",
+      "--rdzv-endpoint=127.0.0.1:0",
+      "-m",
+      "flow_jepa.execution.train",
+      "--config",
+      "/home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/repo/config/flow_metaworld_retrieval_repair_ttt.json",
+      "--root",
+      "/home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/campaign",
+      "--run-dir",
+      "/home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/campaign/runs/retrieval_repair_ttt_3072",
+      "--world",
+      "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt",
+      "--bank",
+      "/tmp/mtxu-retrieval-repair-ttt-20261011/route_bank.pt"
+    ],
+    "pid": 821683
+  },
+  "allocation": {
+    "global_batch": 64,
+    "gpus": [
+      [
+        "0",
+        "GPU-a303d11c-f1b5-e245-93f0-735a054671ce"
+      ],
+      [
+        "1",
+        "GPU-fc39ae51-86a1-df0a-8657-0d33620f5115"
+      ],
+      [
+        "2",
+        "GPU-85f3f7a6-107f-2921-13a5-76a94101f858"
+      ],
+      [
+        "3",
+        "GPU-64e751ee-abb6-120c-f346-311e789228c7"
+      ]
+    ],
+    "optimization_gpu_seconds": 28800
+  },
+  "run": {
+    "bank_hash": "268dd6eb6f406aa9036ecd0aa3ac5a552f2d41d5a819598c2f2b6638814c67e1",
+    "code": "3bdfb49e7c9d4952da7494e50c8dc2530197641e",
+    "id": "6wpx3jcv",
+    "manifest": "77272fbe04eed6af8e6c8717252bdd6c58bcad0e431546290528725f4f6517e8",
+    "method": "retrieval_repair_ttt",
+    "protocol": "13b63f76fb101a24333e36bd4e7ec00ff11f26b8b0b044061e03ad870d3a0816",
+    "seed": 3072,
+    "wandb_url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/6wpx3jcv",
+    "world_hash": "ae3f910da43f0a43dd65945394444a0b11719ed042cdacffacc2faaf824ec5a3",
+    "world_size": 4
+  },
+  "compute": {
+    "global_batch": 64,
+    "gpu_count": 4,
+    "last_update_overrun_gpu_seconds": 0.0,
+    "optimization_cap_gpu_seconds": 28800,
+    "optimization_gpu_hours": 0.038551833101858696,
+    "optimization_gpu_seconds": 138.7865991666913,
+    "step": 421,
+    "stop_check": "optimizer boundary; final-update overrun reported",
+    "validation_gpu_hours": 0.0,
+    "validation_gpu_seconds": 0.0,
+    "validation_steps": []
+  },
+  "preflight": {
+    "bank_states": 130662,
+    "batch_loss": 3.0252833366394043,
+    "causal_history_end_checks": true,
+    "exact_previous_training_examples": 8,
+    "frozen_world_unchanged": true,
+    "full_controller_latency_ms": [
+      78.20488139986992,
+      77.85565219819546,
+      77.94329337775707,
+      78.22469621896744,
+      79.6501524746418,
+      79.69268038868904,
+      78.94492149353027,
+      78.81483621895313,
+      84.04901809990406,
+      80.29890432953835,
+      81.241799518466,
+      80.44502511620522
+    ],
+    "gpu_count": 1,
+    "gpu_hours": 0.005974793981036378,
+    "late_real_examples_checked": 8,
+    "late_windows_in_first_10000": 147,
+    "max_gpu_gib": 9.49996042251587,
+    "mean_ms": 79.61382173622648,
+    "method": "retrieval_repair_ttt",
+    "optimizer_updates": 0,
+    "parameters": 6466320,
+    "parts": {
+      "calibration_loss": 0.030235962942242622,
+      "fast_weight_delta_norm": 0.287184476852417,
+      "flow_loss": 1.6980832815170288,
+      "history_fraction": 0.90625,
+      "reasoning_depth": 2.0,
+      "recorded_corrected_prefix_mae": 0.0019726979080587626,
+      "recorded_corrected_terminal_mae": 0.003039652481675148,
+      "recorded_patch_prefix_mae": 0.003733627963811159,
+      "recorded_prior_prefix_mae": 0.0021725448314100504,
+      "recorded_raw_prefix_mae": 0.0021725448314100504,
+      "recorded_raw_terminal_mae": 0.003039652481675148,
+      "repair_anchor_action_mse": 0.24609248340129852,
+      "repair_flow_loss": 1.32417631149292,
+      "repair_target_clipped_fraction": 0.171875,
+      "repair_teacher_action_improvement": 0.05149756371974945,
+      "repair_teacher_action_mse": 0.19459491968154907,
+      "retrieval_eligible_fraction": 0.875,
+      "retrieved_anchor_fraction": 0.875
+    },
+    "retrieval_excludes_query_episode": true,
+    "same_task_episode_draws": 10000,
+    "sampling_change": "all valid five-step pre-success starts",
+    "seconds": 21.509257910773158,
+    "simulator_episodes": 0,
+    "training_examples_only": true,
+    "window_and_goal_bounds_checked": 10000
+  },
+  "ddp_check": {
+    "global_batch": 64,
+    "gpu_count": 4,
+    "gpu_hours": 0.004536533885531956,
+    "gradient_sync_exact": true,
+    "optimizer_updates": 0,
+    "parameters_unchanged": true,
+    "rank_records": [
+      [
+        {
+          "depth": 1,
+          "gradient_elements": 5458664,
+          "loss": 1.6074533462524414,
+          "seconds": 0.19950907304883003,
+          "unused_parameters": [
+            "imagined_type",
+            "evidence.0.weight",
+            "evidence.0.bias",
+            "evidence.1.weight",
+            "evidence.1.bias",
+            "evidence.3.weight",
+            "evidence.3.bias",
+            "repair_anchor.0.weight",
+            "repair_anchor.0.bias",
+            "repair_anchor.1.weight",
+            "repair_anchor.1.bias",
+            "repair_flow.action.weight",
+            "repair_flow.action.bias",
+            "repair_flow.time.0.weight",
+            "repair_flow.time.0.bias",
+            "repair_flow.time.2.weight",
+            "repair_flow.time.2.bias",
+            "repair_flow.layers.0.0.weight",
+            "repair_flow.layers.0.0.bias",
+            "repair_flow.layers.0.1.weight",
+            "repair_flow.layers.0.1.bias",
+            "repair_flow.layers.0.3.weight",
+            "repair_flow.layers.0.3.bias",
+            "repair_flow.layers.1.0.weight",
+            "repair_flow.layers.1.0.bias",
+            "repair_flow.layers.1.1.weight",
+            "repair_flow.layers.1.1.bias",
+            "repair_flow.layers.1.3.weight",
+            "repair_flow.layers.1.3.bias",
+            "repair_flow.layers.2.0.weight",
+            "repair_flow.layers.2.0.bias",
+            "repair_flow.layers.2.1.weight",
+            "repair_flow.layers.2.1.bias",
+            "repair_flow.layers.2.3.weight",
+            "repair_flow.layers.2.3.bias",
+            "repair_flow.out.0.weight",
+            "repair_flow.out.0.bias",
+            "repair_flow.out.1.weight",
+            "repair_flow.out.1.bias"
+          ]
+        },
+        {
+          "depth": 2,
+          "gradient_elements": 6466320,
+          "loss": 2.6857118606567383,
+          "seconds": 0.06604894995689392,
+          "unused_parameters": []
+        }
+      ],
+      [
+        {
+          "depth": 1,
+          "gradient_elements": 5458664,
+          "loss": 1.4028265476226807,
+          "seconds": 0.19341655634343624,
+          "unused_parameters": [
+            "imagined_type",
+            "evidence.0.weight",
+            "evidence.0.bias",
+            "evidence.1.weight",
+            "evidence.1.bias",
+            "evidence.3.weight",
+            "evidence.3.bias",
+            "repair_anchor.0.weight",
+            "repair_anchor.0.bias",
+            "repair_anchor.1.weight",
+            "repair_anchor.1.bias",
+            "repair_flow.action.weight",
+            "repair_flow.action.bias",
+            "repair_flow.time.0.weight",
+            "repair_flow.time.0.bias",
+            "repair_flow.time.2.weight",
+            "repair_flow.time.2.bias",
+            "repair_flow.layers.0.0.weight",
+            "repair_flow.layers.0.0.bias",
+            "repair_flow.layers.0.1.weight",
+            "repair_flow.layers.0.1.bias",
+            "repair_flow.layers.0.3.weight",
+            "repair_flow.layers.0.3.bias",
+            "repair_flow.layers.1.0.weight",
+            "repair_flow.layers.1.0.bias",
+            "repair_flow.layers.1.1.weight",
+            "repair_flow.layers.1.1.bias",
+            "repair_flow.layers.1.3.weight",
+            "repair_flow.layers.1.3.bias",
+            "repair_flow.layers.2.0.weight",
+            "repair_flow.layers.2.0.bias",
+            "repair_flow.layers.2.1.weight",
+            "repair_flow.layers.2.1.bias",
+            "repair_flow.layers.2.3.weight",
+            "repair_flow.layers.2.3.bias",
+            "repair_flow.out.0.weight",
+            "repair_flow.out.0.bias",
+            "repair_flow.out.1.weight",
+            "repair_flow.out.1.bias"
+          ]
+        },
+        {
+          "depth": 2,
+          "gradient_elements": 6466320,
+          "loss": 2.913102388381958,
+          "seconds": 0.06653470732271671,
+          "unused_parameters": []
+        }
+      ],
+      [
+        {
+          "depth": 1,
+          "gradient_elements": 5458664,
+          "loss": 1.5119645595550537,
+          "seconds": 0.19954063929617405,
+          "unused_parameters": [
+            "imagined_type",
+            "evidence.0.weight",
+            "evidence.0.bias",
+            "evidence.1.weight",
+            "evidence.1.bias",
+            "evidence.3.weight",
+            "evidence.3.bias",
+            "repair_anchor.0.weight",
+            "repair_anchor.0.bias",
+            "repair_anchor.1.weight",
+            "repair_anchor.1.bias",
+            "repair_flow.action.weight",
+            "repair_flow.action.bias",
+            "repair_flow.time.0.weight",
+            "repair_flow.time.0.bias",
+            "repair_flow.time.2.weight",
+            "repair_flow.time.2.bias",
+            "repair_flow.layers.0.0.weight",
+            "repair_flow.layers.0.0.bias",
+            "repair_flow.layers.0.1.weight",
+            "repair_flow.layers.0.1.bias",
+            "repair_flow.layers.0.3.weight",
+            "repair_flow.layers.0.3.bias",
+            "repair_flow.layers.1.0.weight",
+            "repair_flow.layers.1.0.bias",
+            "repair_flow.layers.1.1.weight",
+            "repair_flow.layers.1.1.bias",
+            "repair_flow.layers.1.3.weight",
+            "repair_flow.layers.1.3.bias",
+            "repair_flow.layers.2.0.weight",
+            "repair_flow.layers.2.0.bias",
+            "repair_flow.layers.2.1.weight",
+            "repair_flow.layers.2.1.bias",
+            "repair_flow.layers.2.3.weight",
+            "repair_flow.layers.2.3.bias",
+            "repair_flow.out.0.weight",
+            "repair_flow.out.0.bias",
+            "repair_flow.out.1.weight",
+            "repair_flow.out.1.bias"
+          ]
+        },
+        {
+          "depth": 2,
+          "gradient_elements": 6466320,
+          "loss": 2.8323848247528076,
+          "seconds": 0.06658796221017838,
+          "unused_parameters": []
+        }
+      ],
+      [
+        {
+          "depth": 1,
+          "gradient_elements": 5458664,
+          "loss": 1.4448310136795044,
+          "seconds": 0.19850968942046165,
+          "unused_parameters": [
+            "imagined_type",
+            "evidence.0.weight",
+            "evidence.0.bias",
+            "evidence.1.weight",
+            "evidence.1.bias",
+            "evidence.3.weight",
+            "evidence.3.bias",
+            "repair_anchor.0.weight",
+            "repair_anchor.0.bias",
+            "repair_anchor.1.weight",
+            "repair_anchor.1.bias",
+            "repair_flow.action.weight",
+            "repair_flow.action.bias",
+            "repair_flow.time.0.weight",
+            "repair_flow.time.0.bias",
+            "repair_flow.time.2.weight",
+            "repair_flow.time.2.bias",
+            "repair_flow.layers.0.0.weight",
+            "repair_flow.layers.0.0.bias",
+            "repair_flow.layers.0.1.weight",
+            "repair_flow.layers.0.1.bias",
+            "repair_flow.layers.0.3.weight",
+            "repair_flow.layers.0.3.bias",
+            "repair_flow.layers.1.0.weight",
+            "repair_flow.layers.1.0.bias",
+            "repair_flow.layers.1.1.weight",
+            "repair_flow.layers.1.1.bias",
+            "repair_flow.layers.1.3.weight",
+            "repair_flow.layers.1.3.bias",
+            "repair_flow.layers.2.0.weight",
+            "repair_flow.layers.2.0.bias",
+            "repair_flow.layers.2.1.weight",
+            "repair_flow.layers.2.1.bias",
+            "repair_flow.layers.2.3.weight",
+            "repair_flow.layers.2.3.bias",
+            "repair_flow.out.0.weight",
+            "repair_flow.out.0.bias",
+            "repair_flow.out.1.weight",
+            "repair_flow.out.1.bias"
+          ]
+        },
+        {
+          "depth": 2,
+          "gradient_elements": 6466320,
+          "loss": 2.7696681022644043,
+          "seconds": 0.06659820303320885,
+          "unused_parameters": []
+        }
+      ]
+    ],
+    "seconds": 4.08288049697876,
+    "simulator_episodes": 0,
+    "world_gradients_absent": true
+  },
+  "retrieval_setup": {
+    "attempts": [
+      {
+        "bank_hash": "268dd6eb6f406aa9036ecd0aa3ac5a552f2d41d5a819598c2f2b6638814c67e1",
+        "gpu_count": 4,
+        "gpu_hours": 0.0022834232966932985,
+        "optimizer_updates": 0,
+        "seconds": 2.0550809670239687
+      }
+    ],
+    "gpu_hours": 0.0022834232966932985
+  },
+  "owned_processes": [
+    {
+      "pid": 819165,
+      "present": true,
+      "state": "S",
+      "parent": 1,
+      "process_group": 819165,
+      "start_ticks": 1007321350,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m scripts.operations.controller_grounded --record /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt --variant retrieval_repair_ttt --gpus 4 --previous /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison --cache /tmp/mtxu-retrieval-repair-ttt-20261011 --reuse-bank /tmp/mtxu-flow-reasoning-20261010/route_bank.pt "
+    },
+    {
+      "pid": 821683,
+      "present": true,
+      "state": "S",
+      "parent": 819165,
+      "process_group": 819165,
+      "start_ticks": 1007334803,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -m torch.distributed.run --nnodes=1 --nproc_per_node=4 --rdzv-backend=c10d --rdzv-endpoint=127.0.0.1:0 -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/repo/config/flow_metaworld_retrieval_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/campaign/runs/retrieval_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-retrieval-repair-ttt-20261011/route_bank.pt "
+    },
+    {
+      "pid": 821698,
+      "present": true,
+      "state": "S",
+      "parent": 821683,
+      "process_group": 821698,
+      "start_ticks": 1007334944,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/repo/config/flow_metaworld_retrieval_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/campaign/runs/retrieval_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-retrieval-repair-ttt-20261011/route_bank.pt "
+    },
+    {
+      "pid": 821699,
+      "present": true,
+      "state": "R",
+      "parent": 821683,
+      "process_group": 821699,
+      "start_ticks": 1007334944,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/repo/config/flow_metaworld_retrieval_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/campaign/runs/retrieval_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-retrieval-repair-ttt-20261011/route_bank.pt "
+    },
+    {
+      "pid": 821700,
+      "present": true,
+      "state": "R",
+      "parent": 821683,
+      "process_group": 821700,
+      "start_ticks": 1007334944,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/repo/config/flow_metaworld_retrieval_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/campaign/runs/retrieval_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-retrieval-repair-ttt-20261011/route_bank.pt "
+    },
+    {
+      "pid": 821701,
+      "present": true,
+      "state": "R",
+      "parent": 821683,
+      "process_group": 821701,
+      "start_ticks": 1007334944,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/repo/config/flow_metaworld_retrieval_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/campaign/runs/retrieval_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-retrieval-repair-ttt-20261011/route_bank.pt "
+    },
+    {
+      "pid": 821769,
+      "present": true,
+      "state": "S",
+      "parent": 821698,
+      "process_group": 821698,
+      "start_ticks": 1007335286,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/repo/config/flow_metaworld_retrieval_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/campaign/runs/retrieval_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-retrieval-repair-ttt-20261011/route_bank.pt "
+    },
+    {
+      "pid": 821779,
+      "present": true,
+      "state": "S",
+      "parent": 821698,
+      "process_group": 821698,
+      "start_ticks": 1007335287,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/repo/config/flow_metaworld_retrieval_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/campaign/runs/retrieval_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-retrieval-repair-ttt-20261011/route_bank.pt "
+    },
+    {
+      "pid": 821785,
+      "present": true,
+      "state": "S",
+      "parent": 821698,
+      "process_group": 821698,
+      "start_ticks": 1007335288,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/repo/config/flow_metaworld_retrieval_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/campaign/runs/retrieval_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-retrieval-repair-ttt-20261011/route_bank.pt "
+    },
+    {
+      "pid": 821794,
+      "present": true,
+      "state": "S",
+      "parent": 821698,
+      "process_group": 821698,
+      "start_ticks": 1007335289,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/repo/config/flow_metaworld_retrieval_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/campaign/runs/retrieval_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-retrieval-repair-ttt-20261011/route_bank.pt "
+    },
+    {
+      "pid": 821964,
+      "present": true,
+      "state": "S",
+      "parent": 821698,
+      "process_group": 821964,
+      "start_ticks": 1007335874,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/lib/python3.11/site-packages/wandb/bin/wandb-core --port-filename /tmp/tmp9ul3rqmz/port-821698.txt --pid 821698 "
+    },
+    {
+      "pid": 821771,
+      "present": true,
+      "state": "S",
+      "parent": 821699,
+      "process_group": 821699,
+      "start_ticks": 1007335286,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/repo/config/flow_metaworld_retrieval_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/campaign/runs/retrieval_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-retrieval-repair-ttt-20261011/route_bank.pt "
+    },
+    {
+      "pid": 821776,
+      "present": true,
+      "state": "S",
+      "parent": 821699,
+      "process_group": 821699,
+      "start_ticks": 1007335287,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/repo/config/flow_metaworld_retrieval_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/campaign/runs/retrieval_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-retrieval-repair-ttt-20261011/route_bank.pt "
+    },
+    {
+      "pid": 821786,
+      "present": true,
+      "state": "R",
+      "parent": 821699,
+      "process_group": 821699,
+      "start_ticks": 1007335288,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/repo/config/flow_metaworld_retrieval_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/campaign/runs/retrieval_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-retrieval-repair-ttt-20261011/route_bank.pt "
+    },
+    {
+      "pid": 821793,
+      "present": true,
+      "state": "S",
+      "parent": 821699,
+      "process_group": 821699,
+      "start_ticks": 1007335289,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/repo/config/flow_metaworld_retrieval_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/campaign/runs/retrieval_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-retrieval-repair-ttt-20261011/route_bank.pt "
+    },
+    {
+      "pid": 821770,
+      "present": true,
+      "state": "S",
+      "parent": 821700,
+      "process_group": 821700,
+      "start_ticks": 1007335286,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/repo/config/flow_metaworld_retrieval_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/campaign/runs/retrieval_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-retrieval-repair-ttt-20261011/route_bank.pt "
+    },
+    {
+      "pid": 821778,
+      "present": true,
+      "state": "S",
+      "parent": 821700,
+      "process_group": 821700,
+      "start_ticks": 1007335287,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/repo/config/flow_metaworld_retrieval_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/campaign/runs/retrieval_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-retrieval-repair-ttt-20261011/route_bank.pt "
+    },
+    {
+      "pid": 821787,
+      "present": true,
+      "state": "R",
+      "parent": 821700,
+      "process_group": 821700,
+      "start_ticks": 1007335288,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/repo/config/flow_metaworld_retrieval_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/campaign/runs/retrieval_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-retrieval-repair-ttt-20261011/route_bank.pt "
+    },
+    {
+      "pid": 821795,
+      "present": true,
+      "state": "S",
+      "parent": 821700,
+      "process_group": 821700,
+      "start_ticks": 1007335289,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/repo/config/flow_metaworld_retrieval_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/campaign/runs/retrieval_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-retrieval-repair-ttt-20261011/route_bank.pt "
+    },
+    {
+      "pid": 821768,
+      "present": true,
+      "state": "S",
+      "parent": 821701,
+      "process_group": 821701,
+      "start_ticks": 1007335286,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/repo/config/flow_metaworld_retrieval_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/campaign/runs/retrieval_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-retrieval-repair-ttt-20261011/route_bank.pt "
+    },
+    {
+      "pid": 821777,
+      "present": true,
+      "state": "S",
+      "parent": 821701,
+      "process_group": 821701,
+      "start_ticks": 1007335287,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/repo/config/flow_metaworld_retrieval_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/campaign/runs/retrieval_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-retrieval-repair-ttt-20261011/route_bank.pt "
+    },
+    {
+      "pid": 821784,
+      "present": true,
+      "state": "R",
+      "parent": 821701,
+      "process_group": 821701,
+      "start_ticks": 1007335288,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/repo/config/flow_metaworld_retrieval_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/campaign/runs/retrieval_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-retrieval-repair-ttt-20261011/route_bank.pt "
+    },
+    {
+      "pid": 821792,
+      "present": true,
+      "state": "S",
+      "parent": 821701,
+      "process_group": 821701,
+      "start_ticks": 1007335289,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/repo/config/flow_metaworld_retrieval_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/campaign/runs/retrieval_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-retrieval-repair-ttt-20261011/route_bank.pt "
+    }
+  ],
+  "tests": {
+    "successful_test_groups": 7,
+    "total_tests": 39
+  },
+  "assigned_gpu_state": [
+    "0, 12291, 50",
+    "1, 12291, 54",
+    "2, 12291, 69",
+    "3, 12291, 65"
+  ],
+  "wandb": {
+    "id": "6wpx3jcv",
+    "state": "running",
+    "summary": {
+      "step": null,
+      "train/loss": null,
+      "budget/optimization_gpu_hours": null
+    }
+  },
+  "latest_metric": {
+    "train/calibration_loss": 0.02540915086865425,
+    "train/fast_weight_delta_norm": 0.2602723240852356,
+    "train/flow_loss": 1.1221967935562134,
+    "train/goal_offset_mean": 26.328125,
+    "train/history_fraction": 0.9375,
+    "train/late_window_fraction": 0.046875,
+    "train/loss": 1.1247376203536987,
+    "train/reasoning_depth": 1.0,
+    "train/recorded_corrected_prefix_mae": 0.001775322132743895,
+    "train/recorded_corrected_terminal_mae": 0.0021089219953864813,
+    "train/recorded_patch_prefix_mae": 0.003414797829464078,
+    "train/recorded_prior_prefix_mae": 0.001817831420339644,
+    "train/recorded_raw_prefix_mae": 0.002064451575279236,
+    "train/recorded_raw_terminal_mae": 0.002749004866927862,
+    "train/repair_anchor_action_mse": 0.0,
+    "train/repair_flow_loss": 0.0,
+    "train/repair_target_clipped_fraction": 0.0,
+    "train/repair_teacher_action_improvement": 0.0,
+    "train/repair_teacher_action_mse": 0.0,
+    "train/retrieval_eligible_fraction": 0.875,
+    "train/retrieved_anchor_fraction": 0.0,
+    "train/sample_start_mean": 15.890625,
+    "step": 451,
+    "train/lr": 4.5044251178595024e-05,
+    "train/execution_weight": 0.0,
+    "train/grad_norm": 1.29188072681427,
+    "budget/optimization_gpu_hours": 0.04151405697067578,
+    "system/update_seconds": 0.07078053615987301,
+    "system/update_examples_per_second": 904.2033795200743,
+    "system/peak_gpu_gib": 10.363987445831299
+  }
+}

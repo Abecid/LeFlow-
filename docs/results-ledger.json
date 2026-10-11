@@ -7,7 +7,7 @@
       "run_key": "20261011-retrieval-repair-ttt",
       "method": "retrieval_repair_ttt",
       "seed": 3072,
-      "status": "frozen_pending_preflight",
+      "status": "training",
       "source": "3bdfb49e7c9d4952da7494e50c8dc2530197641e",
       "server_record": "/home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt",
       "server_run": "/home/mtxu/adam/LeFlow-experiments/20261011-retrieval-repair-ttt/campaign/runs/retrieval_repair_ttt_3072",
@@ -32,7 +32,62 @@
       "preceding_publication_commit": "15852d5c4fa550c22c0f6b6d9142bd7435593792",
       "known_prior_campaign_gpu_hours": 90.93449024323375,
       "followup": "continue-flow-jepa-campaign-and-preserve-results",
-      "runtime_hash_count": 137
+      "runtime_hash_count": 137,
+      "coordinator_pid": 819165,
+      "worker_pid": 821683,
+      "launcher_utc": "2026-10-11T21:05:07.381353+00:00",
+      "verified_utc": "2026-10-11T21:08:12.257335+00:00",
+      "verified_step": 421,
+      "wandb_id": "6wpx3jcv",
+      "wandb_url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/6wpx3jcv",
+      "cache": "/tmp/mtxu-retrieval-repair-ttt-20261011",
+      "manifest": "77272fbe04eed6af8e6c8717252bdd6c58bcad0e431546290528725f4f6517e8",
+      "protocol": "13b63f76fb101a24333e36bd4e7ec00ff11f26b8b0b044061e03ad870d3a0816",
+      "bank_hash": "268dd6eb6f406aa9036ecd0aa3ac5a552f2d41d5a819598c2f2b6638814c67e1",
+      "world_hash": "ae3f910da43f0a43dd65945394444a0b11719ed042cdacffacc2faaf824ec5a3",
+      "observed_validation_steps": [],
+      "interim_artifact_sha256": {
+        "docs/reports/20261011-retrieval-repair-ttt/ddp-check.json": "848f03ec18fcef44aea645b4e0f000ea8e738f066eb40b0eabbbfbd707191cf6",
+        "docs/reports/20261011-retrieval-repair-ttt/launch-verification.json": "e151990f7eb2a6ba1678eaeab2fe0005369508a43c1a777bb2ea7cc093fbecd8",
+        "docs/reports/20261011-retrieval-repair-ttt/launcher.json": "efdda436fafd3821a597a974a93a0afda9549835594244ee56e3511c8cb9fc11",
+        "docs/reports/20261011-retrieval-repair-ttt/preflight.json": "44e24cdc7bd9558f7c376575309d5ae95115d8d2bec6ac3fe20be026fced0310",
+        "docs/reports/20261011-retrieval-repair-ttt/rationale.json": "b204248e72373846173a10573e985031ede3156fa2986886d4c07b402a6f1982",
+        "docs/reports/20261011-retrieval-repair-ttt/reuse.json": "b47e7e17a51eebd7470744653e6055483e0ae98a578dca961a680cf787629e82",
+        "docs/reports/20261011-retrieval-repair-ttt/route-bank.json": "518fdbe8ebf6895be2fac7adabf3d276eea40817bfae0f9beb123b2e169db448",
+        "docs/reports/20261011-retrieval-repair-ttt/run/compute_usage.json": "1e504717fca9da97e9ee11815ebae503dbcb72c085fba8b6c0a889dcc8369e87",
+        "docs/reports/20261011-retrieval-repair-ttt/run/metrics.jsonl.gz": "a15d8b2da83197f3241f5c86ecd094f675c3779f1b72fddcf3e0abdec6796e04",
+        "docs/reports/20261011-retrieval-repair-ttt/run/retrieval-setup.json": "564e21a7fc03a05195eb8e4500c952e6ca9f14522998177a196109276ea76d53",
+        "docs/reports/20261011-retrieval-repair-ttt/run/run.json": "3e6126bcf14268f8eb3307d9cbcad29ef516933ed3275b13e795405a4facb980",
+        "docs/reports/20261011-retrieval-repair-ttt/runtime-files.json": "1d10d9a9d74ecec9bf78be59ee5a0d1c9e037bca4bb58f79384c30f6fc44fd11",
+        "docs/reports/20261011-retrieval-repair-ttt/tests.log.gz": "f3fd93cd771814dcf16701acbf0476a4ab498c365fe969f4aa2aad2c8c5dfb6d",
+        "docs/RETRIEVAL_REPAIR_TTT.md": "06d57b82b83fb2c0f236f0b242be3f6d4c6f911dc763264fcfe5d68d8bf5ae93",
+        "docs/reports/20261011-retrieval-repair-ttt/online-progress.json": "bd35cd565b6e444a38e1345bad5e0d6900a6314911a50c28354932837d1a3fed"
+      },
+      "interim_scope": "Launch verified; run active. All four fixed104 evaluations and final completion analysis remain pending.",
+      "latest_online_verification": {
+        "utc": "2026-10-11T21:09:13.456432+00:00",
+        "id": "6wpx3jcv",
+        "state": "running",
+        "summary": {
+          "step": 751,
+          "train/loss": 0.6880859136581421,
+          "train/retrieved_anchor_fraction": 0,
+          "budget/optimization_gpu_hours": 0.06819778580839435
+        },
+        "local_compute": {
+          "global_batch": 64,
+          "gpu_count": 4,
+          "last_update_overrun_gpu_seconds": 0.0,
+          "optimization_cap_gpu_seconds": 28800,
+          "optimization_gpu_hours": 0.10510008827472726,
+          "optimization_gpu_seconds": 378.36031778901815,
+          "step": 1164,
+          "stop_check": "optimizer boundary; final-update overrun reported",
+          "validation_gpu_hours": 0.0,
+          "validation_gpu_seconds": 0.0,
+          "validation_steps": []
+        }
+      }
     }
   ],
   "completed_runs": [

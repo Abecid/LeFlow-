@@ -1,0 +1,12 @@
+{
+  "attempts": [
+    {
+      "bank_hash": "268dd6eb6f406aa9036ecd0aa3ac5a552f2d41d5a819598c2f2b6638814c67e1",
+      "gpu_count": 4,
+      "gpu_hours": 0.0022834232966932985,
+      "optimizer_updates": 0,
+      "seconds": 2.0550809670239687
+    }
+  ],
+  "gpu_hours": 0.0022834232966932985
+}

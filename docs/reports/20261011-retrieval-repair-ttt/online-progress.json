@@ -1,0 +1,24 @@
+{
+  "utc": "2026-10-11T21:09:13.456432+00:00",
+  "id": "6wpx3jcv",
+  "state": "running",
+  "summary": {
+    "step": 751,
+    "train/loss": 0.6880859136581421,
+    "train/retrieved_anchor_fraction": 0,
+    "budget/optimization_gpu_hours": 0.06819778580839435
+  },
+  "local_compute": {
+    "global_batch": 64,
+    "gpu_count": 4,
+    "last_update_overrun_gpu_seconds": 0.0,
+    "optimization_cap_gpu_seconds": 28800,
+    "optimization_gpu_hours": 0.10510008827472726,
+    "optimization_gpu_seconds": 378.36031778901815,
+    "step": 1164,
+    "stop_check": "optimizer boundary; final-update overrun reported",
+    "validation_gpu_hours": 0.0,
+    "validation_gpu_seconds": 0.0,
+    "validation_steps": []
+  }
+}

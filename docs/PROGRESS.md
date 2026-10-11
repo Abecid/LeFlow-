@@ -1,3 +1,15 @@
+# October11 14:08 Pacific: retrieval-repair training verified
+
+The single next candidate is running on GPUs0–3, source3bdfb49, W&B6wpx3jcv.
+Readback421 updates, finite periodic metrics, original global64/seed3072/data/
+20k-or28,800 optimization GPU-second ceiling. All39 tests pass; cached-data
+preflight79.61ms and4-rank no-update synchronized-gradient checks pass. The
+first104-case evaluation is pending. Frozen runtime137 hashes and owned process
+identities verified; other jobs untouched. [Run evidence and limits](RETRIEVAL_REPAIR_TTT.md).
+Preflight.005975GPUh, DDP check.004537GPUh and retrieval setup.002283GPUh are
+preserved separately; prior known campaign components90.934490GPUh remain charged.
+Do not edit execution source or queue another candidate while this one runs.
+
 # October11: published repair-flow; one retrieval-training correction registered
 
 Repair-flow80/73/75/75 is published to origin/main at15852d5; all146 ledger

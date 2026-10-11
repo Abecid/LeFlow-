@@ -1,3 +1,28 @@
+# Training verified: retrieval-conditioned residual flow
+
+Readback 2026-10-11T21:08:12.257335+00:00: source `3bdfb49e7c9d4952da7494e50c8dc2530197641e` is clean and all137
+runtime file hashes match. Coordinator819165/start1007321350 and launcher821683/
+start1007334803 own four training ranks821698–821701/start1007334944 on GPUs0–3.
+The run reached at least421 updates, with finite periodic losses and unchanged
+global64/20k-or28,800 optimizer-GPU-second caps. W&B
+[6wpx3jcv](https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/6wpx3jcv) is running. The first fixed104 evaluation
+is pending; no task-success improvement is claimed. At21:09:13UTC, a later read
+confirmed local step1164 and online W&B step751/loss.688086; upload lag is explicit
+in [online progress](reports/20261011-retrieval-repair-ttt/online-progress.json).
+The zero retrieval-anchor metric at751 is a shallow update; deep updates must
+be analyzed separately.
+
+All39 final-source tests pass. Training-cache preflight checks unchanged sampled
+bytes,10,000 task/episode draws, exclusion of the query episode and controller
+latency79.61ms. The four-rank check verifies synchronized gradients at both
+depths, unchanged parameters and no world gradients. Preflight.00597479GPUh,
+no-update distributed check.00453653GPUh and retrieval setup.00228342GPUh are
+recorded separately. At the compute snapshot, optimization.03855183GPUh;
+subsequent periodic metrics are later snapshots of the same advancing run.
+[Launch evidence](reports/20261011-retrieval-repair-ttt/launch-verification.json)
+preserves process identities, source/data hashes, tests, allocation and metrics.
+Reporting changes after the frozen revision do not change the execution checkout.
+
 # Cross-episode retrieval evidence for residual-flow training
 
 One next candidate, `retrieval_repair_ttt`, is registered under the October 11

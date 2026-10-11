@@ -1,3 +1,13 @@
+# Verified active run: retrieval_repair_ttt on GPUs0–3
+
+October11 14:08 Pacific: source3bdfb49e7c9d4952da7494e50c8dc2530197641e is
+frozen and137 runtime hashes verified; coordinator819165, launcher821683,
+training ranks821698–821701. W&B6wpx3jcv, at least421 updates, no evaluation yet.
+All39 checks,79.61ms cached-data preflight and4-rank gradient verification pass.
+Read docs/RETRIEVAL_REPAIR_TTT.md and the active ledger. Preserve the running
+checkout and existing jobs; never duplicate this coordinator or resume older runs.
+Only reporting edits belong in this desktop checkout while training is active.
+
 # Current registered candidate: retrieval_repair_ttt
 
 Repair-flow completion is remotely published at15852d5;80/73/75/75 ties80.

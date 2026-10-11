@@ -91,6 +91,7 @@ def summarize(report):
         raw_prefix_mae=average(abs(d['predicted_prefix_target_progress']-d['actual_prefix_target_progress']) for d in observed),
         corrected_prefix_mae=average(abs(d['corrected_prefix_target_progress']-d['actual_prefix_target_progress']) for d in observed),
         selected_source_observational_groups=source_groups,
+        repair_anchor_provenance=dict(Counter(d.get('repair_anchor_source','unrecorded') for d in decisions)),
         incumbent_selected_fraction=average(d['selected_is_unchanged_incumbent'] for d in decisions),
         selected_repair_linf_mean=average(d['selected_distance_from_incumbent_linf'] for d in decisions),
         selected_repair_linf_max=max(d['selected_distance_from_incumbent_linf'] for d in decisions),
@@ -117,6 +118,8 @@ def main(args):
         'hwm_paper_port':('20261010-release-baselines/hwm/validation/step_0015000.json.gz', 5),
         'cem_release':('20261010-release-baselines/cem/validation.json', 24),
     }
+    if load(root/'run.json')['method']=='retrieval_repair_ttt':
+        refs['repair_flow_ttt']=('20261011-repair-flow-ttt/run/validation/step_0005000.json.gz',80)
     last_byid = {r['id']:r for r in reports[-1]['records']}
     selected_to_last = dict(
         selected_step=chosen['step'], last_step=reports[-1]['step'],
@@ -151,6 +154,8 @@ def main(args):
             'train/repair_target_clipped_fraction', 'train/calibration_loss',
             'train/recorded_raw_prefix_mae', 'train/recorded_corrected_prefix_mae',
             'train/recorded_prior_prefix_mae', 'system/update_examples_per_second']
+    keys += [k for k in ('train/retrieval_eligible_fraction','train/retrieved_anchor_fraction')
+             if all(k in row for row in train_logs)]
     windows = []
     for report in reports:
         rows = [r for r in train_logs if report['step']-500 < r['step'] <= report['step']]
