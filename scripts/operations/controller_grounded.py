@@ -25,7 +25,8 @@ def main(a):
                  'execution_revision':'flow_metaworld_aligned.json',
                  'flow_reasoning':'flow_metaworld_flow_reasoning.json',
                  'progress_ttt':'flow_metaworld_progress_ttt.json',
-                 'guided_ttt':'flow_metaworld_guided_ttt.json'}[a.variant]
+                 'guided_ttt':'flow_metaworld_guided_ttt.json',
+                 'repair_flow_ttt':'flow_metaworld_repair_flow_ttt.json'}[a.variant]
     c=config(repo/'config'/config_name)
     if not c.get('execution', {}).get('training_enabled', False):
         raise RuntimeError('Training disabled in candidate config; use the train-data-only preflight')
@@ -63,20 +64,23 @@ def main(a):
     with (record/'tests.log').open('a') as log:
         subprocess.run([sys.executable,'-m','unittest','discover','-s','tests','-p','test_execution.py','-v'],
                        env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
-        if a.variant in ('latent_revision','execution_revision','flow_reasoning','progress_ttt','guided_ttt'):
+        if a.variant in ('latent_revision','execution_revision','flow_reasoning','progress_ttt','guided_ttt','repair_flow_ttt'):
             subprocess.run([sys.executable,'-m','unittest','discover','-s','tests','-p','test_latent_revision.py','-v'],
                            env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
-        if a.variant in ('execution_revision','flow_reasoning','progress_ttt','guided_ttt'):
+        if a.variant in ('execution_revision','flow_reasoning','progress_ttt','guided_ttt','repair_flow_ttt'):
             subprocess.run([sys.executable,'-m','unittest','discover','-s','tests','-p','test_execution_revision.py','-v'],
                            env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
-        if a.variant in ('flow_reasoning','progress_ttt','guided_ttt'):
+        if a.variant in ('flow_reasoning','progress_ttt','guided_ttt','repair_flow_ttt'):
             subprocess.run([sys.executable,'-m','unittest','discover','-s','tests','-p','test_flow_reasoning.py','-v'],
                            env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
-        if a.variant in ('progress_ttt','guided_ttt'):
+        if a.variant in ('progress_ttt','guided_ttt','repair_flow_ttt'):
             subprocess.run([sys.executable,'-m','unittest','discover','-s','tests','-p','test_progress_ttt.py','-v'],
                            env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
         if a.variant=='guided_ttt':
             subprocess.run([sys.executable,'-m','unittest','discover','-s','tests','-p','test_guided_ttt.py','-v'],
+                           env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
+        if a.variant=='repair_flow_ttt':
+            subprocess.run([sys.executable,'-m','unittest','discover','-s','tests','-p','test_repair_flow_ttt.py','-v'],
                            env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
     if not Path(bank).exists():
         if a.reuse_bank:
@@ -90,8 +94,8 @@ def main(a):
                     '--root',str(root),'--output',bank],env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
     shutil.copy2(bank+'.json',root/'route-bank.json')
     status('acquiring_idle_gpus')
-    selected, held=acquire_gpus(8,root,wait_hours=1,required=8)
-    assert len(selected)==8
+    selected, held=acquire_gpus(a.gpus,root,wait_hours=1,required=a.gpus)
+    assert len(selected)==a.gpus
     save_json(root/'allocation.json',dict(gpus=selected,global_batch=64,optimization_gpu_seconds=28800))
     try:
         if not (root/'preflight.json').exists():
@@ -104,12 +108,19 @@ def main(a):
         preflight=json.loads((root/'preflight.json').read_text())
         # A failed latency gate is an implementation issue, not permission to
         # relax the controller allowance or quietly run an expensive sweep.
-        if preflight['mean_ms']>120:
-            raise RuntimeError(f"Full-controller preflight exceeds120ms: {preflight['mean_ms']}")
+        latency_limit=95 if a.variant=='repair_flow_ttt' else 120
+        if preflight['mean_ms']>latency_limit:
+            raise RuntimeError(f"Full-controller preflight exceeds{latency_limit}ms: {preflight['mean_ms']}")
         env['CUDA_VISIBLE_DEVICES']=','.join(x[0] for x in selected)
-        cmd=[sys.executable,'-m','torch.distributed.run','--nnodes=1','--nproc_per_node=8',
+        cmd=[sys.executable,'-m','torch.distributed.run','--nnodes=1',f'--nproc_per_node={a.gpus}',
              '--rdzv-backend=c10d','--rdzv-endpoint=127.0.0.1:0','-m','flow_jepa.execution.train',
              '--config',cfg,'--root',str(root),'--run-dir',str(run_dir),'--world',str(world),'--bank',bank]
+        if a.variant=='repair_flow_ttt' and not (root/'ddp-check.json').exists():
+            status('no_update_distributed_gradient_check')
+            check_cmd=cmd[:cmd.index('flow_jepa.execution.train')]+['flow_jepa.execution.ddp_check',
+                '--config',cfg,'--root',str(root),'--world',str(world),'--output',str(root/'ddp-check.json')]
+            with (record/'ddp-check.log').open('a') as log:
+                subprocess.run(check_cmd,env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
         status('training',command=cmd,preflight_mean_ms=preflight['mean_ms'])
         with (record/'training.log').open('a') as log:
             child=subprocess.Popen(cmd,env=env,stdout=log,stderr=subprocess.STDOUT)
@@ -124,8 +135,9 @@ def main(a):
 if __name__=='__main__':
     p=argparse.ArgumentParser()
     for name in ('record','previous','cache'):p.add_argument('--'+name,required=True)
-    p.add_argument('--variant',choices=['controller_grounded','latent_revision','execution_revision','flow_reasoning','progress_ttt','guided_ttt'],default='controller_grounded')
+    p.add_argument('--variant',choices=['controller_grounded','latent_revision','execution_revision','flow_reasoning','progress_ttt','guided_ttt','repair_flow_ttt'],default='controller_grounded')
     p.add_argument('--reuse-bank')
+    p.add_argument('--gpus',type=int,choices=[4,8],default=8)
     args=p.parse_args()
     try:main(args)
     except Exception as error:

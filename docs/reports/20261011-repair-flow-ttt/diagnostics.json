@@ -1,0 +1,23 @@
+{
+  "training_examples": 32,
+  "optimizer_updates": 0,
+  "simulator_calls": 0,
+  "final_tests_read": false,
+  "selected_step": 20000,
+  "guidance_vs_world_gradient_cosine_mean": 0.2916647493839264,
+  "guidance_vs_world_gradient_negative_fraction": 0.2578125,
+  "guidance_rms": 0.0714017003774643,
+  "world_gradient_rms": 0.034989140927791595,
+  "guidance_world_pairwise_order_agreement": 0.5416666865348816,
+  "cost_mae": 0.0026348265819251537,
+  "plain_source": "All diagnostics use first32 fixed training-window draws and frozen selected20k model; world gradients/ordering are model predictions, not physical outcome ground truth.",
+  "prepare_ms": 5.54308295249939,
+  "propose_ms": 9.916681796312332,
+  "world_5step_ms": 6.547153368592262,
+  "score_ms": 1.1202529072761536,
+  "revise_ms": 0.9120959788560867,
+  "propose_without_guidance_timing_only_ms": 3.8451462984085083,
+  "seconds": 1.687205407768488,
+  "gpu_count": 1,
+  "gpu_hours": 0.00046866816882457996
+}

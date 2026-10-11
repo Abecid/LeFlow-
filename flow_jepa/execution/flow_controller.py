@@ -54,7 +54,7 @@ class FlowReasoningController(AlignedController):
             changed_candidates += int((costs.argmin(1) != raw.argmin(1)).sum())
             evaluated_batches += n
             raw_min = torch.minimum(raw_min, raw.min(1).values)
-            values, ids = costs.topk(2, dim=1, largest=False)
+            values, ids = costs.min(dim=1, keepdim=True)
             ix = torch.arange(n, device=start.device)
             chosen = ids[:,0]
             prefix = predicted.reshape(n,per,5,*start.shape[1:])[ix,chosen,0]
@@ -104,7 +104,7 @@ class FlowReasoningController(AlignedController):
             proposal_diversity=float(initial_actions.flatten(2).std(1,unbiased=False).mean()),
             round_best_scores=round_best_scores, round_action_changes=round_action_changes,
             round_proposal_diversity=round_diversity, flow_solver_steps=self.model.flow_steps,
-            flow_evaluations=rounds*self.model.flow_steps, scoring_context_fixed=True,
+            flow_evaluations=getattr(self.model,'controller_flow_evaluations',rounds*self.model.flow_steps), scoring_context_fixed=True,
             retrieval_cpu_wall_ms=retrieval_ms, refinement_batches=rounds,
             candidate_world_transitions=n*per*rounds*5,
             **self.plan_diagnostics(context, start, targets, best_actions, best_prefix, chosen)))

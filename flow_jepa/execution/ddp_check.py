@@ -11,16 +11,16 @@ from .train import component_types, load_world
 
 def main(a):
     rank = int(os.environ['LOCAL_RANK']); size = int(os.environ['WORLD_SIZE'])
-    assert size == 8
+    assert size in (4, 8)
     torch.cuda.set_device(rank); torch.set_num_threads(2); dist.init_process_group('nccl')
     began = time.perf_counter(); seed_all(3072); device = torch.device('cuda', rank)
     c = config(a.config); method, Policy, Dataset, _ = component_types(c)
-    assert method == 'guided_ttt'
+    assert method in ('guided_ttt','repair_flow_ttt')
     model = Policy(c).to(device); world, _ = load_world(c, a.world, device)
     original = {k:v.clone() for k,v in model.state_dict().items()}
     wrapped = DDP(model, device_ids=[rank], broadcast_buffers=False, find_unused_parameters=True)
     ds = Dataset(a.root, c, method, 3072, 640)
-    rows = [ds[rank*8+i] for i in range(8)]
+    rows = [ds[rank*(64//size)+i] for i in range(64//size)]
     batch = {k:torch.stack([r[k] for r in rows]).to(device) for k in rows[0]}
     seed_all(3072+997*rank); records = []
     for depth in range(1, c['flow_reasoning']['rounds']+1):
@@ -42,10 +42,10 @@ def main(a):
     dist.all_reduce(elapsed, op=dist.ReduceOp.MAX)
     results = [None]*size; dist.all_gather_object(results, records)
     if rank == 0:
-        save_json(a.output, dict(gpu_count=8, global_batch=64, optimizer_updates=0, simulator_episodes=0,
+        save_json(a.output, dict(gpu_count=size, global_batch=64, optimizer_updates=0, simulator_episodes=0,
             parameters_unchanged=True, gradient_sync_exact=True, world_gradients_absent=True,
-            seconds=float(elapsed), gpu_hours=float(elapsed)*8/3600, rank_records=results))
-        print('Eight-GPU guided-TTT checks passed', flush=True)
+            seconds=float(elapsed), gpu_hours=float(elapsed)*size/3600, rank_records=results))
+        print(f'{size}-GPU {method} checks passed', flush=True)
     dist.destroy_process_group()
 
 

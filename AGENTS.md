@@ -1,3 +1,24 @@
+# Latest authorization: sequential failure-driven iterations (October11)
+
+The user explicitly asks to keep analyzing failures, implementing corrections and
+training further to improve performance. This supersedes the historical completed-
+run holds below. Proceed one evidence-backed candidate at a time, each fresh seed3072
+with unchanged6222 expert episodes, global64,20k-update/28800 optimization GPU-second
+ceilings and four fixed104 validations;10s/200-action controller allowance. Preserve
+baselines and frozen execution trees. No extra seeds, baseline retraining, automated
+hyperparameter/ablation sweeps or sealed final tests. Analyze and publish EVERY
+completed iteration before deciding the next correction. Do not accumulate a blind
+queue or promise improvement. Stop iteration for review after a credible development
+improvement over80/104, or when no concrete supported correction remains; repeated
+validation tuning is not independent generalization evidence.
+
+Current registered candidate: repair_flow_ttt. Read docs/REPAIR_FLOW_TTT.md and the
+active ledger entry. Use4 idle GPUs while others are occupied; global64 and aggregate
+cap stay fixed. This changes rank random-stream assignment from prior8-GPU runs;
+record it, never claim bitwise identical optimization. No optimization has started
+at this registration stage. Run verified preflight/distributed checks and launch
+immediately on success, then record actual source, PIDs, W&B and metrics.
+
 # Standing requirement: publish every completed run
 
 October11 user requirement: always log and push results, findings and evaluation

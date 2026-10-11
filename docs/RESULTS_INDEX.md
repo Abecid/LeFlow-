@@ -7,6 +7,13 @@ These are custom MetaWorld shared-world comparisons, with the release/port
 limitations described in each report. They do not establish native-benchmark
 SOTA, convergence, isolated component gains or generalization.
 
+## Active iteration
+
+[Execution-conditioned flow repair](REPAIR_FLOW_TTT.md) is registered under the
+October11 iterative-improvement request. It preserves the best verified proposal,
+learns bounded action corrections and removes the weak surrogate-gradient loop.
+Its performance is not yet measured. All previous results below remain frozen.
+
 ## Preserved comparisons
 
 The four learned-model scores correspond to5k/10k/15k/20k total updates. CEM has

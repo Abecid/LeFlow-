@@ -1,3 +1,15 @@
+# October11: failure analysis and registered flow-repair iteration
+
+Latest user authorization permits sequential evidence-driven improvements, one
+fresh fixed-budget candidate at a time. Read [REPAIR_FLOW_TTT.md](REPAIR_FLOW_TTT.md).
+Small training-only diagnostic: surrogate/world pairwise ranking agreement57.8%;
+guidance and equally corrected full-world gradients oppose in30.5% of128 proposals.
+These are model-to-model diagnostics, not physical ground truth. Added bounded
+incumbent-conditioned repair flow, retained episodic factual correction and full-
+world ranking, removed surrogate guidance. Five new causal/bounds/gradient/controller
+tests passed on the server. Registered4-GPU run pending preflight/DDP checks; no
+new optimization or evaluation result yet. Baselines/final tests preserved.
+
 # October11: guided TTT completed, audited and published
 
 Full fixed104 curve72/70/72/75 at5k/10k/15k/20k; selected20k75/104 (72.12%),

@@ -2,7 +2,35 @@
   "schema_version": 1,
   "scope": "Current shared-world MetaWorld fixed-104 development comparisons; historical campaigns remain linked in RESULTS_INDEX.md.",
   "publication_contract": "A run is publication-complete only when these artifacts and its findings report are committed and verified on origin/main. Local ledger membership alone does not prove remote publication.",
-  "active_runs": [],
+  "active_runs": [
+    {
+      "run_key": "20261011-repair-flow-ttt",
+      "method": "repair_flow_ttt",
+      "seed": 3072,
+      "status": "registered_pending_verified_launch",
+      "source": "freeze_registration_commit_before_launch",
+      "server_record": "/home/mtxu/adam/LeFlow-experiments/20261011-repair-flow-ttt",
+      "server_run": "/home/mtxu/adam/LeFlow-experiments/20261011-repair-flow-ttt/campaign/runs/repair_flow_ttt_3072",
+      "report": "docs/REPAIR_FLOW_TTT.md",
+      "expected_validation_steps": [
+        5000,
+        10000,
+        15000,
+        20000
+      ],
+      "training_contract": {
+        "expert_episodes": 6222,
+        "global_batch": 64,
+        "maximum_updates": 20000,
+        "optimization_gpu_seconds": 28800,
+        "controller_seconds": 10,
+        "primitive_actions": 200,
+        "validation_cases": 104,
+        "planned_gpus": 4,
+        "final_tests_enabled": false
+      }
+    }
+  ],
   "completed_runs": [
     {
       "run_key": "dw8gnxtj",
