@@ -1,3 +1,18 @@
+# October 11, 14:42 Pacific: retrieval-repair reaches 77/104 at 10k
+
+The first two registered rounds are 75/77, with zero timeouts. The 10k model
+has 8 paired gains and 6 regressions versus 5k; all 27 failures reach 200 actions.
+The preserved best remains 80/104. Source and 137 hashes, owned process identities
+and online score verified; 15k evaluation is running. Two evaluations and the
+completion audit remain. [Full findings](RETRIEVAL_REPAIR_TTT.md).
+
+Saved full periodic metrics, both 104-case reports, paired failure IDs, anchor
+provenance and teacher-clipping diagnostics. Repairs are selected
+44.21% at 10k; shifted anchors remain a deployment-only training gap, without
+causal attribution. Snapshot 1.312060 optimization / 0.934417 validation
+GPUh; known cumulative measured components 93.193763 GPUh. The same authorized
+run continues unchanged; no next candidate or test access.
+
 # October11 14:28 Pacific: retrieval-repair5k scores75/104
 
 First registered round75/104 with zero timeouts; all29 failures reach200 actions.

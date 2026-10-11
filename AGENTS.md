@@ -1,3 +1,13 @@
+# Retrieval-repair at 75/77; 15k evaluation active
+
+October 11, 14:42 Pacific: two fixed104 rounds score75/77 with zero timeouts;
+10k is the provisional selection, below the preserved80. Source3bdfb49 and
+137 runtime hashes verified; coordinator819165, launcher821683 and their ranks
+remain healthy. The15k evaluation is active; finish both remaining rounds.
+Read docs/RETRIEVAL_REPAIR_TTT.md and analysis-round-2.json. Do not modify or
+restart frozen execution, or dispatch another candidate before completion and
+publication. Case-paired and latent diagnostics do not establish physical causes.
+
 # Retrieval-repair first evaluation75/104; preserve active run
 
 October11 14:28 Pacific: first5k round75/104, zero timeouts,29 action-limit

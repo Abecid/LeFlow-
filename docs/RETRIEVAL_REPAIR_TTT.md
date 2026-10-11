@@ -1,3 +1,61 @@
+# Second evaluation: 77/104; run remains active
+
+At the 21:42 UTC collection, the registered development curve is **75 / 77**
+at 5k / 10k. The 10k checkpoint gains 8 cases and loses 6 versus 5k;
+it is the provisional selection, still below the preserved 80/104. Both rounds
+have zero controller timeouts. All 27 second-round failures reach the 200-action
+ceiling. Training has reached 15,000 updates and the 15k evaluation is in
+progress; the 15k and 20k results and final audit remain pending at this snapshot.
+The run continues unchanged.
+
+| Update | Successes | Timeouts | Repair selected | Corrected prefix MAE |
+| --- | ---: | ---: | ---: | ---: |
+| 5,000 | 75/104 | 0 | 53.37% | 0.0015608 |
+| 10,000 | 77/104 | 0 | 44.21% | 0.0016705 |
+
+Corrected executed-prefix error increases about 7% from 5k while success rises
+by two cases. Across these checkpoints, lower calibration/action losses do not
+consistently track task success. This association does not isolate a cause.
+
+| Frozen reference | Successes | Current 10k wins | Regressions |
+| --- | ---: | ---: | ---: |
+| repair_flow_ttt | 80 | 2 | 5 |
+| execution_revision | 80 | 5 | 8 |
+| flow_reasoning | 79 | 4 | 6 |
+| progress_ttt | 78 | 5 | 6 |
+| guided_ttt | 75 | 6 | 4 |
+
+[Exact paired case IDs and diagnostics](reports/20261011-retrieval-repair-ttt/analysis-round-2.json)
+and [5k-to-10k changes](reports/20261011-retrieval-repair-ttt/checkpoint-changes-round-2.json)
+are preserved. The same case IDs, episode hashes, reset seeds, model seed and
+controller accounting passed checks against every frozen reference. Comparisons
+remain selected results on repeatedly used development cases, with one seed and
+baseline port limitations; no component causality or independent generalization
+is established.
+
+The 10k repair-anchor counts are generated 1,495, shifted 2,313, retrieved 1,394. These are
+incumbent sources before residual repair. Shifted plans remain present during
+deployment but absent from this training correction; selected-source counts
+do not prove a cause of failure. Over each last-500-update window, deep retrieved
+anchor fractions change 30.94% → 30.16%; teacher clipping
+6.87% → 4.06%, repair-flow loss
+0.427065 → 0.291928. Teacher targets include recorded
+actions and do not measure generated action quality. The saved traces contain
+19/27 raw-score and 10/27 corrected-score optimistic, nonpositive-observed
+latent-progress failure tails. These are proxy diagnostics, not physical contact
+or stall-cause measurements. [Anchor groups](reports/20261011-retrieval-repair-ttt/anchor-outcomes-round-2.json).
+
+Source remains clean at 3bdfb49 with all 137 runtime hashes verified. Coordinator
+819165, launcher 821683 and their four training ranks match the recorded start
+identities; W&B 6wpx3jcv is running and reports the same 10k score. All available
+periodic metrics and both full evaluations are preserved losslessly. Checkpoint
+paths/hashes and online evidence are in the [health snapshot](reports/20261011-retrieval-repair-ttt/interim-health-round-2.json).
+The compute snapshot records 1.312060 optimization GPUh and
+0.934417 registered evaluation GPUh, plus the separately charged startup checks
+and retrieval setup. [Known cumulative measured components](reports/20261011-retrieval-repair-ttt/compute-accounting-round-2.json)
+are 93.193763 GPUh; this partial snapshot is not a final run cost or full
+cluster bill. No extra candidate, baseline work, evaluation repeat or sealed test.
+
 # First evaluation:75/104 at5k; training continues
 
 Verified October11 at21:28UTC: the first fixed104 development round scores

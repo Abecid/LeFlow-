@@ -14,9 +14,9 @@ paired wins/six regressions against the preserved GMM80 reference. All four
 evaluations, full metrics, failures, visual review and compute are preserved.
 The completion was verified on origin/main at15852d5. One next candidate,
 [retrieval-conditioned repair](RETRIEVAL_REPAIR_TTT.md), is training on GPUs0–3, W&B6wpx3jcv, with39 tests and its preflight/DDP checks
-passed. Its first5k evaluation scores75/104 with zero timeouts: three wins/eight
-regressions versus repair-flow80. Three registered rounds remain; consult the
-active ledger for status. It adds the missing
+passed. Its first two evaluations score **75/77** with zero timeouts; 10k is
+the provisional selection, below the preserved 80/104. The 15k evaluation is
+active and two reports remain; consult the active ledger. It adds the missing
 cross-episode retrieved proposal to training, with unchanged data and budgets.
 
 ## Preserved comparisons

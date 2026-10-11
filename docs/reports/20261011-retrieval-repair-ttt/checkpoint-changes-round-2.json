@@ -1,0 +1,25 @@
+{
+  "first_step": 5000,
+  "last_step": 10000,
+  "wins": [
+    "validation/assembly/00002",
+    "validation/door-close/00007",
+    "validation/door-open/00003",
+    "validation/faucet-open/00001",
+    "validation/faucet-open/00004",
+    "validation/reach/00000",
+    "validation/reach/00003",
+    "validation/reach/00005"
+  ],
+  "regressions": [
+    "validation/assembly/00004",
+    "validation/assembly/00005",
+    "validation/assembly/00006",
+    "validation/dial-turn/00002",
+    "validation/dial-turn/00004",
+    "validation/door-open/00001"
+  ],
+  "model_calls": 0,
+  "simulator_calls": 0,
+  "final_tests_read": false
+}
