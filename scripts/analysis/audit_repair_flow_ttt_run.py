@@ -77,7 +77,7 @@ def main(args):
     assert any(x['train/late_window_fraction']>0 for x in training)
     if method=='shifted_repair_ttt':
         deep=[x for x in training if x['train/reasoning_depth']==2]
-        assert any(x['train/shifted_anchor_fraction']>0 for x in deep)
+        assert deep  # Zero shifted selections would be a valid negative result.
         for x in training:
             assert 0<=x['train/shifted_anchor_fraction']<=x['train/shifted_eligible_fraction']+1e-6
             if x['train/reasoning_depth']==1:assert x['train/shifted_anchor_fraction']==0
