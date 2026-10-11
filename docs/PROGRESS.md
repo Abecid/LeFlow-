@@ -1,3 +1,16 @@
+# October11 13:30 Pacific: repair-flow10k regresses to73/104
+
+Registered curve80/73 at5k/10k, zero timeouts in both; retain5k. Ten-k loses seven
+previously solved cases and gains none. Assembly/faucet-open/pick-place become0/8;
+all31 failures reach200 primitive actions. Mean decision latency86.27ms. Deep-update
+flow/repair/action losses and clipping improve while success declines; initial
+proposal dispersion drops40.34% (global pool) and36.71% (repair pool) on all104
+matched cases. These associations do not establish physical cause or policy entropy.
+[Analysis and complete records](REPAIR_FLOW_TTT.md). Source/data/checkpoint hashes,
+case pairing and online73/104 verified. Training reached15k and its evaluation is
+running; two evaluations remain. Cumulative charged optimization1.209956GPUh and
+completed validation.923527GPUh. No restart, source change or new candidate.
+
 # October11 13:14 Pacific: first repair-flow result ties80/104
 
 The5k registered evaluation scores80/104, zero timeouts,86.46ms mean decision

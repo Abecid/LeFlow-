@@ -1,10 +1,63 @@
 # Execution-conditioned flow repair: evidence and registered experiment
 
-October11,2026. Active candidate `repair_flow_ttt` scored **80/104 at5k**,
-tying the preserved execution-revision GMM controller. Three registered evaluations
-remain; this is an interim result, not a completed run. The question for this
-iteration is whether execution-conditioned local flow repair can make additional
-planning computation useful within the same physical controller allowance.
+October11,2026. Active candidate `repair_flow_ttt` scored **80/104 at5k and
+73/104 at10k**, both without timeouts. The selected5k checkpoint ties the preserved
+execution-revision GMM controller. Training has reached15k; two registered
+evaluations remain. This is an interim result, not a completed run. The question
+is whether execution-conditioned local flow repair makes additional planning
+computation useful within the same physical controller allowance.
+
+## Second registered evaluation:73/104 at10k
+
+Readback October11 13:30 Pacific: source481bb767 and all150 runtime hashes remain
+unchanged; coordinator739421 and launcher741958 retain their recorded process
+identities. Optimization reached15k under the original cap; the15k evaluation is
+in progress. W&B records73/104 at10k. This is a scientific regression with healthy
+execution, not an operational failure requiring a restart.
+
+Relative to5k,10k loses seven successes and gains none: assembly5, door-open1,
+faucet-open1/4, pick-place3/4 and reach7. Task scores become assembly0/8,
+faucet-open0/8, pick-place0/8, reach3/8, dial-turn7/8 and door-open7/8; the remaining
+seven tasks stay8/8. All31 failures reach200 primitive actions, zero timeouts;
+mean decision latency86.27ms. Five-k remains selected at80/104, with its paired
+reference comparisons unchanged. Every case/reset/model-seed/episode identity is preserved.
+
+| Saved measurement |5k|10k|
+| --- | ---: | ---: |
+| Development successes /104 |80|73|
+| Repairs selected, % decisions |55.85|49.92|
+| Corrected executed-prefix MAE |.001688|.001680|
+| Optimistic failure tails, raw / corrected |15 /5|22 /9|
+| Deep-update global flow loss |.1537|.1033|
+| Deep-update repair flow loss |.4393|.3341|
+| Deep-update anchor action MSE |.02870|.01563|
+| Deep-update teacher residual clipping, % |7.79|3.81|
+
+Training numbers average the last500 updates before each checkpoint, grouped by
+depth. Lower action losses, less clipping and slightly lower rollout calibration
+error accompany worse success; they are not reliable success certificates here.
+Teacher-interpolated action loss still contains target information. Rollout MAEs
+come from different executed trajectories and are not a controlled calibration test.
+
+At the identical first reset/goal/routes with empty history, global-pool proposal
+dispersion falls40.34% and repair-pool dispersion36.71%; both decrease in all104
+cases. Across all decisions, the mean selected action displacement from the
+incumbent falls from.1107 to.08291. These saved associations motivate checking
+proposal coverage in the final analysis, but do not prove that diversity loss
+caused the failures. The dispersion metric mixes generated/recorded proposals
+or incumbent/residual proposals and is not policy entropy. No additional model,
+simulator or inference sweep was run to obtain these findings.
+
+[Two-round analysis](reports/20261011-repair-flow-ttt/analysis-round-2.json),
+[full10k evaluation](reports/20261011-repair-flow-ttt/run/validation/step_0010000.json.gz)
+and [interim identity verification](reports/20261011-repair-flow-ttt/verification-round-2.json)
+preserve all outcomes and checkpoint hashes. Periodic metrics are now saved through
+15k. Cumulative compute at15k is1.209956 optimization GPUh plus.923527GPUh for the
+two completed evaluations, with zero optimization overrun. The in-progress15k
+validation is not yet included in that completed-evaluation charge; no final total
+or completion audit is claimed. Preflight and diagnostic charges remain separate.
+Keep the original run undisturbed through its registered evaluations; defer any
+next correction until completed analysis and verified publication.
 
 ## First registered evaluation:80/104 at5k
 
@@ -49,8 +102,8 @@ One checkpoint cannot establish that calibration or teacher loss predicts succes
 [Saved-record analysis](reports/20261011-repair-flow-ttt/analysis-round-1.json),
 [complete first evaluation](reports/20261011-repair-flow-ttt/run/validation/step_0005000.json.gz)
 and [interim verification](reports/20261011-repair-flow-ttt/verification-round-1.json)
-preserve negative outcomes and checkpoint/source/data identities. The metric snapshot
-contains every periodic log throughstep9251; its compute snapshot isstep9296,
+preserve negative outcomes and checkpoint/source/data identities. At the first
+publication, the metric snapshot coveredstep9251 and the compute snapshotstep9296,
 optimization.747117GPUh plus first validation.470445GPUh. These are cumulative
 within this run and are not final totals. Preflight.005795GPUh, distributed check
 .002990GPUh and earlier diagnostic costs remain separate; no allowance was reset.

@@ -1,3 +1,12 @@
+# Latest observed result: repair-flow80/73 at5k/10k;15k evaluation active
+
+October11 13:30 Pacific:10k scores73/104 with zero timeouts, seven regressions and
+no gains versus5k80/104. Retain5k; complete the remaining registered evaluations.
+Losses and clipping improved despite lower success; matched initial dispersion
+fell. Read docs/REPAIR_FLOW_TTT.md and analysis-round-2.json. Source481bb767 and
+owned coordinator739421/launcher741958 remain verified. The run is healthy; do not
+restart it or change frozen code. Analyze/publish completion before the next decision.
+
 # Latest observed result: repair-flow5k ties80/104; run remains active
 
 October11 13:14 Pacific: first fixed104 evaluation80 successes, zero timeouts,

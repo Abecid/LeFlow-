@@ -1,0 +1,102 @@
+{
+  "utc": "2026-10-11T20:30:05.566509+00:00",
+  "scope": "interim two-evaluation source/data/checkpoint hash and process verification; final tensor/bank audit pending",
+  "run": {
+    "bank_hash": "8008e20a5ec241c03bcc2da0b18025e21fb9b97793afdc5d57abe4cf4f4a1e48",
+    "code": "481bb7679aa3f43e938fd3991f3be57ba59f0ed0",
+    "id": "r3y7nepq",
+    "manifest": "135dd863aa64b200b85a3ec075e721d8991dda4ebc4d940002efd396412012cc",
+    "method": "repair_flow_ttt",
+    "protocol": "780825c82b151d1500a83ebc92292b26b43bb9c2ae52cb5e56627b9b49c8684f",
+    "seed": 3072,
+    "wandb_url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/r3y7nepq",
+    "world_hash": "ae3f910da43f0a43dd65945394444a0b11719ed042cdacffacc2faaf824ec5a3",
+    "world_size": 4
+  },
+  "frozen_source_clean": true,
+  "runtime_hashes_verified": 150,
+  "manifest_hash_verified": "135dd863aa64b200b85a3ec075e721d8991dda4ebc4d940002efd396412012cc",
+  "owned_processes": [
+    {
+      "pid": 739421,
+      "start_ticks": 1006895449,
+      "state": "S"
+    },
+    {
+      "pid": 741958,
+      "start_ticks": 1006908347,
+      "state": "S"
+    },
+    {
+      "pid": 741981,
+      "start_ticks": 1006908485,
+      "state": "S"
+    },
+    {
+      "pid": 741982,
+      "start_ticks": 1006908485,
+      "state": "S"
+    },
+    {
+      "pid": 741983,
+      "start_ticks": 1006908485,
+      "state": "R"
+    },
+    {
+      "pid": 741984,
+      "start_ticks": 1006908485,
+      "state": "R"
+    }
+  ],
+  "compute": {
+    "global_batch": 64,
+    "gpu_count": 4,
+    "last_update_overrun_gpu_seconds": 0.0,
+    "optimization_cap_gpu_seconds": 28800,
+    "optimization_gpu_hours": 1.2099563729907903,
+    "optimization_gpu_seconds": 4355.842942766845,
+    "step": 15000,
+    "stop_check": "optimizer boundary; final-update overrun reported",
+    "validation_gpu_hours": 0.9235269092230334,
+    "validation_gpu_seconds": 3324.69687320292,
+    "validation_steps": [
+      5000,
+      10000
+    ]
+  },
+  "evaluations": [
+    {
+      "step": 5000,
+      "raw_sha256": "add80e03d73386150c9ff1ab072b703ccc51c29f8292fa5490760d978b2921c9",
+      "checkpoint": {
+        "path": "/home/mtxu/adam/LeFlow-experiments/20261011-repair-flow-ttt/campaign/runs/repair_flow_ttt_3072/checkpoints/step_0005000.pt",
+        "sha256": "1d373981a9d261b1d8ba454542442df98b7ea19b248fa6428e924d7c8f459981"
+      },
+      "successes": 80,
+      "timeouts": 0
+    },
+    {
+      "step": 10000,
+      "raw_sha256": "80c3bab835d232197be2b248a4f21fabc9c47e3eb4121bbe24f1894354e4e639",
+      "checkpoint": {
+        "path": "/home/mtxu/adam/LeFlow-experiments/20261011-repair-flow-ttt/campaign/runs/repair_flow_ttt_3072/checkpoints/step_0010000.pt",
+        "sha256": "2411e1d585585ce6d5c896805e83ccdc79b265557b439f34eacee3ae7123fd4c"
+      },
+      "successes": 73,
+      "timeouts": 0
+    }
+  ],
+  "complete_marker_present": false,
+  "failure_marker_present": false,
+  "model_calls": 0,
+  "simulator_calls": 0,
+  "final_tests_read": false,
+  "online_verification": {
+    "utc": "2026-10-11T20:30:09.045422+00:00",
+    "id": "r3y7nepq",
+    "state": "running",
+    "step": 15000,
+    "validation/checkpoint_step": 10000,
+    "validation/success_macro": 0.7019230769230769
+  }
+}

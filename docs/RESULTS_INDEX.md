@@ -12,9 +12,10 @@ SOTA, convergence, isolated component gains or generalization.
 [Execution-conditioned flow repair](REPAIR_FLOW_TTT.md) is registered under the
 October11 iterative-improvement request. It preserves the best verified proposal,
 learns bounded action corrections and removes the weak surrogate-gradient loop.
-Its first5k evaluation is **80/104**, zero timeouts, tying the preserved best
-with6 paired wins and6 regressions. Three evaluations remain; this run is still
-active. [Interim analysis](reports/20261011-repair-flow-ttt/analysis-round-1.json).
+Its first two evaluations are **80/104 at5k and73/104 at10k**, zero timeouts.
+Selected5k ties the preserved best with6 paired wins and6 regressions;10k loses
+seven cases versus5k and gains none. Two evaluations remain; this run is still
+active. [Interim analysis](reports/20261011-repair-flow-ttt/analysis-round-2.json).
 All previous results below remain frozen.
 
 ## Preserved comparisons
