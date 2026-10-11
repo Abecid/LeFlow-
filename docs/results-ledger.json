@@ -2,7 +2,38 @@
   "schema_version": 1,
   "scope": "Current shared-world MetaWorld fixed-104 development comparisons; historical campaigns remain linked in RESULTS_INDEX.md.",
   "publication_contract": "A run is publication-complete only when these artifacts and its findings report are committed and verified on origin/main. Local ledger membership alone does not prove remote publication.",
-  "active_runs": [],
+  "active_runs": [
+    {
+      "run_key": "20261011-shifted-repair-ttt",
+      "method": "shifted_repair_ttt",
+      "seed": 3072,
+      "status": "registered_pending_freeze",
+      "source": null,
+      "server_record": "/home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt",
+      "server_run": "/home/mtxu/adam/LeFlow-experiments/20261011-shifted-repair-ttt/campaign/runs/shifted_repair_ttt_3072",
+      "report": "docs/SHIFTED_REPAIR_TTT.md",
+      "expected_validation_steps": [
+        5000,
+        10000,
+        15000,
+        20000
+      ],
+      "training_contract": {
+        "expert_episodes": 6222,
+        "global_batch": 64,
+        "maximum_updates": 20000,
+        "optimization_gpu_seconds": 28800,
+        "controller_seconds": 10,
+        "primitive_actions": 200,
+        "validation_cases": 104,
+        "planned_gpus": 4,
+        "final_tests_enabled": false
+      },
+      "preceding_publication_commit": "9a0d2de6866f2b77ad36f4dcea3f684fd474f8d4",
+      "known_prior_campaign_gpu_hours": 94.53029004454044,
+      "followup": "continue-flow-jepa-campaign-and-preserve-results"
+    }
+  ],
   "completed_runs": [
     {
       "run_key": "6wpx3jcv",

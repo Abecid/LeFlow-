@@ -1,3 +1,16 @@
+# October11: retrieval-repair publication verified; shifted-plan correction registered
+
+Completion is published to origin/main at9a0d2de; verified206 artifact hashes
+and45 complete fixed104 reports. Retrieval-repair ties80 with7 wins/7 losses
+against repair-flow. Known measured cumulative components94.530290GPUh.
+
+Registered exactly one correction to the missing shifted-plan training path,
+which supplies43.65% of selected model deployment anchors. Prior plans use only
+recorded information ending before the current observation; generated outcomes
+remain model predictions. Deployment is unchanged. The offline expert-state,
+same-target and nonrecursive approximation is explicit in [the plan](SHIFTED_REPAIR_TTT.md).
+Verification gates precede launch; no evaluation result or extra budget claimed.
+
 # October11: retrieval-repair completed and verified, 75/77/79/80
 
 Selected20k80/104 ties both repair-flow and execution-revision80. Zero timeouts

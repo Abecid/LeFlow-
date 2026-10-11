@@ -11,9 +11,10 @@ They establish neither native-benchmark SOTA nor component causality/generalizat
 
 [Retrieval-repair completed](RETRIEVAL_REPAIR_TTT_RESULTS.md); all four evaluations,
 full metrics, failure evidence, checkpoint hashes and actual compute are preserved.
-No run is active at this completion snapshot. The authorized sequential loop may
-consider one concrete supported correction after remote publication, preserving
-all baselines and the original per-candidate limits. Earlier repair-flow also
+Completion publication was remotely verified at9a0d2de. One
+[causal shifted-plan training correction](SHIFTED_REPAIR_TTT.md) is registered
+with final-source verification gates pending. Preserve all baselines and the
+original per-candidate limits. Earlier repair-flow also
 selected80/104; these ties do not establish improvement.
 
 ## Preserved comparisons

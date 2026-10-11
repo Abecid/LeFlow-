@@ -27,7 +27,8 @@ def main(a):
                  'progress_ttt':'flow_metaworld_progress_ttt.json',
                  'guided_ttt':'flow_metaworld_guided_ttt.json',
                  'repair_flow_ttt':'flow_metaworld_repair_flow_ttt.json',
-                 'retrieval_repair_ttt':'flow_metaworld_retrieval_repair_ttt.json'}[a.variant]
+                 'retrieval_repair_ttt':'flow_metaworld_retrieval_repair_ttt.json',
+                 'shifted_repair_ttt':'flow_metaworld_shifted_repair_ttt.json'}[a.variant]
     c=config(repo/'config'/config_name)
     if not c.get('execution', {}).get('training_enabled', False):
         raise RuntimeError('Training disabled in candidate config; use the train-data-only preflight')
@@ -65,26 +66,29 @@ def main(a):
     with (record/'tests.log').open('a') as log:
         subprocess.run([sys.executable,'-m','unittest','discover','-s','tests','-p','test_execution.py','-v'],
                        env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
-        if a.variant in ('latent_revision','execution_revision','flow_reasoning','progress_ttt','guided_ttt','repair_flow_ttt','retrieval_repair_ttt'):
+        if a.variant in ('latent_revision','execution_revision','flow_reasoning','progress_ttt','guided_ttt','repair_flow_ttt','retrieval_repair_ttt','shifted_repair_ttt'):
             subprocess.run([sys.executable,'-m','unittest','discover','-s','tests','-p','test_latent_revision.py','-v'],
                            env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
-        if a.variant in ('execution_revision','flow_reasoning','progress_ttt','guided_ttt','repair_flow_ttt','retrieval_repair_ttt'):
+        if a.variant in ('execution_revision','flow_reasoning','progress_ttt','guided_ttt','repair_flow_ttt','retrieval_repair_ttt','shifted_repair_ttt'):
             subprocess.run([sys.executable,'-m','unittest','discover','-s','tests','-p','test_execution_revision.py','-v'],
                            env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
-        if a.variant in ('flow_reasoning','progress_ttt','guided_ttt','repair_flow_ttt','retrieval_repair_ttt'):
+        if a.variant in ('flow_reasoning','progress_ttt','guided_ttt','repair_flow_ttt','retrieval_repair_ttt','shifted_repair_ttt'):
             subprocess.run([sys.executable,'-m','unittest','discover','-s','tests','-p','test_flow_reasoning.py','-v'],
                            env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
-        if a.variant in ('progress_ttt','guided_ttt','repair_flow_ttt','retrieval_repair_ttt'):
+        if a.variant in ('progress_ttt','guided_ttt','repair_flow_ttt','retrieval_repair_ttt','shifted_repair_ttt'):
             subprocess.run([sys.executable,'-m','unittest','discover','-s','tests','-p','test_progress_ttt.py','-v'],
                            env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
         if a.variant=='guided_ttt':
             subprocess.run([sys.executable,'-m','unittest','discover','-s','tests','-p','test_guided_ttt.py','-v'],
                            env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
-        if a.variant in ('repair_flow_ttt','retrieval_repair_ttt'):
+        if a.variant in ('repair_flow_ttt','retrieval_repair_ttt','shifted_repair_ttt'):
             subprocess.run([sys.executable,'-m','unittest','discover','-s','tests','-p','test_repair_flow_ttt.py','-v'],
                            env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
-        if a.variant=='retrieval_repair_ttt':
+        if a.variant in ('retrieval_repair_ttt','shifted_repair_ttt'):
             subprocess.run([sys.executable,'-m','unittest','discover','-s','tests','-p','test_retrieval_repair.py','-v'],
+                           env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
+        if a.variant=='shifted_repair_ttt':
+            subprocess.run([sys.executable,'-m','unittest','discover','-s','tests','-p','test_shifted_repair.py','-v'],
                            env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
     if not Path(bank).exists():
         if a.reuse_bank:
@@ -112,14 +116,14 @@ def main(a):
         preflight=json.loads((root/'preflight.json').read_text())
         # A failed latency gate is an implementation issue, not permission to
         # relax the controller allowance or quietly run an expensive sweep.
-        latency_limit=95 if a.variant in ('repair_flow_ttt','retrieval_repair_ttt') else 120
+        latency_limit=95 if a.variant in ('repair_flow_ttt','retrieval_repair_ttt','shifted_repair_ttt') else 120
         if preflight['mean_ms']>latency_limit:
             raise RuntimeError(f"Full-controller preflight exceeds{latency_limit}ms: {preflight['mean_ms']}")
         env['CUDA_VISIBLE_DEVICES']=','.join(x[0] for x in selected)
         cmd=[sys.executable,'-m','torch.distributed.run','--nnodes=1',f'--nproc_per_node={a.gpus}',
              '--rdzv-backend=c10d','--rdzv-endpoint=127.0.0.1:0','-m','flow_jepa.execution.train',
              '--config',cfg,'--root',str(root),'--run-dir',str(run_dir),'--world',str(world),'--bank',bank]
-        if a.variant in ('repair_flow_ttt','retrieval_repair_ttt') and not (root/'ddp-check.json').exists():
+        if a.variant in ('repair_flow_ttt','retrieval_repair_ttt','shifted_repair_ttt') and not (root/'ddp-check.json').exists():
             status('no_update_distributed_gradient_check')
             check_cmd=cmd[:cmd.index('flow_jepa.execution.train')]+['flow_jepa.execution.ddp_check',
                 '--config',cfg,'--root',str(root),'--world',str(world),'--output',str(root/'ddp-check.json'),'--bank',bank]
@@ -139,7 +143,7 @@ def main(a):
 if __name__=='__main__':
     p=argparse.ArgumentParser()
     for name in ('record','previous','cache'):p.add_argument('--'+name,required=True)
-    p.add_argument('--variant',choices=['controller_grounded','latent_revision','execution_revision','flow_reasoning','progress_ttt','guided_ttt','repair_flow_ttt','retrieval_repair_ttt'],default='controller_grounded')
+    p.add_argument('--variant',choices=['controller_grounded','latent_revision','execution_revision','flow_reasoning','progress_ttt','guided_ttt','repair_flow_ttt','retrieval_repair_ttt','shifted_repair_ttt'],default='controller_grounded')
     p.add_argument('--reuse-bank')
     p.add_argument('--gpus',type=int,choices=[4,8],default=8)
     args=p.parse_args()

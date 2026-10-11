@@ -1,3 +1,12 @@
+# Current registered correction: shifted_repair_ttt
+
+Retrieval-repair completion75/77/79/80 is remotely published at9a0d2de, all206
+artifacts verified. One causal previous-plan training correction is being checked
+in the reporting checkout; read docs/SHIFTED_REPAIR_TTT.md and the active ledger.
+No optimization launched at this snapshot. Do not duplicate implementation or
+resume completed runs. Final-source tests/preflight/DDP gate the single launch.
+Same data/seed/global64/20k-or28800 GPU-second cap/four104/controller limits.
+
 # Retrieval-repair completed: selected20k80/104, tie retained
 
 October11 completion: curve75/77/79/80, zero timeouts; all24 final failures

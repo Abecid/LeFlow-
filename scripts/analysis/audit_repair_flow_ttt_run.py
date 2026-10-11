@@ -49,7 +49,7 @@ def main(args):
     assert 1 <= len(complete['validation_steps']) <= 4
     assert complete['validation_steps'][-1]==complete['step']
     assert usage['optimization_gpu_seconds']<=28800+usage['last_update_overrun_gpu_seconds']+1e-6
-    assert usage['last_update_overrun_gpu_seconds']<8 and usage['gpu_count']==identity['world_size']==4
+    assert usage['last_update_overrun_gpu_seconds']<8 and usage['gpu_count']==identity['world_size'] and usage['gpu_count'] in (4,8)
     assert abs(complete['optimization_gpu_hours']-usage['optimization_gpu_seconds']/3600)<1e-9
     checkpoints={}
     for name in ('last','best'):
@@ -75,6 +75,12 @@ def main(args):
     assert all(x['train/execution_weight']==0 for x in training)
     assert all(x['train/reasoning_depth']==1+(x['step']-1)%2 for x in training)
     assert any(x['train/late_window_fraction']>0 for x in training)
+    if method=='shifted_repair_ttt':
+        deep=[x for x in training if x['train/reasoning_depth']==2]
+        assert any(x['train/shifted_anchor_fraction']>0 for x in deep)
+        for x in training:
+            assert 0<=x['train/shifted_anchor_fraction']<=x['train/shifted_eligible_fraction']+1e-6
+            if x['train/reasoning_depth']==1:assert x['train/shifted_anchor_fraction']==0
     signatures=None;rounds=[]
     for step in complete['validation_steps']:
         report=json.loads((run/'validation'/f'step_{step:07d}.json').read_text())
@@ -101,7 +107,7 @@ def main(args):
                 assert d['repair_solver_steps']==4 and d['repair_radius']==.25
                 assert d['selected_distance_from_incumbent_linf']<=.250001
                 assert d['refinement_source']=='world_verified_incumbent'
-                if method=='retrieval_repair_ttt': assert d['repair_anchor_source'] in ('generated','retrieved','shifted')
+                if method in ('retrieval_repair_ttt','shifted_repair_ttt'): assert d['repair_anchor_source'] in ('generated','retrieved','shifted')
                 rc=d['round_best_scores']
                 assert len(rc)==2 and all(b<=a for a,b in zip(rc,rc[1:]))
                 assert d['history_valid_steps']==min(i,4)
@@ -135,5 +141,5 @@ def main(args):
 if __name__=='__main__':
     parser=argparse.ArgumentParser()
     for name in ('record','bank','previous-bank','output'):parser.add_argument('--'+name,required=True)
-    parser.add_argument('--method',choices=['repair_flow_ttt','retrieval_repair_ttt'],default='repair_flow_ttt')
+    parser.add_argument('--method',choices=['repair_flow_ttt','retrieval_repair_ttt','shifted_repair_ttt'],default='repair_flow_ttt')
     main(parser.parse_args())
