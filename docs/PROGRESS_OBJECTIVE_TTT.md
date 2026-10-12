@@ -30,7 +30,11 @@ training episode and the existing hindsight goal queries; include endpoint-zero
 and a bounded ordering margin. These are weak expert-time labels, not physical
 success probabilities, shortest-path distances or guarantees of monotonic
 progress. No task identity, trajectory clock, proprioception or simulator state
-is a policy input. All new learned parameters train inside the same20k allowance.
+is a policy input. The coarse endpoint is a hindsight cached state near first
+success; zero-based success indexing and two-action caching can place it one
+primitive action before first success. No successful-terminal classification
+label is asserted. The time label refers to that assigned hindsight endpoint.
+All new learned parameters train inside the same20k allowance.
 
 For every candidate, add0.05 times half the predicted prefix remaining cost plus
 one quarter each of the last two predicted remaining costs. Every target uses
@@ -93,3 +97,20 @@ Separate bank/cache: `/tmp/mtxu-progress-objective-ttt-20261011`.
 Current status and immutable execution source are maintained in the active ledger.
 Full metrics, evaluations, failure analysis and measured cumulative compute must
 be published to origin/main at completion.
+
+Verified running October11 21:56 Pacific: source e274fed5850b967c5e8e176e5cab3611d992e8bf,
+166 runtime hashes unchanged, all46 tests and8-rank synchronized finite gradients
+passed. Full-controller preflight89.52ms. Coordinator1324049; W&B
+[u4dd8tyw](https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/u4dd8tyw) running.
+At least1,300 updates,0.301860 optimization GPUh, no validation yet; all8 A800s
+allocated. Median recent update0.105s gives about10minutes to the first completed
+evaluation and roughly45–55minutes for the full run from launch, including the
+four evaluations. These are throughput estimates, not deadlines. All new trained
+parameters are fresh; the no-update feature probe spent0.458CPU seconds.
+
+The latest training-batch temporal MAE is0.02294 and pair ordering100%; these are
+training proxies, not development success. The decisive80/104 reference is unchanged.
+Use scripts/analysis/progress_objective_details.py on saved eval reports for
+applied-versus-raw progress error and per-task route tails; rejected candidates
+still have no physical outcome labels. The existing15-minute monitor continues
+evaluation/failure review and completion publication, with no speculative queue.

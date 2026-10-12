@@ -7,11 +7,11 @@
       "method": "progress_objective_ttt",
       "label": "Execution-calibrated goal-progress bounded flow repair",
       "seed": 3072,
-      "status": "registered_pending_final_source_checks",
+      "status": "training_verified",
       "report": "docs/PROGRESS_OBJECTIVE_TTT.md",
       "server_record": "/home/mtxu/adam/LeFlow-experiments/20261011-progress-objective-ttt",
       "cache": "/tmp/mtxu-progress-objective-ttt-20261011",
-      "source": "registration_commit_then_frozen_source_record",
+      "source": "e274fed5850b967c5e8e176e5cab3611d992e8bf",
       "global_batch": 64,
       "requested_gpus": 8,
       "optimizer_update_cap": 20000,
@@ -25,7 +25,16 @@
       "validation_cases": 104,
       "controller_seconds": 10,
       "primitive_action_limit": 200,
-      "test_enabled": false
+      "test_enabled": false,
+      "coordinator_pid": 1324049,
+      "runtime_files_verified": 166,
+      "run_key": "u4dd8tyw",
+      "wandb_url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/u4dd8tyw",
+      "verified_step": 1300,
+      "verified_utc": "2026-10-12T04:56:44.577713+00:00",
+      "worker_pid": 1326959,
+      "evidence_directory": "docs/reports/20261011-progress-objective-ttt",
+      "preflight_mean_ms": 89.52330301205318
     }
   ],
   "completed_runs": [

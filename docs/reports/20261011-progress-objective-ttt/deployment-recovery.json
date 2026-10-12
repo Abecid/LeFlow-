@@ -1,0 +1,16 @@
+{
+  "source": "e274fed5850b967c5e8e176e5cab3611d992e8bf",
+  "coordinator_pid": 1324049,
+  "runtime_files_verified": 166,
+  "registered_training_runs": 1,
+  "optimizer_updates_during_recovery": 0,
+  "reason": "Full repository history transfer was slow; stopped only the verified pre-optimizer deploy process tree. Sparse shallow checkout of identical commit and all runtime files verified.",
+  "sparse_directories": [
+    "flow_jepa",
+    "scripts",
+    "tests",
+    "config"
+  ],
+  "preserved_transfer_checkout": "/home/mtxu/adam/LeFlow-experiments/20261011-progress-objective-ttt/repo-transfer-attempt",
+  "utc": "2026-10-12T04:51:52.950325+00:00"
+}

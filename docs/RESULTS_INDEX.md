@@ -1,6 +1,6 @@
 Current registered work: [progress-objective TTT](PROGRESS_OBJECTIVE_TTT.md).
-TRAIN-only diagnostic passed; final-source startup gates precede one fresh run.
-No new development success result yet.
+Training verified on all8 GPUs at1300 updates;46 tests,89.52ms preflight and
+eight-rank checks passed. W&B u4dd8tyw. No new development success result yet.
 
 # Results and completion publication
 
