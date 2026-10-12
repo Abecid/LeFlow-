@@ -15,14 +15,14 @@ def main(a):
     torch.cuda.set_device(rank); torch.set_num_threads(2); dist.init_process_group('nccl')
     began = time.perf_counter(); seed_all(3072); device = torch.device('cuda', rank)
     c = config(a.config); method, Policy, Dataset, _ = component_types(c)
-    assert method in ('guided_ttt','repair_flow_ttt','retrieval_repair_ttt','shifted_repair_ttt','progress_objective_ttt')
+    assert method in ('guided_ttt','repair_flow_ttt','retrieval_repair_ttt','shifted_repair_ttt','progress_objective_ttt','bayesian_repair_ttt')
     model = Policy(c).to(device); world, _ = load_world(c, a.world, device)
     original = {k:v.clone() for k,v in model.state_dict().items()}
     wrapped = DDP(model, device_ids=[rank], broadcast_buffers=False, find_unused_parameters=True)
     ds = Dataset(a.root, c, method, 3072, 640)
     rows = [ds[rank*(64//size)+i] for i in range(64//size)]
     batch = {k:torch.stack([r[k] for r in rows]).to(device) for k in rows[0]}
-    if method in ('retrieval_repair_ttt','shifted_repair_ttt','progress_objective_ttt'):
+    if method in ('retrieval_repair_ttt','shifted_repair_ttt','progress_objective_ttt','bayesian_repair_ttt'):
         from .bank import RouteBank
         from .retrieval_repair import TrainingRetrieval
         if method == 'shifted_repair_ttt':
@@ -32,7 +32,7 @@ def main(a):
         bank=RouteBank(a.bank,c,file_hash(Path(a.root)/'manifest.json'),device)
         batch=TrainingRetrieval(bank).augment(batch)
     seed_all(3072+997*rank); records = []
-    for depth in range(1, c['flow_reasoning']['rounds']+1):
+    for depth in range(1, model.rounds+1):
         wrapped.zero_grad(set_to_none=True)
         torch.cuda.synchronize(); tick = time.perf_counter()
         loss, _ = wrapped(batch, world, depth=depth); loss.backward(); torch.cuda.synchronize()

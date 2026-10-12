@@ -2,7 +2,25 @@
   "schema_version": 1,
   "scope": "Current shared-world MetaWorld fixed-104 development comparisons; historical campaigns remain linked in RESULTS_INDEX.md.",
   "publication_contract": "A run is publication-complete only when these artifacts and its findings report are committed and verified on origin/main. Local ledger membership alone does not prove remote publication.",
-  "active_runs": [],
+  "active_runs": [
+    {
+      "run_key": "bayesian_repair_ttt_3072_pending",
+      "method": "bayesian_repair_ttt",
+      "label": "ALPaCA decision-calibrated bounded flow repair",
+      "seed": 3072,
+      "status": "registered_preflight_pending",
+      "server_record": "/home/mtxu/adam/LeFlow-experiments/20261012-bayesian-repair-ttt",
+      "report": "docs/BAYESIAN_REPAIR_TTT.md",
+      "evidence_directory": "docs/reports/20261012-bayesian-repair-ttt",
+      "fresh_training": true,
+      "optimizer_gpu_seconds_limit": 28800,
+      "global_batch": 64,
+      "optimizer_update_limit": 20000,
+      "development_cases": 104,
+      "evaluation_rounds": 4,
+      "final_tests": false
+    }
+  ],
   "completed_runs": [
     {
       "run_key": "u4dd8tyw",

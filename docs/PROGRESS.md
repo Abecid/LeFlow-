@@ -1,3 +1,11 @@
+# October12: Bayesian repair implementation registered
+
+One fresh candidate authorized, based on ALPaCA posterior meta-regression and
+the retrieval-repair80 formulation. See [method and fixed experiment](BAYESIAN_REPAIR_TTT.md).
+Local posterior/causality/repair regression checks pass (27 executions, including
+imported duplicate tests). TRAIN-only factual diagnostic and real-GPU checks are
+pending; no new optimizer run or performance result is claimed at this snapshot.
+
 # Review hold after verified progress-objective publication
 
 Completion is published at82f67878254accfc5aa970c5200574c7b79aea99 and all382

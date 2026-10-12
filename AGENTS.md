@@ -1,3 +1,15 @@
+# October12 authorization: one Bayesian decision-calibrated repair candidate
+
+User explicitly asks to implement the strongest reference-grounded correction
+and run it. This supersedes the historical review hold for ONE fresh
+bayesian_repair_ttt candidate. Read docs/BAYESIAN_REPAIR_TTT.md and active ledger.
+ALPaCA posterior, shared-comparison uncertainty, deployed-loss supervision;
+training depths1/2/3 and fixed two-round evaluation, cached incumbent rollouts.
+Same6222/seed3072/global64/20k-or28800GPU-seconds/four104/10s200.
+TRAIN-only probe, latency and eight-rank checks gate optimization. Never duplicate
+a coordinator or edit frozen active code. Publish ALL outcomes before any next
+review; no baseline retraining, speculative queue, added data or sealed tests.
+
 # Review hold after verified progress-objective publication
 
 Completion is published at82f67878254accfc5aa970c5200574c7b79aea99 and all382

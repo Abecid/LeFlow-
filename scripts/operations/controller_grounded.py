@@ -20,7 +20,8 @@ def main(a):
     lock=(cache/'coordinator.lock').open('a+')
     fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
     root, repo = record/'campaign', record/'repo'
-    config_name={'controller_grounded':'flow_metaworld_execution.json',
+    config_name={'bayesian_repair_ttt':'flow_metaworld_bayesian_repair_ttt.json',
+                 'controller_grounded':'flow_metaworld_execution.json',
                  'latent_revision':'flow_metaworld_revision.json',
                  'execution_revision':'flow_metaworld_aligned.json',
                  'flow_reasoning':'flow_metaworld_flow_reasoning.json',
@@ -67,29 +68,32 @@ def main(a):
     with (record/'tests.log').open('a') as log:
         subprocess.run([sys.executable,'-m','unittest','discover','-s','tests','-p','test_execution.py','-v'],
                        env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
-        if a.variant in ('latent_revision','execution_revision','flow_reasoning','progress_ttt','guided_ttt','repair_flow_ttt','retrieval_repair_ttt','shifted_repair_ttt','progress_objective_ttt'):
+        if a.variant in ('latent_revision','execution_revision','flow_reasoning','progress_ttt','guided_ttt','repair_flow_ttt','retrieval_repair_ttt','shifted_repair_ttt','progress_objective_ttt','bayesian_repair_ttt'):
             subprocess.run([sys.executable,'-m','unittest','discover','-s','tests','-p','test_latent_revision.py','-v'],
                            env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
-        if a.variant in ('execution_revision','flow_reasoning','progress_ttt','guided_ttt','repair_flow_ttt','retrieval_repair_ttt','shifted_repair_ttt','progress_objective_ttt'):
+        if a.variant in ('execution_revision','flow_reasoning','progress_ttt','guided_ttt','repair_flow_ttt','retrieval_repair_ttt','shifted_repair_ttt','progress_objective_ttt','bayesian_repair_ttt'):
             subprocess.run([sys.executable,'-m','unittest','discover','-s','tests','-p','test_execution_revision.py','-v'],
                            env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
-        if a.variant in ('flow_reasoning','progress_ttt','guided_ttt','repair_flow_ttt','retrieval_repair_ttt','shifted_repair_ttt','progress_objective_ttt'):
+        if a.variant in ('flow_reasoning','progress_ttt','guided_ttt','repair_flow_ttt','retrieval_repair_ttt','shifted_repair_ttt','progress_objective_ttt','bayesian_repair_ttt'):
             subprocess.run([sys.executable,'-m','unittest','discover','-s','tests','-p','test_flow_reasoning.py','-v'],
                            env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
-        if a.variant in ('progress_ttt','guided_ttt','repair_flow_ttt','retrieval_repair_ttt','shifted_repair_ttt','progress_objective_ttt'):
+        if a.variant in ('progress_ttt','guided_ttt','repair_flow_ttt','retrieval_repair_ttt','shifted_repair_ttt','progress_objective_ttt','bayesian_repair_ttt'):
             subprocess.run([sys.executable,'-m','unittest','discover','-s','tests','-p','test_progress_ttt.py','-v'],
                            env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
         if a.variant=='guided_ttt':
             subprocess.run([sys.executable,'-m','unittest','discover','-s','tests','-p','test_guided_ttt.py','-v'],
                            env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
-        if a.variant in ('repair_flow_ttt','retrieval_repair_ttt','shifted_repair_ttt','progress_objective_ttt'):
+        if a.variant in ('repair_flow_ttt','retrieval_repair_ttt','shifted_repair_ttt','progress_objective_ttt','bayesian_repair_ttt'):
             subprocess.run([sys.executable,'-m','unittest','discover','-s','tests','-p','test_repair_flow_ttt.py','-v'],
                            env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
-        if a.variant in ('retrieval_repair_ttt','shifted_repair_ttt','progress_objective_ttt'):
+        if a.variant in ('retrieval_repair_ttt','shifted_repair_ttt','progress_objective_ttt','bayesian_repair_ttt'):
             subprocess.run([sys.executable,'-m','unittest','discover','-s','tests','-p','test_retrieval_repair.py','-v'],
                            env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
         if a.variant=='shifted_repair_ttt':
             subprocess.run([sys.executable,'-m','unittest','discover','-s','tests','-p','test_shifted_repair.py','-v'],
+                           env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
+        if a.variant=='bayesian_repair_ttt':
+            subprocess.run([sys.executable,'-m','unittest','discover','-s','tests','-p','test_bayesian_repair.py','-v'],
                            env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
         if a.variant=='progress_objective_ttt':
             subprocess.run([sys.executable,'-m','unittest','discover','-s','tests','-p','test_progress_objective.py','-v'],
@@ -110,6 +114,19 @@ def main(a):
     assert len(selected)==a.gpus
     save_json(root/'allocation.json',dict(gpus=selected,global_batch=64,optimization_gpu_seconds=28800))
     try:
+        if a.variant=='bayesian_repair_ttt':
+            if not a.reference_policy:raise ValueError('A frozen reference is required for the TRAIN-only diagnostic')
+            diagnostic=root/'bayesian-probe.json'
+            if not diagnostic.exists():
+                status('no_update_train_only_posterior_diagnostic')
+                one=env.copy();one['CUDA_VISIBLE_DEVICES']=selected[0][0]
+                with (record/'bayesian-probe.log').open('a') as log:
+                    subprocess.run([sys.executable,'-u','-m','scripts.analysis.bayesian_repair_probe',
+                        '--config',cfg,'--root',str(root),'--world',str(world),
+                        '--reference',a.reference_policy,'--output',str(diagnostic)],
+                        env=one,stdout=log,stderr=subprocess.STDOUT,check=True)
+            if not json.loads(diagnostic.read_text())['supports_factual_adaptation']:
+                raise RuntimeError('TRAIN-only factual diagnostic did not support launch')
         if not (root/'preflight.json').exists():
             status('bounded_training_data_preflight')
             one=env.copy();one['CUDA_VISIBLE_DEVICES']=selected[0][0]
@@ -120,14 +137,14 @@ def main(a):
         preflight=json.loads((root/'preflight.json').read_text())
         # A failed latency gate is an implementation issue, not permission to
         # relax the controller allowance or quietly run an expensive sweep.
-        latency_limit=95 if a.variant in ('repair_flow_ttt','retrieval_repair_ttt','shifted_repair_ttt','progress_objective_ttt') else 120
+        latency_limit=95 if a.variant in ('repair_flow_ttt','retrieval_repair_ttt','shifted_repair_ttt','progress_objective_ttt','bayesian_repair_ttt') else 120
         if preflight['mean_ms']>latency_limit:
             raise RuntimeError(f"Full-controller preflight exceeds{latency_limit}ms: {preflight['mean_ms']}")
         env['CUDA_VISIBLE_DEVICES']=','.join(x[0] for x in selected)
         cmd=[sys.executable,'-m','torch.distributed.run','--nnodes=1',f'--nproc_per_node={a.gpus}',
              '--rdzv-backend=c10d','--rdzv-endpoint=127.0.0.1:0','-m','flow_jepa.execution.train',
              '--config',cfg,'--root',str(root),'--run-dir',str(run_dir),'--world',str(world),'--bank',bank]
-        if a.variant in ('repair_flow_ttt','retrieval_repair_ttt','shifted_repair_ttt','progress_objective_ttt') and not (root/'ddp-check.json').exists():
+        if a.variant in ('repair_flow_ttt','retrieval_repair_ttt','shifted_repair_ttt','progress_objective_ttt','bayesian_repair_ttt') and not (root/'ddp-check.json').exists():
             status('no_update_distributed_gradient_check')
             check_cmd=cmd[:cmd.index('flow_jepa.execution.train')]+['flow_jepa.execution.ddp_check',
                 '--config',cfg,'--root',str(root),'--world',str(world),'--output',str(root/'ddp-check.json'),'--bank',bank]
@@ -147,8 +164,9 @@ def main(a):
 if __name__=='__main__':
     p=argparse.ArgumentParser()
     for name in ('record','previous','cache'):p.add_argument('--'+name,required=True)
-    p.add_argument('--variant',choices=['controller_grounded','latent_revision','execution_revision','flow_reasoning','progress_ttt','guided_ttt','repair_flow_ttt','retrieval_repair_ttt','shifted_repair_ttt','progress_objective_ttt'],default='controller_grounded')
+    p.add_argument('--variant',choices=['controller_grounded','latent_revision','execution_revision','flow_reasoning','progress_ttt','guided_ttt','repair_flow_ttt','retrieval_repair_ttt','shifted_repair_ttt','progress_objective_ttt','bayesian_repair_ttt'],default='controller_grounded')
     p.add_argument('--reuse-bank')
+    p.add_argument('--reference-policy')
     p.add_argument('--gpus',type=int,choices=[4,8],default=8)
     args=p.parse_args()
     try:main(args)

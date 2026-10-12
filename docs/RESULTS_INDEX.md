@@ -1,3 +1,9 @@
+# Active registered candidate: Bayesian decision-calibrated repair
+
+See [implementation and fixed-budget protocol](BAYESIAN_REPAIR_TTT.md) and the
+active ledger. Fresh training is gated by TRAIN-only factual and implementation
+checks. Prior completed results below remain unchanged; no new score yet.
+
 # Results and completion publication
 
 Updated October12,2026. Execution-calibrated goal progress completes **72/72/78/77**,
