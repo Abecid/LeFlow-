@@ -1,3 +1,22 @@
+# October11 evening: next-step review identifies target/progress ambiguity
+
+All prior runs remain complete; none active. New saved-record route audit finds
+that retrieval-repair80 starts each failed pick-place case with a pick-place route,
+but all final20 decisions in each of its7 failed cases use reach routes or the
+direct goal. Its successful case uses pick-place routes throughout32 decisions.
+This association does not prove wrong-task transfer caused failure or authorize
+an oracle task filter. The same pattern appears in other preserved controllers.
+Read [recommended next diagnostic and formulation](PROGRESS_OBJECTIVE_NEXT_STEP.md)
+and its full case-level inventory. Zero model/simulator calls or optimizer updates.
+
+Priority moves from throughput/anchor coverage to goal-conditioned progress and
+stage compatibility. ReGuide phase guidance, ProWorld progress order and H-JEPA
+cost-space findings support investigating the objective. First verify the signal
+on existing TRAIN data; any learned probe is charged to the method budget. No
+new candidate is implemented/registered/launched by this review. Preserve budgets,
+baselines, frozen sources and sealed tests. The current recommendation remains a
+hypothesis, with a specific evidence gate before another full run.
+
 # October11: completion publication verified; further launches held for review
 
 Shifted repair is published at[aab136e](https://github.com/Abecid/LeFlow-/commit/aab136e797a05feea9b2318fa7512beab332287b).

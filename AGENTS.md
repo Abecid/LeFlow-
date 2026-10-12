@@ -1,3 +1,15 @@
+# Latest next-step review: objective and route semantics
+
+October11 evening user asks for the best next step and obvious improvements.
+Read docs/PROGRESS_OBJECTIVE_NEXT_STEP.md before resuming. New read-only diagnostic
+finds a persistent selected-route/stage ambiguity in pick-place failures. Recommended
+next work is a bounded TRAIN-only progress/representation diagnostic, then a small
+goal-conditioned progress objective only if supported. This is a proposed direction,
+not a registered candidate or a confirmed causal fix. No new training is active;
+preserve the current full-run hold, existing data/baselines/budgets and sealed tests.
+Do not use task IDs as an oracle route filter or treat cross-task routes as failure
+labels. Prior completed reports and publication status below remain authoritative.
+
 # Review hold after verified shifted-repair publication
 
 Completion published and all273 evidence blobs/49 reports remotely verified at
