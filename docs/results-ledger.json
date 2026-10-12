@@ -64,7 +64,7 @@
       "latest_status_artifact": "docs/reports/20261012-nonlinear-repair-ttt/interim-health-round-2.json",
       "launch_publication_commit": "048cd087caf7be1e15da3f22280db5a2cbfec644",
       "publication_verification_artifact": "docs/reports/20261012-nonlinear-repair-ttt/publication-verification.json",
-      "publication_state": "second_evaluation_awaiting_live_remote_verification",
+      "publication_state": "two_evaluations_verified_on_origin_main",
       "completed_evaluations": [
         {
           "step": 5000,
@@ -143,10 +143,11 @@
         "docs/reports/20261012-nonlinear-repair-ttt/tests.log": "0fe2c39702dd6507f4478da5a6602e8e685091ae1f3b8f308ccfd27bf4532fc6",
         "docs/reports/20261012-nonlinear-repair-ttt/visual-review-10000.json": "4abf54576085f8a99193d2232cc76f31771137356ab483b08b804abea29b9baf",
         "docs/reports/20261012-nonlinear-repair-ttt/visual-review-5000.json": "02f8739cef603ae6f2186ab634e8644a298414b03e24a18e195ccf3242e185f1",
-        "docs/NONLINEAR_REPAIR_TTT.md": "153a98b6af54e2a469dc6d0d08f697a880a9b54f25450f2686665be931b76417"
+        "docs/NONLINEAR_REPAIR_TTT.md": "80da4411d53d23b6a7830d4e43ba7fa3942fba63032f2b42d00aed93c0f534be",
+        "docs/reports/20261012-nonlinear-repair-ttt/publication-round-2-verification.json": "69e270dc6268ba28a434e25eb733403a47f48ed221a6afde15367606172ce499"
       },
-      "interim_publication_commit": "65b4a2c19ee48011d6176e1775509ebec4840d30",
-      "interim_publication_verification_artifact": "docs/reports/20261012-nonlinear-repair-ttt/publication-round-1-verification.json"
+      "interim_publication_commit": "a90440c0475f04c81bcecadb1f4692f345866e13",
+      "interim_publication_verification_artifact": "docs/reports/20261012-nonlinear-repair-ttt/publication-round-2-verification.json"
     }
   ],
   "completed_runs": [

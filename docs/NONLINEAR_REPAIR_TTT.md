@@ -307,3 +307,9 @@ on origin/main at `65b4a2c19ee48011d6176e1775509ebec4840d30` on October 12,
 10:15:08 UTC: all 548 ledger evidence blobs and 18 report/status files matched,
 including 57 preserved completed evaluations and this new 5k report.
 [First-evaluation publication receipt](reports/20261012-nonlinear-repair-ttt/publication-round-1-verification.json).
+
+Both fixed evaluations and the complete second-round failure evidence were verified
+live on origin/main at `a90440c0475f04c81bcecadb1f4692f345866e13` on October 12,
+10:30:41 UTC: all 570 ledger evidence blobs and 18 report/status files matched,
+covering 57 prior completed evaluations and the two active fixed reports.
+[Second-evaluation publication receipt](reports/20261012-nonlinear-repair-ttt/publication-round-2-verification.json).

@@ -1,0 +1,11 @@
+{
+  "verified_utc": "2026-10-12T10:30:41.073949+00:00",
+  "live_origin_main": "a90440c0475f04c81bcecadb1f4692f345866e13",
+  "ledger_artifact_blobs_verified": 570,
+  "report_status_files_verified": 18,
+  "completed_comparisons": 15,
+  "completed_evaluation_reports": 57,
+  "active_evaluation_reports": 2,
+  "remote_blobs_match_ledger_sha256": true,
+  "report_status_bytes_match_local": true
+}
