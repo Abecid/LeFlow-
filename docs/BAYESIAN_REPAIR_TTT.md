@@ -1,3 +1,7 @@
+# Bayesian repair completed: selected 15k 77/104
+
+Full curve71/76/77/77, below retained 80. Read the [completed findings and evidence](BAYESIAN_REPAIR_TTT_RESULTS.md) and [review hold](BAYESIAN_REPAIR_TTT_REVIEW.md). Historical interim/launch snapshots follow; no run remains active and no next candidate is authorized.
+
 # Bayesian repair: interim curve 71/76; training continues
 
 ## First two fixed evaluations: 71/104 and 76/104

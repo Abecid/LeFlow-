@@ -1,0 +1,35 @@
+{
+  "format": "leflow.lossless-json-gzip-parts.v1",
+  "parts": [
+    {
+      "path": "chunks/step_0015000.json.gz.part000",
+      "bytes": 33554432,
+      "sha256": "5f46ccc097a97561f3b2574fd00dc6749f445b89af60ce4bde42a3092114a8d4"
+    },
+    {
+      "path": "chunks/step_0015000.json.gz.part001",
+      "bytes": 33554432,
+      "sha256": "cabbc8815228bfdae9eb0cd736c71a68a27115f8217f6e686fc067e17ea1b9fa"
+    },
+    {
+      "path": "chunks/step_0015000.json.gz.part002",
+      "bytes": 33554432,
+      "sha256": "7cecbba82b8fd613343045b4818363273dfd92e61a242484b386a549a2eca06b"
+    },
+    {
+      "path": "chunks/step_0015000.json.gz.part003",
+      "bytes": 33554432,
+      "sha256": "e8e604d1c42ebef4618d41bab358afab4d8e005709007917c71d8f032a9085b1"
+    },
+    {
+      "path": "chunks/step_0015000.json.gz.part004",
+      "bytes": 29295712,
+      "sha256": "81413bb30117817cbe577eaefd3a60d0d58bd003421caa99617fad05d729be28"
+    }
+  ],
+  "compressed_bytes": 163513440,
+  "compressed_sha256": "6fd06844c6eb57217583fa3517e4c03d144894f9ddb1c83c7cfdff6fde82a3be",
+  "uncompressed_bytes": 937562072,
+  "uncompressed_sha256": "b54e2ed4a992d15117d8345616734d20c71600afd260c5db1f672ba81ac93229",
+  "original_server_path": "/home/mtxu/adam/LeFlow-experiments/20261012-bayesian-repair-ttt/campaign/runs/bayesian_repair_ttt_3072/validation/step_0015000.json"
+}

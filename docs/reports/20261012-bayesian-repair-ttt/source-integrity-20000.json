@@ -1,0 +1,10 @@
+{
+  "step": 20000,
+  "source": "/home/mtxu/adam/LeFlow-experiments/20261012-bayesian-repair-ttt/campaign/runs/bayesian_repair_ttt_3072/validation/step_0020000.json",
+  "raw_bytes": 911624739,
+  "raw_sha256": "d14ac2f3dd9a2a15ceb7c3c994b1428784683d5ad31e157b00fedc7c45bc78ff",
+  "compressed_bytes": 158895082,
+  "compressed_sha256": "6c69a0e20e826885be3759c9f5b83d7faad74cac9518fd8b8bc17f35f909109a",
+  "cpu_wall_seconds": 3.0614887084811926,
+  "timing_scope": "Successful readback reused an existing gzip; cpu_wall_seconds is this verification invocation wall time, not total compression CPU work or a GPU charge."
+}

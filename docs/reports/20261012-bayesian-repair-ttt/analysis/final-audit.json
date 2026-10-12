@@ -1,0 +1,117 @@
+{
+  "runtime_file_checksums_verified": 173,
+  "source": "4d322c90e216702fae2cd29c91e49ad90da713d9",
+  "run": {
+    "bank_hash": "45acb27b54fabe3611bd62efe879b8238edcf912bf2fc7a1db9c537ac86d98de",
+    "code": "4d322c90e216702fae2cd29c91e49ad90da713d9",
+    "id": "u1hdmwqr",
+    "manifest": "7dc57118b671e4879d7e80348be46b1054d95fed5f11d15778e320454f55b11f",
+    "method": "bayesian_repair_ttt",
+    "protocol": "41f2147cc3bd63f11fbcc6b698cc409327b12929ddc7b0c9abacc8779c3e58a0",
+    "seed": 3072,
+    "wandb_url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/u1hdmwqr",
+    "world_hash": "ae3f910da43f0a43dd65945394444a0b11719ed042cdacffacc2faaf824ec5a3",
+    "world_size": 8
+  },
+  "rounds": [
+    {
+      "step": 5000,
+      "successes": 71
+    },
+    {
+      "step": 10000,
+      "successes": 76
+    },
+    {
+      "step": 15000,
+      "successes": 77
+    },
+    {
+      "step": 20000,
+      "successes": 77
+    }
+  ],
+  "checkpoints": {
+    "last": {
+      "step": 20000,
+      "sha256": "b13cc2aecb47f8c2e901e5b43abfdb366bda18d9b00e466899358faa024be4e5",
+      "finite": true
+    },
+    "best": {
+      "step": 15000,
+      "sha256": "4cc83237be5731ab0ecd668d06438047f2851fcc0ac56aeb741307d88dac1373",
+      "finite": true
+    },
+    "step_0005000": {
+      "step": 5000,
+      "sha256": "4cf800dbe4d869b9bb51070896ed70e0f0a89ece98ce90020e51d447789e8dc9",
+      "finite": true
+    },
+    "step_0010000": {
+      "step": 10000,
+      "sha256": "53f2569152f1f4582ba942b05fe6f1a3c1927fc0c600b45cdde165560ad3a3e8",
+      "finite": true
+    },
+    "step_0015000": {
+      "step": 15000,
+      "sha256": "6e66a2378604158eddd905119da5980f20e5df39d205a718c626a9fcb06a51ed",
+      "finite": true
+    },
+    "step_0020000": {
+      "step": 20000,
+      "sha256": "f469f819b9356d8bc1a016ec824ef18d55be5224df25a2f70fa7f0d9a2cf2584",
+      "finite": true
+    }
+  },
+  "frozen_source_clean": true,
+  "data_and_world_identity_verified": true,
+  "identical_route_bank_tensors": true,
+  "training_metric_records": 1200,
+  "validation_metric_records": 4,
+  "same_cases_across_rounds": true,
+  "causal_history_and_plan_reuse": true,
+  "episodic_fast_weights_and_reset_verified": true,
+  "score_reconstruction_verified": true,
+  "score_rounding_tolerance": 1e-07,
+  "world_transition_budget_verified": true,
+  "training_coverage_logging_verified": true,
+  "compute": {
+    "global_batch": 64,
+    "gpu_count": 8,
+    "last_update_overrun_gpu_seconds": 0.0,
+    "optimization_cap_gpu_seconds": 28800,
+    "optimization_gpu_hours": 4.147635454680357,
+    "optimization_gpu_seconds": 14931.487636849284,
+    "step": 20000,
+    "stop_check": "optimizer boundary; final-update overrun reported",
+    "validation_gpu_hours": 2.1098508322652845,
+    "validation_gpu_seconds": 7595.462996155024,
+    "validation_steps": [
+      5000,
+      10000,
+      15000,
+      20000
+    ]
+  },
+  "complete": {
+    "best": 0.7403846153846154,
+    "best_step": 15000,
+    "optimization_gpu_hours": 4.147635454680357,
+    "step": 20000,
+    "stop_reason": "update_limit",
+    "validation_gpu_hours": 2.1098508322652845,
+    "validation_steps": [
+      5000,
+      10000,
+      15000,
+      20000
+    ],
+    "wall_seconds": 2976.6258811838925
+  },
+  "progress_score_and_causal_fit_verified": false,
+  "posterior_acceptance_and_cached_incumbents_verified": true,
+  "final_tests_read": false,
+  "model_calls": 0,
+  "simulator_calls": 0
+}
+

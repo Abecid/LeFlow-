@@ -145,6 +145,8 @@ def main(args):
         refs['retrieval_repair_ttt']=('20261011-retrieval-repair-ttt/run/validation/step_0020000.json.gz',80)
     if method in ('progress_objective_ttt','bayesian_repair_ttt'):
         refs['shifted_repair_ttt']=('20261011-shifted-repair-ttt/run/validation/step_0005000.json.gz',79)
+    if method=='bayesian_repair_ttt':
+        refs['progress_objective_ttt']=('20261011-progress-objective-ttt/run/validation/step_0015000.json.gz',78)
     last_byid = {r['id']:r for r in reports[-1]['records']}
     selected_to_last = dict(
         selected_step=chosen['step'], last_step=reports[-1]['step'],
