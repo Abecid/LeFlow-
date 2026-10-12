@@ -9,13 +9,13 @@ development improvement. All 416 episodes have zero controller timeouts; the
 One seed 3072 run completed 20,000 updates with the same 6,222 expert episodes,
 global batch 64 and eight GPUs. The [CPU final audit](reports/20261011-progress-objective-ttt/analysis/final-audit.json)
 passes all 166 runtime hashes, data/bank/checkpoint identities, causal fit and
-controller accounting. At 2026-10-12T 05:45:43.654942+00:00, [final readback](reports/20261011-progress-objective-ttt/final-health.json)
-verified all 44 recorded owned processes absent and [W&B u 4dd 8tyw](https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/u4dd8tyw)
+controller accounting. At 2026-10-12 05:45:43.654942 UTC, [final readback](reports/20261011-progress-objective-ttt/final-health.json)
+verified all 44 recorded owned processes absent and [W&B u4dd8tyw](https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/u4dd8tyw)
 finished. No optimizer or evaluation was replayed.
 
 ## Fixed development curve and paired results
 
-| Checkpoint | Success | Action-limit failures | Decision latency mean / p 95 ms | Repairs selected |
+| Checkpoint | Success | Action-limit failures | Decision latency mean / p95 ms | Repairs selected |
 | --- | ---: | ---: | ---: | ---: |
 | 5,000 | 72/104 | 32 | 94.14 / 99.90 | 53.04% |
 | 10,000 | 72/104 | 32 | 93.54 / 98.01 | 43.25% |
@@ -23,7 +23,7 @@ finished. No optimizer or evaluation was replayed.
 | 20,000 | 77/104 | 27 | 92.65 / 97.70 | 39.90% |
 
 The latency gate used the unchanged 95ms **mean** threshold and passed at 89.523ms;
-evaluation p 95 values above 95ms are not gate violations. Every episode obeys the
+evaluation p95 values above 95ms are not gate violations. Every episode obeys the
 cumulative 10-second controller budget and 200-action limit. Each planning decision
 uses 320 world transitions and 12 flow integration steps, with the two-action prefix
 and terminal handling unchanged. Surrogate-gradient calls remain zero.
