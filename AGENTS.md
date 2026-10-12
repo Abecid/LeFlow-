@@ -1,3 +1,26 @@
+# Nonlinear repair completed: selected 5k 73; further launches held
+
+The fixed curve is 73/66/67/72, below the retained 80 references. All 800 periodic
+records, four complete 104-case evaluations and 40 individually inspected contact
+sheets are preserved. There are 138 failures: 134 reach 200 actions and four time
+out at 10k. Full timing traces and negative results remain saved, without replay.
+
+At 2026-10-12T10:48:21.611824+00:00, all 44 recorded owned processes are absent and W&B mxujto8j is
+finished. The final CPU audit passes 200 runtime hashes, source/config/data/bank/
+all milestone checkpoint identities and nonlinear prefix/controller accounting.
+Optimization stops at 20,000 updates, 17,325.092989549 aggregate GPU-seconds,
+zero overrun. Cumulative known measured components: 118.74095081704824 GPUh;
+failed configuration preflight remains unmeasured, and this is not a full cluster bill.
+
+Read docs/NONLINEAR_REPAIR_TTT_RESULTS.md and docs/NONLINEAR_REPAIR_TTT_REVIEW.md.
+This one authorized candidate is complete. No run is active; no next candidate is
+authorized. Never restart the completed coordinator or workers. Preserve references,
+data and sealed tests. Keep the monitor available for later explicitly authorized
+registered work. Live origin/main and artifact verification complete publication;
+a local ledger alone is not proof.
+
+Earlier status snapshots follow; this entry controls.
+
 # Nonlinear repair: fixed scores 73/66; training continues
 
 The 10k evaluation scores 66/104 with four controller timeouts; 34 other failures

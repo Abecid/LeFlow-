@@ -1,3 +1,14 @@
+# Nonlinear repair completed: selected 5k 73/104
+
+The fixed curve is **73/66/67/72**, below the retained **80/104** references.
+All four complete reports, 800 periodic metrics, four controller timeouts and
+40 individually inspected saved contact sheets are preserved. Source/data/bank/
+checkpoint and controller audits pass; all owned processes exited and W&B finished.
+Read the [completed findings](NONLINEAR_REPAIR_TTT_RESULTS.md) and
+[review hold](NONLINEAR_REPAIR_TTT_REVIEW.md). No next candidate is authorized.
+
+The interim and launch snapshots below are historical; they do not indicate an active run.
+
 # Nonlinear episodic memory on retrieval bounded flow repair
 
 October 12, 2026. The user explicitly authorized this next comparison on the

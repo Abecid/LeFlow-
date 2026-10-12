@@ -1,27 +1,23 @@
 # Results and completion publication
 
-Updated October 12, 2026. Bayesian posterior repair completes **71/76/77/77**,
-selecting **15k 77/104**, below the retained **80/104** references. All scores use
+Updated October 12, 2026. Nonlinear episodic memory completes **73/66/67/72**,
+selecting **5k 73/104**, below the retained **80/104** references. All scores use
 the same 104 development cases and seed 3072; final tests remain sealed. Custom
 method ports, one seed, reused cases and matched ceilings do not establish
 native-benchmark SOTA, component causality or generalization.
 
 ## Current iteration status
 
-[Nonlinear memory on retrieval-repair80](NONLINEAR_REPAIR_TTT.md) is the newly
-authorized single candidate. Implementation, TRAIN-only latency and eight-rank
-gradient checks pass; actual eight-GPU optimization and W&B mxujto8j are verified. The active ledger records
-frozen source d0cae300 and unchanged data/budget/cases. Fixed scores are **73/66**;
-selected-so-far remains 5k 73. Ten-k has four controller timeouts and 34 other
-failures at 200 actions. Both full reports, twenty inspected contact sheets and
-paired failures are preserved. Training continues; two registered evaluations remain.
-
-[Bayesian repair completed](BAYESIAN_REPAIR_TTT_RESULTS.md): 71/76/77/77, selected
-15k77/104. All evidence is preserved at ee1db8c; prior80 references remain retained.
-[Live publication verification](reports/20261012-bayesian-repair-ttt/publication-final-verification.json)
-confirmed all 507 prior ledger artifacts and 57 evaluations at ee1db8c
-(2026-10-12 09:50:53 UTC). The new user authorization supersedes that run's review hold.
-
+[Nonlinear memory is complete](NONLINEAR_REPAIR_TTT_RESULTS.md). Its 800 periodic
+records, four complete evaluations, four controller timeouts and 40 inspected
+contact sheets are preserved with identity and compute records. The final CPU
+audit verifies source/runtime/data/bank/checkpoints and nonlinear memory accounting;
+all 44 owned processes exited and W&B mxujto8j finished. No run remains active.
+[Further launches are held for review](NONLINEAR_REPAIR_TTT_REVIEW.md); the user
+authorized this one candidate only. The monitor stays available for future explicitly
+authorized and registered work. Cumulative measured components: 118.74095081704824 GPUh,
+excluding the disclosed unmeasured preparation; this is not a full cluster bill.
+Live origin/main and artifact verification is required before publication is confirmed.
 
 ## Preserved comparisons
 
@@ -33,6 +29,7 @@ checkpoint, with earliest ties.
 
 | Method and findings | Success curve /104 | Selected | Optimization GPUh |
 | --- | --- | ---: | ---: |
+| [Nonlinear episodic repair](NONLINEAR_REPAIR_TTT_RESULTS.md) | 73 / 66 / 67 / 72 | 73 at5k | 4.813 |
 | [Bayesian posterior repair](BAYESIAN_REPAIR_TTT_RESULTS.md) | 71 / 76 / 77 / 77 | 77 at15k | 4.148 |
 | [Execution-calibrated goal progress](PROGRESS_OBJECTIVE_TTT_RESULTS.md) | 72 / 72 / 78 / 77 | 78 at15k | 4.585 |
 | [Shifted-plan repair](SHIFTED_REPAIR_TTT_RESULTS.md) | 79 / 78 / 74 / 78 | 79 at5k | 2.233 |
@@ -59,8 +56,8 @@ controller does not use a diffusion/flow generator.
 
 The machine-readable [results ledger](results-ledger.json) points to each run's
 identity, complete marker, metrics, all evaluations and SHA256 hashes. Its
-read-only verifier checks the hashed evidence artifacts,57 evaluation reports and all
-104 case identities across the fifteen current comparisons. Run
+read-only verifier checks the hashed evidence artifacts,61 evaluation reports and all
+104 case identities across the sixteen current comparisons. Run
 `python3 scripts/analysis/verify_result_publications.py` from the repository.
 It invokes no models or simulators and does not read final-test outcomes.
 

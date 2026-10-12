@@ -1,0 +1,29 @@
+{
+  "complete": true,
+  "verified_utc": "2026-10-12T10:48:21.611824+00:00",
+  "prior_known_measured_gpu_hours": 111.56490618890255,
+  "separate_preparation_gpu_hours": {
+    "staging_preflight": 0.0054330058820131755,
+    "staging_ddp": 0.010300616158379449,
+    "frozen_preflight": 0.006130206341234346,
+    "frozen_ddp": 0.01077694574991862
+  },
+  "preparation_total_gpu_hours": 0.03264077413154559,
+  "retrieval_setup_gpu_hours": 0.005036057738794221,
+  "optimization_gpu_hours": 4.812525830430289,
+  "evaluation_gpu_hours": 2.3258419658450618,
+  "optimization_gpu_seconds": 17325.09298954904,
+  "last_update_overrun_gpu_seconds": 0.0,
+  "step": 20000,
+  "known_measured_components_gpu_hours": 118.74095081704824,
+  "not_a_full_cluster_bill": true,
+  "omissions": [
+    "Failed configuration-mismatch preflight GPU time unmeasured, not assumed zero.",
+    "CPU source deployment/reporting/transfer/idle time is not assigned invented GPU charges."
+  ],
+  "notes": [
+    "Learned nonlinear memory and per-update retrieval are inside the optimization timer.",
+    "Prior full-precision measured total replaces the rounded launch value; the difference is about2.6e-12 GPUh, not new consumed work.",
+    "Saved-image rendering and trace analysis are CPU-only; no optimizer or evaluation was replayed."
+  ]
+}

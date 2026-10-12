@@ -1,0 +1,10 @@
+{
+  "run/metrics.jsonl.gz": {
+    "preserved_path": "run/snapshots/round-3-metrics-through-20000.jsonl.gz",
+    "sha256": "6463556eb05fcdd6aab7de6a913eb193dc25dfcfb63c1250d31d01b684d2028b"
+  },
+  "run/compute_usage.json": {
+    "preserved_path": "run/snapshots/round-3-compute-through-20000-pre-final-eval.json",
+    "sha256": "f6483069fd9086619803ac101af50775e5d4889fe84337e59f1c14f8510167b8"
+  }
+}

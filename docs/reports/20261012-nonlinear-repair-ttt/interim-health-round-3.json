@@ -1,0 +1,491 @@
+{
+  "utc": "2026-10-12T10:42:28.300561+00:00",
+  "source": "d0cae3007c7d678cdc5ddb68ce731e8a2db3005d",
+  "source_clean": true,
+  "runtime_hash_count": 200,
+  "status": {
+    "code": "d0cae3007c7d678cdc5ddb68ce731e8a2db3005d",
+    "command": [
+      "/tmp/mtxu-flow-jepa-20261007/env/bin/python",
+      "-m",
+      "torch.distributed.run",
+      "--nnodes=1",
+      "--nproc_per_node=8",
+      "--rdzv-backend=c10d",
+      "--rdzv-endpoint=127.0.0.1:0",
+      "-m",
+      "flow_jepa.execution.train",
+      "--config",
+      "/home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/repo/config/flow_metaworld_nonlinear_repair_ttt.json",
+      "--root",
+      "/home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign",
+      "--run-dir",
+      "/home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign/runs/nonlinear_repair_ttt_3072",
+      "--world",
+      "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt",
+      "--bank",
+      "/tmp/mtxu-nonlinear-repair-ttt-20261012/route_bank.pt"
+    ],
+    "pid": 1643283,
+    "preflight_mean_ms": 87.637257296592,
+    "status": "training",
+    "utc": "2026-10-12T09:51:26.448537+00:00"
+  },
+  "compute": {
+    "global_batch": 64,
+    "gpu_count": 8,
+    "last_update_overrun_gpu_seconds": 0.0,
+    "optimization_cap_gpu_seconds": 28800,
+    "optimization_gpu_hours": 4.812525830430289,
+    "optimization_gpu_seconds": 17325.09298954904,
+    "step": 20000,
+    "stop_check": "optimizer boundary; final-update overrun reported",
+    "validation_gpu_hours": 1.8222236334987814,
+    "validation_gpu_seconds": 6560.0050805956125,
+    "validation_steps": [
+      5000,
+      10000,
+      15000
+    ]
+  },
+  "worker": {
+    "command": [
+      "/tmp/mtxu-flow-jepa-20261007/env/bin/python",
+      "-m",
+      "torch.distributed.run",
+      "--nnodes=1",
+      "--nproc_per_node=8",
+      "--rdzv-backend=c10d",
+      "--rdzv-endpoint=127.0.0.1:0",
+      "-m",
+      "flow_jepa.execution.train",
+      "--config",
+      "/home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/repo/config/flow_metaworld_nonlinear_repair_ttt.json",
+      "--root",
+      "/home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign",
+      "--run-dir",
+      "/home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign/runs/nonlinear_repair_ttt_3072",
+      "--world",
+      "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt",
+      "--bank",
+      "/tmp/mtxu-nonlinear-repair-ttt-20261012/route_bank.pt"
+    ],
+    "pid": 1645550
+  },
+  "processes": [
+    {
+      "pid": 1643283,
+      "present": true,
+      "state": "S",
+      "start_ticks": 1011907381,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m scripts.operations.controller_grounded --record /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt --variant nonlinear_repair_ttt --gpus 8 --previous /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison --cache /tmp/mtxu-nonlinear-repair-ttt-20261012 --reuse-bank /tmp/mtxu-flow-reasoning-20261010/route_bank.pt "
+    },
+    {
+      "pid": 1645550,
+      "present": true,
+      "state": "S",
+      "start_ticks": 1011919258,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -m torch.distributed.run --nnodes=1 --nproc_per_node=8 --rdzv-backend=c10d --rdzv-endpoint=127.0.0.1:0 -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/repo/config/flow_metaworld_nonlinear_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign/runs/nonlinear_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-nonlinear-repair-ttt-20261012/route_bank.pt "
+    },
+    {
+      "pid": 1645625,
+      "present": true,
+      "state": "R",
+      "start_ticks": 1011919376,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/repo/config/flow_metaworld_nonlinear_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign/runs/nonlinear_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-nonlinear-repair-ttt-20261012/route_bank.pt "
+    },
+    {
+      "pid": 1645626,
+      "present": true,
+      "state": "R",
+      "start_ticks": 1011919376,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/repo/config/flow_metaworld_nonlinear_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign/runs/nonlinear_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-nonlinear-repair-ttt-20261012/route_bank.pt "
+    },
+    {
+      "pid": 1645627,
+      "present": true,
+      "state": "R",
+      "start_ticks": 1011919376,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/repo/config/flow_metaworld_nonlinear_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign/runs/nonlinear_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-nonlinear-repair-ttt-20261012/route_bank.pt "
+    },
+    {
+      "pid": 1645628,
+      "present": true,
+      "state": "R",
+      "start_ticks": 1011919376,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/repo/config/flow_metaworld_nonlinear_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign/runs/nonlinear_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-nonlinear-repair-ttt-20261012/route_bank.pt "
+    },
+    {
+      "pid": 1645629,
+      "present": true,
+      "state": "R",
+      "start_ticks": 1011919376,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/repo/config/flow_metaworld_nonlinear_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign/runs/nonlinear_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-nonlinear-repair-ttt-20261012/route_bank.pt "
+    },
+    {
+      "pid": 1645630,
+      "present": true,
+      "state": "S",
+      "start_ticks": 1011919376,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/repo/config/flow_metaworld_nonlinear_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign/runs/nonlinear_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-nonlinear-repair-ttt-20261012/route_bank.pt "
+    },
+    {
+      "pid": 1645631,
+      "present": true,
+      "state": "S",
+      "start_ticks": 1011919376,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/repo/config/flow_metaworld_nonlinear_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign/runs/nonlinear_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-nonlinear-repair-ttt-20261012/route_bank.pt "
+    },
+    {
+      "pid": 1645632,
+      "present": true,
+      "state": "S",
+      "start_ticks": 1011919376,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/repo/config/flow_metaworld_nonlinear_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign/runs/nonlinear_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-nonlinear-repair-ttt-20261012/route_bank.pt "
+    },
+    {
+      "pid": 1645862,
+      "present": true,
+      "state": "S",
+      "start_ticks": 1011919789,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/repo/config/flow_metaworld_nonlinear_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign/runs/nonlinear_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-nonlinear-repair-ttt-20261012/route_bank.pt "
+    },
+    {
+      "pid": 1645863,
+      "present": true,
+      "state": "S",
+      "start_ticks": 1011919789,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/repo/config/flow_metaworld_nonlinear_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign/runs/nonlinear_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-nonlinear-repair-ttt-20261012/route_bank.pt "
+    },
+    {
+      "pid": 1645864,
+      "present": true,
+      "state": "S",
+      "start_ticks": 1011919789,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/repo/config/flow_metaworld_nonlinear_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign/runs/nonlinear_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-nonlinear-repair-ttt-20261012/route_bank.pt "
+    },
+    {
+      "pid": 1645866,
+      "present": true,
+      "state": "S",
+      "start_ticks": 1011919789,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/repo/config/flow_metaworld_nonlinear_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign/runs/nonlinear_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-nonlinear-repair-ttt-20261012/route_bank.pt "
+    },
+    {
+      "pid": 1645869,
+      "present": true,
+      "state": "S",
+      "start_ticks": 1011919789,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/repo/config/flow_metaworld_nonlinear_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign/runs/nonlinear_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-nonlinear-repair-ttt-20261012/route_bank.pt "
+    },
+    {
+      "pid": 1645870,
+      "present": true,
+      "state": "S",
+      "start_ticks": 1011919789,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/repo/config/flow_metaworld_nonlinear_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign/runs/nonlinear_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-nonlinear-repair-ttt-20261012/route_bank.pt "
+    },
+    {
+      "pid": 1645871,
+      "present": true,
+      "state": "S",
+      "start_ticks": 1011919789,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/repo/config/flow_metaworld_nonlinear_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign/runs/nonlinear_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-nonlinear-repair-ttt-20261012/route_bank.pt "
+    },
+    {
+      "pid": 1645872,
+      "present": true,
+      "state": "S",
+      "start_ticks": 1011919789,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/repo/config/flow_metaworld_nonlinear_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign/runs/nonlinear_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-nonlinear-repair-ttt-20261012/route_bank.pt "
+    },
+    {
+      "pid": 1645878,
+      "present": true,
+      "state": "S",
+      "start_ticks": 1011919790,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/repo/config/flow_metaworld_nonlinear_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign/runs/nonlinear_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-nonlinear-repair-ttt-20261012/route_bank.pt "
+    },
+    {
+      "pid": 1645879,
+      "present": true,
+      "state": "S",
+      "start_ticks": 1011919790,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/repo/config/flow_metaworld_nonlinear_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign/runs/nonlinear_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-nonlinear-repair-ttt-20261012/route_bank.pt "
+    },
+    {
+      "pid": 1645880,
+      "present": true,
+      "state": "S",
+      "start_ticks": 1011919790,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/repo/config/flow_metaworld_nonlinear_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign/runs/nonlinear_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-nonlinear-repair-ttt-20261012/route_bank.pt "
+    },
+    {
+      "pid": 1645882,
+      "present": true,
+      "state": "S",
+      "start_ticks": 1011919790,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/repo/config/flow_metaworld_nonlinear_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign/runs/nonlinear_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-nonlinear-repair-ttt-20261012/route_bank.pt "
+    },
+    {
+      "pid": 1645886,
+      "present": true,
+      "state": "S",
+      "start_ticks": 1011919790,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/repo/config/flow_metaworld_nonlinear_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign/runs/nonlinear_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-nonlinear-repair-ttt-20261012/route_bank.pt "
+    },
+    {
+      "pid": 1645887,
+      "present": true,
+      "state": "S",
+      "start_ticks": 1011919790,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/repo/config/flow_metaworld_nonlinear_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign/runs/nonlinear_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-nonlinear-repair-ttt-20261012/route_bank.pt "
+    },
+    {
+      "pid": 1645888,
+      "present": true,
+      "state": "S",
+      "start_ticks": 1011919790,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/repo/config/flow_metaworld_nonlinear_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign/runs/nonlinear_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-nonlinear-repair-ttt-20261012/route_bank.pt "
+    },
+    {
+      "pid": 1645889,
+      "present": true,
+      "state": "S",
+      "start_ticks": 1011919790,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/repo/config/flow_metaworld_nonlinear_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign/runs/nonlinear_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-nonlinear-repair-ttt-20261012/route_bank.pt "
+    },
+    {
+      "pid": 1645894,
+      "present": true,
+      "state": "S",
+      "start_ticks": 1011919791,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/repo/config/flow_metaworld_nonlinear_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign/runs/nonlinear_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-nonlinear-repair-ttt-20261012/route_bank.pt "
+    },
+    {
+      "pid": 1645895,
+      "present": true,
+      "state": "S",
+      "start_ticks": 1011919791,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/repo/config/flow_metaworld_nonlinear_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign/runs/nonlinear_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-nonlinear-repair-ttt-20261012/route_bank.pt "
+    },
+    {
+      "pid": 1645897,
+      "present": true,
+      "state": "S",
+      "start_ticks": 1011919791,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/repo/config/flow_metaworld_nonlinear_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign/runs/nonlinear_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-nonlinear-repair-ttt-20261012/route_bank.pt "
+    },
+    {
+      "pid": 1645898,
+      "present": true,
+      "state": "S",
+      "start_ticks": 1011919791,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/repo/config/flow_metaworld_nonlinear_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign/runs/nonlinear_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-nonlinear-repair-ttt-20261012/route_bank.pt "
+    },
+    {
+      "pid": 1645902,
+      "present": true,
+      "state": "S",
+      "start_ticks": 1011919791,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/repo/config/flow_metaworld_nonlinear_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign/runs/nonlinear_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-nonlinear-repair-ttt-20261012/route_bank.pt "
+    },
+    {
+      "pid": 1645903,
+      "present": true,
+      "state": "S",
+      "start_ticks": 1011919791,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/repo/config/flow_metaworld_nonlinear_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign/runs/nonlinear_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-nonlinear-repair-ttt-20261012/route_bank.pt "
+    },
+    {
+      "pid": 1645904,
+      "present": true,
+      "state": "S",
+      "start_ticks": 1011919791,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/repo/config/flow_metaworld_nonlinear_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign/runs/nonlinear_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-nonlinear-repair-ttt-20261012/route_bank.pt "
+    },
+    {
+      "pid": 1645905,
+      "present": true,
+      "state": "S",
+      "start_ticks": 1011919791,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/repo/config/flow_metaworld_nonlinear_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign/runs/nonlinear_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-nonlinear-repair-ttt-20261012/route_bank.pt "
+    },
+    {
+      "pid": 1645910,
+      "present": true,
+      "state": "S",
+      "start_ticks": 1011919792,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/repo/config/flow_metaworld_nonlinear_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign/runs/nonlinear_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-nonlinear-repair-ttt-20261012/route_bank.pt "
+    },
+    {
+      "pid": 1645911,
+      "present": true,
+      "state": "S",
+      "start_ticks": 1011919792,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/repo/config/flow_metaworld_nonlinear_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign/runs/nonlinear_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-nonlinear-repair-ttt-20261012/route_bank.pt "
+    },
+    {
+      "pid": 1645914,
+      "present": true,
+      "state": "S",
+      "start_ticks": 1011919792,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/repo/config/flow_metaworld_nonlinear_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign/runs/nonlinear_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-nonlinear-repair-ttt-20261012/route_bank.pt "
+    },
+    {
+      "pid": 1645916,
+      "present": true,
+      "state": "S",
+      "start_ticks": 1011919792,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/repo/config/flow_metaworld_nonlinear_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign/runs/nonlinear_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-nonlinear-repair-ttt-20261012/route_bank.pt "
+    },
+    {
+      "pid": 1645922,
+      "present": true,
+      "state": "S",
+      "start_ticks": 1011919792,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/repo/config/flow_metaworld_nonlinear_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign/runs/nonlinear_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-nonlinear-repair-ttt-20261012/route_bank.pt "
+    },
+    {
+      "pid": 1645923,
+      "present": true,
+      "state": "S",
+      "start_ticks": 1011919792,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/repo/config/flow_metaworld_nonlinear_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign/runs/nonlinear_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-nonlinear-repair-ttt-20261012/route_bank.pt "
+    },
+    {
+      "pid": 1645924,
+      "present": true,
+      "state": "S",
+      "start_ticks": 1011919792,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/repo/config/flow_metaworld_nonlinear_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign/runs/nonlinear_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-nonlinear-repair-ttt-20261012/route_bank.pt "
+    },
+    {
+      "pid": 1645931,
+      "present": true,
+      "state": "S",
+      "start_ticks": 1011919793,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/repo/config/flow_metaworld_nonlinear_repair_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign/runs/nonlinear_repair_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-nonlinear-repair-ttt-20261012/route_bank.pt "
+    },
+    {
+      "pid": 1646109,
+      "present": true,
+      "state": "S",
+      "start_ticks": 1011920394,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/lib/python3.11/site-packages/wandb/bin/wandb-core --port-filename /tmp/tmp3_wwokcm/port-1645625.txt --pid 1645625 "
+    },
+    {
+      "pid": 1646131,
+      "present": true,
+      "state": "S",
+      "start_ticks": 1011920418,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/lib/python3.11/site-packages/wandb/bin/gpu_stats --portfile /tmp/wandb-system-monitor-portfile-1839387452 --parent-pid 1646109 "
+    }
+  ],
+  "checkpoints": {
+    "checkpoints/step_0005000.pt": {
+      "bytes": 77937133,
+      "sha256": "2589ed8cf7cfad709fd023c56d5ab3fd8f14ed377014cc11ab2703b03e7f093e"
+    },
+    "checkpoints/step_0010000.pt": {
+      "bytes": 77937133,
+      "sha256": "b6ddc1ae90b573f637a05d81be9d401ce6726bcd4ef34004d2924e94ccb092a0"
+    },
+    "checkpoints/step_0015000.pt": {
+      "bytes": 77937133,
+      "sha256": "fab1ba3c39093195d8925d78b133d8d872928c9647fb9a180ef836fbc12b343f"
+    }
+  },
+  "last_metric_step": 20000,
+  "training_rows": 800,
+  "finite_metrics": true,
+  "monotone_optimization_charge": true,
+  "source_files": {
+    "run/run.json": {
+      "bytes": 562,
+      "sha256": "c25a5a52f456aef8b401455594482e742757d57c86cb6e7857d972333d5b230b"
+    },
+    "run/compute_usage.json": {
+      "bytes": 461,
+      "sha256": "f6483069fd9086619803ac101af50775e5d4889fe84337e59f1c14f8510167b8"
+    },
+    "run/retrieval-setup.json": {
+      "bytes": 288,
+      "sha256": "fd4e83f4948fab40b707e553527f093adba1bc719e10dfaca1b369f02cb8c223"
+    },
+    "run/metrics.jsonl": {
+      "bytes": 1276519,
+      "sha256": "32ff0445babc1f2cba93cbde841889ca5b964576f85521f618ce393d63061d20"
+    },
+    "run/validation/step_0015000.json": {
+      "bytes": 33969051,
+      "sha256": "e404db44640f9695da7d78f8ccdc26c0e0d94b516797e687b324bec772958c04"
+    }
+  },
+  "wandb": {
+    "id": "mxujto8j",
+    "state": "running",
+    "summary": {
+      "budget/optimization_gpu_hours": 4.801211990287735,
+      "step": 19951,
+      "train/loss": 0.08269793540239334,
+      "validation/checkpoint_step": 15000,
+      "validation/controller_budget_exhausted_rate": 0,
+      "validation/controller_budget_overrun_seconds_mean": 0,
+      "validation/controller_seconds_per_episode_mean": 5.137309461885777,
+      "validation/controller_step_latency_ms_mean": 90.8330812710168,
+      "validation/controller_step_latency_ms_p95": 95.69936022162436,
+      "validation/episodes": 104,
+      "validation/expert_goal_failure_rate": 0,
+      "validation/latency_ms_mean": 90.7613090363954,
+      "validation/observed_subgoal_cosine": 0.022395454001839104,
+      "validation/return_mean": 242.99357406783295,
+      "validation/seen_success_macro": 0.6442307692307693,
+      "validation/steps_to_success_capped_mean": 113.15384615384616,
+      "validation/success_macro": 0.6442307692307693,
+      "validation/success_within_100_primitive": 0.5961538461538461,
+      "validation/success_within_200_primitive": 0.6442307692307693,
+      "validation/success_within_50_primitive": 0.2307692307692308,
+      "validation/task/assembly/ci95_high": 0.3244156195108769,
+      "validation/task/assembly/ci95_low": 0,
+      "validation/task/assembly/success": 0,
+      "validation/task/button-press-topdown/ci95_high": 1,
+      "validation/task/button-press-topdown/ci95_low": 0.6755843804891231,
+      "validation/task/button-press-topdown/success": 1,
+      "validation/task/coffee-button/ci95_high": 1,
+      "validation/task/coffee-button/ci95_low": 0.6755843804891231,
+      "validation/task/coffee-button/success": 1,
+      "validation/task/dial-turn/ci95_high": 0.6942621454161981,
+      "validation/task/dial-turn/ci95_low": 0.13684175946152105,
+      "validation/task/dial-turn/success": 0.375,
+      "validation/task/door-close/ci95_high": 0.9285223111419724,
+      "validation/task/door-close/ci95_low": 0.4092698791025891,
+      "validation/task/door-close/success": 0.75,
+      "validation/task/door-open/ci95_high": 0.9285223111419724,
+      "validation/task/door-open/ci95_low": 0.4092698791025891,
+      "validation/task/door-open/success": 0.75,
+      "validation/task/drawer-close/ci95_high": 1,
+      "validation/task/drawer-close/ci95_low": 0.6755843804891231,
+      "validation/task/drawer-close/success": 1,
+      "validation/task/drawer-open/ci95_high": 1,
+      "validation/task/drawer-open/ci95_low": 0.6755843804891231,
+      "validation/task/drawer-open/success": 1,
+      "validation/task/faucet-open/ci95_high": 0.4708948057698615,
+      "validation/task/faucet-open/ci95_low": 0.02241690886329617,
+      "validation/task/faucet-open/success": 0.125,
+      "validation/task/handle-press/ci95_high": 1,
+      "validation/task/handle-press/ci95_low": 0.6755843804891231,
+      "validation/task/handle-press/success": 1,
+      "validation/task/pick-place/ci95_high": 0.3244156195108769,
+      "validation/task/pick-place/ci95_low": 0,
+      "validation/task/pick-place/success": 0,
+      "validation/task/plate-slide/ci95_high": 0.9775830911367038,
+      "validation/task/plate-slide/ci95_low": 0.5291051942301386,
+      "validation/task/plate-slide/success": 0.875,
+      "validation/task/reach/ci95_high": 0.7847874731755582,
+      "validation/task/reach/ci95_low": 0.21521252682444184,
+      "validation/task/reach/success": 0.5,
+      "validation/world_predictions_mean": 18098.46153846154
+    }
+  }
+}

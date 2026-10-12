@@ -1,0 +1,191 @@
+{
+  "step": 20000,
+  "inspected_utc": "2026-10-12T10:49:10.572634+00:00",
+  "all_saved_images_inspected": true,
+  "images": [
+    {
+      "id": "validation/assembly/00000",
+      "success": false,
+      "steps": 200,
+      "sampled_primitive_indices": [
+        0,
+        50,
+        100,
+        150,
+        200
+      ],
+      "file": "assembly-00000.png",
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign/runs/nonlinear_repair_ttt_3072/trajectories/step_0020000/assembly/00000.npz",
+      "registered_episode_sha256": "ae6a38f1d67af88faad34b26bacea0171494b2990b609d464a608aa3a47d000c",
+      "sha256": "5aada630f32a3aa8cbdb345ea07754f47c971bf01376fd79f6fe10828cfb699c",
+      "visually_inspected_exact_image": true,
+      "observation": "Hand remains close to assembly object throughout sampled actions50/100/150/200; failure at200. Frames do not establish contact state."
+    },
+    {
+      "id": "validation/coffee-button/00000",
+      "success": true,
+      "steps": 35,
+      "sampled_primitive_indices": [
+        0,
+        8,
+        17,
+        26,
+        35
+      ],
+      "file": "coffee-button-00000.png",
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign/runs/nonlinear_repair_ttt_3072/trajectories/step_0020000/coffee-button/00000.npz",
+      "registered_episode_sha256": "c20ef40683da48a61f562cb821dd329f3c3183b5f89fbc5cf2d9d562e25f6f36",
+      "sha256": "9da0261416caaafbd922e412fe32bf516234d6d1817515e9e9783de0d26ac40d",
+      "visually_inspected_exact_image": true,
+      "observation": "Hand approaches coffee-machine front; registered success at35."
+    },
+    {
+      "id": "validation/dial-turn/00000",
+      "success": false,
+      "steps": 200,
+      "sampled_primitive_indices": [
+        0,
+        50,
+        100,
+        150,
+        200
+      ],
+      "file": "dial-turn-00000.png",
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign/runs/nonlinear_repair_ttt_3072/trajectories/step_0020000/dial-turn/00000.npz",
+      "registered_episode_sha256": "529bd81d3b5ab086e102520e34627f901537fb4d90d19da6515ff014bca22121",
+      "sha256": "8087d20bdccab60cc8020d661d69006e781ccb5ede397bd0777ae33a4e90412a",
+      "visually_inspected_exact_image": true,
+      "observation": "Hand approaches dial at50/100 then moves away at150/200; failure."
+    },
+    {
+      "id": "validation/door-close/00000",
+      "success": true,
+      "steps": 76,
+      "sampled_primitive_indices": [
+        0,
+        19,
+        38,
+        57,
+        76
+      ],
+      "file": "door-close-00000.png",
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign/runs/nonlinear_repair_ttt_3072/trajectories/step_0020000/door-close/00000.npz",
+      "registered_episode_sha256": "e310defe973604fb4ac870bbb03fec4a65e9dbf97ebc8e640231aac78809e251",
+      "sha256": "1674fd30b652deadf108ce877d333f00dffb8a7413fc828a89e83033a342258c",
+      "visually_inspected_exact_image": true,
+      "observation": "Door rotates toward its closed position; registered success at76."
+    },
+    {
+      "id": "validation/drawer-close/00004",
+      "success": true,
+      "steps": 72,
+      "sampled_primitive_indices": [
+        0,
+        18,
+        36,
+        54,
+        72
+      ],
+      "file": "drawer-close-00004.png",
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign/runs/nonlinear_repair_ttt_3072/trajectories/step_0020000/drawer-close/00004.npz",
+      "registered_episode_sha256": "25631545f194be4f315ce035615c13d1e3d0b63bfe095b8bf9ceb9c777d67563",
+      "sha256": "e0f10c099e1b51eb269782926a682eda6756db4ca948015b884983df2b00edfb",
+      "visually_inspected_exact_image": true,
+      "observation": "Hand approaches and closes drawer; registered success at72."
+    },
+    {
+      "id": "validation/faucet-open/00003",
+      "success": false,
+      "steps": 200,
+      "sampled_primitive_indices": [
+        0,
+        50,
+        100,
+        150,
+        200
+      ],
+      "file": "faucet-open-00003.png",
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign/runs/nonlinear_repair_ttt_3072/trajectories/step_0020000/faucet-open/00003.npz",
+      "registered_episode_sha256": "d11379564a026d7bb35e572800f8c6308fc7431c9591861daff733ce6d68f654",
+      "sha256": "10a8731ebf08fb26ee1eb3582d8d0ea31e95d6d600502559586e205be755782c",
+      "visually_inspected_exact_image": true,
+      "observation": "Hand approaches below handle at50/100 then moves away/lower at150/200; failure."
+    },
+    {
+      "id": "validation/handle-press/00000",
+      "success": true,
+      "steps": 13,
+      "sampled_primitive_indices": [
+        0,
+        3,
+        6,
+        9,
+        13
+      ],
+      "file": "handle-press-00000.png",
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign/runs/nonlinear_repair_ttt_3072/trajectories/step_0020000/handle-press/00000.npz",
+      "registered_episode_sha256": "ad17b50fdfddd958f89be5bed4c25ac90193f3ea164546f611ce04494dc294be",
+      "sha256": "dde83834b01dea01823dfd510e6dece18a3965d1e855f31f5c104b67548ef76e",
+      "visually_inspected_exact_image": true,
+      "observation": "Hand approaches handle apparatus; registered success at13."
+    },
+    {
+      "id": "validation/pick-place/00000",
+      "success": false,
+      "steps": 200,
+      "sampled_primitive_indices": [
+        0,
+        50,
+        100,
+        150,
+        200
+      ],
+      "file": "pick-place-00000.png",
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign/runs/nonlinear_repair_ttt_3072/trajectories/step_0020000/pick-place/00000.npz",
+      "registered_episode_sha256": "55144c315102dae629c26105188a63501873563cc2796de05908a223056c9ac1",
+      "sha256": "a584bc9a6438ffaad1120c981bec823dbec8c0aa4e1737cc8bc368cd120357c4",
+      "visually_inspected_exact_image": true,
+      "observation": "Hand moves near red object around50 then toward goal region at100/150/200. Object is visible near table in late frames; failure at200."
+    },
+    {
+      "id": "validation/reach/00003",
+      "success": true,
+      "steps": 37,
+      "sampled_primitive_indices": [
+        0,
+        9,
+        18,
+        27,
+        37
+      ],
+      "file": "reach-00003.png",
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign/runs/nonlinear_repair_ttt_3072/trajectories/step_0020000/reach/00003.npz",
+      "registered_episode_sha256": "14d14cc180361a114b59c40d1cd5b7dfeaae43e3daeb87038ce1358689c5603e",
+      "sha256": "b7dfb41c449b5b2f0bfdfd6fde5fdb3bf5ae29cfaf8c783babbdb20c0abe1a77",
+      "visually_inspected_exact_image": true,
+      "observation": "Hand approaches red target region; registered success at37."
+    },
+    {
+      "id": "validation/reach/00005",
+      "success": true,
+      "steps": 41,
+      "sampled_primitive_indices": [
+        0,
+        10,
+        20,
+        30,
+        41
+      ],
+      "file": "reach-00005.png",
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign/runs/nonlinear_repair_ttt_3072/trajectories/step_0020000/reach/00005.npz",
+      "registered_episode_sha256": "c77f93b793227b6832de6829c7a6ef65c287f86d229aab05f4c9b8b1b8165b40",
+      "sha256": "cd13c375ce6bb5956633112a20774beea729318eae3afd0ee32e3c241ae4c37a",
+      "visually_inspected_exact_image": true,
+      "observation": "Hand approaches red target region; registered success at41."
+    }
+  ],
+  "limits": [
+    "Ten saved cases do not cover all failures.",
+    "Sparse frames do not measure forces, slip or counterfactual outcomes."
+  ]
+}

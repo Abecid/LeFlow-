@@ -1,0 +1,10 @@
+{
+  "run/metrics.jsonl.gz": {
+    "preserved_path": "run/snapshots/round-2-metrics-through-12901.jsonl.gz",
+    "sha256": "0e5a6c90813f84d193bc8d770a257017a1ccaa4e32d30851fb5c8773848409c3"
+  },
+  "run/compute_usage.json": {
+    "preserved_path": "run/snapshots/round-2-compute-through-12928.json",
+    "sha256": "6668b2700b8162f06b4100dff9a7bf51d8df288b040b435619a5d3c330136168"
+  }
+}
