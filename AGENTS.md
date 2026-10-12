@@ -1,3 +1,13 @@
+# Verified active Bayesian repair run (October12)
+
+Fresh source4d322c9/all173 runtime hashes and8-rank checks verified. At08:39:58UTC,
+2,000 finite updates on GPUs0–7; W&B u1hdmwqr running. Coordinator1562004,
+launcher1564888, ranks1564893–1564900. TRAIN-only diagnostic supports factual
+adaptation (MAE−6.01%, MSE−17.67%); latency81.12ms. Read
+docs/BAYESIAN_REPAIR_TTT.md and the active ledger.
+No development result yet. Preserve active source, fixed budget and four104
+evaluations. No duplicate launch, baseline work, speculative queue or sealed tests.
+
 # October12 authorization: one Bayesian decision-calibrated repair candidate
 
 User explicitly asks to implement the strongest reference-grounded correction

@@ -1,0 +1,28 @@
+{
+  "code": "4d322c90e216702fae2cd29c91e49ad90da713d9",
+  "command": [
+    "/tmp/mtxu-flow-jepa-20261007/env/bin/python",
+    "-m",
+    "torch.distributed.run",
+    "--nnodes=1",
+    "--nproc_per_node=8",
+    "--rdzv-backend=c10d",
+    "--rdzv-endpoint=127.0.0.1:0",
+    "-m",
+    "flow_jepa.execution.train",
+    "--config",
+    "/home/mtxu/adam/LeFlow-experiments/20261012-bayesian-repair-ttt/repo/config/flow_metaworld_bayesian_repair_ttt.json",
+    "--root",
+    "/home/mtxu/adam/LeFlow-experiments/20261012-bayesian-repair-ttt/campaign",
+    "--run-dir",
+    "/home/mtxu/adam/LeFlow-experiments/20261012-bayesian-repair-ttt/campaign/runs/bayesian_repair_ttt_3072",
+    "--world",
+    "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt",
+    "--bank",
+    "/tmp/mtxu-bayesian-repair-ttt-20261012/route_bank.pt"
+  ],
+  "pid": 1562004,
+  "preflight_mean_ms": 81.11758452529709,
+  "status": "training",
+  "utc": "2026-10-12T08:36:28.880077+00:00"
+}

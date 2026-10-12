@@ -1,0 +1,14 @@
+{
+  "snapshot_utc": "2026-10-12T08:39:58.918683+00:00",
+  "step": 2000,
+  "prior_known_measured_gpu_hours": 105.28452734094218,
+  "train_only_diagnostic_gpu_hours": 0.0015554047945059008,
+  "preflight_gpu_hours": 0.005896763030646576,
+  "ddp_no_update_gpu_hours": 0.010083862940470378,
+  "route_bank_cpu_seconds": 22.105842977762222,
+  "optimization_gpu_hours": 0.4122794572222564,
+  "evaluation_gpu_hours": 0.0,
+  "known_measured_components_gpu_hours": 105.71434282893006,
+  "not_a_full_cluster_bill": true,
+  "partial_run": true
+}

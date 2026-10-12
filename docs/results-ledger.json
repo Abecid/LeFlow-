@@ -4,11 +4,11 @@
   "publication_contract": "A run is publication-complete only when these artifacts and its findings report are committed and verified on origin/main. Local ledger membership alone does not prove remote publication.",
   "active_runs": [
     {
-      "run_key": "bayesian_repair_ttt_3072_pending",
+      "run_key": "u1hdmwqr",
       "method": "bayesian_repair_ttt",
       "label": "ALPaCA decision-calibrated bounded flow repair",
       "seed": 3072,
-      "status": "registered_preflight_pending",
+      "status": "training_verified",
       "server_record": "/home/mtxu/adam/LeFlow-experiments/20261012-bayesian-repair-ttt",
       "report": "docs/BAYESIAN_REPAIR_TTT.md",
       "evidence_directory": "docs/reports/20261012-bayesian-repair-ttt",
@@ -18,7 +18,42 @@
       "optimizer_update_limit": 20000,
       "development_cases": 104,
       "evaluation_rounds": 4,
-      "final_tests": false
+      "final_tests": false,
+      "source": "4d322c90e216702fae2cd29c91e49ad90da713d9",
+      "wandb_url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/u1hdmwqr",
+      "registered_source": "4d322c90e216702fae2cd29c91e49ad90da713d9",
+      "launcher_pid": 1562004,
+      "worker_pid": 1564888,
+      "rank_pids": [
+        1564893,
+        1564894,
+        1564895,
+        1564896,
+        1564897,
+        1564898,
+        1564899,
+        1564900
+      ],
+      "verified_utc": "2026-10-12T08:39:58.918683+00:00",
+      "verified_step": 2000,
+      "runtime_files_verified": 173,
+      "artifact_sha256": {
+        "docs/reports/20261012-bayesian-repair-ttt/allocation.json": "b82ec18f4f99ea4cc61e1542c91bccad47a6b920b617a7184af6cf5dd3a6bd9f",
+        "docs/reports/20261012-bayesian-repair-ttt/bayesian-probe.json": "5d036b9ec354b4c838eba2dcd4195f482c3c7385e0d58379e5c12a8c631d5097",
+        "docs/reports/20261012-bayesian-repair-ttt/compute-accounting-launch.json": "2678155062f792f38569beaa357c4e8cd9a4f1a431860a6bff80c35e9c5dfb9b",
+        "docs/reports/20261012-bayesian-repair-ttt/ddp-check.json": "cabf706c6b837112a5404b6832cac0f2d44d4c659fdd3ec77c350bbbcc0faac8",
+        "docs/reports/20261012-bayesian-repair-ttt/launch-verification.json": "3e786f5131852e3312370d9105ed08752f73ba4c7ce205952ec411375a78e055",
+        "docs/reports/20261012-bayesian-repair-ttt/launcher.json": "35061d506c5fd741627723bf8815576dcbded0cbd1595349ac86422fc2f0af11",
+        "docs/reports/20261012-bayesian-repair-ttt/preflight.json": "9a30f3a9244cb283a21f45c5d3c88864417f90a736bd12ef6df2b798b80670a0",
+        "docs/reports/20261012-bayesian-repair-ttt/reuse.json": "1af5981886e12e6ecfba13ffd97a8bfbeeadeebd0ea6e090e94eb59d8e7f64b9",
+        "docs/reports/20261012-bayesian-repair-ttt/route-bank.json": "5b6ee536d5a111fb6c2bdb0f4afc15a01e19f33d55cd5f58932a3e845171a273",
+        "docs/reports/20261012-bayesian-repair-ttt/run/compute-usage-at-launch.json": "8f9f7b4e05030710093815837c765c481b1902f4c04aa1cff4121891a7c7375a",
+        "docs/reports/20261012-bayesian-repair-ttt/run/metrics-at-launch.jsonl.gz": "fc359e4ae24bd0f58edabfcf08125943aba47329795b4453ac0de13511642f30",
+        "docs/reports/20261012-bayesian-repair-ttt/run/run.json": "155f9520ff1c4fa1c916932513e8e62e27b27218c89878debcfa62a71dd7d48a",
+        "docs/reports/20261012-bayesian-repair-ttt/runtime-files.json": "e8bd2376e7b39e2b528798950c9031f4c9bbb75356bf1a1a1c1d7bedbf2df781",
+        "docs/reports/20261012-bayesian-repair-ttt/status-at-launch.json": "cf7e9ada26f84570ef5a9bed35fc5e45a44d5c6780938cd9d6f3fdee64085c1d",
+        "docs/reports/20261012-bayesian-repair-ttt/tests.log": "8c1e75fc188a2a97c1b9a2f80b728cf4cf512f0986e61ff4b8e04732cfc17f86"
+      }
     }
   ],
   "completed_runs": [

@@ -1,3 +1,44 @@
+# Verified active training: Bayesian decision-calibrated repair
+
+At 2026-10-12 08:39:58 UTC (01:39 Pacific), fresh training had completed **2,000
+updates on GPUs 0–7**, with finite metrics and no evaluation yet. Frozen source
+`4d322c90e216702fae2cd29c91e49ad90da713d9`, all 173 runtime hashes, coordinator
+1562004, launcher1564888 and eight rank identities were verified. [Live run](https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/u1hdmwqr)
+is running. The 5k/10k/15k/20k fixed104 evaluations are scheduled under the
+original allowance; 80/104 remains the measured reference, not a new result.
+
+The no-update diagnostic used 1,024 TRAIN windows:512 noise-fit examples and467
+nonempty-history examples from disjoint TRAIN episodes for reporting (45 windows
+had empty history and were excluded from those two groups). With frozen reference
+features, factual next-outcome MAE fell **6.01%** (.00148462→.00139539), MSE fell
+**17.67%**, and the nominal90% interval covered **90.79%** of reporting outcomes.
+These are factual proxy checks, not generated-action success or ranking evidence.
+No diagnostic weights/noise estimates initialize the fresh policy.
+
+All45 distinct tests passed (50 executions including five imported repeats).
+Real-data full-controller latency averaged **81.12ms**; eight-rank backward
+checks passed at all three training depths, with unchanged weights/world and
+exact gradient synchronization. At the2k snapshot, optimization used.412279GPUh;
+no-update diagnostic/preflight/DDP used.017536GPUh. Route-bank metadata reuse
+used22.11CPU seconds; its tensors and6222 episodes are unchanged. Known cumulative
+measured components at this partial snapshot are105.714343GPUh, not a cluster bill.
+
+[Launch identity, processes and online readback](reports/20261012-bayesian-repair-ttt/launch-verification.json),
+[TRAIN-only diagnostic and factual records](reports/20261012-bayesian-repair-ttt/bayesian-probe.json),
+[latency](reports/20261012-bayesian-repair-ttt/preflight.json),
+[distributed checks](reports/20261012-bayesian-repair-ttt/ddp-check.json),
+[periodic metric snapshot](reports/20261012-bayesian-repair-ttt/run/metrics-at-launch.jsonl.gz)
+and [compute accounting](reports/20261012-bayesian-repair-ttt/compute-accounting-launch.json)
+are preserved. Metrics with negative predictive NLL are valid continuous densities,
+not a sign error; task success is still pending.
+
+The server's initial GitHub fetch failed before any coordinator or optimizer run.
+A360KB pack of the exact published source resolved it; all runtime file hashes
+matched before dispatch. No active execution source was modified. Reporting
+code is maintained in the separate desktop checkout. The15-minute project monitor
+is updated for this run and must publish all scheduled results and failures upon
+completion. No additional candidate is queued.
+
 # Bayesian decision-calibrated bounded flow repair
 
 October 12 authorization: implement one evidence-grounded candidate and train it

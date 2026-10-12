@@ -1,0 +1,12 @@
+{
+  "bank_hash": "45acb27b54fabe3611bd62efe879b8238edcf912bf2fc7a1db9c537ac86d98de",
+  "code": "4d322c90e216702fae2cd29c91e49ad90da713d9",
+  "id": "u1hdmwqr",
+  "manifest": "7dc57118b671e4879d7e80348be46b1054d95fed5f11d15778e320454f55b11f",
+  "method": "bayesian_repair_ttt",
+  "protocol": "41f2147cc3bd63f11fbcc6b698cc409327b12929ddc7b0c9abacc8779c3e58a0",
+  "seed": 3072,
+  "wandb_url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/u1hdmwqr",
+  "world_hash": "ae3f910da43f0a43dd65945394444a0b11719ed042cdacffacc2faaf824ec5a3",
+  "world_size": 8
+}
