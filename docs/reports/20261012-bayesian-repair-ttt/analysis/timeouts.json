@@ -1,0 +1,29 @@
+{
+  "episodes": [
+    {
+      "step": 10000,
+      "id": "validation/assembly/00002",
+      "actions": 194,
+      "maximum_call_ms": 1610.5409897863865,
+      "overrun_seconds": 0.00038865022361278534
+    },
+    {
+      "step": 10000,
+      "id": "validation/assembly/00006",
+      "actions": 192,
+      "maximum_call_ms": 1561.1833650618792,
+      "overrun_seconds": 0.034503962844610214
+    },
+    {
+      "step": 20000,
+      "id": "validation/assembly/00003",
+      "actions": 192,
+      "maximum_call_ms": 1430.166319012642,
+      "overrun_seconds": 0.00048020854592323303
+    }
+  ],
+  "limits": [
+    "Recorded elapsed controller costs, not a diagnosis of external contention or a success counterfactual.",
+    "No reruns or removed failures."
+  ]
+}

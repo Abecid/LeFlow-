@@ -1,0 +1,92 @@
+{
+  "step": 20000,
+  "all_saved_contact_sheets_visually_inspected": true,
+  "images": [
+    {
+      "file": "contact-sheets-20000/assembly-00000.png",
+      "sha256": "a7462f33c6ac949cbdbe826625af3bb7749d703d306ac91319018a8ee6ff7b47",
+      "id": "validation/assembly/00000",
+      "success": true,
+      "steps": 90,
+      "observation": "The ring visibly moves from its initial location toward the post; the measured record reports success. The motion occurs later in the selected 15k episode than in the final 20k episode."
+    },
+    {
+      "file": "contact-sheets-20000/coffee-button-00000.png",
+      "sha256": "d5dd512c496712ba7e26febfe127f9dd42b4b17c25ba355d3d266bd9e5290578",
+      "id": "validation/coffee-button/00000",
+      "success": true,
+      "steps": 40,
+      "observation": "The hand approaches the machine control region; the registered record reports success."
+    },
+    {
+      "file": "contact-sheets-20000/dial-turn-00000.png",
+      "sha256": "b7357d94b3b0e4aedd3882c382778ac38e71bf5f2418e48eae1cc78cf5ef71e6",
+      "id": "validation/dial-turn/00000",
+      "success": true,
+      "steps": 85,
+      "observation": "The hand approaches the dial region; the registered record reports success."
+    },
+    {
+      "file": "contact-sheets-20000/door-close-00000.png",
+      "sha256": "1737ff59a150d5554adb5db4a35d13e1627e4a3b8e4fdb529d56cb519620af83",
+      "id": "validation/door-close/00000",
+      "success": true,
+      "steps": 62,
+      "observation": "The door visibly rotates toward the closed goal; the registered record reports success."
+    },
+    {
+      "file": "contact-sheets-20000/drawer-close-00004.png",
+      "sha256": "9370661ad1e5761fbed76169397d8503d351c61a044fb43588f4bfedd765b476",
+      "id": "validation/drawer-close/00004",
+      "success": true,
+      "steps": 69,
+      "observation": "The drawer visibly moves inward toward the registered goal; the record reports success."
+    },
+    {
+      "file": "contact-sheets-20000/faucet-open-00003.png",
+      "sha256": "e16d31ee521b97a7dcc359ef8af4d322d5da7986736310756cf0158181b9894f",
+      "id": "validation/faucet-open/00003",
+      "success": false,
+      "steps": 200,
+      "observation": "The gripper approaches and remains near the faucet handle; the recorded episode fails at 200 actions. These sparse views do not establish force or slippage."
+    },
+    {
+      "file": "contact-sheets-20000/handle-press-00000.png",
+      "sha256": "a5d432bfb79bd985d44294ab87f6ce35d5e0cb879eb616bf21d1ffe971f0ca4b",
+      "id": "validation/handle-press/00000",
+      "success": true,
+      "steps": 16,
+      "observation": "The gripper approaches the handle region; the registered record reports success."
+    },
+    {
+      "file": "contact-sheets-20000/pick-place-00000.png",
+      "sha256": "88b87801e9536223dc14c28b632b6a3a5decbe78c1bf88a6e8a2b99c5764be41",
+      "id": "validation/pick-place/00000",
+      "success": false,
+      "steps": 200,
+      "observation": "The object remains on the tabletop across all five samples while the hand moves toward the target side; the record reports failure at 200 actions. No visible carry is established."
+    },
+    {
+      "file": "contact-sheets-20000/reach-00003.png",
+      "sha256": "b8612552de881bba8665a40c89a5cc60e6cf14ba69a10fd13d0a98963d64788c",
+      "id": "validation/reach/00003",
+      "success": false,
+      "steps": 200,
+      "observation": "The gripper approaches the target region and remains nearby in the late samples. Recorded failure at 200 actions; the projection does not establish three-dimensional contact or distance."
+    },
+    {
+      "file": "contact-sheets-20000/reach-00005.png",
+      "sha256": "fc025ac2fecabf14498cc6097a581398e2dc7366a5e8cb3c6bb9bc5dce8d5f1e",
+      "id": "validation/reach/00005",
+      "success": true,
+      "steps": 54,
+      "observation": "The gripper moves toward the target region; the registered record reports success."
+    }
+  ],
+  "render_review": "All ten exact final 1536-by-326 PNGs were opened and visually inspected at readable resolution. Titles, labels, five measured frames and registered goal panels are complete.",
+  "limitations": [
+    "Ten preregistered saved trajectories, including three failures; not visual coverage of every failed case.",
+    "No model or simulator calls.",
+    "Success labels come from registered records. Sparse single-view frames do not establish physical causes or outcomes of unexecuted alternatives."
+  ]
+}

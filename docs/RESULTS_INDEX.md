@@ -1,40 +1,22 @@
-Current Bayesian repair result: **5k 71/104, 10k 76/104**; zero/two timeouts.
-Training continues; the retained reference remains 80/104.
-[Interim findings and complete saved evidence](BAYESIAN_REPAIR_TTT.md#first-two-fixed-evaluations-71104-and-76104).
-
-# Verified active Bayesian repair run (October12)
-
-Fresh source4d322c9/all173 runtime hashes and8-rank checks verified. At08:39:58UTC,
-2,000 finite updates on GPUs0–7; W&B u1hdmwqr running. Coordinator1562004,
-launcher1564888, ranks1564893–1564900. TRAIN-only diagnostic supports factual
-adaptation (MAE−6.01%, MSE−17.67%); latency81.12ms. Read
-[method and launch evidence](BAYESIAN_REPAIR_TTT.md) and the active ledger.
-No development result yet. Preserve active source, fixed budget and four104
-evaluations. No duplicate launch, baseline work, speculative queue or sealed tests.
-
-# Active registered candidate: Bayesian decision-calibrated repair
-
-See [implementation and fixed-budget protocol](BAYESIAN_REPAIR_TTT.md) and the
-active ledger. Fresh training is gated by TRAIN-only factual and implementation
-checks. Prior completed results below remain unchanged; no new score yet.
-
 # Results and completion publication
 
-Updated October12,2026. Execution-calibrated goal progress completes **72/72/78/77**,
-selecting15k78/104, below the retained **80/104** references. All scores use the
-same104 development cases and seed3072; final tests remain sealed. Custom method
-ports, one seed, reused development cases and matched ceilings do not establish
+Updated October 12, 2026. Bayesian posterior repair completes **71/76/77/77**,
+selecting **15k 77/104**, below the retained **80/104** references. All scores use
+the same 104 development cases and seed 3072; final tests remain sealed. Custom
+method ports, one seed, reused cases and matched ceilings do not establish
 native-benchmark SOTA, component causality or generalization.
 
 ## Current iteration status
 
-[Progress-objective completed](PROGRESS_OBJECTIVE_TTT_RESULTS.md): full metrics,
-all four evaluations,40 inspected contact sheets, checkpoint hashes and actual
-compute preserved. Source/data audit and process/online completion verified.
-Completion is remotely verified at82f6787 (382 artifact blobs/53 reports).
-[Further launches are held for review](PROGRESS_OBJECTIVE_TTT_REVIEW.md): no
-specific supported correction is justified now. Monitoring remains available
-for subsequent authorized registered work.
+[Bayesian repair completed](BAYESIAN_REPAIR_TTT_RESULTS.md): 1,200 periodic training
+records, four fixed 104-case reports, all three timeouts, 40 inspected contact
+sheets, checkpoint hashes and actual compute are preserved. Source/data/posterior
+audit and process/online completion are verified. Known cumulative measured
+components total **111.56490618890 GPUh**; this is not a full cluster bill.
+[Further launches are held for review](BAYESIAN_REPAIR_TTT_REVIEW.md). No next
+candidate is authorized. Monitoring remains available for subsequent explicitly
+authorized registered work. A local ledger is not publication proof; use its live
+remote verification receipt.
 
 ## Preserved comparisons
 
@@ -46,7 +28,8 @@ checkpoint, with earliest ties.
 
 | Method and findings | Success curve /104 | Selected | Optimization GPUh |
 | --- | --- | ---: | ---: |
-| [Execution-calibrated goal progress, latest](PROGRESS_OBJECTIVE_TTT_RESULTS.md) | 72 / 72 / 78 / 77 | 78 at15k | 4.585 |
+| [Bayesian posterior repair](BAYESIAN_REPAIR_TTT_RESULTS.md) | 71 / 76 / 77 / 77 | 77 at15k | 4.148 |
+| [Execution-calibrated goal progress](PROGRESS_OBJECTIVE_TTT_RESULTS.md) | 72 / 72 / 78 / 77 | 78 at15k | 4.585 |
 | [Shifted-plan repair](SHIFTED_REPAIR_TTT_RESULTS.md) | 79 / 78 / 74 / 78 | 79 at5k | 2.233 |
 | [Retrieval-conditioned repair](RETRIEVAL_REPAIR_TTT_RESULTS.md) | 75 / 77 / 79 / 80 | 80 at20k | 1.749 |
 | [Repair-flow TTT](REPAIR_FLOW_TTT_RESULTS.md) | 80 / 73 / 75 / 75 | 80 at5k | 1.620 |
@@ -71,8 +54,8 @@ controller does not use a diffusion/flow generator.
 
 The machine-readable [results ledger](results-ledger.json) points to each run's
 identity, complete marker, metrics, all evaluations and SHA256 hashes. Its
-read-only verifier checks the hashed evidence artifacts,53 evaluation reports and all
-104 case identities across the fourteen current comparisons. Run
+read-only verifier checks the hashed evidence artifacts,57 evaluation reports and all
+104 case identities across the fifteen current comparisons. Run
 `python3 scripts/analysis/verify_result_publications.py` from the repository.
 It invokes no models or simulators and does not read final-test outcomes.
 

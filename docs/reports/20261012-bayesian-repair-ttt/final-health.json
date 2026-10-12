@@ -1,0 +1,344 @@
+{
+  "utc": "2026-10-12T09:29:20.964544+00:00",
+  "source": "4d322c90e216702fae2cd29c91e49ad90da713d9",
+  "source_clean": true,
+  "runtime_hash_count": 173,
+  "status": {
+    "code": "4d322c90e216702fae2cd29c91e49ad90da713d9",
+    "pid": 1562004,
+    "run_dir": "/home/mtxu/adam/LeFlow-experiments/20261012-bayesian-repair-ttt/campaign/runs/bayesian_repair_ttt_3072",
+    "status": "completed_validation_ready_for_analysis",
+    "utc": "2026-10-12T09:26:33.737340+00:00",
+    "wall_seconds": 3148.232941854745
+  },
+  "compute": {
+    "global_batch": 64,
+    "gpu_count": 8,
+    "last_update_overrun_gpu_seconds": 0.0,
+    "optimization_cap_gpu_seconds": 28800,
+    "optimization_gpu_hours": 4.147635454680357,
+    "optimization_gpu_seconds": 14931.487636849284,
+    "step": 20000,
+    "stop_check": "optimizer boundary; final-update overrun reported",
+    "validation_gpu_hours": 2.1098508322652845,
+    "validation_gpu_seconds": 7595.462996155024,
+    "validation_steps": [
+      5000,
+      10000,
+      15000,
+      20000
+    ]
+  },
+  "worker": {
+    "command": [
+      "/tmp/mtxu-flow-jepa-20261007/env/bin/python",
+      "-m",
+      "torch.distributed.run",
+      "--nnodes=1",
+      "--nproc_per_node=8",
+      "--rdzv-backend=c10d",
+      "--rdzv-endpoint=127.0.0.1:0",
+      "-m",
+      "flow_jepa.execution.train",
+      "--config",
+      "/home/mtxu/adam/LeFlow-experiments/20261012-bayesian-repair-ttt/repo/config/flow_metaworld_bayesian_repair_ttt.json",
+      "--root",
+      "/home/mtxu/adam/LeFlow-experiments/20261012-bayesian-repair-ttt/campaign",
+      "--run-dir",
+      "/home/mtxu/adam/LeFlow-experiments/20261012-bayesian-repair-ttt/campaign/runs/bayesian_repair_ttt_3072",
+      "--world",
+      "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt",
+      "--bank",
+      "/tmp/mtxu-bayesian-repair-ttt-20261012/route_bank.pt"
+    ],
+    "pid": 1564888
+  },
+  "processes": [
+    {
+      "pid": 1562004,
+      "present": false
+    },
+    {
+      "pid": 1564888,
+      "present": false
+    },
+    {
+      "pid": 1564893,
+      "present": false
+    },
+    {
+      "pid": 1564894,
+      "present": false
+    },
+    {
+      "pid": 1564895,
+      "present": false
+    },
+    {
+      "pid": 1564896,
+      "present": false
+    },
+    {
+      "pid": 1564897,
+      "present": false
+    },
+    {
+      "pid": 1564898,
+      "present": false
+    },
+    {
+      "pid": 1564899,
+      "present": false
+    },
+    {
+      "pid": 1564900,
+      "present": false
+    },
+    {
+      "pid": 1565136,
+      "present": false
+    },
+    {
+      "pid": 1565137,
+      "present": false
+    },
+    {
+      "pid": 1565138,
+      "present": false
+    },
+    {
+      "pid": 1565142,
+      "present": false
+    },
+    {
+      "pid": 1565144,
+      "present": false
+    },
+    {
+      "pid": 1565145,
+      "present": false
+    },
+    {
+      "pid": 1565146,
+      "present": false
+    },
+    {
+      "pid": 1565150,
+      "present": false
+    },
+    {
+      "pid": 1565152,
+      "present": false
+    },
+    {
+      "pid": 1565153,
+      "present": false
+    },
+    {
+      "pid": 1565154,
+      "present": false
+    },
+    {
+      "pid": 1565158,
+      "present": false
+    },
+    {
+      "pid": 1565160,
+      "present": false
+    },
+    {
+      "pid": 1565161,
+      "present": false
+    },
+    {
+      "pid": 1565162,
+      "present": false
+    },
+    {
+      "pid": 1565169,
+      "present": false
+    },
+    {
+      "pid": 1565171,
+      "present": false
+    },
+    {
+      "pid": 1565172,
+      "present": false
+    },
+    {
+      "pid": 1565173,
+      "present": false
+    },
+    {
+      "pid": 1565175,
+      "present": false
+    },
+    {
+      "pid": 1565180,
+      "present": false
+    },
+    {
+      "pid": 1565181,
+      "present": false
+    },
+    {
+      "pid": 1565182,
+      "present": false
+    },
+    {
+      "pid": 1565183,
+      "present": false
+    },
+    {
+      "pid": 1565188,
+      "present": false
+    },
+    {
+      "pid": 1565189,
+      "present": false
+    },
+    {
+      "pid": 1565190,
+      "present": false
+    },
+    {
+      "pid": 1565191,
+      "present": false
+    },
+    {
+      "pid": 1565198,
+      "present": false
+    },
+    {
+      "pid": 1565199,
+      "present": false
+    },
+    {
+      "pid": 1565200,
+      "present": false
+    },
+    {
+      "pid": 1565201,
+      "present": false
+    },
+    {
+      "pid": 1565339,
+      "present": false
+    },
+    {
+      "pid": 1565362,
+      "present": false
+    }
+  ],
+  "checkpoints": {
+    "checkpoints/step_0005000.pt": {
+      "bytes": 77898721,
+      "sha256": "4cf800dbe4d869b9bb51070896ed70e0f0a89ece98ce90020e51d447789e8dc9"
+    },
+    "checkpoints/step_0010000.pt": {
+      "bytes": 77898721,
+      "sha256": "53f2569152f1f4582ba942b05fe6f1a3c1927fc0c600b45cdde165560ad3a3e8"
+    },
+    "checkpoints/step_0015000.pt": {
+      "bytes": 77898721,
+      "sha256": "6e66a2378604158eddd905119da5980f20e5df39d205a718c626a9fcb06a51ed"
+    },
+    "checkpoints/step_0020000.pt": {
+      "bytes": 77898721,
+      "sha256": "f469f819b9356d8bc1a016ec824ef18d55be5224df25a2f70fa7f0d9a2cf2584"
+    }
+  },
+  "last_metric_step": 20000,
+  "training_rows": 1200,
+  "finite_metrics": true,
+  "monotone_optimization_charge": true,
+  "source_files": {
+    "run/run.json": {
+      "bytes": 561,
+      "sha256": "155f9520ff1c4fa1c916932513e8e62e27b27218c89878debcfa62a71dd7d48a"
+    },
+    "run/compute_usage.json": {
+      "bytes": 472,
+      "sha256": "11f17323570b3a298dfb025d410b980ee406a3d56113bce7455bcfd89377af77"
+    },
+    "run/retrieval-setup.json": {
+      "bytes": 289,
+      "sha256": "04fbd4404ed2e5485d9550a2a5910142d8c9267ed27a6ae33833e19c28fde01b"
+    },
+    "run/metrics.jsonl": {
+      "bytes": 1686841,
+      "sha256": "5d9d481860fa1e1e2d33612c1899507ff60a8925a93223b6827c8f19c32be1ae"
+    },
+    "run/complete.json": {
+      "bytes": 306,
+      "sha256": "f822b87e4dccec8ddf6022baf08cc6c2ae78606640198904f83fee3a0a8677b2"
+    }
+  },
+  "wandb": {
+    "id": "u1hdmwqr",
+    "state": "finished",
+    "summary": {
+      "budget/optimization_gpu_hours": 4.147635454680357,
+      "step": 20000,
+      "train/loss": 0.15272676944732666,
+      "validation/checkpoint_step": 20000,
+      "validation/controller_budget_exhausted_rate": 0.009615384615384616,
+      "validation/controller_budget_overrun_seconds_mean": 4.617389864646471e-06,
+      "validation/controller_seconds_per_episode_mean": 4.488503861688794,
+      "validation/controller_step_latency_ms_mean": 88.51050466735582,
+      "validation/controller_step_latency_ms_p95": 92.77006229385734,
+      "validation/episodes": 104,
+      "validation/expert_goal_failure_rate": 0,
+      "validation/latency_ms_mean": 88.5374735548785,
+      "validation/observed_subgoal_cosine": 0.017235526833471678,
+      "validation/return_mean": 286.001114392878,
+      "validation/seen_success_macro": 0.7403846153846154,
+      "validation/steps_to_success_capped_mean": 101.4423076923077,
+      "validation/success_macro": 0.7403846153846154,
+      "validation/success_within_100_primitive": 0.6826923076923077,
+      "validation/success_within_200_primitive": 0.7403846153846154,
+      "validation/success_within_50_primitive": 0.20192307692307693,
+      "validation/task/assembly/ci95_high": 0.7847874731755582,
+      "validation/task/assembly/ci95_low": 0.21521252682444184,
+      "validation/task/assembly/success": 0.5,
+      "validation/task/button-press-topdown/ci95_high": 1,
+      "validation/task/button-press-topdown/ci95_low": 0.6755843804891231,
+      "validation/task/button-press-topdown/success": 1,
+      "validation/task/coffee-button/ci95_high": 1,
+      "validation/task/coffee-button/ci95_low": 0.6755843804891231,
+      "validation/task/coffee-button/success": 1,
+      "validation/task/dial-turn/ci95_high": 1,
+      "validation/task/dial-turn/ci95_low": 0.6755843804891231,
+      "validation/task/dial-turn/success": 1,
+      "validation/task/door-close/ci95_high": 1,
+      "validation/task/door-close/ci95_low": 0.6755843804891231,
+      "validation/task/door-close/success": 1,
+      "validation/task/door-open/ci95_high": 0.9285223111419724,
+      "validation/task/door-open/ci95_low": 0.4092698791025891,
+      "validation/task/door-open/success": 0.75,
+      "validation/task/drawer-close/ci95_high": 1,
+      "validation/task/drawer-close/ci95_low": 0.6755843804891231,
+      "validation/task/drawer-close/success": 1,
+      "validation/task/drawer-open/ci95_high": 1,
+      "validation/task/drawer-open/ci95_low": 0.6755843804891231,
+      "validation/task/drawer-open/success": 1,
+      "validation/task/faucet-open/ci95_high": 0.4708948057698615,
+      "validation/task/faucet-open/ci95_low": 0.02241690886329617,
+      "validation/task/faucet-open/success": 0.125,
+      "validation/task/handle-press/ci95_high": 1,
+      "validation/task/handle-press/ci95_low": 0.6755843804891231,
+      "validation/task/handle-press/success": 1,
+      "validation/task/pick-place/ci95_high": 0.4708948057698615,
+      "validation/task/pick-place/ci95_low": 0.02241690886329617,
+      "validation/task/pick-place/success": 0.125,
+      "validation/task/plate-slide/ci95_high": 1,
+      "validation/task/plate-slide/ci95_low": 0.6755843804891231,
+      "validation/task/plate-slide/success": 1,
+      "validation/task/reach/ci95_high": 0.4708948057698615,
+      "validation/task/reach/ci95_low": 0.02241690886329617,
+      "validation/task/reach/success": 0.125,
+      "validation/world_predictions_mean": 14196.53846153846
+    }
+  }
+}

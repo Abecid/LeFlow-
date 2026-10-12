@@ -1,0 +1,14 @@
+{
+  "failures": [
+    {
+      "operation": "Redundant full live-report read at about09:26 UTC",
+      "result": "Local70-second SSH timeout; no completion inferred from that read."
+    },
+    {
+      "operation": "Final-report compression transport and first diagnostic transport",
+      "result": "SSH exited255 after the15k compression status / without diagnostic output. Existing server compressed files were reused and raw/compressed hashes verified on retry."
+    }
+  ],
+  "recovery": "A fresh SSH control connection completed the idempotent compression/read-only diagnostics. SFTP with262144-byte buffers and256 outstanding requests preserved full original report bytes. No optimizer/evaluation replay, source edits or unrelated-job intervention.",
+  "interim_publication_receipt": "publication-round-2.json"
+}

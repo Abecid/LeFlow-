@@ -48,6 +48,10 @@ def main(args):
         for offset in range(0,len(a),1024):assert torch.equal(a[offset:offset+1024],b[offset:offset+1024]),key
     assert len(bank['episode_ids'])==6222 and all(i.startswith('train/') for i in bank['episode_ids'])
     assert c['seeds']==[3072] and c['training']['global_batch']==64 and not c['execution']['test_enabled']
+    if bayesian:
+        assert c['bayesian_repair_ttt']['training_rounds']==3
+        assert c['flow_reasoning']['rounds']==2
+        assert c['bayesian_repair_ttt']['acceptance_beta']==1.644854
     if method=='progress_objective_ttt':
         assert not c['progress_objective']['generated_outcome_labels']
         assert c['progress_objective']['score_weight']==.05
@@ -78,6 +82,9 @@ def main(args):
             assert 'fast_prior' not in saved['model'] and 'prior_tril' not in saved['model']
             assert saved['model']['memory_w0'].shape==(32,64)
             assert saved['model']['memory_w1'].shape==(64,1)
+        if bayesian:
+            assert all(k in saved['model'] for k in ('prior_tril','log_noise_variance','fast_prior'))
+            assert not any(k.startswith('goal_progress.') for k in saved['model'])
         if method=='progress_objective_ttt':
             assert any(k.startswith('goal_progress.') for k in saved['model'])
             assert 'progress_prior' in saved['model']
@@ -193,6 +200,7 @@ def main(args):
         training_coverage_logging_verified=True,compute=usage,complete=complete,
         nonlinear_executed_prefix_memory_verified=nonlinear,
         progress_score_and_causal_fit_verified=(method=='progress_objective_ttt'),
+        posterior_acceptance_and_cached_incumbents_verified=bayesian,
         final_tests_read=False,model_calls=0,simulator_calls=0)
     Path(args.output).write_text(json.dumps(result,indent=2)+'\n')
     print(json.dumps(dict(audit_passed=True,rounds=rounds,selected_step=selected['step'])))

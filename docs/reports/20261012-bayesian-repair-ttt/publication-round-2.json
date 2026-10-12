@@ -1,0 +1,21 @@
+{
+  "verified_utc": "2026-10-12T09:28:11.501317+00:00",
+  "live_origin_main": "c5421c282920fa09223f9dfdd5e978c40e958f15",
+  "ledger_artifact_blobs_verified": 452,
+  "report_status_files_verified": 17,
+  "completed_comparisons": 14,
+  "completed_evaluation_reports": 53,
+  "active_evaluation_reports": 2,
+  "remote_blobs_match_ledger_sha256": true,
+  "report_status_bytes_match_local": true,
+  "publication_attempts": [
+    {
+      "commit": "c5421c282920fa09223f9dfdd5e978c40e958f15",
+      "result": "failed",
+      "stderr": "RPC failed; HTTP 400 curl 22. send-pack unexpected disconnect; fatal remote end hung up. Trailing Everything up-to-date was not treated as proof.",
+      "remote_readback": "027513bf59b5a7188da87937cba8d629779e6f8f",
+      "recovery": "Non-force retry with per-command HTTP/1.1 and 512MiB postBuffer; no repository history rewrite."
+    }
+  ],
+  "recovery_verified": true
+}

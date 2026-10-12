@@ -1,0 +1,12 @@
+{
+  "final_health_utc": "2026-10-12T09:29:20.964544+00:00",
+  "source_files_verified": 5,
+  "original_metrics_and_metadata_hashes_verified": true,
+  "all_44_owned_processes_absent": true,
+  "wandb_finished": true,
+  "full_final_audit": "analysis/final-audit.json",
+  "all_40_exact_contact_sheets_visually_reviewed": true,
+  "model_calls": 0,
+  "simulator_calls": 0,
+  "final_tests_read": false
+}

@@ -1,0 +1,26 @@
+{
+  "complete": true,
+  "prior_known_measured_gpu_hours": 105.28452734094218,
+  "separate_setup_components": {
+    "train_only_diagnostic_gpu_hours": 0.0015554047945059008,
+    "preflight_gpu_hours": 0.005896763030646576,
+    "ddp_no_update_gpu_hours": 0.010083862940470378,
+    "retrieval_setup_gpu_hours": 0.0053565302491188046
+  },
+  "route_bank_cpu_seconds": 22.105842977762222,
+  "optimization_gpu_hours": 4.147635454680357,
+  "evaluation_gpu_hours": 2.1098508322652845,
+  "known_measured_components_gpu_hours": 111.56490618890255,
+  "last_update_overrun_gpu_seconds": 0.0,
+  "not_a_full_cluster_bill": true,
+  "optimizer_gpu_seconds_limit": 28800,
+  "optimizer_update_limit": 20000,
+  "step": 20000,
+  "source_compute_sha256": "11f17323570b3a298dfb025d410b980ee406a3d56113bce7455bcfd89377af77",
+  "limits": [
+    "All learned modules and per-update retrieval are inside optimization.",
+    "Diagnostic, preflight, no-update DDP and retrieval setup are counted separately.",
+    "CPU bank remapping, reporting, compression, transfers, idle reservations and unmeasured infrastructure are not assigned invented GPU charges.",
+    "One seed and matched ceilings, not matched consumed compute."
+  ]
+}

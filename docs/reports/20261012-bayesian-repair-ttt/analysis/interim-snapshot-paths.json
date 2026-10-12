@@ -1,0 +1,16 @@
+{
+  "interim_health_artifact": "docs/reports/20261012-bayesian-repair-ttt/interim-health-round-1.json",
+  "historical_mutable_paths": {
+    "run/metrics.jsonl.gz": {
+      "artifact": "docs/reports/20261012-bayesian-repair-ttt/run/metrics-through-14051.jsonl.gz",
+      "sha256": "0c21e55c4cc753827b79f317674d58ec3075931cf9d27a301ddd066a42ead14a",
+      "source_commit": "c5421c282920fa09223f9dfdd5e978c40e958f15"
+    },
+    "run/compute_usage.json": {
+      "artifact": "docs/reports/20261012-bayesian-repair-ttt/run/compute-usage-through-14051.json",
+      "sha256": "13e698dd85431160fc7eb1bb0ec5336c94ee3034f6a2a41fe8637c9bfe939f44",
+      "source_commit": "c5421c282920fa09223f9dfdd5e978c40e958f15"
+    }
+  },
+  "final_metrics_preserve_interim_prefix_exactly": true
+}
