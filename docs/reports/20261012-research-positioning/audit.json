@@ -1,0 +1,3477 @@
+{
+  "schema_version": 1,
+  "audit_title": "Research positioning: independently recounted MetaWorld evidence",
+  "repository": "Abecid/LeFlow-",
+  "source_main_commit": "d42d76c1cf2f39a56de189148482122775c3962e",
+  "created_utc": "2026-10-12T21:07:35.090925+00:00",
+  "audit_scope": {
+    "read_only": true,
+    "training_calls": 0,
+    "model_calls": 0,
+    "simulator_calls": 0,
+    "test_outcomes_read": false,
+    "current_full_reports_independently_recounted": 57,
+    "historical_full_reports_independently_recounted": 24,
+    "full_reports_total": 81,
+    "full_episode_records_total": 8424,
+    "current_episode_identity_comparisons_match": true,
+    "current_shared_cases": 104,
+    "bayesian_manifest_reports_inspected": 4,
+    "bayesian_full_chunk_archives_reassembled": false,
+    "bayesian_limit": "The four raw Bayesian evaluation files are manifests for losslessly compressed chunk archives. Counts, latency and per-task values here are sourced from the existing compact final analysis, not independently recounted from the full chunked records.",
+    "bayesian_analysis_source": {
+      "path": "docs/reports/20261012-bayesian-repair-ttt/analysis/final-details.json",
+      "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261012-bayesian-repair-ttt/analysis/final-details.json",
+      "repository_recorded_sha256": "f7e04847f0e791d65b3e2b5da2f8437762893537dcc843af54a13d78262bed2b"
+    }
+  },
+  "protocol": {
+    "training_seed": 3072,
+    "policy_training_successful_expert_episodes": 6222,
+    "world_training_episodes": 7800,
+    "world_expert_episodes": 6240,
+    "world_random_episodes": 1560,
+    "primitive_actions_per_training_episode": 200,
+    "global_batch_size": 64,
+    "charged_update_ceiling": 20000,
+    "optimization_gpu_seconds_ceiling": 28800,
+    "development_tasks": 13,
+    "cases_per_development_task": 8,
+    "development_cases": 104,
+    "reused_development_milestones": [
+      5000,
+      10000,
+      15000,
+      20000
+    ],
+    "selection_rule": "highest_development_success_earliest_tie",
+    "primitive_action_limit": 200,
+    "cumulative_controller_seconds_limit": 10,
+    "reserved_final_cases": 3200,
+    "reserved_final_tasks": 16,
+    "interpretation_limits": [
+      "One training seed and repeatedly reused development cases do not establish independent generalization or training-seed uncertainty.",
+      "Method ports use a shared custom world and benchmark; these are not authors native benchmark scores.",
+      "Equal update and compute ceilings do not imply equal consumed compute or matched convergence.",
+      "Historical representation/world changes prevent pooling historical results with the current comparison.",
+      "Cross-run differences do not isolate flow generation, repair, retrieval, TTT, reasoning or other bundled components."
+    ]
+  },
+  "current_comparisons": [
+    {
+      "method": "nonlinear_repair_ttt",
+      "training_source_commit": "d0cae3007c7d678cdc5ddb68ce731e8a2db3005d",
+      "report_path": "docs/NONLINEAR_REPAIR_TTT_RESULTS.md",
+      "report_url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/NONLINEAR_REPAIR_TTT_RESULTS.md",
+      "selected_step": 5000,
+      "selected_successes": 73,
+      "selected_success_percent": 70.1923076923077,
+      "selected_timeouts": 0,
+      "selected_mean_decision_ms": 93.23962521094747,
+      "selected_p95_decision_ms": 102.79834512621161,
+      "selected_per_task_successes": {
+        "assembly": 0,
+        "button-press-topdown": 8,
+        "coffee-button": 8,
+        "dial-turn": 3,
+        "door-close": 8,
+        "door-open": 7,
+        "drawer-close": 8,
+        "drawer-open": 7,
+        "faucet-open": 0,
+        "handle-press": 8,
+        "pick-place": 0,
+        "plate-slide": 8,
+        "reach": 8
+      },
+      "final_successes": 72,
+      "optimization_gpu_hours": 4.812525830430289,
+      "validation_gpu_hours": 2.3258419658450618,
+      "curve": [
+        {
+          "step": 5000,
+          "episodes": 104,
+          "successes": 73,
+          "timeouts": 0,
+          "mean_decision_ms": 93.23962521094747,
+          "p95_decision_ms": 102.79834512621161,
+          "per_task_successes": {
+            "assembly": 0,
+            "button-press-topdown": 8,
+            "coffee-button": 8,
+            "dial-turn": 3,
+            "door-close": 8,
+            "door-open": 7,
+            "drawer-close": 8,
+            "drawer-open": 7,
+            "faucet-open": 0,
+            "handle-press": 8,
+            "pick-place": 0,
+            "plate-slide": 8,
+            "reach": 8
+          },
+          "evidence_level": "independently_recounted_full_episode_records",
+          "source": {
+            "path": "docs/reports/20261012-nonlinear-repair-ttt/run/validation/step_0005000.json.gz",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261012-nonlinear-repair-ttt/run/validation/step_0005000.json.gz",
+            "git_blob_sha1": "c45f68190770603d7977f5b81f4668d5cf1e0b81",
+            "sha256": "990160ac768aa9eba886acc16ae177d4300c48215b6633d50e7e2accf9915fa2"
+          }
+        },
+        {
+          "step": 10000,
+          "episodes": 104,
+          "successes": 66,
+          "timeouts": 4,
+          "mean_decision_ms": 97.39129118139631,
+          "p95_decision_ms": 113.19995010271676,
+          "per_task_successes": {
+            "assembly": 0,
+            "button-press-topdown": 7,
+            "coffee-button": 8,
+            "dial-turn": 2,
+            "door-close": 7,
+            "door-open": 5,
+            "drawer-close": 8,
+            "drawer-open": 8,
+            "faucet-open": 0,
+            "handle-press": 8,
+            "pick-place": 0,
+            "plate-slide": 7,
+            "reach": 6
+          },
+          "evidence_level": "independently_recounted_full_episode_records",
+          "source": {
+            "path": "docs/reports/20261012-nonlinear-repair-ttt/run/validation/step_0010000.json.gz",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261012-nonlinear-repair-ttt/run/validation/step_0010000.json.gz",
+            "git_blob_sha1": "b04a08b185c222d0bdab7af897ae1b97e926aa2b",
+            "sha256": "12488d55431d2459217571f23fe4dc32046bde877383da5f1f8185ab4721cbd9"
+          }
+        },
+        {
+          "step": 15000,
+          "episodes": 104,
+          "successes": 67,
+          "timeouts": 0,
+          "mean_decision_ms": 90.8330812710168,
+          "p95_decision_ms": 95.69936022162436,
+          "per_task_successes": {
+            "assembly": 0,
+            "button-press-topdown": 8,
+            "coffee-button": 8,
+            "dial-turn": 3,
+            "door-close": 6,
+            "door-open": 6,
+            "drawer-close": 8,
+            "drawer-open": 8,
+            "faucet-open": 1,
+            "handle-press": 8,
+            "pick-place": 0,
+            "plate-slide": 7,
+            "reach": 4
+          },
+          "evidence_level": "independently_recounted_full_episode_records",
+          "source": {
+            "path": "docs/reports/20261012-nonlinear-repair-ttt/run/validation/step_0015000.json.gz",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261012-nonlinear-repair-ttt/run/validation/step_0015000.json.gz",
+            "git_blob_sha1": "a015e7e7682b7e04c98628ca00c7a527dbd15e65",
+            "sha256": "d28382afab0dcdbb3fbfafabf3cef868c770274034669692cccd600a2dba40f1"
+          }
+        },
+        {
+          "step": 20000,
+          "episodes": 104,
+          "successes": 72,
+          "timeouts": 0,
+          "mean_decision_ms": 91.00718250530853,
+          "p95_decision_ms": 96.63765188306569,
+          "per_task_successes": {
+            "assembly": 0,
+            "button-press-topdown": 8,
+            "coffee-button": 8,
+            "dial-turn": 6,
+            "door-close": 7,
+            "door-open": 7,
+            "drawer-close": 8,
+            "drawer-open": 8,
+            "faucet-open": 0,
+            "handle-press": 8,
+            "pick-place": 0,
+            "plate-slide": 8,
+            "reach": 4
+          },
+          "evidence_level": "independently_recounted_full_episode_records",
+          "source": {
+            "path": "docs/reports/20261012-nonlinear-repair-ttt/run/validation/step_0020000.json.gz",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261012-nonlinear-repair-ttt/run/validation/step_0020000.json.gz",
+            "git_blob_sha1": "06a35389c07612d7df61bd5ddacd19257995650b",
+            "sha256": "8beaae132b7347314646c0ffcc4f997dbac188a54b318c5769f58b791a447bed"
+          }
+        }
+      ]
+    },
+    {
+      "method": "bayesian_repair_ttt",
+      "training_source_commit": "4d322c90e216702fae2cd29c91e49ad90da713d9",
+      "report_path": "docs/BAYESIAN_REPAIR_TTT_RESULTS.md",
+      "report_url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/BAYESIAN_REPAIR_TTT_RESULTS.md",
+      "selected_step": 15000,
+      "selected_successes": 77,
+      "selected_success_percent": 74.03846153846153,
+      "selected_timeouts": 0,
+      "selected_mean_decision_ms": 88.63331488625873,
+      "selected_p95_decision_ms": 92.52043254673481,
+      "selected_per_task_successes": {
+        "assembly": 2,
+        "button-press-topdown": 8,
+        "coffee-button": 8,
+        "dial-turn": 8,
+        "door-close": 8,
+        "door-open": 8,
+        "drawer-close": 8,
+        "drawer-open": 8,
+        "faucet-open": 2,
+        "handle-press": 8,
+        "pick-place": 0,
+        "plate-slide": 8,
+        "reach": 1
+      },
+      "final_successes": 77,
+      "optimization_gpu_hours": 4.147635454680357,
+      "validation_gpu_hours": 2.1098508322652845,
+      "curve": [
+        {
+          "step": 5000,
+          "episodes": 104,
+          "successes": 71,
+          "timeouts": 0,
+          "mean_decision_ms": 88.5875925878071,
+          "p95_decision_ms": 92.72838197648525,
+          "per_task_successes": {
+            "assembly": 1,
+            "button-press-topdown": 8,
+            "coffee-button": 8,
+            "dial-turn": 7,
+            "door-close": 7,
+            "door-open": 6,
+            "drawer-close": 8,
+            "drawer-open": 8,
+            "faucet-open": 1,
+            "handle-press": 8,
+            "pick-place": 0,
+            "plate-slide": 8,
+            "reach": 1
+          },
+          "evidence_level": "saved_compact_analysis_not_independently_recounted_chunked_raw_records",
+          "source": {
+            "path": "docs/reports/20261012-bayesian-repair-ttt/run/validation/step_0005000.json",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261012-bayesian-repair-ttt/run/validation/step_0005000.json",
+            "git_blob_sha1": "3cee9fdec0823d4a0d4ef16bae1406ec1c902a28",
+            "sha256": "f4b6c117f4ce8a7032a4fc59fa46b6aa1c77dd00cb9fb99806f353ea2b423cd6"
+          }
+        },
+        {
+          "step": 10000,
+          "episodes": 104,
+          "successes": 76,
+          "timeouts": 2,
+          "mean_decision_ms": 89.26417163951336,
+          "p95_decision_ms": 92.89961084723473,
+          "per_task_successes": {
+            "assembly": 1,
+            "button-press-topdown": 8,
+            "coffee-button": 8,
+            "dial-turn": 8,
+            "door-close": 8,
+            "door-open": 7,
+            "drawer-close": 8,
+            "drawer-open": 8,
+            "faucet-open": 1,
+            "handle-press": 8,
+            "pick-place": 0,
+            "plate-slide": 8,
+            "reach": 3
+          },
+          "evidence_level": "saved_compact_analysis_not_independently_recounted_chunked_raw_records",
+          "source": {
+            "path": "docs/reports/20261012-bayesian-repair-ttt/run/validation/step_0010000.json",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261012-bayesian-repair-ttt/run/validation/step_0010000.json",
+            "git_blob_sha1": "cc779efc6dec44fbdd71fdb14377f81204ffbf95",
+            "sha256": "ea1bae950719b3c4c8743b030e62cf54f212cd881f09aaa285e80a924f02c553"
+          }
+        },
+        {
+          "step": 15000,
+          "episodes": 104,
+          "successes": 77,
+          "timeouts": 0,
+          "mean_decision_ms": 88.63331488625873,
+          "p95_decision_ms": 92.52043254673481,
+          "per_task_successes": {
+            "assembly": 2,
+            "button-press-topdown": 8,
+            "coffee-button": 8,
+            "dial-turn": 8,
+            "door-close": 8,
+            "door-open": 8,
+            "drawer-close": 8,
+            "drawer-open": 8,
+            "faucet-open": 2,
+            "handle-press": 8,
+            "pick-place": 0,
+            "plate-slide": 8,
+            "reach": 1
+          },
+          "evidence_level": "saved_compact_analysis_not_independently_recounted_chunked_raw_records",
+          "source": {
+            "path": "docs/reports/20261012-bayesian-repair-ttt/run/validation/step_0015000.json",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261012-bayesian-repair-ttt/run/validation/step_0015000.json",
+            "git_blob_sha1": "f88beba2a32af1fb57b4800056850de93344ff7f",
+            "sha256": "0d0e475e07cffe2c93904d6287f56f21d332357a16f2d8d9ff8508375d781d77"
+          }
+        },
+        {
+          "step": 20000,
+          "episodes": 104,
+          "successes": 77,
+          "timeouts": 1,
+          "mean_decision_ms": 88.51050466735582,
+          "p95_decision_ms": 92.77006229385734,
+          "per_task_successes": {
+            "assembly": 4,
+            "button-press-topdown": 8,
+            "coffee-button": 8,
+            "dial-turn": 8,
+            "door-close": 8,
+            "door-open": 6,
+            "drawer-close": 8,
+            "drawer-open": 8,
+            "faucet-open": 1,
+            "handle-press": 8,
+            "pick-place": 1,
+            "plate-slide": 8,
+            "reach": 1
+          },
+          "evidence_level": "saved_compact_analysis_not_independently_recounted_chunked_raw_records",
+          "source": {
+            "path": "docs/reports/20261012-bayesian-repair-ttt/run/validation/step_0020000.json",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261012-bayesian-repair-ttt/run/validation/step_0020000.json",
+            "git_blob_sha1": "0a88f696a3f89f3f4a8eac9777c9a6fdb5e23d50",
+            "sha256": "a6bb28a426543c9ac3d715136c4d0aeac83afa656c4f7719165cf58a6f16c57a"
+          }
+        }
+      ]
+    },
+    {
+      "method": "progress_objective_ttt",
+      "training_source_commit": "e274fed5850b967c5e8e176e5cab3611d992e8bf",
+      "report_path": "docs/PROGRESS_OBJECTIVE_TTT_RESULTS.md",
+      "report_url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/PROGRESS_OBJECTIVE_TTT_RESULTS.md",
+      "selected_step": 15000,
+      "selected_successes": 78,
+      "selected_success_percent": 75.0,
+      "selected_timeouts": 0,
+      "selected_mean_decision_ms": 93.23954415076017,
+      "selected_p95_decision_ms": 98.61385822296143,
+      "selected_per_task_successes": {
+        "assembly": 1,
+        "button-press-topdown": 8,
+        "coffee-button": 8,
+        "dial-turn": 8,
+        "door-close": 8,
+        "door-open": 7,
+        "drawer-close": 8,
+        "drawer-open": 8,
+        "faucet-open": 2,
+        "handle-press": 8,
+        "pick-place": 1,
+        "plate-slide": 8,
+        "reach": 3
+      },
+      "final_successes": 77,
+      "optimization_gpu_hours": 4.585255093375841,
+      "validation_gpu_hours": 2.0849044524505733,
+      "curve": [
+        {
+          "step": 5000,
+          "episodes": 104,
+          "successes": 72,
+          "timeouts": 0,
+          "mean_decision_ms": 94.13904133338504,
+          "p95_decision_ms": 99.90213848650455,
+          "per_task_successes": {
+            "assembly": 3,
+            "button-press-topdown": 8,
+            "coffee-button": 8,
+            "dial-turn": 2,
+            "door-close": 8,
+            "door-open": 7,
+            "drawer-close": 8,
+            "drawer-open": 8,
+            "faucet-open": 2,
+            "handle-press": 8,
+            "pick-place": 0,
+            "plate-slide": 7,
+            "reach": 3
+          },
+          "evidence_level": "independently_recounted_full_episode_records",
+          "source": {
+            "path": "docs/reports/20261011-progress-objective-ttt/run/validation/step_0005000.json.gz",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261011-progress-objective-ttt/run/validation/step_0005000.json.gz",
+            "git_blob_sha1": "bf60295f3887f8458e05bcafb56bb5c09fe13df5",
+            "sha256": "965381db6f187fec8324cb14f33596251d6b2301ba6853496953c022493d0e95"
+          }
+        },
+        {
+          "step": 10000,
+          "episodes": 104,
+          "successes": 72,
+          "timeouts": 0,
+          "mean_decision_ms": 93.5381279365884,
+          "p95_decision_ms": 98.00773672759533,
+          "per_task_successes": {
+            "assembly": 1,
+            "button-press-topdown": 8,
+            "coffee-button": 8,
+            "dial-turn": 6,
+            "door-close": 8,
+            "door-open": 6,
+            "drawer-close": 8,
+            "drawer-open": 8,
+            "faucet-open": 1,
+            "handle-press": 8,
+            "pick-place": 0,
+            "plate-slide": 8,
+            "reach": 2
+          },
+          "evidence_level": "independently_recounted_full_episode_records",
+          "source": {
+            "path": "docs/reports/20261011-progress-objective-ttt/run/validation/step_0010000.json.gz",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261011-progress-objective-ttt/run/validation/step_0010000.json.gz",
+            "git_blob_sha1": "c8d5ff5695d5c1727a1dbc7561641d3bd2d7c32a",
+            "sha256": "8c5c077f13977fb154a9d9e4b1b8a306b666ad4fa8dfb1700908751106897fe9"
+          }
+        },
+        {
+          "step": 15000,
+          "episodes": 104,
+          "successes": 78,
+          "timeouts": 0,
+          "mean_decision_ms": 93.23954415076017,
+          "p95_decision_ms": 98.61385822296143,
+          "per_task_successes": {
+            "assembly": 1,
+            "button-press-topdown": 8,
+            "coffee-button": 8,
+            "dial-turn": 8,
+            "door-close": 8,
+            "door-open": 7,
+            "drawer-close": 8,
+            "drawer-open": 8,
+            "faucet-open": 2,
+            "handle-press": 8,
+            "pick-place": 1,
+            "plate-slide": 8,
+            "reach": 3
+          },
+          "evidence_level": "independently_recounted_full_episode_records",
+          "source": {
+            "path": "docs/reports/20261011-progress-objective-ttt/run/validation/step_0015000.json.gz",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261011-progress-objective-ttt/run/validation/step_0015000.json.gz",
+            "git_blob_sha1": "9432fb324a5687b57d8fab7b3bf408cfa2689cc0",
+            "sha256": "212e32277e1ea88507de21da20fee81bf8ad56c59965a42ef414ffc1f05510f5"
+          }
+        },
+        {
+          "step": 20000,
+          "episodes": 104,
+          "successes": 77,
+          "timeouts": 0,
+          "mean_decision_ms": 92.65216010172699,
+          "p95_decision_ms": 97.69752342253923,
+          "per_task_successes": {
+            "assembly": 1,
+            "button-press-topdown": 8,
+            "coffee-button": 8,
+            "dial-turn": 8,
+            "door-close": 8,
+            "door-open": 7,
+            "drawer-close": 8,
+            "drawer-open": 8,
+            "faucet-open": 4,
+            "handle-press": 8,
+            "pick-place": 0,
+            "plate-slide": 8,
+            "reach": 1
+          },
+          "evidence_level": "independently_recounted_full_episode_records",
+          "source": {
+            "path": "docs/reports/20261011-progress-objective-ttt/run/validation/step_0020000.json.gz",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261011-progress-objective-ttt/run/validation/step_0020000.json.gz",
+            "git_blob_sha1": "64b91358ba1525e6e1b1060ec86e338fcdb32d6b",
+            "sha256": "1655aa798a04edcf5d76136b2b4598fd25c1996d9aa516505a48d4d734099552"
+          }
+        }
+      ]
+    },
+    {
+      "method": "shifted_repair_ttt",
+      "training_source_commit": "2ae5a6c97bebe56b0b1f889cb34996d34cbf03d6",
+      "report_path": "docs/SHIFTED_REPAIR_TTT_RESULTS.md",
+      "report_url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/SHIFTED_REPAIR_TTT_RESULTS.md",
+      "selected_step": 5000,
+      "selected_successes": 79,
+      "selected_success_percent": 75.96153846153847,
+      "selected_timeouts": 0,
+      "selected_mean_decision_ms": 85.74418873270112,
+      "selected_p95_decision_ms": 89.68057949095964,
+      "selected_per_task_successes": {
+        "assembly": 3,
+        "button-press-topdown": 8,
+        "coffee-button": 8,
+        "dial-turn": 7,
+        "door-close": 8,
+        "door-open": 7,
+        "drawer-close": 8,
+        "drawer-open": 8,
+        "faucet-open": 1,
+        "handle-press": 8,
+        "pick-place": 1,
+        "plate-slide": 8,
+        "reach": 4
+      },
+      "final_successes": 78,
+      "optimization_gpu_hours": 2.2329762297785942,
+      "validation_gpu_hours": 1.818005705786248,
+      "curve": [
+        {
+          "step": 5000,
+          "episodes": 104,
+          "successes": 79,
+          "timeouts": 0,
+          "mean_decision_ms": 85.74418873270112,
+          "p95_decision_ms": 89.68057949095964,
+          "per_task_successes": {
+            "assembly": 3,
+            "button-press-topdown": 8,
+            "coffee-button": 8,
+            "dial-turn": 7,
+            "door-close": 8,
+            "door-open": 7,
+            "drawer-close": 8,
+            "drawer-open": 8,
+            "faucet-open": 1,
+            "handle-press": 8,
+            "pick-place": 1,
+            "plate-slide": 8,
+            "reach": 4
+          },
+          "evidence_level": "independently_recounted_full_episode_records",
+          "source": {
+            "path": "docs/reports/20261011-shifted-repair-ttt/run/validation/step_0005000.json.gz",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261011-shifted-repair-ttt/run/validation/step_0005000.json.gz",
+            "git_blob_sha1": "14191085cf1bb5451ebdbc54961ffc3b577c5e77",
+            "sha256": "b9e4e373a337db4389a34e9f92c138f13176e3ccca0e5a7edd769440b9f13f37"
+          }
+        },
+        {
+          "step": 10000,
+          "episodes": 104,
+          "successes": 78,
+          "timeouts": 0,
+          "mean_decision_ms": 84.94007176048038,
+          "p95_decision_ms": 88.21813529357314,
+          "per_task_successes": {
+            "assembly": 3,
+            "button-press-topdown": 8,
+            "coffee-button": 8,
+            "dial-turn": 7,
+            "door-close": 8,
+            "door-open": 6,
+            "drawer-close": 8,
+            "drawer-open": 8,
+            "faucet-open": 2,
+            "handle-press": 8,
+            "pick-place": 1,
+            "plate-slide": 8,
+            "reach": 3
+          },
+          "evidence_level": "independently_recounted_full_episode_records",
+          "source": {
+            "path": "docs/reports/20261011-shifted-repair-ttt/run/validation/step_0010000.json.gz",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261011-shifted-repair-ttt/run/validation/step_0010000.json.gz",
+            "git_blob_sha1": "16cbfb36fa35c6378b2a209759b74e67fb0ba6ff",
+            "sha256": "14b8fa341381182ed274ea69a92cf3565e45ad8fbcec68dbeb23f79353a945e5"
+          }
+        },
+        {
+          "step": 15000,
+          "episodes": 104,
+          "successes": 74,
+          "timeouts": 0,
+          "mean_decision_ms": 84.56896584564358,
+          "p95_decision_ms": 87.75648698210716,
+          "per_task_successes": {
+            "assembly": 0,
+            "button-press-topdown": 8,
+            "coffee-button": 8,
+            "dial-turn": 8,
+            "door-close": 8,
+            "door-open": 7,
+            "drawer-close": 8,
+            "drawer-open": 8,
+            "faucet-open": 1,
+            "handle-press": 8,
+            "pick-place": 1,
+            "plate-slide": 8,
+            "reach": 1
+          },
+          "evidence_level": "independently_recounted_full_episode_records",
+          "source": {
+            "path": "docs/reports/20261011-shifted-repair-ttt/run/validation/step_0015000.json.gz",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261011-shifted-repair-ttt/run/validation/step_0015000.json.gz",
+            "git_blob_sha1": "b96d0670d5d4c6d4e34f25e35b48d14d4fff305e",
+            "sha256": "45b944a0103773c41884018383f1db17c2443824e171dcf2d20afdba827c29c2"
+          }
+        },
+        {
+          "step": 20000,
+          "episodes": 104,
+          "successes": 78,
+          "timeouts": 0,
+          "mean_decision_ms": 84.56905430135899,
+          "p95_decision_ms": 87.71069161593914,
+          "per_task_successes": {
+            "assembly": 3,
+            "button-press-topdown": 8,
+            "coffee-button": 8,
+            "dial-turn": 8,
+            "door-close": 8,
+            "door-open": 7,
+            "drawer-close": 8,
+            "drawer-open": 8,
+            "faucet-open": 1,
+            "handle-press": 8,
+            "pick-place": 1,
+            "plate-slide": 8,
+            "reach": 2
+          },
+          "evidence_level": "independently_recounted_full_episode_records",
+          "source": {
+            "path": "docs/reports/20261011-shifted-repair-ttt/run/validation/step_0020000.json.gz",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261011-shifted-repair-ttt/run/validation/step_0020000.json.gz",
+            "git_blob_sha1": "5df2ebe3da86b9a36aa1e64500856c963ee8b289",
+            "sha256": "b1684cbde54ed10092483527f097fb0eb4aa998545460e254268907a4b053a9c"
+          }
+        }
+      ]
+    },
+    {
+      "method": "retrieval_repair_ttt",
+      "training_source_commit": "3bdfb49e7c9d4952da7494e50c8dc2530197641e",
+      "report_path": "docs/RETRIEVAL_REPAIR_TTT_RESULTS.md",
+      "report_url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/RETRIEVAL_REPAIR_TTT_RESULTS.md",
+      "selected_step": 20000,
+      "selected_successes": 80,
+      "selected_success_percent": 76.92307692307692,
+      "selected_timeouts": 0,
+      "selected_mean_decision_ms": 85.72358128487065,
+      "selected_p95_decision_ms": 89.15328271687031,
+      "selected_per_task_successes": {
+        "assembly": 4,
+        "button-press-topdown": 8,
+        "coffee-button": 8,
+        "dial-turn": 7,
+        "door-close": 8,
+        "door-open": 8,
+        "drawer-close": 8,
+        "drawer-open": 8,
+        "faucet-open": 3,
+        "handle-press": 8,
+        "pick-place": 1,
+        "plate-slide": 8,
+        "reach": 1
+      },
+      "final_successes": 80,
+      "optimization_gpu_hours": 1.748655913176222,
+      "validation_gpu_hours": 1.834349136967212,
+      "curve": [
+        {
+          "step": 5000,
+          "episodes": 104,
+          "successes": 75,
+          "timeouts": 0,
+          "mean_decision_ms": 85.65259009320557,
+          "p95_decision_ms": 89.55927025526762,
+          "per_task_successes": {
+            "assembly": 3,
+            "button-press-topdown": 8,
+            "coffee-button": 8,
+            "dial-turn": 8,
+            "door-close": 7,
+            "door-open": 7,
+            "drawer-close": 8,
+            "drawer-open": 8,
+            "faucet-open": 0,
+            "handle-press": 8,
+            "pick-place": 1,
+            "plate-slide": 8,
+            "reach": 1
+          },
+          "evidence_level": "independently_recounted_full_episode_records",
+          "source": {
+            "path": "docs/reports/20261011-retrieval-repair-ttt/run/validation/step_0005000.json.gz",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261011-retrieval-repair-ttt/run/validation/step_0005000.json.gz",
+            "git_blob_sha1": "70f9b309204368bdf9912cee42daa3478cad59d9",
+            "sha256": "8bfd018956e1b3bb1d30f47b801e06368bdcf06b6b67284e8ac4131861db86aa"
+          }
+        },
+        {
+          "step": 10000,
+          "episodes": 104,
+          "successes": 77,
+          "timeouts": 0,
+          "mean_decision_ms": 85.6762392255193,
+          "p95_decision_ms": 89.25625858828425,
+          "per_task_successes": {
+            "assembly": 1,
+            "button-press-topdown": 8,
+            "coffee-button": 8,
+            "dial-turn": 6,
+            "door-close": 8,
+            "door-open": 7,
+            "drawer-close": 8,
+            "drawer-open": 8,
+            "faucet-open": 2,
+            "handle-press": 8,
+            "pick-place": 1,
+            "plate-slide": 8,
+            "reach": 4
+          },
+          "evidence_level": "independently_recounted_full_episode_records",
+          "source": {
+            "path": "docs/reports/20261011-retrieval-repair-ttt/run/validation/step_0010000.json.gz",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261011-retrieval-repair-ttt/run/validation/step_0010000.json.gz",
+            "git_blob_sha1": "95c4178c4d9ba8802bc08de702fe85c25f7891a6",
+            "sha256": "f68470de88817d33c0fa0e2e7d356e78c54fcfd1f72f170e4cf5ab4c1a3b53f9"
+          }
+        },
+        {
+          "step": 15000,
+          "episodes": 104,
+          "successes": 79,
+          "timeouts": 0,
+          "mean_decision_ms": 85.62102681195779,
+          "p95_decision_ms": 89.28695786744355,
+          "per_task_successes": {
+            "assembly": 3,
+            "button-press-topdown": 8,
+            "coffee-button": 8,
+            "dial-turn": 8,
+            "door-close": 8,
+            "door-open": 7,
+            "drawer-close": 8,
+            "drawer-open": 8,
+            "faucet-open": 3,
+            "handle-press": 8,
+            "pick-place": 1,
+            "plate-slide": 8,
+            "reach": 1
+          },
+          "evidence_level": "independently_recounted_full_episode_records",
+          "source": {
+            "path": "docs/reports/20261011-retrieval-repair-ttt/run/validation/step_0015000.json.gz",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261011-retrieval-repair-ttt/run/validation/step_0015000.json.gz",
+            "git_blob_sha1": "0428aa368b6cff4d3b0a65578bec4168ba2e0d1a",
+            "sha256": "b4c568010ea87e1d3b03ae808f4c4ea76d72676e979f35a4175d608a9201569a"
+          }
+        },
+        {
+          "step": 20000,
+          "episodes": 104,
+          "successes": 80,
+          "timeouts": 0,
+          "mean_decision_ms": 85.72358128487065,
+          "p95_decision_ms": 89.15328271687031,
+          "per_task_successes": {
+            "assembly": 4,
+            "button-press-topdown": 8,
+            "coffee-button": 8,
+            "dial-turn": 7,
+            "door-close": 8,
+            "door-open": 8,
+            "drawer-close": 8,
+            "drawer-open": 8,
+            "faucet-open": 3,
+            "handle-press": 8,
+            "pick-place": 1,
+            "plate-slide": 8,
+            "reach": 1
+          },
+          "evidence_level": "independently_recounted_full_episode_records",
+          "source": {
+            "path": "docs/reports/20261011-retrieval-repair-ttt/run/validation/step_0020000.json.gz",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261011-retrieval-repair-ttt/run/validation/step_0020000.json.gz",
+            "git_blob_sha1": "7030807124a7b22050051dc6a62a375d40e0aedd",
+            "sha256": "dc09c844cb46da2c0d5fba62fe42f230e23fc6d826347386f6270565bddb13d5"
+          }
+        }
+      ]
+    },
+    {
+      "method": "repair_flow_ttt",
+      "training_source_commit": "481bb7679aa3f43e938fd3991f3be57ba59f0ed0",
+      "report_path": "docs/REPAIR_FLOW_TTT_RESULTS.md",
+      "report_url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/REPAIR_FLOW_TTT_RESULTS.md",
+      "selected_step": 5000,
+      "selected_successes": 80,
+      "selected_success_percent": 76.92307692307692,
+      "selected_timeouts": 0,
+      "selected_mean_decision_ms": 86.46048585386116,
+      "selected_p95_decision_ms": 89.88235145807265,
+      "selected_per_task_successes": {
+        "assembly": 1,
+        "button-press-topdown": 8,
+        "coffee-button": 8,
+        "dial-turn": 7,
+        "door-close": 8,
+        "door-open": 8,
+        "drawer-close": 8,
+        "drawer-open": 8,
+        "faucet-open": 2,
+        "handle-press": 8,
+        "pick-place": 2,
+        "plate-slide": 8,
+        "reach": 4
+      },
+      "final_successes": 75,
+      "optimization_gpu_hours": 1.6195924839646452,
+      "validation_gpu_hours": 1.815225299037993,
+      "curve": [
+        {
+          "step": 5000,
+          "episodes": 104,
+          "successes": 80,
+          "timeouts": 0,
+          "mean_decision_ms": 86.46048585386116,
+          "p95_decision_ms": 89.88235145807265,
+          "per_task_successes": {
+            "assembly": 1,
+            "button-press-topdown": 8,
+            "coffee-button": 8,
+            "dial-turn": 7,
+            "door-close": 8,
+            "door-open": 8,
+            "drawer-close": 8,
+            "drawer-open": 8,
+            "faucet-open": 2,
+            "handle-press": 8,
+            "pick-place": 2,
+            "plate-slide": 8,
+            "reach": 4
+          },
+          "evidence_level": "independently_recounted_full_episode_records",
+          "source": {
+            "path": "docs/reports/20261011-repair-flow-ttt/run/validation/step_0005000.json.gz",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261011-repair-flow-ttt/run/validation/step_0005000.json.gz",
+            "git_blob_sha1": "b5d43c93ebb282ee130bc19f6194acc9aafc71a1",
+            "sha256": "b1cd99f487e85e47b77046beac62b07da534a17dfdf553c29a6fae168fbad4d7"
+          }
+        },
+        {
+          "step": 10000,
+          "episodes": 104,
+          "successes": 73,
+          "timeouts": 0,
+          "mean_decision_ms": 86.26607223197081,
+          "p95_decision_ms": 89.93939645588398,
+          "per_task_successes": {
+            "assembly": 0,
+            "button-press-topdown": 8,
+            "coffee-button": 8,
+            "dial-turn": 7,
+            "door-close": 8,
+            "door-open": 7,
+            "drawer-close": 8,
+            "drawer-open": 8,
+            "faucet-open": 0,
+            "handle-press": 8,
+            "pick-place": 0,
+            "plate-slide": 8,
+            "reach": 3
+          },
+          "evidence_level": "independently_recounted_full_episode_records",
+          "source": {
+            "path": "docs/reports/20261011-repair-flow-ttt/run/validation/step_0010000.json.gz",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261011-repair-flow-ttt/run/validation/step_0010000.json.gz",
+            "git_blob_sha1": "da3123186738f156ee75c41d7056306c938a8de1",
+            "sha256": "8ad09a60b8e36528edc4a92658e3dae02e322f5eba950956e098ea8fa166e980"
+          }
+        },
+        {
+          "step": 15000,
+          "episodes": 104,
+          "successes": 75,
+          "timeouts": 0,
+          "mean_decision_ms": 86.48658603860248,
+          "p95_decision_ms": 89.98736161738634,
+          "per_task_successes": {
+            "assembly": 1,
+            "button-press-topdown": 8,
+            "coffee-button": 8,
+            "dial-turn": 8,
+            "door-close": 8,
+            "door-open": 6,
+            "drawer-close": 8,
+            "drawer-open": 8,
+            "faucet-open": 1,
+            "handle-press": 8,
+            "pick-place": 0,
+            "plate-slide": 8,
+            "reach": 3
+          },
+          "evidence_level": "independently_recounted_full_episode_records",
+          "source": {
+            "path": "docs/reports/20261011-repair-flow-ttt/run/validation/step_0015000.json.gz",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261011-repair-flow-ttt/run/validation/step_0015000.json.gz",
+            "git_blob_sha1": "31cd8fce71bf47c3f35ad77d564b4b8cf4890f87",
+            "sha256": "1b123883f50b9467948b71e349fa0d259c105b018c7da5373422570fbcbba914"
+          }
+        },
+        {
+          "step": 20000,
+          "episodes": 104,
+          "successes": 75,
+          "timeouts": 0,
+          "mean_decision_ms": 86.45727430175975,
+          "p95_decision_ms": 90.447879396379,
+          "per_task_successes": {
+            "assembly": 1,
+            "button-press-topdown": 8,
+            "coffee-button": 8,
+            "dial-turn": 8,
+            "door-close": 8,
+            "door-open": 6,
+            "drawer-close": 8,
+            "drawer-open": 8,
+            "faucet-open": 1,
+            "handle-press": 8,
+            "pick-place": 0,
+            "plate-slide": 8,
+            "reach": 3
+          },
+          "evidence_level": "independently_recounted_full_episode_records",
+          "source": {
+            "path": "docs/reports/20261011-repair-flow-ttt/run/validation/step_0020000.json.gz",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261011-repair-flow-ttt/run/validation/step_0020000.json.gz",
+            "git_blob_sha1": "b4ea09c4b275c8220ea11f87c789487dc07c2571",
+            "sha256": "67233739fba6c803694a1d872ec6e276226d67d8b172e6619f68fe80b5def5d3"
+          }
+        }
+      ]
+    },
+    {
+      "method": "guided_ttt",
+      "training_source_commit": "92fdae6120c568a6e13c7ca2e6013fbc72cb45bf",
+      "report_path": "docs/GUIDED_TTT_RESULTS.md",
+      "report_url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/GUIDED_TTT_RESULTS.md",
+      "selected_step": 20000,
+      "selected_successes": 75,
+      "selected_success_percent": 72.11538461538461,
+      "selected_timeouts": 29,
+      "selected_mean_decision_ms": 103.45823894762619,
+      "selected_p95_decision_ms": 111.1817117780447,
+      "selected_per_task_successes": {
+        "assembly": 1,
+        "button-press-topdown": 8,
+        "coffee-button": 8,
+        "dial-turn": 8,
+        "door-close": 8,
+        "door-open": 6,
+        "drawer-close": 8,
+        "drawer-open": 8,
+        "faucet-open": 2,
+        "handle-press": 8,
+        "pick-place": 0,
+        "plate-slide": 7,
+        "reach": 3
+      },
+      "final_successes": 75,
+      "optimization_gpu_hours": 4.594631382901635,
+      "validation_gpu_hours": 2.165615062659813,
+      "curve": [
+        {
+          "step": 5000,
+          "episodes": 104,
+          "successes": 72,
+          "timeouts": 31,
+          "mean_decision_ms": 103.11964210780786,
+          "p95_decision_ms": 109.93267828598619,
+          "per_task_successes": {
+            "assembly": 1,
+            "button-press-topdown": 8,
+            "coffee-button": 8,
+            "dial-turn": 7,
+            "door-close": 7,
+            "door-open": 6,
+            "drawer-close": 8,
+            "drawer-open": 8,
+            "faucet-open": 1,
+            "handle-press": 8,
+            "pick-place": 0,
+            "plate-slide": 8,
+            "reach": 2
+          },
+          "evidence_level": "independently_recounted_full_episode_records",
+          "source": {
+            "path": "docs/reports/20261010-guided-ttt/run/validation/step_0005000.json.gz",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261010-guided-ttt/run/validation/step_0005000.json.gz",
+            "git_blob_sha1": "15acf7f8650c6732bcf956a538e98a22e71cced6",
+            "sha256": "575357a3d3cd78a4a33e12d71cc4a62665639bac177cb3375f3d77cabbd69612"
+          }
+        },
+        {
+          "step": 10000,
+          "episodes": 104,
+          "successes": 70,
+          "timeouts": 32,
+          "mean_decision_ms": 103.12784384037798,
+          "p95_decision_ms": 109.4599393196404,
+          "per_task_successes": {
+            "assembly": 2,
+            "button-press-topdown": 8,
+            "coffee-button": 8,
+            "dial-turn": 6,
+            "door-close": 8,
+            "door-open": 5,
+            "drawer-close": 8,
+            "drawer-open": 8,
+            "faucet-open": 0,
+            "handle-press": 8,
+            "pick-place": 0,
+            "plate-slide": 8,
+            "reach": 1
+          },
+          "evidence_level": "independently_recounted_full_episode_records",
+          "source": {
+            "path": "docs/reports/20261010-guided-ttt/run/validation/step_0010000.json.gz",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261010-guided-ttt/run/validation/step_0010000.json.gz",
+            "git_blob_sha1": "7610808c1575c4def06626d052a15cffe946492c",
+            "sha256": "fcf933598f598ae3faa1fab5df0ea27b96afa962f8c79078797c8e9244053bcf"
+          }
+        },
+        {
+          "step": 15000,
+          "episodes": 104,
+          "successes": 72,
+          "timeouts": 31,
+          "mean_decision_ms": 103.00161710926858,
+          "p95_decision_ms": 109.54743325710297,
+          "per_task_successes": {
+            "assembly": 0,
+            "button-press-topdown": 8,
+            "coffee-button": 8,
+            "dial-turn": 8,
+            "door-close": 8,
+            "door-open": 5,
+            "drawer-close": 8,
+            "drawer-open": 8,
+            "faucet-open": 1,
+            "handle-press": 8,
+            "pick-place": 0,
+            "plate-slide": 7,
+            "reach": 3
+          },
+          "evidence_level": "independently_recounted_full_episode_records",
+          "source": {
+            "path": "docs/reports/20261010-guided-ttt/run/validation/step_0015000.json.gz",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261010-guided-ttt/run/validation/step_0015000.json.gz",
+            "git_blob_sha1": "3cac037a9268701d3633854b7044b35b91009491",
+            "sha256": "2d6a0e38a431e1309b934cc3bbccbfb4f71b38d2b2940af78b86bf55304fb89f"
+          }
+        },
+        {
+          "step": 20000,
+          "episodes": 104,
+          "successes": 75,
+          "timeouts": 29,
+          "mean_decision_ms": 103.45823894762619,
+          "p95_decision_ms": 111.1817117780447,
+          "per_task_successes": {
+            "assembly": 1,
+            "button-press-topdown": 8,
+            "coffee-button": 8,
+            "dial-turn": 8,
+            "door-close": 8,
+            "door-open": 6,
+            "drawer-close": 8,
+            "drawer-open": 8,
+            "faucet-open": 2,
+            "handle-press": 8,
+            "pick-place": 0,
+            "plate-slide": 7,
+            "reach": 3
+          },
+          "evidence_level": "independently_recounted_full_episode_records",
+          "source": {
+            "path": "docs/reports/20261010-guided-ttt/run/validation/step_0020000.json.gz",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261010-guided-ttt/run/validation/step_0020000.json.gz",
+            "git_blob_sha1": "a2581b82aab37c81c44496a2e0b5a83565dbb36e",
+            "sha256": "05efd117f7227dda217f19a16e854c681aff2ba11f93c765bba2b57e560a2bcd"
+          }
+        }
+      ]
+    },
+    {
+      "method": "execution_revision",
+      "training_source_commit": "8be2808eaa09e539d30d07ee3760fc7b59717793",
+      "report_path": "docs/EXECUTION_REVISION_RESULTS.md",
+      "report_url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/EXECUTION_REVISION_RESULTS.md",
+      "selected_step": 5000,
+      "selected_successes": 80,
+      "selected_success_percent": 76.92307692307692,
+      "selected_timeouts": 0,
+      "selected_mean_decision_ms": 86.7351963242161,
+      "selected_p95_decision_ms": 90.65380971878767,
+      "selected_per_task_successes": {
+        "assembly": 3,
+        "button-press-topdown": 8,
+        "coffee-button": 8,
+        "dial-turn": 7,
+        "door-close": 8,
+        "door-open": 6,
+        "drawer-close": 8,
+        "drawer-open": 8,
+        "faucet-open": 3,
+        "handle-press": 8,
+        "pick-place": 1,
+        "plate-slide": 8,
+        "reach": 4
+      },
+      "final_successes": 76,
+      "optimization_gpu_hours": 3.233375356346369,
+      "validation_gpu_hours": 1.9459724818294246,
+      "curve": [
+        {
+          "step": 5000,
+          "episodes": 104,
+          "successes": 80,
+          "timeouts": 0,
+          "mean_decision_ms": 86.7351963242161,
+          "p95_decision_ms": 90.65380971878767,
+          "per_task_successes": {
+            "assembly": 3,
+            "button-press-topdown": 8,
+            "coffee-button": 8,
+            "dial-turn": 7,
+            "door-close": 8,
+            "door-open": 6,
+            "drawer-close": 8,
+            "drawer-open": 8,
+            "faucet-open": 3,
+            "handle-press": 8,
+            "pick-place": 1,
+            "plate-slide": 8,
+            "reach": 4
+          },
+          "evidence_level": "independently_recounted_full_episode_records",
+          "source": {
+            "path": "docs/reports/20261009-execution-revision/run/validation/step_0005000.json.gz",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261009-execution-revision/run/validation/step_0005000.json.gz",
+            "git_blob_sha1": "51adca95f374f0708c12024f2c59209617667935",
+            "sha256": "71fa4e3e75163ae6e3d6d776b2eeaa844134b20aaa2092feeb93e5e7b91fab9b"
+          }
+        },
+        {
+          "step": 10000,
+          "episodes": 104,
+          "successes": 78,
+          "timeouts": 0,
+          "mean_decision_ms": 86.50112509537932,
+          "p95_decision_ms": 90.18682381138206,
+          "per_task_successes": {
+            "assembly": 0,
+            "button-press-topdown": 8,
+            "coffee-button": 8,
+            "dial-turn": 7,
+            "door-close": 8,
+            "door-open": 7,
+            "drawer-close": 8,
+            "drawer-open": 8,
+            "faucet-open": 3,
+            "handle-press": 8,
+            "pick-place": 0,
+            "plate-slide": 8,
+            "reach": 5
+          },
+          "evidence_level": "independently_recounted_full_episode_records",
+          "source": {
+            "path": "docs/reports/20261009-execution-revision/run/validation/step_0010000.json.gz",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261009-execution-revision/run/validation/step_0010000.json.gz",
+            "git_blob_sha1": "b4dbfd04eab6db54bac664832f22733cc5c76b82",
+            "sha256": "4a041adfa90a8095757715ec9a727abff8c11f261de12b35965e904f1b2b8b55"
+          }
+        },
+        {
+          "step": 15000,
+          "episodes": 104,
+          "successes": 79,
+          "timeouts": 0,
+          "mean_decision_ms": 86.73608364793658,
+          "p95_decision_ms": 90.81230834126472,
+          "per_task_successes": {
+            "assembly": 0,
+            "button-press-topdown": 8,
+            "coffee-button": 8,
+            "dial-turn": 8,
+            "door-close": 8,
+            "door-open": 7,
+            "drawer-close": 8,
+            "drawer-open": 8,
+            "faucet-open": 2,
+            "handle-press": 8,
+            "pick-place": 2,
+            "plate-slide": 8,
+            "reach": 4
+          },
+          "evidence_level": "independently_recounted_full_episode_records",
+          "source": {
+            "path": "docs/reports/20261009-execution-revision/run/validation/step_0015000.json.gz",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261009-execution-revision/run/validation/step_0015000.json.gz",
+            "git_blob_sha1": "72be31c4089e2d6300d2f772c9ada7cfd4ac2af2",
+            "sha256": "fb4a3183e864e71e5eb1be5911c509918c77bf954ba05d1368346b81132de2f5"
+          }
+        },
+        {
+          "step": 20000,
+          "episodes": 104,
+          "successes": 76,
+          "timeouts": 0,
+          "mean_decision_ms": 86.55454121253638,
+          "p95_decision_ms": 90.58146439492702,
+          "per_task_successes": {
+            "assembly": 0,
+            "button-press-topdown": 8,
+            "coffee-button": 8,
+            "dial-turn": 7,
+            "door-close": 8,
+            "door-open": 7,
+            "drawer-close": 8,
+            "drawer-open": 8,
+            "faucet-open": 3,
+            "handle-press": 8,
+            "pick-place": 0,
+            "plate-slide": 8,
+            "reach": 3
+          },
+          "evidence_level": "independently_recounted_full_episode_records",
+          "source": {
+            "path": "docs/reports/20261009-execution-revision/run/validation/step_0020000.json.gz",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261009-execution-revision/run/validation/step_0020000.json.gz",
+            "git_blob_sha1": "784cabac0b814cdcd1d13aec2236e9b60c7f308b",
+            "sha256": "8383b6cd6caefe757e50aeca2a5c53c4b1c5b49f3e48266dcd7e0a496b3c0eb0"
+          }
+        }
+      ]
+    },
+    {
+      "method": "flow_reasoning",
+      "training_source_commit": "ca8430ecac26ecf11fdae4307981e095f61c937c",
+      "report_path": "docs/FLOW_REASONING_RESULTS.md",
+      "report_url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/FLOW_REASONING_RESULTS.md",
+      "selected_step": 5000,
+      "selected_successes": 79,
+      "selected_success_percent": 75.96153846153847,
+      "selected_timeouts": 10,
+      "selected_mean_decision_ms": 99.41855676649963,
+      "selected_p95_decision_ms": 104.78066056966782,
+      "selected_per_task_successes": {
+        "assembly": 0,
+        "button-press-topdown": 8,
+        "coffee-button": 8,
+        "dial-turn": 6,
+        "door-close": 8,
+        "door-open": 8,
+        "drawer-close": 8,
+        "drawer-open": 8,
+        "faucet-open": 2,
+        "handle-press": 8,
+        "pick-place": 1,
+        "plate-slide": 8,
+        "reach": 6
+      },
+      "final_successes": 76,
+      "optimization_gpu_hours": 3.165801214766171,
+      "validation_gpu_hours": 2.080300091451241,
+      "curve": [
+        {
+          "step": 5000,
+          "episodes": 104,
+          "successes": 79,
+          "timeouts": 10,
+          "mean_decision_ms": 99.41855676649963,
+          "p95_decision_ms": 104.78066056966782,
+          "per_task_successes": {
+            "assembly": 0,
+            "button-press-topdown": 8,
+            "coffee-button": 8,
+            "dial-turn": 6,
+            "door-close": 8,
+            "door-open": 8,
+            "drawer-close": 8,
+            "drawer-open": 8,
+            "faucet-open": 2,
+            "handle-press": 8,
+            "pick-place": 1,
+            "plate-slide": 8,
+            "reach": 6
+          },
+          "evidence_level": "independently_recounted_full_episode_records",
+          "source": {
+            "path": "docs/reports/20261010-flow-reasoning/run/validation/step_0005000.json.gz",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261010-flow-reasoning/run/validation/step_0005000.json.gz",
+            "git_blob_sha1": "1e89179b9a2291f7d2eb9b599d83268bfd815efa",
+            "sha256": "8c8cd3dc71b57ee9c168809df8464a039b2c72e0490b833f7ec4a25ad7dc4868"
+          }
+        },
+        {
+          "step": 10000,
+          "episodes": 104,
+          "successes": 75,
+          "timeouts": 10,
+          "mean_decision_ms": 99.27562611651572,
+          "p95_decision_ms": 104.64921686798334,
+          "per_task_successes": {
+            "assembly": 1,
+            "button-press-topdown": 8,
+            "coffee-button": 8,
+            "dial-turn": 6,
+            "door-close": 8,
+            "door-open": 5,
+            "drawer-close": 8,
+            "drawer-open": 8,
+            "faucet-open": 2,
+            "handle-press": 8,
+            "pick-place": 1,
+            "plate-slide": 8,
+            "reach": 4
+          },
+          "evidence_level": "independently_recounted_full_episode_records",
+          "source": {
+            "path": "docs/reports/20261010-flow-reasoning/run/validation/step_0010000.json.gz",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261010-flow-reasoning/run/validation/step_0010000.json.gz",
+            "git_blob_sha1": "b7d1831fca4413a03a82fecefbd43b36e8ab8938",
+            "sha256": "b655843a29b455b75b0a04cb0bcdd39279491d5ef5121e7b2bdd0306a4055173"
+          }
+        },
+        {
+          "step": 15000,
+          "episodes": 104,
+          "successes": 76,
+          "timeouts": 9,
+          "mean_decision_ms": 99.20474828020713,
+          "p95_decision_ms": 104.25570346415043,
+          "per_task_successes": {
+            "assembly": 0,
+            "button-press-topdown": 8,
+            "coffee-button": 8,
+            "dial-turn": 8,
+            "door-close": 8,
+            "door-open": 6,
+            "drawer-close": 8,
+            "drawer-open": 8,
+            "faucet-open": 4,
+            "handle-press": 8,
+            "pick-place": 0,
+            "plate-slide": 8,
+            "reach": 2
+          },
+          "evidence_level": "independently_recounted_full_episode_records",
+          "source": {
+            "path": "docs/reports/20261010-flow-reasoning/run/validation/step_0015000.json.gz",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261010-flow-reasoning/run/validation/step_0015000.json.gz",
+            "git_blob_sha1": "129557d31844a89e6f713087101b73a0e93a0726",
+            "sha256": "4192407fa41a44643675239462dd9813b5f45e46b2798db9dcbf9e44e7acfaee"
+          }
+        },
+        {
+          "step": 20000,
+          "episodes": 104,
+          "successes": 76,
+          "timeouts": 10,
+          "mean_decision_ms": 99.45345999314996,
+          "p95_decision_ms": 104.79076635092497,
+          "per_task_successes": {
+            "assembly": 0,
+            "button-press-topdown": 8,
+            "coffee-button": 8,
+            "dial-turn": 8,
+            "door-close": 8,
+            "door-open": 7,
+            "drawer-close": 8,
+            "drawer-open": 8,
+            "faucet-open": 2,
+            "handle-press": 8,
+            "pick-place": 0,
+            "plate-slide": 8,
+            "reach": 3
+          },
+          "evidence_level": "independently_recounted_full_episode_records",
+          "source": {
+            "path": "docs/reports/20261010-flow-reasoning/run/validation/step_0020000.json.gz",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261010-flow-reasoning/run/validation/step_0020000.json.gz",
+            "git_blob_sha1": "d80b90362295e1f192997c33d37593b7f66bcfe0",
+            "sha256": "62d5a42ef86e12635f5afa9234f7459b7862739f2cfd7a3b582ec928582d2bc9"
+          }
+        }
+      ]
+    },
+    {
+      "method": "progress_ttt",
+      "training_source_commit": "8ae86855738370b06c8f59b96150ac68c389d010",
+      "report_path": "docs/PROGRESS_TTT_RESULTS.md",
+      "report_url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/PROGRESS_TTT_RESULTS.md",
+      "selected_step": 15000,
+      "selected_successes": 78,
+      "selected_success_percent": 75.0,
+      "selected_timeouts": 21,
+      "selected_mean_decision_ms": 102.50229613382552,
+      "selected_p95_decision_ms": 107.45406663045286,
+      "selected_per_task_successes": {
+        "assembly": 2,
+        "button-press-topdown": 8,
+        "coffee-button": 8,
+        "dial-turn": 8,
+        "door-close": 8,
+        "door-open": 7,
+        "drawer-close": 8,
+        "drawer-open": 8,
+        "faucet-open": 3,
+        "handle-press": 8,
+        "pick-place": 0,
+        "plate-slide": 8,
+        "reach": 2
+      },
+      "final_successes": 74,
+      "optimization_gpu_hours": 3.542264837167329,
+      "validation_gpu_hours": 2.013267637433277,
+      "curve": [
+        {
+          "step": 5000,
+          "episodes": 104,
+          "successes": 77,
+          "timeouts": 23,
+          "mean_decision_ms": 103.0585686876866,
+          "p95_decision_ms": 108.20795092731714,
+          "per_task_successes": {
+            "assembly": 0,
+            "button-press-topdown": 8,
+            "coffee-button": 8,
+            "dial-turn": 6,
+            "door-close": 8,
+            "door-open": 8,
+            "drawer-close": 8,
+            "drawer-open": 8,
+            "faucet-open": 0,
+            "handle-press": 8,
+            "pick-place": 1,
+            "plate-slide": 8,
+            "reach": 6
+          },
+          "evidence_level": "independently_recounted_full_episode_records",
+          "source": {
+            "path": "docs/reports/20261010-progress-ttt-run/run/validation/step_0005000.json.gz",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261010-progress-ttt-run/run/validation/step_0005000.json.gz",
+            "git_blob_sha1": "c1c8f6b6841950e86642c63806987ceb43721a56",
+            "sha256": "f9378b3b8630ff5dc21bea202a3b402357f0393fcd4a6f89a51e8f652bea0a59"
+          }
+        },
+        {
+          "step": 10000,
+          "episodes": 104,
+          "successes": 76,
+          "timeouts": 23,
+          "mean_decision_ms": 102.68860588865238,
+          "p95_decision_ms": 108.08345433324575,
+          "per_task_successes": {
+            "assembly": 0,
+            "button-press-topdown": 8,
+            "coffee-button": 8,
+            "dial-turn": 8,
+            "door-close": 8,
+            "door-open": 7,
+            "drawer-close": 8,
+            "drawer-open": 8,
+            "faucet-open": 0,
+            "handle-press": 8,
+            "pick-place": 0,
+            "plate-slide": 8,
+            "reach": 5
+          },
+          "evidence_level": "independently_recounted_full_episode_records",
+          "source": {
+            "path": "docs/reports/20261010-progress-ttt-run/run/validation/step_0010000.json.gz",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261010-progress-ttt-run/run/validation/step_0010000.json.gz",
+            "git_blob_sha1": "6c372be33c6563bc97abb7d13995b61a83326ee2",
+            "sha256": "804609adf67f074181f3392bb7b091648d15f898909247a36d5fa6c667040f4e"
+          }
+        },
+        {
+          "step": 15000,
+          "episodes": 104,
+          "successes": 78,
+          "timeouts": 21,
+          "mean_decision_ms": 102.50229613382552,
+          "p95_decision_ms": 107.45406663045286,
+          "per_task_successes": {
+            "assembly": 2,
+            "button-press-topdown": 8,
+            "coffee-button": 8,
+            "dial-turn": 8,
+            "door-close": 8,
+            "door-open": 7,
+            "drawer-close": 8,
+            "drawer-open": 8,
+            "faucet-open": 3,
+            "handle-press": 8,
+            "pick-place": 0,
+            "plate-slide": 8,
+            "reach": 2
+          },
+          "evidence_level": "independently_recounted_full_episode_records",
+          "source": {
+            "path": "docs/reports/20261010-progress-ttt-run/run/validation/step_0015000.json.gz",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261010-progress-ttt-run/run/validation/step_0015000.json.gz",
+            "git_blob_sha1": "11d9c5717c8edc9e98ff4a0157fe6ae766d19964",
+            "sha256": "4de86f52f125173a5bb5c1ddca0ed9ecdcd368b622e6d1bc615d868b39982a8b"
+          }
+        },
+        {
+          "step": 20000,
+          "episodes": 104,
+          "successes": 74,
+          "timeouts": 25,
+          "mean_decision_ms": 102.65764495257405,
+          "p95_decision_ms": 107.7435165643692,
+          "per_task_successes": {
+            "assembly": 1,
+            "button-press-topdown": 8,
+            "coffee-button": 8,
+            "dial-turn": 8,
+            "door-close": 8,
+            "door-open": 4,
+            "drawer-close": 8,
+            "drawer-open": 8,
+            "faucet-open": 2,
+            "handle-press": 8,
+            "pick-place": 0,
+            "plate-slide": 8,
+            "reach": 3
+          },
+          "evidence_level": "independently_recounted_full_episode_records",
+          "source": {
+            "path": "docs/reports/20261010-progress-ttt-run/run/validation/step_0020000.json.gz",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261010-progress-ttt-run/run/validation/step_0020000.json.gz",
+            "git_blob_sha1": "529db65f973cf145e577b4bbfe8d88311c606beb",
+            "sha256": "2c9069ea2bf4b66c7b20281e5c4bd3b1a084cd247c8617963420284668602a06"
+          }
+        }
+      ]
+    },
+    {
+      "method": "controller_grounded",
+      "training_source_commit": "74a0a715cc393ba26285deb4571006ee7bc4d286",
+      "report_path": "docs/CONTROLLER_GROUNDED_RESULTS.md",
+      "report_url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/CONTROLLER_GROUNDED_RESULTS.md",
+      "selected_step": 5000,
+      "selected_successes": 79,
+      "selected_success_percent": 75.96153846153847,
+      "selected_timeouts": 0,
+      "selected_mean_decision_ms": 81.41894437627765,
+      "selected_p95_decision_ms": 90.03727557137609,
+      "selected_per_task_successes": {
+        "assembly": 3,
+        "button-press-topdown": 8,
+        "coffee-button": 8,
+        "dial-turn": 7,
+        "door-close": 8,
+        "door-open": 8,
+        "drawer-close": 8,
+        "drawer-open": 8,
+        "faucet-open": 4,
+        "handle-press": 8,
+        "pick-place": 1,
+        "plate-slide": 6,
+        "reach": 2
+      },
+      "final_successes": 78,
+      "optimization_gpu_hours": 2.421563360877335,
+      "validation_gpu_hours": 1.9407914162344402,
+      "curve": [
+        {
+          "step": 5000,
+          "episodes": 104,
+          "successes": 79,
+          "timeouts": 0,
+          "mean_decision_ms": 81.41894437627765,
+          "p95_decision_ms": 90.03727557137609,
+          "per_task_successes": {
+            "assembly": 3,
+            "button-press-topdown": 8,
+            "coffee-button": 8,
+            "dial-turn": 7,
+            "door-close": 8,
+            "door-open": 8,
+            "drawer-close": 8,
+            "drawer-open": 8,
+            "faucet-open": 4,
+            "handle-press": 8,
+            "pick-place": 1,
+            "plate-slide": 6,
+            "reach": 2
+          },
+          "evidence_level": "independently_recounted_full_episode_records",
+          "source": {
+            "path": "docs/reports/20261009-controller-grounded/run/validation/step_0005000.json.gz",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261009-controller-grounded/run/validation/step_0005000.json.gz",
+            "git_blob_sha1": "cca5f1c748a6b05df2f4d203aae1430b688b5d08",
+            "sha256": "0c64a05b608a54f6971efd6dd3f2007bcac92900d3a5f1769d647873ada08ff9"
+          }
+        },
+        {
+          "step": 10000,
+          "episodes": 104,
+          "successes": 78,
+          "timeouts": 0,
+          "mean_decision_ms": 79.98896560924474,
+          "p95_decision_ms": 85.01855395734309,
+          "per_task_successes": {
+            "assembly": 0,
+            "button-press-topdown": 8,
+            "coffee-button": 8,
+            "dial-turn": 7,
+            "door-close": 8,
+            "door-open": 6,
+            "drawer-close": 8,
+            "drawer-open": 8,
+            "faucet-open": 5,
+            "handle-press": 8,
+            "pick-place": 0,
+            "plate-slide": 8,
+            "reach": 4
+          },
+          "evidence_level": "independently_recounted_full_episode_records",
+          "source": {
+            "path": "docs/reports/20261009-controller-grounded/run/validation/step_0010000.json.gz",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261009-controller-grounded/run/validation/step_0010000.json.gz",
+            "git_blob_sha1": "ab803af7432260c484b4c10ceb3e81307ea1e95a",
+            "sha256": "114a4e012f13e830f30b536799e47ad0d74981c3308fd7220baa3346d3f32cf3"
+          }
+        },
+        {
+          "step": 15000,
+          "episodes": 104,
+          "successes": 75,
+          "timeouts": 0,
+          "mean_decision_ms": 80.11014363124629,
+          "p95_decision_ms": 85.75637638568878,
+          "per_task_successes": {
+            "assembly": 1,
+            "button-press-topdown": 8,
+            "coffee-button": 8,
+            "dial-turn": 8,
+            "door-close": 8,
+            "door-open": 7,
+            "drawer-close": 8,
+            "drawer-open": 8,
+            "faucet-open": 4,
+            "handle-press": 8,
+            "pick-place": 0,
+            "plate-slide": 5,
+            "reach": 2
+          },
+          "evidence_level": "independently_recounted_full_episode_records",
+          "source": {
+            "path": "docs/reports/20261009-controller-grounded/run/validation/step_0015000.json.gz",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261009-controller-grounded/run/validation/step_0015000.json.gz",
+            "git_blob_sha1": "0624f34cf614ad1350ab72c3da59cea0599c90ad",
+            "sha256": "9f97f00952e89584bb5cb1e96f6f68e29ebddf946c2dd46705d327ea8ae9cf98"
+          }
+        },
+        {
+          "step": 20000,
+          "episodes": 104,
+          "successes": 78,
+          "timeouts": 0,
+          "mean_decision_ms": 80.00525962917905,
+          "p95_decision_ms": 84.72228795289993,
+          "per_task_successes": {
+            "assembly": 3,
+            "button-press-topdown": 8,
+            "coffee-button": 8,
+            "dial-turn": 8,
+            "door-close": 8,
+            "door-open": 7,
+            "drawer-close": 8,
+            "drawer-open": 8,
+            "faucet-open": 3,
+            "handle-press": 8,
+            "pick-place": 0,
+            "plate-slide": 4,
+            "reach": 5
+          },
+          "evidence_level": "independently_recounted_full_episode_records",
+          "source": {
+            "path": "docs/reports/20261009-controller-grounded/run/validation/step_0020000.json.gz",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261009-controller-grounded/run/validation/step_0020000.json.gz",
+            "git_blob_sha1": "33357ae403d73f3332926ba4d1ea390068424182",
+            "sha256": "ab0c3e27d9ef87c1604ed2e66945fd8babfa4fcab056d17303b6d3be9a896a73"
+          }
+        }
+      ]
+    },
+    {
+      "method": "latent_revision",
+      "training_source_commit": "899f8f2564e011ae87065a70acf28c50dade9997",
+      "report_path": "docs/LATENT_REVISION_RESULTS.md",
+      "report_url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/LATENT_REVISION_RESULTS.md",
+      "selected_step": 20000,
+      "selected_successes": 77,
+      "selected_success_percent": 74.03846153846153,
+      "selected_timeouts": 0,
+      "selected_mean_decision_ms": 85.2077580334677,
+      "selected_p95_decision_ms": 88.94189530983567,
+      "selected_per_task_successes": {
+        "assembly": 2,
+        "button-press-topdown": 8,
+        "coffee-button": 8,
+        "dial-turn": 8,
+        "door-close": 8,
+        "door-open": 7,
+        "drawer-close": 8,
+        "drawer-open": 8,
+        "faucet-open": 3,
+        "handle-press": 8,
+        "pick-place": 0,
+        "plate-slide": 6,
+        "reach": 3
+      },
+      "final_successes": 77,
+      "optimization_gpu_hours": 3.2435090097784998,
+      "validation_gpu_hours": 2.0474755409442715,
+      "curve": [
+        {
+          "step": 5000,
+          "episodes": 104,
+          "successes": 73,
+          "timeouts": 0,
+          "mean_decision_ms": 85.55289097956248,
+          "p95_decision_ms": 89.07896596938372,
+          "per_task_successes": {
+            "assembly": 2,
+            "button-press-topdown": 8,
+            "coffee-button": 8,
+            "dial-turn": 6,
+            "door-close": 8,
+            "door-open": 7,
+            "drawer-close": 8,
+            "drawer-open": 8,
+            "faucet-open": 4,
+            "handle-press": 8,
+            "pick-place": 0,
+            "plate-slide": 5,
+            "reach": 1
+          },
+          "evidence_level": "independently_recounted_full_episode_records",
+          "source": {
+            "path": "docs/reports/20261009-latent-revision/run/validation/step_0005000.json.gz",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261009-latent-revision/run/validation/step_0005000.json.gz",
+            "git_blob_sha1": "73da8a42d55642bfddad5ac8e63d58fc08f80e9e",
+            "sha256": "3bcfe3f15ba1abc4d7bdccfea55ab562d0c0c2ca682edf8deae66da2425e620c"
+          }
+        },
+        {
+          "step": 10000,
+          "episodes": 104,
+          "successes": 75,
+          "timeouts": 0,
+          "mean_decision_ms": 84.908140971918,
+          "p95_decision_ms": 88.44764372333884,
+          "per_task_successes": {
+            "assembly": 0,
+            "button-press-topdown": 8,
+            "coffee-button": 8,
+            "dial-turn": 7,
+            "door-close": 8,
+            "door-open": 6,
+            "drawer-close": 8,
+            "drawer-open": 8,
+            "faucet-open": 3,
+            "handle-press": 8,
+            "pick-place": 1,
+            "plate-slide": 6,
+            "reach": 4
+          },
+          "evidence_level": "independently_recounted_full_episode_records",
+          "source": {
+            "path": "docs/reports/20261009-latent-revision/run/validation/step_0010000.json.gz",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261009-latent-revision/run/validation/step_0010000.json.gz",
+            "git_blob_sha1": "849dce7ecd90ad0c9c419c092983751cc6bd56d5",
+            "sha256": "562d35223ef7eddce2590ff87ebf263c366b141a05122e5f503fcb6a12a525a4"
+          }
+        },
+        {
+          "step": 15000,
+          "episodes": 104,
+          "successes": 74,
+          "timeouts": 0,
+          "mean_decision_ms": 85.06028962276537,
+          "p95_decision_ms": 89.07770449295637,
+          "per_task_successes": {
+            "assembly": 1,
+            "button-press-topdown": 8,
+            "coffee-button": 8,
+            "dial-turn": 8,
+            "door-close": 8,
+            "door-open": 6,
+            "drawer-close": 8,
+            "drawer-open": 8,
+            "faucet-open": 3,
+            "handle-press": 8,
+            "pick-place": 1,
+            "plate-slide": 5,
+            "reach": 2
+          },
+          "evidence_level": "independently_recounted_full_episode_records",
+          "source": {
+            "path": "docs/reports/20261009-latent-revision/run/validation/step_0015000.json.gz",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261009-latent-revision/run/validation/step_0015000.json.gz",
+            "git_blob_sha1": "09f8493a44e18fa89e75072bc668914449555760",
+            "sha256": "81c7134a374930ddcbe0ad19e7bcc3a39d38b4880138c5d96f341cffb8b986d8"
+          }
+        },
+        {
+          "step": 20000,
+          "episodes": 104,
+          "successes": 77,
+          "timeouts": 0,
+          "mean_decision_ms": 85.2077580334677,
+          "p95_decision_ms": 88.94189530983567,
+          "per_task_successes": {
+            "assembly": 2,
+            "button-press-topdown": 8,
+            "coffee-button": 8,
+            "dial-turn": 8,
+            "door-close": 8,
+            "door-open": 7,
+            "drawer-close": 8,
+            "drawer-open": 8,
+            "faucet-open": 3,
+            "handle-press": 8,
+            "pick-place": 0,
+            "plate-slide": 6,
+            "reach": 3
+          },
+          "evidence_level": "independently_recounted_full_episode_records",
+          "source": {
+            "path": "docs/reports/20261009-latent-revision/run/validation/step_0020000.json.gz",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261009-latent-revision/run/validation/step_0020000.json.gz",
+            "git_blob_sha1": "29421b525beb9c33fa57c5a752b55103b9f469de",
+            "sha256": "656ceedba9a7a4808eaa57ef2141507b5e700c54d8acd349a672947f4fe36bae"
+          }
+        }
+      ]
+    },
+    {
+      "method": "leflow_ttt",
+      "training_source_commit": "70c19323351b7fe2756f52ec6968b75f65abe7a2",
+      "report_path": "docs/LEFLOW_TTT_RESULTS.md",
+      "report_url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/LEFLOW_TTT_RESULTS.md",
+      "selected_step": 20000,
+      "selected_successes": 29,
+      "selected_success_percent": 27.884615384615383,
+      "selected_timeouts": 0,
+      "selected_mean_decision_ms": 104.18582999922023,
+      "selected_p95_decision_ms": 109.48320738971233,
+      "selected_per_task_successes": {
+        "assembly": 0,
+        "button-press-topdown": 0,
+        "coffee-button": 7,
+        "dial-turn": 0,
+        "door-close": 1,
+        "door-open": 0,
+        "drawer-close": 5,
+        "drawer-open": 0,
+        "faucet-open": 7,
+        "handle-press": 8,
+        "pick-place": 0,
+        "plate-slide": 0,
+        "reach": 1
+      },
+      "final_successes": 29,
+      "optimization_gpu_hours": 2.4373079992189175,
+      "validation_gpu_hours": 2.3738358717784287,
+      "curve": [
+        {
+          "step": 5000,
+          "episodes": 104,
+          "successes": 27,
+          "timeouts": 0,
+          "mean_decision_ms": 104.73617862248331,
+          "p95_decision_ms": 109.8861020989716,
+          "per_task_successes": {
+            "assembly": 0,
+            "button-press-topdown": 0,
+            "coffee-button": 5,
+            "dial-turn": 0,
+            "door-close": 0,
+            "door-open": 0,
+            "drawer-close": 5,
+            "drawer-open": 0,
+            "faucet-open": 8,
+            "handle-press": 7,
+            "pick-place": 0,
+            "plate-slide": 0,
+            "reach": 2
+          },
+          "evidence_level": "independently_recounted_full_episode_records",
+          "source": {
+            "path": "docs/reports/20261010-leflow-ttt/run/validation/step_0005000.json.gz",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261010-leflow-ttt/run/validation/step_0005000.json.gz",
+            "git_blob_sha1": "6c433dbf5f8bf8ad1936258ffdac366907eb3c82",
+            "sha256": "fd85a4ad7a8ae2a09d073808e8373ceba7da8ed24ec962710fd7ae3df3da57da"
+          }
+        },
+        {
+          "step": 10000,
+          "episodes": 104,
+          "successes": 21,
+          "timeouts": 0,
+          "mean_decision_ms": 104.06846115839178,
+          "p95_decision_ms": 108.77387477084994,
+          "per_task_successes": {
+            "assembly": 0,
+            "button-press-topdown": 0,
+            "coffee-button": 6,
+            "dial-turn": 0,
+            "door-close": 0,
+            "door-open": 0,
+            "drawer-close": 6,
+            "drawer-open": 0,
+            "faucet-open": 1,
+            "handle-press": 8,
+            "pick-place": 0,
+            "plate-slide": 0,
+            "reach": 0
+          },
+          "evidence_level": "independently_recounted_full_episode_records",
+          "source": {
+            "path": "docs/reports/20261010-leflow-ttt/run/validation/step_0010000.json.gz",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261010-leflow-ttt/run/validation/step_0010000.json.gz",
+            "git_blob_sha1": "75bc1d20abff6a1d0b7ee8592beab6ef037665c1",
+            "sha256": "e28d4edabdc5cbd48c74d09875ee4c06e88f0e7875055398f5723eca585113c7"
+          }
+        },
+        {
+          "step": 15000,
+          "episodes": 104,
+          "successes": 27,
+          "timeouts": 0,
+          "mean_decision_ms": 103.82615557488015,
+          "p95_decision_ms": 108.89254659414291,
+          "per_task_successes": {
+            "assembly": 0,
+            "button-press-topdown": 0,
+            "coffee-button": 8,
+            "dial-turn": 0,
+            "door-close": 4,
+            "door-open": 0,
+            "drawer-close": 6,
+            "drawer-open": 0,
+            "faucet-open": 0,
+            "handle-press": 8,
+            "pick-place": 0,
+            "plate-slide": 0,
+            "reach": 1
+          },
+          "evidence_level": "independently_recounted_full_episode_records",
+          "source": {
+            "path": "docs/reports/20261010-leflow-ttt/run/validation/step_0015000.json.gz",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261010-leflow-ttt/run/validation/step_0015000.json.gz",
+            "git_blob_sha1": "dfa4d14d76d227fb9990a27bdb7280da2fc40a1f",
+            "sha256": "cd22bdf17dac5536101a40959cc7af332134631fe76562b53b782125d2f0b33a"
+          }
+        },
+        {
+          "step": 20000,
+          "episodes": 104,
+          "successes": 29,
+          "timeouts": 0,
+          "mean_decision_ms": 104.18582999922023,
+          "p95_decision_ms": 109.48320738971233,
+          "per_task_successes": {
+            "assembly": 0,
+            "button-press-topdown": 0,
+            "coffee-button": 7,
+            "dial-turn": 0,
+            "door-close": 1,
+            "door-open": 0,
+            "drawer-close": 5,
+            "drawer-open": 0,
+            "faucet-open": 7,
+            "handle-press": 8,
+            "pick-place": 0,
+            "plate-slide": 0,
+            "reach": 1
+          },
+          "evidence_level": "independently_recounted_full_episode_records",
+          "source": {
+            "path": "docs/reports/20261010-leflow-ttt/run/validation/step_0020000.json.gz",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261010-leflow-ttt/run/validation/step_0020000.json.gz",
+            "git_blob_sha1": "092ade5b31785dae05e7d7e7d348a415fe229834",
+            "sha256": "b91dadb029234f2136f182b9c3f219aaa01ff39e011e0550aa4a6fe24cbc8c07"
+          }
+        }
+      ]
+    },
+    {
+      "method": "leflow_release",
+      "training_source_commit": "564b52ffc86eba212aa6858f3a9f10390905a905",
+      "report_path": "docs/RELEASE_BASELINE_RESULTS.md",
+      "report_url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/RELEASE_BASELINE_RESULTS.md",
+      "selected_step": 10000,
+      "selected_successes": 21,
+      "selected_success_percent": 20.192307692307693,
+      "selected_timeouts": 0,
+      "selected_mean_decision_ms": 91.11371946244503,
+      "selected_p95_decision_ms": 94.01742871850729,
+      "selected_per_task_successes": {
+        "assembly": 0,
+        "button-press-topdown": 0,
+        "coffee-button": 6,
+        "dial-turn": 0,
+        "door-close": 0,
+        "door-open": 0,
+        "drawer-close": 1,
+        "drawer-open": 0,
+        "faucet-open": 4,
+        "handle-press": 7,
+        "pick-place": 0,
+        "plate-slide": 0,
+        "reach": 3
+      },
+      "final_successes": 14,
+      "optimization_gpu_hours": 0.8524177146785789,
+      "validation_gpu_hours": 2.4360253854737515,
+      "curve": [
+        {
+          "step": 5000,
+          "episodes": 104,
+          "successes": 14,
+          "timeouts": 0,
+          "mean_decision_ms": 91.48611895681366,
+          "p95_decision_ms": 94.85677443444729,
+          "per_task_successes": {
+            "assembly": 0,
+            "button-press-topdown": 0,
+            "coffee-button": 6,
+            "dial-turn": 0,
+            "door-close": 0,
+            "door-open": 0,
+            "drawer-close": 2,
+            "drawer-open": 0,
+            "faucet-open": 3,
+            "handle-press": 2,
+            "pick-place": 0,
+            "plate-slide": 0,
+            "reach": 1
+          },
+          "evidence_level": "independently_recounted_full_episode_records",
+          "source": {
+            "path": "docs/reports/20261010-release-baselines/leflow/validation/step_0005000.json.gz",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261010-release-baselines/leflow/validation/step_0005000.json.gz",
+            "git_blob_sha1": "eafc98eb8d153333e8d333c5cd996f9d99682ec0",
+            "sha256": "45a81cd81c47067957033d9f1803792733508884027d6e944713e33749b7a1ed"
+          }
+        },
+        {
+          "step": 10000,
+          "episodes": 104,
+          "successes": 21,
+          "timeouts": 0,
+          "mean_decision_ms": 91.11371946244503,
+          "p95_decision_ms": 94.01742871850729,
+          "per_task_successes": {
+            "assembly": 0,
+            "button-press-topdown": 0,
+            "coffee-button": 6,
+            "dial-turn": 0,
+            "door-close": 0,
+            "door-open": 0,
+            "drawer-close": 1,
+            "drawer-open": 0,
+            "faucet-open": 4,
+            "handle-press": 7,
+            "pick-place": 0,
+            "plate-slide": 0,
+            "reach": 3
+          },
+          "evidence_level": "independently_recounted_full_episode_records",
+          "source": {
+            "path": "docs/reports/20261010-release-baselines/leflow/validation/step_0010000.json.gz",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261010-release-baselines/leflow/validation/step_0010000.json.gz",
+            "git_blob_sha1": "546ecbf67b465346386ee8483b36c40dd113b523",
+            "sha256": "506a2857ec7b9f19782d0df27bdbad3d8a72f464ebda3a47ab20b85f8a98e713"
+          }
+        },
+        {
+          "step": 15000,
+          "episodes": 104,
+          "successes": 19,
+          "timeouts": 0,
+          "mean_decision_ms": 91.95767168922977,
+          "p95_decision_ms": 95.49368182197213,
+          "per_task_successes": {
+            "assembly": 0,
+            "button-press-topdown": 0,
+            "coffee-button": 5,
+            "dial-turn": 0,
+            "door-close": 0,
+            "door-open": 0,
+            "drawer-close": 0,
+            "drawer-open": 0,
+            "faucet-open": 2,
+            "handle-press": 7,
+            "pick-place": 0,
+            "plate-slide": 0,
+            "reach": 5
+          },
+          "evidence_level": "independently_recounted_full_episode_records",
+          "source": {
+            "path": "docs/reports/20261010-release-baselines/leflow/validation/step_0015000.json.gz",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261010-release-baselines/leflow/validation/step_0015000.json.gz",
+            "git_blob_sha1": "0a98315a081f1413350711dc8dda78aac4d8f0ee",
+            "sha256": "8238eec51ec7bd026d3c5174597a553fa9799477d8881baed3daa567948dd075"
+          }
+        },
+        {
+          "step": 20000,
+          "episodes": 104,
+          "successes": 14,
+          "timeouts": 0,
+          "mean_decision_ms": 91.54137957193892,
+          "p95_decision_ms": 95.27727868407965,
+          "per_task_successes": {
+            "assembly": 0,
+            "button-press-topdown": 0,
+            "coffee-button": 4,
+            "dial-turn": 0,
+            "door-close": 0,
+            "door-open": 0,
+            "drawer-close": 0,
+            "drawer-open": 0,
+            "faucet-open": 0,
+            "handle-press": 6,
+            "pick-place": 0,
+            "plate-slide": 0,
+            "reach": 4
+          },
+          "evidence_level": "independently_recounted_full_episode_records",
+          "source": {
+            "path": "docs/reports/20261010-release-baselines/leflow/validation/step_0020000.json.gz",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261010-release-baselines/leflow/validation/step_0020000.json.gz",
+            "git_blob_sha1": "cf1df9293a536efde963f44e2aa35b9d610bec5a",
+            "sha256": "a95dad7c094f4a0e528d049f3546ab8a17556eab3e7590e8ef3d5c92370ceb4e"
+          }
+        }
+      ]
+    },
+    {
+      "method": "hwm_paper",
+      "training_source_commit": "cde9c394c00e5be68348d6e80c1fd22d0e5c518d",
+      "report_path": "docs/RELEASE_BASELINE_RESULTS.md",
+      "report_url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/RELEASE_BASELINE_RESULTS.md",
+      "selected_step": 15000,
+      "selected_successes": 5,
+      "selected_success_percent": 4.8076923076923075,
+      "selected_timeouts": 99,
+      "selected_mean_decision_ms": 3537.464334007583,
+      "selected_p95_decision_ms": 4572.272618114948,
+      "selected_per_task_successes": {
+        "assembly": 0,
+        "button-press-topdown": 0,
+        "coffee-button": 0,
+        "dial-turn": 0,
+        "door-close": 0,
+        "door-open": 0,
+        "drawer-close": 1,
+        "drawer-open": 0,
+        "faucet-open": 0,
+        "handle-press": 4,
+        "pick-place": 0,
+        "plate-slide": 0,
+        "reach": 0
+      },
+      "final_successes": 5,
+      "optimization_gpu_hours": 2.0773389685754147,
+      "validation_gpu_hours": 1.5413080431955557,
+      "curve": [
+        {
+          "step": 5000,
+          "episodes": 104,
+          "successes": 2,
+          "timeouts": 102,
+          "mean_decision_ms": 3518.6355257466917,
+          "p95_decision_ms": 4569.290266279131,
+          "per_task_successes": {
+            "assembly": 0,
+            "button-press-topdown": 0,
+            "coffee-button": 0,
+            "dial-turn": 0,
+            "door-close": 0,
+            "door-open": 0,
+            "drawer-close": 0,
+            "drawer-open": 0,
+            "faucet-open": 0,
+            "handle-press": 2,
+            "pick-place": 0,
+            "plate-slide": 0,
+            "reach": 0
+          },
+          "evidence_level": "independently_recounted_full_episode_records",
+          "source": {
+            "path": "docs/reports/20261010-release-baselines/hwm/validation/step_0005000.json.gz",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261010-release-baselines/hwm/validation/step_0005000.json.gz",
+            "git_blob_sha1": "4352a1a9acb8628496423b279e1029791b066c06",
+            "sha256": "25101e5471b14355ae2d6a91dc4456945270cbd540cd00c3cad97df22636dce3"
+          }
+        },
+        {
+          "step": 10000,
+          "episodes": 104,
+          "successes": 3,
+          "timeouts": 101,
+          "mean_decision_ms": 3523.5596847295474,
+          "p95_decision_ms": 4570.891769975424,
+          "per_task_successes": {
+            "assembly": 0,
+            "button-press-topdown": 0,
+            "coffee-button": 0,
+            "dial-turn": 0,
+            "door-close": 0,
+            "door-open": 0,
+            "drawer-close": 0,
+            "drawer-open": 0,
+            "faucet-open": 0,
+            "handle-press": 3,
+            "pick-place": 0,
+            "plate-slide": 0,
+            "reach": 0
+          },
+          "evidence_level": "independently_recounted_full_episode_records",
+          "source": {
+            "path": "docs/reports/20261010-release-baselines/hwm/validation/step_0010000.json.gz",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261010-release-baselines/hwm/validation/step_0010000.json.gz",
+            "git_blob_sha1": "351f6f241965def061bad7523608398fae80aaed",
+            "sha256": "484dc976d6a879b95829264d521dbaf86fe7ba9d2220682ebdd5c6544c409926"
+          }
+        },
+        {
+          "step": 15000,
+          "episodes": 104,
+          "successes": 5,
+          "timeouts": 99,
+          "mean_decision_ms": 3537.464334007583,
+          "p95_decision_ms": 4572.272618114948,
+          "per_task_successes": {
+            "assembly": 0,
+            "button-press-topdown": 0,
+            "coffee-button": 0,
+            "dial-turn": 0,
+            "door-close": 0,
+            "door-open": 0,
+            "drawer-close": 1,
+            "drawer-open": 0,
+            "faucet-open": 0,
+            "handle-press": 4,
+            "pick-place": 0,
+            "plate-slide": 0,
+            "reach": 0
+          },
+          "evidence_level": "independently_recounted_full_episode_records",
+          "source": {
+            "path": "docs/reports/20261010-release-baselines/hwm/validation/step_0015000.json.gz",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261010-release-baselines/hwm/validation/step_0015000.json.gz",
+            "git_blob_sha1": "108c83b82d941e8b40030b2af99f5731b6bf0311",
+            "sha256": "56b7bf19e165d123b9aa32b88f5eb773a3a48f82d7e203144ca14071354120ff"
+          }
+        },
+        {
+          "step": 20000,
+          "episodes": 104,
+          "successes": 5,
+          "timeouts": 99,
+          "mean_decision_ms": 3537.9404476100535,
+          "p95_decision_ms": 4572.0120402053,
+          "per_task_successes": {
+            "assembly": 0,
+            "button-press-topdown": 0,
+            "coffee-button": 0,
+            "dial-turn": 0,
+            "door-close": 0,
+            "door-open": 0,
+            "drawer-close": 0,
+            "drawer-open": 0,
+            "faucet-open": 0,
+            "handle-press": 5,
+            "pick-place": 0,
+            "plate-slide": 0,
+            "reach": 0
+          },
+          "evidence_level": "independently_recounted_full_episode_records",
+          "source": {
+            "path": "docs/reports/20261010-release-baselines/hwm/validation/step_0020000.json.gz",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261010-release-baselines/hwm/validation/step_0020000.json.gz",
+            "git_blob_sha1": "49d5bffd839e44899189d29d2b869baba62d52f6",
+            "sha256": "f3e4b391abe672d2e124e4afd60bc57467893eb66b2f85a7a744243623cf4996"
+          }
+        }
+      ]
+    },
+    {
+      "method": "cem_release",
+      "training_source_commit": "564b52ffc86eba212aa6858f3a9f10390905a905",
+      "report_path": "docs/RELEASE_BASELINE_RESULTS.md",
+      "report_url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/RELEASE_BASELINE_RESULTS.md",
+      "selected_step": 0,
+      "selected_successes": 24,
+      "selected_success_percent": 23.076923076923077,
+      "selected_timeouts": 80,
+      "selected_mean_decision_ms": 1011.7452323236048,
+      "selected_p95_decision_ms": 1060.8112383633852,
+      "selected_per_task_successes": {
+        "assembly": 0,
+        "button-press-topdown": 0,
+        "coffee-button": 8,
+        "dial-turn": 0,
+        "door-close": 3,
+        "door-open": 0,
+        "drawer-close": 3,
+        "drawer-open": 0,
+        "faucet-open": 0,
+        "handle-press": 8,
+        "pick-place": 0,
+        "plate-slide": 0,
+        "reach": 2
+      },
+      "final_successes": 24,
+      "optimization_gpu_hours": 0.0,
+      "validation_gpu_hours": 0.5146546766493055,
+      "curve": [
+        {
+          "step": 0,
+          "episodes": 104,
+          "successes": 24,
+          "timeouts": 80,
+          "mean_decision_ms": 1011.7452323236048,
+          "p95_decision_ms": 1060.8112383633852,
+          "per_task_successes": {
+            "assembly": 0,
+            "button-press-topdown": 0,
+            "coffee-button": 8,
+            "dial-turn": 0,
+            "door-close": 3,
+            "door-open": 0,
+            "drawer-close": 3,
+            "drawer-open": 0,
+            "faucet-open": 0,
+            "handle-press": 8,
+            "pick-place": 0,
+            "plate-slide": 0,
+            "reach": 2
+          },
+          "evidence_level": "independently_recounted_full_episode_records",
+          "source": {
+            "path": "docs/reports/20261010-release-baselines/cem/validation.json",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261010-release-baselines/cem/validation.json",
+            "git_blob_sha1": "8c7ea31b5d644e8de0e6997e5df69e8494fbe299",
+            "sha256": "0fb3d2614d76fdd4c12e3605220f986306a6541789cf1d74d03ef2c4b8af3a8e"
+          }
+        }
+      ]
+    }
+  ],
+  "selected_checkpoint_pairings": [
+    {
+      "method": "nonlinear_repair_ttt",
+      "reference": "execution_revision",
+      "wins": 5,
+      "regressions": 12,
+      "difference_percentage_points": -6.730769230769231,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "nonlinear_repair_ttt",
+      "reference": "repair_flow_ttt",
+      "wins": 4,
+      "regressions": 11,
+      "difference_percentage_points": -6.730769230769231,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "nonlinear_repair_ttt",
+      "reference": "retrieval_repair_ttt",
+      "wins": 8,
+      "regressions": 15,
+      "difference_percentage_points": -6.730769230769231,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "nonlinear_repair_ttt",
+      "reference": "leflow_release",
+      "wins": 56,
+      "regressions": 4,
+      "difference_percentage_points": 50.0,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "nonlinear_repair_ttt",
+      "reference": "cem_release",
+      "wins": 49,
+      "regressions": 0,
+      "difference_percentage_points": 47.11538461538461,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "progress_objective_ttt",
+      "reference": "execution_revision",
+      "wins": 3,
+      "regressions": 5,
+      "difference_percentage_points": -1.9230769230769231,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "progress_objective_ttt",
+      "reference": "repair_flow_ttt",
+      "wins": 3,
+      "regressions": 5,
+      "difference_percentage_points": -1.9230769230769231,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "progress_objective_ttt",
+      "reference": "retrieval_repair_ttt",
+      "wins": 4,
+      "regressions": 6,
+      "difference_percentage_points": -1.9230769230769231,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "progress_objective_ttt",
+      "reference": "leflow_release",
+      "wins": 63,
+      "regressions": 6,
+      "difference_percentage_points": 54.80769230769231,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "progress_objective_ttt",
+      "reference": "cem_release",
+      "wins": 55,
+      "regressions": 1,
+      "difference_percentage_points": 51.92307692307692,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "shifted_repair_ttt",
+      "reference": "execution_revision",
+      "wins": 5,
+      "regressions": 6,
+      "difference_percentage_points": -0.9615384615384616,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "shifted_repair_ttt",
+      "reference": "repair_flow_ttt",
+      "wins": 4,
+      "regressions": 5,
+      "difference_percentage_points": -0.9615384615384616,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "shifted_repair_ttt",
+      "reference": "retrieval_repair_ttt",
+      "wins": 6,
+      "regressions": 7,
+      "difference_percentage_points": -0.9615384615384616,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "shifted_repair_ttt",
+      "reference": "leflow_release",
+      "wins": 63,
+      "regressions": 5,
+      "difference_percentage_points": 55.76923076923077,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "shifted_repair_ttt",
+      "reference": "cem_release",
+      "wins": 56,
+      "regressions": 1,
+      "difference_percentage_points": 52.88461538461539,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "retrieval_repair_ttt",
+      "reference": "execution_revision",
+      "wins": 6,
+      "regressions": 6,
+      "difference_percentage_points": 0.0,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "retrieval_repair_ttt",
+      "reference": "repair_flow_ttt",
+      "wins": 7,
+      "regressions": 7,
+      "difference_percentage_points": 0.0,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "retrieval_repair_ttt",
+      "reference": "leflow_release",
+      "wins": 64,
+      "regressions": 5,
+      "difference_percentage_points": 56.73076923076923,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "retrieval_repair_ttt",
+      "reference": "cem_release",
+      "wins": 57,
+      "regressions": 1,
+      "difference_percentage_points": 53.84615384615385,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "repair_flow_ttt",
+      "reference": "execution_revision",
+      "wins": 6,
+      "regressions": 6,
+      "difference_percentage_points": 0.0,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "repair_flow_ttt",
+      "reference": "retrieval_repair_ttt",
+      "wins": 7,
+      "regressions": 7,
+      "difference_percentage_points": 0.0,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "repair_flow_ttt",
+      "reference": "leflow_release",
+      "wins": 64,
+      "regressions": 5,
+      "difference_percentage_points": 56.73076923076923,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "repair_flow_ttt",
+      "reference": "cem_release",
+      "wins": 57,
+      "regressions": 1,
+      "difference_percentage_points": 53.84615384615385,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "guided_ttt",
+      "reference": "execution_revision",
+      "wins": 2,
+      "regressions": 7,
+      "difference_percentage_points": -4.8076923076923075,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "guided_ttt",
+      "reference": "repair_flow_ttt",
+      "wins": 2,
+      "regressions": 7,
+      "difference_percentage_points": -4.8076923076923075,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "guided_ttt",
+      "reference": "retrieval_repair_ttt",
+      "wins": 4,
+      "regressions": 9,
+      "difference_percentage_points": -4.8076923076923075,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "guided_ttt",
+      "reference": "leflow_release",
+      "wins": 60,
+      "regressions": 6,
+      "difference_percentage_points": 51.92307692307692,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "guided_ttt",
+      "reference": "cem_release",
+      "wins": 52,
+      "regressions": 1,
+      "difference_percentage_points": 49.03846153846154,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "execution_revision",
+      "reference": "repair_flow_ttt",
+      "wins": 6,
+      "regressions": 6,
+      "difference_percentage_points": 0.0,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "execution_revision",
+      "reference": "retrieval_repair_ttt",
+      "wins": 6,
+      "regressions": 6,
+      "difference_percentage_points": 0.0,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "execution_revision",
+      "reference": "leflow_release",
+      "wins": 63,
+      "regressions": 4,
+      "difference_percentage_points": 56.73076923076923,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "execution_revision",
+      "reference": "cem_release",
+      "wins": 57,
+      "regressions": 1,
+      "difference_percentage_points": 53.84615384615385,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "flow_reasoning",
+      "reference": "execution_revision",
+      "wins": 5,
+      "regressions": 6,
+      "difference_percentage_points": -0.9615384615384616,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "flow_reasoning",
+      "reference": "repair_flow_ttt",
+      "wins": 3,
+      "regressions": 4,
+      "difference_percentage_points": -0.9615384615384616,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "flow_reasoning",
+      "reference": "retrieval_repair_ttt",
+      "wins": 7,
+      "regressions": 8,
+      "difference_percentage_points": -0.9615384615384616,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "flow_reasoning",
+      "reference": "leflow_release",
+      "wins": 63,
+      "regressions": 5,
+      "difference_percentage_points": 55.76923076923077,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "flow_reasoning",
+      "reference": "cem_release",
+      "wins": 56,
+      "regressions": 1,
+      "difference_percentage_points": 52.88461538461539,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "progress_ttt",
+      "reference": "execution_revision",
+      "wins": 5,
+      "regressions": 7,
+      "difference_percentage_points": -1.9230769230769231,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "progress_ttt",
+      "reference": "repair_flow_ttt",
+      "wins": 5,
+      "regressions": 7,
+      "difference_percentage_points": -1.9230769230769231,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "progress_ttt",
+      "reference": "retrieval_repair_ttt",
+      "wins": 5,
+      "regressions": 7,
+      "difference_percentage_points": -1.9230769230769231,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "progress_ttt",
+      "reference": "leflow_release",
+      "wins": 62,
+      "regressions": 5,
+      "difference_percentage_points": 54.80769230769231,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "progress_ttt",
+      "reference": "cem_release",
+      "wins": 55,
+      "regressions": 1,
+      "difference_percentage_points": 51.92307692307692,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "controller_grounded",
+      "reference": "execution_revision",
+      "wins": 6,
+      "regressions": 7,
+      "difference_percentage_points": -0.9615384615384616,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "controller_grounded",
+      "reference": "repair_flow_ttt",
+      "wins": 7,
+      "regressions": 8,
+      "difference_percentage_points": -0.9615384615384616,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "controller_grounded",
+      "reference": "retrieval_repair_ttt",
+      "wins": 6,
+      "regressions": 7,
+      "difference_percentage_points": -0.9615384615384616,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "controller_grounded",
+      "reference": "leflow_release",
+      "wins": 63,
+      "regressions": 5,
+      "difference_percentage_points": 55.76923076923077,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "controller_grounded",
+      "reference": "cem_release",
+      "wins": 56,
+      "regressions": 1,
+      "difference_percentage_points": 52.88461538461539,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "latent_revision",
+      "reference": "execution_revision",
+      "wins": 4,
+      "regressions": 7,
+      "difference_percentage_points": -2.8846153846153846,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "latent_revision",
+      "reference": "repair_flow_ttt",
+      "wins": 5,
+      "regressions": 8,
+      "difference_percentage_points": -2.8846153846153846,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "latent_revision",
+      "reference": "retrieval_repair_ttt",
+      "wins": 4,
+      "regressions": 7,
+      "difference_percentage_points": -2.8846153846153846,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "latent_revision",
+      "reference": "leflow_release",
+      "wins": 61,
+      "regressions": 5,
+      "difference_percentage_points": 53.84615384615385,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "latent_revision",
+      "reference": "cem_release",
+      "wins": 54,
+      "regressions": 1,
+      "difference_percentage_points": 50.96153846153846,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "leflow_ttt",
+      "reference": "execution_revision",
+      "wins": 5,
+      "regressions": 56,
+      "difference_percentage_points": -49.03846153846154,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "leflow_ttt",
+      "reference": "repair_flow_ttt",
+      "wins": 6,
+      "regressions": 57,
+      "difference_percentage_points": -49.03846153846154,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "leflow_ttt",
+      "reference": "retrieval_repair_ttt",
+      "wins": 5,
+      "regressions": 56,
+      "difference_percentage_points": -49.03846153846154,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "leflow_ttt",
+      "reference": "leflow_release",
+      "wins": 12,
+      "regressions": 4,
+      "difference_percentage_points": 7.6923076923076925,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "leflow_ttt",
+      "reference": "cem_release",
+      "wins": 13,
+      "regressions": 8,
+      "difference_percentage_points": 4.8076923076923075,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "leflow_release",
+      "reference": "execution_revision",
+      "wins": 4,
+      "regressions": 63,
+      "difference_percentage_points": -56.73076923076923,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "leflow_release",
+      "reference": "repair_flow_ttt",
+      "wins": 5,
+      "regressions": 64,
+      "difference_percentage_points": -56.73076923076923,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "leflow_release",
+      "reference": "retrieval_repair_ttt",
+      "wins": 5,
+      "regressions": 64,
+      "difference_percentage_points": -56.73076923076923,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "leflow_release",
+      "reference": "cem_release",
+      "wins": 7,
+      "regressions": 10,
+      "difference_percentage_points": -2.8846153846153846,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "hwm_paper",
+      "reference": "execution_revision",
+      "wins": 0,
+      "regressions": 75,
+      "difference_percentage_points": -72.11538461538461,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "hwm_paper",
+      "reference": "repair_flow_ttt",
+      "wins": 0,
+      "regressions": 75,
+      "difference_percentage_points": -72.11538461538461,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "hwm_paper",
+      "reference": "retrieval_repair_ttt",
+      "wins": 0,
+      "regressions": 75,
+      "difference_percentage_points": -72.11538461538461,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "hwm_paper",
+      "reference": "leflow_release",
+      "wins": 2,
+      "regressions": 18,
+      "difference_percentage_points": -15.384615384615385,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "hwm_paper",
+      "reference": "cem_release",
+      "wins": 1,
+      "regressions": 20,
+      "difference_percentage_points": -18.26923076923077,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "cem_release",
+      "reference": "execution_revision",
+      "wins": 1,
+      "regressions": 57,
+      "difference_percentage_points": -53.84615384615385,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "cem_release",
+      "reference": "repair_flow_ttt",
+      "wins": 1,
+      "regressions": 57,
+      "difference_percentage_points": -53.84615384615385,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "cem_release",
+      "reference": "retrieval_repair_ttt",
+      "wins": 1,
+      "regressions": 57,
+      "difference_percentage_points": -53.84615384615385,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "cem_release",
+      "reference": "leflow_release",
+      "wins": 10,
+      "regressions": 7,
+      "difference_percentage_points": 2.8846153846153846,
+      "evidence_level": "independently_recomputed_selected_episode_flags"
+    },
+    {
+      "method": "bayesian_repair_ttt",
+      "reference": "guided_ttt",
+      "wins": 6,
+      "regressions": 4,
+      "difference_percentage_points": 1.9230769230769231,
+      "evidence_level": "saved_compact_analysis_not_independently_recounted_raw_records"
+    },
+    {
+      "method": "bayesian_repair_ttt",
+      "reference": "progress_ttt",
+      "wins": 4,
+      "regressions": 5,
+      "difference_percentage_points": -0.9615384615384616,
+      "evidence_level": "saved_compact_analysis_not_independently_recounted_raw_records"
+    },
+    {
+      "method": "bayesian_repair_ttt",
+      "reference": "flow_reasoning",
+      "wins": 5,
+      "regressions": 7,
+      "difference_percentage_points": -1.9230769230769231,
+      "evidence_level": "saved_compact_analysis_not_independently_recounted_raw_records"
+    },
+    {
+      "method": "bayesian_repair_ttt",
+      "reference": "execution_revision",
+      "wins": 6,
+      "regressions": 9,
+      "difference_percentage_points": -2.8846153846153846,
+      "evidence_level": "saved_compact_analysis_not_independently_recounted_raw_records"
+    },
+    {
+      "method": "bayesian_repair_ttt",
+      "reference": "controller_grounded",
+      "wins": 7,
+      "regressions": 9,
+      "difference_percentage_points": -1.9230769230769231,
+      "evidence_level": "saved_compact_analysis_not_independently_recounted_raw_records"
+    },
+    {
+      "method": "bayesian_repair_ttt",
+      "reference": "leflow_release",
+      "wins": 62,
+      "regressions": 6,
+      "difference_percentage_points": 53.84615384615385,
+      "evidence_level": "saved_compact_analysis_not_independently_recounted_raw_records"
+    },
+    {
+      "method": "bayesian_repair_ttt",
+      "reference": "hwm_paper",
+      "wins": 72,
+      "regressions": 0,
+      "difference_percentage_points": 69.23076923076923,
+      "evidence_level": "saved_compact_analysis_not_independently_recounted_raw_records"
+    },
+    {
+      "method": "bayesian_repair_ttt",
+      "reference": "cem_release",
+      "wins": 54,
+      "regressions": 1,
+      "difference_percentage_points": 50.96153846153846,
+      "evidence_level": "saved_compact_analysis_not_independently_recounted_raw_records"
+    },
+    {
+      "method": "bayesian_repair_ttt",
+      "reference": "repair_flow_ttt",
+      "wins": 5,
+      "regressions": 8,
+      "difference_percentage_points": -2.8846153846153846,
+      "evidence_level": "saved_compact_analysis_not_independently_recounted_raw_records"
+    },
+    {
+      "method": "bayesian_repair_ttt",
+      "reference": "retrieval_repair_ttt",
+      "wins": 2,
+      "regressions": 5,
+      "difference_percentage_points": -2.8846153846153846,
+      "evidence_level": "saved_compact_analysis_not_independently_recounted_raw_records"
+    },
+    {
+      "method": "bayesian_repair_ttt",
+      "reference": "shifted_repair_ttt",
+      "wins": 5,
+      "regressions": 7,
+      "difference_percentage_points": -1.9230769230769231,
+      "evidence_level": "saved_compact_analysis_not_independently_recounted_raw_records"
+    },
+    {
+      "method": "bayesian_repair_ttt",
+      "reference": "progress_objective_ttt",
+      "wins": 3,
+      "regressions": 4,
+      "difference_percentage_points": -0.9615384615384616,
+      "evidence_level": "saved_compact_analysis_not_independently_recounted_raw_records"
+    }
+  ],
+  "selected_whole_rollout_oracle_comparisons": [
+    {
+      "methods": [
+        "execution_revision",
+        "repair_flow_ttt",
+        "retrieval_repair_ttt"
+      ],
+      "each_selected_checkpoint": true,
+      "episodes": 104,
+      "whole_rollout_oracle_union_successes": 89,
+      "whole_rollout_intersection_successes": 70,
+      "oracle_union_percent": 85.57692307692308,
+      "interpretation": "Descriptive oracle over completed policy rollouts from the same resets. It is not a candidate-action oracle from the same intermediate state, an implementable ensemble result, or measured attainable policy success."
+    },
+    {
+      "methods": [
+        "execution_revision",
+        "repair_flow_ttt",
+        "retrieval_repair_ttt",
+        "nonlinear_repair_ttt"
+      ],
+      "each_selected_checkpoint": true,
+      "episodes": 104,
+      "whole_rollout_oracle_union_successes": 92,
+      "whole_rollout_intersection_successes": 64,
+      "oracle_union_percent": 88.46153846153847,
+      "interpretation": "Descriptive oracle over completed policy rollouts from the same resets. It is not a candidate-action oracle from the same intermediate state, an implementable ensemble result, or measured attainable policy success."
+    }
+  ],
+  "historical_metaworld_comparisons": [
+    {
+      "campaign": "20261007-joint-flow",
+      "method": "hwm_adapted_3072",
+      "selection_criterion": "highest_development_success_earliest_tie",
+      "selected_step": 20000,
+      "selected_successes": 8,
+      "curve": [
+        {
+          "step": 5000,
+          "episodes": 104,
+          "successes": 7,
+          "timeouts": 97,
+          "mean_decision_ms": 156.89379075995012,
+          "source": {
+            "path": "docs/reports/20261007-joint-flow/runs/hwm_adapted_3072/validation/step_0005000.json",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261007-joint-flow/runs/hwm_adapted_3072/validation/step_0005000.json",
+            "git_blob_sha1": "47c57f9302b62b5f855997ca145e6d8eed5329b8",
+            "sha256": "c478188e2a4766a39069f81f3a041e8f63224a8f2a6df7ff6a8c6799eb820dbd"
+          }
+        },
+        {
+          "step": 10000,
+          "episodes": 104,
+          "successes": 2,
+          "timeouts": 102,
+          "mean_decision_ms": 156.61558673192462,
+          "source": {
+            "path": "docs/reports/20261007-joint-flow/runs/hwm_adapted_3072/validation/step_0010000.json",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261007-joint-flow/runs/hwm_adapted_3072/validation/step_0010000.json",
+            "git_blob_sha1": "d1ec714541807737261c54c4596158712337c421",
+            "sha256": "8ee599dbd21a3f824cef07ffcd06d840b909a251498b6d0da59a14803779df68"
+          }
+        },
+        {
+          "step": 15000,
+          "episodes": 104,
+          "successes": 6,
+          "timeouts": 98,
+          "mean_decision_ms": 156.84886828448006,
+          "source": {
+            "path": "docs/reports/20261007-joint-flow/runs/hwm_adapted_3072/validation/step_0015000.json",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261007-joint-flow/runs/hwm_adapted_3072/validation/step_0015000.json",
+            "git_blob_sha1": "a86e268375fd71db043e93cdc5d7b42df0fa67f2",
+            "sha256": "c87a3f988dbfe23ed0a475efcce3d04ed8925300d9463b362b08360245afa5de"
+          }
+        },
+        {
+          "step": 20000,
+          "episodes": 104,
+          "successes": 8,
+          "timeouts": 96,
+          "mean_decision_ms": 156.72105439267338,
+          "source": {
+            "path": "docs/reports/20261007-joint-flow/runs/hwm_adapted_3072/validation/step_0020000.json",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261007-joint-flow/runs/hwm_adapted_3072/validation/step_0020000.json",
+            "git_blob_sha1": "8f5ac73eda9d2aac28d43621f62f79369489f499",
+            "sha256": "2ad011395c3de28eabcd13c99e134b7f2177e7eb494496ef8ed8774ddde843d6"
+          }
+        }
+      ]
+    },
+    {
+      "campaign": "20261007-joint-flow",
+      "method": "joint_flow_consistent_3072",
+      "selection_criterion": "highest_development_success_earliest_tie",
+      "selected_step": 5000,
+      "selected_successes": 23,
+      "curve": [
+        {
+          "step": 5000,
+          "episodes": 104,
+          "successes": 23,
+          "timeouts": 81,
+          "mean_decision_ms": 173.47149838326806,
+          "source": {
+            "path": "docs/reports/20261007-joint-flow/runs/joint_flow_consistent_3072/validation/step_0005000.json",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261007-joint-flow/runs/joint_flow_consistent_3072/validation/step_0005000.json",
+            "git_blob_sha1": "393c459673d549642b42de96698a0916f399f341",
+            "sha256": "6711be05380e4edda43c65a0cefb6c7e34db8c94fe0426fa7d4eaf8f79ddad63"
+          }
+        },
+        {
+          "step": 10000,
+          "episodes": 104,
+          "successes": 17,
+          "timeouts": 87,
+          "mean_decision_ms": 173.00713579197557,
+          "source": {
+            "path": "docs/reports/20261007-joint-flow/runs/joint_flow_consistent_3072/validation/step_0010000.json",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261007-joint-flow/runs/joint_flow_consistent_3072/validation/step_0010000.json",
+            "git_blob_sha1": "2bb062b1df470f6861ae89c8cb7953ae8c598d26",
+            "sha256": "cfc27b499ad82d1dc81f8fa0e9e85c67062577e82d43a2233cfa8147589567a9"
+          }
+        },
+        {
+          "step": 15000,
+          "episodes": 104,
+          "successes": 16,
+          "timeouts": 88,
+          "mean_decision_ms": 173.1674286699254,
+          "source": {
+            "path": "docs/reports/20261007-joint-flow/runs/joint_flow_consistent_3072/validation/step_0015000.json",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261007-joint-flow/runs/joint_flow_consistent_3072/validation/step_0015000.json",
+            "git_blob_sha1": "3c1305aea29a53b20230debc7a5a5aba0c30ca51",
+            "sha256": "8a02022b47d29bfb668cfbfe31f3200de255926fcbe73bc8cab0ea36294e770f"
+          }
+        },
+        {
+          "step": 20000,
+          "episodes": 104,
+          "successes": 19,
+          "timeouts": 85,
+          "mean_decision_ms": 172.6100636549611,
+          "source": {
+            "path": "docs/reports/20261007-joint-flow/runs/joint_flow_consistent_3072/validation/step_0020000.json",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261007-joint-flow/runs/joint_flow_consistent_3072/validation/step_0020000.json",
+            "git_blob_sha1": "1805ce6aa73ed589ed5938b791b520a2a64d2357",
+            "sha256": "4367cb1f7f7391137bc1b004ed0e95af188fa349692be8de3d72558fdaf0f838"
+          }
+        }
+      ]
+    },
+    {
+      "campaign": "20261007-joint-flow",
+      "method": "leflow_adapted_3072",
+      "selection_criterion": "highest_development_success_earliest_tie",
+      "selected_step": 20000,
+      "selected_successes": 27,
+      "curve": [
+        {
+          "step": 5000,
+          "episodes": 104,
+          "successes": 26,
+          "timeouts": 78,
+          "mean_decision_ms": 212.51932948900605,
+          "source": {
+            "path": "docs/reports/20261007-joint-flow/runs/leflow_adapted_3072/validation/step_0005000.json",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261007-joint-flow/runs/leflow_adapted_3072/validation/step_0005000.json",
+            "git_blob_sha1": "4a5ed68b725aa254c979d1711a24361fd70af06b",
+            "sha256": "f88fabde5c53e3fb6aad73ba4705b000ce985ae51293a99d8d083f5360a02c8c"
+          }
+        },
+        {
+          "step": 10000,
+          "episodes": 104,
+          "successes": 20,
+          "timeouts": 84,
+          "mean_decision_ms": 212.23726149412522,
+          "source": {
+            "path": "docs/reports/20261007-joint-flow/runs/leflow_adapted_3072/validation/step_0010000.json",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261007-joint-flow/runs/leflow_adapted_3072/validation/step_0010000.json",
+            "git_blob_sha1": "831f165cad7dd2cdc53bfb0f720fc98f21cdaaa2",
+            "sha256": "c8fbdfd07425214e64dcc80815f0aaeb1d290e1b04df63db7491cf0f7e1d70d0"
+          }
+        },
+        {
+          "step": 15000,
+          "episodes": 104,
+          "successes": 25,
+          "timeouts": 79,
+          "mean_decision_ms": 212.40238984192416,
+          "source": {
+            "path": "docs/reports/20261007-joint-flow/runs/leflow_adapted_3072/validation/step_0015000.json",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261007-joint-flow/runs/leflow_adapted_3072/validation/step_0015000.json",
+            "git_blob_sha1": "df38b46a96003210a1c6ec2eecf75cba879c57b0",
+            "sha256": "a3897d02a7122b04ef944d8209af9157e6f99190a737640b8d35b5e11ae666a4"
+          }
+        },
+        {
+          "step": 20000,
+          "episodes": 104,
+          "successes": 27,
+          "timeouts": 77,
+          "mean_decision_ms": 212.34379101953706,
+          "source": {
+            "path": "docs/reports/20261007-joint-flow/runs/leflow_adapted_3072/validation/step_0020000.json",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261007-joint-flow/runs/leflow_adapted_3072/validation/step_0020000.json",
+            "git_blob_sha1": "c7db0d6832f43dba478f7394bcf86a1ab1da97fc",
+            "sha256": "26b83fb691a3448bfef8b1fe3e0d5f348ab5eb867e290876785ba630f91373f2"
+          }
+        }
+      ]
+    },
+    {
+      "campaign": "20261007-joint-flow",
+      "method": "world_3072",
+      "selection_criterion": "world_validation_prediction_loss",
+      "selected_step": 20000,
+      "selected_successes": 7,
+      "curve": [
+        {
+          "step": 5000,
+          "episodes": 104,
+          "successes": 10,
+          "timeouts": 94,
+          "mean_decision_ms": 280.6228715769312,
+          "source": {
+            "path": "docs/reports/20261007-joint-flow/runs/world_3072/validation/cem_step_0005000.json",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261007-joint-flow/runs/world_3072/validation/cem_step_0005000.json",
+            "git_blob_sha1": "1c0874dc536dbe0e769f0c87c91eab255822d2a8",
+            "sha256": "7122082f84d363b678b3d21bdb3ccbc7b9d275aa6b39a2a036f4e8f92308c266"
+          }
+        },
+        {
+          "step": 10000,
+          "episodes": 104,
+          "successes": 9,
+          "timeouts": 95,
+          "mean_decision_ms": 280.2337246950126,
+          "source": {
+            "path": "docs/reports/20261007-joint-flow/runs/world_3072/validation/cem_step_0010000.json",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261007-joint-flow/runs/world_3072/validation/cem_step_0010000.json",
+            "git_blob_sha1": "c80f1a6836f80b2a2dc9ec43d783dcb2480ee328",
+            "sha256": "dcdb3bd251f801141a1230cb6ddb40a869e459476c2d52ace2b94df4a45ab7a9"
+          }
+        },
+        {
+          "step": 15000,
+          "episodes": 104,
+          "successes": 7,
+          "timeouts": 97,
+          "mean_decision_ms": 280.36960168311583,
+          "source": {
+            "path": "docs/reports/20261007-joint-flow/runs/world_3072/validation/cem_step_0015000.json",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261007-joint-flow/runs/world_3072/validation/cem_step_0015000.json",
+            "git_blob_sha1": "377f55be97e1346c0283c5f5bb406de4bf359971",
+            "sha256": "e32aa6c8569ad96bbaa42ebca6a760acf90e3f765abee63a8eafcc32d2aff33d"
+          }
+        },
+        {
+          "step": 20000,
+          "episodes": 104,
+          "successes": 7,
+          "timeouts": 97,
+          "mean_decision_ms": 280.2708790716583,
+          "source": {
+            "path": "docs/reports/20261007-joint-flow/runs/world_3072/validation/cem_step_0020000.json",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261007-joint-flow/runs/world_3072/validation/cem_step_0020000.json",
+            "git_blob_sha1": "9dbb0592ebaf223b72d10d5cc4b8f23732ace112",
+            "sha256": "1a11630208f8e97888f305535dcfee4fc0e5e6e4808b2039c2bda42c63f60db4"
+          }
+        }
+      ]
+    },
+    {
+      "campaign": "20261009-repaired-comparison",
+      "method": "joint_flow_consistent_3072",
+      "selection_criterion": "highest_development_success_earliest_tie",
+      "selected_step": 5000,
+      "selected_successes": 17,
+      "curve": [
+        {
+          "step": 5000,
+          "episodes": 104,
+          "successes": 17,
+          "timeouts": 87,
+          "mean_decision_ms": 208.9548396080997,
+          "source": {
+            "path": "docs/reports/20261009-repaired-comparison/runs/joint_flow_consistent_3072/validation/step_0005000.json",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261009-repaired-comparison/runs/joint_flow_consistent_3072/validation/step_0005000.json",
+            "git_blob_sha1": "c5b9d144ff59e7fb32615881edd10a6794745a4e",
+            "sha256": "be58bc0b76ddd1832981617a325381cdf460b20d6856c27d6b6b826ed2ad9a55"
+          }
+        },
+        {
+          "step": 10000,
+          "episodes": 104,
+          "successes": 17,
+          "timeouts": 87,
+          "mean_decision_ms": 213.07997493961463,
+          "source": {
+            "path": "docs/reports/20261009-repaired-comparison/runs/joint_flow_consistent_3072/validation/step_0010000.json",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261009-repaired-comparison/runs/joint_flow_consistent_3072/validation/step_0010000.json",
+            "git_blob_sha1": "13114ac463c470b060c1fb8f2dc4114ad46d201a",
+            "sha256": "c6f9f70053173c9f9b60dbbf1c6f9bdaa60adce3e7432f39bd58dede5b56d73c"
+          }
+        },
+        {
+          "step": 15000,
+          "episodes": 104,
+          "successes": 16,
+          "timeouts": 88,
+          "mean_decision_ms": 212.02742159090536,
+          "source": {
+            "path": "docs/reports/20261009-repaired-comparison/runs/joint_flow_consistent_3072/validation/step_0015000.json",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261009-repaired-comparison/runs/joint_flow_consistent_3072/validation/step_0015000.json",
+            "git_blob_sha1": "48e40addf3625624828ae917e498a221cb7fdf1c",
+            "sha256": "3604208776c4a318fb3f9288868f1c4f633b0697081d015dbae643a47537b96e"
+          }
+        },
+        {
+          "step": 20000,
+          "episodes": 104,
+          "successes": 15,
+          "timeouts": 89,
+          "mean_decision_ms": 211.65425841351956,
+          "source": {
+            "path": "docs/reports/20261009-repaired-comparison/runs/joint_flow_consistent_3072/validation/step_0020000.json",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261009-repaired-comparison/runs/joint_flow_consistent_3072/validation/step_0020000.json",
+            "git_blob_sha1": "f35adac8e6c5a9ca7f50bffb7ca525c30ab60d94",
+            "sha256": "23cbb7e885d3aceecb9f569db46fb218fa95b50414c5d8f0f674da97ee7b3dd1"
+          }
+        }
+      ]
+    },
+    {
+      "campaign": "20261009-repaired-comparison",
+      "method": "world_3072",
+      "selection_criterion": "world_validation_prediction_loss",
+      "selected_step": 20000,
+      "selected_successes": 22,
+      "curve": [
+        {
+          "step": 5000,
+          "episodes": 104,
+          "successes": 23,
+          "timeouts": 81,
+          "mean_decision_ms": 280.9995296552662,
+          "source": {
+            "path": "docs/reports/20261009-repaired-comparison/runs/world_3072/validation/cem_step_0005000.json",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261009-repaired-comparison/runs/world_3072/validation/cem_step_0005000.json",
+            "git_blob_sha1": "d362e3a3c31c4ac8060a3c121448e9076735b590",
+            "sha256": "3cdac0833155f07319e393a2a9bb65e3838b6d3aeee5f3ac195da70ef523ca86"
+          }
+        },
+        {
+          "step": 10000,
+          "episodes": 104,
+          "successes": 24,
+          "timeouts": 80,
+          "mean_decision_ms": 280.6548804707222,
+          "source": {
+            "path": "docs/reports/20261009-repaired-comparison/runs/world_3072/validation/cem_step_0010000.json",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261009-repaired-comparison/runs/world_3072/validation/cem_step_0010000.json",
+            "git_blob_sha1": "d0e700bcf9852ab518d33ba5cf80ce99dae66c43",
+            "sha256": "07a049ad47b01343991a75bae0e8d9e67502d8d5949bf878d876eef39dede39e"
+          }
+        },
+        {
+          "step": 15000,
+          "episodes": 104,
+          "successes": 24,
+          "timeouts": 80,
+          "mean_decision_ms": 280.6740386036585,
+          "source": {
+            "path": "docs/reports/20261009-repaired-comparison/runs/world_3072/validation/cem_step_0015000.json",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261009-repaired-comparison/runs/world_3072/validation/cem_step_0015000.json",
+            "git_blob_sha1": "07555e80cd432a5d56f1d668ad42caedf9542ffe",
+            "sha256": "545238c68bc82c613f9529fb586d81d4a8a8c774749116e1461d38dbb1b313be"
+          }
+        },
+        {
+          "step": 20000,
+          "episodes": 104,
+          "successes": 22,
+          "timeouts": 82,
+          "mean_decision_ms": 280.5782438042453,
+          "source": {
+            "path": "docs/reports/20261009-repaired-comparison/runs/world_3072/validation/cem_step_0020000.json",
+            "url": "https://github.com/Abecid/LeFlow-/blob/d42d76c1cf2f39a56de189148482122775c3962e/docs/reports/20261009-repaired-comparison/runs/world_3072/validation/cem_step_0020000.json",
+            "git_blob_sha1": "ceebbdb664c62b4a54b56b492371d17effe09955",
+            "sha256": "d8efacf6d6be31a2cf3f2fde0d8e52be135395b28578532e480f3b07023ce6c3"
+          }
+        }
+      ]
+    }
+  ],
+  "findings": {
+    "best_development_successes": 80,
+    "best_development_percent": 76.92307692307692,
+    "tied_best_methods": [
+      "execution_revision",
+      "repair_flow_ttt",
+      "retrieval_repair_ttt"
+    ],
+    "flow_improvement_over_gmm_demonstrated": false,
+    "causal_ttt_control_benefit_isolated": false,
+    "inference_scaling_curve_measured": false,
+    "retrieval_repair_saturated_tasks": 8,
+    "retrieval_repair_total_failures": 24,
+    "retrieval_repair_failures_in_assembly_faucet_pickplace_reach": 23,
+    "counterfactual_ranking_gap": "Lower factual encoded prediction error on executed prefixes does not establish improved ranking of unexecuted actions by physical progress or task success.",
+    "deadline_gap": "Flow reasoning, progress TTT and guided TTT have controller timeout failures. The two selected bounded-repair controllers have zero timeouts at about86ms mean per decision.",
+    "diversity_caution": "Proposal contraction accompanies both improving and worsening success curves; it is not an established failure cause."
+  }
+}
