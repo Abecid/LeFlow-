@@ -11,10 +11,10 @@ native-benchmark SOTA, component causality or generalization.
 [Nonlinear memory on retrieval-repair80](NONLINEAR_REPAIR_TTT.md) is the newly
 authorized single candidate. Implementation, TRAIN-only latency and eight-rank
 gradient checks pass; actual eight-GPU optimization and W&B mxujto8j are verified. The active ledger records
-frozen source d0cae300 and unchanged data/budget/cases. The first fixed 5k score is
-**73/104**, with no timeouts; all 31 failures reach 200 actions. Full records, ten
-inspected contact sheets and paired failures are preserved. Training continues;
-three registered evaluations remain.
+frozen source d0cae300 and unchanged data/budget/cases. Fixed scores are **73/66**;
+selected-so-far remains 5k 73. Ten-k has four controller timeouts and 34 other
+failures at 200 actions. Both full reports, twenty inspected contact sheets and
+paired failures are preserved. Training continues; two registered evaluations remain.
 
 [Bayesian repair completed](BAYESIAN_REPAIR_TTT_RESULTS.md): 71/76/77/77, selected
 15k77/104. All evidence is preserved at ee1db8c; prior80 references remain retained.

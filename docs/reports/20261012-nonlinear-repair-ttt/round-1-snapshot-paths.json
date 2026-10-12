@@ -1,0 +1,13 @@
+{
+  "publication": "65b4a2c19ee48011d6176e1775509ebec4840d30",
+  "paths": {
+    "run/metrics.jsonl.gz": {
+      "snapshot": "run/snapshots/round-1-metrics-through-7750.jsonl.gz",
+      "sha256": "5fe5e90362866ddf9e60f049f3ccf2427cb508bb655838f36c5c38ca81f3f855"
+    },
+    "run/compute_usage.json": {
+      "snapshot": "run/snapshots/round-1-compute-through-7749.json",
+      "sha256": "58f6dc029f5a1655a2dd5edf5dff40f7a9503ebdd3bd60967c37188273e2ebca"
+    }
+  }
+}

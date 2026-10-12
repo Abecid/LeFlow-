@@ -1,3 +1,25 @@
+# Nonlinear repair: fixed scores 73/66; training continues
+
+The 10k evaluation scores 66/104 with four controller timeouts; 34 other failures
+reach 200 actions. Selected-so-far remains 5k 73/104, below retained 80 references.
+Ten-k has 5 wins/19 regressions versus retrieval80 and 4/18 versus execution80.
+It gains two cases and loses nine versus 5k; all four timeout cases already failed
+at 5k. Lower prefix-error MAE and support-fit loss do not establish physical gains.
+
+At the 10:24:59 UTC readback all 200 runtime hashes and 44 original PID/start
+identities still match; W&B mxujto8j is running. Full periodic metrics through
+12,901 (517 rows), both complete evaluations and twenty individually inspected
+contact sheets are preserved. Copied compute is step 12,928, optimization
+3.144676240 GPUh plus evaluation 1.193198065 GPUh, zero optimizer overrun.
+Known partial cumulative measured components are 115.940457326 GPUh, excluding
+explicitly unmeasured preparation; this is not a full cluster bill.
+
+Read docs/NONLINEAR_REPAIR_TTT.md and current ledger. Keep frozen source d0cae300
+unchanged. Two registered evaluations remain under the original finite budget.
+No replay, extra seeds/data, baseline retraining, sealed tests or next candidate.
+
+Earlier status snapshots follow; this entry controls.
+
 # Nonlinear repair: first fixed evaluation 73/104, training continues
 
 At 5,000 updates, nonlinear_repair_ttt scores 73/104, with zero timeouts and all

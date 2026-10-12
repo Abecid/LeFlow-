@@ -4,15 +4,102 @@ October 12, 2026. The user explicitly authorized this next comparison on the
 80/104 retrieval-repair formulation. One fresh `nonlinear_repair_ttt` candidate
 is implemented and verified. Frozen execution source is
 `d0cae3007c7d678cdc5ddb68ce731e8a2db3005d` (200 checked files);
-Training continues on eight A800 GPUs. The first fixed **5k evaluation scores
-73/104 (70.19%)**, below the retained 80/104 references. There are no timeouts;
-all 31 failures reach the 200-action limit. At the 10:10:17 UTC readback all 200
-runtime hashes and all 44 original process/start identities still match, with
-finite logs through step 7,750 and W&B mxujto8j running (online step 7,501).
-The copied compute record is step 7,749, reflecting sequential advancing reads.
-Source and controller remain frozen. Three registered evaluations are pending.
+Training continues on eight A800 GPUs. The fixed curve is now **73 / 66**:
+selected-so-far remains **5k 73/104**, below retained 80/104 references. Ten-k has
+four controller timeouts and 34 other failures at 200 actions. No evaluation or
+optimizer update is replayed. Two registered evaluations remain.
 
-## First fixed result and failure evidence
+At the 10:24:59 UTC readback all 200 frozen runtime hashes and all 44 original
+process/start identities match; W&B mxujto8j is running (online step 12,701).
+There are 517 finite periodic metric rows through 12,901. The copied compute
+record is step 12,928; sequential reads advance while training continues.
+
+## Second fixed result: 10k 66/104
+
+| Checkpoint | Successes | Controller timeouts | Other failures at 200 actions |
+| --- | ---: | ---: | ---: |
+| 5k | 73 | 0 | 31 |
+| 10k | 66 | 4 | 34 |
+
+Ten-k has **5 wins/19 regressions versus retrieval-repair 80**, and **4/18 versus
+execution-revision 80**. It gains dial-turn 6 and drawer-open 0 versus 5k, but loses
+button-press-topdown 4, dial-turn 4/7, door-close 1, door-open 1/4, plate-slide 1 and
+reach 1/4. All nine newly regressed cases reach 200 actions. The four timeout cases
+already failed at 5k; this does not reveal their outcomes under a longer budget.
+See [all paired IDs and timeout traces](reports/20261012-nonlinear-repair-ttt/paired-and-timeouts-10000.json).
+
+| Task | 5k | 10k |
+| --- | ---: | ---: |
+| assembly | 0 | 0 |
+| button-press-topdown | 8 | 7 |
+| coffee-button | 8 | 8 |
+| dial-turn | 3 | 2 |
+| door-close | 8 | 7 |
+| door-open | 7 | 5 |
+| drawer-close | 8 | 8 |
+| drawer-open | 7 | 8 |
+| faucet-open | 0 | 0 |
+| handle-press | 8 | 8 |
+| pick-place | 0 | 0 |
+| plate-slide | 8 | 7 |
+| reach | 8 | 6 |
+
+The [four timeout records](reports/20261012-nonlinear-repair-ttt/paired-and-timeouts-10000.json)
+are assembly 00000 (198 actions), faucet-open 00005 (178), and pick-place 00004/00005
+(112/96). Their maximum individual calls are 154.38, 231.98, 235.23 and 252.08 ms;
+the two pick-place cases have 44/57 and 41/49 calls above 150 ms. Their controller
+means are 175.47/205.36 ms. This is sustained latency in those traces, not merely
+one isolated multi-second call. No causal hardware or implementation explanation
+is established by these records. The original mean startup gate passed at 87.64 ms;
+it does not guarantee every later episode's latency. Overall decision mean/p95 is
+97.39/113.20 ms. Recorded budget overruns are 0.014535, 0.043772, 0.001743 and
+0.062748 seconds. Work is charged, and actions returned after the shared deadline
+are withheld. Pick-place 00004 logs one fully planned but unexecuted final decision;
+plan-selection counts therefore do not all denote executed actions.
+
+The [interim trace audit](reports/20261012-nonlinear-repair-ttt/prefix-audit-10000.json)
+passes 5,797 logged plans and causal history/reset/four-update/radius accounting.
+Normalized support error improves on all 5,693 supported fits, averaging
+0.251404→0.127880. Raw/prior/adapted next-observed-prefix MAE is
+0.003104/0.004852/0.001935, compared with 0.003162/0.005203/0.002080 at 5k.
+Support error and model-distance MAE have different units. Observed trajectories
+and support-count groups differ, so these reductions do not isolate a physical
+success benefit. The empty-history prior still worsens error versus raw
+(0.004212 versus 0.002135).
+
+The selected plan is a repair on 2,515/5,797 logged decisions (43.38%).
+Generated/retrieved/shifted anchors count 2,148/1,500/2,149. On matched initial
+states with empty histories and verified frozen route costs, initial-pool spread
+falls 41.59% and residual-pool spread 29.58%; all 104 cases contract in both pools.
+This is observational contraction, not a causal ablation. Last-500-update mixed-depth
+action-flow loss falls 0.174954→0.122822, repair loss 0.216217→0.146968 and clipping
+4.18%→2.35%, while development success falls. Full depth-specific metrics and
+[paired diversity records](reports/20261012-nonlinear-repair-ttt/details-through-10000.json) remain saved.
+Seven failed pick-place last-20 tails use only reach/direct-goal provenance; case 5
+also includes six pick-place choices. None supplies a physical counterfactual or
+justifies task-ID filtering.
+
+All ten newly saved 10k contact sheets were individually inspected, bringing the
+preserved total to twenty. Assembly 00000 remains near the object before withdrawing
+and times out at 198 actions. Pick-place 00000 leaves the object on the table;
+faucet 00003 and dial-turn 00000 finish away from their apparatus without success.
+Reach 00003/00005 succeed at 36/40 actions; coffee-button, door-close, drawer-close
+and handle-press examples succeed at 35/70/71/13. See the [exact image hashes and
+observations](reports/20261012-nonlinear-repair-ttt/visual-review-10000.json). Sparse
+frames cover ten saved cases per checkpoint, not all failures or contact forces.
+
+The new complete report and 517 periodic metrics are preserved losslessly with
+original-byte hashes in the [round-two readback](reports/20261012-nonlinear-repair-ttt/interim-health-round-2.json).
+First-round snapshot bytes remain under `run/snapshots/`, with [path mapping](reports/20261012-nonlinear-repair-ttt/round-1-snapshot-paths.json);
+the new metrics preserve the previous snapshot as an exact prefix. The 10k server
+checkpoint SHA256 is `b6ddc1ae90b573f637a05d81be9d401ce6726bcd4ef34004d2924e94ccb092a0`.
+At compute step 12,928, optimization consumes 3.144676240 GPUh and evaluation
+1.193198065 GPUh, with zero optimizer overrun. Known cumulative measured components
+are **115.940457326 GPUh**, including separately recorded preparation and retrieval
+setup. The failed configuration preflight remains unmeasured; this is not a full
+cluster bill. See [round-two compute accounting](reports/20261012-nonlinear-repair-ttt/compute-accounting-round-2.json).
+
+## First fixed result and failure evidence (preserved 5k snapshot)
 
 | Task (eight cases each) | 5k successes |
 | --- | ---: |
@@ -87,9 +174,9 @@ and retrieval setup 0.005036058 GPUh, giving **114.027637463 known cumulative GP
 This is a partial measured-component ledger, not a full cluster bill. The failed
 configuration preflight remains explicitly unmeasured. See [compute accounting](reports/20261012-nonlinear-repair-ttt/compute-accounting-round-1.json).
 
-The remaining three fixed evaluations proceed unchanged. Publish the final
-comparison and all failures before stopping for review; no further candidate
-is authorized by this monitor.
+At the first snapshot, three fixed evaluations remained. The current status above
+now has two pending. Publish all outcomes before stopping for review; no further
+candidate is authorized by this monitor.
 
 ## What changes
 
