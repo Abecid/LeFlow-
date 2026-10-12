@@ -214,3 +214,9 @@ report/status files matched, including the existing 57 evaluation reports.
 [Verification receipt](reports/20261012-nonlinear-repair-ttt/publication-verification.json).
 The existing completion monitor follows this registered run and publishes each
 new result and the final comparison without scheduling further candidates.
+
+The first fixed evaluation and its complete failure evidence were verified live
+on origin/main at `65b4a2c19ee48011d6176e1775509ebec4840d30` on October 12,
+10:15:08 UTC: all 548 ledger evidence blobs and 18 report/status files matched,
+including 57 preserved completed evaluations and this new 5k report.
+[First-evaluation publication receipt](reports/20261012-nonlinear-repair-ttt/publication-round-1-verification.json).
