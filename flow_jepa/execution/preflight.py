@@ -37,7 +37,7 @@ def run(args):
             if example['history_mask'][-1]:
                 assert torch.equal(example['history_next'][-1],example['z'][0])
         data_checks=dict(exact_previous_main_sample_checks=8,causal_history_end_checks=True)
-    if method in ('execution_revision','flow_reasoning','progress_ttt','guided_ttt','repair_flow_ttt','retrieval_repair_ttt','shifted_repair_ttt','progress_objective_ttt','bayesian_repair_ttt'):
+    if method in ('execution_revision','flow_reasoning','progress_ttt','guided_ttt','repair_flow_ttt','retrieval_repair_ttt','shifted_repair_ttt','progress_objective_ttt','bayesian_repair_ttt','nonlinear_repair_ttt'):
         from .revision import RevisionSegments
         previous=RevisionSegments(root,c,'latent_revision',3072,10000)
         specs=[data.sample_spec(i) for i in range(10000)]
@@ -55,7 +55,7 @@ def run(args):
             late_windows_in_first_10000=len(late),late_real_examples_checked=8,
             causal_history_end_checks=True,sampling_change='all valid five-step pre-success starts')
     bank=RouteBank(args.bank,c,file_hash(root/'manifest.json'),device)
-    if method in ('retrieval_repair_ttt','shifted_repair_ttt','progress_objective_ttt','bayesian_repair_ttt'):
+    if method in ('retrieval_repair_ttt','shifted_repair_ttt','progress_objective_ttt','bayesian_repair_ttt','nonlinear_repair_ttt'):
         from .retrieval_repair import TrainingRetrieval
         if method == 'shifted_repair_ttt':
             from .shifted_repair import ShiftedTrainingRetrieval as TrainingRetrieval
@@ -86,7 +86,7 @@ def run(args):
             data_checks['previous_decision_causal_history_checked']=8
             data_checks['previous_retrieval_excludes_query_episode']=True
     world_hash_before={k:v.clone() for k,v in world.state_dict().items()}
-    loss,parts=model(batch,world,weight=0. if method in ('flow_reasoning','progress_ttt','guided_ttt','repair_flow_ttt','retrieval_repair_ttt','shifted_repair_ttt','progress_objective_ttt','bayesian_repair_ttt') else 0.1);loss.backward()
+    loss,parts=model(batch,world,weight=0. if method in ('flow_reasoning','progress_ttt','guided_ttt','repair_flow_ttt','retrieval_repair_ttt','shifted_repair_ttt','progress_objective_ttt','bayesian_repair_ttt','nonlinear_repair_ttt') else 0.1);loss.backward()
     assert torch.isfinite(loss) and all(p.grad is None for p in world.parameters())
     assert all(torch.equal(v,world_hash_before[k]) for k,v in world.state_dict().items())
     encoder=Encoder(c['encoder'],root,device)
@@ -95,16 +95,16 @@ def run(args):
         initial=f['initial_rgb'][:]
         goal=(torch.tensor(f['goal'][:],device=device).float()-bank.mean)/bank.std
     model.eval();controller=ControllerType(model,world,c,bank)
-    if method in ('latent_revision','execution_revision','flow_reasoning','progress_ttt','guided_ttt','repair_flow_ttt','retrieval_repair_ttt','shifted_repair_ttt','progress_objective_ttt','bayesian_repair_ttt'):
+    if method in ('latent_revision','execution_revision','flow_reasoning','progress_ttt','guided_ttt','repair_flow_ttt','retrieval_repair_ttt','shifted_repair_ttt','progress_objective_ttt','bayesian_repair_ttt','nonlinear_repair_ttt'):
         history=model.factual_history(batch,world)
         # Training transitions only; exercise the populated memory path for
         # latency, without pretending these are newly executed policy actions.
         for j in range(model.history_steps):
             if history['mask'][0,j]:
                 controller.history.append(tuple(history[k][0:1,j].clone() for k in ('start','next','predicted')))
-                if method in ('progress_ttt','guided_ttt','repair_flow_ttt','retrieval_repair_ttt','shifted_repair_ttt','progress_objective_ttt','bayesian_repair_ttt'):
+                if method in ('progress_ttt','guided_ttt','repair_flow_ttt','retrieval_repair_ttt','shifted_repair_ttt','progress_objective_ttt','bayesian_repair_ttt','nonlinear_repair_ttt'):
                     controller.action_history.append(history['action'][0,j].clone())
-        if method in ('execution_revision','flow_reasoning','progress_ttt','guided_ttt','repair_flow_ttt','retrieval_repair_ttt','shifted_repair_ttt','progress_objective_ttt','bayesian_repair_ttt'):
+        if method in ('execution_revision','flow_reasoning','progress_ttt','guided_ttt','repair_flow_ttt','retrieval_repair_ttt','shifted_repair_ttt','progress_objective_ttt','bayesian_repair_ttt','nonlinear_repair_ttt'):
             # Exercise warm-start and stall-memory compute using only recorded
             # training transitions. These are NOT new policy execution outcomes.
             controller.previous_plan=batch['a'][0].detach().clone()
@@ -118,17 +118,17 @@ def run(args):
                 error=(forecast-progress).clamp_min(0)*((forecast>0)&(progress<=0))
                 controller.stall_history.append((past,q,error))
     latencies=[]
-    for i in range(14 if method in ('repair_flow_ttt','retrieval_repair_ttt','shifted_repair_ttt','progress_objective_ttt','bayesian_repair_ttt') else 6):
+    for i in range(14 if method in ('repair_flow_ttt','retrieval_repair_ttt','shifted_repair_ttt','progress_objective_ttt','bayesian_repair_ttt','nonlinear_repair_ttt') else 6):
         torch.cuda.synchronize();begin=time.perf_counter()
         clip=np.repeat(initial[None],c['data']['history_frames'],axis=0)
         z=(encoder(clip[None]).float()-bank.mean)/bank.std
-        if method in ('repair_flow_ttt','retrieval_repair_ttt','shifted_repair_ttt','progress_objective_ttt','bayesian_repair_ttt'):
+        if method in ('repair_flow_ttt','retrieval_repair_ttt','shifted_repair_ttt','progress_objective_ttt','bayesian_repair_ttt','nonlinear_repair_ttt'):
             # Exercise observation bookkeeping and populated memory. These are
             # timed training-image probes, never physical policy evaluations.
             controller.observe(z)
         action,_,_,_=controller.plan(z,goal[None])
         torch.cuda.synchronize();elapsed=time.perf_counter()-begin
-        if i >= (2 if method in ('repair_flow_ttt','retrieval_repair_ttt','shifted_repair_ttt','progress_objective_ttt','bayesian_repair_ttt') else 1):latencies.append(elapsed*1000)
+        if i >= (2 if method in ('repair_flow_ttt','retrieval_repair_ttt','shifted_repair_ttt','progress_objective_ttt','bayesian_repair_ttt','nonlinear_repair_ttt') else 1):latencies.append(elapsed*1000)
         assert torch.isfinite(action).all() and float(action.abs().max())<=1
     report=dict(training_examples_only=True,optimizer_updates=0,simulator_episodes=0,
         batch_loss=float(loss),parts={k:float(v) for k,v in parts.items()},
