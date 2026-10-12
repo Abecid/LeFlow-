@@ -1,0 +1,18 @@
+{
+  "verified_utc": "2026-10-12T05:56:25.137452+00:00",
+  "published_commit": "82f67878254accfc5aa970c5200574c7b79aea99",
+  "live_origin_main": "82f67878254accfc5aa970c5200574c7b79aea99",
+  "publication_reachable": true,
+  "artifacts_verified": 382,
+  "completed_runs": 14,
+  "evaluation_reports": 53,
+  "active_runs": 0,
+  "current_run_artifacts": 107,
+  "report_sha256": "a62ab8439ff804425143c455fae17d964e91b81f08b4e39b37717812e861ac1d",
+  "report_index_ledger_status_bytes_match": true,
+  "method": "progress_objective_ttt",
+  "selected_step": 15000,
+  "selected_successes": 78,
+  "model_calls": 0,
+  "simulator_calls": 0
+}

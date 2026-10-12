@@ -154,8 +154,13 @@
         "docs/reports/20261011-progress-objective-ttt/visual-review-5000.json": "a1a9b2fc3641dd7bf3698a0ba2d3ca4cb6b70ef39e68d235c9350b493ec0b4e3",
         "docs/reports/20261011-progress-objective-ttt/worker.json": "86bf59124d2edd7d12d27b4ba61d3e4381b6d8b314287354a34abdcea807331a",
         "docs/PROGRESS_OBJECTIVE_TTT_RESULTS.md": "a62ab8439ff804425143c455fae17d964e91b81f08b4e39b37717812e861ac1d",
-        "docs/PROGRESS_OBJECTIVE_TTT.md": "0c4a4544d8410b4f7332e7ef91587e5024cac8e3326f38e9830d5e2bd4ce8cd7"
-      }
+        "docs/PROGRESS_OBJECTIVE_TTT.md": "0c4a4544d8410b4f7332e7ef91587e5024cac8e3326f38e9830d5e2bd4ce8cd7",
+        "docs/reports/20261011-progress-objective-ttt/publication-verification.json": "1c2782ee1ace9dd6ed73f7d159641099cf63b037288f58b9c16f8216f77f4c21",
+        "docs/PROGRESS_OBJECTIVE_TTT_REVIEW.md": "441943fdf7bbad7dd9e3148c61f4017ae2765cb4a9833548e3d6f791172bbe01"
+      },
+      "completion_publication_commit": "82f67878254accfc5aa970c5200574c7b79aea99",
+      "publication_verification_artifact": "docs/reports/20261011-progress-objective-ttt/publication-verification.json",
+      "post_publication_review": "docs/PROGRESS_OBJECTIVE_TTT_REVIEW.md"
     },
     {
       "run_key": "8yy6nh9f",
