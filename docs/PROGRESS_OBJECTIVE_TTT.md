@@ -114,3 +114,45 @@ Use scripts/analysis/progress_objective_details.py on saved eval reports for
 applied-versus-raw progress error and per-task route tails; rejected candidates
 still have no physical outcome labels. The existing15-minute monitor continues
 evaluation/failure review and completion publication, with no speculative queue.
+
+## First fixed evaluation: 5k72/104 (run still active)
+
+At the October12 05:12UTC audit, the same frozen source and all166 runtime
+hashes passed; the coordinator, launcher and eight ranks matched their saved
+PID/start identities. W&B u4dd8tyw remains running. The5k report contains all104
+registered cases with unchanged paired identities, **72 successes, zero timeouts**,
+and32 failures all reaching200 primitive actions. Later checkpoints remain pending.
+This is an interim result, not the final selected run outcome.
+
+Against selected retrieval-repair80, there are5 wins/13 regressions; against
+execution-revision80,3 wins/11 regressions. Dial-turn loses5 previously successful
+cases versus retrieval; assembly has2 wins/2 regressions, faucet1/2, reach1/2,
+pick-place0/1 and plate-slide0/1. Full paired IDs are saved. Pick-place is0/8;
+all eight failure tails use only reach/direct-goal routes in their final20 decisions.
+This diagnostic association persists despite the new scores; it does not identify
+physical causes and does not justify oracle task filtering.
+
+On5601 actually executed prefixes, applied progress-readout MAE is0.018985
+versus raw0.020353. Calibration worsens this proxy for assembly and reach while
+improving it for faucet and pick-place; no physical success improvement follows
+at this checkpoint. Mean selected stage penalty is0.002557, with3307/5705
+decisions receiving a positive optimism penalty. Repairs are selected53.04% of
+decisions and stay within the0.25 bound; incumbent anchors are retrieved1519,
+generated1433 and shifted2753. The learned readout evaluated on actual frames
+is still a model proxy, not physical ground truth or a label for rejected actions.
+
+All ten saved contact sheets were rendered and visually inspected. Pick-place00000
+leaves the object on the table while the hand moves rightwards; faucet00003
+approaches the handle region but fails. Assembly00000 and both saved reach cases
+succeed, so these selected images do not cover their task-level regressions.
+Sparse frames do not prove contact/slip mechanisms. Full sheets, observations,
+paired comparisons and lossless evaluation/metric records are preserved under
+`reports/20261011-progress-objective-ttt/`.
+
+Copied compute at7773 updates is1.785150797 optimization
+GPUh plus0.570815379 evaluation GPUh. Separately measured
+preflight/DDP/retrieval setup totals0.020431634 GPUh;
+known cumulative measured components are100.970333971 GPUh. This is a partial
+snapshot, not a full cluster bill. Mean controller decision latency94.14ms
+(p95 99.90ms) produced no cumulative10-second timeout. The registered run continues
+unchanged through its remaining fixed evaluations; no next candidate is launched.

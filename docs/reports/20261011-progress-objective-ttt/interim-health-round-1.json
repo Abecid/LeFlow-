@@ -1,0 +1,243 @@
+{
+  "utc": "2026-10-12T05:12:17.683873+00:00",
+  "source": "e274fed5850b967c5e8e176e5cab3611d992e8bf",
+  "source_clean": true,
+  "runtime_hash_count": 166,
+  "status": {
+    "code": "e274fed5850b967c5e8e176e5cab3611d992e8bf",
+    "command": [
+      "/tmp/mtxu-flow-jepa-20261007/env/bin/python",
+      "-m",
+      "torch.distributed.run",
+      "--nnodes=1",
+      "--nproc_per_node=8",
+      "--rdzv-backend=c10d",
+      "--rdzv-endpoint=127.0.0.1:0",
+      "-m",
+      "flow_jepa.execution.train",
+      "--config",
+      "/home/mtxu/adam/LeFlow-experiments/20261011-progress-objective-ttt/repo/config/flow_metaworld_progress_objective_ttt.json",
+      "--root",
+      "/home/mtxu/adam/LeFlow-experiments/20261011-progress-objective-ttt/campaign",
+      "--run-dir",
+      "/home/mtxu/adam/LeFlow-experiments/20261011-progress-objective-ttt/campaign/runs/progress_objective_ttt_3072",
+      "--world",
+      "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt",
+      "--bank",
+      "/tmp/mtxu-progress-objective-ttt-20261011/route_bank.pt"
+    ],
+    "pid": 1324049,
+    "preflight_mean_ms": 89.52330301205318,
+    "status": "training",
+    "utc": "2026-10-12T04:54:10.882254+00:00"
+  },
+  "compute": {
+    "global_batch": 64,
+    "gpu_count": 8,
+    "last_update_overrun_gpu_seconds": 0.0,
+    "optimization_cap_gpu_seconds": 28800,
+    "optimization_gpu_hours": 1.7843910077255634,
+    "optimization_gpu_seconds": 6423.807627812028,
+    "step": 7770,
+    "stop_check": "optimizer boundary; final-update overrun reported",
+    "validation_gpu_hours": 0.5708153791725635,
+    "validation_gpu_seconds": 2054.935365021229,
+    "validation_steps": [
+      5000
+    ]
+  },
+  "worker": {
+    "command": [
+      "/tmp/mtxu-flow-jepa-20261007/env/bin/python",
+      "-m",
+      "torch.distributed.run",
+      "--nnodes=1",
+      "--nproc_per_node=8",
+      "--rdzv-backend=c10d",
+      "--rdzv-endpoint=127.0.0.1:0",
+      "-m",
+      "flow_jepa.execution.train",
+      "--config",
+      "/home/mtxu/adam/LeFlow-experiments/20261011-progress-objective-ttt/repo/config/flow_metaworld_progress_objective_ttt.json",
+      "--root",
+      "/home/mtxu/adam/LeFlow-experiments/20261011-progress-objective-ttt/campaign",
+      "--run-dir",
+      "/home/mtxu/adam/LeFlow-experiments/20261011-progress-objective-ttt/campaign/runs/progress_objective_ttt_3072",
+      "--world",
+      "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt",
+      "--bank",
+      "/tmp/mtxu-progress-objective-ttt-20261011/route_bank.pt"
+    ],
+    "pid": 1326959
+  },
+  "processes": [
+    {
+      "pid": 1324049,
+      "present": true,
+      "state": "S",
+      "start_ticks": 1010121907,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m scripts.operations.controller_grounded --record /home/mtxu/adam/LeFlow-experiments/20261011-progress-objective-ttt --variant progress_objective_ttt --gpus 8 --previous /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison --cache /tmp/mtxu-progress-objective-ttt-20261011 --reuse-bank /tmp/mtxu-flow-reasoning-20261010/route_bank.pt "
+    },
+    {
+      "pid": 1326959,
+      "present": true,
+      "state": "S",
+      "start_ticks": 1010135702,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -m torch.distributed.run --nnodes=1 --nproc_per_node=8 --rdzv-backend=c10d --rdzv-endpoint=127.0.0.1:0 -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261011-progress-objective-ttt/repo/config/flow_metaworld_progress_objective_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261011-progress-objective-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261011-progress-objective-ttt/campaign/runs/progress_objective_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-progress-objective-ttt-20261011/route_bank.pt "
+    },
+    {
+      "pid": 1327000,
+      "present": true,
+      "state": "S",
+      "start_ticks": 1010135834,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261011-progress-objective-ttt/repo/config/flow_metaworld_progress_objective_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261011-progress-objective-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261011-progress-objective-ttt/campaign/runs/progress_objective_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-progress-objective-ttt-20261011/route_bank.pt "
+    },
+    {
+      "pid": 1327001,
+      "present": true,
+      "state": "S",
+      "start_ticks": 1010135834,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261011-progress-objective-ttt/repo/config/flow_metaworld_progress_objective_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261011-progress-objective-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261011-progress-objective-ttt/campaign/runs/progress_objective_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-progress-objective-ttt-20261011/route_bank.pt "
+    },
+    {
+      "pid": 1327002,
+      "present": true,
+      "state": "S",
+      "start_ticks": 1010135835,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261011-progress-objective-ttt/repo/config/flow_metaworld_progress_objective_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261011-progress-objective-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261011-progress-objective-ttt/campaign/runs/progress_objective_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-progress-objective-ttt-20261011/route_bank.pt "
+    },
+    {
+      "pid": 1327003,
+      "present": true,
+      "state": "S",
+      "start_ticks": 1010135835,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261011-progress-objective-ttt/repo/config/flow_metaworld_progress_objective_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261011-progress-objective-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261011-progress-objective-ttt/campaign/runs/progress_objective_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-progress-objective-ttt-20261011/route_bank.pt "
+    },
+    {
+      "pid": 1327004,
+      "present": true,
+      "state": "S",
+      "start_ticks": 1010135835,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261011-progress-objective-ttt/repo/config/flow_metaworld_progress_objective_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261011-progress-objective-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261011-progress-objective-ttt/campaign/runs/progress_objective_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-progress-objective-ttt-20261011/route_bank.pt "
+    },
+    {
+      "pid": 1327005,
+      "present": true,
+      "state": "S",
+      "start_ticks": 1010135835,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261011-progress-objective-ttt/repo/config/flow_metaworld_progress_objective_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261011-progress-objective-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261011-progress-objective-ttt/campaign/runs/progress_objective_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-progress-objective-ttt-20261011/route_bank.pt "
+    },
+    {
+      "pid": 1327006,
+      "present": true,
+      "state": "S",
+      "start_ticks": 1010135835,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261011-progress-objective-ttt/repo/config/flow_metaworld_progress_objective_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261011-progress-objective-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261011-progress-objective-ttt/campaign/runs/progress_objective_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-progress-objective-ttt-20261011/route_bank.pt "
+    },
+    {
+      "pid": 1327007,
+      "present": true,
+      "state": "S",
+      "start_ticks": 1010135835,
+      "command": "/tmp/mtxu-flow-jepa-20261007/env/bin/python -u -m flow_jepa.execution.train --config /home/mtxu/adam/LeFlow-experiments/20261011-progress-objective-ttt/repo/config/flow_metaworld_progress_objective_ttt.json --root /home/mtxu/adam/LeFlow-experiments/20261011-progress-objective-ttt/campaign --run-dir /home/mtxu/adam/LeFlow-experiments/20261011-progress-objective-ttt/campaign/runs/progress_objective_ttt_3072 --world /home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt --bank /tmp/mtxu-progress-objective-ttt-20261011/route_bank.pt "
+    }
+  ],
+  "checkpoints": {
+    "checkpoints/step_0005000.pt": {
+      "bytes": 83113217,
+      "sha256": "111fb407c6ca2d5e85aeec85de92c8e71ab7b0fff4b4394849502fb3237be1c1"
+    }
+  },
+  "last_metric_step": 7751,
+  "training_rows": 311,
+  "finite_metrics": true,
+  "monotone_optimization_charge": true,
+  "source_files": {
+    "run/run.json": {
+      "bytes": 564,
+      "sha256": "64206174d460b0ca52bc83198492b42e47a30c86581990b0867e973a88d368e3"
+    },
+    "run/compute_usage.json": {
+      "bytes": 438,
+      "sha256": "a2411b44d9c0498d3daec27ce7e5cb61a57a7ce8f2f1e608a198d02954245549"
+    },
+    "run/retrieval-setup.json": {
+      "bytes": 288,
+      "sha256": "5ac0521961a750688a3379c8b4b8a5726c27ef258857991f5e89dfc09238f0b4"
+    },
+    "run/metrics.jsonl": {
+      "bytes": 558162,
+      "sha256": "c982bdf5f00a44c5773886dad6ec95d7e30c540a30bb5e34961a7fee8b7e4998"
+    },
+    "run/validation/step_0005000.json": {
+      "bytes": 41931406,
+      "sha256": "95289f933a6ae4f5156c607888914bbdbecd9502142677b9fe443eb85d27e396"
+    }
+  },
+  "wandb": {
+    "id": "u4dd8tyw",
+    "state": "running",
+    "summary": {
+      "budget/optimization_gpu_hours": 1.7104891638995872,
+      "step": 7451,
+      "train/loss": 0.10734882205724716,
+      "validation/checkpoint_step": 5000,
+      "validation/controller_budget_exhausted_rate": 0,
+      "validation/controller_budget_overrun_seconds_mean": 0,
+      "validation/controller_seconds_per_episode_mean": 5.164069526990016,
+      "validation/controller_step_latency_ms_mean": 94.13904133338504,
+      "validation/controller_step_latency_ms_p95": 99.90213848650455,
+      "validation/episodes": 104,
+      "validation/expert_goal_failure_rate": 0,
+      "validation/latency_ms_mean": 94.09563353234988,
+      "validation/observed_subgoal_cosine": 0.01911383720623148,
+      "validation/return_mean": 273.21025621887844,
+      "validation/seen_success_macro": 0.6923076923076923,
+      "validation/steps_to_success_capped_mean": 109.73076923076924,
+      "validation/success_macro": 0.6923076923076923,
+      "validation/success_within_100_primitive": 0.5961538461538461,
+      "validation/success_within_200_primitive": 0.6923076923076923,
+      "validation/success_within_50_primitive": 0.22115384615384617,
+      "validation/task/assembly/ci95_high": 0.6942621454161981,
+      "validation/task/assembly/ci95_low": 0.13684175946152105,
+      "validation/task/assembly/success": 0.375,
+      "validation/task/button-press-topdown/ci95_high": 1,
+      "validation/task/button-press-topdown/ci95_low": 0.6755843804891231,
+      "validation/task/button-press-topdown/success": 1,
+      "validation/task/coffee-button/ci95_high": 1,
+      "validation/task/coffee-button/ci95_low": 0.6755843804891231,
+      "validation/task/coffee-button/success": 1,
+      "validation/task/dial-turn/ci95_high": 0.5907301208974108,
+      "validation/task/dial-turn/ci95_low": 0.07147768885802763,
+      "validation/task/dial-turn/success": 0.25,
+      "validation/task/door-close/ci95_high": 1,
+      "validation/task/door-close/ci95_low": 0.6755843804891231,
+      "validation/task/door-close/success": 1,
+      "validation/task/door-open/ci95_high": 0.9775830911367038,
+      "validation/task/door-open/ci95_low": 0.5291051942301386,
+      "validation/task/door-open/success": 0.875,
+      "validation/task/drawer-close/ci95_high": 1,
+      "validation/task/drawer-close/ci95_low": 0.6755843804891231,
+      "validation/task/drawer-close/success": 1,
+      "validation/task/drawer-open/ci95_high": 1,
+      "validation/task/drawer-open/ci95_low": 0.6755843804891231,
+      "validation/task/drawer-open/success": 1,
+      "validation/task/faucet-open/ci95_high": 0.5907301208974108,
+      "validation/task/faucet-open/ci95_low": 0.07147768885802763,
+      "validation/task/faucet-open/success": 0.25,
+      "validation/task/handle-press/ci95_high": 1,
+      "validation/task/handle-press/ci95_low": 0.6755843804891231,
+      "validation/task/handle-press/success": 1,
+      "validation/task/pick-place/ci95_high": 0.3244156195108769,
+      "validation/task/pick-place/ci95_low": 0,
+      "validation/task/pick-place/success": 0,
+      "validation/task/plate-slide/ci95_high": 0.9775830911367038,
+      "validation/task/plate-slide/ci95_low": 0.5291051942301386,
+      "validation/task/plate-slide/success": 0.875,
+      "validation/task/reach/ci95_high": 0.6942621454161981,
+      "validation/task/reach/ci95_low": 0.13684175946152105,
+      "validation/task/reach/success": 0.375,
+      "validation/world_predictions_mean": 17553.846153846152
+    }
+  }
+}

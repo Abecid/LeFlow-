@@ -1,3 +1,12 @@
+# October12 05:12UTC: first progress-objective evaluation72/104
+
+The5k fixed104 evaluation has72 successes, zero timeouts; all32 failures reach
+200 actions. Frozen e274fed and166 runtime hashes verified; the registered8-rank
+run continues with finite metrics and W&B running. Paired retrieval80:5 wins/13
+regressions; execution80:3/11. Pick-place0/8 retains reach/direct-goal-only final
+route tails. Ten saved contact sheets inspected. Read PROGRESS_OBJECTIVE_TTT.md
+for interim evidence and model-proxy limits. No new candidate or baseline work.
+
 # Verified active progress-objective run
 
 October11 21:56 Pacific: source e274fed5850b967c5e8e176e5cab3611d992e8bf,

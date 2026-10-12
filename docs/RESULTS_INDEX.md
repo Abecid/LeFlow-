@@ -1,3 +1,6 @@
+Current progress-objective result: **5k72/104**, zero timeouts; training continues.
+[Interim analysis and saved failure evidence](PROGRESS_OBJECTIVE_TTT.md#first-fixed-evaluation-5k72104-run-still-active).
+
 Current registered work: [progress-objective TTT](PROGRESS_OBJECTIVE_TTT.md).
 Training verified on all8 GPUs at1300 updates;46 tests,89.52ms preflight and
 eight-rank checks passed. W&B u4dd8tyw. No new development success result yet.

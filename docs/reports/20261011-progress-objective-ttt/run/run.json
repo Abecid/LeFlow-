@@ -1,0 +1,12 @@
+{
+  "bank_hash": "09e119a78dfbb3c9070ddc1de815517aae8c6e356066be5fa0e136bac310e3d8",
+  "code": "e274fed5850b967c5e8e176e5cab3611d992e8bf",
+  "id": "u4dd8tyw",
+  "manifest": "462acfe2a29798ddbe767575dee3c8f338af2ec36096b950b20eb4df4a24f3ac",
+  "method": "progress_objective_ttt",
+  "protocol": "ffdbfce9798ab6beeffd8c99a02d9f95c1b5d2892382567d0ccb0072e76c45d8",
+  "seed": 3072,
+  "wandb_url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/u4dd8tyw",
+  "world_hash": "ae3f910da43f0a43dd65945394444a0b11719ed042cdacffacc2faaf824ec5a3",
+  "world_size": 8
+}

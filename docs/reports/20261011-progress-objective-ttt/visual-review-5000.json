@@ -1,0 +1,82 @@
+{
+  "step": 5000,
+  "all_saved_contact_sheets_visually_inspected": true,
+  "images": [
+    {
+      "file": "contact-sheets-5000/assembly-00000.png",
+      "sha256": "665b06bffb19f19b03451702cfa0239feb34ec08e374c3378b0f84fa46e3c5dd",
+      "id": "validation/assembly/00000",
+      "success": true,
+      "observation": "The ring visibly moves from its initial location toward the post; the saved record reports success at168 actions."
+    },
+    {
+      "file": "contact-sheets-5000/coffee-button-00000.png",
+      "sha256": "f578243164236de679cd70c328b78d0a4407e17b423b26b391783e7dd8642167",
+      "id": "validation/coffee-button/00000",
+      "success": true,
+      "observation": "Gripper approaches the coffee-machine control region; saved record reports success at34 actions."
+    },
+    {
+      "file": "contact-sheets-5000/dial-turn-00000.png",
+      "sha256": "b54d69671bb54aed4fa66f84b2e76626371c86f486460bc5b378bc8ef5fe7daf",
+      "id": "validation/dial-turn/00000",
+      "success": true,
+      "observation": "The gripper engages the dial region; record reports success at117 actions."
+    },
+    {
+      "file": "contact-sheets-5000/door-close-00000.png",
+      "sha256": "759910f9718cc0f69bdae21e95df314b16878d76ab6771776e142850b6bdf576",
+      "id": "validation/door-close/00000",
+      "success": true,
+      "observation": "The door visibly rotates toward its closed goal; record reports success at64 actions."
+    },
+    {
+      "file": "contact-sheets-5000/drawer-close-00004.png",
+      "sha256": "74ea0e1b24e4d959674c06c16a746d1df500cee2cf18c62cea8c8300d27fc938",
+      "id": "validation/drawer-close/00004",
+      "success": true,
+      "observation": "Drawer moves inward toward the goal state; record reports success at73 actions."
+    },
+    {
+      "file": "contact-sheets-5000/faucet-open-00003.png",
+      "sha256": "ed86ac2bd10a989c74e945ee1693176316e998848ac22af0042eab51f24d8109",
+      "id": "validation/faucet-open/00003",
+      "success": false,
+      "observation": "The gripper approaches the handle region, but the final sampled configuration differs from the goal and the recorded episode fails at200 actions. Contact/slippage is not established by these samples."
+    },
+    {
+      "file": "contact-sheets-5000/handle-press-00000.png",
+      "sha256": "6898e5efe499bcaf9d5d265af0cecd8ce5bdd69621e9ff2587c75d35f5f519ce",
+      "id": "validation/handle-press/00000",
+      "success": true,
+      "observation": "Gripper approaches the handle; record reports success at16 actions."
+    },
+    {
+      "file": "contact-sheets-5000/pick-place-00000.png",
+      "sha256": "245c588c6646b2a81f35460542d67c1f94518faf2d75e53270be12c7b4e83461",
+      "id": "validation/pick-place/00000",
+      "success": false,
+      "observation": "The red object remains on the table in all five sampled frames; the gripper moves rightwards and does not visibly carry it to the registered goal. Failure at200 actions. Sparse frames do not identify contact forces or the cause."
+    },
+    {
+      "file": "contact-sheets-5000/reach-00003.png",
+      "sha256": "7383b6db928e021ac8c4defeeb3cc123811fed9348aab07b4e768b3513b04508",
+      "id": "validation/reach/00003",
+      "success": true,
+      "observation": "The gripper approaches the target region; record reports success at46 actions."
+    },
+    {
+      "file": "contact-sheets-5000/reach-00005.png",
+      "sha256": "91edce65830d7a3c16e5c6a9f5d3f8aa9f84d617a34c5718d2cb850ed117abe3",
+      "id": "validation/reach/00005",
+      "success": true,
+      "observation": "The gripper moves toward the target region; record reports success at49 actions."
+    }
+  ],
+  "limitations": [
+    "Ten preregistered saved trajectories, not all32 failures.",
+    "Uniformly sampled measured frames; no model or simulator calls.",
+    "Success labels come from registered evaluation records; images alone do not establish force, contact, causality or unseen outcomes."
+  ],
+  "render_review": "All ten final PNGs opened and visually inspected at readable resolution; titles, frame labels, sampled frames and goal panels are complete."
+}
