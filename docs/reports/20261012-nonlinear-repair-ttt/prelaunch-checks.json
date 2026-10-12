@@ -1,0 +1,26 @@
+{
+  "source": "d0cae3007c7d678cdc5ddb68ce731e8a2db3005d",
+  "authorization": "October12 user explicitly approves nonlinear LaCT-inspired memory on the 80/104 retrieval-repair method, one fresh matched-budget run.",
+  "prelaunch_failures": [
+    {
+      "operation": "First staging real-data preflight",
+      "reason": "Passed prior method manifest directly; protocol guard correctly rejected configuration mismatch. No optimizer update or simulator episode.",
+      "resolution": "Created separate manifest with original unchanged entries/encoder/normalization and rebound unchanged route bank metadata. Real-data preflight passed.",
+      "failed_attempt_gpu_seconds": "not measured; excluded from known measured total, not assumed zero"
+    },
+    {
+      "operation": "Sparse source installation",
+      "reason": "Initial exact-object pack omitted the root tree object. Checkout rejected before training.",
+      "resolution": "Transferred exact missing root tree; clean checkout of d0cae300 completed. No frozen run or historical source was modified."
+    }
+  ],
+  "staging_preflight_gpu_hours": 0.0054330058820131755,
+  "staging_ddp_gpu_hours": 0.010300616158379449,
+  "optimizer_updates": 0,
+  "simulator_episodes": 0,
+  "notes": [
+    "A second check in the exact frozen source is counted separately if executed by the coordinator.",
+    "Staging test-only warning was removed before freeze; runtime model/config/train files unchanged.",
+    "No held-out development success evaluated during preparation."
+  ]
+}

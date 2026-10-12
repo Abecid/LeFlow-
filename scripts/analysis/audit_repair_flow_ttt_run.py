@@ -16,6 +16,7 @@ def main(args):
     record=Path(args.record);repo=record/'repo';root=record/'campaign'
     method=getattr(args,'method','repair_flow_ttt')
     bayesian=method=='bayesian_repair_ttt'
+    nonlinear=method=='nonlinear_repair_ttt'
     world_calls=280 if bayesian else 320
     depth_count=3 if bayesian else 2
     run=root/'runs'/f'{method}_3072'
@@ -72,6 +73,11 @@ def main(args):
         assert any(k.startswith('repair_flow.') for k in saved['model'])
         assert not any(k.startswith('energy_base.') for k in saved['model'])
         assert not any(k.startswith('output.') for k in saved['model'])
+        if nonlinear:
+            assert all(k in saved['model'] for k in ('memory_w0','memory_w1','memory_w2','inner_lr_logit'))
+            assert 'fast_prior' not in saved['model'] and 'prior_tril' not in saved['model']
+            assert saved['model']['memory_w0'].shape==(32,64)
+            assert saved['model']['memory_w1'].shape==(64,1)
         if method=='progress_objective_ttt':
             assert any(k.startswith('goal_progress.') for k in saved['model'])
             assert 'progress_prior' in saved['model']
@@ -124,7 +130,15 @@ def main(args):
                 assert d['fast_weights_fixed_during_search'] and d['fast_fit_batches_per_decision']==1
                 assert d['fast_support_steps']==min(i,4)
                 assert d['fast_weight_rank']==32
-                if not bayesian:assert d['fast_weight_ridge']==.125
+                if not bayesian and not nonlinear:assert d['fast_weight_ridge']==.125
+                if nonlinear:
+                    assert 'fast_weight_ridge' not in d
+                    assert d['fast_fit']=='nonlinear_gated_three_matrix_mse'
+                    assert d['memory_inner_steps']==4
+                    assert 0<d['memory_inner_learning_rate']<.25
+                    for key in ('memory_support_before','memory_support_after','memory_parameter_delta_norm'):
+                        assert math.isfinite(d[key]) and d[key]>=0
+                    if i==0:assert d['memory_parameter_delta_norm']==0
                 assert d['adaptation_scope']=='current_episode_executed_transitions'
                 if i==0:assert d['fast_weight_delta_norm']==0
                 assert d['surrogate_gradient_evaluations']==0 and d['repair_incumbent_preserved']
@@ -134,7 +148,7 @@ def main(args):
                 else:
                     from scripts.analysis.bayesian_repair_details import check_decision
                     check_decision(d)
-                if method in ('retrieval_repair_ttt','shifted_repair_ttt','progress_objective_ttt','bayesian_repair_ttt'): assert d['repair_anchor_source'] in ('generated','retrieved','shifted')
+                if method in ('retrieval_repair_ttt','shifted_repair_ttt','progress_objective_ttt','bayesian_repair_ttt','nonlinear_repair_ttt'): assert d['repair_anchor_source'] in ('generated','retrieved','shifted')
                 if method=='progress_objective_ttt':
                     assert d['progress_fit_scope']=='past_executed_prefixes_only_fixed_during_search'
                     if i==0:assert d['goal_progress_fast_delta_norm']==0
@@ -177,6 +191,7 @@ def main(args):
         same_cases_across_rounds=True,causal_history_and_plan_reuse=True, episodic_fast_weights_and_reset_verified=True,
         score_reconstruction_verified=True,score_rounding_tolerance=1e-7,world_transition_budget_verified=True,
         training_coverage_logging_verified=True,compute=usage,complete=complete,
+        nonlinear_executed_prefix_memory_verified=nonlinear,
         progress_score_and_causal_fit_verified=(method=='progress_objective_ttt'),
         final_tests_read=False,model_calls=0,simulator_calls=0)
     Path(args.output).write_text(json.dumps(result,indent=2)+'\n')
@@ -186,5 +201,5 @@ def main(args):
 if __name__=='__main__':
     parser=argparse.ArgumentParser()
     for name in ('record','bank','previous-bank','output'):parser.add_argument('--'+name,required=True)
-    parser.add_argument('--method',choices=['repair_flow_ttt','retrieval_repair_ttt','shifted_repair_ttt','progress_objective_ttt','bayesian_repair_ttt'],default='repair_flow_ttt')
+    parser.add_argument('--method',choices=['repair_flow_ttt','retrieval_repair_ttt','shifted_repair_ttt','progress_objective_ttt','bayesian_repair_ttt','nonlinear_repair_ttt'],default='repair_flow_ttt')
     main(parser.parse_args())
