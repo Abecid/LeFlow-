@@ -18,15 +18,17 @@ its final evidence is preserved at ee1db8c; verify publication before dispatch.
 # Bayesian repair complete: selected 15k 77; further launches held
 
 The curve is 71/76/77/77, below the retained 80 references. All 1,200 training records,
-four104-case evaluations, three timeouts and 40 inspected contact sheets are saved.
-Source4d322c9/all 173 runtime hashes, data/bank/checkpoints and posterior/controller
+four 104-case evaluations, three timeouts and 40 inspected contact sheets are saved.
+Source 4d322c9/all 173 runtime hashes, data/bank/checkpoints and posterior/controller
 accounting pass the final CPU audit. All 44 owned processes exited; W&B u1hdmwqr
 finished at the 09:29 UTC readback. Known cumulative measured components are
 111.56490618890 GPUh, not a full cluster bill.
 Read docs/BAYESIAN_REPAIR_TTT_RESULTS.md and docs/BAYESIAN_REPAIR_TTT_REVIEW.md.
-No next candidate is authorized. Never restart the completed run. Complete live
-remote publication verification before treating the local ledger as published;
-keep monitoring available for later explicitly authorized registered work.
+No next candidate is authorized. Never restart the completed run. Complete evidence
+was live-remotely verified at ee1db8c75c587d162af1203d71ef443b14f9f2b6 on
+2026-10-12 at 09:50:53 UTC: 507 ledger artifact blobs and 57 evaluations. The receipt
+is docs/reports/20261012-bayesian-repair-ttt/publication-final-verification.json.
+Keep monitoring available for later explicitly authorized registered work.
 
 Earlier status snapshots follow; the latest entry above controls.
 

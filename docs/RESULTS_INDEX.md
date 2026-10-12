@@ -15,6 +15,10 @@ frozen source d0cae300 and unchanged data/budget/cases. No new success score exi
 
 [Bayesian repair completed](BAYESIAN_REPAIR_TTT_RESULTS.md): 71/76/77/77, selected
 15k77/104. All evidence is preserved at ee1db8c; prior80 references remain retained.
+[Live publication verification](reports/20261012-bayesian-repair-ttt/publication-final-verification.json)
+confirmed all 507 prior ledger artifacts and 57 evaluations at ee1db8c
+(2026-10-12 09:50:53 UTC). The new user authorization supersedes that run's review hold.
+
 
 ## Preserved comparisons
 
