@@ -4,7 +4,10 @@ October 12, 2026. The user explicitly authorized this next comparison on the
 80/104 retrieval-repair formulation. One fresh `nonlinear_repair_ttt` candidate
 is implemented and verified. Frozen execution source is
 `d0cae3007c7d678cdc5ddb68ce731e8a2db3005d` (200 checked files);
-actual optimizer launch verification is pending. No claim of improved success exists before evaluation.
+Training is verified on eight A800s: coordinator1643283, launcher1645550,
+W&B [mxujto8j](https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/mxujto8j).
+At09:52:04UTC the run reached187 updates, with finite metrics and all200 source
+hashes matching. No development evaluation has completed yet. No claim of improved success exists before evaluation.
 
 ## What changes
 
@@ -56,6 +59,9 @@ Train to 20,000 updates OR 28,800 aggregate optimizer GPU-seconds. Evaluate the
 same 104 development cases at 5k/10k/15k/20k under 200 primitive actions and
 10 cumulative controller seconds. All memory computation is inside that time.
 Use all eight available A800 GPUs; actual consumption is reported separately.
+The original retrieval-repair run used four ranks. Global batch and episode
+sampling stay fixed, but rank-local random streams and within-rank shuffled
+negative goals differ; optimization is not bitwise identical.
 
 Keep eight routes, four initial candidates, two planning rounds, eight initial
 flow steps, four repair steps, radius 0.25, exact retained incumbent, and 320
@@ -103,3 +109,19 @@ results, with source/data/checkpoint hashes and qualitative failure evidence.
 
 Server record: `/home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt`.
 Cache: `/tmp/mtxu-nonlinear-repair-ttt-20261012`.
+
+## Verified launch and publication
+
+All45 frozen-source tests and both eight-rank no-update gradient checks passed.
+The final full-controller preflight averages87.64ms. All44 owned process/start
+identities and source200 hashes are captured in the launch report. Source
+installation briefly lacked its root tree object; exact-tree recovery and a
+clean full hash check completed before dispatch. The earlier TRAIN preflight
+configuration mismatch and its resolution are also recorded; neither performed
+an optimizer update. Known preparation components and omissions are in
+`reports/20261012-nonlinear-repair-ttt/compute-accounting-launch.json`.
+
+The preceding Bayesian result71/76/77/77 was fully published and remotely verified
+at ee1db8c before this fresh candidate was dispatched. Analysis-only updates to
+`audit_repair_flow_ttt_run.py` and `repair_flow_ttt_details.py` were added after
+source freeze. Use the reporting checkout for audits, preserving execution source.

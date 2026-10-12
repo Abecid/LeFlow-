@@ -10,7 +10,7 @@ native-benchmark SOTA, component causality or generalization.
 
 [Nonlinear memory on retrieval-repair80](NONLINEAR_REPAIR_TTT.md) is the newly
 authorized single candidate. Implementation, TRAIN-only latency and eight-rank
-gradient checks pass; launch verification is pending. The active ledger records
+gradient checks pass; actual eight-GPU optimization and W&B mxujto8j are verified. The active ledger records
 frozen source d0cae300 and unchanged data/budget/cases. No new success score exists.
 
 [Bayesian repair completed](BAYESIAN_REPAIR_TTT_RESULTS.md): 71/76/77/77, selected

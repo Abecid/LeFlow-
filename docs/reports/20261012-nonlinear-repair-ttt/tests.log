@@ -1,0 +1,88 @@
+test_bank_rejects_evaluation_examples (test_execution.ExecutionTests.test_bank_rejects_evaluation_examples) ... ok
+test_exact_executed_prefix_and_fixed_prediction_budget (test_execution.ExecutionTests.test_exact_executed_prefix_and_fixed_prediction_budget) ... ok
+test_observed_execution_loss_backpropagates_to_policy_only (test_execution.ExecutionTests.test_observed_execution_loss_backpropagates_to_policy_only) ... ok
+test_terminal_window_does_not_reward_early_transient_match (test_execution.ExecutionTests.test_terminal_window_does_not_reward_early_transient_match) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.346s
+
+OK
+test_backprop_updates_policy_calibrator_not_world (test_latent_revision.RevisionTests.test_backprop_updates_policy_calibrator_not_world) ... ok
+test_dataset_draws_match_and_history_ends_at_current_state (test_latent_revision.RevisionTests.test_dataset_draws_match_and_history_ends_at_current_state) ... ok
+test_exact_prefix_budget_observation_order_and_episode_reset (test_latent_revision.RevisionTests.test_exact_prefix_budget_observation_order_and_episode_reset) ... ok
+test_future_outcomes_are_labels_not_prediction_inputs (test_latent_revision.RevisionTests.test_future_outcomes_are_labels_not_prediction_inputs) ... ok
+test_history_changes_workspace_but_masked_padding_does_not (test_latent_revision.RevisionTests.test_history_changes_workspace_but_masked_padding_does_not) ... /home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/repo/tests/test_latent_revision.py:42: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:835.)
+  self.assertGreater(float((a-c).abs().max()),1e-5)
+ok
+test_prefix_prediction_has_no_unexecuted_suffix_dependency (test_latent_revision.RevisionTests.test_prefix_prediction_has_no_unexecuted_suffix_dependency) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.646s
+
+OK
+test_late_action_coverage_feasible_goals_and_same_episode_draws (test_execution_revision.AlignedTests.test_late_action_coverage_feasible_goals_and_same_episode_draws) ... ok
+test_prefix_error_changes_action_ranking_without_terminal_change (test_execution_revision.AlignedTests.test_prefix_error_changes_action_ranking_without_terminal_change) ... ok
+test_reuse_only_after_observation_exact_prefix_and_budget (test_execution_revision.AlignedTests.test_reuse_only_after_observation_exact_prefix_and_budget) ... ok
+test_stalls_require_repeated_observations_and_decay_locally (test_execution_revision.AlignedTests.test_stalls_require_repeated_observations_and_decay_locally) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.689s
+
+OK
+test_all_depths_train_flow_and_deep_evidence_with_world_frozen (test_flow_reasoning.FlowReasoningTests.test_all_depths_train_flow_and_deep_evidence_with_world_frozen) ... ok
+test_candidate_pairing_permutation_and_detached_world_evidence (test_flow_reasoning.FlowReasoningTests.test_candidate_pairing_permutation_and_detached_world_evidence) ... ok
+test_complete_flow_transport_uses_unrestricted_source_and_final_clamp (test_flow_reasoning.FlowReasoningTests.test_complete_flow_transport_uses_unrestricted_source_and_final_clamp) ... ok
+test_controller_uses_evidence_between_rounds_and_exact_execution_budget (test_flow_reasoning.FlowReasoningTests.test_controller_uses_evidence_between_rounds_and_exact_execution_budget) ... ok
+test_imagined_evidence_changes_generation_but_not_scoring_context (test_flow_reasoning.FlowReasoningTests.test_imagined_evidence_changes_generation_but_not_scoring_context) ... ok
+test_masked_history_is_ignored_and_observed_error_affects_context (test_flow_reasoning.FlowReasoningTests.test_masked_history_is_ignored_and_observed_error_affects_context) ... ok
+test_teacher_actions_and_future_labels_never_enter_deliberation (test_flow_reasoning.FlowReasoningTests.test_teacher_actions_and_future_labels_never_enter_deliberation) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.736s
+
+OK
+test_controller_stores_only_observed_prefixes_resets_and_fits_once (test_progress_ttt.ProgressTTTTests.test_controller_stores_only_observed_prefixes_resets_and_fits_once) ... ok
+test_fast_correction_changes_action_selection_with_identical_world_costs (test_progress_ttt.ProgressTTTTests.test_fast_correction_changes_action_selection_with_identical_world_costs) ... ok
+test_fast_readout_can_change_flow_without_changing_physical_states (test_progress_ttt.ProgressTTTTests.test_fast_readout_can_change_flow_without_changing_physical_states) ... ok
+test_outer_gradients_reach_fast_features_prior_flow_and_readout (test_progress_ttt.ProgressTTTTests.test_outer_gradients_reach_fast_features_prior_flow_and_readout) ... ok
+test_padding_batch_isolation_and_no_parameter_mutation (test_progress_ttt.ProgressTTTTests.test_padding_batch_isolation_and_no_parameter_mutation) ... ok
+test_prefix_correction_ignores_action_suffix_and_search_revision (test_progress_ttt.ProgressTTTTests.test_prefix_correction_ignores_action_suffix_and_search_revision) ... ok
+test_ridge_optimum_gradient_and_empty_prior (test_progress_ttt.ProgressTTTTests.test_ridge_optimum_gradient_and_empty_prior) ... ok
+test_teacher_future_never_enters_fit_or_candidate_evidence (test_progress_ttt.ProgressTTTTests.test_teacher_future_never_enters_fit_or_candidate_evidence) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.832s
+
+OK
+test_best_anchor_detached_and_candidate_permutation_preserves_repair (test_repair_flow_ttt.RepairFlowTTTTests.test_best_anchor_detached_and_candidate_permutation_preserves_repair) ... ok
+test_controller_budget_preserved_incumbent_and_causal_memory (test_repair_flow_ttt.RepairFlowTTTTests.test_controller_budget_preserved_incumbent_and_causal_memory) ... ok
+test_full_gaussian_source_unchanged_incumbent_and_bounded_final_actions (test_repair_flow_ttt.RepairFlowTTTTests.test_full_gaussian_source_unchanged_incumbent_and_bounded_final_actions) ... ok
+test_future_teacher_cannot_change_anchor_or_evidence (test_repair_flow_ttt.RepairFlowTTTTests.test_future_teacher_cannot_change_anchor_or_evidence) ... ok
+test_gradients_and_world_isolation_at_both_depths (test_repair_flow_ttt.RepairFlowTTTTests.test_gradients_and_world_isolation_at_both_depths) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.683s
+
+OK
+test_both_depth_gradients_and_frozen_world (test_retrieval_repair.RetrievalRepairTests.test_both_depth_gradients_and_frozen_world) ... ok
+test_controller_provenance_without_inference_expansion (test_retrieval_repair.RetrievalRepairTests.test_controller_provenance_without_inference_expansion) ... ok
+test_exact_reranking_excludes_entire_own_episode (test_retrieval_repair.RetrievalRepairTests.test_exact_reranking_excludes_entire_own_episode) ... ok
+test_retrieved_slot_is_verified_by_world_and_can_anchor_repairs (test_retrieval_repair.RetrievalRepairTests.test_retrieved_slot_is_verified_by_world_and_can_anchor_repairs) ... ok
+test_teacher_changes_cannot_change_retrieval_or_planning_evidence (test_retrieval_repair.RetrievalRepairTests.test_teacher_changes_cannot_change_retrieval_or_planning_evidence) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.673s
+
+OK
+test_all_fast_matrices_meta_gradients_and_world_frozen (test_nonlinear_repair.NonlinearRepairTests.test_all_fast_matrices_meta_gradients_and_world_frozen) ... ok
+test_controller_only_observed_prefixes_one_fit_reset_and_budget (test_nonlinear_repair.NonlinearRepairTests.test_controller_only_observed_prefixes_one_fit_reset_and_budget) ... ok
+test_empty_padding_episode_isolation_and_support_fit (test_nonlinear_repair.NonlinearRepairTests.test_empty_padding_episode_isolation_and_support_fit) ... ok
+test_future_outcomes_and_teacher_actions_cannot_enter_planning (test_nonlinear_repair.NonlinearRepairTests.test_future_outcomes_and_teacher_actions_cannot_enter_planning) ... ok
+test_manual_inner_gradients_and_outer_derivatives_match_autograd (test_nonlinear_repair.NonlinearRepairTests.test_manual_inner_gradients_and_outer_derivatives_match_autograd) ... ok
+test_memory_can_change_flow_repairs_and_selection (test_nonlinear_repair.NonlinearRepairTests.test_memory_can_change_flow_repairs_and_selection) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.810s
+
+OK

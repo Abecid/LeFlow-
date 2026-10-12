@@ -1,3 +1,19 @@
+# Verified active nonlinear memory on retrieval-repair80
+
+One authorized fresh nonlinear_repair_ttt run is training on all eight A800s.
+At 2026-10-12T09:52:04.361893+00:00, step 187 is verified with finite logs;
+W&B mxujto8j is running. Frozen source d0cae3007c7d678cdc5ddb68ce731e8a2db3005d, all 200 runtime files,
+45 tests and both eight-rank training depths pass. Final preflight87.64ms.
+Coordinator 1643283, launcher 1645550; exact owned
+PID/start identities are in the launch-verification artifact. Read
+[method and live run](NONLINEAR_REPAIR_TTT.md) and docs/results-ledger.json.
+
+Preserve this one run, source and same6222/seed3072/global64/20k-or28800GPU-seconds/
+four104/10s200. No new development score yet. Publish every scheduled evaluation,
+paired failures and qualitative evidence. No baseline retraining, extra seeds,
+scaling sweeps, sealed tests or speculative next candidate. Current source remains
+frozen; reporting helpers added later run from the reporting checkout only.
+
 # October12 authorization: nonlinear memory on retrieval-repair80
 
 The user explicitly approved ONE next fresh nonlinear_repair_ttt run, superseding

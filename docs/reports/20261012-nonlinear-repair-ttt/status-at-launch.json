@@ -1,0 +1,28 @@
+{
+  "code": "d0cae3007c7d678cdc5ddb68ce731e8a2db3005d",
+  "command": [
+    "/tmp/mtxu-flow-jepa-20261007/env/bin/python",
+    "-m",
+    "torch.distributed.run",
+    "--nnodes=1",
+    "--nproc_per_node=8",
+    "--rdzv-backend=c10d",
+    "--rdzv-endpoint=127.0.0.1:0",
+    "-m",
+    "flow_jepa.execution.train",
+    "--config",
+    "/home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/repo/config/flow_metaworld_nonlinear_repair_ttt.json",
+    "--root",
+    "/home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign",
+    "--run-dir",
+    "/home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt/campaign/runs/nonlinear_repair_ttt_3072",
+    "--world",
+    "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt",
+    "--bank",
+    "/tmp/mtxu-nonlinear-repair-ttt-20261012/route_bank.pt"
+  ],
+  "pid": 1643283,
+  "preflight_mean_ms": 87.637257296592,
+  "status": "training",
+  "utc": "2026-10-12T09:51:26.448537+00:00"
+}

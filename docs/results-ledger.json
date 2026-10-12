@@ -4,11 +4,11 @@
   "publication_contract": "A run is publication-complete only when these artifacts and its findings report are committed and verified on origin/main. Local ledger membership alone does not prove remote publication.",
   "active_runs": [
     {
-      "run_key": "nonlinear_repair_ttt_3072_registered",
+      "run_key": "mxujto8j",
       "method": "nonlinear_repair_ttt",
       "label": "LaCT-inspired nonlinear episodic memory on retrieval bounded flow repair",
       "seed": 3072,
-      "status": "verified_implementation_pending_launch",
+      "status": "training_verified_before_first_evaluation",
       "server_record": "/home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt",
       "report": "docs/NONLINEAR_REPAIR_TTT.md",
       "evidence_directory": "docs/reports/20261012-nonlinear-repair-ttt",
@@ -25,10 +25,40 @@
       "reference": "retrieval_repair_ttt selected20k80/104; execution_revision selected5k80/104",
       "initialization": "fresh trainable policy; frozen shared world/encoder/bank; no prior policy checkpoint loaded",
       "artifact_sha256": {
+        "docs/reports/20261012-nonlinear-repair-ttt/allocation.json": "b82ec18f4f99ea4cc61e1542c91bccad47a6b920b617a7184af6cf5dd3a6bd9f",
+        "docs/reports/20261012-nonlinear-repair-ttt/compute-accounting-launch.json": "767d4a215bb8158e2e70bcc1edf4c4868da0d1a4faf29bb9b811c7364c691fbe",
+        "docs/reports/20261012-nonlinear-repair-ttt/ddp-check.json": "4d800c098aacedb460bd00b294babf1f5e1659567778ab1be2f194669a249733",
+        "docs/reports/20261012-nonlinear-repair-ttt/launch-verification.json": "f3e293c9026cbebd11f0d5a777982d5d2e73dcd84b459df6f0f4d0dbd0a5b6a3",
+        "docs/reports/20261012-nonlinear-repair-ttt/launcher.json": "7a636f45603303e1e941b33694f49d02fca7ffade016b38b01a4d2ab3b6e50ad",
+        "docs/reports/20261012-nonlinear-repair-ttt/preflight.json": "d4380d846f6a25a86fd41bccf63fb9793b5dfb9fb18992fa6a914e68384385d9",
         "docs/reports/20261012-nonlinear-repair-ttt/prelaunch-checks.json": "dc993798e778dc1a3ab901bce2a8a284ad69dd1b9ebb1ffd765968a6cc996b08",
+        "docs/reports/20261012-nonlinear-repair-ttt/reuse.json": "5a0e4ddc3eccf627330bab73b1548fa6066f5fe292ea647741a9a668b932d802",
+        "docs/reports/20261012-nonlinear-repair-ttt/route-bank.json": "558242fa6f00dafc5e98f82b4803260cfb0e872388be8dd26524477f8e7539fe",
+        "docs/reports/20261012-nonlinear-repair-ttt/run/compute-usage-at-launch.json": "765522c59591f7fa6937fe07ddf27f7d68ee806e9c71807ed592a75d7507328d",
+        "docs/reports/20261012-nonlinear-repair-ttt/run/metrics-at-launch.jsonl.gz": "1c4bf85f781ebda29fe4ee261c0631f4630787e81059df712f7315d238e2ad29",
+        "docs/reports/20261012-nonlinear-repair-ttt/run/run.json": "c25a5a52f456aef8b401455594482e742757d57c86cb6e7857d972333d5b230b",
+        "docs/reports/20261012-nonlinear-repair-ttt/runtime-files.json": "20f04a24c273b47559a36fcfd65b1684f8ded389e2ba07ee95d275da30a2d5a2",
         "docs/reports/20261012-nonlinear-repair-ttt/staging-ddp-check.json": "6f40b11e23f36c0bd1c02e2d8f755c7c23daaa4a90b4a12f2fdb167e7f2da244",
-        "docs/reports/20261012-nonlinear-repair-ttt/staging-preflight.json": "60773749beb0c9ea4f0085014775713f7f5b716b1b307dfef1fcf2db416d40fb"
-      }
+        "docs/reports/20261012-nonlinear-repair-ttt/staging-preflight.json": "60773749beb0c9ea4f0085014775713f7f5b716b1b307dfef1fcf2db416d40fb",
+        "docs/reports/20261012-nonlinear-repair-ttt/status-at-launch.json": "3c8a965134a7397b8e01de2a7a733826222bb46a5da594089f62778adc23a87e",
+        "docs/reports/20261012-nonlinear-repair-ttt/tests.log": "0fe2c39702dd6507f4478da5a6602e8e685091ae1f3b8f308ccfd27bf4532fc6"
+      },
+      "wandb_url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/mxujto8j",
+      "launcher_pid": 1643283,
+      "worker_pid": 1645550,
+      "rank_pids": [
+        1645625,
+        1645626,
+        1645627,
+        1645628,
+        1645629,
+        1645630,
+        1645631,
+        1645632
+      ],
+      "verified_utc": "2026-10-12T09:52:04.361893+00:00",
+      "verified_step": 187,
+      "training_metric_artifact": "docs/reports/20261012-nonlinear-repair-ttt/run/metrics-at-launch.jsonl.gz"
     }
   ],
   "completed_runs": [
