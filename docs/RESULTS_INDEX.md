@@ -1,3 +1,7 @@
+Current registered work: [progress-objective TTT](PROGRESS_OBJECTIVE_TTT.md).
+TRAIN-only diagnostic passed; final-source startup gates precede one fresh run.
+No new development success result yet.
+
 # Results and completion publication
 
 Updated October11,2026. Shifted-plan repair completes **79/78/74/78**, selecting

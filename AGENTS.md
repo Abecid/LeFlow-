@@ -1,3 +1,13 @@
+# Latest authorization: implement and train progress objective
+
+October11 user explicitly approves the proposed execution-calibrated progress
+direction and asks to implement, train, evaluate and inspect subsequent failures.
+This supersedes the historical review hold below for ONE fresh progress_objective_ttt
+candidate. TRAIN-only no-optimizer feature diagnostic passed. Preserve fixed6222/
+seed3072/global64/20k-or28800 GPU-second cap/four104/10s200 and sealed final tests.
+Read docs/PROGRESS_OBJECTIVE_TTT.md and the active ledger before dispatch; no
+duplicate launch. No baseline work or speculative next queue.
+
 # Latest next-step review: objective and route semantics
 
 October11 evening user asks for the best next step and obvious improvements.

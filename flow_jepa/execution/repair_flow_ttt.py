@@ -65,6 +65,9 @@ class RepairFlowTTTPolicy(ProgressTTTPolicy):
         z = batch['z']
         return self.deliberate(z[:, 0], z[:, 2], z[:, 3], history, world, depth)
 
+    def auxiliary_loss(self, batch, history, predicted):
+        return batch['a'].new_zeros(()), {}
+
     def forward(self, batch, world=None, weight=0., depth=None):
         if weight:
             raise ValueError('Generated actions cannot receive inherited expert-outcome labels')
@@ -124,7 +127,8 @@ class RepairFlowTTTPolicy(ProgressTTTPolicy):
             recorded_corrected_terminal_mae=(terminal_labels-terminal).abs().mean().detach(),
             fast_weight_delta_norm=calibration_context['fast_delta'].norm(dim=-1).mean().detach(),
             reasoning_depth=loss.new_tensor(float(depth)), history_fraction=history['mask'].float().mean().detach())
-        return loss, metrics
+        auxiliary, diagnostics = self.auxiliary_loss(batch, history, predicted)
+        return loss+auxiliary, {**metrics, **diagnostics}
 
 
 class RepairFlowTTTController(ProgressTTTController):

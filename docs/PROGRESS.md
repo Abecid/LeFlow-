@@ -1,3 +1,12 @@
+# October11: progress-objective candidate registered
+
+Explicit user authorization supersedes the review hold. The TRAIN-only no-update
+feature diagnostic passed95% coarse-stage accuracy;7 new causal/gradient/budget
+checks passed in CPU fixtures. One fresh progress_objective_ttt is being verified
+for all8 idle GPUs. Read PROGRESS_OBJECTIVE_TTT.md and the active ledger. No
+training success is claimed; full latency/DDP gates precede optimizer launch.
+Baseline/data/fixed104/10s200 and aggregate ceilings remain unchanged.
+
 # October11 evening: next-step review identifies target/progress ambiguity
 
 All prior runs remain complete; none active. New saved-record route audit finds

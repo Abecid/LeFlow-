@@ -8,6 +8,9 @@ from .aligned import AlignedController
 
 
 class FlowReasoningController(AlignedController):
+    def target_route_costs(self, context, start, targets, goal, route_cost):
+        return route_cost
+
     def initial_pool_context(self, context, actions, recorded):
         return context
 
@@ -27,6 +30,7 @@ class FlowReasoningController(AlignedController):
         retrieval_ms = 1000 * (time.perf_counter()-then); check()
         n, per = 8, 4
         context = self.model.prepare(start.expand(n,-1,-1), targets, goal.expand(n,-1,-1), self.model_history(start,n))
+        route_cost = self.target_route_costs(context, start, targets, goal, route_cost)
         rounds = self.c['flow_reasoning']['rounds']
         noise = torch.randn(n, per, 5, 8, device=start.device)
         actions = self.model.propose_context(context, per, noise=noise, budget=budget)
