@@ -1,0 +1,354 @@
+{
+  "scheduled_heartbeat_utc": "2026-10-12T08:41:52.547Z",
+  "recorded_utc": "2026-10-12T08:45:39+00:00",
+  "status": "campaign_and_online_access_blocked_gpu_verified",
+  "fresh_campaign_records_verified": false,
+  "fresh_online_state_verified": false,
+  "fresh_gpu_process_mapping_verified": true,
+  "current_campaign_state": null,
+  "current_online_state": null,
+  "current_campaign_completion": null,
+  "current_campaign_recovery": "not_verified",
+  "current_eta": null,
+  "new_training_metrics_since_last_good": null,
+  "new_evaluations_since_last_good": null,
+  "attempts": {
+    "campaign_collector": {
+      "count": 2,
+      "exit_codes": [
+        255,
+        255
+      ],
+      "output_bytes": [
+        0,
+        0
+      ],
+      "first_attempt_error_lines": [
+        "Connection timed out during banner exchange",
+        "Connection to UNKNOWN port 65535 timed out"
+      ],
+      "retry_result": "SSH banner timeout; no payload",
+      "retry_error_lines": [
+        "Connection timed out during banner exchange",
+        "Connection to UNKNOWN port 65535 timed out"
+      ]
+    },
+    "online_readback": {
+      "count": 2,
+      "exit_codes": [
+        255,
+        255
+      ],
+      "output_bytes": [
+        0,
+        0
+      ],
+      "first_attempt_error_lines": [
+        "Connection timed out during banner exchange",
+        "Connection to UNKNOWN port 65535 timed out"
+      ],
+      "retry_result": "SSH banner timeout; no payload",
+      "retry_error_lines": [
+        "Connection timed out during banner exchange",
+        "Connection to UNKNOWN port 65535 timed out"
+      ]
+    },
+    "gpu_process_query": {
+      "count": 2,
+      "exit_codes": [
+        255,
+        0
+      ],
+      "output_bytes": [
+        0,
+        2286
+      ],
+      "first_attempt_error_lines": [
+        "Connection timed out during banner exchange",
+        "Connection to UNKNOWN port 65535 timed out"
+      ],
+      "retry_result": "Valid fresh GPU payload, no errors"
+    }
+  },
+  "cached_campaign": {
+    "evidence_is_cached": true,
+    "collection_started_utc": "2026-10-12T08:27:30+00:00",
+    "collection_finished_utc": "2026-10-12T08:27:34+00:00",
+    "raw_snapshot_sha256": "6315130ffb762fb7a4b1a7ffa24cf026b0f8c9093c18762315e15a69ae153505",
+    "frozen_source_commit": "69babde283f504120dae3dfc6e9188a0e2242be4",
+    "manifest_sha256": "6410f2f196e6fd50a84ae82a192edc718ce169885144195cc63693faaa7f7f26",
+    "encoder_sha256": "48938400ae3464c9680731287f583a9cb516f55a8ec64ea13a91be47fb15b607",
+    "runs": {
+      "btm_3072": {
+        "saved_step": 23830,
+        "logged_step": 23830,
+        "selected_checkpoint_step": 1000,
+        "metric_rows": 2465,
+        "evaluation_records": 99,
+        "complete_three_offset_cycles": 33,
+        "completion_marker_present": false
+      },
+      "flow_3072": {
+        "saved_step": 23000,
+        "logged_step": 23040,
+        "selected_checkpoint_step": 1000,
+        "metric_rows": 2383,
+        "evaluation_records": 96,
+        "complete_three_offset_cycles": 32,
+        "completion_marker_present": false
+      }
+    },
+    "known_campaign_trainer_or_flow_controller_visible": false,
+    "process_scope": "Campaign name/path filters in accessible process namespace; original supervisor intentionally stopped.",
+    "collection_errors": [],
+    "completion": false,
+    "recovery": "not_verified",
+    "flow_updates_needed_from_saved_checkpoint": 830,
+    "full_config_provenance_metrics_evaluations_checkpoint_markers_unchanged_at_last_good_check": true
+  },
+  "cached_online": {
+    "evidence_is_cached": true,
+    "observed_utc": "2026-10-12T08:27:57+00:00",
+    "runs": {
+      "btm": {
+        "run_id": "z78m0zk6",
+        "state": "finished",
+        "step": 23830,
+        "runtime_seconds": 8304,
+        "checked_utc": "2026-10-12T08:28:10+00:00"
+      },
+      "flow": {
+        "run_id": "g0u3w723",
+        "state": "finished",
+        "step": 23040,
+        "runtime_seconds": 9240,
+        "checked_utc": "2026-10-12T08:28:10+00:00"
+      }
+    },
+    "readback_sha256": "0cf7f2b77d4ded43916314d1178454cb88e6b129d8d44896e4c204520fcc58e5",
+    "manifest_sha256": "6410f2f196e6fd50a84ae82a192edc718ce169885144195cc63693faaa7f7f26",
+    "cpu_probe": {
+      "source": "Actual frozen LatentSegments.__getitem__ reads on CPU",
+      "clips": 32,
+      "episode_ids": [
+        4,
+        5
+      ],
+      "spacing_counts": {
+        "1": 20,
+        "2": 11,
+        "4": 1
+      },
+      "loss_probe_512_unique_episodes": 28
+    }
+  },
+  "fresh_hardware": {
+    "evidence_is_cached": false,
+    "observed_utc": "2026-10-12T08:43:33+00:00",
+    "finished_utc": "2026-10-12T08:43:33+00:00",
+    "gpu_query_sha256": "d57949222e92cf587b887bb8784bbdd7fd6c288e7f3c94ebc42e4f2ed062f528",
+    "gpus": [
+      {
+        "index": 0,
+        "utilization_percent": 30.0,
+        "memory_mib": 10903.0
+      },
+      {
+        "index": 1,
+        "utilization_percent": 66.0,
+        "memory_mib": 10903.0
+      },
+      {
+        "index": 2,
+        "utilization_percent": 64.0,
+        "memory_mib": 10903.0
+      },
+      {
+        "index": 3,
+        "utilization_percent": 64.0,
+        "memory_mib": 10903.0
+      },
+      {
+        "index": 4,
+        "utilization_percent": 57.0,
+        "memory_mib": 10903.0
+      },
+      {
+        "index": 5,
+        "utilization_percent": 68.0,
+        "memory_mib": 10903.0
+      },
+      {
+        "index": 6,
+        "utilization_percent": 60.0,
+        "memory_mib": 10903.0
+      },
+      {
+        "index": 7,
+        "utilization_percent": 64.0,
+        "memory_mib": 10903.0
+      }
+    ],
+    "processes": [
+      {
+        "gpu_index": 0,
+        "process_name_basename": "[Not Found]",
+        "memory_mib": "10900",
+        "pid_directory": "FileNotFoundError"
+      },
+      {
+        "gpu_index": 1,
+        "process_name_basename": "[Not Found]",
+        "memory_mib": "10900",
+        "pid_directory": "FileNotFoundError"
+      },
+      {
+        "gpu_index": 2,
+        "process_name_basename": "[Not Found]",
+        "memory_mib": "10900",
+        "pid_directory": "FileNotFoundError"
+      },
+      {
+        "gpu_index": 3,
+        "process_name_basename": "[Not Found]",
+        "memory_mib": "10900",
+        "pid_directory": "FileNotFoundError"
+      },
+      {
+        "gpu_index": 4,
+        "process_name_basename": "[Not Found]",
+        "memory_mib": "10900",
+        "pid_directory": "FileNotFoundError"
+      },
+      {
+        "gpu_index": 5,
+        "process_name_basename": "[Not Found]",
+        "memory_mib": "10900",
+        "pid_directory": "FileNotFoundError"
+      },
+      {
+        "gpu_index": 6,
+        "process_name_basename": "[Not Found]",
+        "memory_mib": "10900",
+        "pid_directory": "FileNotFoundError"
+      },
+      {
+        "gpu_index": 7,
+        "process_name_basename": "[Not Found]",
+        "memory_mib": "10900",
+        "pid_directory": "FileNotFoundError"
+      }
+    ],
+    "ownership": "unresolved",
+    "campaign_association": "not_established",
+    "comparison_baseline_sha256": "040352ac155100c477f6baab4ca6898284f569863964d4717ae316a4cb7a7241",
+    "comparison_baseline_observed_utc": "2026-10-12T08:27:30+00:00",
+    "comparison_baseline_all_eight_gpus_idle": true,
+    "comparison_baseline_compute_processes": 0
+  },
+  "cached_collector_hardware": {
+    "evidence_is_cached": true,
+    "hardware": {
+      "observed_utc": "2026-10-12T08:27:34+00:00",
+      "units": {
+        "utilization.gpu": "%",
+        "memory.used": "MiB",
+        "memory.total": "MiB",
+        "power.draw": "W"
+      },
+      "gpus": [
+        {
+          "index": "0",
+          "name": "NVIDIA A800-SXM4-80GB",
+          "utilization.gpu": "0",
+          "memory.used": "0",
+          "memory.total": "81920",
+          "power.draw": "55.65"
+        },
+        {
+          "index": "1",
+          "name": "NVIDIA A800-SXM4-80GB",
+          "utilization.gpu": "0",
+          "memory.used": "0",
+          "memory.total": "81920",
+          "power.draw": "53.42"
+        },
+        {
+          "index": "2",
+          "name": "NVIDIA A800-SXM4-80GB",
+          "utilization.gpu": "0",
+          "memory.used": "0",
+          "memory.total": "81920",
+          "power.draw": "56.46"
+        },
+        {
+          "index": "3",
+          "name": "NVIDIA A800-SXM4-80GB",
+          "utilization.gpu": "0",
+          "memory.used": "0",
+          "memory.total": "81920",
+          "power.draw": "54.83"
+        },
+        {
+          "index": "4",
+          "name": "NVIDIA A800-SXM4-80GB",
+          "utilization.gpu": "0",
+          "memory.used": "0",
+          "memory.total": "81920",
+          "power.draw": "58.13"
+        },
+        {
+          "index": "5",
+          "name": "NVIDIA A800-SXM4-80GB",
+          "utilization.gpu": "0",
+          "memory.used": "0",
+          "memory.total": "81920",
+          "power.draw": "56.97"
+        },
+        {
+          "index": "6",
+          "name": "NVIDIA A800-SXM4-80GB",
+          "utilization.gpu": "0",
+          "memory.used": "0",
+          "memory.total": "81920",
+          "power.draw": "54.56"
+        },
+        {
+          "index": "7",
+          "name": "NVIDIA A800-SXM4-80GB",
+          "utilization.gpu": "0",
+          "memory.used": "0",
+          "memory.total": "81920",
+          "power.draw": "56.64"
+        }
+      ]
+    }
+  },
+  "connection_investigation": {
+    "local_alias_configuration_resolves": true,
+    "configured_jump_route_present": true,
+    "identity_file_configured_and_present": true,
+    "successful_ssh_read_this_check": true,
+    "prior_successful_check_reviewed": "20261012-0826",
+    "previous_failure_and_recovery_reports_reviewed": [
+      "20261012T064307Z",
+      "20261012T065721Z"
+    ],
+    "failure_layer": "SSH banner exchange before remote campaign/online Python execution",
+    "cause": "unknown",
+    "authentication_or_route_settings_changed": false,
+    "remaining_requirement": "Successful campaign collection and authenticated W&B readback; GPU activity cannot identify campaign recovery."
+  },
+  "access_failure_cause": "unknown",
+  "research_goals_demonstrated_by_available_evidence": {
+    "higher_primary_success": false,
+    "controlled_efficiency_with_retained_success": false
+  },
+  "results_report": "20261006T050931Z",
+  "previous_monitoring_report": "20261012T065721Z",
+  "gpu_jobs_changed": false,
+  "credentials_modified_by_monitor": false,
+  "monitor_action": "keep_active",
+  "last_good_snapshots_preserved": true,
+  "independent_payload_audit": "passed"
+}
