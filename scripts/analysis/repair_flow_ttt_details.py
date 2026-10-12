@@ -20,6 +20,8 @@ def average(values):
 
 def initial_diversity(reports):
     first = {r['id']:r for r in reports[0]['records']}
+    progress_objective = reports[0].get('method') == 'progress_objective_ttt'
+    assert all(r.get('method') == reports[0].get('method') for r in reports)
     rows = []
     for report in reports:
         current = {r['id']:r for r in report['records']}
@@ -28,15 +30,28 @@ def initial_diversity(reports):
             old = first[key]['controller_diagnostics']['decisions'][0]
             new = current[key]['controller_diagnostics']['decisions'][0]
             assert new['history_valid_steps']==0 and not new['warm_start_available']
-            assert all(abs(a-b)<1e-6 for a,b in zip(old['candidate_route_costs'],new['candidate_route_costs']))
+            old_costs = old['candidate_route_costs']
+            new_costs = new['candidate_route_costs']
+            assert len(old_costs) == len(new_costs)
+            if progress_objective:
+                # Logged route costs include the learned, checkpoint-dependent
+                # stage penalty. Only the underlying frozen route costs match.
+                old_penalties = old['candidate_stage_penalties']
+                new_penalties = new['candidate_stage_penalties']
+                assert len(old_penalties) == len(new_penalties) == len(old_costs)
+                old_costs = [c-p for c,p in zip(old_costs,old_penalties)]
+                new_costs = [c-p for c,p in zip(new_costs,new_penalties)]
+            assert all(abs(a-b)<1e-6 for a,b in zip(old_costs,new_costs))
         for index in range(2):
             before = [first[k]['controller_diagnostics']['decisions'][0]['round_proposal_diversity'][index] for k in first]
             after = [current[k]['controller_diagnostics']['decisions'][0]['round_proposal_diversity'][index] for k in first]
             row[str(index)] = dict(mean=mean(after),relative_change=mean(after)/mean(before)-1,
                                   decreased_cases=sum(b<a for a,b in zip(before,after)))
         rows.append(row)
-    return dict(rounds=rows,paired_initial_routes_verified=True,history_empty=True,
-        interpretation='Same reset/goal and per-case seed. Round zero includes recorded proposals; round one mixes an exact incumbent and bounded residual flow proposals. Diversity is not likelihood entropy or a causal attribution.')
+    return dict(rounds=rows,paired_initial_routes_verified=not progress_objective,
+        paired_initial_base_route_costs_verified=True,
+        learned_stage_penalties_may_change=progress_objective,history_empty=True,
+        interpretation='Same reset/goal and per-case seed. For progress-objective TTT, frozen base route costs match after subtracting logged learned stage penalties; total route scores may change. Round zero includes recorded proposals; round one mixes an exact incumbent and bounded residual flow proposals. Diversity is not likelihood entropy or a causal attribution.')
 
 
 def summarize(report):

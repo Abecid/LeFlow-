@@ -1,3 +1,12 @@
+# October12 05:26UTC: progress-objective curve72/72; training continues
+
+The5k and10k fixed104 evaluations both score72, with zero timeouts. Ten-k changes
+six successes and six failures versus5k; pick-place remains0/8 and route drift
+persists. Lower losses/proxy error do not establish better physical success.
+Twenty total saved contact sheets inspected. Source e274fed/all166 hashes and
+owned coordinator/launcher/ranks verified; W&B running, original budget unchanged.
+Read PROGRESS_OBJECTIVE_TTT.md and active ledger. No next candidate or baseline work.
+
 # October12 05:12UTC: first progress-objective evaluation72/104
 
 The5k fixed104 evaluation has72 successes, zero timeouts; all32 failures reach

@@ -156,3 +156,46 @@ known cumulative measured components are100.970333971 GPUh. This is a partial
 snapshot, not a full cluster bill. Mean controller decision latency94.14ms
 (p95 99.90ms) produced no cumulative10-second timeout. The registered run continues
 unchanged through its remaining fixed evaluations; no next candidate is launched.
+
+## Second fixed evaluation: 10k72/104 (run still active)
+
+The10k checkpoint again reaches72/104, with zero timeouts and32 failures all
+reaching200 actions. Relative to5k, six cases become successes and six regress:
+dial-turn rises2/8 to6/8 and plate-slide7/8 to8/8, while assembly falls3/8 to1/8,
+door-open7/8 to6/8, faucet2/8 to1/8 and reach3/8 to2/8. Pick-place remains0/8.
+Against selected retrieval-repair80 there are3 wins/11 regressions; against
+execution-revision80,4/12. The earlier5k checkpoint remains provisionally selected
+under the earliest-checkpoint tie rule. This is still an incomplete run.
+
+All eight pick-place failure tails again contain only reach/direct-goal choices.
+Applied progress-proxy MAE is0.018513 versus raw0.018944 on5521 executed prefixes.
+For pick-place the correction slightly worsens proxy error,0.022039 versus0.021692,
+while success stays zero. Mean selected stage penalty rises0.002557 to0.004108;
+3045/5625 decisions have a positive optimism penalty. Repairs are chosen43.25%
+(down from53.04%), within the0.25 bound. Training action-flow loss falls0.16870
+to0.12019; depth2 teacher clipping falls7.25% to4.05%, without a success gain.
+Initial proposal diversity falls43.20% in round0 and31.09% in round1, an
+observational change rather than a causal failure explanation.
+
+The existing diversity reporter assumed total route costs were frozen. That
+assumption does not apply here: logged costs include learned stage penalties.
+Reporting code now verifies unchanged base costs after subtracting those penalties
+and explicitly permits changing total scores for this method. It still rejects
+changed frozen base costs and retains the legacy strict equality check. Validation
+used two current saved reports, all four retrieval-repair reports and a deliberately
+altered base-cost record. No running source, optimizer or simulator was touched.
+
+All ten10k contact sheets were visually inspected. Assembly00000 moves the ring
+near the post without success; reach00003 approaches the target region and stalls
+nearby in the sparse samples. Both regress from5k. Pick-place00000 still leaves
+the object on the table. These frames support descriptions of the observed motion,
+not a contact-force explanation or outcomes for unexecuted actions.
+
+At2026-10-12T05:25:58.308745+00:00, source e274fed/all166 runtime hashes and ten owned
+coordinator/launcher/rank identities remained verified, W&B running and metrics
+finite. The copied compute snapshot at13420 updates records
+3.075682272 optimization GPUh and1.086330445
+evaluation GPUh; separately measured setup remains0.020431634
+GPUh. Known cumulative measured components total102.776380511 GPUh, still
+partial and not a full cluster bill. Mean decision latency93.54ms, p95 98.01ms;
+no cumulative10-second timeout. Continue the remaining two registered evaluations.

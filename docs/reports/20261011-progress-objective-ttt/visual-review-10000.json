@@ -1,0 +1,82 @@
+{
+  "step": 10000,
+  "all_saved_contact_sheets_visually_inspected": true,
+  "images": [
+    {
+      "file": "contact-sheets-10000/assembly-00000.png",
+      "sha256": "2fc9c9e36e8845083bf58f1eb60190b076d5bf7fa8edbebd11dcf64b730c8752",
+      "id": "validation/assembly/00000",
+      "success": false,
+      "observation": "Ring moves toward the post, but later sampled poses remain near it without registered success by200 actions. This case regresses from success at5k. Force/contact mechanism is not established."
+    },
+    {
+      "file": "contact-sheets-10000/coffee-button-00000.png",
+      "sha256": "e7f696277a995cd1a224a86cd98513b6f278ce8266f9443ed73bf37beb46fa68",
+      "id": "validation/coffee-button/00000",
+      "success": true,
+      "observation": "Gripper approaches the coffee-machine control; record reports success at33 actions."
+    },
+    {
+      "file": "contact-sheets-10000/dial-turn-00000.png",
+      "sha256": "2a30fc7b48fca56e35973bc336166329c63315faae23a6b8a6e71eb099be0ce4",
+      "id": "validation/dial-turn/00000",
+      "success": true,
+      "observation": "Gripper engages the dial region; record reports success at92 actions."
+    },
+    {
+      "file": "contact-sheets-10000/door-close-00000.png",
+      "sha256": "be0caaa17a486179a7522ab1c5ea680cf39711fa5da8048f4e14d4379ce87cb7",
+      "id": "validation/door-close/00000",
+      "success": true,
+      "observation": "Door rotates toward closed goal; record reports success at64 actions."
+    },
+    {
+      "file": "contact-sheets-10000/drawer-close-00004.png",
+      "sha256": "caab5268104b681395a53098cc9ce5998a2324d25f5017093784a5ca5c7fca09",
+      "id": "validation/drawer-close/00004",
+      "success": true,
+      "observation": "Drawer moves inward toward goal; record reports success at65 actions."
+    },
+    {
+      "file": "contact-sheets-10000/faucet-open-00003.png",
+      "sha256": "c6cac42f889f9f468090929d970ba88ae241ea33731fa333173de83fc50597ee",
+      "id": "validation/faucet-open/00003",
+      "success": false,
+      "observation": "Gripper approaches handle region; later sampled poses show little visible change and the record fails at200 actions. Sparse views do not prove contact or slippage."
+    },
+    {
+      "file": "contact-sheets-10000/handle-press-00000.png",
+      "sha256": "2d28ef76a897cfadc753cbd5a21f51670bce69885bf35f2cdf6451c66d63ac1f",
+      "id": "validation/handle-press/00000",
+      "success": true,
+      "observation": "Gripper approaches the handle; record reports success at15 actions."
+    },
+    {
+      "file": "contact-sheets-10000/pick-place-00000.png",
+      "sha256": "8b874e3dac44bba5aeadcb631b922951c17442a3c8bc348b21e91570dd3bca2b",
+      "id": "validation/pick-place/00000",
+      "success": false,
+      "observation": "Object remains on the table in all five sampled frames while the gripper moves toward the goal area. No visible carry; failure at200 actions. This does not establish a physical contact cause."
+    },
+    {
+      "file": "contact-sheets-10000/reach-00003.png",
+      "sha256": "54f26b9c8957e6ac4c85aa7005f6f37e7d49a4b7366d5427e8cd9be52902e87c",
+      "id": "validation/reach/00003",
+      "success": false,
+      "observation": "Gripper approaches the target region, then remains nearby in later samples without registered success at200. This case regresses from success at5k."
+    },
+    {
+      "file": "contact-sheets-10000/reach-00005.png",
+      "sha256": "6625154de0c3354f479736a636a65b691c03c8fb923b7550a5bcdadf3bf0c1ce",
+      "id": "validation/reach/00005",
+      "success": true,
+      "observation": "Gripper approaches the goal region; record reports success at49 actions."
+    }
+  ],
+  "limitations": [
+    "Ten preregistered saved trajectories, not all32 failures.",
+    "Uniformly sampled measured frames; zero model/simulator calls.",
+    "Success labels come from saved registered evaluation records; sparse views do not establish causal contact/force explanations."
+  ],
+  "render_review": "All ten exact final PNGs opened at readable resolution; titles, frame labels, sampled images and goal panels complete."
+}

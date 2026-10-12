@@ -1,0 +1,12 @@
+{
+  "progress_reports": 2,
+  "legacy_reports": 4,
+  "changed_frozen_base_cost_rejected": true,
+  "optimizer_updates": 0,
+  "model_calls": 0,
+  "simulator_calls": 0,
+  "frozen_source_edited": false,
+  "original_failure": "Legacy initial-diversity audit asserted identical total candidate_route_costs across checkpoints; assertion failed.",
+  "resolution": "For progress_objective_ttt only, subtract logged learned stage penalties and verify identical frozen base costs; retain strict total-cost equality for legacy methods.",
+  "script_sha256": "fbb1c5bd1c208961bb5f504cf79617c3bdf7faa638d75c6edcb21ebd522bbe90"
+}

@@ -1,0 +1,35 @@
+{
+  "complete": false,
+  "utc": "2026-10-12T05:25:58.308745+00:00",
+  "units": "aggregate GPU-hours",
+  "prior_artifact": "docs/reports/20261011-shifted-repair-ttt/compute-accounting-final.json",
+  "prior_sha256": "bae379f52059740f7d5efe3c378ec37558880163c92d642272fb2505143e119e",
+  "prior_known_components": 98.59393616107242,
+  "current_optimization_gpu_hours": 3.075682271524436,
+  "current_registered_validation_gpu_hours": 1.0863304445727004,
+  "current_bounded_checks_and_setup": [
+    {
+      "artifact": "docs/reports/20261011-progress-objective-ttt/preflight.json",
+      "sha256": "c7d0822cf50957d336c8acea71653d0af253971a592ddee699f3f3b0ce41813d",
+      "gpu_hours": 0.006077853607324262
+    },
+    {
+      "artifact": "docs/reports/20261011-progress-objective-ttt/ddp-check.json",
+      "sha256": "ac53629c2fbf4ba89db34e8f8d437e21cd9839e51ae268ae57548c08ab2f6d2f",
+      "gpu_hours": 0.009707458284166123
+    },
+    {
+      "artifact": "docs/reports/20261011-progress-objective-ttt/run/retrieval-setup.json",
+      "sha256": "5ac0521961a750688a3379c8b4b8a5726c27ef258857991f5e89dfc09238f0b4",
+      "gpu_hours": 0.004646322151852979
+    }
+  ],
+  "known_cumulative_components": 102.7763805112129,
+  "optimization_cap_gpu_seconds": 28800,
+  "last_update_overrun_gpu_seconds": 0.0,
+  "all_infrastructure_runtime_total_available": false,
+  "limits": [
+    "Advancing snapshot, not final cost or full cluster bill. Health and copied compute are sequential reads, not atomic.",
+    "No-update gates/setup counted separately; per-update retrieval is inside optimization timer. CPU-only feature probe and idle time are not guessed as GPU charges."
+  ]
+}

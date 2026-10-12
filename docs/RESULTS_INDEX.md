@@ -1,3 +1,6 @@
+Current progress-objective curve: **72/72 at5k/10k**, zero timeouts; training continues.
+[Latest interim evidence](PROGRESS_OBJECTIVE_TTT.md#second-fixed-evaluation-10k72104-run-still-active).
+
 Current progress-objective result: **5k72/104**, zero timeouts; training continues.
 [Interim analysis and saved failure evidence](PROGRESS_OBJECTIVE_TTT.md#first-fixed-evaluation-5k72104-run-still-active).
 

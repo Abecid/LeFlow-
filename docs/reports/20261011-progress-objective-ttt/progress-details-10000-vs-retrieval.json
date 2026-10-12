@@ -1,0 +1,943 @@
+{
+  "step": 10000,
+  "overall": {
+    "cases": 104,
+    "successes": 72,
+    "timeouts": 0,
+    "decisions": 5625,
+    "observed_prefixes": 5521,
+    "raw_progress_mae": 0.018944454295204787,
+    "applied_progress_mae": 0.018513223623030102,
+    "optimism_penalized_decisions": 3045,
+    "selected_stage_penalty_mean": 0.004108000573183881,
+    "incumbent_retention_rate": 0.5674666666666667,
+    "failure_tails": [
+      {
+        "id": "validation/assembly/00000",
+        "task": "assembly",
+        "steps": 200,
+        "last20_routes": {
+          "assembly": 18,
+          "direct_goal": 2
+        },
+        "matching_task_routes": 18,
+        "predicted_goal_progress_mean": -0.013868312537670135,
+        "observed_goal_progress_mean": -0.004493804354416697
+      },
+      {
+        "id": "validation/assembly/00001",
+        "task": "assembly",
+        "steps": 200,
+        "last20_routes": {
+          "direct_goal": 15,
+          "assembly": 5
+        },
+        "matching_task_routes": 5,
+        "predicted_goal_progress_mean": 0.0007490396499633789,
+        "observed_goal_progress_mean": 0.007692606825577586
+      },
+      {
+        "id": "validation/assembly/00003",
+        "task": "assembly",
+        "steps": 200,
+        "last20_routes": {
+          "direct_goal": 20
+        },
+        "matching_task_routes": 0,
+        "predicted_goal_progress_mean": 0.001471349596977234,
+        "observed_goal_progress_mean": -0.0021788697493703743
+      },
+      {
+        "id": "validation/assembly/00004",
+        "task": "assembly",
+        "steps": 200,
+        "last20_routes": {
+          "direct_goal": 18,
+          "assembly": 2
+        },
+        "matching_task_routes": 2,
+        "predicted_goal_progress_mean": -0.005093926191329956,
+        "observed_goal_progress_mean": -0.0062447190284729
+      },
+      {
+        "id": "validation/assembly/00005",
+        "task": "assembly",
+        "steps": 200,
+        "last20_routes": {
+          "assembly": 20
+        },
+        "matching_task_routes": 20,
+        "predicted_goal_progress_mean": -0.0040082275867462155,
+        "observed_goal_progress_mean": -0.001038519959700735
+      },
+      {
+        "id": "validation/assembly/00006",
+        "task": "assembly",
+        "steps": 200,
+        "last20_routes": {
+          "direct_goal": 20
+        },
+        "matching_task_routes": 0,
+        "predicted_goal_progress_mean": -0.004544538259506225,
+        "observed_goal_progress_mean": -0.005311398129714162
+      },
+      {
+        "id": "validation/assembly/00007",
+        "task": "assembly",
+        "steps": 200,
+        "last20_routes": {
+          "assembly": 20
+        },
+        "matching_task_routes": 20,
+        "predicted_goal_progress_mean": -0.0005644351243972778,
+        "observed_goal_progress_mean": 0.00010464065953304893
+      },
+      {
+        "id": "validation/dial-turn/00001",
+        "task": "dial-turn",
+        "steps": 200,
+        "last20_routes": {
+          "reach": 11,
+          "direct_goal": 7,
+          "dial-turn": 2
+        },
+        "matching_task_routes": 2,
+        "predicted_goal_progress_mean": 0.01355717033147812,
+        "observed_goal_progress_mean": 0.0050464382297114325
+      },
+      {
+        "id": "validation/dial-turn/00004",
+        "task": "dial-turn",
+        "steps": 200,
+        "last20_routes": {
+          "reach": 20
+        },
+        "matching_task_routes": 0,
+        "predicted_goal_progress_mean": 0.019435106217861174,
+        "observed_goal_progress_mean": -0.0023375247654161954
+      },
+      {
+        "id": "validation/door-open/00000",
+        "task": "door-open",
+        "steps": 200,
+        "last20_routes": {
+          "door-open": 20
+        },
+        "matching_task_routes": 20,
+        "predicted_goal_progress_mean": 0.035977911204099655,
+        "observed_goal_progress_mean": 0.026809616308463246
+      },
+      {
+        "id": "validation/door-open/00001",
+        "task": "door-open",
+        "steps": 200,
+        "last20_routes": {
+          "door-open": 20
+        },
+        "matching_task_routes": 20,
+        "predicted_goal_progress_mean": 0.014522194862365723,
+        "observed_goal_progress_mean": 0.007935332624535812
+      },
+      {
+        "id": "validation/faucet-open/00000",
+        "task": "faucet-open",
+        "steps": 200,
+        "last20_routes": {
+          "direct_goal": 20
+        },
+        "matching_task_routes": 0,
+        "predicted_goal_progress_mean": 0.024997596442699433,
+        "observed_goal_progress_mean": 0.007510095834732056
+      },
+      {
+        "id": "validation/faucet-open/00002",
+        "task": "faucet-open",
+        "steps": 200,
+        "last20_routes": {
+          "direct_goal": 20
+        },
+        "matching_task_routes": 0,
+        "predicted_goal_progress_mean": 0.08132746890187263,
+        "observed_goal_progress_mean": 0.002751213939566361
+      },
+      {
+        "id": "validation/faucet-open/00003",
+        "task": "faucet-open",
+        "steps": 200,
+        "last20_routes": {
+          "direct_goal": 20
+        },
+        "matching_task_routes": 0,
+        "predicted_goal_progress_mean": 0.013005395978689193,
+        "observed_goal_progress_mean": -0.0012412416307549727
+      },
+      {
+        "id": "validation/faucet-open/00004",
+        "task": "faucet-open",
+        "steps": 200,
+        "last20_routes": {
+          "direct_goal": 20
+        },
+        "matching_task_routes": 0,
+        "predicted_goal_progress_mean": 0.06809421256184578,
+        "observed_goal_progress_mean": 0.0055908701921764175
+      },
+      {
+        "id": "validation/faucet-open/00005",
+        "task": "faucet-open",
+        "steps": 200,
+        "last20_routes": {
+          "direct_goal": 20
+        },
+        "matching_task_routes": 0,
+        "predicted_goal_progress_mean": 0.006067247688770294,
+        "observed_goal_progress_mean": -0.0029059711255525287
+      },
+      {
+        "id": "validation/faucet-open/00006",
+        "task": "faucet-open",
+        "steps": 200,
+        "last20_routes": {
+          "direct_goal": 20
+        },
+        "matching_task_routes": 0,
+        "predicted_goal_progress_mean": 0.015116492658853531,
+        "observed_goal_progress_mean": 0.0003596748176373933
+      },
+      {
+        "id": "validation/faucet-open/00007",
+        "task": "faucet-open",
+        "steps": 200,
+        "last20_routes": {
+          "direct_goal": 20
+        },
+        "matching_task_routes": 0,
+        "predicted_goal_progress_mean": 0.02203025743365288,
+        "observed_goal_progress_mean": 0.003126401650278192
+      },
+      {
+        "id": "validation/pick-place/00000",
+        "task": "pick-place",
+        "steps": 200,
+        "last20_routes": {
+          "direct_goal": 20
+        },
+        "matching_task_routes": 0,
+        "predicted_goal_progress_mean": 0.009526911377906799,
+        "observed_goal_progress_mean": -0.0040096546474256015
+      },
+      {
+        "id": "validation/pick-place/00001",
+        "task": "pick-place",
+        "steps": 200,
+        "last20_routes": {
+          "reach": 9,
+          "direct_goal": 11
+        },
+        "matching_task_routes": 0,
+        "predicted_goal_progress_mean": 0.03347286731004715,
+        "observed_goal_progress_mean": 0.011270788155103984
+      },
+      {
+        "id": "validation/pick-place/00002",
+        "task": "pick-place",
+        "steps": 200,
+        "last20_routes": {
+          "reach": 20
+        },
+        "matching_task_routes": 0,
+        "predicted_goal_progress_mean": 0.008931633830070496,
+        "observed_goal_progress_mean": -0.0033891326502749793
+      },
+      {
+        "id": "validation/pick-place/00003",
+        "task": "pick-place",
+        "steps": 200,
+        "last20_routes": {
+          "direct_goal": 20
+        },
+        "matching_task_routes": 0,
+        "predicted_goal_progress_mean": 0.009842458367347717,
+        "observed_goal_progress_mean": -0.008057498226040289
+      },
+      {
+        "id": "validation/pick-place/00004",
+        "task": "pick-place",
+        "steps": 200,
+        "last20_routes": {
+          "reach": 18,
+          "direct_goal": 2
+        },
+        "matching_task_routes": 0,
+        "predicted_goal_progress_mean": 0.0017854243516921998,
+        "observed_goal_progress_mean": -0.002194508125907496
+      },
+      {
+        "id": "validation/pick-place/00005",
+        "task": "pick-place",
+        "steps": 200,
+        "last20_routes": {
+          "reach": 20
+        },
+        "matching_task_routes": 0,
+        "predicted_goal_progress_mean": 0.010528665781021119,
+        "observed_goal_progress_mean": -0.006522398245962043
+      },
+      {
+        "id": "validation/pick-place/00006",
+        "task": "pick-place",
+        "steps": 200,
+        "last20_routes": {
+          "reach": 20
+        },
+        "matching_task_routes": 0,
+        "predicted_goal_progress_mean": 0.0012071162462234497,
+        "observed_goal_progress_mean": -0.003967238099951493
+      },
+      {
+        "id": "validation/pick-place/00007",
+        "task": "pick-place",
+        "steps": 200,
+        "last20_routes": {
+          "reach": 20
+        },
+        "matching_task_routes": 0,
+        "predicted_goal_progress_mean": 0.00495956540107727,
+        "observed_goal_progress_mean": -0.005438901876148425
+      },
+      {
+        "id": "validation/reach/00000",
+        "task": "reach",
+        "steps": 200,
+        "last20_routes": {
+          "direct_goal": 20
+        },
+        "matching_task_routes": 0,
+        "predicted_goal_progress_mean": -0.003833146393299103,
+        "observed_goal_progress_mean": -0.011674197096573679
+      },
+      {
+        "id": "validation/reach/00001",
+        "task": "reach",
+        "steps": 200,
+        "last20_routes": {
+          "direct_goal": 20
+        },
+        "matching_task_routes": 0,
+        "predicted_goal_progress_mean": 0.0036824777722358703,
+        "observed_goal_progress_mean": -0.003941222241050319
+      },
+      {
+        "id": "validation/reach/00003",
+        "task": "reach",
+        "steps": 200,
+        "last20_routes": {
+          "direct_goal": 20
+        },
+        "matching_task_routes": 0,
+        "predicted_goal_progress_mean": 0.00022994279861450196,
+        "observed_goal_progress_mean": 0.003111864391126131
+      },
+      {
+        "id": "validation/reach/00004",
+        "task": "reach",
+        "steps": 200,
+        "last20_routes": {
+          "direct_goal": 20
+        },
+        "matching_task_routes": 0,
+        "predicted_goal_progress_mean": 0.0020962061360478403,
+        "observed_goal_progress_mean": -0.0005442345220791666
+      },
+      {
+        "id": "validation/reach/00006",
+        "task": "reach",
+        "steps": 200,
+        "last20_routes": {
+          "direct_goal": 20
+        },
+        "matching_task_routes": 0,
+        "predicted_goal_progress_mean": 0.005650269985198975,
+        "observed_goal_progress_mean": -0.004490196704864502
+      },
+      {
+        "id": "validation/reach/00007",
+        "task": "reach",
+        "steps": 200,
+        "last20_routes": {
+          "direct_goal": 20
+        },
+        "matching_task_routes": 0,
+        "predicted_goal_progress_mean": -0.0016417145729064942,
+        "observed_goal_progress_mean": -0.0013097524642944336
+      }
+    ]
+  },
+  "per_task": {
+    "assembly": {
+      "cases": 8,
+      "successes": 1,
+      "timeouts": 0,
+      "decisions": 748,
+      "observed_prefixes": 740,
+      "raw_progress_mae": 0.01372974310573694,
+      "applied_progress_mae": 0.013713462303201448,
+      "optimism_penalized_decisions": 370,
+      "selected_stage_penalty_mean": 0.007483894927794057,
+      "incumbent_retention_rate": 0.5454545454545454,
+      "failure_tails": [
+        {
+          "id": "validation/assembly/00000",
+          "task": "assembly",
+          "steps": 200,
+          "last20_routes": {
+            "assembly": 18,
+            "direct_goal": 2
+          },
+          "matching_task_routes": 18,
+          "predicted_goal_progress_mean": -0.013868312537670135,
+          "observed_goal_progress_mean": -0.004493804354416697
+        },
+        {
+          "id": "validation/assembly/00001",
+          "task": "assembly",
+          "steps": 200,
+          "last20_routes": {
+            "direct_goal": 15,
+            "assembly": 5
+          },
+          "matching_task_routes": 5,
+          "predicted_goal_progress_mean": 0.0007490396499633789,
+          "observed_goal_progress_mean": 0.007692606825577586
+        },
+        {
+          "id": "validation/assembly/00003",
+          "task": "assembly",
+          "steps": 200,
+          "last20_routes": {
+            "direct_goal": 20
+          },
+          "matching_task_routes": 0,
+          "predicted_goal_progress_mean": 0.001471349596977234,
+          "observed_goal_progress_mean": -0.0021788697493703743
+        },
+        {
+          "id": "validation/assembly/00004",
+          "task": "assembly",
+          "steps": 200,
+          "last20_routes": {
+            "direct_goal": 18,
+            "assembly": 2
+          },
+          "matching_task_routes": 2,
+          "predicted_goal_progress_mean": -0.005093926191329956,
+          "observed_goal_progress_mean": -0.0062447190284729
+        },
+        {
+          "id": "validation/assembly/00005",
+          "task": "assembly",
+          "steps": 200,
+          "last20_routes": {
+            "assembly": 20
+          },
+          "matching_task_routes": 20,
+          "predicted_goal_progress_mean": -0.0040082275867462155,
+          "observed_goal_progress_mean": -0.001038519959700735
+        },
+        {
+          "id": "validation/assembly/00006",
+          "task": "assembly",
+          "steps": 200,
+          "last20_routes": {
+            "direct_goal": 20
+          },
+          "matching_task_routes": 0,
+          "predicted_goal_progress_mean": -0.004544538259506225,
+          "observed_goal_progress_mean": -0.005311398129714162
+        },
+        {
+          "id": "validation/assembly/00007",
+          "task": "assembly",
+          "steps": 200,
+          "last20_routes": {
+            "assembly": 20
+          },
+          "matching_task_routes": 20,
+          "predicted_goal_progress_mean": -0.0005644351243972778,
+          "observed_goal_progress_mean": 0.00010464065953304893
+        }
+      ]
+    },
+    "button-press-topdown": {
+      "cases": 8,
+      "successes": 8,
+      "timeouts": 0,
+      "decisions": 276,
+      "observed_prefixes": 268,
+      "raw_progress_mae": 0.018226666014585922,
+      "applied_progress_mae": 0.019539674828905194,
+      "optimism_penalized_decisions": 101,
+      "selected_stage_penalty_mean": 0.0004091916352825902,
+      "incumbent_retention_rate": 0.4891304347826087,
+      "failure_tails": []
+    },
+    "coffee-button": {
+      "cases": 8,
+      "successes": 8,
+      "timeouts": 0,
+      "decisions": 138,
+      "observed_prefixes": 130,
+      "raw_progress_mae": 0.01740910863647094,
+      "applied_progress_mae": 0.018170527519228367,
+      "optimism_penalized_decisions": 95,
+      "selected_stage_penalty_mean": 0.0006164942148010912,
+      "incumbent_retention_rate": 0.572463768115942,
+      "failure_tails": []
+    },
+    "dial-turn": {
+      "cases": 8,
+      "successes": 6,
+      "timeouts": 0,
+      "decisions": 508,
+      "observed_prefixes": 500,
+      "raw_progress_mae": 0.017877583429217338,
+      "applied_progress_mae": 0.01774137704120949,
+      "optimism_penalized_decisions": 328,
+      "selected_stage_penalty_mean": 0.0016686394210821852,
+      "incumbent_retention_rate": 0.6240157480314961,
+      "failure_tails": [
+        {
+          "id": "validation/dial-turn/00001",
+          "task": "dial-turn",
+          "steps": 200,
+          "last20_routes": {
+            "reach": 11,
+            "direct_goal": 7,
+            "dial-turn": 2
+          },
+          "matching_task_routes": 2,
+          "predicted_goal_progress_mean": 0.01355717033147812,
+          "observed_goal_progress_mean": 0.0050464382297114325
+        },
+        {
+          "id": "validation/dial-turn/00004",
+          "task": "dial-turn",
+          "steps": 200,
+          "last20_routes": {
+            "reach": 20
+          },
+          "matching_task_routes": 0,
+          "predicted_goal_progress_mean": 0.019435106217861174,
+          "observed_goal_progress_mean": -0.0023375247654161954
+        }
+      ]
+    },
+    "door-close": {
+      "cases": 8,
+      "successes": 8,
+      "timeouts": 0,
+      "decisions": 271,
+      "observed_prefixes": 263,
+      "raw_progress_mae": 0.02726190744017467,
+      "applied_progress_mae": 0.028022832945856786,
+      "optimism_penalized_decisions": 121,
+      "selected_stage_penalty_mean": 0.0007148871544628606,
+      "incumbent_retention_rate": 0.5830258302583026,
+      "failure_tails": []
+    },
+    "door-open": {
+      "cases": 8,
+      "successes": 6,
+      "timeouts": 0,
+      "decisions": 529,
+      "observed_prefixes": 521,
+      "raw_progress_mae": 0.018546733797854976,
+      "applied_progress_mae": 0.018117877376317662,
+      "optimism_penalized_decisions": 253,
+      "selected_stage_penalty_mean": 0.0014257552961010115,
+      "incumbent_retention_rate": 0.5482041587901701,
+      "failure_tails": [
+        {
+          "id": "validation/door-open/00000",
+          "task": "door-open",
+          "steps": 200,
+          "last20_routes": {
+            "door-open": 20
+          },
+          "matching_task_routes": 20,
+          "predicted_goal_progress_mean": 0.035977911204099655,
+          "observed_goal_progress_mean": 0.026809616308463246
+        },
+        {
+          "id": "validation/door-open/00001",
+          "task": "door-open",
+          "steps": 200,
+          "last20_routes": {
+            "door-open": 20
+          },
+          "matching_task_routes": 20,
+          "predicted_goal_progress_mean": 0.014522194862365723,
+          "observed_goal_progress_mean": 0.007935332624535812
+        }
+      ]
+    },
+    "drawer-close": {
+      "cases": 8,
+      "successes": 8,
+      "timeouts": 0,
+      "decisions": 275,
+      "observed_prefixes": 267,
+      "raw_progress_mae": 0.014332790723007716,
+      "applied_progress_mae": 0.01471045633705162,
+      "optimism_penalized_decisions": 51,
+      "selected_stage_penalty_mean": 0.0002776074333616469,
+      "incumbent_retention_rate": 0.5272727272727272,
+      "failure_tails": []
+    },
+    "drawer-open": {
+      "cases": 8,
+      "successes": 8,
+      "timeouts": 0,
+      "decisions": 340,
+      "observed_prefixes": 332,
+      "raw_progress_mae": 0.00650693978889879,
+      "applied_progress_mae": 0.006716239182906175,
+      "optimism_penalized_decisions": 88,
+      "selected_stage_penalty_mean": 8.745285479910628e-05,
+      "incumbent_retention_rate": 0.4676470588235294,
+      "failure_tails": []
+    },
+    "faucet-open": {
+      "cases": 8,
+      "successes": 1,
+      "timeouts": 0,
+      "decisions": 770,
+      "observed_prefixes": 762,
+      "raw_progress_mae": 0.030053849725585596,
+      "applied_progress_mae": 0.02460690801181379,
+      "optimism_penalized_decisions": 542,
+      "selected_stage_penalty_mean": 0.00826269530014693,
+      "incumbent_retention_rate": 0.5701298701298702,
+      "failure_tails": [
+        {
+          "id": "validation/faucet-open/00000",
+          "task": "faucet-open",
+          "steps": 200,
+          "last20_routes": {
+            "direct_goal": 20
+          },
+          "matching_task_routes": 0,
+          "predicted_goal_progress_mean": 0.024997596442699433,
+          "observed_goal_progress_mean": 0.007510095834732056
+        },
+        {
+          "id": "validation/faucet-open/00002",
+          "task": "faucet-open",
+          "steps": 200,
+          "last20_routes": {
+            "direct_goal": 20
+          },
+          "matching_task_routes": 0,
+          "predicted_goal_progress_mean": 0.08132746890187263,
+          "observed_goal_progress_mean": 0.002751213939566361
+        },
+        {
+          "id": "validation/faucet-open/00003",
+          "task": "faucet-open",
+          "steps": 200,
+          "last20_routes": {
+            "direct_goal": 20
+          },
+          "matching_task_routes": 0,
+          "predicted_goal_progress_mean": 0.013005395978689193,
+          "observed_goal_progress_mean": -0.0012412416307549727
+        },
+        {
+          "id": "validation/faucet-open/00004",
+          "task": "faucet-open",
+          "steps": 200,
+          "last20_routes": {
+            "direct_goal": 20
+          },
+          "matching_task_routes": 0,
+          "predicted_goal_progress_mean": 0.06809421256184578,
+          "observed_goal_progress_mean": 0.0055908701921764175
+        },
+        {
+          "id": "validation/faucet-open/00005",
+          "task": "faucet-open",
+          "steps": 200,
+          "last20_routes": {
+            "direct_goal": 20
+          },
+          "matching_task_routes": 0,
+          "predicted_goal_progress_mean": 0.006067247688770294,
+          "observed_goal_progress_mean": -0.0029059711255525287
+        },
+        {
+          "id": "validation/faucet-open/00006",
+          "task": "faucet-open",
+          "steps": 200,
+          "last20_routes": {
+            "direct_goal": 20
+          },
+          "matching_task_routes": 0,
+          "predicted_goal_progress_mean": 0.015116492658853531,
+          "observed_goal_progress_mean": 0.0003596748176373933
+        },
+        {
+          "id": "validation/faucet-open/00007",
+          "task": "faucet-open",
+          "steps": 200,
+          "last20_routes": {
+            "direct_goal": 20
+          },
+          "matching_task_routes": 0,
+          "predicted_goal_progress_mean": 0.02203025743365288,
+          "observed_goal_progress_mean": 0.003126401650278192
+        }
+      ]
+    },
+    "handle-press": {
+      "cases": 8,
+      "successes": 8,
+      "timeouts": 0,
+      "decisions": 114,
+      "observed_prefixes": 106,
+      "raw_progress_mae": 0.014658865975743195,
+      "applied_progress_mae": 0.016223751509316126,
+      "optimism_penalized_decisions": 99,
+      "selected_stage_penalty_mean": 0.0006201353387535946,
+      "incumbent_retention_rate": 0.45614035087719296,
+      "failure_tails": []
+    },
+    "pick-place": {
+      "cases": 8,
+      "successes": 0,
+      "timeouts": 0,
+      "decisions": 800,
+      "observed_prefixes": 792,
+      "raw_progress_mae": 0.021691674578257582,
+      "applied_progress_mae": 0.02203869147956309,
+      "optimism_penalized_decisions": 508,
+      "selected_stage_penalty_mean": 0.004774336925891589,
+      "incumbent_retention_rate": 0.56375,
+      "failure_tails": [
+        {
+          "id": "validation/pick-place/00000",
+          "task": "pick-place",
+          "steps": 200,
+          "last20_routes": {
+            "direct_goal": 20
+          },
+          "matching_task_routes": 0,
+          "predicted_goal_progress_mean": 0.009526911377906799,
+          "observed_goal_progress_mean": -0.0040096546474256015
+        },
+        {
+          "id": "validation/pick-place/00001",
+          "task": "pick-place",
+          "steps": 200,
+          "last20_routes": {
+            "reach": 9,
+            "direct_goal": 11
+          },
+          "matching_task_routes": 0,
+          "predicted_goal_progress_mean": 0.03347286731004715,
+          "observed_goal_progress_mean": 0.011270788155103984
+        },
+        {
+          "id": "validation/pick-place/00002",
+          "task": "pick-place",
+          "steps": 200,
+          "last20_routes": {
+            "reach": 20
+          },
+          "matching_task_routes": 0,
+          "predicted_goal_progress_mean": 0.008931633830070496,
+          "observed_goal_progress_mean": -0.0033891326502749793
+        },
+        {
+          "id": "validation/pick-place/00003",
+          "task": "pick-place",
+          "steps": 200,
+          "last20_routes": {
+            "direct_goal": 20
+          },
+          "matching_task_routes": 0,
+          "predicted_goal_progress_mean": 0.009842458367347717,
+          "observed_goal_progress_mean": -0.008057498226040289
+        },
+        {
+          "id": "validation/pick-place/00004",
+          "task": "pick-place",
+          "steps": 200,
+          "last20_routes": {
+            "reach": 18,
+            "direct_goal": 2
+          },
+          "matching_task_routes": 0,
+          "predicted_goal_progress_mean": 0.0017854243516921998,
+          "observed_goal_progress_mean": -0.002194508125907496
+        },
+        {
+          "id": "validation/pick-place/00005",
+          "task": "pick-place",
+          "steps": 200,
+          "last20_routes": {
+            "reach": 20
+          },
+          "matching_task_routes": 0,
+          "predicted_goal_progress_mean": 0.010528665781021119,
+          "observed_goal_progress_mean": -0.006522398245962043
+        },
+        {
+          "id": "validation/pick-place/00006",
+          "task": "pick-place",
+          "steps": 200,
+          "last20_routes": {
+            "reach": 20
+          },
+          "matching_task_routes": 0,
+          "predicted_goal_progress_mean": 0.0012071162462234497,
+          "observed_goal_progress_mean": -0.003967238099951493
+        },
+        {
+          "id": "validation/pick-place/00007",
+          "task": "pick-place",
+          "steps": 200,
+          "last20_routes": {
+            "reach": 20
+          },
+          "matching_task_routes": 0,
+          "predicted_goal_progress_mean": 0.00495956540107727,
+          "observed_goal_progress_mean": -0.005438901876148425
+        }
+      ]
+    },
+    "plate-slide": {
+      "cases": 8,
+      "successes": 8,
+      "timeouts": 0,
+      "decisions": 205,
+      "observed_prefixes": 197,
+      "raw_progress_mae": 0.005380510376189566,
+      "applied_progress_mae": 0.00577171507513394,
+      "optimism_penalized_decisions": 103,
+      "selected_stage_penalty_mean": 3.542720613972406e-05,
+      "incumbent_retention_rate": 0.6,
+      "failure_tails": []
+    },
+    "reach": {
+      "cases": 8,
+      "successes": 2,
+      "timeouts": 0,
+      "decisions": 651,
+      "observed_prefixes": 643,
+      "raw_progress_mae": 0.01995500893235021,
+      "applied_progress_mae": 0.021096889659385165,
+      "optimism_penalized_decisions": 386,
+      "selected_stage_penalty_mean": 0.007911105969697543,
+      "incumbent_retention_rate": 0.6697388632872504,
+      "failure_tails": [
+        {
+          "id": "validation/reach/00000",
+          "task": "reach",
+          "steps": 200,
+          "last20_routes": {
+            "direct_goal": 20
+          },
+          "matching_task_routes": 0,
+          "predicted_goal_progress_mean": -0.003833146393299103,
+          "observed_goal_progress_mean": -0.011674197096573679
+        },
+        {
+          "id": "validation/reach/00001",
+          "task": "reach",
+          "steps": 200,
+          "last20_routes": {
+            "direct_goal": 20
+          },
+          "matching_task_routes": 0,
+          "predicted_goal_progress_mean": 0.0036824777722358703,
+          "observed_goal_progress_mean": -0.003941222241050319
+        },
+        {
+          "id": "validation/reach/00003",
+          "task": "reach",
+          "steps": 200,
+          "last20_routes": {
+            "direct_goal": 20
+          },
+          "matching_task_routes": 0,
+          "predicted_goal_progress_mean": 0.00022994279861450196,
+          "observed_goal_progress_mean": 0.003111864391126131
+        },
+        {
+          "id": "validation/reach/00004",
+          "task": "reach",
+          "steps": 200,
+          "last20_routes": {
+            "direct_goal": 20
+          },
+          "matching_task_routes": 0,
+          "predicted_goal_progress_mean": 0.0020962061360478403,
+          "observed_goal_progress_mean": -0.0005442345220791666
+        },
+        {
+          "id": "validation/reach/00006",
+          "task": "reach",
+          "steps": 200,
+          "last20_routes": {
+            "direct_goal": 20
+          },
+          "matching_task_routes": 0,
+          "predicted_goal_progress_mean": 0.005650269985198975,
+          "observed_goal_progress_mean": -0.004490196704864502
+        },
+        {
+          "id": "validation/reach/00007",
+          "task": "reach",
+          "steps": 200,
+          "last20_routes": {
+            "direct_goal": 20
+          },
+          "matching_task_routes": 0,
+          "predicted_goal_progress_mean": -0.0016417145729064942,
+          "observed_goal_progress_mean": -0.0013097524642944336
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "Readout progress is a weak learned expert-time proxy, not physical completion.",
+    "Only executed prefixes have observed outcomes; rejected candidates have no physical labels.",
+    "Route task identities are diagnostic, never policy inputs or causal failure labels."
+  ],
+  "model_calls": 0,
+  "simulator_calls": 0,
+  "final_tests_read": false,
+  "paired_reference": {
+    "successes": 80,
+    "wins": [
+      "validation/assembly/00002",
+      "validation/dial-turn/00007",
+      "validation/faucet-open/00001",
+      "validation/reach/00002"
+    ],
+    "regressions": [
+      "validation/assembly/00000",
+      "validation/assembly/00001",
+      "validation/assembly/00005",
+      "validation/assembly/00006",
+      "validation/dial-turn/00001",
+      "validation/dial-turn/00004",
+      "validation/door-open/00000",
+      "validation/door-open/00001",
+      "validation/faucet-open/00000",
+      "validation/faucet-open/00002",
+      "validation/faucet-open/00007",
+      "validation/pick-place/00004"
+    ]
+  }
+}
