@@ -1,26 +1,30 @@
-# Verified active nonlinear memory on retrieval-repair80
+# Verified active nonlinear memory on retrieval-repair 80
 
-One authorized fresh nonlinear_repair_ttt run is training on all eight A800s.
-At 2026-10-12T09:52:04.361893+00:00, step 187 is verified with finite logs;
-W&B mxujto8j is running. Frozen source d0cae3007c7d678cdc5ddb68ce731e8a2db3005d, all 200 runtime files,
-45 tests and both eight-rank training depths pass. Final preflight87.64ms.
-Coordinator 1643283, launcher 1645550; exact owned
-PID/start identities are in the launch-verification artifact. Read
-[method and live run](NONLINEAR_REPAIR_TTT.md) and docs/results-ledger.json.
+One fresh nonlinear_repair_ttt run is training on all eight A800 GPUs.
+At 2026-10-12 09:56:11 UTC, step 2,458 is verified with finite logs and W&B
+mxujto8j reporting step 2,301. All 200 frozen runtime hashes and all 44 recorded
+PID/start identities still match. Source is d0cae3007c7d678cdc5ddb68ce731e8a2db3005d.
+All 45 tests and both eight-rank training depths pass; final preflight is 87.64 ms.
+Coordinator 1643283, launcher 1645550. Read docs/NONLINEAR_REPAIR_TTT.md and the
+active ledger; exact evidence is in docs/reports/20261012-nonlinear-repair-ttt.
 
-Preserve this one run, source and same6222/seed3072/global64/20k-or28800GPU-seconds/
-four104/10s200. No new development score yet. Publish every scheduled evaluation,
-paired failures and qualitative evidence. No baseline retraining, extra seeds,
-scaling sweeps, sealed tests or speculative next candidate. Current source remains
-frozen; reporting helpers added later run from the reporting checkout only.
+Preserve this single run: same 6,222 episodes, seed 3072, global batch 64,
+20,000 updates or 28,800 optimizer GPU-seconds; four fixed 104-case evaluations,
+200 actions and 10 cumulative controller seconds. No new development score yet.
+Publish all evaluations, paired failures and qualitative evidence. No baseline
+retraining, extra seeds, scaling sweeps, sealed tests or speculative next run.
+The execution checkout remains frozen; later reporting helpers run from this
+reporting checkout only. The existing monitor now follows this registered run.
 
-# October12 authorization: nonlinear memory on retrieval-repair80
+Earlier authorization and status snapshots follow; the current entry controls.
+
+# Historical prelaunch authorization: nonlinear memory on retrieval-repair 80
 
 The user explicitly approved ONE next fresh nonlinear_repair_ttt run, superseding
 all historical review holds below for this candidate. Read docs/NONLINEAR_REPAIR_TTT.md
 and the active ledger. Source d0cae3007c7d678cdc5ddb68ce731e8a2db3005d is frozen,
 200 runtime files verified on the server. Six focused tests,85.7ms TRAIN-only
-preflight and eight-rank gradient checks passed. No optimizer update yet.
+preflight and eight-rank gradient checks passed. This was before optimization.
 The active user chat is handling launch; do not duplicate a coordinator.
 
 The method replaces retrieval-repair80's ridge readout with three nonlinear fast

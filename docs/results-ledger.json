@@ -41,7 +41,8 @@
         "docs/reports/20261012-nonlinear-repair-ttt/staging-ddp-check.json": "6f40b11e23f36c0bd1c02e2d8f755c7c23daaa4a90b4a12f2fdb167e7f2da244",
         "docs/reports/20261012-nonlinear-repair-ttt/staging-preflight.json": "60773749beb0c9ea4f0085014775713f7f5b716b1b307dfef1fcf2db416d40fb",
         "docs/reports/20261012-nonlinear-repair-ttt/status-at-launch.json": "3c8a965134a7397b8e01de2a7a733826222bb46a5da594089f62778adc23a87e",
-        "docs/reports/20261012-nonlinear-repair-ttt/tests.log": "0fe2c39702dd6507f4478da5a6602e8e685091ae1f3b8f308ccfd27bf4532fc6"
+        "docs/reports/20261012-nonlinear-repair-ttt/tests.log": "0fe2c39702dd6507f4478da5a6602e8e685091ae1f3b8f308ccfd27bf4532fc6",
+        "docs/reports/20261012-nonlinear-repair-ttt/live-status-2458.json": "e9870176d9c3e8e20826b10238dd4c84184698634a54f16e02cd5cb9b6d088c7"
       },
       "wandb_url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/mxujto8j",
       "launcher_pid": 1643283,
@@ -56,9 +57,10 @@
         1645631,
         1645632
       ],
-      "verified_utc": "2026-10-12T09:52:04.361893+00:00",
-      "verified_step": 187,
-      "training_metric_artifact": "docs/reports/20261012-nonlinear-repair-ttt/run/metrics-at-launch.jsonl.gz"
+      "verified_utc": "2026-10-12T09:56:11.936252+00:00",
+      "verified_step": 2458,
+      "training_metric_artifact": "docs/reports/20261012-nonlinear-repair-ttt/run/metrics-at-launch.jsonl.gz",
+      "latest_status_artifact": "docs/reports/20261012-nonlinear-repair-ttt/live-status-2458.json"
     }
   ],
   "completed_runs": [

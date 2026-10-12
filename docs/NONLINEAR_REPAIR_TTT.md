@@ -4,10 +4,16 @@ October 12, 2026. The user explicitly authorized this next comparison on the
 80/104 retrieval-repair formulation. One fresh `nonlinear_repair_ttt` candidate
 is implemented and verified. Frozen execution source is
 `d0cae3007c7d678cdc5ddb68ce731e8a2db3005d` (200 checked files);
-Training is verified on eight A800s: coordinator1643283, launcher1645550,
+Training is verified on eight A800 GPUs: coordinator 1643283, launcher 1645550,
 W&B [mxujto8j](https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/mxujto8j).
-At09:52:04UTC the run reached187 updates, with finite metrics and all200 source
-hashes matching. No development evaluation has completed yet. No claim of improved success exists before evaluation.
+At 09:56:11 UTC the run reached **2,458 updates**, with finite metrics, all 200
+source hashes and all 44 original process/start identities matching. W&B had
+received step 2,301. No development evaluation has completed yet.
+
+At the measured average of about 0.108 seconds/update, remaining optimization
+is approximately 32 minutes; the four evaluations add roughly 16 minutes if
+the previous run's evaluation timings transfer. This is an estimate, not a
+budget extension. First success metrics arrive after the 5k evaluation.
 
 ## What changes
 
@@ -97,7 +103,7 @@ Six focused CPU tests pass: exact inner gradients and outer derivatives against
 autograd; empty/nonfinite padding and episode isolation; outer gradients into
 all fast matrices; future-label exclusion; effects on action generation, repair
 and selection; observed-prefix bookkeeping, reset and unchanged controller
-budget. The TRAIN-only preflight passed at85.70ms (max97.00ms) per full decision and9.50GiB peak GPU memory. Eight-rank no-update checks passed both planning depths with exact synchronized finite gradients and unchanged parameters. The exact frozen checkout repeats its registered safety checks before optimization; all preparation compute is logged separately.
+budget. The TRAIN-only preflight passed at 85.70 ms (max 97.00 ms) per full decision and 9.50 GiB peak GPU memory. Eight-rank no-update checks passed both planning depths with exact synchronized finite gradients and unchanged parameters. The exact frozen checkout repeats its registered safety checks before optimization; all preparation compute is logged separately.
 
 Log support error before/after, memory parameter/readout changes, learned inner
 step size, recorded next-outcome errors, prior/adapted prefix corrections,
@@ -112,16 +118,16 @@ Cache: `/tmp/mtxu-nonlinear-repair-ttt-20261012`.
 
 ## Verified launch and publication
 
-All45 frozen-source tests and both eight-rank no-update gradient checks passed.
-The final full-controller preflight averages87.64ms. All44 owned process/start
-identities and source200 hashes are captured in the launch report. Source
+All 45 frozen-source tests and both eight-rank no-update gradient checks passed.
+The final full-controller preflight averages 87.64 ms. All 44 owned process/start
+identities and source 200 hashes are captured in the launch report. Source
 installation briefly lacked its root tree object; exact-tree recovery and a
 clean full hash check completed before dispatch. The earlier TRAIN preflight
 configuration mismatch and its resolution are also recorded; neither performed
 an optimizer update. Known preparation components and omissions are in
 `reports/20261012-nonlinear-repair-ttt/compute-accounting-launch.json`.
 
-The preceding Bayesian result71/76/77/77 was fully published and remotely verified
+The preceding Bayesian result 71/76/77/77 was fully published and remotely verified
 at ee1db8c before this fresh candidate was dispatched. Analysis-only updates to
 `audit_repair_flow_ttt_run.py` and `repair_flow_ttt_details.py` were added after
 source freeze. Use the reporting checkout for audits, preserving execution source.
