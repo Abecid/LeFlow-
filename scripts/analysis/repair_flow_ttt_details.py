@@ -58,6 +58,29 @@ def initial_diversity(reports):
         interpretation='Same reset/goal and per-case seed. For progress-objective TTT, frozen base route costs match after subtracting logged learned stage penalties; total route scores may change. Round zero includes recorded proposals; round one mixes an exact incumbent and bounded residual flow proposals. Diversity is not likelihood entropy or a causal attribution.')
 
 
+def nonlinear_memory_summary(decisions):
+    if not decisions or 'memory_inner_steps' not in decisions[0]:
+        return {}
+    supported = [d for d in decisions if d['fast_support_steps'] > 0]
+    groups = {}
+    for count in range(5):
+        subset = [d for d in decisions if d['fast_support_steps'] == count]
+        observed = [d for d in subset if 'actual_prefix_target_progress' in d]
+        groups[str(count)] = dict(decisions=len(subset), observed=len(observed),
+            support_before=average(d['memory_support_before'] for d in subset),
+            support_after=average(d['memory_support_after'] for d in subset),
+            raw_next_prefix_mae=average(abs(d['predicted_prefix_target_progress']-d['actual_prefix_target_progress']) for d in observed),
+            adapted_next_prefix_mae=average(abs(d['corrected_prefix_target_progress']-d['actual_prefix_target_progress']) for d in observed))
+    return dict(nonlinear_memory=dict(
+        supported_decisions=len(supported),
+        support_fit_improves_fraction=average(d['memory_support_after']<d['memory_support_before'] for d in supported),
+        mean_parameter_delta_norm=average(d['memory_parameter_delta_norm'] for d in supported),
+        mean_inner_learning_rate=average(d['memory_inner_learning_rate'] for d in decisions),
+        inner_depths=sorted(set(d['memory_inner_steps'] for d in decisions)),
+        by_observed_support_count=groups,
+        interpretation='Observed selected actions only; no counterfactual outcomes. Support fit and next-prefix calibration do not establish causal task-success gains.'))
+
+
 def summarize(report):
     records = report['records']
     world_calls = 280 if report.get('method')=='bayesian_repair_ttt' else 320
@@ -118,7 +141,7 @@ def summarize(report):
         surrogate_gradient_evaluations=sum(d['surrogate_gradient_evaluations'] for d in decisions),
         optimistic_stall_failures=sum(t['predicted'] is not None and t['predicted']>0 and t['actual']<=0 for t in tails),
         corrected_optimistic_stall_failures=sum(t['corrected'] is not None and t['corrected']>0 and t['actual']<=0 for t in tails),
-        failure_tails=tails)
+        failure_tails=tails, **nonlinear_memory_summary(decisions))
 
 
 def main(args):
