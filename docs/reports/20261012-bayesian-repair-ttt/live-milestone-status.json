@@ -1,0 +1,14 @@
+{
+  "utc": "2026-10-12T08:45:04.957046+00:00",
+  "method": "bayesian_repair_ttt",
+  "step": 5000,
+  "optimization_gpu_hours": 1.027974767362078,
+  "optimization_gpu_seconds": 3700.709162503481,
+  "global_batch": 64,
+  "gpu_count": 8,
+  "last_update_overrun_gpu_seconds": 0.0,
+  "validation_steps": [],
+  "completed_evaluation_files": [],
+  "failure": null,
+  "meaning": "First milestone reached; first registered evaluation has no published result yet."
+}

@@ -44,7 +44,9 @@
         "docs/reports/20261012-bayesian-repair-ttt/ddp-check.json": "cabf706c6b837112a5404b6832cac0f2d44d4c659fdd3ec77c350bbbcc0faac8",
         "docs/reports/20261012-bayesian-repair-ttt/launch-verification.json": "3e786f5131852e3312370d9105ed08752f73ba4c7ce205952ec411375a78e055",
         "docs/reports/20261012-bayesian-repair-ttt/launcher.json": "35061d506c5fd741627723bf8815576dcbded0cbd1595349ac86422fc2f0af11",
+        "docs/reports/20261012-bayesian-repair-ttt/live-milestone-status.json": "9ba9d192e19244d766a035a5bedddce0aff7287b2fa711b7b1443bdd2dc7e88f",
         "docs/reports/20261012-bayesian-repair-ttt/preflight.json": "9a30f3a9244cb283a21f45c5d3c88864417f90a736bd12ef6df2b798b80670a0",
+        "docs/reports/20261012-bayesian-repair-ttt/publication-verification.json": "33437c2da03f7548da57a64b782a0549e0367e41297fea4a7a9000467fdae940",
         "docs/reports/20261012-bayesian-repair-ttt/reuse.json": "1af5981886e12e6ecfba13ffd97a8bfbeeadeebd0ea6e090e94eb59d8e7f64b9",
         "docs/reports/20261012-bayesian-repair-ttt/route-bank.json": "5b6ee536d5a111fb6c2bdb0f4afc15a01e19f33d55cd5f58932a3e845171a273",
         "docs/reports/20261012-bayesian-repair-ttt/run/compute-usage-at-launch.json": "8f9f7b4e05030710093815837c765c481b1902f4c04aa1cff4121891a7c7375a",
@@ -53,7 +55,9 @@
         "docs/reports/20261012-bayesian-repair-ttt/runtime-files.json": "e8bd2376e7b39e2b528798950c9031f4c9bbb75356bf1a1a1c1d7bedbf2df781",
         "docs/reports/20261012-bayesian-repair-ttt/status-at-launch.json": "cf7e9ada26f84570ef5a9bed35fc5e45a44d5c6780938cd9d6f3fdee64085c1d",
         "docs/reports/20261012-bayesian-repair-ttt/tests.log": "8c1e75fc188a2a97c1b9a2f80b728cf4cf512f0986e61ff4b8e04732cfc17f86"
-      }
+      },
+      "latest_observed_step": 5000,
+      "latest_status_utc": "2026-10-12T08:45:04.957046+00:00"
     }
   ],
   "completed_runs": [

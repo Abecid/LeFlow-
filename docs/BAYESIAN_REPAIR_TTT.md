@@ -1,3 +1,13 @@
+# First milestone reached; task-success result pending
+
+At08:45:04UTC the run reached5,000 updates, with1.027975 optimizationGPUh,
+no budget overrun or failure. The first registered evaluation has not yet
+published its104-case result. Source/launch evidence was published at3082350;
+399 ledger artifact blobs and13 distinct report files matched the live GitHub
+commit at08:44:35UTC. [Readback](reports/20261012-bayesian-repair-ttt/publication-verification.json)
+and [milestone status](reports/20261012-bayesian-repair-ttt/live-milestone-status.json).
+Continue the same run; no second candidate or baseline training.
+
 # Verified active training: Bayesian decision-calibrated repair
 
 At 2026-10-12 08:39:58 UTC (01:39 Pacific), fresh training had completed **2,000
