@@ -1,0 +1,27 @@
+{
+  "complete": false,
+  "snapshot_utc": "2026-10-12T10:10:17.812594+00:00",
+  "step": 7749,
+  "prior_known_measured_gpu_hours": 111.5649061889,
+  "separate_preparation_gpu_hours": {
+    "staging_preflight": 0.0054330058820131755,
+    "staging_ddp": 0.010300616158379449,
+    "frozen_preflight": 0.006130206341234346,
+    "frozen_ddp": 0.01077694574991862
+  },
+  "retrieval_setup_gpu_hours": 0.005036057738794221,
+  "optimization_gpu_hours": 1.869605054722892,
+  "evaluation_gpu_hours": 0.5554493873359428,
+  "known_measured_components_gpu_hours": 114.02763746282918,
+  "last_update_overrun_gpu_seconds": 0.0,
+  "not_a_full_cluster_bill": true,
+  "omissions": [
+    "Failed configuration-mismatch preflight GPU time unmeasured, not assumed zero.",
+    "Retrieval setup and subsequent optimization/evaluation charges are added from final run records.",
+    "CPU source deployment/reporting/transfer/idle time is not assigned invented GPU charges."
+  ],
+  "notes": [
+    "Sequential advancing reads: health timestamp precedes copied metrics/compute. Source identities and immutable completed report bytes are verified.",
+    "All learned memory operations and per-update retrieval are inside optimization; CPU reporting has no invented GPU charge."
+  ]
+}

@@ -1,3 +1,22 @@
+# Nonlinear repair: first fixed evaluation 73/104, training continues
+
+At 5,000 updates, nonlinear_repair_ttt scores 73/104, with zero timeouts and all
+31 failures reaching 200 actions. Reach succeeds on all eight cases; assembly,
+faucet-open and pick-place score zero. Compared with retrieval-repair 80 there
+are 8 wins/15 regressions; versus execution-revision 80 there are 5/12. These
+are reused development observations, not component-causality or generalization claims.
+
+The 10:10:17 UTC readback verifies all 200 frozen runtime hashes and all 44 owned
+PID/start identities, finite metrics through step 7,750, and W&B mxujto8j running.
+The copied compute record is at step 7,749; sequential reads advance during training.
+The first full evaluation, 310 periodic metrics, ten individually inspected saved
+contact sheets and paired failures are preserved. Read docs/NONLINEAR_REPAIR_TTT.md.
+Keep source d0cae3007c7d678cdc5ddb68ce731e8a2db3005d frozen. The remaining three fixed
+evaluations proceed under the original seed/data/global batch and compute caps.
+No next candidate, replay, extra seed, baseline retraining or sealed tests are authorized.
+
+Earlier status snapshots follow; this entry controls.
+
 # Verified active nonlinear memory on retrieval-repair 80
 
 One fresh nonlinear_repair_ttt run is training on all eight A800 GPUs.

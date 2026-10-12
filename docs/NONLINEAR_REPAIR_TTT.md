@@ -4,16 +4,92 @@ October 12, 2026. The user explicitly authorized this next comparison on the
 80/104 retrieval-repair formulation. One fresh `nonlinear_repair_ttt` candidate
 is implemented and verified. Frozen execution source is
 `d0cae3007c7d678cdc5ddb68ce731e8a2db3005d` (200 checked files);
-Training is verified on eight A800 GPUs: coordinator 1643283, launcher 1645550,
-W&B [mxujto8j](https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/mxujto8j).
-At 09:56:11 UTC the run reached **2,458 updates**, with finite metrics, all 200
-source hashes and all 44 original process/start identities matching. W&B had
-received step 2,301. No development evaluation has completed yet.
+Training continues on eight A800 GPUs. The first fixed **5k evaluation scores
+73/104 (70.19%)**, below the retained 80/104 references. There are no timeouts;
+all 31 failures reach the 200-action limit. At the 10:10:17 UTC readback all 200
+runtime hashes and all 44 original process/start identities still match, with
+finite logs through step 7,750 and W&B mxujto8j running (online step 7,501).
+The copied compute record is step 7,749, reflecting sequential advancing reads.
+Source and controller remain frozen. Three registered evaluations are pending.
 
-At the measured average of about 0.108 seconds/update, remaining optimization
-is approximately 32 minutes; the four evaluations add roughly 16 minutes if
-the previous run's evaluation timings transfer. This is an estimate, not a
-budget extension. First success metrics arrive after the 5k evaluation.
+## First fixed result and failure evidence
+
+| Task (eight cases each) | 5k successes |
+| --- | ---: |
+| assembly | 0 |
+| button-press-topdown | 8 |
+| coffee-button | 8 |
+| dial-turn | 3 |
+| door-close | 8 |
+| door-open | 7 |
+| drawer-close | 8 |
+| drawer-open | 7 |
+| faucet-open | 0 |
+| handle-press | 8 |
+| pick-place | 0 |
+| plate-slide | 8 |
+| reach | 8 |
+
+The same case hashes, reset/model seeds and task identities match every preserved
+comparison. Against retrieval-repair 80 there are **8 wins/15 regressions**:
+seven reach gains and dial-turn 7, offset by assembly 0/1/5/6, dial-turn 0/1/2/3/6,
+door-open 0, drawer-open 0, faucet 0/2/7 and pick-place 4. Against execution-revision
+80 there are **5 wins/12 regressions**: door-open 1 and reach 3/4/6/7 improve;
+assembly 5/6/7, dial-turn 0/1/2/3, drawer-open 0, faucet 0/4/7 and pick-place 4 regress.
+Numbers abbreviate the zero-padded validation IDs. Full paired IDs and comparisons
+against all preserved references are in [saved-record details](reports/20261012-nonlinear-repair-ttt/details-5000.json).
+
+The [interim prefix audit](reports/20261012-nonlinear-repair-ttt/prefix-audit-5000.json)
+passes all 5,599 decisions: four memory updates, history capped at four actually
+observed prefixes, empty-history reset, fixed memory during search, 320 world
+transitions, retained incumbent and radius 0.25. This is a saved-trace audit;
+the final all-checkpoint CPU audit remains due at completion.
+
+On the 5,495 supported decisions, mean normalized support loss falls from
+0.255950 to 0.120733, improving on every supported fit. Across observed next
+prefixes, raw/prior/adapted model-distance MAE is 0.003162/0.005203/0.002080.
+Support loss and prefix MAE have different units. At empty history, the learned
+prior's next-prefix error is 0.004707 versus raw 0.002124; with four support
+transitions, adapted error is 0.002066 versus raw 0.003297. Support-count groups
+visit different states and are not an adaptation-depth experiment. Failed cases
+also show lower adapted error (0.001826 versus raw 0.003249), so this proxy does
+not identify physical success. No generated alternative has an observed outcome.
+
+Repairs are executed on 2,221/5,599 decisions (39.67%). Generated/retrieved/shifted
+repair anchors count 1,987/1,552/2,060. Mean initial/residual pool spread is
+0.128414/0.043388; there is no later-checkpoint diversity trend yet. In the final
+500-update window, mixed-depth action-flow loss is 0.174954, residual-flow loss
+0.216217 and teacher clipping 4.18% (8.36% on depth-two rows). Lower action or
+support error cannot establish a controller benefit on its own.
+
+All failed pick-place tails choose reach/direct-goal provenance in their final
+20 decisions. All faucet tails choose direct goal; five failed assembly cases
+retain assembly routes throughout. These are associations, not evidence that
+oracle task-ID filtering would succeed. The score retains the same controller
+allowance: mean/p95 decision latency 93.24/102.80 ms, with no timeout.
+
+All **ten exact saved contact sheets** were visually inspected. Pick-place 00000
+leaves the red object on the table while the hand moves toward the goal region.
+Assembly 00000 remains near the object then withdraws; faucet 00003 and dial-turn
+00000 approach their apparatus and later move away. Each fails at 200 actions.
+Reach 00003/00005 succeed at 36/39 actions; coffee-button, door-close, drawer-close
+and handle-press examples succeed at 34/72/69/16. See [per-image review and hashes](reports/20261012-nonlinear-repair-ttt/visual-review-5000.json).
+Only ten saved cases are shown, not every failure. Sparse frames do not establish
+contact force, slip, or outcomes of unchosen actions.
+
+The full 5k report and all 310 periodic metric rows through step 7,750 are preserved
+with lossless gzip and original-byte hashes in [the readback](reports/20261012-nonlinear-repair-ttt/interim-health-round-1.json).
+The checkpoint remains on the server with SHA256
+`2589ed8cf7cfad709fd023c56d5ab3fd8f14ed377014cc11ab2703b03e7f093e`.
+At copied compute step 7,749, optimization is 1.869605055 GPUh and evaluation
+0.555449387 GPUh, with zero optimizer overrun. Preparation totals 0.032640774 GPUh
+and retrieval setup 0.005036058 GPUh, giving **114.027637463 known cumulative GPUh**.
+This is a partial measured-component ledger, not a full cluster bill. The failed
+configuration preflight remains explicitly unmeasured. See [compute accounting](reports/20261012-nonlinear-repair-ttt/compute-accounting-round-1.json).
+
+The remaining three fixed evaluations proceed unchanged. Publish the final
+comparison and all failures before stopping for review; no further candidate
+is authorized by this monitor.
 
 ## What changes
 
