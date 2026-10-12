@@ -1,0 +1,14 @@
+{
+  "verified_utc": "2026-10-12T09:58:26.597226+00:00",
+  "live_origin_main": "048cd087caf7be1e15da3f22280db5a2cbfec644",
+  "ledger_artifact_blobs_verified": 526,
+  "report_status_files_verified": 18,
+  "completed_comparisons": 15,
+  "completed_evaluation_reports": 57,
+  "active_run": "mxujto8j",
+  "verified_optimizer_step": 2458,
+  "frozen_source": "d0cae3007c7d678cdc5ddb68ce731e8a2db3005d",
+  "core_source_equal_to_frozen_run": true,
+  "remote_blobs_match_ledger_sha256": true,
+  "report_status_bytes_match_local": true
+}

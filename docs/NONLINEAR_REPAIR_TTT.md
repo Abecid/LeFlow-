@@ -131,3 +131,10 @@ The preceding Bayesian result 71/76/77/77 was fully published and remotely verif
 at ee1db8c before this fresh candidate was dispatched. Analysis-only updates to
 `audit_repair_flow_ttt_run.py` and `repair_flow_ttt_details.py` were added after
 source freeze. Use the reporting checkout for audits, preserving execution source.
+
+Launch evidence and all prior comparisons were remotely verified at
+`048cd087caf7be1e15da3f22280db5a2cbfec644`: 526 ledger artifact blobs and 18
+report/status files matched, including the existing 57 evaluation reports.
+[Verification receipt](reports/20261012-nonlinear-repair-ttt/publication-verification.json).
+The existing completion monitor follows this registered run and publishes each
+new result and the final comparison without scheduling further candidates.

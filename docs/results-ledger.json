@@ -42,7 +42,8 @@
         "docs/reports/20261012-nonlinear-repair-ttt/staging-preflight.json": "60773749beb0c9ea4f0085014775713f7f5b716b1b307dfef1fcf2db416d40fb",
         "docs/reports/20261012-nonlinear-repair-ttt/status-at-launch.json": "3c8a965134a7397b8e01de2a7a733826222bb46a5da594089f62778adc23a87e",
         "docs/reports/20261012-nonlinear-repair-ttt/tests.log": "0fe2c39702dd6507f4478da5a6602e8e685091ae1f3b8f308ccfd27bf4532fc6",
-        "docs/reports/20261012-nonlinear-repair-ttt/live-status-2458.json": "e9870176d9c3e8e20826b10238dd4c84184698634a54f16e02cd5cb9b6d088c7"
+        "docs/reports/20261012-nonlinear-repair-ttt/live-status-2458.json": "e9870176d9c3e8e20826b10238dd4c84184698634a54f16e02cd5cb9b6d088c7",
+        "docs/reports/20261012-nonlinear-repair-ttt/publication-verification.json": "14bd866dfc0de2c919cdf644d9eb6f4c072f49611fd982e8b92bcba2ddb45275"
       },
       "wandb_url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/mxujto8j",
       "launcher_pid": 1643283,
@@ -60,7 +61,10 @@
       "verified_utc": "2026-10-12T09:56:11.936252+00:00",
       "verified_step": 2458,
       "training_metric_artifact": "docs/reports/20261012-nonlinear-repair-ttt/run/metrics-at-launch.jsonl.gz",
-      "latest_status_artifact": "docs/reports/20261012-nonlinear-repair-ttt/live-status-2458.json"
+      "latest_status_artifact": "docs/reports/20261012-nonlinear-repair-ttt/live-status-2458.json",
+      "launch_publication_commit": "048cd087caf7be1e15da3f22280db5a2cbfec644",
+      "publication_verification_artifact": "docs/reports/20261012-nonlinear-repair-ttt/publication-verification.json",
+      "publication_state": "launch_and_current_snapshot_verified_on_origin_main"
     }
   ],
   "completed_runs": [
