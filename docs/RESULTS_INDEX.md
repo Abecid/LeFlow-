@@ -8,15 +8,13 @@ native-benchmark SOTA, component causality or generalization.
 
 ## Current iteration status
 
-[Bayesian repair completed](BAYESIAN_REPAIR_TTT_RESULTS.md): 1,200 periodic training
-records, four fixed 104-case reports, all three timeouts, 40 inspected contact
-sheets, checkpoint hashes and actual compute are preserved. Source/data/posterior
-audit and process/online completion are verified. Known cumulative measured
-components total **111.56490618890 GPUh**; this is not a full cluster bill.
-[Further launches are held for review](BAYESIAN_REPAIR_TTT_REVIEW.md). No next
-candidate is authorized. Monitoring remains available for subsequent explicitly
-authorized registered work. A local ledger is not publication proof; use its live
-remote verification receipt.
+[Nonlinear memory on retrieval-repair80](NONLINEAR_REPAIR_TTT.md) is the newly
+authorized single candidate. Implementation, TRAIN-only latency and eight-rank
+gradient checks pass; launch verification is pending. The active ledger records
+frozen source d0cae300 and unchanged data/budget/cases. No new success score exists.
+
+[Bayesian repair completed](BAYESIAN_REPAIR_TTT_RESULTS.md): 71/76/77/77, selected
+15k77/104. All evidence is preserved at ee1db8c; prior80 references remain retained.
 
 ## Preserved comparisons
 

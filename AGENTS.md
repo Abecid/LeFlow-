@@ -1,3 +1,20 @@
+# October12 authorization: nonlinear memory on retrieval-repair80
+
+The user explicitly approved ONE next fresh nonlinear_repair_ttt run, superseding
+all historical review holds below for this candidate. Read docs/NONLINEAR_REPAIR_TTT.md
+and the active ledger. Source d0cae3007c7d678cdc5ddb68ce731e8a2db3005d is frozen,
+200 runtime files verified on the server. Six focused tests,85.7ms TRAIN-only
+preflight and eight-rank gradient checks passed. No optimizer update yet.
+The active user chat is handling launch; do not duplicate a coordinator.
+
+The method replaces retrieval-repair80's ridge readout with three nonlinear fast
+matrices; four factual two-action-prefix updates condition reasoning, action flow,
+bounded repairs and ranking. Same6222/seed3072/global64/20k-or28800GPU-seconds/
+four104/10s200. Eight GPUs; no baseline reruns, extra data/seeds or sealed tests.
+Preserve prior completed runs. Publish all outcomes and failure evidence. No
+speculative next candidate. The previous Bayesian run completed71/76/77/77 and
+its final evidence is preserved at ee1db8c; verify publication before dispatch.
+
 # Bayesian repair complete: selected 15k 77; further launches held
 
 The curve is 71/76/77/77, below the retained 80 references. All 1,200 training records,

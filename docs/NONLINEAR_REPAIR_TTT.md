@@ -2,8 +2,9 @@
 
 October 12, 2026. The user explicitly authorized this next comparison on the
 80/104 retrieval-repair formulation. One fresh `nonlinear_repair_ttt` candidate
-is implemented; training starts only after factual-data latency and eight-rank
-no-update checks pass. No claim of improved success exists before evaluation.
+is implemented and verified. Frozen execution source is
+`d0cae3007c7d678cdc5ddb68ce731e8a2db3005d` (200 checked files);
+actual optimizer launch verification is pending. No claim of improved success exists before evaluation.
 
 ## What changes
 
@@ -90,7 +91,7 @@ Six focused CPU tests pass: exact inner gradients and outer derivatives against
 autograd; empty/nonfinite padding and episode isolation; outer gradients into
 all fast matrices; future-label exclusion; effects on action generation, repair
 and selection; observed-prefix bookkeeping, reset and unchanged controller
-budget. Existing method regression checks and final GPU checks gate launch.
+budget. The TRAIN-only preflight passed at85.70ms (max97.00ms) per full decision and9.50GiB peak GPU memory. Eight-rank no-update checks passed both planning depths with exact synchronized finite gradients and unchanged parameters. The exact frozen checkout repeats its registered safety checks before optimization; all preparation compute is logged separately.
 
 Log support error before/after, memory parameter/readout changes, learned inner
 step size, recorded next-outcome errors, prior/adapted prefix corrections,

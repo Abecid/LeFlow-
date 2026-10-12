@@ -2,7 +2,35 @@
   "schema_version": 1,
   "scope": "Current shared-world MetaWorld fixed-104 development comparisons; historical campaigns remain linked in RESULTS_INDEX.md.",
   "publication_contract": "A run is publication-complete only when these artifacts and its findings report are committed and verified on origin/main. Local ledger membership alone does not prove remote publication.",
-  "active_runs": [],
+  "active_runs": [
+    {
+      "run_key": "nonlinear_repair_ttt_3072_registered",
+      "method": "nonlinear_repair_ttt",
+      "label": "LaCT-inspired nonlinear episodic memory on retrieval bounded flow repair",
+      "seed": 3072,
+      "status": "verified_implementation_pending_launch",
+      "server_record": "/home/mtxu/adam/LeFlow-experiments/20261012-nonlinear-repair-ttt",
+      "report": "docs/NONLINEAR_REPAIR_TTT.md",
+      "evidence_directory": "docs/reports/20261012-nonlinear-repair-ttt",
+      "fresh_training": true,
+      "optimizer_gpu_seconds_limit": 28800,
+      "global_batch": 64,
+      "optimizer_update_limit": 20000,
+      "development_cases": 104,
+      "evaluation_rounds": 4,
+      "final_tests": false,
+      "source": "d0cae3007c7d678cdc5ddb68ce731e8a2db3005d",
+      "registered_source": "d0cae3007c7d678cdc5ddb68ce731e8a2db3005d",
+      "runtime_files_verified": 200,
+      "reference": "retrieval_repair_ttt selected20k80/104; execution_revision selected5k80/104",
+      "initialization": "fresh trainable policy; frozen shared world/encoder/bank; no prior policy checkpoint loaded",
+      "artifact_sha256": {
+        "docs/reports/20261012-nonlinear-repair-ttt/prelaunch-checks.json": "dc993798e778dc1a3ab901bce2a8a284ad69dd1b9ebb1ffd765968a6cc996b08",
+        "docs/reports/20261012-nonlinear-repair-ttt/staging-ddp-check.json": "6f40b11e23f36c0bd1c02e2d8f755c7c23daaa4a90b4a12f2fdb167e7f2da244",
+        "docs/reports/20261012-nonlinear-repair-ttt/staging-preflight.json": "60773749beb0c9ea4f0085014775713f7f5b716b1b307dfef1fcf2db416d40fb"
+      }
+    }
+  ],
   "completed_runs": [
     {
       "run_key": "u1hdmwqr",
