@@ -48,7 +48,7 @@
       "optimization_gpu_hours": 4.147635454680357,
       "validation_gpu_hours": 2.1098508322652845,
       "post_publication_review": "docs/BAYESIAN_REPAIR_TTT_REVIEW.md",
-      "publication_state": "awaiting_live_remote_verification",
+      "publication_state": "verified_on_origin_main",
       "artifact_sha256": {
         "docs/reports/20261012-bayesian-repair-ttt/allocation.json": "b82ec18f4f99ea4cc61e1542c91bccad47a6b920b617a7184af6cf5dd3a6bd9f",
         "docs/reports/20261012-bayesian-repair-ttt/analysis/final-audit.json": "3e4d76d36189ccd8303a145ab312fc1fd6a650bb590a6074ac4d04c6952f8d99",
@@ -171,9 +171,12 @@
         "docs/reports/20261012-bayesian-repair-ttt/visual-review-20000.json": "9e66dca929830d27fbc9ec6b07dcb9d04239bb36796cb9a56d6f232a87165df6",
         "docs/reports/20261012-bayesian-repair-ttt/visual-review-5000.json": "bba268a924736ba29192cd875c8cda0b3ad3a448f446efd38ae871e8c9b63993",
         "docs/BAYESIAN_REPAIR_TTT.md": "87155dcca783fb08a751711c42bd8ef4db3f50a823f88482787b9fd8b8218e71",
-        "docs/BAYESIAN_REPAIR_TTT_RESULTS.md": "269bc40b98097cb306997dbbaa6ba196ddb87b3dd7788a5bc1d57817e619744d",
-        "docs/BAYESIAN_REPAIR_TTT_REVIEW.md": "c883133c368294681e0ab0639f437a3d6f21351a4c1395f1bdf44cb9c4fc5724"
-      }
+        "docs/BAYESIAN_REPAIR_TTT_RESULTS.md": "43d649983fff9d82966255e9f901226f431658277542786a8672f65313712133",
+        "docs/BAYESIAN_REPAIR_TTT_REVIEW.md": "c883133c368294681e0ab0639f437a3d6f21351a4c1395f1bdf44cb9c4fc5724",
+        "docs/reports/20261012-bayesian-repair-ttt/publication-final-verification.json": "a39e83682464ef026357382294cf0a055c4a232ca8dfadb8f170d7e89b39c0bc"
+      },
+      "completion_publication_commit": "ee1db8c75c587d162af1203d71ef443b14f9f2b6",
+      "publication_verification_artifact": "docs/reports/20261012-bayesian-repair-ttt/publication-final-verification.json"
     },
     {
       "run_key": "u4dd8tyw",

@@ -96,7 +96,7 @@ prefix-error conditional mean, not terminal bias or physical task success.
 Generated actions never inherit recorded expert outcomes. Fresh training uses
 depths 1/2/3, fixed evaluation depth 2; no inference-depth sweep was performed.
 
-| Updates | Raw observed-prefix error MAE | Applied-correction MAE | Nominal90% predictive coverage | Executed plan is repair |
+| Updates | Raw observed-prefix error MAE | Applied-correction MAE | Nominal 90% predictive coverage | Executed plan is repair |
 | --- | ---: | ---: | ---: | ---: |
 | 5,000 | 0.002648 | 0.001775 | 85.65% | 42.52% |
 | 10,000 | 0.002748 | 0.001846 | 84.28% | 40.05% |
@@ -104,7 +104,7 @@ depths 1/2/3, fixed evaluation depth 2; no inference-depth sweep was performed.
 | 20,000 | 0.002651 | 0.001827 | 84.29% | 35.12% |
 
 At selected 15k, the deployed correction reduces the encoded prediction-error
-proxy from 0.002729 to0.001850, while predictive coverage is 83.45%, below nominal 90%.
+proxy from 0.002729 to 0.001850, while predictive coverage is 83.45%, below nominal 90%.
 The unbounded posterior mean MAE is 0.001852. This is evidence of better prediction
 than the uncorrected proxy on visited states, not a physical-success improvement.
 The TRAIN-only diagnostic's 90.79% coverage did not carry over unchanged to these
@@ -127,20 +127,20 @@ work relative to 320-call predecessors, rather than enlarging the controller bud
 Rejected alternatives have no measured outcomes; acceptance frequencies cannot
 show which repairs physically helped or harmed.
 
-Pick-place scores 0/0/0/1. At5k/10k all failed pick-place last 20-decision tails use
-only reach/direct-goal provenance. At selected 15k seven do, but failed case3
+Pick-place scores 0/0/0/1. At 5k/10k all failed pick-place last 20-decision tails use
+only reach/direct-goal provenance. At selected 15k seven do, but failed case 3
 retains pick-place routes throughout its last 20 decisions. That case succeeds
 at 20k. Matching provenance alone is therefore not a sufficient failure diagnosis,
-and these records do not authorize oracle task-ID filtering. Final20k improves
-assembly 2→4 and pick-place 0→1 versus15k, but door-open falls 8→6 and
+and these records do not authorize oracle task-ID filtering. Final 20k improves
+assembly 2→4 and pick-place 0→1 versus 15k, but door-open falls 8→6 and
 faucet 2→1. Reach remains 1/8 at the selected and final checkpoints.
 Selected 15k has 20 failures with a positive raw predicted tail advance and no
-positive observed proxy advance, or11 after correction; these are model-space
+positive observed proxy advance, or 11 after correction; these are model-space
 stall signs, not direct measurements of physical contact or task progress.
 
 ## Training diagnostics and saved visual evidence
 
-| Last500-update window, mixed depths 1/2/3 | Action-flow loss | Residual-flow loss | Teacher coordinates clipped | Predictive NLL |
+| Last 500-update window, mixed depths 1/2/3 | Action-flow loss | Residual-flow loss | Teacher coordinates clipped | Predictive NLL |
 | --- | ---: | ---: | ---: | ---: |
 | 5,000 | 0.162581 | 0.261004 | 4.50% | -1.855844 |
 | 10,000 | 0.116172 | 0.181118 | 2.71% | -1.835614 |
@@ -161,11 +161,11 @@ from 71 to 77, so it does not by itself explain the remaining performance gap.
 Neither contraction nor clipping alone establishes a failure cause.
 
 All **40 exact saved contact sheets**, ten per checkpoint, were rendered from
-recorded frames and visually inspected at readable resolution. Pick-place00000
+recorded frames and visually inspected at readable resolution. Pick-place 00000
 leaves the red object on the table throughout; faucet 00003 approaches the handle
 without success; reach 00003 remains near its target without registered success.
-Assembly00000 succeeds at 5k, fails at 10k, then succeeds at 15k/20k (192/90 actions).
-Reach00005 fails at 5k then succeeds at 10k/15k/20k (46/66/54 actions). The saved
+Assembly 00000 succeeds at 5k, fails at 10k, then succeeds at 15k/20k (192/90 actions).
+Reach 00005 fails at 5k then succeeds at 10k/15k/20k (46/66/54 actions). The saved
 subset does not cover every failure. Sparse frames cannot establish contact forces,
 slippage or the outcome of rejected actions. Every sheet, original trajectory
 reference, reset-frame identity check and per-image review is retained under
@@ -189,7 +189,7 @@ assigned invented GPU charges. The bank-remapping wall time is recorded separate
 See the [final compute ledger](reports/20261012-bayesian-repair-ttt/compute-accounting-final.json).
 
 All 1,200 periodic metrics and all four complete evaluations remain lossless.
-Each roughly0.9–1.0 GB JSON report is gzip-compressed and split into32 MiB parts;
+Each roughly 0.9–1.0 GB JSON report is gzip-compressed and split into 32 MiB parts;
 the manifest carries per-part, combined-stream and original JSON SHA256 hashes.
 `scripts.analysis.result_io.read_record` reconstructs and verifies it before parsing.
 No candidate trace or negative result is removed. Checkpoints remain at
@@ -197,13 +197,15 @@ No candidate trace or negative result is removed. Checkpoints remain at
 with milestone, selected and final hashes in the final audit. Raw datasets,
 model binaries and credentials are excluded from Git.
 
-The first-two-round publication was remotely verified at c5421c2 after an HTTP400
+The first-two-round publication was remotely verified at c5421c2 after an HTTP 400
 push failure was recovered with a non-force HTTP/1.1 buffered retry. The saved
 publication receipt and reporting-operation notes preserve transport failures;
-none caused training/evaluation replay or frozen-source edits. Complete publication
-requires a successful final push and live verification of the ledger artifact blobs;
-a local commit alone is not proof. The final review retains80/104, holds further
-launches and leaves monitoring active for later explicit authorization.
+none caused training/evaluation replay or frozen-source edits. The complete evidence
+was [verified live on origin/main](reports/20261012-bayesian-repair-ttt/publication-final-verification.json)
+at `ee1db8c75c587d162af1203d71ef443b14f9f2b6` on October 12 at 09:50:53 UTC:
+all 507 ledger artifact blobs and 57 evaluations matched. The final review retains
+80/104, holds further launches and leaves monitoring active for later explicit
+authorization.
 
 One seed, repeatedly reused development selection, changed training depth and
 eight-rank random-stream assignment do not establish generalization, a component

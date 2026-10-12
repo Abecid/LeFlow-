@@ -15,8 +15,9 @@ audit and process/online completion are verified. Known cumulative measured
 components total **111.56490618890 GPUh**; this is not a full cluster bill.
 [Further launches are held for review](BAYESIAN_REPAIR_TTT_REVIEW.md). No next
 candidate is authorized. Monitoring remains available for subsequent explicitly
-authorized registered work. A local ledger is not publication proof; use its live
-remote verification receipt.
+authorized registered work. [Live remote verification](reports/20261012-bayesian-repair-ttt/publication-final-verification.json)
+confirmed all 507 ledger artifact blobs and 57 evaluations at completion commit
+`ee1db8c75c587d162af1203d71ef443b14f9f2b6` (2026-10-12 09:50:53 UTC).
 
 ## Preserved comparisons
 
