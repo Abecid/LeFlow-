@@ -1,32 +1,18 @@
-Current progress-objective curve: **72/72 at5k/10k**, zero timeouts; training continues.
-[Latest interim evidence](PROGRESS_OBJECTIVE_TTT.md#second-fixed-evaluation-10k72104-run-still-active).
-
-Current progress-objective result: **5k72/104**, zero timeouts; training continues.
-[Interim analysis and saved failure evidence](PROGRESS_OBJECTIVE_TTT.md#first-fixed-evaluation-5k72104-run-still-active).
-
-Current registered work: [progress-objective TTT](PROGRESS_OBJECTIVE_TTT.md).
-Training verified on all8 GPUs at1300 updates;46 tests,89.52ms preflight and
-eight-rank checks passed. W&B u4dd8tyw. No new development success result yet.
-
 # Results and completion publication
 
-Updated October11,2026. Shifted-plan repair completes **79/78/74/78**, selecting
-5k79/104, below the preserved best **80/104**. All scores use the same104
-development cases and seed3072; final tests remain sealed. These selected custom
-MetaWorld comparisons retain the method-port, one-seed, reused-development and
-matched-ceiling limitations. They establish neither native-benchmark SOTA nor
-component causality/generalization.
+Updated October12,2026. Execution-calibrated goal progress completes **72/72/78/77**,
+selecting15k78/104, below the retained **80/104** references. All scores use the
+same104 development cases and seed3072; final tests remain sealed. Custom method
+ports, one seed, reused development cases and matched ceilings do not establish
+native-benchmark SOTA, component causality or generalization.
 
 ## Current iteration status
 
-[Shifted repair completed](SHIFTED_REPAIR_TTT_RESULTS.md); all four evaluations,
-full metrics, failure evidence,20 inspected contact sheets, checkpoint hashes
-and actual compute are preserved. Source/data audit and process/online completion
-are verified. Completion is remotely verified at aab136e (273 artifact blobs/49 reports).
-[Further launches are held for review](SHIFTED_REPAIR_TTT_REVIEW.md): no specific
-supported correction is justified now. The80/104 reference remains. Monitoring
-stays available for later authorized registered work; historical runs and frozen
-baselines remain untouched.
+[Progress-objective completed](PROGRESS_OBJECTIVE_TTT_RESULTS.md): full metrics,
+all four evaluations,40 inspected contact sheets, checkpoint hashes and actual
+compute preserved. Source/data audit and process/online completion verified.
+No next candidate is queued. Publish and verify completion before the next review;
+monitoring remains available for subsequent authorized registered work.
 
 ## Preserved comparisons
 
@@ -38,7 +24,8 @@ checkpoint, with earliest ties.
 
 | Method and findings | Success curve /104 | Selected | Optimization GPUh |
 | --- | --- | ---: | ---: |
-| [Shifted-plan repair, latest](SHIFTED_REPAIR_TTT_RESULTS.md) | 79 / 78 / 74 / 78 | 79 at5k | 2.233 |
+| [Execution-calibrated goal progress, latest](PROGRESS_OBJECTIVE_TTT_RESULTS.md) | 72 / 72 / 78 / 77 | 78 at15k | 4.585 |
+| [Shifted-plan repair](SHIFTED_REPAIR_TTT_RESULTS.md) | 79 / 78 / 74 / 78 | 79 at5k | 2.233 |
 | [Retrieval-conditioned repair](RETRIEVAL_REPAIR_TTT_RESULTS.md) | 75 / 77 / 79 / 80 | 80 at20k | 1.749 |
 | [Repair-flow TTT](REPAIR_FLOW_TTT_RESULTS.md) | 80 / 73 / 75 / 75 | 80 at5k | 1.620 |
 | [Guided action-flow TTT](GUIDED_TTT_RESULTS.md) | 72 / 70 / 72 / 75 | 75 at20k | 4.595 |
@@ -62,8 +49,8 @@ controller does not use a diffusion/flow generator.
 
 The machine-readable [results ledger](results-ledger.json) points to each run's
 identity, complete marker, metrics, all evaluations and SHA256 hashes. Its
-read-only verifier checks the hashed evidence artifacts,49 evaluation reports and all
-104 case identities across the thirteen current comparisons. Run
+read-only verifier checks the hashed evidence artifacts,53 evaluation reports and all
+104 case identities across the fourteen current comparisons. Run
 `python3 scripts/analysis/verify_result_publications.py` from the repository.
 It invokes no models or simulators and does not read final-test outcomes.
 

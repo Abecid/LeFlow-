@@ -1,0 +1,14 @@
+{
+  "step": 20000,
+  "rows": 20,
+  "mean": {
+    "train/progress_temporal_mae": 0.009666784014552832,
+    "train/progress_temporal_pair_accuracy": 1.0,
+    "train/progress_calibration_loss": 0.0348240265622735,
+    "train/progress_corrected_prefix_mae": 0.016784607246518136,
+    "train/progress_raw_prefix_mae": 0.015253218356519938
+  },
+  "limitations": [
+    "Mixed depth1/depth2 expert training batches; weak temporal labels, not physical progress evaluation."
+  ]
+}

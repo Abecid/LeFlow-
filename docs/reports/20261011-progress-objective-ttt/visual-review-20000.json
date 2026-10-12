@@ -1,0 +1,92 @@
+{
+  "step": 20000,
+  "all_saved_contact_sheets_visually_inspected": true,
+  "images": [
+    {
+      "file": "contact-sheets-20000/assembly-00000.png",
+      "sha256": "e4833af8d0c957e56449ab441903434d818afd2b2e5a72bc7db8ae0c8e843a70",
+      "id": "validation/assembly/00000",
+      "success": false,
+      "steps": 200,
+      "observation": "The ring remains near its initial position while the gripper moves around/below it; failure at200 actions, regressing from selected15k success. No force/contact cause can be read from sparse views."
+    },
+    {
+      "file": "contact-sheets-20000/coffee-button-00000.png",
+      "sha256": "801690f2ad60a942be9773a8707a8ce5e3c5a0fbf80163c89cdc611287f97b1b",
+      "id": "validation/coffee-button/00000",
+      "success": true,
+      "steps": 36,
+      "observation": "Hand approaches the coffee-machine control; registered success at36 actions."
+    },
+    {
+      "file": "contact-sheets-20000/dial-turn-00000.png",
+      "sha256": "05359824c276a5f1dec63a44f2705d3dd2caa1ceafa511d0d59e8ff2dd9162af",
+      "id": "validation/dial-turn/00000",
+      "success": true,
+      "steps": 83,
+      "observation": "Hand approaches the dial and changes its visible pose; registered success at83 actions."
+    },
+    {
+      "file": "contact-sheets-20000/door-close-00000.png",
+      "sha256": "072b63ff89ae679beeac68fb49d4c822b06769debac1f630fa9f9b25e783e658",
+      "id": "validation/door-close/00000",
+      "success": true,
+      "steps": 65,
+      "observation": "Door rotates toward the closed goal; registered success at65 actions."
+    },
+    {
+      "file": "contact-sheets-20000/drawer-close-00004.png",
+      "sha256": "e51211bc7ad6a88030282bce21f2055ae74ed0babe43eeb530225b22c9894121",
+      "id": "validation/drawer-close/00004",
+      "success": true,
+      "steps": 68,
+      "observation": "Drawer moves inward toward the goal; registered success at68 actions."
+    },
+    {
+      "file": "contact-sheets-20000/faucet-open-00003.png",
+      "sha256": "45077987e77f6f7965663653dcbe8fdce630bbd2bf5f1aadade228fa35ae1312",
+      "id": "validation/faucet-open/00003",
+      "success": false,
+      "steps": 200,
+      "observation": "Hand approaches the handle; late frames show little visible change around it. Failure at200 actions; contact force or slippage is not established."
+    },
+    {
+      "file": "contact-sheets-20000/handle-press-00000.png",
+      "sha256": "e4bea0188516fafc86b270904b9c8bb727783c4b49e0f79c8aff6ea31997ec18",
+      "id": "validation/handle-press/00000",
+      "success": true,
+      "steps": 16,
+      "observation": "Hand approaches the handle; registered success at16 actions."
+    },
+    {
+      "file": "contact-sheets-20000/pick-place-00000.png",
+      "sha256": "b95f356d6de2baad4bc66a3c151ea5970b06279e6da2a58ff54f52d19a726a6a",
+      "id": "validation/pick-place/00000",
+      "success": false,
+      "steps": 200,
+      "observation": "Object remains on the table while the gripper moves rightward; no visible carry in sampled frames. Failure at200 actions."
+    },
+    {
+      "file": "contact-sheets-20000/reach-00003.png",
+      "sha256": "1b908927c8075e69c51176754bd418d348d5c314b01d6466340e80b81f81587d",
+      "id": "validation/reach/00003",
+      "success": false,
+      "steps": 200,
+      "observation": "Hand approaches the target region and remains nearby in late samples without registered success by200 actions."
+    },
+    {
+      "file": "contact-sheets-20000/reach-00005.png",
+      "sha256": "914efd9a6186dc82516ac421d227ce247e72fce8d69df08c86b38df88270f14f",
+      "id": "validation/reach/00005",
+      "success": true,
+      "steps": 46,
+      "observation": "Hand approaches the target; registered success at46 actions."
+    }
+  ],
+  "limitations": [
+    "Ten registered saved trajectories, not all27 failures.",
+    "Measured saved frames only; zero model or simulator calls.",
+    "Sparse single-view frames cannot establish exact3D contact, forces or causal failure mechanisms."
+  ],
+  "render_review": "All ten exact final1536x326 PNGs opened in pairs at readable resolution; complete readable titles, labels, five sampled frames and registered goal panels."
+}

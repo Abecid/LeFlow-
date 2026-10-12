@@ -1,0 +1,10 @@
+{
+  "source_health": "final-health.json",
+  "server_read_utc": "2026-10-12T05:45:43.654942+00:00",
+  "files": 9,
+  "uncompressed_bytes_and_sha256_match": true,
+  "all_44_owned_processes_exited": true,
+  "wandb_finished": true,
+  "model_calls": 0,
+  "simulator_calls": 0
+}

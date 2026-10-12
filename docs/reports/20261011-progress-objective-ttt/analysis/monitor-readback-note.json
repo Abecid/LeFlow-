@@ -1,0 +1,5 @@
+{
+  "failed_action": "Redundant post-collection SSH lifecycle read",
+  "failure": "Connection timed out during banner exchange\nConnection to UNKNOWN port 65535 timed out",
+  "impact": "No experiment change. Successful final-health collection at 2026-10-12T05:45:43.654942+00:00 already records all44 owned processes absent, coordinator completion and W&B finished. No additional server success is inferred from the failed read."
+}

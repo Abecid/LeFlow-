@@ -1,3 +1,10 @@
+# Completed:72/72/78/77; selected15k78/104
+
+[Final results and complete evidence](PROGRESS_OBJECTIVE_TTT_RESULTS.md) supersede
+all interim status below. Zero timeouts in416 episodes; all117 failures reach200
+actions. Source/data/checkpoints audited;44 owned processes exited and W&B finished.
+The80/104 references remain. No next candidate queued; publication precedes review.
+
 # Execution-calibrated goal progress: registered first candidate
 
 The user explicitly authorized implementation and training on October 11. The
@@ -94,7 +101,7 @@ establish independent generalization, component causality or SOTA.
 
 Server record: `/home/mtxu/adam/LeFlow-experiments/20261011-progress-objective-ttt`.
 Separate bank/cache: `/tmp/mtxu-progress-objective-ttt-20261011`.
-Current status and immutable execution source are maintained in the active ledger.
+Current status and immutable execution source are maintained in the completed ledger.
 Full metrics, evaluations, failure analysis and measured cumulative compute must
 be published to origin/main at completion.
 
@@ -124,9 +131,9 @@ registered cases with unchanged paired identities, **72 successes, zero timeouts
 and32 failures all reaching200 primitive actions. Later checkpoints remain pending.
 This is an interim result, not the final selected run outcome.
 
-Against selected retrieval-repair80, there are5 wins/13 regressions; against
-execution-revision80,3 wins/11 regressions. Dial-turn loses5 previously successful
-cases versus retrieval; assembly has2 wins/2 regressions, faucet1/2, reach1/2,
+Against selected execution-revision80, there are5 wins/13 regressions; against
+retrieval-repair80,3 wins/11 regressions. Dial-turn loses5 previously successful
+cases versus execution-revision; assembly has2 wins/2 regressions, faucet1/2, reach1/2,
 pick-place0/1 and plate-slide0/1. Full paired IDs are saved. Pick-place is0/8;
 all eight failure tails use only reach/direct-goal routes in their final20 decisions.
 This diagnostic association persists despite the new scores; it does not identify
@@ -163,8 +170,8 @@ The10k checkpoint again reaches72/104, with zero timeouts and32 failures all
 reaching200 actions. Relative to5k, six cases become successes and six regress:
 dial-turn rises2/8 to6/8 and plate-slide7/8 to8/8, while assembly falls3/8 to1/8,
 door-open7/8 to6/8, faucet2/8 to1/8 and reach3/8 to2/8. Pick-place remains0/8.
-Against selected retrieval-repair80 there are3 wins/11 regressions; against
-execution-revision80,4/12. The earlier5k checkpoint remains provisionally selected
+Against selected retrieval-repair80 there are4 wins/12 regressions; against
+execution-revision80,3/11. The earlier5k checkpoint remains provisionally selected
 under the earliest-checkpoint tie rule. This is still an incomplete run.
 
 All eight pick-place failure tails again contain only reach/direct-goal choices.

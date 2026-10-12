@@ -1,0 +1,48 @@
+{
+  "issue": "Interim prose transposed retrieval-repair and execution-revision reference labels; saved per-case JSON evidence was correct.",
+  "correct_pairings": {
+    "5000": {
+      "retrieval": [
+        3,
+        11
+      ],
+      "execution": [
+        5,
+        13
+      ]
+    },
+    "10000": {
+      "retrieval": [
+        4,
+        12
+      ],
+      "execution": [
+        3,
+        11
+      ]
+    },
+    "15000": {
+      "retrieval": [
+        4,
+        6
+      ],
+      "execution": [
+        3,
+        5
+      ]
+    },
+    "20000": {
+      "retrieval": [
+        4,
+        7
+      ],
+      "execution": [
+        3,
+        6
+      ]
+    }
+  },
+  "validation": "All eight pairs independently reconstructed from immutable saved report success flags; exact wins/regressions match diagnostic JSON.",
+  "model_calls": 0,
+  "simulator_calls": 0
+}

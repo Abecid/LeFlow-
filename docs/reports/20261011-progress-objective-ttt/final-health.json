@@ -1,0 +1,425 @@
+{
+  "utc": "2026-10-12T05:45:43.654942+00:00",
+  "source": "e274fed5850b967c5e8e176e5cab3611d992e8bf",
+  "source_clean": true,
+  "runtime_hash_count": 166,
+  "status": {
+    "code": "e274fed5850b967c5e8e176e5cab3611d992e8bf",
+    "pid": 1324049,
+    "run_dir": "/home/mtxu/adam/LeFlow-experiments/20261011-progress-objective-ttt/campaign/runs/progress_objective_ttt_3072",
+    "status": "completed_validation_ready_for_analysis",
+    "utc": "2026-10-12T05:45:06.635028+00:00",
+    "wall_seconds": 3191.279951615259
+  },
+  "compute": {
+    "global_batch": 64,
+    "gpu_count": 8,
+    "last_update_overrun_gpu_seconds": 0.0,
+    "optimization_cap_gpu_seconds": 28800,
+    "optimization_gpu_hours": 4.585255093375841,
+    "optimization_gpu_seconds": 16506.91833615303,
+    "step": 20000,
+    "stop_check": "optimizer boundary; final-update overrun reported",
+    "validation_gpu_hours": 2.0849044524505733,
+    "validation_gpu_seconds": 7505.656028822064,
+    "validation_steps": [
+      5000,
+      10000,
+      15000,
+      20000
+    ]
+  },
+  "worker": {
+    "command": [
+      "/tmp/mtxu-flow-jepa-20261007/env/bin/python",
+      "-m",
+      "torch.distributed.run",
+      "--nnodes=1",
+      "--nproc_per_node=8",
+      "--rdzv-backend=c10d",
+      "--rdzv-endpoint=127.0.0.1:0",
+      "-m",
+      "flow_jepa.execution.train",
+      "--config",
+      "/home/mtxu/adam/LeFlow-experiments/20261011-progress-objective-ttt/repo/config/flow_metaworld_progress_objective_ttt.json",
+      "--root",
+      "/home/mtxu/adam/LeFlow-experiments/20261011-progress-objective-ttt/campaign",
+      "--run-dir",
+      "/home/mtxu/adam/LeFlow-experiments/20261011-progress-objective-ttt/campaign/runs/progress_objective_ttt_3072",
+      "--world",
+      "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt",
+      "--bank",
+      "/tmp/mtxu-progress-objective-ttt-20261011/route_bank.pt"
+    ],
+    "pid": 1326959
+  },
+  "processes": [
+    {
+      "pid": 1324049,
+      "present": false
+    },
+    {
+      "pid": 1326959,
+      "present": false
+    },
+    {
+      "pid": 1327000,
+      "present": false
+    },
+    {
+      "pid": 1327001,
+      "present": false
+    },
+    {
+      "pid": 1327002,
+      "present": false
+    },
+    {
+      "pid": 1327003,
+      "present": false
+    },
+    {
+      "pid": 1327004,
+      "present": false
+    },
+    {
+      "pid": 1327005,
+      "present": false
+    },
+    {
+      "pid": 1327006,
+      "present": false
+    },
+    {
+      "pid": 1327007,
+      "present": false
+    },
+    {
+      "pid": 1327147,
+      "present": false
+    },
+    {
+      "pid": 1327148,
+      "present": false
+    },
+    {
+      "pid": 1327149,
+      "present": false
+    },
+    {
+      "pid": 1327150,
+      "present": false
+    },
+    {
+      "pid": 1327151,
+      "present": false
+    },
+    {
+      "pid": 1327152,
+      "present": false
+    },
+    {
+      "pid": 1327159,
+      "present": false
+    },
+    {
+      "pid": 1327160,
+      "present": false
+    },
+    {
+      "pid": 1327161,
+      "present": false
+    },
+    {
+      "pid": 1327162,
+      "present": false
+    },
+    {
+      "pid": 1327163,
+      "present": false
+    },
+    {
+      "pid": 1327164,
+      "present": false
+    },
+    {
+      "pid": 1327171,
+      "present": false
+    },
+    {
+      "pid": 1327172,
+      "present": false
+    },
+    {
+      "pid": 1327173,
+      "present": false
+    },
+    {
+      "pid": 1327174,
+      "present": false
+    },
+    {
+      "pid": 1327175,
+      "present": false
+    },
+    {
+      "pid": 1327178,
+      "present": false
+    },
+    {
+      "pid": 1327183,
+      "present": false
+    },
+    {
+      "pid": 1327184,
+      "present": false
+    },
+    {
+      "pid": 1327185,
+      "present": false
+    },
+    {
+      "pid": 1327186,
+      "present": false
+    },
+    {
+      "pid": 1327187,
+      "present": false
+    },
+    {
+      "pid": 1327188,
+      "present": false
+    },
+    {
+      "pid": 1327193,
+      "present": false
+    },
+    {
+      "pid": 1327201,
+      "present": false
+    },
+    {
+      "pid": 1327205,
+      "present": false
+    },
+    {
+      "pid": 1327206,
+      "present": false
+    },
+    {
+      "pid": 1327209,
+      "present": false
+    },
+    {
+      "pid": 1327210,
+      "present": false
+    },
+    {
+      "pid": 1327213,
+      "present": false
+    },
+    {
+      "pid": 1327214,
+      "present": false
+    },
+    {
+      "pid": 1327462,
+      "present": false
+    },
+    {
+      "pid": 1327483,
+      "present": false
+    }
+  ],
+  "complete": {
+    "best": 0.75,
+    "best_step": 15000,
+    "optimization_gpu_hours": 4.585255093375841,
+    "step": 20000,
+    "stop_reason": "update_limit",
+    "validation_gpu_hours": 2.0849044524505733,
+    "validation_steps": [
+      5000,
+      10000,
+      15000,
+      20000
+    ],
+    "wall_seconds": 3031.907714460045
+  },
+  "saved_trajectory_hashes": {
+    "trajectories/step_0005000/assembly/00000.npz": "ad36810245360b245eacac731c080f11519fb5c96e9c42504a85298fc0e7f2b2",
+    "trajectories/step_0005000/coffee-button/00000.npz": "dd1d88b4a6f2ad983aabf0ccc0bd0826b6834440bf685bab51299374542e497d",
+    "trajectories/step_0005000/dial-turn/00000.npz": "1ea0102afa0558ae8c1ac0bf28b0a33795d78cb7d9c8987f6c0f839475674f9f",
+    "trajectories/step_0005000/door-close/00000.npz": "64ce561b5ce6f9201fe936005f3e904dc2e72b069a434961131035bcda2e3d9f",
+    "trajectories/step_0005000/drawer-close/00004.npz": "4a0526c2738b397a5924c9fd4a9ce22414aa68aafa7fbfb0623fb32eefc62639",
+    "trajectories/step_0005000/faucet-open/00003.npz": "9b22f3582bdc5a79ed9cbe79e84290c4a3f0ada1c7e9ed70cacd67f54bcca6fe",
+    "trajectories/step_0005000/handle-press/00000.npz": "72146b31be709967a43240b2bbcace483075b9ffc16ecca15a8aa3802f5c0419",
+    "trajectories/step_0005000/pick-place/00000.npz": "364d63eae55cd79eb04c49a603d6b28a7dfe18e14cf5a2c63effffc1cf352473",
+    "trajectories/step_0005000/reach/00003.npz": "b66e7a45e36c19c1c821bdca11c8b51c9a8ed9744daf66eb4e8a6b27b7e73c72",
+    "trajectories/step_0005000/reach/00005.npz": "baf18f9724c154e3eb7ba8576cf8edfd4d2c36a3163e44ddcddd99db16a48228",
+    "trajectories/step_0010000/assembly/00000.npz": "858b89f98e6a5c86669a8ea4d6cbdbee7f2d5dff5bb77542fd9330aed253c0d3",
+    "trajectories/step_0010000/coffee-button/00000.npz": "5b9541f979b7a16bfcb2a1f4e0001910b7a64ef0f3377c8dbd0d1863c63584da",
+    "trajectories/step_0010000/dial-turn/00000.npz": "b2c0ca521bc50354f511c7effd9f51fa576f12fc162b1aaec5a00463a1697bcb",
+    "trajectories/step_0010000/door-close/00000.npz": "377ba341e7ecf7a5362c11d99e412f751cf45fb7a3bb79fd29e2f9fdb90eca29",
+    "trajectories/step_0010000/drawer-close/00004.npz": "d27626095a40f37717c2f244e2d71ba91f4318c98a114078dbd6e721bbe82cd0",
+    "trajectories/step_0010000/faucet-open/00003.npz": "6111f27926fe68b101f13c62d47be085d5e14e963bdf21784ab12321044fc2b2",
+    "trajectories/step_0010000/handle-press/00000.npz": "b07e9d07ef74ce36e79b6edbba630936e4ed9e00b43c466d0dc18ba5e090954b",
+    "trajectories/step_0010000/pick-place/00000.npz": "f5596ebdf3ba60da1a39acd0487d83bf1dcfebd79f35abe371be282a8ae70174",
+    "trajectories/step_0010000/reach/00003.npz": "e7f602804ffc817e6e03d5143c97adaa611c3450c9e09937c6fb337e29050c99",
+    "trajectories/step_0010000/reach/00005.npz": "17f5ec88f5af505f56b6db881aa287d40d637693c64a6aa7731c634b28881b13",
+    "trajectories/step_0015000/assembly/00000.npz": "d91bc5043d842f694c516e2745b9b355e66a29032bfac9c3c8b383fb0d6c9fe0",
+    "trajectories/step_0015000/coffee-button/00000.npz": "aee4ce40c39e8edd8e40b3a05a9b6e2417989f8983375057c18a14c9d408324f",
+    "trajectories/step_0015000/dial-turn/00000.npz": "9b0f074470b08ea8de426a87cbbeb4a6998d52e9b58763291a65716722c61f09",
+    "trajectories/step_0015000/door-close/00000.npz": "22e2cb4a4c3359aa53983732400c6b814a9782913b30d60aa14c5fd1fb12bfb5",
+    "trajectories/step_0015000/drawer-close/00004.npz": "8274a84e740895da236ac8f124ee28c72b11388cb2af4d113661a9e47c5927d1",
+    "trajectories/step_0015000/faucet-open/00003.npz": "71b9232427562916b3a4664a540d03c7ee68b3ba47c4861d492547b12d911259",
+    "trajectories/step_0015000/handle-press/00000.npz": "65b44bd2c77e98d3e54f59ea09e24fc3367b376fb99f82c3f7326d648a8f1d91",
+    "trajectories/step_0015000/pick-place/00000.npz": "3930c788b73a7e64ab21cdb61d1e8e783d192099f4129f2a35f673b6a824e054",
+    "trajectories/step_0015000/reach/00003.npz": "de48abdcd845e22c85a9ef3b6f56c3a68d4c370a26d3a7784009b7b5721b4d3f",
+    "trajectories/step_0015000/reach/00005.npz": "2101d14f67b163ece0b939749cabea9df3705b96316f2e944627343cc503523e",
+    "trajectories/step_0020000/assembly/00000.npz": "a423fbe3c9d62cdf616b72c843bbc07fae75042e0c5b08a72be42a8c45cfc456",
+    "trajectories/step_0020000/coffee-button/00000.npz": "7f4397292a6dd7583675b45ae52b93ad60520a563d5fee41aa9bb5175b1097dd",
+    "trajectories/step_0020000/dial-turn/00000.npz": "dd3767751a97f0a7b7f3bfc292c0af05554238886d3a26cee7a6592c59b0c9c6",
+    "trajectories/step_0020000/door-close/00000.npz": "5e030eea938e9a3d1462c43f30f7a34454c10b81b4ca2b8472c49c2c1567b063",
+    "trajectories/step_0020000/drawer-close/00004.npz": "8a4dfb2a59b61562aa6e11f6da5c50f6411c57b61c3d9cbc44dba1e2efbd5a59",
+    "trajectories/step_0020000/faucet-open/00003.npz": "a193b563ac70e5095bd0c5640c2f341293997b2406ab2f527e63554731ef7105",
+    "trajectories/step_0020000/handle-press/00000.npz": "a315ff648e931f7d24bc82c36faa035fe0922bca362476221d7c6a6c8804650c",
+    "trajectories/step_0020000/pick-place/00000.npz": "ee38ac059ed9e7cd8bf848f93c92312e046ea48a49cf18ab81ac53ca36eb321f",
+    "trajectories/step_0020000/reach/00003.npz": "7187e408e46de604c3c1a14b18175b531a19ddf96a050fb71d688773025fe40a",
+    "trajectories/step_0020000/reach/00005.npz": "0324787d4a96d807002c47e4d3bee2e7d00421f1948cf785106c6f6b30319dd8"
+  },
+  "checkpoints": {
+    "checkpoints/step_0005000.pt": {
+      "bytes": 83113217,
+      "sha256": "111fb407c6ca2d5e85aeec85de92c8e71ab7b0fff4b4394849502fb3237be1c1"
+    },
+    "checkpoints/step_0010000.pt": {
+      "bytes": 83113217,
+      "sha256": "813672f0837d5db4b8c1d6d0fb47556f4e9ac948aa79d7317afd7596a8db6211"
+    },
+    "checkpoints/step_0015000.pt": {
+      "bytes": 83113217,
+      "sha256": "b19442facd6c514628ea261d0a24a5495f36e9b7cc9ea624dcceb3fe14a98802"
+    },
+    "checkpoints/step_0020000.pt": {
+      "bytes": 83113217,
+      "sha256": "5ebeb68a21f3532e09f4c988115753f6b74c4e80ef948a71c8b2af340d23febc"
+    },
+    "last.pt": {
+      "bytes": 83077681,
+      "sha256": "56228591a2a8d2b4096b2d78f7a2f43bd8b588621ed7a606419414edc6f448bf"
+    },
+    "best.pt": {
+      "bytes": 83077681,
+      "sha256": "953af05eb47d20532978354f8aa3c6513d1fadeda1ff44118736b226cb07b002"
+    }
+  },
+  "last_metric_step": 20000,
+  "training_rows": 800,
+  "finite_metrics": true,
+  "monotone_optimization_charge": true,
+  "source_files": {
+    "run/run.json": {
+      "bytes": 564,
+      "sha256": "64206174d460b0ca52bc83198492b42e47a30c86581990b0867e973a88d368e3"
+    },
+    "run/compute_usage.json": {
+      "bytes": 471,
+      "sha256": "f63881a92badf730fc87792c4338c6c8c12831aa45c0857b6f2c4689e58e035d"
+    },
+    "run/retrieval-setup.json": {
+      "bytes": 288,
+      "sha256": "5ac0521961a750688a3379c8b4b8a5726c27ef258857991f5e89dfc09238f0b4"
+    },
+    "run/metrics.jsonl": {
+      "bytes": 1441837,
+      "sha256": "220162b1b35415456a1696e7ea25a9e26268be0b997438f901fae6cca30ed5df"
+    },
+    "run/complete.json": {
+      "bytes": 291,
+      "sha256": "20b0ca08a7f106735dc6158a8a22bd7b28cde797dcedab523a992f6a4d888640"
+    },
+    "run/validation/step_0005000.json": {
+      "bytes": 41931406,
+      "sha256": "95289f933a6ae4f5156c607888914bbdbecd9502142677b9fe443eb85d27e396"
+    },
+    "run/validation/step_0010000.json": {
+      "bytes": 41357573,
+      "sha256": "32f8d6ef1a6747077aea8ee03814374a2880f5b9eb2f4128c8a72aead845fff1"
+    },
+    "run/validation/step_0015000.json": {
+      "bytes": 38069669,
+      "sha256": "5313e38123c336555876ce8cefd7eb754240757023feab9ba8cfc89f8f5019bd"
+    },
+    "run/validation/step_0020000.json": {
+      "bytes": 38850557,
+      "sha256": "ab6d2558968c237cd8dc5349424309a6092972d0ee36d56a0579cbd0fc6a8589"
+    }
+  },
+  "wandb": {
+    "id": "u4dd8tyw",
+    "state": "finished",
+    "summary": {
+      "budget/optimization_gpu_hours": 4.585255093375841,
+      "step": 20000,
+      "train/loss": 0.32620927691459656,
+      "validation/checkpoint_step": 20000,
+      "validation/controller_budget_exhausted_rate": 0,
+      "validation/controller_budget_overrun_seconds_mean": 0,
+      "validation/controller_seconds_per_episode_mean": 4.70922421440124,
+      "validation/controller_step_latency_ms_mean": 92.652160101727,
+      "validation/controller_step_latency_ms_p95": 97.69752342253923,
+      "validation/episodes": 104,
+      "validation/expert_goal_failure_rate": 0,
+      "validation/latency_ms_mean": 92.83044646535808,
+      "validation/observed_subgoal_cosine": 0.017595163054070176,
+      "validation/return_mean": 271.92878492900917,
+      "validation/seen_success_macro": 0.7403846153846154,
+      "validation/steps_to_success_capped_mean": 101.5673076923077,
+      "validation/success_macro": 0.7403846153846154,
+      "validation/success_within_100_primitive": 0.6730769230769231,
+      "validation/success_within_200_primitive": 0.7403846153846154,
+      "validation/success_within_50_primitive": 0.20192307692307693,
+      "validation/task/assembly/ci95_high": 0.4708948057698615,
+      "validation/task/assembly/ci95_low": 0.02241690886329617,
+      "validation/task/assembly/success": 0.125,
+      "validation/task/button-press-topdown/ci95_high": 1,
+      "validation/task/button-press-topdown/ci95_low": 0.6755843804891231,
+      "validation/task/button-press-topdown/success": 1,
+      "validation/task/coffee-button/ci95_high": 1,
+      "validation/task/coffee-button/ci95_low": 0.6755843804891231,
+      "validation/task/coffee-button/success": 1,
+      "validation/task/dial-turn/ci95_high": 1,
+      "validation/task/dial-turn/ci95_low": 0.6755843804891231,
+      "validation/task/dial-turn/success": 1,
+      "validation/task/door-close/ci95_high": 1,
+      "validation/task/door-close/ci95_low": 0.6755843804891231,
+      "validation/task/door-close/success": 1,
+      "validation/task/door-open/ci95_high": 0.9775830911367038,
+      "validation/task/door-open/ci95_low": 0.5291051942301386,
+      "validation/task/door-open/success": 0.875,
+      "validation/task/drawer-close/ci95_high": 1,
+      "validation/task/drawer-close/ci95_low": 0.6755843804891231,
+      "validation/task/drawer-close/success": 1,
+      "validation/task/drawer-open/ci95_high": 1,
+      "validation/task/drawer-open/ci95_low": 0.6755843804891231,
+      "validation/task/drawer-open/success": 1,
+      "validation/task/faucet-open/ci95_high": 0.7847874731755582,
+      "validation/task/faucet-open/ci95_low": 0.21521252682444184,
+      "validation/task/faucet-open/success": 0.5,
+      "validation/task/handle-press/ci95_high": 1,
+      "validation/task/handle-press/ci95_low": 0.6755843804891231,
+      "validation/task/handle-press/success": 1,
+      "validation/task/pick-place/ci95_high": 0.3244156195108769,
+      "validation/task/pick-place/ci95_low": 0,
+      "validation/task/pick-place/success": 0,
+      "validation/task/plate-slide/ci95_high": 1,
+      "validation/task/plate-slide/ci95_low": 0.6755843804891231,
+      "validation/task/plate-slide/success": 1,
+      "validation/task/reach/ci95_high": 0.4708948057698615,
+      "validation/task/reach/ci95_low": 0.02241690886329617,
+      "validation/task/reach/success": 0.125,
+      "validation/world_predictions_mean": 16264.615384615385
+    }
+  }
+}

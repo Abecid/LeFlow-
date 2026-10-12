@@ -1,0 +1,14 @@
+{
+  "bytes": 8593428916,
+  "episodes": 6222,
+  "manifest": "462acfe2a29798ddbe767575dee3c8f338af2ec36096b950b20eb4df4a24f3ac",
+  "preparation_cpu_seconds": 21.818944158032537,
+  "protocol": "ffdbfce9798ab6beeffd8c99a02d9f95c1b5d2892382567d0ccb0072e76c45d8",
+  "routes": 209109,
+  "sha256": "09e119a78dfbb3c9070ddc1de815517aae8c6e356066be5fa0e136bac310e3d8",
+  "source_bank": "/tmp/mtxu-flow-reasoning-20261010/route_bank.pt",
+  "source_bank_sha256": "c6916667488ec1e418e9dd980eebad6d5d8e588e76ff720bc5ae4ecc77247046",
+  "states": 130662,
+  "train_only": true,
+  "transformation": "identity tensors; protocol/manifest metadata only"
+}

@@ -1,0 +1,383 @@
+{
+  "utc": "2026-10-12T05:45:00.630991+00:00",
+  "status": {
+    "code": "e274fed5850b967c5e8e176e5cab3611d992e8bf",
+    "command": [
+      "/tmp/mtxu-flow-jepa-20261007/env/bin/python",
+      "-m",
+      "torch.distributed.run",
+      "--nnodes=1",
+      "--nproc_per_node=8",
+      "--rdzv-backend=c10d",
+      "--rdzv-endpoint=127.0.0.1:0",
+      "-m",
+      "flow_jepa.execution.train",
+      "--config",
+      "/home/mtxu/adam/LeFlow-experiments/20261011-progress-objective-ttt/repo/config/flow_metaworld_progress_objective_ttt.json",
+      "--root",
+      "/home/mtxu/adam/LeFlow-experiments/20261011-progress-objective-ttt/campaign",
+      "--run-dir",
+      "/home/mtxu/adam/LeFlow-experiments/20261011-progress-objective-ttt/campaign/runs/progress_objective_ttt_3072",
+      "--world",
+      "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt",
+      "--bank",
+      "/tmp/mtxu-progress-objective-ttt-20261011/route_bank.pt"
+    ],
+    "pid": 1324049,
+    "preflight_mean_ms": 89.52330301205318,
+    "status": "training",
+    "utc": "2026-10-12T04:54:10.882254+00:00"
+  },
+  "processes": [
+    {
+      "pid": 1324049,
+      "present": true,
+      "identity_matches": true,
+      "state": "S",
+      "start_ticks": 1010121907,
+      "wchan": "0"
+    },
+    {
+      "pid": 1326959,
+      "present": true,
+      "identity_matches": true,
+      "state": "S",
+      "start_ticks": 1010135702,
+      "wchan": "hrtimer_nanosleep"
+    },
+    {
+      "pid": 1327000,
+      "present": true,
+      "identity_matches": true,
+      "state": "S",
+      "start_ticks": 1010135834,
+      "wchan": "0"
+    },
+    {
+      "pid": 1327001,
+      "present": true,
+      "identity_matches": true,
+      "state": "S",
+      "start_ticks": 1010135834,
+      "wchan": "0"
+    },
+    {
+      "pid": 1327002,
+      "present": true,
+      "identity_matches": true,
+      "state": "D",
+      "start_ticks": 1010135835,
+      "wchan": "os_acquire_rwlock_write"
+    },
+    {
+      "pid": 1327003,
+      "present": true,
+      "identity_matches": true,
+      "state": "R",
+      "start_ticks": 1010135835,
+      "wchan": "0"
+    },
+    {
+      "pid": 1327004,
+      "present": false
+    },
+    {
+      "pid": 1327005,
+      "present": true,
+      "identity_matches": true,
+      "state": "D",
+      "start_ticks": 1010135835,
+      "wchan": "os_acquire_rwlock_write"
+    },
+    {
+      "pid": 1327006,
+      "present": false
+    },
+    {
+      "pid": 1327007,
+      "present": true,
+      "identity_matches": true,
+      "state": "S",
+      "start_ticks": 1010135835,
+      "wchan": "0"
+    },
+    {
+      "pid": 1327147,
+      "present": true,
+      "identity_matches": true,
+      "state": "S",
+      "start_ticks": 1010136260,
+      "wchan": "0"
+    },
+    {
+      "pid": 1327148,
+      "present": false
+    },
+    {
+      "pid": 1327149,
+      "present": true,
+      "identity_matches": true,
+      "state": "S",
+      "start_ticks": 1010136260,
+      "wchan": "0"
+    },
+    {
+      "pid": 1327150,
+      "present": false
+    },
+    {
+      "pid": 1327151,
+      "present": false
+    },
+    {
+      "pid": 1327152,
+      "present": false
+    },
+    {
+      "pid": 1327159,
+      "present": false
+    },
+    {
+      "pid": 1327160,
+      "present": true,
+      "identity_matches": true,
+      "state": "S",
+      "start_ticks": 1010136261,
+      "wchan": "0"
+    },
+    {
+      "pid": 1327161,
+      "present": false
+    },
+    {
+      "pid": 1327162,
+      "present": true,
+      "identity_matches": true,
+      "state": "S",
+      "start_ticks": 1010136261,
+      "wchan": "0"
+    },
+    {
+      "pid": 1327163,
+      "present": false
+    },
+    {
+      "pid": 1327164,
+      "present": false
+    },
+    {
+      "pid": 1327171,
+      "present": true,
+      "identity_matches": true,
+      "state": "S",
+      "start_ticks": 1010136262,
+      "wchan": "0"
+    },
+    {
+      "pid": 1327172,
+      "present": true,
+      "identity_matches": true,
+      "state": "S",
+      "start_ticks": 1010136262,
+      "wchan": "0"
+    },
+    {
+      "pid": 1327173,
+      "present": false
+    },
+    {
+      "pid": 1327174,
+      "present": false
+    },
+    {
+      "pid": 1327175,
+      "present": false
+    },
+    {
+      "pid": 1327178,
+      "present": false
+    },
+    {
+      "pid": 1327183,
+      "present": false
+    },
+    {
+      "pid": 1327184,
+      "present": false
+    },
+    {
+      "pid": 1327185,
+      "present": true,
+      "identity_matches": true,
+      "state": "S",
+      "start_ticks": 1010136262,
+      "wchan": "0"
+    },
+    {
+      "pid": 1327186,
+      "present": true,
+      "identity_matches": true,
+      "state": "S",
+      "start_ticks": 1010136262,
+      "wchan": "0"
+    },
+    {
+      "pid": 1327187,
+      "present": false
+    },
+    {
+      "pid": 1327188,
+      "present": true,
+      "identity_matches": true,
+      "state": "S",
+      "start_ticks": 1010136263,
+      "wchan": "0"
+    },
+    {
+      "pid": 1327193,
+      "present": false
+    },
+    {
+      "pid": 1327201,
+      "present": false
+    },
+    {
+      "pid": 1327205,
+      "present": false
+    },
+    {
+      "pid": 1327206,
+      "present": true,
+      "identity_matches": true,
+      "state": "S",
+      "start_ticks": 1010136263,
+      "wchan": "0"
+    },
+    {
+      "pid": 1327209,
+      "present": false
+    },
+    {
+      "pid": 1327210,
+      "present": true,
+      "identity_matches": true,
+      "state": "S",
+      "start_ticks": 1010136264,
+      "wchan": "0"
+    },
+    {
+      "pid": 1327213,
+      "present": false
+    },
+    {
+      "pid": 1327214,
+      "present": true,
+      "identity_matches": true,
+      "state": "S",
+      "start_ticks": 1010136265,
+      "wchan": "0"
+    },
+    {
+      "pid": 1327462,
+      "present": true,
+      "identity_matches": true,
+      "state": "S",
+      "start_ticks": 1010136863,
+      "wchan": "0"
+    },
+    {
+      "pid": 1327483,
+      "present": false
+    }
+  ],
+  "wandb": {
+    "id": "u4dd8tyw",
+    "state": "finished",
+    "summary": {
+      "budget/optimization_gpu_hours": 4.585255093375841,
+      "step": 20000,
+      "validation/checkpoint_step": 20000,
+      "validation/controller_budget_exhausted_rate": 0,
+      "validation/controller_budget_overrun_seconds_mean": 0,
+      "validation/controller_seconds_per_episode_mean": 4.70922421440124,
+      "validation/controller_step_latency_ms_mean": 92.652160101727,
+      "validation/controller_step_latency_ms_p95": 97.69752342253923,
+      "validation/episodes": 104,
+      "validation/expert_goal_failure_rate": 0,
+      "validation/latency_ms_mean": 92.83044646535808,
+      "validation/observed_subgoal_cosine": 0.017595163054070176,
+      "validation/return_mean": 271.92878492900917,
+      "validation/seen_success_macro": 0.7403846153846154,
+      "validation/steps_to_success_capped_mean": 101.5673076923077,
+      "validation/success_macro": 0.7403846153846154,
+      "validation/success_within_100_primitive": 0.6730769230769231,
+      "validation/success_within_200_primitive": 0.7403846153846154,
+      "validation/success_within_50_primitive": 0.20192307692307693,
+      "validation/task/assembly/ci95_high": 0.4708948057698615,
+      "validation/task/assembly/ci95_low": 0.02241690886329617,
+      "validation/task/assembly/success": 0.125,
+      "validation/task/button-press-topdown/ci95_high": 1,
+      "validation/task/button-press-topdown/ci95_low": 0.6755843804891231,
+      "validation/task/button-press-topdown/success": 1,
+      "validation/task/coffee-button/ci95_high": 1,
+      "validation/task/coffee-button/ci95_low": 0.6755843804891231,
+      "validation/task/coffee-button/success": 1,
+      "validation/task/dial-turn/ci95_high": 1,
+      "validation/task/dial-turn/ci95_low": 0.6755843804891231,
+      "validation/task/dial-turn/success": 1,
+      "validation/task/door-close/ci95_high": 1,
+      "validation/task/door-close/ci95_low": 0.6755843804891231,
+      "validation/task/door-close/success": 1,
+      "validation/task/door-open/ci95_high": 0.9775830911367038,
+      "validation/task/door-open/ci95_low": 0.5291051942301386,
+      "validation/task/door-open/success": 0.875,
+      "validation/task/drawer-close/ci95_high": 1,
+      "validation/task/drawer-close/ci95_low": 0.6755843804891231,
+      "validation/task/drawer-close/success": 1,
+      "validation/task/drawer-open/ci95_high": 1,
+      "validation/task/drawer-open/ci95_low": 0.6755843804891231,
+      "validation/task/drawer-open/success": 1,
+      "validation/task/faucet-open/ci95_high": 0.7847874731755582,
+      "validation/task/faucet-open/ci95_low": 0.21521252682444184,
+      "validation/task/faucet-open/success": 0.5,
+      "validation/task/handle-press/ci95_high": 1,
+      "validation/task/handle-press/ci95_low": 0.6755843804891231,
+      "validation/task/handle-press/success": 1,
+      "validation/task/pick-place/ci95_high": 0.3244156195108769,
+      "validation/task/pick-place/ci95_low": 0,
+      "validation/task/pick-place/success": 0,
+      "validation/task/plate-slide/ci95_high": 1,
+      "validation/task/plate-slide/ci95_low": 0.6755843804891231,
+      "validation/task/plate-slide/success": 1,
+      "validation/task/reach/ci95_high": 0.4708948057698615,
+      "validation/task/reach/ci95_low": 0.02241690886329617,
+      "validation/task/reach/success": 0.125,
+      "validation/world_predictions_mean": 16264.615384615385
+    }
+  },
+  "training_log_tail": ", \"controller_seconds_per_episode_mean\": 4.70922421440124, \"controller_budget_exhausted_rate\": 0.0, \"controller_budget_overrun_seconds_mean\": 0.0, \"observed_subgoal_cosine\": 0.017595163054070176}}\nwandb: uploading data; updating run metadata\nwandb: updating run metadata\nwandb: updating run metadata; uploading output.log; uploading wandb-summary.json\nwandb: uploading output.log; uploading wandb-summary.json\nwandb: uploading output.log; uploading wandb-summary.json; uploading config.yaml\nwandb: uploading output.log\nwandb: uploading history steps 803-803, summary, console lines 863-863\nwandb: \nwandb: Run history:\nwandb:     budget/optimization_gpu_hours \u2581\u2581\u2581\u2581\u2581\u2581\u2582\u2582\u2582\u2582\u2582\u2582\u2583\u2583\u2583\u2583\u2584\u2584\u2584\u2584\u2585\u2585\u2585\u2585\u2585\u2586\u2586\u2586\u2586\u2586\u2586\u2586\u2586\u2586\u2587\u2587\u2587\u2587\u2588\u2588\nwandb:                              step \u2581\u2581\u2581\u2581\u2581\u2582\u2582\u2582\u2582\u2582\u2583\u2583\u2583\u2583\u2583\u2583\u2583\u2583\u2584\u2584\u2584\u2584\u2584\u2584\u2585\u2586\u2586\u2586\u2586\u2586\u2586\u2586\u2587\u2587\u2587\u2587\u2587\u2588\u2588\u2588\nwandb:               system/peak_gpu_gib \u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\nwandb: system/update_examples_per_second \u2585\u2586\u2585\u2586\u2586\u2586\u2583\u2588\u2583\u2584\u2581\u2587\u2582\u2583\u2585\u2584\u2587\u2582\u2586\u2588\u2588\u2587\u2586\u2583\u2588\u2581\u2584\u2588\u2585\u2588\u2584\u2587\u2586\u2588\u2583\u2583\u2584\u2584\u2587\u2586\nwandb:             system/update_seconds \u2581\u2582\u2581\u2584\u2581\u2582\u2581\u2582\u2581\u2581\u2581\u2582\u2581\u2582\u2581\u2582\u2581\u2582\u2582\u2582\u2582\u2588\u2581\u2581\u2582\u2581\u2582\u2581\u2581\u2583\u2583\u2581\u2582\u2582\u2582\u2583\u2582\u2581\u2581\u2582\nwandb:            train/calibration_loss \u2583\u2582\u2586\u2582\u2585\u2586\u2582\u2584\u2582\u2584\u2583\u2583\u2582\u2582\u2585\u2586\u2581\u2586\u2583\u2588\u2584\u2583\u2585\u2581\u2585\u2585\u2583\u2584\u2586\u2586\u2584\u2584\u2585\u2581\u2583\u2585\u2584\u2586\u2581\u2585\nwandb:            train/execution_weight \u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\nwandb:      train/fast_weight_delta_norm \u2582\u2581\u2582\u2583\u2585\u2583\u2586\u2585\u2585\u2585\u2585\u2585\u2586\u2586\u2586\u2584\u2587\u2587\u2587\u2584\u2584\u2587\u2586\u2586\u2586\u2587\u2588\u2587\u2585\u2586\u2587\u2588\u2587\u2586\u2587\u2588\u2584\u2587\u2587\u2586\nwandb:                   train/flow_loss \u2588\u2583\u2582\u2582\u2582\u2582\u2582\u2582\u2581\u2582\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\u2581\nwandb:            train/goal_offset_mean \u2585\u2585\u2587\u2585\u2585\u2587\u2584\u2586\u2585\u2587\u2584\u2588\u2585\u2586\u2583\u2585\u2583\u2584\u2586\u2581\u2585\u2584\u2587\u2582\u2585\u2586\u2586\u2587\u2588\u2583\u2587\u2585\u2584\u2585\u2586\u2583\u2583\u2584\u2587\u2582\nwandb:                               +85 ...\nwandb: \nwandb: Run summary:\nwandb:     budget/optimization_gpu_hours 4.58526\nwandb:                              step 20000\nwandb:               system/peak_gpu_gib 10.50221\nwandb: system/update_examples_per_second 634.23526\nwandb:             system/update_seconds 0.10091\nwandb:            train/calibration_loss 0.02258\nwandb:            train/execution_weight 0\nwandb:      train/fast_weight_delta_norm 0.39303\nwandb:                   train/flow_loss 0.11592\nwandb:            train/goal_offset_mean 29.92188\nwandb:                               +85 ...\nwandb: \nwandb: \ud83d\ude80 View run progress_objective_ttt_3072 at: https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/u4dd8tyw\nwandb: \u2b50\ufe0f View project at: https://wandb.ai/attentionx2023/flow-jepa-metaworld\nwandb: Synced 5 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)\nwandb: Find logs at: /home/mtxu/adam/LeFlow-experiments/20261011-progress-objective-ttt/campaign/runs/progress_objective_ttt_3072/wandb/run-20261012_045422-u4dd8tyw/logs\n",
+  "debug_log_files": [
+    {
+      "path": "/home/mtxu/adam/LeFlow-experiments/20261011-progress-objective-ttt/campaign/runs/progress_objective_ttt_3072/wandb/debug-internal.log",
+      "bytes": 2289,
+      "last_modified": 1791783904.7475083,
+      "error_lines": [
+        "{\"time\":\"2026-10-12T04:56:00.220194554Z\",\"level\":\"INFO\",\"msg\":\"api: retrying error\",\"error\":\"Post \\\"[URL omitted]\": unexpected EOF\"}",
+        "{\"time\":\"2026-10-12T05:09:39.99883832Z\",\"level\":\"INFO\",\"msg\":\"api: retrying error\",\"error\":\"Post \\\"[URL omitted]\": net/http: request canceled (Client.Timeout exceeded while awaiting headers)\"}",
+        "{\"time\":\"2026-10-12T05:17:55.006209944Z\",\"level\":\"INFO\",\"msg\":\"api: retrying error\",\"error\":\"Post \\\"[URL omitted]\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)\"}",
+        "{\"time\":\"2026-10-12T05:43:19.900262248Z\",\"level\":\"INFO\",\"msg\":\"api: retrying error\",\"error\":\"Post \\\"[URL omitted]\": EOF\"}"
+      ]
+    },
+    {
+      "path": "/home/mtxu/adam/LeFlow-experiments/20261011-progress-objective-ttt/campaign/runs/progress_objective_ttt_3072/wandb/run-20261012_045422-u4dd8tyw/logs/debug-internal.log",
+      "bytes": 2289,
+      "last_modified": 1791783904.7475083,
+      "error_lines": [
+        "{\"time\":\"2026-10-12T04:56:00.220194554Z\",\"level\":\"INFO\",\"msg\":\"api: retrying error\",\"error\":\"Post \\\"[URL omitted]\": unexpected EOF\"}",
+        "{\"time\":\"2026-10-12T05:09:39.99883832Z\",\"level\":\"INFO\",\"msg\":\"api: retrying error\",\"error\":\"Post \\\"[URL omitted]\": net/http: request canceled (Client.Timeout exceeded while awaiting headers)\"}",
+        "{\"time\":\"2026-10-12T05:17:55.006209944Z\",\"level\":\"INFO\",\"msg\":\"api: retrying error\",\"error\":\"Post \\\"[URL omitted]\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)\"}",
+        "{\"time\":\"2026-10-12T05:43:19.900262248Z\",\"level\":\"INFO\",\"msg\":\"api: retrying error\",\"error\":\"Post \\\"[URL omitted]\": EOF\"}"
+      ]
+    }
+  ]
+}

@@ -2,6 +2,7 @@
 import argparse
 from collections import Counter
 import json
+import math
 from pathlib import Path
 import subprocess
 
@@ -43,6 +44,11 @@ def main(args):
         for offset in range(0,len(a),1024):assert torch.equal(a[offset:offset+1024],b[offset:offset+1024]),key
     assert len(bank['episode_ids'])==6222 and all(i.startswith('train/') for i in bank['episode_ids'])
     assert c['seeds']==[3072] and c['training']['global_batch']==64 and not c['execution']['test_enabled']
+    if method=='progress_objective_ttt':
+        assert not c['progress_objective']['generated_outcome_labels']
+        assert c['progress_objective']['score_weight']==.05
+        assert c['progress_objective']['time_scale_blocks']==60
+        assert c['progress_objective']['correction_bound']==.25
     assert complete['step'] <= 20000
     assert complete['stop_reason'] in ('update_limit','compute_cap')
     assert complete['validation_steps']==usage['validation_steps']
@@ -63,6 +69,10 @@ def main(args):
         assert any(k.startswith('repair_flow.') for k in saved['model'])
         assert not any(k.startswith('energy_base.') for k in saved['model'])
         assert not any(k.startswith('output.') for k in saved['model'])
+        if method=='progress_objective_ttt':
+            assert any(k.startswith('goal_progress.') for k in saved['model'])
+            assert 'progress_prior' in saved['model']
+            assert 'progress_condition.weight' in saved['model']
         if name=='best':
             milestone=torch.load(run/'checkpoints'/f"step_{saved['step']:07d}.pt",map_location='cpu',weights_only=False)
             assert all(torch.equal(v,milestone['model'][k]) for k,v in saved['model'].items())
@@ -84,6 +94,15 @@ def main(args):
     signatures=None;rounds=[]
     for step in complete['validation_steps']:
         report=json.loads((run/'validation'/f'step_{step:07d}.json').read_text())
+        for key in ('code','protocol','manifest','world_hash','bank_hash','method','seed','world_size'):
+            assert report[key]==identity[key],key
+        milestone_path=run/'checkpoints'/f'step_{step:07d}.pt'
+        milestone=torch.load(milestone_path,map_location='cpu',weights_only=False)
+        assert milestone['step']==step and not milestone['fixture']
+        for key in ('code','protocol','manifest','world_hash','bank_hash','method','seed','world_size'):
+            assert milestone[key]==identity[key],key
+        assert all(torch.isfinite(v).all() for v in milestone['model'].values())
+        checkpoints[f'step_{step:07d}']=dict(step=step,sha256=file_hash(milestone_path),finite=True)
         records=report['records'];assert len(records)==104
         current=sorted(tuple(r[k] for k in ('id','reset_seed','episode_sha256','model_seed')) for r in records)
         if signatures is None:signatures=current
@@ -93,6 +112,7 @@ def main(args):
         for record_row in records:
             ds=record_row['controller_diagnostics']['decisions']
             assert record_row['steps']<=200
+            assert record_row['controller_budget_seconds']==10
             if not record_row['controller_budget_exhausted']:assert record_row['world_predictions']==320*len(ds)
             for i,d in enumerate(ds):
                 assert d['candidate_world_transitions']==320
@@ -107,7 +127,24 @@ def main(args):
                 assert d['repair_solver_steps']==4 and d['repair_radius']==.25
                 assert d['selected_distance_from_incumbent_linf']<=.250001
                 assert d['refinement_source']=='world_verified_incumbent'
-                if method in ('retrieval_repair_ttt','shifted_repair_ttt'): assert d['repair_anchor_source'] in ('generated','retrieved','shifted')
+                if method in ('retrieval_repair_ttt','shifted_repair_ttt','progress_objective_ttt'): assert d['repair_anchor_source'] in ('generated','retrieved','shifted')
+                if method=='progress_objective_ttt':
+                    assert d['progress_fit_scope']=='past_executed_prefixes_only_fixed_during_search'
+                    if i==0:assert d['goal_progress_fast_delta_norm']==0
+                    corrections=d['candidate_goal_progress_corrections']
+                    penalties=d['candidate_stage_penalties']
+                    advances=d['candidate_target_stage_advances']
+                    assert len(corrections)==len(penalties)==len(advances)==8
+                    assert all(math.isfinite(v) and abs(v)<=.250001 for v in corrections)
+                    for advance,penalty in zip(advances,penalties):
+                        expected=.05*(max(0,-advance)+max(0,advance-5/60))
+                        assert abs(penalty-expected)<1e-7
+                    selected_correction=corrections[d['selected_anchor']]
+                    assert abs(d['goal_progress_error_correction']-selected_correction)<1e-7
+                    assert abs(d['goal_progress_corrected']-(d['goal_progress_predicted']-max(0,selected_correction)))<1e-7
+                    if i<len(ds)-1:
+                        assert 'goal_progress_observed' in d
+                        assert math.isfinite(d['goal_progress_observed'])
                 rc=d['round_best_scores']
                 assert len(rc)==2 and all(b<=a for a,b in zip(rc,rc[1:]))
                 assert d['history_valid_steps']==min(i,4)
@@ -133,6 +170,7 @@ def main(args):
         same_cases_across_rounds=True,causal_history_and_plan_reuse=True, episodic_fast_weights_and_reset_verified=True,
         score_reconstruction_verified=True,score_rounding_tolerance=1e-7,world_transition_budget_verified=True,
         training_coverage_logging_verified=True,compute=usage,complete=complete,
+        progress_score_and_causal_fit_verified=(method=='progress_objective_ttt'),
         final_tests_read=False,model_calls=0,simulator_calls=0)
     Path(args.output).write_text(json.dumps(result,indent=2)+'\n')
     print(json.dumps(dict(audit_passed=True,rounds=rounds,selected_step=selected['step'])))
@@ -141,5 +179,5 @@ def main(args):
 if __name__=='__main__':
     parser=argparse.ArgumentParser()
     for name in ('record','bank','previous-bank','output'):parser.add_argument('--'+name,required=True)
-    parser.add_argument('--method',choices=['repair_flow_ttt','retrieval_repair_ttt','shifted_repair_ttt'],default='repair_flow_ttt')
+    parser.add_argument('--method',choices=['repair_flow_ttt','retrieval_repair_ttt','shifted_repair_ttt','progress_objective_ttt'],default='repair_flow_ttt')
     main(parser.parse_args())

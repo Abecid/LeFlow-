@@ -1,0 +1,82 @@
+{
+  "step": 15000,
+  "all_saved_contact_sheets_visually_inspected": true,
+  "images": [
+    {
+      "file": "contact-sheets-15000/assembly-00000.png",
+      "sha256": "dc68f4975826be69883fa2b1b538a84c2c9ec6184afe59e71d148fbd02358eb3",
+      "id": "validation/assembly/00000",
+      "success": true,
+      "observation": "The ring moves toward the post; success is recorded at91 actions. This recovers the10k failure."
+    },
+    {
+      "file": "contact-sheets-15000/coffee-button-00000.png",
+      "sha256": "24d69a6f8d074083296e55f4ccca66a1bcd8fc666a4a793edab30e704f7f2b19",
+      "id": "validation/coffee-button/00000",
+      "success": true,
+      "observation": "Gripper approaches coffee control region; success at36 actions."
+    },
+    {
+      "file": "contact-sheets-15000/dial-turn-00000.png",
+      "sha256": "2b6548f3928737dd548f1a34b2fd732b621603ca191afc599946346aee7a2351",
+      "id": "validation/dial-turn/00000",
+      "success": true,
+      "observation": "Gripper engages the dial region; success at99 actions."
+    },
+    {
+      "file": "contact-sheets-15000/door-close-00000.png",
+      "sha256": "a6abe37a4421cb51d167d9c739f4a1d7cdd4e027acdf812c51ef0a1bebc103f2",
+      "id": "validation/door-close/00000",
+      "success": true,
+      "observation": "Door rotates toward closed goal; success at63 actions."
+    },
+    {
+      "file": "contact-sheets-15000/drawer-close-00004.png",
+      "sha256": "9bf78e2055fd7dab2a284514ad5163650d63ae6c9432d6455414653d3eee8380",
+      "id": "validation/drawer-close/00004",
+      "success": true,
+      "observation": "Drawer moves inward toward goal; success at68 actions."
+    },
+    {
+      "file": "contact-sheets-15000/faucet-open-00003.png",
+      "sha256": "8663919778240e67c30c62e94adf911e6936bda15e48902e8c226541e5cb2a8a",
+      "id": "validation/faucet-open/00003",
+      "success": false,
+      "observation": "Hand approaches the handle and remains in its vicinity in later sampled frames without success by200 actions."
+    },
+    {
+      "file": "contact-sheets-15000/handle-press-00000.png",
+      "sha256": "f8296f0f3b3425634baaaf3b6e6949ee600d3316387ae671509a7b16ecb97e76",
+      "id": "validation/handle-press/00000",
+      "success": true,
+      "observation": "Gripper approaches handle; success at16 actions."
+    },
+    {
+      "file": "contact-sheets-15000/pick-place-00000.png",
+      "sha256": "49ed25e5986daf88552a28dbe3bd7d8737c6d5ba8361457f7106fda88dc08488",
+      "id": "validation/pick-place/00000",
+      "success": false,
+      "observation": "The object remains on the table across the sampled frames while the gripper moves rightward; no visible carry. Failure at200 actions."
+    },
+    {
+      "file": "contact-sheets-15000/reach-00003.png",
+      "sha256": "b0802775505e8c38c1223ccf8aee0893764746df6b84f7d8481add5d692b913d",
+      "id": "validation/reach/00003",
+      "success": false,
+      "observation": "Hand stays near the target region in later frames without registered success by200 actions."
+    },
+    {
+      "file": "contact-sheets-15000/reach-00005.png",
+      "sha256": "fd9a839a162a6bc47edb86d77efec3dba96162df32d28587d9356e531ccd7807",
+      "id": "validation/reach/00005",
+      "success": true,
+      "observation": "Hand approaches target region; success at47 actions."
+    }
+  ],
+  "limitations": [
+    "Ten preregistered saved trajectories, not all26 failures.",
+    "Uniformly sampled measured frames, no model or simulator calls.",
+    "Recorded success labels; sparse frames do not establish causal contact/force explanations."
+  ],
+  "render_review": "All ten exact final PNGs opened and visually inspected at readable resolution; complete titles, frame labels, sampled frames and goal panels."
+}

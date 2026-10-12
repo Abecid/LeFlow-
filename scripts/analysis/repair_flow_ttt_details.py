@@ -134,10 +134,12 @@ def main(args):
         'cem_release':('20261010-release-baselines/cem/validation.json', 24),
     }
     method = load(root/'run.json')['method']
-    if method in ('retrieval_repair_ttt', 'shifted_repair_ttt'):
+    if method in ('retrieval_repair_ttt', 'shifted_repair_ttt', 'progress_objective_ttt'):
         refs['repair_flow_ttt']=('20261011-repair-flow-ttt/run/validation/step_0005000.json.gz',80)
-    if method == 'shifted_repair_ttt':
+    if method in ('shifted_repair_ttt', 'progress_objective_ttt'):
         refs['retrieval_repair_ttt']=('20261011-retrieval-repair-ttt/run/validation/step_0020000.json.gz',80)
+    if method == 'progress_objective_ttt':
+        refs['shifted_repair_ttt']=('20261011-shifted-repair-ttt/run/validation/step_0005000.json.gz',79)
     last_byid = {r['id']:r for r in reports[-1]['records']}
     selected_to_last = dict(
         selected_step=chosen['step'], last_step=reports[-1]['step'],

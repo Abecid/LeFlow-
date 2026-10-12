@@ -1,3 +1,15 @@
+# October12: progress-objective completed72/72/78/77; selected15k78
+
+Read docs/PROGRESS_OBJECTIVE_TTT_RESULTS.md and the completed ledger. Full800
+periodic records, four fixed104 reports,40 visually inspected contact sheets,
+source/data/checkpoint hashes and final compute are preserved. Source e274fed,
+all166 runtime hashes and causal scoring pass audit; all44 owned processes exited
+and W&B u4dd8tyw finished at the final readback. No candidate remains active.
+Never restart this completed run. Selected78 is below80; all117 failures exhaust
+200 actions, zero timeouts. Known measured cumulative components105.284527341
+GPUh are not a full cluster bill. Publish and verify before a further supported
+decision. No speculative queue, baseline retraining, extra data/seeds or sealed tests.
+
 # October12 05:26UTC: progress-objective curve72/72; training continues
 
 The5k and10k fixed104 evaluations both score72, with zero timeouts. Ten-k changes
@@ -11,8 +23,8 @@ Read PROGRESS_OBJECTIVE_TTT.md and active ledger. No next candidate or baseline 
 
 The5k fixed104 evaluation has72 successes, zero timeouts; all32 failures reach
 200 actions. Frozen e274fed and166 runtime hashes verified; the registered8-rank
-run continues with finite metrics and W&B running. Paired retrieval80:5 wins/13
-regressions; execution80:3/11. Pick-place0/8 retains reach/direct-goal-only final
+run continues with finite metrics and W&B running. Paired retrieval80:3 wins/11
+regressions; execution80:5/13. Pick-place0/8 retains reach/direct-goal-only final
 route tails. Ten saved contact sheets inspected. Read PROGRESS_OBJECTIVE_TTT.md
 for interim evidence and model-proxy limits. No new candidate or baseline work.
 
