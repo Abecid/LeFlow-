@@ -269,6 +269,8 @@ The result decides the direction:
 
 Candidate evaluation is extra interaction data. Any model trained with it must be compared with controls receiving the same additional data and compute. It cannot be folded silently into the original 6,222-episode comparison.
 
+If branch outcomes become training labels, partition complete source episodes before fitting the evaluator. Keep a disjoint set of restored states for outcome-ranking evaluation and replacement-margin calibration; do not report fit on the training branches as evidence of improved selection. The final reserved cases remain untouched until the method and selection rules are fixed.
+
 ### Minimal new mechanism if the diagnostic supports selection
 
 Keep the current flow and world fixed initially. A small score head receives Z, G, the first action block u, predicted prefix features, a representation of the four factual transitions, and the remaining allowances b in [B,2]. These budgets are known controller metadata. Its output is a fixed-policy continuation score, not another cosine-error estimate. The same image and prefix can have different prospects with 20 versus 180 primitive actions remaining.
