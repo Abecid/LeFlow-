@@ -1,3 +1,24 @@
+# October 12: paper thesis, formulation and design preserved
+
+Added PAPER_BLUEPRINT.md at the user's request. It defines the main direction as
+execution-calibrated bounded flow repair, gives the retained retrieval80 equations,
+factual meta-training boundaries, candidate-conditioned workspace, second residual
+flow, controller score and actual experimental setup. Contributions are mapped to
+implemented mechanisms and measured evidence; novelty, causal benefit, independent
+generalization and inference scaling remain to be demonstrated. The nonlinear73
+extension remains a negative result, not the main selected model.
+
+The blueprint includes primary related-work positioning, a current-evidence
+abstract, section/page plan, reference-grounded figure designs and specific
+prospective evidence requirements. Actual LeFlow Figures 1/3 and LaCT Figure 2
+were inspected; their reference URLs/image hashes and design lessons are saved.
+No empirical plot, training run or final evaluation was invented or dispatched.
+Configuration constants, linked sources and current result identities were checked.
+See [paper blueprint](PAPER_BLUEPRINT.md) and
+[technical consistency](reports/20261012-paper-blueprint/technical-consistency.json).
+
+Earlier progress follows.
+
 # October 12: complete research archive publication audit
 
 At the user's request, re-audited all sixteen current comparisons and 61 complete

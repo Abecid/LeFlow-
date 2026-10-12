@@ -12,6 +12,10 @@ negative results, failure analyses and earlier campaigns. The
 [machine-readable ledger](docs/results-ledger.json) preserves 16 current
 comparisons and 61 complete development evaluations with artifact hashes.
 
+The [paper blueprint](docs/PAPER_BLUEPRINT.md) states the central thesis, exact
+formulation, contribution/evidence boundaries, related-work positioning, paper
+outline and figure designs, and the missing experiments for stronger claims.
+
 | Reference | Best development success | Scope |
 | --- | ---: | --- |
 | Retrieval-conditioned bounded flow repair | **80/104** | Action flow, bounded residual repairs, linear episodic correction |

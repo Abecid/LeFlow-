@@ -1,0 +1,22 @@
+{
+  "checked_utc": "2026-10-12T20:52:42.758132+00:00",
+  "retained_execution_source": "3bdfb49e7c9d4952da7494e50c8dc2530197641e",
+  "retained_step": 20000,
+  "retained_successes": 80,
+  "nonlinear_successes": 73,
+  "configuration_constants_checked": true,
+  "local_document_links_checked": true,
+  "github_math_delimiters_checked": true,
+  "source_files_inspected": {
+    "flow_jepa/execution/progress_ttt.py": "c7cdf0d6e58f9067263a5d5b8ad61a5e2dba98470c504bbe05f7ecddc2c6de60",
+    "flow_jepa/execution/flow_reasoning.py": "9527c33d3867d94dc7a8715d648d3f3e3ca45d5cc76d9d4d6c6b85a071c11b12",
+    "flow_jepa/execution/repair_flow_ttt.py": "6a39dbebc066c3254c8980117c0dfee1325054ddbeaa6961a41a22e504a4a8a9",
+    "flow_jepa/execution/retrieval_repair.py": "9b6b962fa462d5728ec20519768c3c410a3c4822849bf9e3040a1b19481f8149",
+    "flow_jepa/execution/flow_controller.py": "7bfaf0ca7bfff4b324f9750f5baf83435c9ebf7c099d3790ed86ddd949628e17",
+    "flow_jepa/execution/bank.py": "6369ac488c96bf5d9a12cf7344bce5017aa8d8900588f224040f112db9f3d7bc",
+    "config/flow_metaworld_retrieval_repair_ttt.json": "ef790ddf154eccc287e2c53fd844870055203b0a16a224b4f01b62bce3f53b5a"
+  },
+  "paper_blueprint_sha256": "e0a9659ab665803cb19b5885dc9e3f5fb8713fd6ec040891df00cd2a81d90074",
+  "new_training_or_evaluation": false,
+  "actual_reference_figure_review": "docs/reports/20261012-paper-blueprint/reference-figure-review.json"
+}

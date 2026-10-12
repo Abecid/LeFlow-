@@ -72,6 +72,15 @@ history. Historical LeFlow/HWM adaptations and different-world measurements
 must not be pooled with the fixed comparison table above. A poor or superseded
 result remains evidence and must not be deleted or silently relabeled.
 
+## Paper thesis and technical formulation
+
+The [paper blueprint](PAPER_BLUEPRINT.md) defines execution-calibrated bounded
+flow repair as the intended central mechanism. It records the implemented
+objective, factual adaptation, candidate-conditioned workspace, residual flow,
+incumbent retention, contribution status, related-work boundaries, current
+abstract, figure designs and prospective evidence requirements. It distinguishes
+the retained retrieval80 method from the unsuccessful nonlinear73 extension.
+
 ## Implementation and behavior map
 
 The source revision in each ledger entry fixes the implementation used for that

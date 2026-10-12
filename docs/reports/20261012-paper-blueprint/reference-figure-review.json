@@ -1,0 +1,32 @@
+{
+  "checked_utc": "2026-10-12T20:50:49.693686+00:00",
+  "actual_reference_images_visually_inspected": true,
+  "references": [
+    {
+      "paper": "LeFlow",
+      "figure": "Figure 1",
+      "url": "https://arxiv.org/pdf/2608.24855",
+      "local_inspected_image": "/Users/abecid/Documents/Codex/2026-10-07/conti/work/paper-blueprint/references/leflow-figure1.png",
+      "inspected_image_sha256": "a30885a29ee950bd825ad85292a6f22519776f00c648b5ee457b840709cb1ee0",
+      "applicable_design_lesson": "Success and runtime are distinct measured panels; distinguish the protocol from native results."
+    },
+    {
+      "paper": "LeFlow",
+      "figure": "Figure 3",
+      "url": "https://arxiv.org/pdf/2608.24855",
+      "local_inspected_image": "/Users/abecid/Documents/Codex/2026-10-07/conti/work/paper-blueprint/references/leflow-figure3.png",
+      "inspected_image_sha256": "f96f5d25d6cb04cb7a7b69c934ec37af76f77c3ff1d2dda543849e796005df32",
+      "applicable_design_lesson": "Separate intended states from model rollouts; our extension must additionally distinguish observed execution."
+    },
+    {
+      "paper": "LaCT",
+      "figure": "Figure 2",
+      "url": "https://tianyuanzhang.com/projects/ttt-done-right/",
+      "local_inspected_image": "/Users/abecid/Documents/Codex/2026-10-07/conti/work/paper-blueprint/references/lact-figure2.png",
+      "inspected_image_sha256": "eb95fa8d92e5ff3a1d5fb3aa725d34e6e47b0470546c069bccbbc5b968a322a7",
+      "applicable_design_lesson": "Make update and apply operations explicit, with causal evidence boundaries; our small memory does not inherit large-context throughput claims."
+    }
+  ],
+  "new_empirical_figure_generated": false,
+  "all_proposed_experiments_are_unmeasured": true
+}
