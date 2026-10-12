@@ -56,11 +56,12 @@ def initial_diversity(reports):
 
 def summarize(report):
     records = report['records']
+    world_calls = 280 if report.get('method')=='bayesian_repair_ttt' else 320
     assert len(records) == 104 and all(r['id'].startswith('validation/') for r in records)
     decisions = [d for r in records for d in r['controller_diagnostics']['decisions']]
     observed = [d for d in decisions if 'actual_prefix_target_progress' in d]
     for d in decisions:
-        assert d['candidate_world_transitions'] == 320 and d['reasoning_depth'] == 2
+        assert d['candidate_world_transitions'] == world_calls and d['reasoning_depth'] == 2
         assert d['scoring_context_fixed'] and d['flow_evaluations'] == 12
         assert d['selected_distance_from_incumbent_linf'] <= .250001
         assert d['repair_incumbent_preserved'] and d['surrogate_gradient_evaluations']==0
@@ -71,7 +72,7 @@ def summarize(report):
         assert r['steps'] <= 200
         ds = r['controller_diagnostics']['decisions']
         if not r['controller_budget_exhausted']:
-            assert r['world_predictions'] == 320*len(ds)
+            assert r['world_predictions'] == world_calls*len(ds)
             assert r['steps'] in (2*len(ds), 2*len(ds)-1)
         if r['success']:
             continue
@@ -134,11 +135,11 @@ def main(args):
         'cem_release':('20261010-release-baselines/cem/validation.json', 24),
     }
     method = load(root/'run.json')['method']
-    if method in ('retrieval_repair_ttt', 'shifted_repair_ttt', 'progress_objective_ttt'):
+    if method in ('retrieval_repair_ttt', 'shifted_repair_ttt', 'progress_objective_ttt', 'bayesian_repair_ttt'):
         refs['repair_flow_ttt']=('20261011-repair-flow-ttt/run/validation/step_0005000.json.gz',80)
-    if method in ('shifted_repair_ttt', 'progress_objective_ttt'):
+    if method in ('shifted_repair_ttt', 'progress_objective_ttt', 'bayesian_repair_ttt'):
         refs['retrieval_repair_ttt']=('20261011-retrieval-repair-ttt/run/validation/step_0020000.json.gz',80)
-    if method == 'progress_objective_ttt':
+    if method in ('progress_objective_ttt','bayesian_repair_ttt'):
         refs['shifted_repair_ttt']=('20261011-shifted-repair-ttt/run/validation/step_0005000.json.gz',79)
     last_byid = {r['id']:r for r in reports[-1]['records']}
     selected_to_last = dict(
@@ -177,13 +178,15 @@ def main(args):
     keys += [k for k in ('train/retrieval_eligible_fraction','train/retrieved_anchor_fraction',
                          'train/shifted_eligible_fraction','train/shifted_anchor_fraction')
              if all(k in row for row in train_logs)]
+    if method=='bayesian_repair_ttt':
+        keys += ['train/posterior_nll','train/deployed_calibration_loss','train/posterior_90_coverage','train/posterior_standardized_error','train/posterior_noise_std','train/recorded_applied_prefix_mae']
     windows = []
     for report in reports:
         rows = [r for r in train_logs if report['step']-500 < r['step'] <= report['step']]
         windows.append(dict(step=report['step'], entries=len(rows),
             metrics={k:average(r[k] for r in rows) for k in keys},
             by_depth={str(d):{k:average(r[k] for r in rows if r['train/reasoning_depth']==d) for k in keys}
-                      for d in (1, 2)}))
+                      for d in ((1,2,3) if method=='bayesian_repair_ttt' else (1,2))}))
     result = dict(selected_step=chosen['step'], rounds=[summarize(r) for r in reports],
         initial_proposal_diversity=initial_diversity(reports),
         comparisons=comparisons, selected_to_last=selected_to_last,

@@ -15,6 +15,9 @@ def main(args):
     torch.set_num_threads(2)
     record=Path(args.record);repo=record/'repo';root=record/'campaign'
     method=getattr(args,'method','repair_flow_ttt')
+    bayesian=method=='bayesian_repair_ttt'
+    world_calls=280 if bayesian else 320
+    depth_count=3 if bayesian else 2
     run=root/'runs'/f'{method}_3072'
     c=json.loads((repo/'config'/f'flow_metaworld_{method}.json').read_text())
     manifest=json.loads((root/'manifest.json').read_text())
@@ -79,11 +82,11 @@ def main(args):
         checkpoints[name]=dict(step=saved['step'],sha256=file_hash(path),finite=True)
     logs=[json.loads(line) for line in (run/'metrics.jsonl').read_text().splitlines()]
     training=[x for x in logs if 'step' in x]
-    assert [x['step'] for x in training]==[s for s in range(1,complete['step']+1) if s==1 or s%50 in (0,1)]
+    assert [x['step'] for x in training]==[s for s in range(1,complete['step']+1) if s==1 or s%50 in ((0,1,2) if bayesian else (0,1))]
     assert [x['validation/checkpoint_step'] for x in logs if 'validation/checkpoint_step' in x]==complete['validation_steps']
     assert all(x['train/late_window_fraction']>=0 for x in training)
     assert all(x['train/execution_weight']==0 for x in training)
-    assert all(x['train/reasoning_depth']==1+(x['step']-1)%2 for x in training)
+    assert all(x['train/reasoning_depth']==1+(x['step']-1)%depth_count for x in training)
     assert any(x['train/late_window_fraction']>0 for x in training)
     if method=='shifted_repair_ttt':
         deep=[x for x in training if x['train/reasoning_depth']==2]
@@ -113,21 +116,25 @@ def main(args):
             ds=record_row['controller_diagnostics']['decisions']
             assert record_row['steps']<=200
             assert record_row['controller_budget_seconds']==10
-            if not record_row['controller_budget_exhausted']:assert record_row['world_predictions']==320*len(ds)
+            if not record_row['controller_budget_exhausted']:assert record_row['world_predictions']==world_calls*len(ds)
             for i,d in enumerate(ds):
-                assert d['candidate_world_transitions']==320
+                assert d['candidate_world_transitions']==world_calls
                 assert d['scoring_context_fixed'] and d['flow_evaluations']==12
                 assert d['reasoning_depth']==2
                 assert d['fast_weights_fixed_during_search'] and d['fast_fit_batches_per_decision']==1
                 assert d['fast_support_steps']==min(i,4)
-                assert d['fast_weight_rank']==32 and d['fast_weight_ridge']==.125
+                assert d['fast_weight_rank']==32
+                if not bayesian:assert d['fast_weight_ridge']==.125
                 assert d['adaptation_scope']=='current_episode_executed_transitions'
                 if i==0:assert d['fast_weight_delta_norm']==0
                 assert d['surrogate_gradient_evaluations']==0 and d['repair_incumbent_preserved']
                 assert d['repair_solver_steps']==4 and d['repair_radius']==.25
                 assert d['selected_distance_from_incumbent_linf']<=.250001
-                assert d['refinement_source']=='world_verified_incumbent'
-                if method in ('retrieval_repair_ttt','shifted_repair_ttt','progress_objective_ttt'): assert d['repair_anchor_source'] in ('generated','retrieved','shifted')
+                if not bayesian:assert d['refinement_source']=='world_verified_incumbent'
+                else:
+                    from scripts.analysis.bayesian_repair_details import check_decision
+                    check_decision(d)
+                if method in ('retrieval_repair_ttt','shifted_repair_ttt','progress_objective_ttt','bayesian_repair_ttt'): assert d['repair_anchor_source'] in ('generated','retrieved','shifted')
                 if method=='progress_objective_ttt':
                     assert d['progress_fit_scope']=='past_executed_prefixes_only_fixed_during_search'
                     if i==0:assert d['goal_progress_fast_delta_norm']==0
@@ -179,5 +186,5 @@ def main(args):
 if __name__=='__main__':
     parser=argparse.ArgumentParser()
     for name in ('record','bank','previous-bank','output'):parser.add_argument('--'+name,required=True)
-    parser.add_argument('--method',choices=['repair_flow_ttt','retrieval_repair_ttt','shifted_repair_ttt','progress_objective_ttt'],default='repair_flow_ttt')
+    parser.add_argument('--method',choices=['repair_flow_ttt','retrieval_repair_ttt','shifted_repair_ttt','progress_objective_ttt','bayesian_repair_ttt'],default='repair_flow_ttt')
     main(parser.parse_args())

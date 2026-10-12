@@ -119,3 +119,14 @@ Current novelty claim is a proposed application: **use execution-calibrated
 posterior comparisons to govern bounded generative plan repair**. Benefit,
 novelty, causal component contribution and inference scaling remain empirical
 questions; prior 80/104 results do not establish this candidate's performance.
+
+## Reporting tools
+
+The reporting checkout adds `scripts/analysis/bayesian_repair_details.py` to
+reconstruct candidate scores, preserved incumbents, total bounds and acceptance
+margins from saved records, and summarize observed calibration/rejection rates.
+`audit_repair_flow_ttt_run.py --method bayesian_repair_ttt` additionally checks
+source/data/case/checkpoint identity and 280-call/three-training-depth accounting.
+Run these from the reporting checkout, never by modifying frozen execution source.
+`repair_flow_ttt_details.py` supplies the same case-paired comparisons and failure
+summaries as previous iterations, with the new method's correct accounting.
