@@ -1,76 +1,87 @@
-# Execution-aware visual planning with V-JEPA 2.1 (LeFlow fork)
+# Execution-calibrated visual planning with V-JEPA 2.1 (LeFlow fork)
 
-**Current status, October 11:** guided action-flow TTT completed20k updates and
-all four fixed104 evaluations: **72, 70, 72, 75**. Its selected final model scores
-**72.12%**, below the preserved execution-revision GMM's **80/104 (76.92%)**,
-reasoning-conditioned flow's79/104 and progress-TTT's78/104. All29 final failures
-exhausted the controller allowance; mean decision latency was103.46ms.
-Adaptation improved executed-prefix prediction error, but this iteration does
-not establish better task success or useful inference scaling.
+**Current status, October 12, 2026:** all sixteen registered shared-world
+comparisons are complete. The latest LaCT-inspired nonlinear episodic memory
+run scores **73 / 66 / 67 / 72 out of 104**, selecting 73 at 5k updates. It does
+not improve on the retained **80/104 (76.92%)** retrieval-repair or
+execution-revision references. No training run is active.
 
-[Completed results and failure analysis](docs/GUIDED_TTT_RESULTS.md),
-[full metrics, evaluations and audit](docs/reports/20261010-guided-ttt/),
-[method](docs/GUIDED_TTT.md), and
-[all preserved runs and completion-publication policy](docs/RESULTS_INDEX.md).
-The same seed, data, batch and training/controller ceilings were preserved.
-W&B is finished and the final audit passed. Every future completed run, including
-baselines, must have its metrics/findings committed and verified on origin/main.
-No additional run, ablation or sealed test was launched for this review.
+Start with the [complete experiment index](docs/RESULTS_INDEX.md), which links
+all methods, training curves, baseline comparisons, implementation sources,
+negative results, failure analyses and earlier campaigns. The
+[machine-readable ledger](docs/results-ledger.json) preserves 16 current
+comparisons and 61 complete development evaluations with artifact hashes.
 
-The corrected baselines are
-completed, verified and frozen. Selected development scores are **LeFlow21/104,
-HWM paper port5/104 and released CEM24/104**, versus our preserved80/104.
-[Full results, learning curves and compute](docs/RELEASE_BASELINE_RESULTS.md) and
-[the source/adaptation audit](docs/RELEASE_BASELINES.md) record the exact scope.
-These are shared-backbone MetaWorld ports under fixed training/controller limits.
-HWM robot code is unavailable, convergence is not established, and CEM/HWM are
-strongly limited by controller time. This is not an authors' native-benchmark
-reproduction or an independent final-test SOTA claim. All20 tests passed and
-all baseline workers finished. These frozen references are reused below.
+| Reference | Best development success | Scope |
+| --- | ---: | --- |
+| Retrieval-conditioned bounded flow repair | **80/104** | Action flow, bounded residual repairs, linear episodic correction |
+| Execution-revision controller | **80/104** | GMM proposer; no flow/diffusion generator |
+| Latest nonlinear episodic flow repair | **73/104** | LaCT-inspired memory trained through factual prefix updates |
+| LeFlow release-module/spatial port | 21/104 | Released core modules with documented shared-world adaptation |
+| HWM paper port | 5/104 | Robotics implementation unavailable; time-limited paper port |
+| Released CEM | 24/104 | Released solver on the shared frozen world |
 
-The execution-revision iteration is complete.
-Its four fixed validation rounds score **80, 78, 79 and 76 out of 104** at 5k,
-10k, 15k and 20k updates. The selected 5k checkpoint scores **76.92%**, versus
-the previous controller-grounded **79/104 (75.96%)** and latent-revision
-**77/104 (74.04%)**. The one-case best-checkpoint gain is not reliable superiority.
-Later training improves demonstration fit while initial proposal diversity falls
-about 51%; the causes of the task-success regression remain unisolated.
+## Research direction and observed behavior
 
-One fresh seed-3072 policy was trained on all eight A800 GPUs using the same
-6,222 successful expert episodes, global batch 64, 20k-update/8-optimization-GPUh
-ceilings, fixed 104 validation cases and 10-second/200-action controller limits.
-Actual optimization used 3.233375 GPUh; registered validation used 1.945972 GPUh.
-The cached V-JEPA 2.1 encoder features and fine world were frozen. Baselines
-were preserved; no baseline rerun, extra seed, ablation or final test was added.
-The run finished normally and all owned workers exited.
+The research direction is **execution-calibrated bounded flow repair**: use
+observed action-prefix outcomes to correct predicted costs, condition action
+generation and bounded repairs, and retain the incumbent during search.
+Whether the correction mechanism improves physical decisions and provides useful
+inference scaling remains unestablished. This is a V-JEPA 2.1 / MetaWorld study;
+the current method uses no BTM and is not an unchanged published LeFlow model.
 
-The previous best measured candidate uses an execution-error-conditioned latent workspace,
-a GMM action proposer, supported target retrieval and bounded CEM verification.
-It scores the executed prefix and terminal window, reuses shifted plans and
-penalizes repeated observed stalls. It has **no flow-matching or diffusion
-generator**. The `flow_jepa` package and W&B project names are historical; this
-is neither the published Flow-JEPA dynamics model nor an unchanged LeFlow model.
-Historical LeFlow/HWM adaptations retain documented implementation differences;
-these development validation comparisons are not corrected-SOTA or final-test
-claims. The corrected baseline work is complete; the new flow-reasoning run is
-separate from this preserved GMM reference.
+- [Retrieval-repair](docs/RETRIEVAL_REPAIR_TTT_RESULTS.md) reaches 80/104 but
+  does not exceed the preserved GMM reference. Their selected checkpoints have
+  different case-level successes and failures.
+- [Nonlinear memory](docs/NONLINEAR_REPAIR_TTT_RESULTS.md) improves aggregate
+  next-prefix prediction error while task success remains below 80. Assembly
+  and pick-place remain 0/8 throughout; reach falls from 8/8 to 4/8. The learned
+  empty-history prior worsens prediction error relative to the raw world.
+- [Goal-progress supervision](docs/PROGRESS_OBJECTIVE_TTT_RESULTS.md),
+  [Bayesian repair acceptance](docs/BAYESIAN_REPAIR_TTT_RESULTS.md), and
+  [shifted-plan training](docs/SHIFTED_REPAIR_TTT_RESULTS.md) select 78, 77,
+  and 79 respectively. These negative results are retained.
+- Lower action losses, smaller repair targets and shrinking proposal spread do
+  not establish better execution. Route provenance and sparse trajectory images
+  support diagnostics, not causal claims about rejected actions or contact forces.
+- [Released baseline findings](docs/RELEASE_BASELINE_RESULTS.md) distinguish
+  implementation provenance, continuing loss improvement, and severe controller
+  time limits for HWM/CEM from unrestricted method capability.
 
-- [Corrected baseline results and resource-limit findings](docs/RELEASE_BASELINE_RESULTS.md)
-- [Independent project, comparison and contribution audit](docs/PROJECT_AUDIT_20261010.md)
-- [Execution-revision results, training-decline diagnosis and method lineage](docs/EXECUTION_REVISION_RESULTS.md)
-- [Registered implementation and resource contract](docs/EXECUTION_REVISION_RUN.md)
-- [Previous latent-revision results](docs/LATENT_REVISION_RESULTS.md)
-- [Previous strongest controller-grounded result](docs/CONTROLLER_GROUNDED_RESULTS.md)
-- [Latent-reasoning literature and code review](docs/LARC_APPLICATION_20261009.md)
-- [Progress and preserved experiment evidence](docs/PROGRESS.md)
-- [Historical repair and comparison protocol](docs/REPAIRED_COMPARISON.md)
-- [Implementation and literature-fidelity audit](docs/EVAL_AUDIT_20261009.md)
+## Data, budget and claim limits
 
-The research uses frozen V-JEPA 2.1 features for MetaWorld, with **no BTM**.
-Historical BTM scripts remain only for reproducibility. Earlier scheduling
-records are historical. The old all-method queue stays cancelled; the new baseline
-launchers have separate frozen source/configuration/checkpoint registries. Final
-tests stay reserved.
+Policy training uses **6,222 successful expert episodes**, frozen cached
+V-JEPA 2.1 features and a shared frozen spatial world, seed 3072 and global batch
+64. Each trained policy stops at 20,000 updates or eight optimizer GPU-hours;
+consumed compute differs. Four fixed **104-case development evaluations** cover
+13 tasks under 200 primitive actions and ten cumulative controller seconds.
+[The protocol audit](docs/RELEASE_BASELINES.md) documents baseline adaptations.
+
+These are repeatedly used development cases with one training seed. Best-checkpoint
+selection is not independent testing; convergence of all baselines is not
+established. The reserved 3,200-case final evaluation remains unused by the current
+comparison. No native-benchmark SOTA, general superiority, component causality or
+inference-scaling result is claimed.
+
+## Implementations and reproducibility
+
+- [Current controllers and training](flow_jepa/execution/),
+  [baseline ports and pinned upstream provenance](flow_jepa/baselines/),
+  [direct LeFlow TTT](flow_jepa/leflow_ttt/), and [experiment configurations](config/).
+- [Latest complete results, behavior and visual evidence](docs/NONLINEAR_REPAIR_TTT_RESULTS.md).
+- [All experiments, source mapping and failure findings](docs/RESULTS_INDEX.md).
+- [Chronological decisions, repairs and runtime history](docs/PROGRESS.md).
+- [Historical sampler repairs](docs/REPAIR_RESULTS.md) and
+  [different-world experiments](docs/REPAIRED_VALIDATION_RESULTS.md).
+
+Full training metrics, evaluation records, compute accounting, selected trajectory
+contact sheets, source identities and checkpoint paths/hashes are preserved in
+[the evidence archive](docs/reports/). Model binaries and raw datasets remain on
+the server; they are not stored in Git. Run
+`python3 scripts/analysis/verify_result_publications.py` to verify the current
+ledger and paired development-case identities without running models or opening
+final-test outcomes. Every completed run must be published to `origin/main`,
+including unsuccessful experiments.
 
 Original LeFlow release documentation and attribution follow.
 

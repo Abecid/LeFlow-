@@ -1,3 +1,23 @@
+# October 12: complete research archive publication audit
+
+At the user's request, re-audited all sixteen current comparisons and 61 complete
+104-case evaluations. The ledger verifier passes 619 hashed artifacts, selected
+checkpoint rules and all paired case identities. All sixteen execution-source
+commits are ancestors of the published research history. Six historical full
+training-log exports (2,430 records) match the live server's original JSONL
+records after canonical parsing. Existing earlier evaluation/failure records
+remain preserved, and the separate PushT/BTM origin archive is linked explicitly.
+
+Updated the stale README and added a source/behavior map to RESULTS_INDEX.md,
+including negative results, calibration-versus-success mismatch, proposal
+contraction limits, task failures, baseline fidelity and runtime constraints.
+Raw datasets and model binaries remain server-side with existing provenance.
+No training, evaluation, checkpoint change or final-test access occurred.
+See [audit coverage](reports/20261012-publication-audit/coverage.json) and
+[historical log verification](reports/20261012-publication-audit/historical-training-log-verification.json).
+
+Earlier progress follows.
+
 # Nonlinear repair completed: selected 5k 73; further launches held
 
 The fixed curve is 73/66/67/72, below the retained 80 references. All 800 periodic

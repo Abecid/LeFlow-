@@ -1,0 +1,94 @@
+{
+  "checked_utc": "2026-10-12T20:45:09.985818+00:00",
+  "reviewed_base_commit": "12ea16b66b1c4a2e7516c612b2ab71e02a97d5a9",
+  "completed_comparisons": 16,
+  "evaluation_reports": 61,
+  "source_history": [
+    {
+      "method": "nonlinear_repair_ttt",
+      "source": "d0cae3007c7d678cdc5ddb68ce731e8a2db3005d",
+      "source_in_published_history": true
+    },
+    {
+      "method": "bayesian_repair_ttt",
+      "source": "4d322c90e216702fae2cd29c91e49ad90da713d9",
+      "source_in_published_history": true
+    },
+    {
+      "method": "progress_objective_ttt",
+      "source": "e274fed5850b967c5e8e176e5cab3611d992e8bf",
+      "source_in_published_history": true
+    },
+    {
+      "method": "shifted_repair_ttt",
+      "source": "2ae5a6c97bebe56b0b1f889cb34996d34cbf03d6",
+      "source_in_published_history": true
+    },
+    {
+      "method": "retrieval_repair_ttt",
+      "source": "3bdfb49e7c9d4952da7494e50c8dc2530197641e",
+      "source_in_published_history": true
+    },
+    {
+      "method": "repair_flow_ttt",
+      "source": "481bb7679aa3f43e938fd3991f3be57ba59f0ed0",
+      "source_in_published_history": true
+    },
+    {
+      "method": "guided_ttt",
+      "source": "92fdae6120c568a6e13c7ca2e6013fbc72cb45bf",
+      "source_in_published_history": true
+    },
+    {
+      "method": "execution_revision",
+      "source": "8be2808eaa09e539d30d07ee3760fc7b59717793",
+      "source_in_published_history": true
+    },
+    {
+      "method": "flow_reasoning",
+      "source": "ca8430ecac26ecf11fdae4307981e095f61c937c",
+      "source_in_published_history": true
+    },
+    {
+      "method": "progress_ttt",
+      "source": "8ae86855738370b06c8f59b96150ac68c389d010",
+      "source_in_published_history": true
+    },
+    {
+      "method": "controller_grounded",
+      "source": "74a0a715cc393ba26285deb4571006ee7bc4d286",
+      "source_in_published_history": true
+    },
+    {
+      "method": "latent_revision",
+      "source": "899f8f2564e011ae87065a70acf28c50dade9997",
+      "source_in_published_history": true
+    },
+    {
+      "method": "leflow_ttt",
+      "source": "70c19323351b7fe2756f52ec6968b75f65abe7a2",
+      "source_in_published_history": true
+    },
+    {
+      "method": "leflow_release",
+      "source": "564b52ffc86eba212aa6858f3a9f10390905a905",
+      "source_in_published_history": true
+    },
+    {
+      "method": "hwm_paper",
+      "source": "cde9c394c00e5be68348d6e80c1fd22d0e5c518d",
+      "source_in_published_history": true
+    },
+    {
+      "method": "cem_release",
+      "source": "564b52ffc86eba212aa6858f3a9f10390905a905",
+      "source_in_published_history": true
+    }
+  ],
+  "historical_training_logs": 6,
+  "historical_training_metric_records": 2430,
+  "checked_document_local_links": true,
+  "new_training_or_evaluation_launched": false,
+  "raw_data_or_model_binaries_added": false,
+  "scope": "Implementation history, all current registered results and earlier MetaWorld training logs. Older PushT/BTM archive remains on its original linked origin branch."
+}

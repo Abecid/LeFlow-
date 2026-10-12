@@ -72,6 +72,46 @@ history. Historical LeFlow/HWM adaptations and different-world measurements
 must not be pooled with the fixed comparison table above. A poor or superseded
 result remains evidence and must not be deleted or silently relabeled.
 
+## Implementation and behavior map
+
+The source revision in each ledger entry fixes the implementation used for that
+run; current source files retain the named variants. Configuration, runtime,
+checkpoint and provenance records are linked from each result report.
+
+| Experiment family | Implementation | Observed result / finding |
+| --- | --- | --- |
+| Grounded / latent / execution revision | [model](../flow_jepa/execution/model.py), [revision](../flow_jepa/execution/revision.py), [controller](../flow_jepa/execution/aligned.py) | Selected 79 / 77 / 80; GMM reference is not a flow generator |
+| Reasoning-conditioned flow | [flow model](../flow_jepa/execution/flow_reasoning.py), [controller](../flow_jepa/execution/flow_controller.py) | 79; later demonstration fitting does not increase success |
+| Episodic correction / guided flow | [progress TTT](../flow_jepa/execution/progress_ttt.py), [guidance](../flow_jepa/execution/guided_ttt.py) | 78 / 75; calibration and controller time matter separately |
+| Bounded repair / retrieved anchors | [repair](../flow_jepa/execution/repair_flow_ttt.py), [retrieval](../flow_jepa/execution/retrieval_repair.py) | Both select 80; retained flow references |
+| Shifted-plan training | [implementation](../flow_jepa/execution/shifted_repair.py) | 79; no improvement over retained reference |
+| Goal-progress objective | [implementation](../flow_jepa/execution/progress_objective.py) | 78; task-relevant progress remains unresolved |
+| Bayesian repair acceptance | [model](../flow_jepa/execution/bayesian_repair.py), [controller](../flow_jepa/execution/bayesian_controller.py) | 77; evidential support does not establish better executed choices |
+| Nonlinear memory on repair | [implementation](../flow_jepa/execution/nonlinear_repair.py) | 73; adapted next-prefix error improves while physical success does not |
+| Direct LeFlow TTT | [model](../flow_jepa/leflow_ttt/model.py), [controller](../flow_jepa/leflow_ttt/controller.py) | 29; separate from TTT on the stronger repair controller |
+| Released / paper baseline ports | [implementations and upstream provenance](../flow_jepa/baselines/) | LeFlow 21, HWM 5, CEM 24; native-method and runtime caveats above |
+| Original and repaired latent-flow campaigns | [historical models](../flow_jepa/models.py), [training](../flow_jepa/train.py) | Different-world results and confirmed sampler defect remain separately documented |
+
+The strongest recurring observation is a mismatch between model-distance error
+and physical success. Lower calibration/action losses do not establish useful
+counterfactual action rankings. Pick-place can follow reach/direct-goal routes,
+but some earlier failures retained pick-place routes; route filtering is not a
+confirmed remedy. Proposal contraction occurs alongside some regressions, yet
+also appeared in improving runs, so it is not a demonstrated cause. Timeouts
+must be distinguished from failures reaching 200 actions. Detailed paired cases,
+full curves and saved visual reviews remain in the linked per-run reports.
+
+The older PushT/BTM work belongs to a different campaign and remains preserved
+on [its original remote branch](https://github.com/Abecid/LeFlow-/tree/codex/server-launch-20261004),
+including [its report archive](https://github.com/Abecid/LeFlow-/tree/codex/server-launch-20261004/docs/research/pusht_pair_20261004).
+It is not pooled with the MetaWorld comparison or silently merged into current
+method implementations.
+
+The October 12 publication audit additionally compares all six archived full
+training logs from the October 7/9 MetaWorld campaigns with the live server's
+original JSONL records: [verification receipt](reports/20261012-publication-audit/historical-training-log-verification.json).
+Their original JSON-array export preserves every parsed metric record.
+
 ## Standing completion requirement
 
 The user requires **every training run, including baselines, to have its results,

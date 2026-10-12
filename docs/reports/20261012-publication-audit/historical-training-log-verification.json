@@ -1,0 +1,42 @@
+{
+  "checked_utc": "2026-10-12T20:43:44.136490+00:00",
+  "historical_full_training_logs_verified": [
+    {
+      "local": "docs/reports/20261007-joint-flow/runs/hwm_adapted_3072/metrics.json",
+      "remote": "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/runs/hwm_adapted_3072/metrics.jsonl",
+      "rows": 405,
+      "canonical_sha256": "2cd11a2fa579e1ab57c48b96925289b2bd65b77278684a36a38e77e39865f1ec"
+    },
+    {
+      "local": "docs/reports/20261007-joint-flow/runs/joint_flow_consistent_3072/metrics.json",
+      "remote": "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/runs/joint_flow_consistent_3072/metrics.jsonl",
+      "rows": 405,
+      "canonical_sha256": "eb03869716d3cf36ee55f2b3970add0ce29abf2391c333f3e84fc39828ce86f2"
+    },
+    {
+      "local": "docs/reports/20261007-joint-flow/runs/leflow_adapted_3072/metrics.json",
+      "remote": "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/runs/leflow_adapted_3072/metrics.jsonl",
+      "rows": 405,
+      "canonical_sha256": "4ebc9192195c1994deca4ede6b1c886bc5ab6df702967ca7865fe42d47958c39"
+    },
+    {
+      "local": "docs/reports/20261007-joint-flow/runs/world_3072/metrics.json",
+      "remote": "/home/mtxu/adam/LeFlow-experiments/20261007-joint-flow/campaign/runs/world_3072/metrics.jsonl",
+      "rows": 405,
+      "canonical_sha256": "6c62a0c67295ddc77b9b224f329c5ab72d935037771e672cd16f37a445c8b4b7"
+    },
+    {
+      "local": "docs/reports/20261009-repaired-comparison/runs/joint_flow_consistent_3072/metrics.json",
+      "remote": "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/joint_flow_consistent_3072/metrics.jsonl",
+      "rows": 405,
+      "canonical_sha256": "51c338d659f2090f50618c18516da4cd9739112fadfb66ac797b910d31d1b916"
+    },
+    {
+      "local": "docs/reports/20261009-repaired-comparison/runs/world_3072/metrics.json",
+      "remote": "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/metrics.jsonl",
+      "rows": 405,
+      "canonical_sha256": "4d67439dc25e4baf310762d441c9e78b4cd3ddbb6008995f3e263ea16b793bd0"
+    }
+  ],
+  "final_test_outcomes_read": false
+}
