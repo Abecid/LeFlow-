@@ -1,0 +1,1385 @@
+{
+  "selected_step": 10000,
+  "rounds": [
+    {
+      "step": 5000,
+      "successes": 71,
+      "per_task": {
+        "assembly": 1,
+        "button-press-topdown": 8,
+        "coffee-button": 8,
+        "dial-turn": 7,
+        "door-close": 7,
+        "door-open": 6,
+        "drawer-close": 8,
+        "drawer-open": 8,
+        "faucet-open": 1,
+        "handle-press": 8,
+        "pick-place": 0,
+        "plate-slide": 8,
+        "reach": 1
+      },
+      "timeouts": 0,
+      "metrics": {
+        "controller_budget_exhausted_rate": 0.0,
+        "controller_budget_overrun_seconds_mean": 0.0,
+        "controller_seconds_per_episode_mean": 4.902130724450287,
+        "controller_step_latency_ms_mean": 88.5875925878071,
+        "controller_step_latency_ms_p95": 92.72838197648525,
+        "episodes": 104,
+        "expert_goal_failure_rate": 0.0,
+        "latency_ms_mean": 88.70719399731638,
+        "observed_subgoal_cosine": 0.01711476224562671,
+        "return_mean": 303.73664119225015,
+        "seen_success_macro": 0.6826923076923077,
+        "steps_to_success_capped_mean": 110.63461538461539,
+        "success_macro": 0.6826923076923077,
+        "success_within_100_primitive": 0.6057692307692307,
+        "success_within_200_primitive": 0.6826923076923077,
+        "success_within_50_primitive": 0.19230769230769232,
+        "task/assembly/ci95_high": 0.4708948057698615,
+        "task/assembly/ci95_low": 0.02241690886329617,
+        "task/assembly/success": 0.125,
+        "task/button-press-topdown/ci95_high": 1.0,
+        "task/button-press-topdown/ci95_low": 0.6755843804891231,
+        "task/button-press-topdown/success": 1.0,
+        "task/coffee-button/ci95_high": 1.0,
+        "task/coffee-button/ci95_low": 0.6755843804891231,
+        "task/coffee-button/success": 1.0,
+        "task/dial-turn/ci95_high": 0.9775830911367038,
+        "task/dial-turn/ci95_low": 0.5291051942301386,
+        "task/dial-turn/success": 0.875,
+        "task/door-close/ci95_high": 0.9775830911367038,
+        "task/door-close/ci95_low": 0.5291051942301386,
+        "task/door-close/success": 0.875,
+        "task/door-open/ci95_high": 0.9285223111419724,
+        "task/door-open/ci95_low": 0.40926987910258916,
+        "task/door-open/success": 0.75,
+        "task/drawer-close/ci95_high": 1.0,
+        "task/drawer-close/ci95_low": 0.6755843804891231,
+        "task/drawer-close/success": 1.0,
+        "task/drawer-open/ci95_high": 1.0,
+        "task/drawer-open/ci95_low": 0.6755843804891231,
+        "task/drawer-open/success": 1.0,
+        "task/faucet-open/ci95_high": 0.4708948057698615,
+        "task/faucet-open/ci95_low": 0.02241690886329617,
+        "task/faucet-open/success": 0.125,
+        "task/handle-press/ci95_high": 1.0,
+        "task/handle-press/ci95_low": 0.6755843804891231,
+        "task/handle-press/success": 1.0,
+        "task/pick-place/ci95_high": 0.3244156195108769,
+        "task/pick-place/ci95_low": 0.0,
+        "task/pick-place/success": 0.0,
+        "task/plate-slide/ci95_high": 1.0,
+        "task/plate-slide/ci95_low": 0.6755843804891231,
+        "task/plate-slide/success": 1.0,
+        "task/reach/ci95_high": 0.4708948057698615,
+        "task/reach/ci95_low": 0.02241690886329617,
+        "task/reach/success": 0.125,
+        "world_predictions_mean": 15494.23076923077
+      },
+      "decisions": 5755,
+      "observed_prefixes": 5651,
+      "selected_round_counts": {
+        "0": 3308,
+        "1": 2447
+      },
+      "mean_round_candidate_changes": [
+        0.0,
+        0.12901252308855565
+      ],
+      "mean_round_proposal_diversity": [
+        0.1168981115931692,
+        0.041350952702389136
+      ],
+      "mean_predicted_cost_improvement": 6.610678215968308e-05,
+      "prior_prefix_mae": 0.0019678877577555785,
+      "fast_weight_delta_norm_mean": 0.133048677424781,
+      "adapted_vs_prior_changed": 0.00032259733699719105,
+      "raw_prefix_mae": 0.0026481163901758286,
+      "corrected_prefix_mae": 0.0017751670306494255,
+      "selected_source_observational_groups": {
+        "incumbent": {
+          "decisions": 3308,
+          "observed": 3251,
+          "mean_observed_progress": 0.002470447255859409,
+          "raw_prefix_mae": 0.002628415702091331,
+          "corrected_prefix_mae": 0.0017422534586377305,
+          "optimistic_stall_fraction": 0.2654567825284528
+        },
+        "repair": {
+          "decisions": 2447,
+          "observed": 2400,
+          "mean_observed_progress": 0.0029605576093308626,
+          "raw_prefix_mae": 0.0026748026139102876,
+          "corrected_prefix_mae": 0.001819751206736934,
+          "optimistic_stall_fraction": 0.20625
+        }
+      },
+      "repair_anchor_provenance": {
+        "retrieved": 1763,
+        "generated": 1563,
+        "shifted": 2429
+      },
+      "incumbent_selected_fraction": 0.5748045178105995,
+      "selected_repair_linf_mean": 0.08097609630118341,
+      "selected_repair_linf_max": 0.2500000298023224,
+      "surrogate_gradient_evaluations": 0,
+      "optimistic_stall_failures": 21,
+      "corrected_optimistic_stall_failures": 14,
+      "failure_tails": [
+        {
+          "id": "validation/assembly/00001",
+          "timeout": false,
+          "actual": 0.0006847898230740899,
+          "predicted": 0.0034728587458008214,
+          "corrected": 0.0025177718520066456,
+          "goal_cost_change": -0.004031337797641754
+        },
+        {
+          "id": "validation/assembly/00002",
+          "timeout": false,
+          "actual": 0.00029411176709752336,
+          "predicted": 0.0018338420869488466,
+          "corrected": 0.00042331477284039324,
+          "goal_cost_change": -0.005588123574852943
+        },
+        {
+          "id": "validation/assembly/00003",
+          "timeout": false,
+          "actual": -0.00027543816127275164,
+          "predicted": 0.0003082691446730965,
+          "corrected": -0.0002504358570532579,
+          "goal_cost_change": 0.0052333250641822815
+        },
+        {
+          "id": "validation/assembly/00004",
+          "timeout": false,
+          "actual": 0.001044354058409992,
+          "predicted": 0.0033408997482375093,
+          "corrected": 0.001781281016423906,
+          "goal_cost_change": -0.021499812602996826
+        },
+        {
+          "id": "validation/assembly/00005",
+          "timeout": false,
+          "actual": 0.00031569815779987137,
+          "predicted": 0.003388263775329841,
+          "corrected": 0.0025140597288937946,
+          "goal_cost_change": -0.0011916980147361755
+        },
+        {
+          "id": "validation/assembly/00006",
+          "timeout": false,
+          "actual": 0.0007420806704383148,
+          "predicted": 0.0034960446585165826,
+          "corrected": 0.0025752595209173465,
+          "goal_cost_change": -0.0029866844415664673
+        },
+        {
+          "id": "validation/assembly/00007",
+          "timeout": false,
+          "actual": 0.0005512875749876624,
+          "predicted": 0.003670850866719296,
+          "corrected": 0.002696248996806772,
+          "goal_cost_change": 0.0037637129426002502
+        },
+        {
+          "id": "validation/dial-turn/00007",
+          "timeout": false,
+          "actual": -0.003202482273704127,
+          "predicted": 0.0043103877258928195,
+          "corrected": 0.002296509650094729,
+          "goal_cost_change": 0.06928160041570663
+        },
+        {
+          "id": "validation/door-close/00001",
+          "timeout": false,
+          "actual": -1.4062578740872835e-05,
+          "predicted": 0.005657963454723358,
+          "corrected": 0.003149578764446472,
+          "goal_cost_change": 0.00026718899607658386
+        },
+        {
+          "id": "validation/door-open/00000",
+          "timeout": false,
+          "actual": -0.00028548938663382277,
+          "predicted": 0.010274524163258704,
+          "corrected": 0.007173989335761259,
+          "goal_cost_change": 0.0044103264808654785
+        },
+        {
+          "id": "validation/door-open/00001",
+          "timeout": false,
+          "actual": 0.001576791958589303,
+          "predicted": 0.01460537559499866,
+          "corrected": 0.005922465756731598,
+          "goal_cost_change": 0.022392019629478455
+        },
+        {
+          "id": "validation/faucet-open/00000",
+          "timeout": false,
+          "actual": -2.6067326727666352e-05,
+          "predicted": 0.0019909366965293884,
+          "corrected": 0.0007187332283999575,
+          "goal_cost_change": 0.0004952792078256607
+        },
+        {
+          "id": "validation/faucet-open/00001",
+          "timeout": false,
+          "actual": 3.762013818088331e-05,
+          "predicted": 0.000572548885094492,
+          "corrected": -0.0004393500888622121,
+          "goal_cost_change": -0.0007147826254367828
+        },
+        {
+          "id": "validation/faucet-open/00002",
+          "timeout": false,
+          "actual": 3.7286038461484406e-05,
+          "predicted": 0.003022076169911184,
+          "corrected": 0.0015793691303482966,
+          "goal_cost_change": -0.0007084347307682037
+        },
+        {
+          "id": "validation/faucet-open/00003",
+          "timeout": false,
+          "actual": -3.375083600219927e-05,
+          "predicted": 0.002019264392162624,
+          "corrected": 0.0007190670523988573,
+          "goal_cost_change": 0.0006412658840417862
+        },
+        {
+          "id": "validation/faucet-open/00005",
+          "timeout": false,
+          "actual": -3.685949272231052e-05,
+          "predicted": 0.0022583748949201485,
+          "corrected": 0.0010500928374791616,
+          "goal_cost_change": 0.0007003303617238998
+        },
+        {
+          "id": "validation/faucet-open/00006",
+          "timeout": false,
+          "actual": -0.00010526092036774284,
+          "predicted": 0.0009464840159604424,
+          "corrected": 9.880888300310624e-05,
+          "goal_cost_change": 0.001999957486987114
+        },
+        {
+          "id": "validation/faucet-open/00007",
+          "timeout": false,
+          "actual": -1.626804863151751e-05,
+          "predicted": 0.003504014524974321,
+          "corrected": 0.002091938347898816,
+          "goal_cost_change": 0.0003090929239988327
+        },
+        {
+          "id": "validation/pick-place/00000",
+          "timeout": false,
+          "actual": -0.0010769806410136976,
+          "predicted": 0.0029060370043704382,
+          "corrected": 0.0010877394509550772,
+          "goal_cost_change": 0.020462632179260254
+        },
+        {
+          "id": "validation/pick-place/00001",
+          "timeout": false,
+          "actual": 1.0817066619270726e-05,
+          "predicted": 0.001944411742059808,
+          "corrected": 0.0008342723594978452,
+          "goal_cost_change": 0.00037130340933799744
+        },
+        {
+          "id": "validation/pick-place/00002",
+          "timeout": false,
+          "actual": -0.0002394675424224452,
+          "predicted": 0.005008299295839511,
+          "corrected": 0.002796035382504526,
+          "goal_cost_change": 0.004549883306026459
+        },
+        {
+          "id": "validation/pick-place/00003",
+          "timeout": false,
+          "actual": -0.00017569772899150848,
+          "predicted": 0.0014424572061551245,
+          "corrected": 0.00032135699017855684,
+          "goal_cost_change": -0.018518060445785522
+        },
+        {
+          "id": "validation/pick-place/00004",
+          "timeout": false,
+          "actual": -0.0023723117222911433,
+          "predicted": 0.005336263854252665,
+          "corrected": 0.0027224034389578982,
+          "goal_cost_change": 0.055410269647836685
+        },
+        {
+          "id": "validation/pick-place/00005",
+          "timeout": false,
+          "actual": -0.00019876109926324142,
+          "predicted": 0.003483763846911882,
+          "corrected": 0.0014554744978484354,
+          "goal_cost_change": 0.02182217687368393
+        },
+        {
+          "id": "validation/pick-place/00006",
+          "timeout": false,
+          "actual": 0.00011324931524301831,
+          "predicted": 0.0005650015449837634,
+          "corrected": -0.00014092667506223448,
+          "goal_cost_change": -0.005939928814768791
+        },
+        {
+          "id": "validation/pick-place/00007",
+          "timeout": false,
+          "actual": -0.0002541302850371913,
+          "predicted": 0.0034216279654126418,
+          "corrected": 0.0014785445037935126,
+          "goal_cost_change": 0.005773194134235382
+        },
+        {
+          "id": "validation/reach/00001",
+          "timeout": false,
+          "actual": -1.5413878779662282e-05,
+          "predicted": 0.00012351033326826597,
+          "corrected": -0.0005832059541717172,
+          "goal_cost_change": 0.0002928636968135834
+        },
+        {
+          "id": "validation/reach/00002",
+          "timeout": false,
+          "actual": -0.0003310266490045347,
+          "predicted": 0.00012844104908014598,
+          "corrected": -0.0006096973328998214,
+          "goal_cost_change": 0.006289506331086159
+        },
+        {
+          "id": "validation/reach/00003",
+          "timeout": false,
+          "actual": -0.00011740615101237046,
+          "predicted": 0.0001674723860464598,
+          "corrected": -0.0005669212397678118,
+          "goal_cost_change": 0.0022307168692350388
+        },
+        {
+          "id": "validation/reach/00004",
+          "timeout": false,
+          "actual": -0.00019357216201330485,
+          "predicted": 0.00022199377417564392,
+          "corrected": -0.00045699416659772396,
+          "goal_cost_change": 0.0036778710782527924
+        },
+        {
+          "id": "validation/reach/00005",
+          "timeout": false,
+          "actual": 1.8793599385964243e-05,
+          "predicted": 9.933888520065106e-05,
+          "corrected": -0.0005840114991817819,
+          "goal_cost_change": -0.0003570783883333206
+        },
+        {
+          "id": "validation/reach/00006",
+          "timeout": false,
+          "actual": -0.00031824949148454164,
+          "predicted": 0.0002391953021287918,
+          "corrected": -0.0006926823775038907,
+          "goal_cost_change": 0.006046740338206291
+        },
+        {
+          "id": "validation/reach/00007",
+          "timeout": false,
+          "actual": -0.0004696189180800789,
+          "predicted": 0.00018160300035225717,
+          "corrected": -0.000931234521742322,
+          "goal_cost_change": 0.0089227594435215
+        }
+      ]
+    },
+    {
+      "step": 10000,
+      "successes": 76,
+      "per_task": {
+        "assembly": 1,
+        "button-press-topdown": 8,
+        "coffee-button": 8,
+        "dial-turn": 8,
+        "door-close": 8,
+        "door-open": 7,
+        "drawer-close": 8,
+        "drawer-open": 8,
+        "faucet-open": 1,
+        "handle-press": 8,
+        "pick-place": 0,
+        "plate-slide": 8,
+        "reach": 3
+      },
+      "timeouts": 2,
+      "metrics": {
+        "controller_budget_exhausted_rate": 0.019230769230769232,
+        "controller_budget_overrun_seconds_mean": 0.00033550589488675963,
+        "controller_seconds_per_episode_mean": 4.566205703098183,
+        "controller_step_latency_ms_mean": 89.26417163951336,
+        "controller_step_latency_ms_p95": 92.89961084723473,
+        "episodes": 104,
+        "expert_goal_failure_rate": 0.0,
+        "latency_ms_mean": 89.27919165733104,
+        "observed_subgoal_cosine": 0.0179937219445128,
+        "return_mean": 248.34120781661065,
+        "seen_success_macro": 0.7307692307692307,
+        "steps_to_success_capped_mean": 102.35576923076923,
+        "success_macro": 0.7307692307692307,
+        "success_within_100_primitive": 0.6923076923076923,
+        "success_within_200_primitive": 0.7307692307692307,
+        "success_within_50_primitive": 0.23076923076923078,
+        "task/assembly/ci95_high": 0.4708948057698615,
+        "task/assembly/ci95_low": 0.02241690886329617,
+        "task/assembly/success": 0.125,
+        "task/button-press-topdown/ci95_high": 1.0,
+        "task/button-press-topdown/ci95_low": 0.6755843804891231,
+        "task/button-press-topdown/success": 1.0,
+        "task/coffee-button/ci95_high": 1.0,
+        "task/coffee-button/ci95_low": 0.6755843804891231,
+        "task/coffee-button/success": 1.0,
+        "task/dial-turn/ci95_high": 1.0,
+        "task/dial-turn/ci95_low": 0.6755843804891231,
+        "task/dial-turn/success": 1.0,
+        "task/door-close/ci95_high": 1.0,
+        "task/door-close/ci95_low": 0.6755843804891231,
+        "task/door-close/success": 1.0,
+        "task/door-open/ci95_high": 0.9775830911367038,
+        "task/door-open/ci95_low": 0.5291051942301386,
+        "task/door-open/success": 0.875,
+        "task/drawer-close/ci95_high": 1.0,
+        "task/drawer-close/ci95_low": 0.6755843804891231,
+        "task/drawer-close/success": 1.0,
+        "task/drawer-open/ci95_high": 1.0,
+        "task/drawer-open/ci95_low": 0.6755843804891231,
+        "task/drawer-open/success": 1.0,
+        "task/faucet-open/ci95_high": 0.4708948057698615,
+        "task/faucet-open/ci95_low": 0.02241690886329617,
+        "task/faucet-open/success": 0.125,
+        "task/handle-press/ci95_high": 1.0,
+        "task/handle-press/ci95_low": 0.6755843804891231,
+        "task/handle-press/success": 1.0,
+        "task/pick-place/ci95_high": 0.3244156195108769,
+        "task/pick-place/ci95_low": 0.0,
+        "task/pick-place/success": 0.0,
+        "task/plate-slide/ci95_high": 1.0,
+        "task/plate-slide/ci95_low": 0.6755843804891231,
+        "task/plate-slide/success": 1.0,
+        "task/reach/ci95_high": 0.6942621454161981,
+        "task/reach/ci95_low": 0.13684175946152105,
+        "task/reach/success": 0.375,
+        "world_predictions_mean": 14317.692307692309
+      },
+      "decisions": 5318,
+      "observed_prefixes": 5216,
+      "selected_round_counts": {
+        "0": 3188,
+        "1": 2130
+      },
+      "mean_round_candidate_changes": [
+        0.0,
+        0.11484152217784034
+      ],
+      "mean_round_proposal_diversity": [
+        0.10457710172293128,
+        0.03425404363378025
+      ],
+      "mean_predicted_cost_improvement": 5.4663655233589407e-05,
+      "prior_prefix_mae": 0.0020248483648687777,
+      "fast_weight_delta_norm_mean": 0.13816273970216594,
+      "adapted_vs_prior_changed": 0.00026919191592996534,
+      "raw_prefix_mae": 0.0027475627714145267,
+      "corrected_prefix_mae": 0.0018458365950064482,
+      "selected_source_observational_groups": {
+        "incumbent": {
+          "decisions": 3188,
+          "observed": 3127,
+          "mean_observed_progress": 0.002653985151137679,
+          "raw_prefix_mae": 0.0028604861017677554,
+          "corrected_prefix_mae": 0.0018659546415732986,
+          "optimistic_stall_fraction": 0.2475215861848417
+        },
+        "repair": {
+          "decisions": 2130,
+          "observed": 2089,
+          "mean_observed_progress": 0.0031911693682805838,
+          "raw_prefix_mae": 0.002578529140962374,
+          "corrected_prefix_mae": 0.0018157221231947962,
+          "optimistic_stall_fraction": 0.1938726663475347
+        }
+      },
+      "repair_anchor_provenance": {
+        "generated": 1426,
+        "shifted": 2314,
+        "retrieved": 1578
+      },
+      "incumbent_selected_fraction": 0.599473486273035,
+      "selected_repair_linf_mean": 0.06925060338123193,
+      "selected_repair_linf_max": 0.2500000298023224,
+      "surrogate_gradient_evaluations": 0,
+      "optimistic_stall_failures": 19,
+      "corrected_optimistic_stall_failures": 12,
+      "failure_tails": [
+        {
+          "id": "validation/assembly/00000",
+          "timeout": false,
+          "actual": 0.0005733528615612732,
+          "predicted": 0.003106378509025825,
+          "corrected": 0.002457659305563491,
+          "goal_cost_change": 0.0023908689618110657
+        },
+        {
+          "id": "validation/assembly/00001",
+          "timeout": false,
+          "actual": 0.0001736183307672802,
+          "predicted": 0.002738978223581063,
+          "corrected": 0.0019430829224323755,
+          "goal_cost_change": -0.0025916993618011475
+        },
+        {
+          "id": "validation/assembly/00002",
+          "timeout": true,
+          "actual": 0.0004623653367161751,
+          "predicted": 0.0011730997823178769,
+          "corrected": 0.0005970483107375912,
+          "goal_cost_change": -0.019544262439012527
+        },
+        {
+          "id": "validation/assembly/00003",
+          "timeout": false,
+          "actual": 0.002907080281721918,
+          "predicted": 0.004698865507778369,
+          "corrected": 0.003673761693981329,
+          "goal_cost_change": -0.07365532219409943
+        },
+        {
+          "id": "validation/assembly/00005",
+          "timeout": false,
+          "actual": 0.0011752769351005554,
+          "predicted": 0.0036046149111107774,
+          "corrected": 0.002832364002977939,
+          "goal_cost_change": 0.0018006637692451477
+        },
+        {
+          "id": "validation/assembly/00006",
+          "timeout": true,
+          "actual": 0.00013926271349191667,
+          "predicted": 0.0032370199449360372,
+          "corrected": 0.0024974511296022685,
+          "goal_cost_change": -0.0006259381771087646
+        },
+        {
+          "id": "validation/assembly/00007",
+          "timeout": false,
+          "actual": 0.0043297789402698215,
+          "predicted": 0.007007973660763942,
+          "corrected": 0.005678196891063922,
+          "goal_cost_change": -0.05921001732349396
+        },
+        {
+          "id": "validation/door-open/00000",
+          "timeout": false,
+          "actual": 0.005183724000265724,
+          "predicted": 0.013899463768068113,
+          "corrected": 0.009384737987267343,
+          "goal_cost_change": -0.0898936539888382
+        },
+        {
+          "id": "validation/faucet-open/00000",
+          "timeout": false,
+          "actual": -8.983125812128971e-05,
+          "predicted": 0.010246296462259795,
+          "corrected": 0.007227892864887652,
+          "goal_cost_change": 0.0017067939043045044
+        },
+        {
+          "id": "validation/faucet-open/00002",
+          "timeout": false,
+          "actual": -0.0013146069096891505,
+          "predicted": 0.00942011206950012,
+          "corrected": 0.006397511442436984,
+          "goal_cost_change": 0.024977531284093857
+        },
+        {
+          "id": "validation/faucet-open/00003",
+          "timeout": false,
+          "actual": -2.179784994376333e-06,
+          "predicted": 0.0020386976631064165,
+          "corrected": 0.0007468762832056535,
+          "goal_cost_change": 4.141591489315033e-05
+        },
+        {
+          "id": "validation/faucet-open/00004",
+          "timeout": false,
+          "actual": -0.0009680364869142833,
+          "predicted": 0.005364229510489263,
+          "corrected": 0.003107482377488754,
+          "goal_cost_change": 0.018392693251371384
+        },
+        {
+          "id": "validation/faucet-open/00005",
+          "timeout": false,
+          "actual": -0.000833992307123385,
+          "predicted": 0.007452950567791336,
+          "corrected": 0.00497371667848998,
+          "goal_cost_change": 0.015845853835344315
+        },
+        {
+          "id": "validation/faucet-open/00006",
+          "timeout": false,
+          "actual": -0.0010468403955823497,
+          "predicted": 0.004669132887532837,
+          "corrected": 0.0028403316452903183,
+          "goal_cost_change": 0.019889967516064644
+        },
+        {
+          "id": "validation/faucet-open/00007",
+          "timeout": false,
+          "actual": 9.479236445928875e-05,
+          "predicted": 0.0017532462156132648,
+          "corrected": 0.0005895583767836031,
+          "goal_cost_change": -0.0018010549247264862
+        },
+        {
+          "id": "validation/pick-place/00000",
+          "timeout": false,
+          "actual": -0.001324533827994999,
+          "predicted": 0.0015086419880390167,
+          "corrected": -7.562500449191583e-05,
+          "goal_cost_change": 0.025166142731904984
+        },
+        {
+          "id": "validation/pick-place/00001",
+          "timeout": false,
+          "actual": -0.0006865080642072778,
+          "predicted": 0.0014414950028846139,
+          "corrected": 2.16291518881917e-05,
+          "goal_cost_change": 0.02161550521850586
+        },
+        {
+          "id": "validation/pick-place/00002",
+          "timeout": false,
+          "actual": -0.00045689862025411507,
+          "predicted": 0.005502856091449135,
+          "corrected": 0.003293892141970757,
+          "goal_cost_change": 0.006417158991098404
+        },
+        {
+          "id": "validation/pick-place/00003",
+          "timeout": false,
+          "actual": -0.0002470289994227259,
+          "predicted": 0.0004023497826174686,
+          "corrected": -0.0006438578865000684,
+          "goal_cost_change": 0.004693550989031792
+        },
+        {
+          "id": "validation/pick-place/00004",
+          "timeout": false,
+          "actual": -0.0033560857961052342,
+          "predicted": 0.008310167020873019,
+          "corrected": 0.004493164315231536,
+          "goal_cost_change": 0.07433800399303436
+        },
+        {
+          "id": "validation/pick-place/00005",
+          "timeout": false,
+          "actual": -0.0007007608288212827,
+          "predicted": 0.003910397816645472,
+          "corrected": 0.0016193873567604705,
+          "goal_cost_change": 0.015123218297958374
+        },
+        {
+          "id": "validation/pick-place/00006",
+          "timeout": false,
+          "actual": -0.0006371492421940753,
+          "predicted": 0.0004292595151223634,
+          "corrected": -0.000555386288875812,
+          "goal_cost_change": 0.012105835601687431
+        },
+        {
+          "id": "validation/pick-place/00007",
+          "timeout": false,
+          "actual": -0.0014808305392139836,
+          "predicted": 0.004042430731811021,
+          "corrected": 0.0009683412132098487,
+          "goal_cost_change": 0.02369263768196106
+        },
+        {
+          "id": "validation/reach/00001",
+          "timeout": false,
+          "actual": -3.135370972909426e-05,
+          "predicted": 0.0004713229442897596,
+          "corrected": -0.00028048852139985874,
+          "goal_cost_change": 0.0005957204848527908
+        },
+        {
+          "id": "validation/reach/00003",
+          "timeout": false,
+          "actual": -2.8156430313461705e-05,
+          "predicted": 0.00035061657820877274,
+          "corrected": -0.000575069999812465,
+          "goal_cost_change": 0.0005349721759557724
+        },
+        {
+          "id": "validation/reach/00004",
+          "timeout": false,
+          "actual": -2.7779587789585714e-05,
+          "predicted": 0.00016583610129983803,
+          "corrected": -0.0004911645021485654,
+          "goal_cost_change": 0.0005278121680021286
+        },
+        {
+          "id": "validation/reach/00006",
+          "timeout": false,
+          "actual": -0.00038607379323557804,
+          "predicted": 0.0010606221070415096,
+          "corrected": 8.243668248484794e-05,
+          "goal_cost_change": 0.007335402071475983
+        },
+        {
+          "id": "validation/reach/00007",
+          "timeout": false,
+          "actual": -0.0002172267750689858,
+          "predicted": 0.0011929993174578015,
+          "corrected": -0.00019065500237047672,
+          "goal_cost_change": 0.00412730872631073
+        }
+      ]
+    }
+  ],
+  "initial_proposal_diversity": {
+    "rounds": [
+      {
+        "step": 5000,
+        "0": {
+          "mean": 0.061788903835874334,
+          "relative_change": 0.0,
+          "decreased_cases": 0
+        },
+        "1": {
+          "mean": 0.026460553331372257,
+          "relative_change": 0.0,
+          "decreased_cases": 0
+        }
+      },
+      {
+        "step": 10000,
+        "0": {
+          "mean": 0.03574876503374141,
+          "relative_change": -0.4214371381518853,
+          "decreased_cases": 104
+        },
+        "1": {
+          "mean": 0.01842369785747276,
+          "relative_change": -0.30372968294547387,
+          "decreased_cases": 101
+        }
+      }
+    ],
+    "paired_initial_routes_verified": true,
+    "paired_initial_base_route_costs_verified": true,
+    "learned_stage_penalties_may_change": false,
+    "history_empty": true,
+    "interpretation": "Same reset/goal and per-case seed. For progress-objective TTT, frozen base route costs match after subtracting logged learned stage penalties; total route scores may change. Round zero includes recorded proposals; round one mixes an exact incumbent and bounded residual flow proposals. Diversity is not likelihood entropy or a causal attribution."
+  },
+  "comparisons": {
+    "guided_ttt": {
+      "successes": 75,
+      "wins": [
+        "validation/assembly/00004",
+        "validation/door-open/00001",
+        "validation/door-open/00004",
+        "validation/faucet-open/00001",
+        "validation/plate-slide/00001"
+      ],
+      "regressions": [
+        "validation/assembly/00005",
+        "validation/door-open/00000",
+        "validation/faucet-open/00004",
+        "validation/faucet-open/00007"
+      ],
+      "difference_pp": 0.9615384615384616,
+      "source": "docs/reports/20261010-guided-ttt/run/validation/step_0020000.json.gz",
+      "sha256": "05efd117f7227dda217f19a16e854c681aff2ba11f93c765bba2b57e560a2bcd"
+    },
+    "progress_ttt": {
+      "successes": 78,
+      "wins": [
+        "validation/door-open/00001",
+        "validation/reach/00000",
+        "validation/reach/00002"
+      ],
+      "regressions": [
+        "validation/assembly/00006",
+        "validation/door-open/00000",
+        "validation/faucet-open/00004",
+        "validation/faucet-open/00007",
+        "validation/reach/00004"
+      ],
+      "difference_pp": -1.9230769230769231,
+      "source": "docs/reports/20261010-progress-ttt-run/run/validation/step_0015000.json.gz",
+      "sha256": "4de86f52f125173a5bb5c1ddca0ed9ecdcd368b622e6d1bc615d868b39982a8b"
+    },
+    "flow_reasoning": {
+      "successes": 79,
+      "wins": [
+        "validation/assembly/00004",
+        "validation/dial-turn/00001",
+        "validation/dial-turn/00002",
+        "validation/faucet-open/00001"
+      ],
+      "regressions": [
+        "validation/door-open/00000",
+        "validation/faucet-open/00004",
+        "validation/faucet-open/00007",
+        "validation/pick-place/00004",
+        "validation/reach/00001",
+        "validation/reach/00004",
+        "validation/reach/00007"
+      ],
+      "difference_pp": -2.8846153846153846,
+      "source": "docs/reports/20261010-flow-reasoning/run/validation/step_0005000.json.gz",
+      "sha256": "8c8cd3dc71b57ee9c168809df8464a039b2c72e0490b833f7ec4a25ad7dc4868"
+    },
+    "execution_revision": {
+      "successes": 80,
+      "wins": [
+        "validation/assembly/00004",
+        "validation/dial-turn/00006",
+        "validation/door-open/00001",
+        "validation/faucet-open/00001"
+      ],
+      "regressions": [
+        "validation/assembly/00005",
+        "validation/assembly/00006",
+        "validation/assembly/00007",
+        "validation/faucet-open/00000",
+        "validation/faucet-open/00004",
+        "validation/faucet-open/00007",
+        "validation/pick-place/00004",
+        "validation/reach/00001"
+      ],
+      "difference_pp": -3.8461538461538463,
+      "source": "docs/reports/20261009-execution-revision/run/validation/step_0005000.json.gz",
+      "sha256": "71fa4e3e75163ae6e3d6d776b2eeaa844134b20aaa2092feeb93e5e7b91fab9b"
+    },
+    "controller_grounded": {
+      "successes": 79,
+      "wins": [
+        "validation/assembly/00004",
+        "validation/dial-turn/00006",
+        "validation/plate-slide/00000",
+        "validation/plate-slide/00004",
+        "validation/reach/00000",
+        "validation/reach/00005"
+      ],
+      "regressions": [
+        "validation/assembly/00001",
+        "validation/assembly/00002",
+        "validation/assembly/00006",
+        "validation/door-open/00000",
+        "validation/faucet-open/00000",
+        "validation/faucet-open/00004",
+        "validation/faucet-open/00007",
+        "validation/pick-place/00004",
+        "validation/reach/00006"
+      ],
+      "difference_pp": -2.8846153846153846,
+      "source": "docs/reports/20261009-controller-grounded/run/validation/step_0005000.json.gz",
+      "sha256": "0c64a05b608a54f6971efd6dd3f2007bcac92900d3a5f1769d647873ada08ff9"
+    },
+    "leflow_release": {
+      "successes": 21,
+      "wins": [
+        "validation/assembly/00004",
+        "validation/button-press-topdown/00000",
+        "validation/button-press-topdown/00001",
+        "validation/button-press-topdown/00002",
+        "validation/button-press-topdown/00003",
+        "validation/button-press-topdown/00004",
+        "validation/button-press-topdown/00005",
+        "validation/button-press-topdown/00006",
+        "validation/button-press-topdown/00007",
+        "validation/coffee-button/00002",
+        "validation/coffee-button/00003",
+        "validation/dial-turn/00000",
+        "validation/dial-turn/00001",
+        "validation/dial-turn/00002",
+        "validation/dial-turn/00003",
+        "validation/dial-turn/00004",
+        "validation/dial-turn/00005",
+        "validation/dial-turn/00006",
+        "validation/dial-turn/00007",
+        "validation/door-close/00000",
+        "validation/door-close/00001",
+        "validation/door-close/00002",
+        "validation/door-close/00003",
+        "validation/door-close/00004",
+        "validation/door-close/00005",
+        "validation/door-close/00006",
+        "validation/door-close/00007",
+        "validation/door-open/00001",
+        "validation/door-open/00002",
+        "validation/door-open/00003",
+        "validation/door-open/00004",
+        "validation/door-open/00005",
+        "validation/door-open/00006",
+        "validation/door-open/00007",
+        "validation/drawer-close/00000",
+        "validation/drawer-close/00002",
+        "validation/drawer-close/00003",
+        "validation/drawer-close/00004",
+        "validation/drawer-close/00005",
+        "validation/drawer-close/00006",
+        "validation/drawer-close/00007",
+        "validation/drawer-open/00000",
+        "validation/drawer-open/00001",
+        "validation/drawer-open/00002",
+        "validation/drawer-open/00003",
+        "validation/drawer-open/00004",
+        "validation/drawer-open/00005",
+        "validation/drawer-open/00006",
+        "validation/drawer-open/00007",
+        "validation/handle-press/00005",
+        "validation/plate-slide/00000",
+        "validation/plate-slide/00001",
+        "validation/plate-slide/00002",
+        "validation/plate-slide/00003",
+        "validation/plate-slide/00004",
+        "validation/plate-slide/00005",
+        "validation/plate-slide/00006",
+        "validation/plate-slide/00007",
+        "validation/reach/00000",
+        "validation/reach/00002"
+      ],
+      "regressions": [
+        "validation/faucet-open/00000",
+        "validation/faucet-open/00005",
+        "validation/faucet-open/00006",
+        "validation/reach/00001",
+        "validation/reach/00003"
+      ],
+      "difference_pp": 52.88461538461539,
+      "source": "docs/reports/20261010-release-baselines/leflow/validation/step_0010000.json.gz",
+      "sha256": "506a2857ec7b9f19782d0df27bdbad3d8a72f464ebda3a47ab20b85f8a98e713"
+    },
+    "hwm_paper_port": {
+      "successes": 5,
+      "wins": [
+        "validation/assembly/00004",
+        "validation/button-press-topdown/00000",
+        "validation/button-press-topdown/00001",
+        "validation/button-press-topdown/00002",
+        "validation/button-press-topdown/00003",
+        "validation/button-press-topdown/00004",
+        "validation/button-press-topdown/00005",
+        "validation/button-press-topdown/00006",
+        "validation/button-press-topdown/00007",
+        "validation/coffee-button/00000",
+        "validation/coffee-button/00001",
+        "validation/coffee-button/00002",
+        "validation/coffee-button/00003",
+        "validation/coffee-button/00004",
+        "validation/coffee-button/00005",
+        "validation/coffee-button/00006",
+        "validation/coffee-button/00007",
+        "validation/dial-turn/00000",
+        "validation/dial-turn/00001",
+        "validation/dial-turn/00002",
+        "validation/dial-turn/00003",
+        "validation/dial-turn/00004",
+        "validation/dial-turn/00005",
+        "validation/dial-turn/00006",
+        "validation/dial-turn/00007",
+        "validation/door-close/00000",
+        "validation/door-close/00001",
+        "validation/door-close/00002",
+        "validation/door-close/00003",
+        "validation/door-close/00004",
+        "validation/door-close/00005",
+        "validation/door-close/00006",
+        "validation/door-close/00007",
+        "validation/door-open/00001",
+        "validation/door-open/00002",
+        "validation/door-open/00003",
+        "validation/door-open/00004",
+        "validation/door-open/00005",
+        "validation/door-open/00006",
+        "validation/door-open/00007",
+        "validation/drawer-close/00000",
+        "validation/drawer-close/00001",
+        "validation/drawer-close/00002",
+        "validation/drawer-close/00003",
+        "validation/drawer-close/00005",
+        "validation/drawer-close/00006",
+        "validation/drawer-close/00007",
+        "validation/drawer-open/00000",
+        "validation/drawer-open/00001",
+        "validation/drawer-open/00002",
+        "validation/drawer-open/00003",
+        "validation/drawer-open/00004",
+        "validation/drawer-open/00005",
+        "validation/drawer-open/00006",
+        "validation/drawer-open/00007",
+        "validation/faucet-open/00001",
+        "validation/handle-press/00001",
+        "validation/handle-press/00002",
+        "validation/handle-press/00003",
+        "validation/handle-press/00007",
+        "validation/plate-slide/00000",
+        "validation/plate-slide/00001",
+        "validation/plate-slide/00002",
+        "validation/plate-slide/00003",
+        "validation/plate-slide/00004",
+        "validation/plate-slide/00005",
+        "validation/plate-slide/00006",
+        "validation/plate-slide/00007",
+        "validation/reach/00000",
+        "validation/reach/00002",
+        "validation/reach/00005"
+      ],
+      "regressions": [],
+      "difference_pp": 68.26923076923077,
+      "source": "docs/reports/20261010-release-baselines/hwm/validation/step_0015000.json.gz",
+      "sha256": "56b7bf19e165d123b9aa32b88f5eb773a3a48f82d7e203144ca14071354120ff"
+    },
+    "cem_release": {
+      "successes": 24,
+      "wins": [
+        "validation/assembly/00004",
+        "validation/button-press-topdown/00000",
+        "validation/button-press-topdown/00001",
+        "validation/button-press-topdown/00002",
+        "validation/button-press-topdown/00003",
+        "validation/button-press-topdown/00004",
+        "validation/button-press-topdown/00005",
+        "validation/button-press-topdown/00006",
+        "validation/button-press-topdown/00007",
+        "validation/dial-turn/00000",
+        "validation/dial-turn/00001",
+        "validation/dial-turn/00002",
+        "validation/dial-turn/00003",
+        "validation/dial-turn/00004",
+        "validation/dial-turn/00005",
+        "validation/dial-turn/00006",
+        "validation/dial-turn/00007",
+        "validation/door-close/00000",
+        "validation/door-close/00001",
+        "validation/door-close/00002",
+        "validation/door-close/00003",
+        "validation/door-close/00006",
+        "validation/door-open/00001",
+        "validation/door-open/00002",
+        "validation/door-open/00003",
+        "validation/door-open/00004",
+        "validation/door-open/00005",
+        "validation/door-open/00006",
+        "validation/door-open/00007",
+        "validation/drawer-close/00001",
+        "validation/drawer-close/00002",
+        "validation/drawer-close/00003",
+        "validation/drawer-close/00004",
+        "validation/drawer-close/00005",
+        "validation/drawer-open/00000",
+        "validation/drawer-open/00001",
+        "validation/drawer-open/00002",
+        "validation/drawer-open/00003",
+        "validation/drawer-open/00004",
+        "validation/drawer-open/00005",
+        "validation/drawer-open/00006",
+        "validation/drawer-open/00007",
+        "validation/faucet-open/00001",
+        "validation/plate-slide/00000",
+        "validation/plate-slide/00001",
+        "validation/plate-slide/00002",
+        "validation/plate-slide/00003",
+        "validation/plate-slide/00004",
+        "validation/plate-slide/00005",
+        "validation/plate-slide/00006",
+        "validation/plate-slide/00007",
+        "validation/reach/00000",
+        "validation/reach/00002"
+      ],
+      "regressions": [
+        "validation/reach/00006"
+      ],
+      "difference_pp": 50.0,
+      "source": "docs/reports/20261010-release-baselines/cem/validation.json",
+      "sha256": "0fb3d2614d76fdd4c12e3605220f986306a6541789cf1d74d03ef2c4b8af3a8e"
+    },
+    "repair_flow_ttt": {
+      "successes": 80,
+      "wins": [
+        "validation/assembly/00004",
+        "validation/dial-turn/00002"
+      ],
+      "regressions": [
+        "validation/assembly/00005",
+        "validation/door-open/00000",
+        "validation/faucet-open/00004",
+        "validation/pick-place/00003",
+        "validation/pick-place/00004",
+        "validation/reach/00007"
+      ],
+      "difference_pp": -3.8461538461538463,
+      "source": "docs/reports/20261011-repair-flow-ttt/run/validation/step_0005000.json.gz",
+      "sha256": "b1cd99f487e85e47b77046beac62b07da534a17dfdf553c29a6fae168fbad4d7"
+    },
+    "retrieval_repair_ttt": {
+      "successes": 80,
+      "wins": [
+        "validation/assembly/00004",
+        "validation/dial-turn/00007",
+        "validation/faucet-open/00001",
+        "validation/reach/00000",
+        "validation/reach/00002"
+      ],
+      "regressions": [
+        "validation/assembly/00000",
+        "validation/assembly/00001",
+        "validation/assembly/00005",
+        "validation/assembly/00006",
+        "validation/door-open/00000",
+        "validation/faucet-open/00000",
+        "validation/faucet-open/00002",
+        "validation/faucet-open/00007",
+        "validation/pick-place/00004"
+      ],
+      "difference_pp": -3.8461538461538463,
+      "source": "docs/reports/20261011-retrieval-repair-ttt/run/validation/step_0020000.json.gz",
+      "sha256": "dc09c844cb46da2c0d5fba62fe42f230e23fc6d826347386f6270565bddb13d5"
+    },
+    "shifted_repair_ttt": {
+      "successes": 79,
+      "wins": [
+        "validation/dial-turn/00006",
+        "validation/door-open/00005",
+        "validation/faucet-open/00001"
+      ],
+      "regressions": [
+        "validation/assembly/00000",
+        "validation/assembly/00005",
+        "validation/door-open/00000",
+        "validation/faucet-open/00004",
+        "validation/pick-place/00004",
+        "validation/reach/00003"
+      ],
+      "difference_pp": -2.8846153846153846,
+      "source": "docs/reports/20261011-shifted-repair-ttt/run/validation/step_0005000.json.gz",
+      "sha256": "b9e4e373a337db4389a34e9f92c138f13176e3ccca0e5a7edd769440b9f13f37"
+    }
+  },
+  "selected_to_last": {
+    "selected_step": 10000,
+    "last_step": 10000,
+    "improvements": [],
+    "regressions": []
+  },
+  "case_pairing_verified": true,
+  "training_windows": [
+    {
+      "step": 5000,
+      "entries": 30,
+      "metrics": {
+        "train/flow_loss": 0.162580539782842,
+        "train/repair_flow_loss": 0.2610037247339884,
+        "train/repair_anchor_action_mse": 0.022561981280644735,
+        "train/repair_teacher_action_mse": 0.015332637913525104,
+        "train/repair_target_clipped_fraction": 0.045032552008827526,
+        "train/calibration_loss": -1.8504624446233113,
+        "train/recorded_raw_prefix_mae": 0.001981478137895465,
+        "train/recorded_corrected_prefix_mae": 0.0013865516094180444,
+        "train/recorded_prior_prefix_mae": 0.0013775405124761165,
+        "system/update_examples_per_second": 785.7412246163652,
+        "train/retrieved_anchor_fraction": 0.21822916666666667,
+        "train/posterior_nll": -1.8558444182078044,
+        "train/deployed_calibration_loss": 0.003131344732052336,
+        "train/posterior_90_coverage": 0.9291666666666667,
+        "train/posterior_standardized_error": 0.8849148710568746,
+        "train/posterior_noise_std": 0.0019597797965010006,
+        "train/recorded_applied_prefix_mae": 0.0013873910647816956
+      },
+      "by_depth": {
+        "1": {
+          "train/flow_loss": 0.16387241929769517,
+          "train/repair_flow_loss": 0.0,
+          "train/repair_anchor_action_mse": 0.0,
+          "train/repair_teacher_action_mse": 0.0,
+          "train/repair_target_clipped_fraction": 0.0,
+          "train/calibration_loss": -1.8694056630134583,
+          "train/recorded_raw_prefix_mae": 0.0020065108430571852,
+          "train/recorded_corrected_prefix_mae": 0.0013562526204623283,
+          "train/recorded_prior_prefix_mae": 0.0013414030661806464,
+          "system/update_examples_per_second": 1006.0934242650296,
+          "train/retrieved_anchor_fraction": 0.0,
+          "train/posterior_nll": -1.8745991230010985,
+          "train/deployed_calibration_loss": 0.0030733132269233467,
+          "train/posterior_90_coverage": 0.934375,
+          "train/posterior_standardized_error": 0.848037737607956,
+          "train/posterior_noise_std": 0.0019599325954914094,
+          "train/recorded_applied_prefix_mae": 0.001356149383354932
+        },
+        "2": {
+          "train/flow_loss": 0.16897047040137378,
+          "train/repair_flow_loss": 0.38524958762255584,
+          "train/repair_anchor_action_mse": 0.03330229629169811,
+          "train/repair_teacher_action_mse": 0.022215451367876747,
+          "train/repair_target_clipped_fraction": 0.06580255654725162,
+          "train/calibration_loss": -1.849115339192477,
+          "train/recorded_raw_prefix_mae": 0.0019228553970937025,
+          "train/recorded_corrected_prefix_mae": 0.001388922852294689,
+          "train/recorded_prior_prefix_mae": 0.0013751342829147523,
+          "system/update_examples_per_second": 736.4161175274808,
+          "train/retrieved_anchor_fraction": 0.3210227272727273,
+          "train/posterior_nll": -1.8543510978872126,
+          "train/deployed_calibration_loss": 0.002943686188452623,
+          "train/posterior_90_coverage": 0.9303977272727273,
+          "train/posterior_standardized_error": 0.8874138485301625,
+          "train/posterior_noise_std": 0.001959735569967465,
+          "train/recorded_applied_prefix_mae": 0.0013910519191995263
+        },
+        "3": {
+          "train/flow_loss": 0.1533352028992441,
+          "train/repair_flow_loss": 0.3991518086857266,
+          "train/repair_anchor_action_mse": 0.03450379769007365,
+          "train/repair_teacher_action_mse": 0.02395657470656766,
+          "train/repair_target_clipped_fraction": 0.06968315980500644,
+          "train/calibration_loss": -1.8310608863830566,
+          "train/recorded_raw_prefix_mae": 0.0020253140375845963,
+          "train/recorded_corrected_prefix_mae": 0.0014173189669640528,
+          "train/recorded_prior_prefix_mae": 0.0014206341778238614,
+          "system/update_examples_per_second": 601.1916892264859,
+          "train/retrieved_anchor_fraction": 0.3350694444444444,
+          "train/posterior_nll": -1.8368310266070895,
+          "train/deployed_calibration_loss": 0.003425184624373085,
+          "train/posterior_90_coverage": 0.921875,
+          "train/posterior_standardized_error": 0.9228351579772102,
+          "train/posterior_noise_std": 0.0019596640744970906,
+          "train/recorded_applied_prefix_mae": 0.0014176296665229732
+        }
+      }
+    },
+    {
+      "step": 10000,
+      "entries": 30,
+      "metrics": {
+        "train/flow_loss": 0.11617174322406451,
+        "train/repair_flow_loss": 0.1811176096399625,
+        "train/repair_anchor_action_mse": 0.013605543505400419,
+        "train/repair_teacher_action_mse": 0.009340659606580932,
+        "train/repair_target_clipped_fraction": 0.027128906672199568,
+        "train/calibration_loss": -1.8304217378298442,
+        "train/recorded_raw_prefix_mae": 0.002058464859146625,
+        "train/recorded_corrected_prefix_mae": 0.0014017846474113564,
+        "train/recorded_prior_prefix_mae": 0.0013819569683012863,
+        "system/update_examples_per_second": 762.5902430948439,
+        "train/retrieved_anchor_fraction": 0.178125,
+        "train/posterior_nll": -1.8356143633524578,
+        "train/deployed_calibration_loss": 0.0031387748934018117,
+        "train/posterior_90_coverage": 0.9192708333333334,
+        "train/posterior_standardized_error": 0.9706118762493133,
+        "train/posterior_noise_std": 0.0019264728684599201,
+        "train/recorded_applied_prefix_mae": 0.001401870868479212
+      },
+      "by_depth": {
+        "1": {
+          "train/flow_loss": 0.102247570048679,
+          "train/repair_flow_loss": 0.0,
+          "train/repair_anchor_action_mse": 0.0,
+          "train/repair_teacher_action_mse": 0.0,
+          "train/repair_target_clipped_fraction": 0.0,
+          "train/calibration_loss": -1.847656336697665,
+          "train/recorded_raw_prefix_mae": 0.0020268782761625266,
+          "train/recorded_corrected_prefix_mae": 0.0013596552572297778,
+          "train/recorded_prior_prefix_mae": 0.0013425272085111249,
+          "system/update_examples_per_second": 958.3514622116128,
+          "train/retrieved_anchor_fraction": 0.0,
+          "train/posterior_nll": -1.8527440374547786,
+          "train/deployed_calibration_loss": 0.003114493172192438,
+          "train/posterior_90_coverage": 0.9275568181818182,
+          "train/posterior_standardized_error": 0.9396231228655035,
+          "train/posterior_noise_std": 0.00192641478497535,
+          "train/recorded_applied_prefix_mae": 0.0013594307555732403
+        },
+        "2": {
+          "train/flow_loss": 0.12212160146898693,
+          "train/repair_flow_loss": 0.28010988069905174,
+          "train/repair_anchor_action_mse": 0.022798399751385052,
+          "train/repair_teacher_action_mse": 0.01577955727568931,
+          "train/repair_target_clipped_fraction": 0.04292534705665377,
+          "train/calibration_loss": -1.801801045735677,
+          "train/recorded_raw_prefix_mae": 0.0021258301955337324,
+          "train/recorded_corrected_prefix_mae": 0.0014263798819027012,
+          "train/recorded_prior_prefix_mae": 0.00139729970962637,
+          "system/update_examples_per_second": 682.478317427506,
+          "train/retrieved_anchor_fraction": 0.2690972222222222,
+          "train/posterior_nll": -1.8072692420747545,
+          "train/deployed_calibration_loss": 0.0032717729659958016,
+          "train/posterior_90_coverage": 0.9097222222222222,
+          "train/posterior_standardized_error": 1.0248686207665338,
+          "train/posterior_noise_std": 0.0019264465146180657,
+          "train/recorded_applied_prefix_mae": 0.0014264469759331809
+        },
+        "3": {
+          "train/flow_loss": 0.1261334612965584,
+          "train/repair_flow_loss": 0.291253936290741,
+          "train/repair_anchor_action_mse": 0.02029807073995471,
+          "train/repair_teacher_action_mse": 0.013820377271622419,
+          "train/repair_target_clipped_fraction": 0.04275390766561031,
+          "train/calibration_loss": -1.8372223019599914,
+          "train/recorded_raw_prefix_mae": 0.0020325812976807354,
+          "train/recorded_corrected_prefix_mae": 0.0014259912655688821,
+          "train/recorded_prior_prefix_mae": 0.0014115212368778884,
+          "system/update_examples_per_second": 619.3536351670022,
+          "train/retrieved_anchor_fraction": 0.2921875,
+          "train/posterior_nll": -1.8422823309898377,
+          "train/deployed_calibration_loss": 0.003045786521397531,
+          "train/posterior_90_coverage": 0.91875,
+          "train/posterior_standardized_error": 0.9558684349060058,
+          "train/posterior_noise_std": 0.0019265604787506163,
+          "train/recorded_applied_prefix_mae": 0.0014264364959672093
+        }
+      }
+    }
+  ],
+  "compute": {
+    "global_batch": 64,
+    "gpu_count": 8,
+    "last_update_overrun_gpu_seconds": 0.0,
+    "optimization_cap_gpu_seconds": 28800,
+    "optimization_gpu_hours": 2.9066681693535714,
+    "optimization_gpu_seconds": 10464.005409672856,
+    "step": 14051,
+    "stop_check": "optimizer boundary; final-update overrun reported",
+    "validation_gpu_hours": 1.0869285716447565,
+    "validation_gpu_seconds": 3912.9428579211235,
+    "validation_steps": [
+      5000,
+      10000
+    ]
+  },
+  "run": {
+    "bank_hash": "45acb27b54fabe3611bd62efe879b8238edcf912bf2fc7a1db9c537ac86d98de",
+    "code": "4d322c90e216702fae2cd29c91e49ad90da713d9",
+    "id": "u1hdmwqr",
+    "manifest": "7dc57118b671e4879d7e80348be46b1054d95fed5f11d15778e320454f55b11f",
+    "method": "bayesian_repair_ttt",
+    "protocol": "41f2147cc3bd63f11fbcc6b698cc409327b12929ddc7b0c9abacc8779c3e58a0",
+    "seed": 3072,
+    "wandb_url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/u1hdmwqr",
+    "world_hash": "ae3f910da43f0a43dd65945394444a0b11719ed042cdacffacc2faaf824ec5a3",
+    "world_size": 8
+  },
+  "model_calls": 0,
+  "simulator_calls": 0,
+  "final_tests_read": false,
+  "limits": [
+    "Repeatedly used development cases; selected checkpoint; one model seed.",
+    "Round score improvement is a selection property, not physical progress.",
+    "Only executed prefixes have real outcome labels.",
+    "No inference-depth counterfactual or causal attribution from these traces.",
+    "Incumbent/repair groups are selected observations, not randomized counterfactuals.",
+    "Teacher interpolation contains the action target; teacher MSE gain can be positive before training."
+  ]
+}

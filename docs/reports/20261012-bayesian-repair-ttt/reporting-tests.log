@@ -1,0 +1,7 @@
+test_lossless_parts_and_integrity (scripts.analysis.test_result_io.SavedRecordTest.test_lossless_parts_and_integrity) ... ok
+test_plain_gzip_and_invalid_paths (scripts.analysis.test_result_io.SavedRecordTest.test_plain_gzip_and_invalid_paths) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.002s
+
+OK

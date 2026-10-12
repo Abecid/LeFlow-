@@ -5,10 +5,14 @@ import hashlib
 import json
 from pathlib import Path
 
+try:
+    from .result_io import read_record
+except ImportError:  # Direct script invocation.
+    from result_io import read_record
+
 
 def read(path):
-    raw = path.read_bytes()
-    return json.loads(gzip.decompress(raw) if path.suffix == '.gz' else raw)
+    return read_record(path)
 
 
 def verify(repo, ledger_path):

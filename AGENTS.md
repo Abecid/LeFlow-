@@ -1,3 +1,14 @@
+# October12: Bayesian repair scores 71/76; run continues
+
+The first two fixed 104-case evaluations score 71/76, below the retained 80.
+Five-k has no timeouts; 10k has two assembly timeouts at 194/192 actions, retained
+without replay. The posterior acceptance audit passes; better prefix-error MAE
+has not established better task success. Twenty saved contact sheets inspected.
+At 09:08:16 UTC, all 173 frozen runtime hashes and 44 owned PID/start identities
+match; W&B u1hdmwqr runs, finite metrics through 14051. Read
+BAYESIAN_REPAIR_TTT.md and the active ledger. Complete the remaining registered
+evaluations unchanged. No new candidate, duplicate coordinator or frozen-source edits.
+
 # Verified active Bayesian repair run (October12)
 
 Fresh source4d322c9/all173 runtime hashes and8-rank checks verified. At08:39:58UTC,

@@ -1,0 +1,23 @@
+{
+  "complete": false,
+  "snapshot_utc": "2026-10-12T09:08:16.429094+00:00",
+  "step": 14051,
+  "prior_known_measured_gpu_hours": 105.28452734094218,
+  "separate_setup_components": {
+    "train_only_diagnostic_gpu_hours": 0.0015554047945059008,
+    "preflight_gpu_hours": 0.005896763030646576,
+    "ddp_no_update_gpu_hours": 0.010083862940470378,
+    "retrieval_setup_gpu_hours": 0.0053565302491188046
+  },
+  "route_bank_cpu_seconds": 22.105842977762222,
+  "optimization_gpu_hours": 2.9066681693535714,
+  "evaluation_gpu_hours": 1.0869285716447565,
+  "known_measured_components_gpu_hours": 109.30101664295525,
+  "last_update_overrun_gpu_seconds": 0.0,
+  "not_a_full_cluster_bill": true,
+  "limits": [
+    "Sequential advancing reads: initial health compute step14048, copied compute and full periodic metrics through14051.",
+    "Per-update retrieval and all learned modules are within the optimization timer.",
+    "CPU-only compression, rendering and reporting are not assigned invented GPU charges."
+  ]
+}

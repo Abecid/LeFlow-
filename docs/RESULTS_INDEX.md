@@ -1,3 +1,7 @@
+Current Bayesian repair result: **5k 71/104, 10k 76/104**; zero/two timeouts.
+Training continues; the retained reference remains 80/104.
+[Interim findings and complete saved evidence](BAYESIAN_REPAIR_TTT.md#first-two-fixed-evaluations-71104-and-76104).
+
 # Verified active Bayesian repair run (October12)
 
 Fresh source4d322c9/all173 runtime hashes and8-rank checks verified. At08:39:58UTC,

@@ -1,0 +1,24 @@
+{
+  "training_undisturbed": true,
+  "model_calls": 0,
+  "simulator_calls": 0,
+  "failures": [
+    {
+      "operation": "initial full-report SSH collection",
+      "error": "Local 240-second transfer timeout; no optimization/evaluation rerun."
+    },
+    {
+      "operation": "rsync transport",
+      "error": "Remote rsync unavailable; used existing scp instead."
+    },
+    {
+      "operation": "alternate SSH connection",
+      "error": "target_server_2 banner-exchange timeout; target_server_2_cf retained."
+    },
+    {
+      "operation": "saved-report training-window summary",
+      "error": "The generic report expected train/repair_teacher_action_improvement, which the frozen Bayesian trainer does not log. Reporting-only method branch now uses the logged anchor and teacher MSE fields; no training change."
+    }
+  ],
+  "resolution": "Server-side lossless gzip6 compression cached outside the frozen checkout, downloaded with scp and then an offset-preserving SFTP reget after stopping only the identified local transfer process, verified against original byte counts and SHA256, and divided into sub-100MiB parts for Git. No source or run changes."
+}

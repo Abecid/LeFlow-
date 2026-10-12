@@ -7,10 +7,14 @@ import json
 from pathlib import Path
 from statistics import mean
 
+try:
+    from .result_io import read_record
+except ImportError:  # Direct script invocation.
+    from result_io import read_record
+
 
 def load(path):
-    p = Path(path)
-    return json.loads(gzip.decompress(p.read_bytes()) if p.suffix == '.gz' else p.read_text())
+    return read_record(path)
 
 
 def average(values):
@@ -179,6 +183,8 @@ def main(args):
                          'train/shifted_eligible_fraction','train/shifted_anchor_fraction')
              if all(k in row for row in train_logs)]
     if method=='bayesian_repair_ttt':
+        # This frozen trainer logs the two MSEs, not the older improvement field.
+        keys.remove('train/repair_teacher_action_improvement')
         keys += ['train/posterior_nll','train/deployed_calibration_loss','train/posterior_90_coverage','train/posterior_standardized_error','train/posterior_noise_std','train/recorded_applied_prefix_mae']
     windows = []
     for report in reports:

@@ -42,6 +42,8 @@ def check_decision(d):
     if 'observed_prefix_cost_error' in d:
         observed=d['observed_prefix_cost_error']
         assert abs(observed-(d['predicted_prefix_target_progress']-d['actual_prefix_target_progress']))<1e-7
+        assert abs(d['applied_prefix_prediction_error']-(observed-d['selected_applied_prefix_correction']))<1e-7
+        assert abs(d['corrected_prefix_target_progress']-(d['predicted_prefix_target_progress']-d['selected_applied_prefix_correction']))<1e-7
         expected=(observed-d['selected_unbounded_prefix_mean'])**2/max(d['selected_prefix_predictive_variance'],1e-12)
         assert abs(d['posterior_standardized_error']-expected)<1e-6
 
@@ -72,6 +74,31 @@ def analyze(report):
         limitations=['Unselected alternatives have no observed physical outcomes.',
             'Acceptance/rejection groups are observational, not causal ablations.',
             'Posterior covers prefix-error conditional mean only; calibration need not imply better task success.'])
+    per_task = {}
+    failure_routes = []
+    for task in sorted({r['task'] for r in report['records']}):
+        records = [r for r in report['records'] if r['task']==task]
+        factual = [d for r in records for d in r['controller_diagnostics']['decisions']
+                   if 'observed_prefix_cost_error' in d]
+        per_task[task] = dict(successes=sum(bool(r['success']) for r in records),
+            timeouts=sum(bool(r['controller_budget_exhausted']) for r in records),
+            observed_prefixes=len(factual),
+            raw_prefix_mae=mean(abs(d['observed_prefix_cost_error']) for d in factual),
+            applied_prefix_mae=mean(abs(d['applied_prefix_prediction_error']) for d in factual),
+            unbounded_posterior_mean_mae=mean(abs(d['observed_prefix_cost_error']-d['selected_unbounded_prefix_mean']) for d in factual),
+            factual_90_coverage=mean(d['posterior_standardized_error']<=1.644854**2 for d in factual))
+        for record in records:
+            if record['success']: continue
+            tail=record['controller_diagnostics']['decisions'][-20:]
+            routes=Counter('direct_goal' if d['anchor'].get('direct_goal')
+                           else d['anchor']['episode'].split('/')[1] for d in tail)
+            failure_routes.append(dict(id=record['id'],steps=record['steps'],
+                timeout=record['controller_budget_exhausted'],last20_route_provenance=dict(routes),
+                matching_task_routes=routes[task]))
+    summary.update(per_task_factual_calibration=per_task, failure_route_tails=failure_routes,
+        observed_applied_prefix_mae=mean(abs(d['applied_prefix_prediction_error']) for d in observed),
+        observed_unbounded_posterior_mean_mae=mean(abs(d['observed_prefix_cost_error']-d['selected_unbounded_prefix_mean']) for d in observed))
+    summary['limitations'].append('Factual prefix error compares encoded observed frames with world predictions; it is not physical task progress. Route task names are reporting provenance, never an oracle policy filter.')
     return summary
 
 

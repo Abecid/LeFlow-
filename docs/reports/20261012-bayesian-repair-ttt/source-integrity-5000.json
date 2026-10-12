@@ -1,0 +1,9 @@
+{
+  "step": 5000,
+  "source": "/home/mtxu/adam/LeFlow-experiments/20261012-bayesian-repair-ttt/campaign/runs/bayesian_repair_ttt_3072/validation/step_0005000.json",
+  "raw_bytes": 996652083,
+  "raw_sha256": "ab6cdcbe4cc764416b81e2a104325f2277b068d66e74077397c188eccf216736",
+  "compressed_bytes": 175289586,
+  "compressed_sha256": "8d8bafc6728aac010ad0c992eff2d2ad70adef84fdb8e2b916f3ccd6462be331",
+  "cpu_wall_seconds": 22.25837088562548
+}

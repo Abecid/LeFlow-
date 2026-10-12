@@ -1,3 +1,86 @@
+# Bayesian repair: interim curve 71/76; training continues
+
+## First two fixed evaluations: 71/104 and 76/104
+
+The 5k and 10k checkpoints score **71 and 76 successes out of 104**. The provisional
+selection is 10k, below the retained 80/104 references. These are interim results;
+the registered 15k and 20k evaluations remain part of this same run.
+
+| Checkpoint | Successes | Timeouts | Wins / regressions vs retrieval 80 | Wins / regressions vs execution 80 |
+| --- | ---: | ---: | ---: | ---: |
+| 5k | 71 | 0 | 2 / 11 | 2 / 11 |
+| 10k | 76 | 2 | 5 / 9 | 4 / 8 |
+
+All 33 failures at 5k reach 200 actions. At 10k, 26 failures reach 200 actions;
+assembly/00002 and assembly/00006 exhaust the cumulative 10-second controller
+allowance at 194 and 192 actions. Their traces include isolated controller calls
+of 1.611 and 1.561 seconds, respectively, amid calls usually near 85–90ms.
+Recorded overruns are 0.000389 and 0.034504 seconds. These observations do not
+identify the source of the spikes or establish that either case would have
+succeeded with more time. No evaluation is replayed. Overall mean decision
+latencies are 88.59 and 89.26ms; the preflight mean is not a guarantee that every
+runtime call stays under that value.
+
+Assembly and faucet each remain 1/8 at both milestones, while reach improves
+from 1/8 to 3/8. Pick-place remains 0/8. All eight pick-place failures at both
+checkpoints use reach-derived or direct-goal targets throughout their last 20
+recorded decisions. This is route provenance, not proof of a physical failure
+mechanism or justification for oracle task-ID filtering. Against retrieval 80,
+the provisional 10k result gains one assembly, one dial, one faucet and two reach
+cases, but regresses four assembly, one door-open, three faucet and one pick-place
+case. The full paired IDs and all preserved baseline comparisons are saved.
+
+The method-specific audit reconstructs all candidate costs, shared uncertainty
+margins, admissibility and incumbent choices in 5,755 / 5,318 controller decisions.
+Every logged decision satisfies the registered 280 world-transition accounting,
+40 cached transitions, two reasoning rounds and total action radius <=0.25.
+The route-level gate rejects 7,882 of 41,029 positive-mean-gain repairs at 5k and
+6,137 of 36,646 at 10k (19.21% / 16.75%). The final executed plan is a repair in
+42.52% / 40.05% of decisions; this is distinct from acceptance at all eight
+candidate routes. Generated/retrieved/shifted anchor counts are
+1,563/1,763/2,429 and 1,426/1,578/2,314. Rejected alternatives have no observed
+physical outcomes, so these frequencies cannot establish the gate's causal benefit.
+
+On actually executed prefixes, the deployed correction reduces the world-error
+proxy MAE from 0.002648 to 0.001775 at 5k and from 0.002748 to 0.001846 at 10k.
+Nominal 90% predictive intervals cover 85.65% / 84.28% of observed prefix errors,
+below the nominal level and the TRAIN diagnostic. This uncertainty concerns
+encoded prefix prediction error, not terminal-model bias or physical task success.
+Better calibration versus uncorrected predictions has not produced an improvement
+over the retained 80/104 references. The last-500-update action-flow loss drops
+0.162581→0.116172, repair-flow loss 0.261004→0.181118 and teacher clipping
+4.50%→2.71%; these selected training summaries do not identify physical causes.
+
+All twenty saved trajectory contact sheets (ten per checkpoint) were rendered
+from measured frames and visually inspected at readable resolution. Pick-place00000
+leaves the object on the table; faucet00003 approaches the handle without success.
+Assembly00000 succeeds at 5k but leaves the ring near its starting location at 10k;
+reach00005 changes from failure to success. Both checkpoints fail reach00003.
+The saved subset is not visual coverage of every failure, and sparse frames do
+not establish contact forces, slippage or counterfactual outcomes.
+
+At the 09:08:16 UTC readback, frozen source 4d322c9, all 173 runtime hashes and
+all 44 recorded PID/start identities match; W&B u1hdmwqr is running and reports
+the 10k score. The advancing snapshot preserves all 844 periodic training rows
+through step 14051, with finite metrics and monotone optimization charges.
+Compute at 14051 is 2.906668169 optimization GPUh and 1.086928572 registered
+evaluation GPUh, with no update overrun. Diagnostic, preflight, no-update DDP
+and retrieval setup are recorded separately; cumulative measured components
+total 109.301016643 GPUh; details are in
+`reports/20261012-bayesian-repair-ttt/compute-accounting-round-2.json`.
+This partial snapshot is not a full cluster bill. The initial health read was at
+14048; sequential advancing files are not claimed to be an atomic checkpoint.
+
+Complete reports retain every original byte through lossless gzip parts, with
+per-part, combined-stream and original JSON hashes in the validation manifests.
+The reporting loader verifies all three levels before decoding. This format is
+needed because each compressed report exceeds GitHub's single-file limit; no
+candidate records are dropped. Contact sheets, visual notes, paired IDs, posterior
+checks, full metrics, checkpoint hashes and transfer-recovery notes are preserved.
+All reporting code stays outside the frozen execution tree. One seed and reused
+development selection do not establish generalization, component benefit or SOTA.
+No further candidate is authorized; finish and publish this run, then stop for review.
+
 # First milestone reached; task-success result pending
 
 At08:45:04UTC the run reached5,000 updates, with1.027975 optimizationGPUh,
