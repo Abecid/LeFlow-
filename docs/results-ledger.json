@@ -48,10 +48,10 @@
       "optimization_gpu_hours": 4.812525830430289,
       "validation_gpu_hours": 2.3258419658450618,
       "post_publication_review": "docs/NONLINEAR_REPAIR_TTT_REVIEW.md",
-      "publication_state": "awaiting_live_remote_verification",
+      "publication_state": "verified_on_origin_main",
       "artifact_sha256": {
         "docs/reports/20261012-nonlinear-repair-ttt/allocation.json": "b82ec18f4f99ea4cc61e1542c91bccad47a6b920b617a7184af6cf5dd3a6bd9f",
-        "docs/reports/20261012-nonlinear-repair-ttt/analysis/final-audit.json": "e03647bdd9a183199eb6f856b3884a204bee955fbd95efc1347837f48d6f34dc",
+        "docs/reports/20261012-nonlinear-repair-ttt/analysis/final-audit.json": "3ed5a90dec42793b23c97374cbbfec3267ed48e1e5c6ecd373bdd24755b067e7",
         "docs/reports/20261012-nonlinear-repair-ttt/analysis/final-details.json": "d11639ba66e9e053e8116e78a9a8ab9c7b105727c2f2d8ad25041f4069f2db4c",
         "docs/reports/20261012-nonlinear-repair-ttt/analysis/preservation-checks.json": "2a5f89920ce3cb5c11fdd9e5e21cd211b01b6d4db983ce1fa924ea6e5aa88c29",
         "docs/reports/20261012-nonlinear-repair-ttt/compute-accounting-final.json": "c454579353a616a86c143e90ded4284b5a0bac582aa6347880b25812acf750f5",
@@ -123,6 +123,7 @@
         "docs/reports/20261012-nonlinear-repair-ttt/prefix-audit-5000.json": "b66062211b587536cdf079d6fc4ddcced0a7634e620cc1778882ef6587cbd82b",
         "docs/reports/20261012-nonlinear-repair-ttt/preflight.json": "d4380d846f6a25a86fd41bccf63fb9793b5dfb9fb18992fa6a914e68384385d9",
         "docs/reports/20261012-nonlinear-repair-ttt/prelaunch-checks.json": "dc993798e778dc1a3ab901bce2a8a284ad69dd1b9ebb1ffd765968a6cc996b08",
+        "docs/reports/20261012-nonlinear-repair-ttt/publication-final-verification.json": "e4fa76bfd80f01edc0d936046b583eaa09bfeed0acf76c7feecbf53f28ef64e7",
         "docs/reports/20261012-nonlinear-repair-ttt/publication-round-1-verification.json": "c0c153eaf6e2fdb8b6818e4987a3fabcc12af87ff3e43985e509289aeee04d10",
         "docs/reports/20261012-nonlinear-repair-ttt/publication-round-2-verification.json": "69e270dc6268ba28a434e25eb733403a47f48ed221a6afde15367606172ce499",
         "docs/reports/20261012-nonlinear-repair-ttt/publication-verification.json": "14bd866dfc0de2c919cdf644d9eb6f4c072f49611fd982e8b92bcba2ddb45275",
@@ -157,10 +158,13 @@
         "docs/reports/20261012-nonlinear-repair-ttt/visual-review-15000.json": "0e9602aa88af9b2c97a80d2bb8c02a27836490a1e75af7143c6993f260c09fe2",
         "docs/reports/20261012-nonlinear-repair-ttt/visual-review-20000.json": "0b06a5f8983c12fad078922c6e5a235c0d3f4f0a529ff5d03d9c9cf2172167be",
         "docs/reports/20261012-nonlinear-repair-ttt/visual-review-5000.json": "02f8739cef603ae6f2186ab634e8644a298414b03e24a18e195ccf3242e185f1",
-        "docs/NONLINEAR_REPAIR_TTT.md": "c55e2b417ff815cbff6a63f41052e2461dafca8b1b09755783c5c9d73553eb82",
-        "docs/NONLINEAR_REPAIR_TTT_RESULTS.md": "0cd4b3d2b0eaa2f1002e1305a835a03ee87e9efe056a7a81ab9ea7204a676001",
+        "docs/NONLINEAR_REPAIR_TTT.md": "3c2d9327e3c498b7f5e67befc3180e5333be282a2500ca51473b25a0d49824e2",
+        "docs/NONLINEAR_REPAIR_TTT_RESULTS.md": "ee90c5c27815eba237fb873ee6afd39a4cafc0b57ac46988ce1563d4f57d1d7b",
         "docs/NONLINEAR_REPAIR_TTT_REVIEW.md": "fe46bf0c4944f50742e4468583be5b407146ed93b51a4149e5b49d4295edfd3c"
-      }
+      },
+      "publication_commit": "c2390264afa2164722f12b0f194b376da567069a",
+      "publication_verified_utc": "2026-10-12T10:52:52.383238+00:00",
+      "publication_verification_artifact": "docs/reports/20261012-nonlinear-repair-ttt/publication-final-verification.json"
     },
     {
       "run_key": "u1hdmwqr",

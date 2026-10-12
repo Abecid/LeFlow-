@@ -7,6 +7,8 @@ checkpoint and controller audits pass; all owned processes exited and W&B finish
 Read the [completed findings](NONLINEAR_REPAIR_TTT_RESULTS.md) and
 [review hold](NONLINEAR_REPAIR_TTT_REVIEW.md). No next candidate is authorized.
 
+Core evidence was published at `c2390264afa2164722f12b0f194b376da567069a` and live-remotely verified at 2026-10-12T10:52:52.383238+00:00: all 618 ledger artifact blobs, 61 evaluation reports and 20 report/status files matched. The [publication receipt](reports/20261012-nonlinear-repair-ttt/publication-final-verification.json) records that check; the subsequent receipt/status commit is verified separately.
+
 The interim and launch snapshots below are historical; they do not indicate an active run.
 
 # Nonlinear episodic memory on retrieval bounded flow repair

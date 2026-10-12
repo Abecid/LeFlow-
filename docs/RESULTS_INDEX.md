@@ -17,7 +17,8 @@ all 44 owned processes exited and W&B mxujto8j finished. No run remains active.
 authorized this one candidate only. The monitor stays available for future explicitly
 authorized and registered work. Cumulative measured components: 118.74095081704824 GPUh,
 excluding the disclosed unmeasured preparation; this is not a full cluster bill.
-Live origin/main and artifact verification is required before publication is confirmed.
+Complete evidence was live-remotely verified at `c2390264afa2164722f12b0f194b376da567069a`:
+618 artifact blobs and 61 reports. See the [publication receipt](reports/20261012-nonlinear-repair-ttt/publication-final-verification.json).
 
 ## Preserved comparisons
 

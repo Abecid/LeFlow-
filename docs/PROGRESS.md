@@ -16,8 +16,9 @@ Read docs/NONLINEAR_REPAIR_TTT_RESULTS.md and docs/NONLINEAR_REPAIR_TTT_REVIEW.m
 This one authorized candidate is complete. No run is active; no next candidate is
 authorized. Never restart the completed coordinator or workers. Preserve references,
 data and sealed tests. Keep the monitor available for later explicitly authorized
-registered work. Live origin/main and artifact verification complete publication;
-a local ledger alone is not proof.
+registered work. Core publication c2390264afa2164722f12b0f194b376da567069a was live-remotely verified
+at 2026-10-12T10:52:52.383238+00:00: 618 artifact blobs and 61 evaluation reports. The saved
+receipt is docs/reports/20261012-nonlinear-repair-ttt/publication-final-verification.json.
 
 Earlier status snapshots follow; this entry controls.
 

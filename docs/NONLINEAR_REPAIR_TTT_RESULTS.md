@@ -116,4 +116,8 @@ Full metrics and every evaluation are lossless gzip, with original byte hashes i
 
 The selected 73/104 has 8 wins/15 regressions versus retrieval-repair 80 and 5/12 versus execution-revision 80. It remains below both references. Lower fitting/prediction losses, a more expressive memory and shrinking proposals do not demonstrate physical-success gains. One seed, repeatedly reused development selection, custom baseline ports, changed rank-dependent random streams and no component ablations limit inference. This does not establish generalization, native-benchmark SOTA, novelty or a causal benefit/harm of the memory. Final tests remain sealed.
 
-This single authorized run is complete; stop further launches for review. The remaining supervision, history coverage, diversity or latency questions do not authorize a speculative variant. Read the [post-run review](NONLINEAR_REPAIR_TTT_REVIEW.md). Publication is complete only after live origin/main and all ledger artifact bytes have been verified; the receipt is added after that check.
+This single authorized run is complete; stop further launches for review. The remaining supervision, history coverage, diversity or latency questions do not authorize a speculative variant. Read the [post-run review](NONLINEAR_REPAIR_TTT_REVIEW.md). Complete publication evidence follows.
+
+## Publication verification
+
+Core evidence was published at `c2390264afa2164722f12b0f194b376da567069a` and live-remotely verified at 2026-10-12T10:52:52.383238+00:00: all 618 ledger artifact blobs, 61 evaluation reports and 20 report/status files matched. The [publication receipt](reports/20261012-nonlinear-repair-ttt/publication-final-verification.json) records that check; the subsequent receipt/status commit is verified separately.
