@@ -1,3 +1,23 @@
+# October 12: five new baseline training/evaluation runs authorized
+
+The user explicitly requested actual training and evaluation of all five newly
+implemented methods: vanilla_action_flow, action_flow_search, sage_port,
+diffusion_policy_port and feedback_wm_port, using all available server GPUs.
+This supersedes the earlier no-new-run hold ONLY for these five comparisons.
+Registered execution source 0a19c7c, 214 runtime files. Use two disjoint four-A800
+lanes, seed3072, global64, same6222 expert TRAIN episodes, frozen shared world/
+encoder, 20k-update OR28800 optimizer-GPU-second cap per method, four fixed104
+development evaluations, 200 actions/10 cumulative controller seconds. No extra
+seeds, final tests, unrelated variants or old baseline retraining are authorized.
+
+Each run is isolated beneath /home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines.
+GPU preflight and exact no-update four-rank gradient checks precede optimization.
+Publish all periodic/final results, paired failures, compute and implementation
+provenance to origin/main. Preserve SAGE/Feedback-WM port labels and all negative
+results. Read ADDITIONAL_BASELINE_RUNS_20261012.md and the active ledger for status.
+
+Earlier status follows and is historical where superseded.
+
 # Nonlinear repair completed: selected 5k 73; further launches held
 
 The fixed curve is 73/66/67/72, below the retained 80 references. All 800 periodic
