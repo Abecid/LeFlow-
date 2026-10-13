@@ -14,10 +14,10 @@ from torch.nn import functional as F
 
 from ..models import Trunk, distance, prediction_loss
 from ..execution.model import ChunkPolicy
-from ..execution.aligned import AlignedSegments
+from .simple_action_flow import BasicActionSegments
 
 
-class SageSegments(AlignedSegments):
+class SageSegments(BasicActionSegments):
     """Sample a factual intermediate state at a horizon <= the final goal offset."""
     def __getitem__(self, index):
         item = super().__getitem__(index)

@@ -29,6 +29,16 @@ def run(args):
     examples=[data[i] for i in range(8)]
     batch={k:torch.stack([row[k] for row in examples]).to(device) for k in examples[0]}
     data_checks={}
+    if method in ('vanilla_action_flow','action_flow_search','sage_port',
+                  'diffusion_policy_port','feedback_wm_port'):
+        from .aligned import AlignedSegments
+        previous=AlignedSegments(root,c,'flow_reasoning',3072,64)
+        for i,example in enumerate(examples):
+            original=previous[i]
+            for key in ('z','a','sample_start','sample_goal_offset'):
+                assert torch.equal(example[key],original[key]), key
+        data_checks['exact_previous_consumed_training_fields']=8
+        data_checks['unused_history_not_loaded_or_transferred']=True
     if method=='latent_revision':
         previous=ExecutionSegments(root,c,'controller_grounded',3072,64)
         for i,example in enumerate(examples):

@@ -6,11 +6,27 @@ independent candidate pools, frozen-world score; no recurrent workspace/TTT/repa
 Training labels are ALWAYS recorded actions from the same demonstration.
 """
 from __future__ import annotations
+import h5py
+import numpy as np
 import torch
 from torch import nn
 
 from ..models import Trunk, distance
 from ..execution.flow_reasoning import ActionFlow
+from ..execution.aligned import AlignedSegments
+
+
+class BasicActionSegments(AlignedSegments):
+    """Same recorded windows; avoid loading/transfer of unused TTT history."""
+    def __getitem__(self, index):
+        row, start, delta = self.sample_spec(index)
+        with h5py.File(self.root / row['path'], 'r') as f:
+            local = (f[self.state_key][start:start+6].astype(np.float32)-self.mean)/self.std
+            goal = (f[self.state_key][start+delta].astype(np.float32)-self.mean)/self.std
+            actions = f['actions'][start:start+5].astype(np.float32)
+        states = np.stack((local[0], local[1], local[5], goal))
+        return dict(z=torch.from_numpy(states.copy()), a=torch.from_numpy(actions.copy()),
+                    sample_start=torch.tensor(start), sample_goal_offset=torch.tensor(delta))
 
 
 class BasicActionFlowPolicy(nn.Module):

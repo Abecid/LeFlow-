@@ -73,22 +73,21 @@ def component_types(c):
     if method in ('vanilla_action_flow','action_flow_search'):
         from ..baselines.simple_action_flow import (
             VanillaActionFlowPolicy, ActionFlowSearchPolicy,
-            VanillaActionFlowController, ActionFlowSearchController)
-        from .aligned import AlignedSegments
+            VanillaActionFlowController, ActionFlowSearchController, BasicActionSegments)
         if method == 'vanilla_action_flow':
-            return method, VanillaActionFlowPolicy, AlignedSegments, VanillaActionFlowController
-        return method, ActionFlowSearchPolicy, AlignedSegments, ActionFlowSearchController
+            return method, VanillaActionFlowPolicy, BasicActionSegments, VanillaActionFlowController
+        return method, ActionFlowSearchPolicy, BasicActionSegments, ActionFlowSearchController
     if method == 'sage_port':
         from ..baselines.sage_port import SagePolicy, SageController, SageSegments
         return method, SagePolicy, SageSegments, SageController
     if method == 'diffusion_policy_port':
         from ..baselines.diffusion_port import DiffusionActionPolicy, DiffusionPolicyController
-        from .aligned import AlignedSegments
-        return method, DiffusionActionPolicy, AlignedSegments, DiffusionPolicyController
+        from ..baselines.simple_action_flow import BasicActionSegments
+        return method, DiffusionActionPolicy, BasicActionSegments, DiffusionPolicyController
     if method == 'feedback_wm_port':
         from ..baselines.feedback_wm_port import FeedbackWorldPolicy, FeedbackWorldController
-        from .aligned import AlignedSegments
-        return method, FeedbackWorldPolicy, AlignedSegments, FeedbackWorldController
+        from ..baselines.simple_action_flow import BasicActionSegments
+        return method, FeedbackWorldPolicy, BasicActionSegments, FeedbackWorldController
     raise ValueError(f'Unsupported isolated candidate: {method}')
 
 
