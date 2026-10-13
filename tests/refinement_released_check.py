@@ -1,4 +1,4 @@
-"""Actual released planner, world model, simulator and path-gradient integration.
+"""Released-world and native-architecture path-gradient integration.
 
 No benchmark dataset, optimizer or success-rate claim. Physical actions are
 bounded and actually executed. Outputs are explicitly interface-check records.
@@ -14,17 +14,25 @@ from huggingface_hub import hf_hub_download, HfApi
 from crossbench.environment import NativeEnv
 from crossbench.world import ActionUnits, LeWMWorld
 from leflow_refinement.runtime import NativeRuntime, variants
-from leflow_refinement.core import sample
 
 
 def main():
     torch.set_num_threads(1)
     output = Path('refinement-checks'); output.mkdir(exist_ok=True)
     rows = []
+    availability = []
     for task in ('pusht', 'cube'):
         world_path = hf_hub_download('quentinll/lewm-'+task, 'weights.pt')
-        policy_path = hf_hub_download('hsiangwei0903/LeFlow', task+'/latent_planner.pt')
-        adapter = NativeRuntime.load(policy_path, world_checkpoint=world_path, device='cpu')
+        policy_path = None
+        try:
+            policy_path = hf_hub_download('hsiangwei0903/LeFlow', task+'/latent_planner.pt')
+            availability.append(dict(task=task, pretrained_head='available'))
+        except Exception as error:
+            from huggingface_hub.errors import HfHubHTTPError
+            if not isinstance(error, HfHubHTTPError): raise
+            availability.append(dict(task=task, pretrained_head='blocked', error=str(error)))
+            print('PRETRAINED_HEAD_BLOCKED', task, str(error), flush=True)
+        (output/'pretrained_head_status.json').write_text(json.dumps(availability, indent=2))
         env = NativeEnv(task)
         try:
             env.env.reset(seed=3072); image = env.render()
@@ -32,16 +40,28 @@ def main():
             low, high = env.action_space.low, env.action_space.high
             # Synthetic interface statistics, NOT benchmark action normalization.
             units = ActionUnits(low, high, (low+high)/2, (high-low)/2, block=5)
-            world = LeWMWorld(adapter.model.lewm, units)
+            from latent_planner import load_lewm, LatentPlannerRuntime, LatentPathFlow, InverseDynamics
+            lewm = load_lewm(world_path)
+            world = LeWMWorld(lewm, units)
             z = world.encode(image[None])[:, 0]
             g = world.encode(goal_image[None])[:, 0]
             ad = len(low)*5
+            if policy_path is not None:
+                adapter = NativeRuntime.load(policy_path, world_checkpoint=world_path, device='cpu')
+                head_source = 'released_trained_head'
+            else:
+                # Explicit architecture-only fallback, NEVER a performance run.
+                torch.manual_seed(19)
+                flow = LatentPathFlow(z.shape[-1])
+                inverse = InverseDynamics(z.shape[-1], ad)
+                adapter = NativeRuntime(LatentPlannerRuntime(lewm, flow, inverse, action_block=5))
+                head_source = 'randomly_initialized_head_interface_check_only'
             assert adapter.model.inverse_dynamics.action_dim == ad
             adapter.lower = torch.full((ad,), -1.)
             adapter.upper = torch.full((ad,), 1.)
             original = {k:v.clone() for k,v in adapter.model.state_dict().items()}
             for name in ('leflow', 'pnp', 'world_gradient', 'world_pnp'):
-                cfg = replace(variants()[name], samples=2, steps=4, refine_at=(1,2), repeats=1)
+                cfg = replace(variants()[name], samples=2, steps=4, refine_at=(1,2), repeats=1, consistency_weight=0.)
                 with torch.inference_mode():
                     result = adapter.plan(z, g, cfg, seed=7)
                 action = result['actions'][0, 0]
@@ -58,15 +78,14 @@ def main():
                     rgb, _, _, done = env.step(primitive)
                     if done: break
                 assert rgb.shape == (224,224,3)
-                row = dict(task=task, variant=name, interface_check_only=True,
+                row = dict(task=task, variant=name, interface_check_only=True, head_source=head_source,
                     latent_dim=z.shape[-1], action_dim=ad, telemetry=result['telemetry'],
                     checkpoint=adapter.provenance)
                 rows.append(row)
-                print('RELEASED_REFINEMENT_OK', json.dumps(row), flush=True)
+                print('WORLD_REFINEMENT_INTERFACE_OK', json.dumps(row), flush=True)
         finally:
             env.close()
     (output/'released_interfaces.json').write_text(json.dumps(rows, indent=2))
-    # Inspect archive sizes before proposing any dataset download.
     sizes = []
     for repo in ('quentinll/lewm-pusht','quentinll/lewm-reacher',
                  'quentinll/lewm-tworooms','quentinll/lewm-cube'):
