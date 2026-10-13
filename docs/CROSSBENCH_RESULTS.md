@@ -4,8 +4,10 @@ Sixteen authorized fresh runs; completed MetaWorld results are reused. Training 
 
 | Dataset | Method | State | Success curve /50 | Best measured |
 | --- | --- | --- | --- | ---: |
-| cube | leflow | training / periodic evaluation | pending | pending |
-| cube | retrieval_repair_ttt | training / periodic evaluation | 30 | 30 |
+| cube | action_flow_search | training / periodic evaluation | pending | pending |
+| cube | execution_revision | completed, audited | 28 / 30 / 32 / 31 | 32 |
+| cube | leflow | completed, audited | 33 / 40 / 37 / 40 | 40 |
+| cube | retrieval_repair_ttt | completed, audited | 30 / 32 / 32 / 31 | 32 |
 | cube | vanilla_action_flow | completed, audited | 29 / 37 / 38 / 38 | 38 |
 | pusht | action_flow_search | completed, audited | 37 / 29 / 24 / 31 | 37 |
 | pusht | execution_revision | completed, audited | 33 / 30 / 38 / 33 | 38 |
@@ -15,8 +17,6 @@ Sixteen authorized fresh runs; completed MetaWorld results are reused. Training 
 | pusht | vanilla_action_flow | completed, audited | 7 / 13 / 15 / 17 | 17 |
 | pusht | diffusion_policy_port | queued | pending | pending |
 | pusht | feedback_wm_port | queued | pending | pending |
-| cube | execution_revision | queued | pending | pending |
-| cube | action_flow_search | queued | pending | pending |
 | cube | sage_port | queued | pending | pending |
 | cube | diffusion_policy_port | queued | pending | pending |
 | cube | feedback_wm_port | queued | pending | pending |
@@ -25,6 +25,9 @@ Paired outcomes at each method’s selected development checkpoint:
 
 | Dataset | Method versus plain flow | Additional successes | Lost successes | Both fail |
 | --- | --- | ---: | ---: | ---: |
+| cube | execution_revision | 4 | 10 | 8 |
+| cube | leflow | 5 | 3 | 7 |
+| cube | retrieval_repair_ttt | 5 | 11 | 7 |
 | pusht | action_flow_search | 23 | 3 | 10 |
 | pusht | execution_revision | 24 | 3 | 9 |
 | pusht | leflow | 7 | 12 | 26 |
@@ -33,7 +36,7 @@ Paired outcomes at each method’s selected development checkpoint:
 
 These pairs compare different trained systems on identical development cases. They do not isolate the effect of TTT or search, or reveal rejected-action counterfactuals.
 
-Snapshot: 2026-10-13T11:13:59.318829+00:00. Queue failure hold: False. Lane states: {'A': 'training_and_periodic_evaluation', 'B': 'training_and_periodic_evaluation'}.
+Snapshot: 2026-10-13T14:29:00.866087+00:00. Queue failure hold: True. Lane states: {'A': 'failed_hold', 'B': 'training_and_periodic_evaluation'}.
 
 The registered methods use two disjoint four-GPU lanes. No missing score is estimated. All archived case outcomes are actual native simulator success flags. CPU/synthetic checks alone are not benchmark results.
 

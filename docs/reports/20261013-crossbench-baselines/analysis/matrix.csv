@@ -15,11 +15,11 @@ pusht,sage_port,completed,40,50,15000,0,58.315838789930204,0.6251133855535752
 pusht,diffusion_policy_port,not_started,,,,,,
 pusht,feedback_wm_port,not_started,,,,,,
 pusht,retrieval_repair_ttt,completed,39,50,10000,0,54.62385406831234,1.8702200012260841
-cube,leflow,not_started,,,,,,
+cube,leflow,completed,40,50,10000,0,51.49404886155272,0.7561598268420332
 cube,vanilla_action_flow,completed,38,50,15000,0,11.477540297608071,0.5579047460750574
-cube,execution_revision,not_started,,,,,,
+cube,execution_revision,completed,32,50,15000,0,68.62474216124275,1.6091209093046686
 cube,action_flow_search,not_started,,,,,,
 cube,sage_port,not_started,,,,,,
 cube,diffusion_policy_port,not_started,,,,,,
 cube,feedback_wm_port,not_started,,,,,,
-cube,retrieval_repair_ttt,incomplete,,,,,,
+cube,retrieval_repair_ttt,completed,32,50,10000,0,56.550575979053974,1.8685919297859073

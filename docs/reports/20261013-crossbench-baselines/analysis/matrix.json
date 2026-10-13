@@ -179,10 +179,75 @@
     },
     {
       "dataset": "cube",
+      "method": "leflow",
+      "reference": "vanilla_action_flow",
+      "regressions": [
+        "cube/val/0004293/000051",
+        "cube/val/0007447/000118",
+        "cube/val/0008504/000021"
+      ],
+      "wins": [
+        "cube/val/0000859/000100",
+        "cube/val/0002777/000008",
+        "cube/val/0003396/000018",
+        "cube/val/0007213/000112",
+        "cube/val/0007821/000121"
+      ]
+    },
+    {
+      "dataset": "cube",
       "method": "vanilla_action_flow",
       "reference": "vanilla_action_flow",
       "regressions": [],
       "wins": []
+    },
+    {
+      "dataset": "cube",
+      "method": "execution_revision",
+      "reference": "vanilla_action_flow",
+      "regressions": [
+        "cube/val/0001514/000118",
+        "cube/val/0001968/000118",
+        "cube/val/0002090/000115",
+        "cube/val/0002397/000120",
+        "cube/val/0003106/000118",
+        "cube/val/0007447/000118",
+        "cube/val/0008504/000021",
+        "cube/val/0008782/000106",
+        "cube/val/0008993/000025",
+        "cube/val/0009458/000118"
+      ],
+      "wins": [
+        "cube/val/0000560/000032",
+        "cube/val/0005033/000124",
+        "cube/val/0007821/000121",
+        "cube/val/0008908/000033"
+      ]
+    },
+    {
+      "dataset": "cube",
+      "method": "retrieval_repair_ttt",
+      "reference": "vanilla_action_flow",
+      "regressions": [
+        "cube/val/0001514/000118",
+        "cube/val/0001645/000057",
+        "cube/val/0001968/000118",
+        "cube/val/0002008/000149",
+        "cube/val/0002090/000115",
+        "cube/val/0003106/000118",
+        "cube/val/0007447/000118",
+        "cube/val/0008504/000021",
+        "cube/val/0008782/000106",
+        "cube/val/0008993/000025",
+        "cube/val/0009458/000118"
+      ],
+      "wins": [
+        "cube/val/0000560/000032",
+        "cube/val/0004519/000037",
+        "cube/val/0005033/000124",
+        "cube/val/0007821/000121",
+        "cube/val/0009070/000039"
+      ]
     }
   ],
   "rows": [
@@ -656,12 +721,58 @@
       "world_transitions": 104960
     },
     {
+      "curve": [
+        {
+          "checkpoint": "step_0005000",
+          "successes": 33,
+          "timeouts": 0
+        },
+        {
+          "checkpoint": "step_0010000",
+          "successes": 40,
+          "timeouts": 0
+        },
+        {
+          "checkpoint": "step_0015000",
+          "successes": 37,
+          "timeouts": 0
+        },
+        {
+          "checkpoint": "step_0020000",
+          "successes": 40,
+          "timeouts": 0
+        }
+      ],
       "dataset": "cube",
-      "episodes": null,
+      "episodes": 50,
+      "evaluation_gpu_hours": 0.35721191429222626,
+      "failure_ids": [
+        "cube/val/0000560/000032",
+        "cube/val/0002985/000041",
+        "cube/val/0004118/000026",
+        "cube/val/0004293/000051",
+        "cube/val/0004519/000037",
+        "cube/val/0005033/000124",
+        "cube/val/0007447/000118",
+        "cube/val/0008504/000021",
+        "cube/val/0008908/000033",
+        "cube/val/0009070/000039"
+      ],
+      "last_update": 20000,
+      "mean_decision_ms": 51.49404886155272,
+      "mean_steps": 17.34,
       "method": "leflow",
-      "selected_step": null,
-      "status": "not_started",
-      "successes": null
+      "optimization_gpu_hours": 0.7561598268420332,
+      "selected_step": 10000,
+      "status": "completed",
+      "success_rate": 0.8,
+      "successes": 40,
+      "timeouts": 0,
+      "wilson95": [
+        0.6696262789551477,
+        0.8875637005402612
+      ],
+      "world_transitions": 63680
     },
     {
       "curve": [
@@ -720,12 +831,66 @@
       "world_transitions": 0
     },
     {
+      "curve": [
+        {
+          "checkpoint": "step_0005000",
+          "successes": 28,
+          "timeouts": 0
+        },
+        {
+          "checkpoint": "step_0010000",
+          "successes": 30,
+          "timeouts": 0
+        },
+        {
+          "checkpoint": "step_0015000",
+          "successes": 32,
+          "timeouts": 0
+        },
+        {
+          "checkpoint": "step_0020000",
+          "successes": 31,
+          "timeouts": 0
+        }
+      ],
       "dataset": "cube",
-      "episodes": null,
+      "episodes": 50,
+      "evaluation_gpu_hours": 0.42335609522337714,
+      "failure_ids": [
+        "cube/val/0000859/000100",
+        "cube/val/0001514/000118",
+        "cube/val/0001968/000118",
+        "cube/val/0002090/000115",
+        "cube/val/0002397/000120",
+        "cube/val/0002777/000008",
+        "cube/val/0002985/000041",
+        "cube/val/0003106/000118",
+        "cube/val/0003396/000018",
+        "cube/val/0004118/000026",
+        "cube/val/0004519/000037",
+        "cube/val/0007213/000112",
+        "cube/val/0007447/000118",
+        "cube/val/0008504/000021",
+        "cube/val/0008782/000106",
+        "cube/val/0008993/000025",
+        "cube/val/0009070/000039",
+        "cube/val/0009458/000118"
+      ],
+      "last_update": 20000,
+      "mean_decision_ms": 68.62474216124275,
+      "mean_steps": 21.28,
       "method": "execution_revision",
-      "selected_step": null,
-      "status": "not_started",
-      "successes": null
+      "optimization_gpu_hours": 1.6091209093046686,
+      "selected_step": 15000,
+      "status": "completed",
+      "success_rate": 0.64,
+      "successes": 32,
+      "timeouts": 0,
+      "wilson95": [
+        0.5014076201030195,
+        0.7586143703281711
+      ],
+      "world_transitions": 111840
     },
     {
       "dataset": "cube",
@@ -760,13 +925,66 @@
       "successes": null
     },
     {
+      "curve": [
+        {
+          "checkpoint": "step_0005000",
+          "successes": 30,
+          "timeouts": 0
+        },
+        {
+          "checkpoint": "step_0010000",
+          "successes": 32,
+          "timeouts": 0
+        },
+        {
+          "checkpoint": "step_0015000",
+          "successes": 32,
+          "timeouts": 0
+        },
+        {
+          "checkpoint": "step_0020000",
+          "successes": 31,
+          "timeouts": 0
+        }
+      ],
       "dataset": "cube",
-      "episodes": null,
-      "last_update": 6598,
+      "episodes": 50,
+      "evaluation_gpu_hours": 0.3938796893859075,
+      "failure_ids": [
+        "cube/val/0000859/000100",
+        "cube/val/0001514/000118",
+        "cube/val/0001645/000057",
+        "cube/val/0001968/000118",
+        "cube/val/0002008/000149",
+        "cube/val/0002090/000115",
+        "cube/val/0002777/000008",
+        "cube/val/0002985/000041",
+        "cube/val/0003106/000118",
+        "cube/val/0003396/000018",
+        "cube/val/0004118/000026",
+        "cube/val/0007213/000112",
+        "cube/val/0007447/000118",
+        "cube/val/0008504/000021",
+        "cube/val/0008782/000106",
+        "cube/val/0008908/000033",
+        "cube/val/0008993/000025",
+        "cube/val/0009458/000118"
+      ],
+      "last_update": 20000,
+      "mean_decision_ms": 56.550575979053974,
+      "mean_steps": 21.84,
       "method": "retrieval_repair_ttt",
-      "selected_step": null,
-      "status": "incomplete",
-      "successes": null
+      "optimization_gpu_hours": 1.8685919297859073,
+      "selected_step": 10000,
+      "status": "completed",
+      "success_rate": 0.64,
+      "successes": 32,
+      "timeouts": 0,
+      "wilson95": [
+        0.5014076201030195,
+        0.7586143703281711
+      ],
+      "world_transitions": 76800
     }
   ],
   "scope": "development; native success; not cross-dataset aggregate SOTA"
