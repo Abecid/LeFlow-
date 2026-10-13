@@ -36,10 +36,26 @@ def cosine_alpha_bar(steps, device=None):
     return torch.cumprod(1-betas,dim=0).float()
 
 
+class SinusoidalTimeEmbedding(nn.Module):
+    """Frequency features of the DDPM timestep, as in temporal diffusion UNets."""
+    def __init__(self, width):
+        super().__init__()
+        self.width = width
+
+    def forward(self, t):
+        half = self.width // 2
+        freqs = torch.exp(-math.log(10000.) *
+                          torch.arange(half,device=t.device,dtype=t.dtype) /
+                          max(half-1,1))
+        phase = (t*1000.)[:,None]*freqs[None]
+        features = torch.cat((phase.sin(),phase.cos()),dim=-1)
+        return F.pad(features,(0,self.width-features.shape[-1]))
+
+
 class DenoiseUNet(nn.Module):
     def __init__(self,dim=256,channels=128):
         super().__init__()
-        self.time = nn.Sequential(nn.Linear(1,dim),nn.SiLU(),nn.Linear(dim,dim))
+        self.time = nn.Sequential(SinusoidalTimeEmbedding(dim),nn.Linear(dim,4*dim),nn.Mish(),nn.Linear(4*dim,dim))
         self.head=nn.Conv1d(8,channels,3,padding=1)
         self.down_a=FiLMResBlock(channels,dim)
         self.down=nn.Conv1d(channels,2*channels,3,stride=2,padding=1)
