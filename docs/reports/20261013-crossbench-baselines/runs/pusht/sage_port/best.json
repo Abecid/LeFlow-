@@ -1,30 +1,29 @@
 {
-  "checkpoint_sha256": "201287a12a3175a00f538dea1561bd2f374046e9a8de18ee4243332f7b51d591",
+  "checkpoint_sha256": "8861b5f0d22d62e05daa069118b9750a82afb9f3c6aaaa8da33b659f220d29ed",
   "metrics": {
     "episodes": 50,
     "failure_ids": [
-      "pusht/val/0003815/000095",
-      "pusht/val/0003831/000076",
-      "pusht/val/0003982/000075",
+      "pusht/val/0000787/000018",
       "pusht/val/0004684/000092",
-      "pusht/val/0007774/000011",
+      "pusht/val/0007590/000025",
       "pusht/val/0007987/000033",
+      "pusht/val/0008980/000043",
       "pusht/val/0012621/000055",
-      "pusht/val/0014009/000101",
       "pusht/val/0015025/000018",
+      "pusht/val/0015959/000106",
       "pusht/val/0016217/000024",
-      "pusht/val/0017254/000000"
+      "pusht/val/0017156/000019"
     ],
-    "mean_decision_ms": 60.82100624917075,
-    "mean_steps": 26.98,
-    "success_rate": 0.78,
-    "successes": 39,
+    "mean_decision_ms": 58.315838789930204,
+    "mean_steps": 29.28,
+    "success_rate": 0.8,
+    "successes": 40,
     "timeouts": 0,
     "wilson95": [
-      0.6475818431054045,
-      0.8724621377569771
+      0.6696262789551477,
+      0.8875637005402612
     ],
-    "world_transitions": 138240
+    "world_transitions": 147840
   },
-  "step": 5000
+  "step": 15000
 }

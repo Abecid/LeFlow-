@@ -6,26 +6,30 @@
         "/tmp/mtxu-crossbench-20261013/env/bin/python",
         "-u",
         "-m",
-        "crossbench.prepare",
+        "torch.distributed.run",
+        "--standalone",
+        "--nproc_per_node=4",
+        "-m",
+        "crossbench.train",
         "--task",
         "cube",
-        "--source-json",
-        "/tmp/mtxu-leflow-20261004/data/prepared/cube/source.json",
-        "--output",
+        "--method",
+        "vanilla_action_flow",
+        "--cache",
         "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/cache/cube",
-        "--gpus",
-        "4",
-        "--batch-size",
-        "512"
+        "--run-dir",
+        "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/cube/vanilla_action_flow"
       ],
+      "dataset": "cube",
+      "method": "vanilla_action_flow",
       "physical_gpus": [
         "0",
         "1",
         "2",
         "3"
       ],
-      "pid": 3223197,
-      "state": "preparing_cube_cache"
+      "pid": 3232326,
+      "state": "training_and_periodic_evaluation"
     },
     "B": {
       "command": [
@@ -38,35 +42,27 @@
         "-m",
         "crossbench.train",
         "--task",
-        "pusht",
+        "cube",
         "--method",
-        "sage_port",
+        "retrieval_repair_ttt",
         "--cache",
-        "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/cache/pusht",
+        "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/cache/cube",
         "--run-dir",
-        "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/pusht/sage_port"
+        "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/cube/retrieval_repair_ttt"
       ],
-      "dataset": "pusht",
-      "method": "sage_port",
+      "dataset": "cube",
+      "method": "retrieval_repair_ttt",
       "physical_gpus": [
         "4",
         "5",
         "6",
         "7"
       ],
-      "pid": 3223318,
+      "pid": 3236505,
       "state": "training_and_periodic_evaluation"
     }
   },
   "pending": [
-    [
-      "cube",
-      "vanilla_action_flow"
-    ],
-    [
-      "cube",
-      "retrieval_repair_ttt"
-    ],
     [
       "cube",
       "leflow"
@@ -617,8 +613,100 @@
       "method": "execution_revision",
       "returncode": 0,
       "utc": "2026-10-13T10:42:06.159678+00:00"
+    },
+    {
+      "best": {
+        "checkpoint_sha256": "8861b5f0d22d62e05daa069118b9750a82afb9f3c6aaaa8da33b659f220d29ed",
+        "metrics": {
+          "episodes": 50,
+          "failure_ids": [
+            "pusht/val/0000787/000018",
+            "pusht/val/0004684/000092",
+            "pusht/val/0007590/000025",
+            "pusht/val/0007987/000033",
+            "pusht/val/0008980/000043",
+            "pusht/val/0012621/000055",
+            "pusht/val/0015025/000018",
+            "pusht/val/0015959/000106",
+            "pusht/val/0016217/000024",
+            "pusht/val/0017156/000019"
+          ],
+          "mean_decision_ms": 58.315838789930204,
+          "mean_steps": 29.28,
+          "success_rate": 0.8,
+          "successes": 40,
+          "timeouts": 0,
+          "wilson95": [
+            0.6696262789551477,
+            0.8875637005402612
+          ],
+          "world_transitions": 147840
+        },
+        "step": 15000
+      },
+      "complete": {
+        "evaluation_gpu_hours": 0.03221135331938664,
+        "identity": {
+          "cache": "bd363bb3cb3900cf7bf855b6a2038f31b8f9734b2786ccbc999fc828c5cba09c",
+          "fixture": false,
+          "ranks": 4,
+          "source": "50bd3c4cd056676a963a1ecbc0ba0e2d8a83fd1901190c8e815cc80635fcdf68",
+          "spec": {
+            "action_block": 5,
+            "action_budget": 50,
+            "candidates": 4,
+            "controller_seconds": 10.0,
+            "dataset": "pusht",
+            "dim": 192,
+            "eval_episodes": 50,
+            "flow_steps": 8,
+            "global_batch": 64,
+            "goal_offset": 25,
+            "history": 4,
+            "horizon": 5,
+            "learning_rate": 0.0001,
+            "method": "sage_port",
+            "optimization_gpu_seconds": 28800.0,
+            "patches": 1,
+            "primitive_dim": 2,
+            "protocol": "crossbench-shared-lewm-v2",
+            "repair_radius": 0.25,
+            "repair_steps": 4,
+            "rounds": 3,
+            "seed": 3072,
+            "targets": 8,
+            "updates": 20000,
+            "weight_decay": 0.05,
+            "width": 256
+          },
+          "window_sampling": {
+            "eligible_episodes": 14948,
+            "eligible_starts": 1439235,
+            "native_safe_factual_history_and_goals": true,
+            "nominal_episodes": 14948,
+            "nominal_starts": 1496570
+          },
+          "world": "48938400ae3464c9680731287f583a9cb516f55a8ec64ea13a91be47fb15b607"
+        },
+        "optimization_gpu_hours": 0.6251133855535752,
+        "selected_success_rate": 0.8,
+        "status": "completed",
+        "step": 20000,
+        "stop_reason": "update_limit",
+        "validation_steps": [
+          5000,
+          10000,
+          15000,
+          20000
+        ],
+        "wall_seconds": 661.9146274197847
+      },
+      "dataset": "pusht",
+      "method": "sage_port",
+      "returncode": 0,
+      "utc": "2026-10-13T10:58:45.160642+00:00"
     }
   ],
   "source": "747f635ad36af2cbe3e2bbb0b7997efe9caccaa1",
-  "utc": "2026-10-13T10:47:03.371501+00:00"
+  "utc": "2026-10-13T10:59:09.254667+00:00"
 }

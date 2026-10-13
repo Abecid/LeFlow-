@@ -1,0 +1,60 @@
+{
+  "checks": [
+    {
+      "depth": 1,
+      "gradient_elements": 4710525,
+      "loss": 1.259998083114624
+    },
+    {
+      "depth": 2,
+      "gradient_elements": 5765370,
+      "loss": 2.964815378189087
+    }
+  ],
+  "gpu_hours": 0.0007812812365591526,
+  "identity": {
+    "cache": "f991dc8fbb238a15e0b951af6483519d40c7680fd9cf966d89df2de8cb5fb02e",
+    "fixture": false,
+    "ranks": 4,
+    "source": "50bd3c4cd056676a963a1ecbc0ba0e2d8a83fd1901190c8e815cc80635fcdf68",
+    "spec": {
+      "action_block": 5,
+      "action_budget": 50,
+      "candidates": 4,
+      "controller_seconds": 10.0,
+      "dataset": "cube",
+      "dim": 192,
+      "eval_episodes": 50,
+      "flow_steps": 8,
+      "global_batch": 64,
+      "goal_offset": 25,
+      "history": 4,
+      "horizon": 5,
+      "learning_rate": 0.0001,
+      "method": "retrieval_repair_ttt",
+      "optimization_gpu_seconds": 28800.0,
+      "patches": 1,
+      "primitive_dim": 5,
+      "protocol": "crossbench-shared-lewm-v2",
+      "repair_radius": 0.25,
+      "repair_steps": 4,
+      "rounds": 3,
+      "seed": 3072,
+      "targets": 8,
+      "updates": 20000,
+      "weight_decay": 0.05,
+      "width": 256
+    },
+    "window_sampling": {
+      "eligible_episodes": 8000,
+      "eligible_starts": 1408000,
+      "native_safe_factual_history_and_goals": true,
+      "nominal_episodes": 8000,
+      "nominal_starts": 1408000
+    },
+    "world": "2839a907362f403f9136383016e91774373a295d958ae75121791f22a9fddf89"
+  },
+  "optimizer_updates": 0,
+  "ranks": 4,
+  "seconds": 0.7031531129032373
+}
