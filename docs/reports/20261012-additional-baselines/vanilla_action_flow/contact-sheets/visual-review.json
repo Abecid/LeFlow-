@@ -1,0 +1,83 @@
+{
+  "reviewed_utc": "2026-10-13T04:37:29.368557+00:00",
+  "every_exported_image_visually_inspected": true,
+  "rendered_count": 10,
+  "scope": "All ten selected-checkpoint saved cases. These are the pre-existing saved trajectories, not a representative sample of all 104 cases.",
+  "checks": [
+    "Readable complete header and action indices",
+    "All five measured frames and expert goal visible",
+    "No clipping, overlap, missing panels or missing glyphs"
+  ],
+  "images": [
+    {
+      "case": "validation/assembly/00000",
+      "file": "assembly-00000.png",
+      "sha256": "e488033abad1619afad1156e6d368fc91cf1287165ebf7593454ec629def35ff",
+      "visual_checks_passed": true,
+      "observation": "Measured frames and expert goal are readable; outcome is taken from the recorded simulator success criterion."
+    },
+    {
+      "case": "validation/coffee-button/00000",
+      "file": "coffee-button-00000.png",
+      "sha256": "90af54e20db6aa883948808022ffb6276a114f30eec20d94743d450251c61196",
+      "visual_checks_passed": true,
+      "observation": "Measured frames and expert goal are readable; outcome is taken from the recorded simulator success criterion."
+    },
+    {
+      "case": "validation/dial-turn/00000",
+      "file": "dial-turn-00000.png",
+      "sha256": "2860b7c7899dc0fe317c8192854aac93c010a14e1a45b7d97a191994a697f2ce",
+      "visual_checks_passed": true,
+      "observation": "Measured frames and expert goal are readable; outcome is taken from the recorded simulator success criterion."
+    },
+    {
+      "case": "validation/door-close/00000",
+      "file": "door-close-00000.png",
+      "sha256": "9da0bd5aa0992d3a53b9b6a715cd64d24e856fe44f4bd0b4eff52712260f8a23",
+      "visual_checks_passed": true,
+      "observation": "Measured frames and expert goal are readable; outcome is taken from the recorded simulator success criterion."
+    },
+    {
+      "case": "validation/drawer-close/00004",
+      "file": "drawer-close-00004.png",
+      "sha256": "aa6da063a0a557aa71a6f7cb51aac1c20c5cfac13763fdd8386e14a2b04a59ce",
+      "visual_checks_passed": true,
+      "observation": "Measured frames and expert goal are readable; outcome is taken from the recorded simulator success criterion."
+    },
+    {
+      "case": "validation/faucet-open/00003",
+      "file": "faucet-open-00003.png",
+      "sha256": "9abca594602c65ea827fe9b064083cc63429049c98cb25a25b92e843cc5da9db",
+      "visual_checks_passed": true,
+      "observation": "Measured frames and expert goal are readable; outcome is taken from the recorded simulator success criterion."
+    },
+    {
+      "case": "validation/handle-press/00000",
+      "file": "handle-press-00000.png",
+      "sha256": "a3604facfc6fcd8ca16e48a9305d0de1eab4ad5d87771ae8de7d079b2c315eef",
+      "visual_checks_passed": true,
+      "observation": "Measured frames and expert goal are readable; outcome is taken from the recorded simulator success criterion."
+    },
+    {
+      "case": "validation/pick-place/00000",
+      "file": "pick-place-00000.png",
+      "sha256": "1164ce256e7ae5baf6da1968431b7dfc15f1d03cf459355a119bfefbc2f3fdcc",
+      "visual_checks_passed": true,
+      "observation": "Measured frames and expert goal are readable; outcome is taken from the recorded simulator success criterion."
+    },
+    {
+      "case": "validation/reach/00003",
+      "file": "reach-00003.png",
+      "sha256": "b5a45896364b62ed91e41431827d33abd45f10f778db0744686bc5d63d39c404",
+      "visual_checks_passed": true,
+      "observation": "Measured frames and expert goal are readable; outcome is taken from the recorded simulator success criterion."
+    },
+    {
+      "case": "validation/reach/00005",
+      "file": "reach-00005.png",
+      "sha256": "3ed7471af0e17dfb37585245cda89dce9a557ba471154d91be651d52ae002e94",
+      "visual_checks_passed": true,
+      "observation": "Measured frames and expert goal are readable; outcome is taken from the recorded simulator success criterion."
+    }
+  ]
+}

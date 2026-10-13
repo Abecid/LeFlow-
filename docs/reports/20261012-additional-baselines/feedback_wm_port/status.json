@@ -1,28 +1,8 @@
 {
   "code": "0a19c7c67d791fd99376216399b03e8cb71d78c0",
-  "command": [
-    "/tmp/mtxu-flow-jepa-20261007/env/bin/python",
-    "-m",
-    "torch.distributed.run",
-    "--nnodes=1",
-    "--nproc_per_node=4",
-    "--rdzv-backend=c10d",
-    "--rdzv-endpoint=127.0.0.1:0",
-    "-m",
-    "flow_jepa.execution.train",
-    "--config",
-    "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/feedback_wm_port/repo/config/flow_metaworld_feedback_wm_port.json",
-    "--root",
-    "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/feedback_wm_port/campaign",
-    "--run-dir",
-    "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/feedback_wm_port/campaign/runs/feedback_wm_port_3072",
-    "--world",
-    "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt",
-    "--bank",
-    "/tmp/mtxu-additional-baselines-20261012/feedback_wm_port/route_bank.pt"
-  ],
   "pid": 2771651,
-  "preflight_mean_ms": 97.89569936692715,
-  "status": "training",
-  "utc": "2026-10-13T03:41:35.645561+00:00"
+  "run_dir": "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/feedback_wm_port/campaign/runs/feedback_wm_port_3072",
+  "status": "completed_validation_ready_for_analysis",
+  "utc": "2026-10-13T04:25:11.170147+00:00",
+  "wall_seconds": 2736.2150129899383
 }

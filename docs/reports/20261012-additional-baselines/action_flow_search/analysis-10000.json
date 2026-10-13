@@ -206,6 +206,58 @@
         "validation/reach/00003",
         "validation/reach/00005"
       ]
+    },
+    "vanilla_action_flow": {
+      "reference_successes": 98,
+      "wins": [
+        "validation/reach/00002"
+      ],
+      "regressions": [
+        "validation/assembly/00000",
+        "validation/assembly/00001",
+        "validation/assembly/00002",
+        "validation/assembly/00003",
+        "validation/assembly/00004",
+        "validation/assembly/00006",
+        "validation/assembly/00007",
+        "validation/door-open/00006",
+        "validation/faucet-open/00002",
+        "validation/faucet-open/00003",
+        "validation/faucet-open/00005",
+        "validation/faucet-open/00006",
+        "validation/pick-place/00000",
+        "validation/pick-place/00001",
+        "validation/pick-place/00002",
+        "validation/pick-place/00006",
+        "validation/reach/00001",
+        "validation/reach/00003",
+        "validation/reach/00005",
+        "validation/reach/00006"
+      ]
+    },
+    "diffusion_policy_port": {
+      "reference_successes": 74,
+      "wins": [
+        "validation/button-press-topdown/00006",
+        "validation/dial-turn/00001",
+        "validation/dial-turn/00002",
+        "validation/dial-turn/00003",
+        "validation/dial-turn/00004",
+        "validation/dial-turn/00006",
+        "validation/dial-turn/00007",
+        "validation/drawer-close/00002",
+        "validation/drawer-close/00003",
+        "validation/reach/00000",
+        "validation/reach/00002"
+      ],
+      "regressions": [
+        "validation/door-open/00006",
+        "validation/faucet-open/00002",
+        "validation/faucet-open/00003",
+        "validation/faucet-open/00005",
+        "validation/reach/00003",
+        "validation/reach/00005"
+      ]
     }
   }
 }

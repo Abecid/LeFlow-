@@ -1,0 +1,83 @@
+{
+  "reviewed_utc": "2026-10-13T04:37:29.372695+00:00",
+  "every_exported_image_visually_inspected": true,
+  "rendered_count": 10,
+  "scope": "All ten selected-checkpoint saved cases. These are the pre-existing saved trajectories, not a representative sample of all 104 cases.",
+  "checks": [
+    "Readable complete header and action indices",
+    "All five measured frames and expert goal visible",
+    "No clipping, overlap, missing panels or missing glyphs"
+  ],
+  "images": [
+    {
+      "case": "validation/assembly/00000",
+      "file": "assembly-00000.png",
+      "sha256": "52df2a82ac3b693ae7e36b0131b88983530373d24461708b3707a62d0f023b43",
+      "visual_checks_passed": true,
+      "observation": "Measured frames and expert goal are readable; outcome is taken from the recorded simulator success criterion. The object remains near its starting position in the sampled frames at actions 50\u2013200."
+    },
+    {
+      "case": "validation/coffee-button/00000",
+      "file": "coffee-button-00000.png",
+      "sha256": "6896b1f8ac95a1bc3d728aa0811c5a8b88b1ba27b6ff48ade4cb4fb04b2ce8e2",
+      "visual_checks_passed": true,
+      "observation": "Measured frames and expert goal are readable; outcome is taken from the recorded simulator success criterion."
+    },
+    {
+      "case": "validation/dial-turn/00000",
+      "file": "dial-turn-00000.png",
+      "sha256": "eba38a65898f5ca52d2d2d95c29afbedbaeb1e6c7aa5ada6177233d796d02f35",
+      "visual_checks_passed": true,
+      "observation": "Measured frames and expert goal are readable; outcome is taken from the recorded simulator success criterion."
+    },
+    {
+      "case": "validation/door-close/00000",
+      "file": "door-close-00000.png",
+      "sha256": "f23b7778fb64a13ea56a0f1639bb54730e82cc0554672dfe84b339c2949be1b2",
+      "visual_checks_passed": true,
+      "observation": "Measured frames and expert goal are readable; outcome is taken from the recorded simulator success criterion."
+    },
+    {
+      "case": "validation/drawer-close/00004",
+      "file": "drawer-close-00004.png",
+      "sha256": "5561246a06991613493c20893557205f830ebc650b71376a200c9e81d9b2752f",
+      "visual_checks_passed": true,
+      "observation": "Measured frames and expert goal are readable; outcome is taken from the recorded simulator success criterion."
+    },
+    {
+      "case": "validation/faucet-open/00003",
+      "file": "faucet-open-00003.png",
+      "sha256": "08b52128a7bd9cec9eca6736817637bd1deaff5fded54b68554c920a9bc0a641",
+      "visual_checks_passed": true,
+      "observation": "Measured frames and expert goal are readable; outcome is taken from the recorded simulator success criterion."
+    },
+    {
+      "case": "validation/handle-press/00000",
+      "file": "handle-press-00000.png",
+      "sha256": "1bf9d743e14337a6c2520856e9fda25db03952d4a19af69ed77ec776a19f96e7",
+      "visual_checks_passed": true,
+      "observation": "Measured frames and expert goal are readable; outcome is taken from the recorded simulator success criterion."
+    },
+    {
+      "case": "validation/pick-place/00000",
+      "file": "pick-place-00000.png",
+      "sha256": "e6a26d42f92627e4e7cd576e0cc5742761832944e5ab1f634181c4392574a45a",
+      "visual_checks_passed": true,
+      "observation": "Measured frames and expert goal are readable; outcome is taken from the recorded simulator success criterion. The hand moves toward the goal region while the red object remains at its starting location in the sampled frames."
+    },
+    {
+      "case": "validation/reach/00003",
+      "file": "reach-00003.png",
+      "sha256": "a62e23e150d5d5d222f4f0999207a6ef2d9f32081a9dbea5ae1998c62d5697d9",
+      "visual_checks_passed": true,
+      "observation": "Measured frames and expert goal are readable; outcome is taken from the recorded simulator success criterion."
+    },
+    {
+      "case": "validation/reach/00005",
+      "file": "reach-00005.png",
+      "sha256": "bdfb0953df75421a34d24514e8f5d547b108b4720508b6d1de299beb048df0e0",
+      "visual_checks_passed": true,
+      "observation": "Measured frames and expert goal are readable; outcome is taken from the recorded simulator success criterion."
+    }
+  ]
+}

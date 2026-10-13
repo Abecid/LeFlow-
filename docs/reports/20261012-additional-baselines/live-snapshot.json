@@ -1,5 +1,5 @@
 {
-  "checked_utc": "2026-10-13T04:00:11.369305+00:00",
+  "checked_utc": "2026-10-13T04:38:25.126838+00:00",
   "source": "0a19c7c67d791fd99376216399b03e8cb71d78c0",
   "methods": {
     "vanilla_action_flow": {
@@ -96,16 +96,33 @@
         "gpu_count": 4,
         "last_update_overrun_gpu_seconds": 0.0,
         "optimization_cap_gpu_seconds": 28800,
-        "optimization_gpu_hours": 0.4499757457855675,
-        "optimization_gpu_seconds": 1619.912684828043,
-        "step": 15000,
+        "optimization_gpu_hours": 0.6014176285473837,
+        "optimization_gpu_seconds": 2165.1034627705812,
+        "step": 20000,
         "stop_check": "optimizer boundary; final-update overrun reported",
-        "validation_gpu_hours": 0.9469718779602813,
-        "validation_gpu_seconds": 3409.0987606570125,
+        "validation_gpu_hours": 1.8361386627372769,
+        "validation_gpu_seconds": 6610.099185854197,
         "validation_steps": [
           5000,
-          10000
+          10000,
+          15000,
+          20000
         ]
+      },
+      "complete.json": {
+        "best": 0.8076923076923077,
+        "best_step": 15000,
+        "optimization_gpu_hours": 0.6014176285473837,
+        "step": 20000,
+        "stop_reason": "update_limit",
+        "validation_gpu_hours": 1.8361386627372769,
+        "validation_steps": [
+          5000,
+          10000,
+          15000,
+          20000
+        ],
+        "wall_seconds": 2220.415428703651
       },
       "run": {
         "bank_hash": "007df33e6d256c3cddb2ac6230af0aa5f4906df53d06e29b1e259d9c2b7e8644",
@@ -129,28 +146,96 @@
           "step": 10000,
           "successes": 79,
           "timeouts": 0
+        },
+        {
+          "step": 15000,
+          "successes": 84,
+          "timeouts": 0
+        },
+        {
+          "step": 20000,
+          "successes": 78,
+          "timeouts": 0
+        }
+      ],
+      "coordinator_alive": false,
+      "latest_training": {
+        "train/flow_loss": 0.0685364305973053,
+        "train/goal_offset_mean": 29.921875,
+        "train/late_window_fraction": 0.015625,
+        "train/loss": 0.0685364305973053,
+        "train/sample_start_mean": 15.171875,
+        "step": 20000,
+        "train/lr": 1.0000006106817737e-06,
+        "train/execution_weight": 0.0,
+        "train/grad_norm": 1.2326760292053223,
+        "budget/optimization_gpu_hours": 0.6014176285473837,
+        "system/update_seconds": 0.021541031077504158,
+        "system/update_examples_per_second": 2971.0741222056363,
+        "system/peak_gpu_gib": 9.613457679748535
+      },
+      "metric_rows": 405
+    },
+    "sage_port": {
+      "runtime_files_verified": 214,
+      "compute_usage.json": {
+        "global_batch": 64,
+        "gpu_count": 4,
+        "last_update_overrun_gpu_seconds": 0.0,
+        "optimization_cap_gpu_seconds": 28800,
+        "optimization_gpu_hours": 0.5345416660255028,
+        "optimization_gpu_seconds": 1924.3499976918101,
+        "step": 15000,
+        "stop_check": "optimizer boundary; final-update overrun reported",
+        "validation_gpu_hours": 0.9762811952891449,
+        "validation_gpu_seconds": 3514.6123030409217,
+        "validation_steps": [
+          5000,
+          10000
+        ]
+      },
+      "run": {
+        "bank_hash": "61df041e33f2849d7c97f5675eea0d3b6b25746ed8483058ace8cadac20d8645",
+        "code": "0a19c7c67d791fd99376216399b03e8cb71d78c0",
+        "id": "kfv02fj4",
+        "manifest": "cc630f80ecf702cd52d71c1be3a645b047519cf77184972ded8c9834989969d3",
+        "method": "sage_port",
+        "protocol": "f4bde221eb17109748006492ea910246f48a1dde3ca50722dbf04af9833832b4",
+        "seed": 3072,
+        "wandb_url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/kfv02fj4",
+        "world_hash": "ae3f910da43f0a43dd65945394444a0b11719ed042cdacffacc2faaf824ec5a3",
+        "world_size": 4
+      },
+      "evaluations": [
+        {
+          "step": 5000,
+          "successes": 62,
+          "timeouts": 0
+        },
+        {
+          "step": 10000,
+          "successes": 77,
+          "timeouts": 0
         }
       ],
       "coordinator_alive": true,
       "latest_training": {
-        "train/flow_loss": 0.07483314722776413,
+        "train/action_nll": -1.7844090461730957,
         "train/goal_offset_mean": 25.78125,
         "train/late_window_fraction": 0.015625,
-        "train/loss": 0.07483314722776413,
+        "train/loss": -1.7531415224075317,
         "train/sample_start_mean": 15.9375,
+        "train/subgoal_loss": 0.03126762807369232,
         "step": 15000,
         "train/lr": 1.550371283069648e-05,
         "train/execution_weight": 0.0,
-        "train/grad_norm": 1.5367685556411743,
-        "budget/optimization_gpu_hours": 0.4499757457855675,
-        "system/update_seconds": 0.025780877098441124,
-        "system/update_examples_per_second": 2482.460148877939,
-        "system/peak_gpu_gib": 9.613457679748535
+        "train/grad_norm": 5.326826095581055,
+        "budget/optimization_gpu_hours": 0.5345416660255028,
+        "system/update_seconds": 0.029343318194150925,
+        "system/update_examples_per_second": 2181.075758935718,
+        "system/peak_gpu_gib": 9.64267110824585
       },
       "metric_rows": 303
-    },
-    "sage_port": {
-      "runtime_files_verified": 214
     },
     "diffusion_policy_port": {
       "runtime_files_verified": 214,
@@ -246,15 +331,33 @@
         "gpu_count": 4,
         "last_update_overrun_gpu_seconds": 0.0,
         "optimization_cap_gpu_seconds": 28800,
-        "optimization_gpu_hours": 0.29278282010306916,
-        "optimization_gpu_seconds": 1054.018152371049,
-        "step": 10000,
+        "optimization_gpu_hours": 0.5816921321799358,
+        "optimization_gpu_seconds": 2094.091675847769,
+        "step": 20000,
         "stop_check": "optimizer boundary; final-update overrun reported",
-        "validation_gpu_hours": 0.688816717426396,
-        "validation_gpu_seconds": 2479.740182735026,
+        "validation_gpu_hours": 2.275777524850435,
+        "validation_gpu_seconds": 8192.799089461565,
         "validation_steps": [
-          5000
+          5000,
+          10000,
+          15000,
+          20000
         ]
+      },
+      "complete.json": {
+        "best": 0.7307692307692307,
+        "best_step": 20000,
+        "optimization_gpu_hours": 0.5816921321799358,
+        "step": 20000,
+        "stop_reason": "update_limit",
+        "validation_gpu_hours": 2.275777524850435,
+        "validation_steps": [
+          5000,
+          10000,
+          15000,
+          20000
+        ],
+        "wall_seconds": 2597.2005697544664
       },
       "run": {
         "bank_hash": "23a8aa8f4476ac854c91cb31640fed60d43613901411b916c51413bda21f03b3",
@@ -273,25 +376,40 @@
           "step": 5000,
           "successes": 42,
           "timeouts": 62
+        },
+        {
+          "step": 10000,
+          "successes": 65,
+          "timeouts": 39
+        },
+        {
+          "step": 15000,
+          "successes": 75,
+          "timeouts": 29
+        },
+        {
+          "step": 20000,
+          "successes": 76,
+          "timeouts": 28
         }
       ],
-      "coordinator_alive": true,
+      "coordinator_alive": false,
       "latest_training": {
-        "train/goal_offset_mean": 27.421875,
-        "train/late_window_fraction": 0.03125,
-        "train/loss": 0.05364682897925377,
-        "train/noise_mse": 0.05364682897925377,
-        "train/sample_start_mean": 14.5625,
-        "step": 10000,
-        "train/lr": 5.050777544178566e-05,
+        "train/goal_offset_mean": 29.921875,
+        "train/late_window_fraction": 0.015625,
+        "train/loss": 0.02427205629646778,
+        "train/noise_mse": 0.02427205629646778,
+        "train/sample_start_mean": 15.171875,
+        "step": 20000,
+        "train/lr": 1.0000006106817737e-06,
         "train/execution_weight": 0.0,
-        "train/grad_norm": 0.6771015524864197,
-        "budget/optimization_gpu_hours": 0.29278282010306916,
-        "system/update_seconds": 0.022401876747608185,
-        "system/update_examples_per_second": 2856.9034961248585,
+        "train/grad_norm": 0.4820345640182495,
+        "budget/optimization_gpu_hours": 0.5816921321799358,
+        "system/update_seconds": 0.01949925720691681,
+        "system/update_examples_per_second": 3282.176306556837,
         "system/peak_gpu_gib": 9.595058917999268
       },
-      "metric_rows": 202
+      "metric_rows": 405
     }
   }
 }

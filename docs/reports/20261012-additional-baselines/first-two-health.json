@@ -1,0 +1,21 @@
+{
+  "checked_utc": "2026-10-13T04:23:35.188243+00:00",
+  "methods": {
+    "vanilla_action_flow": {
+      "wandb_state": "finished",
+      "wandb_url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/j1m6jzog",
+      "online_step": 20000,
+      "online_success": 0.9423076923076924,
+      "coordinator_absent": true,
+      "completed_status": "completed_validation_ready_for_analysis"
+    },
+    "diffusion_policy_port": {
+      "wandb_state": "finished",
+      "wandb_url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/cnlxvbpf",
+      "online_step": 20000,
+      "online_success": 0.7115384615384616,
+      "coordinator_absent": true,
+      "completed_status": "completed_validation_ready_for_analysis"
+    }
+  }
+}

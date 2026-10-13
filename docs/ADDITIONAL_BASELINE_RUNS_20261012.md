@@ -1,3 +1,29 @@
+# Four new baseline comparisons complete; SAGE continues
+
+All four runs completed 20,000 fresh updates and four fixed 104-case development
+evaluations. Source/data/checkpoint audits pass and W&B reports each run finished.
+
+| Method | Success at 5k /10k /15k /20k | Selected /104 | Selected timeouts |
+| --- | --- | ---: | ---: |
+| [Vanilla action flow](VANILLA_ACTION_FLOW_RESULTS.md) | 77 /84 /89 /98 | **98** | 0 |
+| [Action flow + world search](ACTION_FLOW_SEARCH_RESULTS.md) | 74 /79 /84 /78 | 84 | 0 |
+| [Diffusion Policy port](DIFFUSION_POLICY_PORT_RESULTS.md) | 43 /69 /70 /74 | 74 | 0 |
+| [Feedback-WM-inspired port](FEEDBACK_WM_PORT_RESULTS.md) | 42 /65 /75 /76 | 76 | 28 |
+
+SAGE continues on physical GPUs 0–3. Both GPU lanes used all eight A800s while
+two methods overlapped; the other lane has now completed. Preserved references
+were reused. No extra seed, ablation, final test or budget extension was launched.
+The retained proposed retrieval-repair method scores 80, below vanilla flow 98.
+These are development selections from one seed, not independent SOTA evidence.
+
+Twenty selected-checkpoint contact sheets from the first two runs were individually
+visually inspected. The stored Diffusion Policy pick-place example moves the hand
+toward the goal while leaving the object behind; its assembly example stalls near
+the initial object location. These are observations from saved cases, not inferred
+causes or invented trajectories. All full metrics and paired outcomes are preserved.
+
+Historical progress snapshots follow.
+
 # First two complete: vanilla98, Diffusion Policy74; next GPU wave running
 
 The completed curves are77/84/89/98 and43/69/70/74, selecting20k98 and74 out of104.

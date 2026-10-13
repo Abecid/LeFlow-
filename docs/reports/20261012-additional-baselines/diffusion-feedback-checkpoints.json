@@ -1,0 +1,121 @@
+{
+  "checked_utc": "2026-10-13T04:38:01.059245+00:00",
+  "pairs": [
+    {
+      "checkpoint": "checkpoints/step_0005000.pt",
+      "steps": [
+        5000,
+        5000
+      ],
+      "tensors": 61,
+      "different_tensors": 60,
+      "bit_identical": false,
+      "maximum_absolute_difference": 0.00022244267165660858,
+      "paths": [
+        "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/diffusion_policy_port/campaign/runs/diffusion_policy_port_3072/checkpoints/step_0005000.pt",
+        "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/feedback_wm_port/campaign/runs/feedback_wm_port_3072/checkpoints/step_0005000.pt"
+      ],
+      "sha256": [
+        "644ae131bab4c6b56547634a4d996bf87a38cab94d87652d04ba8aae14537945",
+        "ec3e872ffcc3723f6bfaaa6614076513a45cd444839081cd4d70b3943d1b149e"
+      ]
+    },
+    {
+      "checkpoint": "checkpoints/step_0010000.pt",
+      "steps": [
+        10000,
+        10000
+      ],
+      "tensors": 61,
+      "different_tensors": 60,
+      "bit_identical": false,
+      "maximum_absolute_difference": 0.0004635713994503021,
+      "paths": [
+        "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/diffusion_policy_port/campaign/runs/diffusion_policy_port_3072/checkpoints/step_0010000.pt",
+        "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/feedback_wm_port/campaign/runs/feedback_wm_port_3072/checkpoints/step_0010000.pt"
+      ],
+      "sha256": [
+        "c7b3b8f936efa88efecb212f84a2aa2af17eb008bb004643b40fd0f9ffe509a6",
+        "51f2b95608992342ca64bd2582188cc5dba65c39bc248b0d685437df11ecd0ff"
+      ]
+    },
+    {
+      "checkpoint": "checkpoints/step_0015000.pt",
+      "steps": [
+        15000,
+        15000
+      ],
+      "tensors": 61,
+      "different_tensors": 60,
+      "bit_identical": false,
+      "maximum_absolute_difference": 0.0005329251289367676,
+      "paths": [
+        "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/diffusion_policy_port/campaign/runs/diffusion_policy_port_3072/checkpoints/step_0015000.pt",
+        "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/feedback_wm_port/campaign/runs/feedback_wm_port_3072/checkpoints/step_0015000.pt"
+      ],
+      "sha256": [
+        "cd09900463c062be4f827d1bdb05bc741d9533952a6c0d7e1855b70522221b24",
+        "a23e10d99fe1b8e68194e81511ccf0484192a718663c2aa5ed5eb3ecc0679e91"
+      ]
+    },
+    {
+      "checkpoint": "checkpoints/step_0020000.pt",
+      "steps": [
+        20000,
+        20000
+      ],
+      "tensors": 61,
+      "different_tensors": 60,
+      "bit_identical": false,
+      "maximum_absolute_difference": 0.0005373619496822357,
+      "paths": [
+        "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/diffusion_policy_port/campaign/runs/diffusion_policy_port_3072/checkpoints/step_0020000.pt",
+        "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/feedback_wm_port/campaign/runs/feedback_wm_port_3072/checkpoints/step_0020000.pt"
+      ],
+      "sha256": [
+        "28baec5583cc2f33dd28ec36bf079699deecdc714828c7b8a0c62ef0d9bb6c0a",
+        "7033315a0d42ec91f6e94667ab8fe6d25cc1c3087a4b4ca4e7df962b8be4173a"
+      ]
+    },
+    {
+      "checkpoint": "best.pt",
+      "steps": [
+        20000,
+        20000
+      ],
+      "tensors": 61,
+      "different_tensors": 60,
+      "bit_identical": false,
+      "maximum_absolute_difference": 0.0005373619496822357,
+      "paths": [
+        "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/diffusion_policy_port/campaign/runs/diffusion_policy_port_3072/best.pt",
+        "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/feedback_wm_port/campaign/runs/feedback_wm_port_3072/best.pt"
+      ],
+      "sha256": [
+        "a4e52b57138e44d157fd5a7bdb488721b0c4b9ec466e0903732caf052da5a2d1",
+        "30cae202c19261fa5773ea2d757e44b02a76c2c598ed6901e1b2f8ac9be9d534"
+      ]
+    },
+    {
+      "checkpoint": "last.pt",
+      "steps": [
+        20000,
+        20000
+      ],
+      "tensors": 61,
+      "different_tensors": 60,
+      "bit_identical": false,
+      "maximum_absolute_difference": 0.0005373619496822357,
+      "paths": [
+        "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/diffusion_policy_port/campaign/runs/diffusion_policy_port_3072/last.pt",
+        "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/feedback_wm_port/campaign/runs/feedback_wm_port_3072/last.pt"
+      ],
+      "sha256": [
+        "49c11289d57bc0238dc092aad621cda850f28027be725a45a5c6932b7f401fe6",
+        "2df34628eb869c75d6fa213fd744b4ed9d3837e13f54faafdc0d6d1a83ebd6b9"
+      ]
+    }
+  ],
+  "device": "cpu",
+  "no_training_or_evaluation": true
+}

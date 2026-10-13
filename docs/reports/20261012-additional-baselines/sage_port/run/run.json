@@ -1,0 +1,12 @@
+{
+  "bank_hash": "61df041e33f2849d7c97f5675eea0d3b6b25746ed8483058ace8cadac20d8645",
+  "code": "0a19c7c67d791fd99376216399b03e8cb71d78c0",
+  "id": "kfv02fj4",
+  "manifest": "cc630f80ecf702cd52d71c1be3a645b047519cf77184972ded8c9834989969d3",
+  "method": "sage_port",
+  "protocol": "f4bde221eb17109748006492ea910246f48a1dde3ca50722dbf04af9833832b4",
+  "seed": 3072,
+  "wandb_url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/kfv02fj4",
+  "world_hash": "ae3f910da43f0a43dd65945394444a0b11719ed042cdacffacc2faaf824ec5a3",
+  "world_size": 4
+}

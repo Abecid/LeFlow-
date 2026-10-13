@@ -1,3 +1,16 @@
+# October 12: world search 84 and Feedback-WM 76 completed
+
+Four additional methods now have completed 20k training, all four fixed evaluations,
+CPU source/data/bank/checkpoint audits and finished W&B states. Search curve
+74/79/84/78 selects 15k 84 with no timeouts; Feedback-WM 42/65/75/76 selects
+20k 76 with 28 timeouts. Every Feedback-WM selected failure exhausts the controller
+allowance at 166–198 actions. Full paired outcomes, periodic metrics and compute
+are saved. Twenty first-two-run contact sheets were rendered from measured RGB
+trajectories and individually reviewed. SAGE is still running; its protocol remains
+frozen. Current ledger: 20 completed comparisons, 77 complete evaluations, one active.
+
+Earlier progress follows.
+
 # October12: vanilla98 and Diffusion Policy74 completed and audited
 
 Both authorized fresh policies complete20k and all four fixed104 evaluations.

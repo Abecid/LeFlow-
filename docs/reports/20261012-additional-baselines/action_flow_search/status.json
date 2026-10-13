@@ -1,28 +1,8 @@
 {
   "code": "0a19c7c67d791fd99376216399b03e8cb71d78c0",
-  "command": [
-    "/tmp/mtxu-flow-jepa-20261007/env/bin/python",
-    "-m",
-    "torch.distributed.run",
-    "--nnodes=1",
-    "--nproc_per_node=4",
-    "--rdzv-backend=c10d",
-    "--rdzv-endpoint=127.0.0.1:0",
-    "-m",
-    "flow_jepa.execution.train",
-    "--config",
-    "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/action_flow_search/repo/config/flow_metaworld_action_flow_search.json",
-    "--root",
-    "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/action_flow_search/campaign",
-    "--run-dir",
-    "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/action_flow_search/campaign/runs/action_flow_search_3072",
-    "--world",
-    "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt",
-    "--bank",
-    "/tmp/mtxu-additional-baselines-20261012/action_flow_search/route_bank.pt"
-  ],
   "pid": 2761749,
-  "preflight_mean_ms": 83.97517800331116,
-  "status": "training",
-  "utc": "2026-10-13T03:32:31.107135+00:00"
+  "run_dir": "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/action_flow_search/campaign/runs/action_flow_search_3072",
+  "status": "completed_validation_ready_for_analysis",
+  "utc": "2026-10-13T04:09:49.956093+00:00",
+  "wall_seconds": 2357.9258571900427
 }
