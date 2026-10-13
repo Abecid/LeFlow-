@@ -1,0 +1,6 @@
+{
+  "reacher": "leflow/reacher/latent_planner.pt",
+  "pusht": "leflow/pusht/latent_planner.pt",
+  "tworoom": "leflow/tworoom/latent_planner.pt",
+  "cube": "leflow/cube/latent_planner.pt"
+}

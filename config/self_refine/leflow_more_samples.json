@@ -1,0 +1,8 @@
+{
+  "name": "leflow_more_samples",
+  "num_samples": 96,
+  "flow_steps": 16,
+  "refinement": {
+    "mode": "native"
+  }
+}
