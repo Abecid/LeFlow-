@@ -2,11 +2,7 @@ name: Cross-benchmark controller checks
 on:
   push:
     branches: [main]
-    paths:
-      - "crossbench/**"
-      - "tests/test_crossbench*.py"
-      - "scripts/operations/crossbench*"
-      - ".github/workflows/crossbench.yml"
+    paths: ['crossbench/**', 'tests/test_crossbench*.py', 'scripts/operations/crossbench*', '.github/workflows/crossbench.yml']
   workflow_dispatch:
 permissions:
   contents: read
@@ -15,37 +11,37 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     env:
-      OMP_NUM_THREADS: "1"
-      MKL_NUM_THREADS: "1"
+      OMP_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: '3.11'
       - run: pip install torch==2.8.0 --index-url https://download.pytorch.org/whl/cpu
       - run: pip install numpy h5py omegaconf hdf5plugin pillow
-      - name: Run focused tests when present
+      - run: python -m compileall -q crossbench
+      - name: Require and execute the cross-benchmark tests
         run: |
-          if test -d crossbench; then
-            python -m compileall -q crossbench
-            python -m unittest discover -s tests -p 'test_crossbench*.py' -v
-          else
-            echo 'Source snapshot only; crossbench implementation not yet added.'
-          fi
-      - name: Export tracked runtime source for reproducibility
+          python - <<'PY'
+          import unittest
+          suite=unittest.defaultTestLoader.discover('tests',pattern='test_crossbench*.py')
+          if suite.countTestCases()==0: raise RuntimeError('No tests discovered')
+          result=unittest.TextTestRunner(verbosity=2).run(suite)
+          if not result.wasSuccessful(): raise SystemExit(1)
+          PY
+      - name: Export tracked runtime source
         if: always()
         run: |
           python - <<'PY'
-          import subprocess, zipfile
+          import subprocess,zipfile
           from pathlib import Path
-          files = subprocess.check_output(['git', 'ls-files'], text=True).splitlines()
-          with zipfile.ZipFile('runtime-source.zip', 'w', zipfile.ZIP_DEFLATED) as z:
-              for f in files:
+          with zipfile.ZipFile('runtime-source.zip','w',zipfile.ZIP_DEFLATED) as z:
+              for f in subprocess.check_output(['git','ls-files'],text=True).splitlines():
                   p=Path(f)
-                  if 'docs/reports/' in f or '.git/' in f:
-                      continue
-                  if p.suffix in {'.py','.json','.yaml','.yml','.toml','.sh','.md','.txt'} and p.stat().st_size < 400000:
-                      z.write(p, f)
+                  if 'docs/reports/' in f or '.git/' in f: continue
+                  if p.suffix in {'.py','.json','.yaml','.yml','.toml','.sh','.md','.txt'} and p.stat().st_size<400000:
+                      z.write(p,f)
               z.writestr('SOURCE_COMMIT',subprocess.check_output(['git','rev-parse','HEAD'],text=True))
           PY
       - uses: actions/upload-artifact@v4
@@ -54,3 +50,22 @@ jobs:
           name: runtime-source
           path: runtime-source.zip
           retention-days: 7
+  native:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      OMP_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+      SDL_VIDEODRIVER: dummy
+      MUJOCO_GL: osmesa
+      PYOPENGL_PLATFORM: osmesa
+      CROSSBENCH_NATIVE_TEST: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: sudo apt-get update -qq && sudo apt-get install -y libosmesa6 libgl1 libegl1
+      - run: pip install torch==2.8.0 torchvision==0.23.0 --index-url https://download.pytorch.org/whl/cpu
+      - run: pip install 'stable-worldmodel @ git+https://github.com/galilai-group/stable-worldmodel.git@06b1f4c24ccb237a9b2d6bb65bf010a6a5b41e83' gymnasium==1.2.0 numpy==2.2.6 pygame==2.6.1 pymunk==7.1.0 shapely==2.1.2 ogbench==1.2.0 mujoco==3.3.7 dm-control==1.0.34 omegaconf hdf5plugin
+      - run: python -m unittest discover -s tests -p 'test_crossbench_native.py' -v
