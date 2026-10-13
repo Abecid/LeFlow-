@@ -1,0 +1,18 @@
+{
+  "name": "guidance_only",
+  "num_samples": 64,
+  "flow_steps": 16,
+  "refinement": {
+    "mode": "guidance",
+    "indices": [
+      4,
+      8,
+      12,
+      14
+    ],
+    "rounds": 2,
+    "radius": 0.05,
+    "consistency_weight": 0.1,
+    "guidance_batch_size": 8
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "status": "implemented_locally_remote_publication_and_native_runs_blocked",
+  "recorded_utc": "2026-10-13T09:15:07.772292+00:00",
+  "target_repository": "Abecid/LeFlow-",
+  "inspected_base_commit": "8fea74f96c867c9aa19ac763b85b22f11d62d3d0",
+  "implementation_modes": [
+    "native",
+    "pnp",
+    "guidance",
+    "guided_pnp"
+  ],
+  "registered_comparisons": 6,
+  "registered_native_tasks": 4,
+  "planned_evaluation_cases": 1200,
+  "cpu_unit_tests_passed": 83,
+  "cpu_unit_tests_failed": 0,
+  "cpu_test_scope": "synthetic unit/numerical/protocol tests, NOT simulator task performance",
+  "python_version": "3.13.5",
+  "torch_version": "2.10.0+cpu",
+  "numpy_version": "2.3.5",
+  "pytest_version": "9.0.2",
+  "cuda_available": false,
+  "new_method_optimizer_updates": 0,
+  "new_method_requires_training": false,
+  "actual_training_runs_started": 0,
+  "actual_native_evaluation_runs_started": 0,
+  "native_checkpoint_parity_gate_executed": false,
+  "task_success_comparison_available": false,
+  "git_push_succeeded": false,
+  "remote_repository_modified": false,
+  "git_push_access_check": "git push --dry-run failed, exit 128: github.com DNS unavailable",
+  "compute_attempt": "campaign --execute failed, exit 1: no CUDA; no jobs launched",
+  "server_access": "target_server_2 did not resolve and no SSH configuration/client was available",
+  "artifact_role": "Backup of unpushed additive files, not fulfillment of remote execution request",
+  "remaining": [
+    "Publish changes from an actual write-enabled LeFlow checkout",
+    "Run released-checkpoint parity checks in the pinned native CUDA environment",
+    "Execute and audit the native benchmark comparison",
+    "Push measured results and analysis"
+  ]
+}
