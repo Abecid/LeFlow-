@@ -18,6 +18,8 @@ from .train import RETRIEVAL, code_hash
 
 
 def run(cache,task,method,output):
+    from .environment import configure_renderer_device
+    configure_renderer_device()
     import hdf5plugin
     torch.cuda.set_device(0);device=torch.device('cuda',0);torch.set_num_threads(2)
     started=time.perf_counter();root=Path(cache);meta=json.loads((root/'manifest.json').read_text())

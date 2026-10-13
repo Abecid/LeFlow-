@@ -28,12 +28,12 @@ class ActionUnits(nn.Module):
         low,high = self._expand(self.low,unit), self._expand(self.high,unit)
         return low + (unit.clamp(-1,1)+1)*.5*(high-low)
 
-    def unit(self, physical, *, strict=False):
+    def unit(self, physical, *, strict=False, clip=True):
         low,high = self._expand(self.low,physical), self._expand(self.high,physical)
         value = 2*(physical-low)/(high-low)-1
         if strict and (not torch.isfinite(value).all() or (value.abs() > 1.0001).any()):
             raise ValueError('Recorded actions exceed declared actuator bounds')
-        return value.clamp(-1,1)
+        return value.clamp(-1,1) if clip else value
 
     def to_world(self, unit):
         a = self.physical(unit)

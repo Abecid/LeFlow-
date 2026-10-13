@@ -40,7 +40,7 @@ class Spec:
     rounds: int = 3
     learning_rate: float = 1.e-4
     weight_decay: float = .05
-    protocol: str = 'crossbench-shared-lewm-v1'
+    protocol: str = 'crossbench-shared-lewm-v2'
 
     def __post_init__(self):
         if self.dataset not in ('pusht', 'cube') or self.method not in METHODS:

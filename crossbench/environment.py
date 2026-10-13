@@ -3,10 +3,22 @@ from __future__ import annotations
 from pathlib import Path
 import hashlib
 import json
+import os
 import numpy as np
 from PIL import Image
 
 PIN='06b1f4c24ccb237a9b2d6bb65bf010a6a5b41e83'
+
+
+def configure_renderer_device():
+    """Call before importing SWM/MuJoCo, which can initialize EGL on import."""
+    if os.getenv('LIBGL_ALWAYS_SOFTWARE')=='1':
+        os.environ['MUJOCO_EGL_DEVICE_ID']='0'
+        return
+    visible=os.getenv('CUDA_VISIBLE_DEVICES','').split(',')
+    local=int(os.getenv('LOCAL_RANK','0'))
+    if os.getenv('MUJOCO_GL','egl')=='egl' and local<len(visible) and visible[local].isdigit():
+        os.environ['MUJOCO_EGL_DEVICE_ID']=visible[local]
 
 
 def verify_install():
@@ -20,6 +32,9 @@ def verify_install():
 class NativeEnv:
     def __init__(self, dataset, action_budget=50, verify_version=True):
         if verify_version:verify_install()
+        # EGL enumerates physical GPUs independently of CUDA's logical indices.
+        # Keep each simulator renderer on its own evaluation rank's GPU.
+        configure_renderer_device()
         import gymnasium as gym
         import stable_worldmodel.envs  # registers the pinned tasks
         from omegaconf import OmegaConf

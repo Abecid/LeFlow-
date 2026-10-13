@@ -1,0 +1,42 @@
+test_default_plan_reuses_metaworld_and_has_sixteen_jobs (test_crossbench_campaign.TestCampaign.test_default_plan_reuses_metaworld_and_has_sixteen_jobs) ... ok
+test_dry_run_creates_no_training (test_crossbench_campaign.TestCampaign.test_dry_run_creates_no_training) ... ok
+test_execute_without_gpu_records_blocker (test_crossbench_campaign.TestCampaign.test_execute_without_gpu_records_blocker) ... ok
+test_fixture_result_refused (test_crossbench_campaign.TestCampaign.test_fixture_result_refused) ... ok
+test_missing_results_are_not_fabricated (test_crossbench_campaign.TestCampaign.test_missing_results_are_not_fabricated) ... ok
+test_action_conversion (test_crossbench_core.TestCore.test_action_conversion) ... ok
+test_all_methods_both_action_spaces (test_crossbench_core.TestCore.test_all_methods_both_action_spaces) ... /tmp/mtxu-leflow-20261004/env/lib/python3.11/site-packages/torch/nn/modules/transformer.py:392: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  warnings.warn(
+/tmp/mtxu-leflow-20261004/env/lib/python3.11/site-packages/torch/nn/modules/transformer.py:392: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  warnings.warn(
+ok
+test_expired_budget_returns_no_action (test_crossbench_core.TestCore.test_expired_budget_returns_no_action) ... ok
+test_case_inventory_independent_of_method (test_crossbench_data_eval.TestDataEvaluation.test_case_inventory_independent_of_method) ... ok
+test_egl_uses_physical_rank_device_before_native_import (test_crossbench_data_eval.TestDataEvaluation.test_egl_uses_physical_rank_device_before_native_import) ... ok
+test_memory_reader_is_byte_exact_for_every_training_field (test_crossbench_data_eval.TestDataEvaluation.test_memory_reader_is_byte_exact_for_every_training_field) ... ok
+test_no_command_after_deadline (test_crossbench_data_eval.TestDataEvaluation.test_no_command_after_deadline) ... ok
+test_success_stops_inside_action_block (test_crossbench_data_eval.TestDataEvaluation.test_success_stops_inside_action_block) ... ok
+test_unsupported_actions_never_receive_factual_training_labels (test_crossbench_data_eval.TestDataEvaluation.test_unsupported_actions_never_receive_factual_training_labels) ... ok
+test_window_shapes_causality_and_split (test_crossbench_data_eval.TestDataEvaluation.test_window_shapes_causality_and_split) ... ok
+test_actual_bounds_reset_render_and_success (test_crossbench_native.TestNative.test_actual_bounds_reset_render_and_success) ... /tmp/mtxu-leflow-20261004/env/lib/python3.11/site-packages/pygame/pkgdata.py:25: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  from pkg_resources import resource_stream, resource_exists
+NATIVE_VERIFIED pusht 2 reset/render/success
+/tmp/mtxu-leflow-20261004/env/lib/python3.11/site-packages/gymnasium/spaces/box.py:424: UserWarning: [33mWARN: Casting input x to numpy array.[0m
+  gym.logger.warn("Casting input x to numpy array.")
+MESA-EGL: warning: Not allowed to force software rendering when API explicitly selects a hardware device.
+/tmp/mtxu-leflow-20261004/env/lib/python3.11/site-packages/gymnasium/spaces/box.py:236: UserWarning: [33mWARN: Box low's precision lowered by casting to float32, current low.dtype=float64[0m
+  gym.logger.warn(
+/tmp/mtxu-leflow-20261004/env/lib/python3.11/site-packages/gymnasium/spaces/box.py:306: UserWarning: [33mWARN: Box high's precision lowered by casting to float32, current high.dtype=float64[0m
+  gym.logger.warn(
+/tmp/mtxu-leflow-20261004/env/lib/python3.11/site-packages/gymnasium/spaces/box.py:424: UserWarning: [33mWARN: Casting input x to numpy array.[0m
+  gym.logger.warn("Casting input x to numpy array.")
+NATIVE_VERIFIED cube 5 reset/render/success
+ok
+test_all_eight_methods_train_checkpoint_and_validate (test_crossbench_training.TestTrainer.test_all_eight_methods_train_checkpoint_and_validate) ... /tmp/mtxu-leflow-20261004/env/lib/python3.11/site-packages/torch/nn/modules/transformer.py:392: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  warnings.warn(
+ok
+test_interrupted_eval_resume_preserves_parameters (test_crossbench_training.TestTrainer.test_interrupted_eval_resume_preserves_parameters) ... ok
+
+----------------------------------------------------------------------
+Ran 18 tests in 20.388s
+
+OK

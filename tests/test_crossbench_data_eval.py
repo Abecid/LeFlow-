@@ -10,6 +10,7 @@ from crossbench.data import Windows, RouteBank
 from crossbench.evaluate import cases, episode
 from crossbench.world import ActionUnits
 from flow_jepa.common import save_json, file_hash
+from unittest.mock import patch
 
 
 def make_cache(root,task='pusht',dim=16):
@@ -53,6 +54,52 @@ class ConstantController:
 
 
 class TestDataEvaluation(unittest.TestCase):
+    def test_egl_uses_physical_rank_device_before_native_import(self):
+        from crossbench.environment import configure_renderer_device
+        with patch.dict('os.environ',{'CUDA_VISIBLE_DEVICES':'4,5,6,7','LOCAL_RANK':'2','MUJOCO_GL':'egl','LIBGL_ALWAYS_SOFTWARE':'0'}):
+            configure_renderer_device()
+            import os
+            self.assertEqual(os.environ['MUJOCO_EGL_DEVICE_ID'],'6')
+        with patch.dict('os.environ',{'CUDA_VISIBLE_DEVICES':'4,5,6,7','LOCAL_RANK':'2','LIBGL_ALWAYS_SOFTWARE':'1'}):
+            configure_renderer_device()
+            self.assertEqual(os.environ['MUJOCO_EGL_DEVICE_ID'],'0')
+
+    def test_unsupported_actions_never_receive_factual_training_labels(self):
+        with tempfile.TemporaryDirectory() as root:
+            meta=make_cache(root);s=Spec('pusht','retrieval_repair_ttt',dim=16,width=32)
+            before=cases(meta,Spec('pusht','vanilla_action_flow',eval_episodes=2))
+            with h5py.File(Path(root)/'cache.h5','a') as f:
+                valid=np.ones(800,bool);valid[52]=False
+                f.create_dataset('valid_action',data=valid)
+                f['a'][52]=[2.,-1.5]  # Preserve the unsupported raw command.
+            ds=Windows(root,s,length=500)
+            for i in range(500):
+                b=ds[i]
+                self.assertTrue((b['a'].abs()<=1).all())
+                if int(b['episode'])==0:
+                    start=int(b['start']);past=start-min(s.history,start//5)*5
+                    self.assertFalse(past<=52<start+25)
+                    future=np.all(b['goal'].numpy()==ds.file()['z'][53:160],axis=(1,2))
+                    if start<52:self.assertFalse(future.any())
+            bank=RouteBank(root,s,'cpu');self.assertTrue((bank.chunks.abs()<=1).all())
+            self.assertEqual(before,cases(meta,Spec('pusht','vanilla_action_flow',eval_episodes=2)))
+            self.assertEqual(ds.file()['a'][52,0],2.)
+
+    def test_memory_reader_is_byte_exact_for_every_training_field(self):
+        for task in ('pusht','cube'):
+            with tempfile.TemporaryDirectory() as root:
+                make_cache(root,task=task)
+                for method in ('vanilla_action_flow','retrieval_repair_ttt','sage_port'):
+                    s=Spec(task,method,dim=16,width=32,
+                           primitive_dim=2 if task=='pusht' else 5)
+                    disk=Windows(root,s,length=100,in_memory=False)
+                    memory=Windows(root,s,length=100,in_memory=True)
+                    for index in range(100):
+                        a,b=disk[index],memory[index]
+                        self.assertEqual(a.keys(),b.keys())
+                        self.assertTrue(all(torch.equal(a[k],b[k]) for k in a))
+                    disk.handle.close()
+
     def test_window_shapes_causality_and_split(self):
         with tempfile.TemporaryDirectory() as root:
             meta=make_cache(root);s=Spec('pusht','retrieval_repair_ttt',dim=16,width=32)

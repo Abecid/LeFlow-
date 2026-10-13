@@ -1,3 +1,18 @@
+# October 13: execute sixteen new PushT/Cube comparisons
+
+The latest user request explicitly authorizes actual training and evaluation of
+eight named controllers on PushT and Cube, using all eight available server A800s.
+Reuse all completed MetaWorld results; do not retrain them or open sealed tests.
+Two four-GPU lanes must preserve seed3072, global64, 20k-update OR28,800 aggregate
+optimizer-GPU-second ceilings, four native50-case evaluations, 50 primitive
+actions and10 cumulative controller seconds. No additional seeds, variants,
+ablations, inference-scaling sweep or expanded action limits are authorized.
+Read docs/CROSSBENCH_RUNS_20261013.md and crossbench/AGENTS.md. Keep every started
+execution checkout frozen and publish each completed/failed run's full evidence
+and negative findings to origin/main from a separate reporting checkout.
+
+Earlier completed-run holds are superseded only for these sixteen new runs.
+
 # October 12: five additional comparisons completed; launches held
 
 All five authorized methods have completed 20k updates and four fixed evaluations.

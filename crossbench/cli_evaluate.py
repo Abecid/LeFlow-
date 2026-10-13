@@ -13,6 +13,8 @@ from .train import RETRIEVAL, code_hash
 
 
 def main():
+    from .environment import configure_renderer_device
+    configure_renderer_device()
     p=argparse.ArgumentParser(description=__doc__)
     for k in ('cache','checkpoint','output'):p.add_argument('--'+k,required=True)
     p.add_argument('--device',default='cuda:0')

@@ -11,7 +11,7 @@ from torch.nn import functional as F
 
 
 class Windows(Dataset):
-    def __init__(self, root, spec, length=None, split='train'):
+    def __init__(self, root, spec, length=None, split='train', *, in_memory=True):
         self.root,self.s=Path(root),spec
         self.meta=json.loads((self.root/'manifest.json').read_text())
         if split not in ('train','val'):
@@ -24,22 +24,50 @@ class Windows(Dataset):
             raise ValueError('Model/cache dimensions differ')
         self.length=length or spec.updates*spec.global_batch
         self.handle=None;self.pid=None
+        self.in_memory=in_memory
+        f=self.file();starts=[];invalid=[];kept=[]
+        for row in self.rows:
+            o,n=row['cache_offset'],row['length']
+            valid=f['valid_action'][o:o+n] if 'valid_action' in f else np.ones(n,bool)
+            valid=valid.copy();valid[-1]=False
+            bad=np.flatnonzero(~valid);counts=np.r_[0,np.cumsum(~valid)]
+            candidate=np.arange(n-spec.horizon*spec.action_block)
+            past=candidate-np.minimum(spec.history,candidate//spec.action_block)*spec.action_block
+            okay=counts[candidate+spec.horizon*spec.action_block]==counts[past]
+            eligible=candidate[okay]
+            if len(eligible):kept.append(row);starts.append(eligible);invalid.append(bad)
+        self.nominal_episode_count=len(self.rows)
+        self.nominal_windows=sum(r['length']-spec.horizon*spec.action_block for r in self.rows)
+        self.rows=kept
+        self.starts,self.invalid_actions=starts,invalid
+        if not self.rows:raise ValueError('No factual windows satisfy native actuator bounds')
+        self.statistics=dict(eligible_episodes=len(self.rows),nominal_episodes=self.nominal_episode_count,
+                             eligible_starts=sum(len(v) for v in starts),nominal_starts=self.nominal_windows,
+                             native_safe_factual_history_and_goals=True)
 
     def __len__(self):
         return self.length
 
     def file(self):
         if self.pid != os.getpid():
-            self.handle=h5py.File(self.root/'cache.h5','r')
+            if self.in_memory:
+                # The compact, lossless float32 cache fits the server's RAM.
+                # Retain original offsets, sampling, dtype and every field.
+                with h5py.File(self.root/'cache.h5','r') as f:
+                    self.handle={key:f[key][:] for key in ('z','a','valid_action') if key in f}
+            else:
+                self.handle=h5py.File(self.root/'cache.h5','r')
             self.pid=os.getpid()
         return self.handle
 
     def __getitem__(self, index):
         s=self.s;h=s.horizon;k=s.action_block
         rng=np.random.default_rng(np.random.SeedSequence([s.seed,int(index)]))
-        row=self.rows[int(rng.integers(len(self.rows)))]
-        start=int(rng.integers(row['length']-h*k))
-        maxblocks=(row['length']-1-start)//k
+        rid=int(rng.integers(len(self.rows)));row=self.rows[rid]
+        start=int(rng.choice(self.starts[rid]))
+        bad=self.invalid_actions[rid]
+        next_invalid=int(bad[np.searchsorted(bad,start)])
+        maxblocks=(next_invalid-start)//k
         offsets=[v for v in (5,10,20,40,60) if v<=maxblocks]
         offset=int(rng.choice(offsets))
         duration=int(rng.choice([v for v in (5,10,20,40,60) if v<=offset]))
@@ -62,7 +90,7 @@ class Windows(Dataset):
                     subgoal=z(start+duration*k))
         out={name:torch.from_numpy(value.copy()) for name,value in values.items()}
         out.update(episode=torch.tensor(row['id']),index=torch.tensor(index),
-                   duration=torch.tensor(duration),start=torch.tensor(start))
+                   duration=torch.tensor(duration),start=torch.tensor(start),goal_blocks=torch.tensor(offset))
         return out
 
 
@@ -82,9 +110,11 @@ class RouteBank:
                 o,n=row['cache_offset'],row['length'];k=spec.action_block
                 z=f['z'][o:o+n].astype(np.float32)
                 a=f['a'][o:o+n].astype(np.float32)
+                valid=f['valid_action'][o:o+n] if 'valid_action' in f else np.ones(n,bool)
                 for t in range(0,n-spec.horizon*k,spec.horizon*k):
                     for span in (5,10,20,40,60):
                         if t+span*k>=n:continue
+                        if not valid[t:t+span*k].all():continue
                         starts.append(z[t]);locals_.append(z[t+spec.horizon*k]);ends.append(z[t+span*k])
                         chunks.append(a[t:t+spec.horizon*k].reshape(spec.horizon,spec.ad))
                         episode.append(row['id']);local_id.append(o+t)
