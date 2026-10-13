@@ -1,3 +1,14 @@
+<!-- native-crossbench-current:start -->
+# Native campaign operational status
+
+Native PushT/Cube status: **10/16 completed, 40/64 full physical reports; failure hold**. Frozen training source remains `747f635ad36af2cbe3e2bbb0b7997efe9caccaa1`; seed3072/global64,20k updates OR8 optimizer GPUh, four native50 evaluations,50 actions/10 seconds. Native records use [their separate ledger](docs/crossbench-results-ledger.json). The MetaWorld21-comparison/81-report ledger is unchanged.
+
+Cube search's first attempt stopped at W&B initialization before any optimizer update or registered evaluation. Its native preflight0.004619815980291201GPUh and no-update DDP0.00035402999363011786GPUh remain preserved. Startup wait time is unmeasured and is not an optimizer charge. Ten completed runs are retained by the second operational recovery; only Cube search and five unstarted registered jobs are eligible. No changed training source, completed work replay, extra method, seed, data or budget is authorized. A failed recovery holds again without automatic restart.
+
+See [native results](docs/CROSSBENCH_RESULTS.md), [failed-attempt evidence](docs/reports/20261013-crossbench-baselines/failures/cube-action-flow-search-wandb-init/failure.json) and [recovery registration](docs/reports/20261013-crossbench-baselines/recovery2-registration.json). No native contact sheets have been visually inspected; measured NPZ archives are not a visual-QA claim. Source-backbone overlap, custom ports and single-seed development selection preclude causal-component or SOTA claims. Final tests remain sealed.
+
+<!-- native-crossbench-current:end -->
+
 # October 13: execute sixteen new PushT/Cube comparisons
 
 The latest user request explicitly authorizes actual training and evaluation of

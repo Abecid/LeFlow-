@@ -4,7 +4,7 @@ Sixteen authorized fresh runs; completed MetaWorld results are reused. Training 
 
 | Dataset | Method | State | Success curve /50 | Best measured |
 | --- | --- | --- | --- | ---: |
-| cube | action_flow_search | training / periodic evaluation | pending | pending |
+| cube | action_flow_search | failed before optimization | pending | pending |
 | cube | execution_revision | completed, audited | 28 / 30 / 32 / 31 | 32 |
 | cube | leflow | completed, audited | 33 / 40 / 37 / 40 | 40 |
 | cube | retrieval_repair_ttt | completed, audited | 30 / 32 / 32 / 31 | 32 |

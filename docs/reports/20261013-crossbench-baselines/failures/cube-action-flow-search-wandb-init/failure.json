@@ -1,0 +1,20 @@
+{
+  "status": "failed_before_optimization",
+  "method": "action_flow_search",
+  "dataset": "cube",
+  "cause": "W&B online initialization timeout; other ranks timed out waiting for the rank-zero W&B identifier broadcast",
+  "source": "747f635ad36af2cbe3e2bbb0b7997efe9caccaa1",
+  "optimizer_updates": 0,
+  "registered_evaluations": 0,
+  "native_preflight_gpu_hours": 0.004619815980291201,
+  "no_update_ddp_gpu_hours": 0.00035402999363011786,
+  "startup_wait_gpu_hours": null,
+  "startup_wait_note": "Unmeasured; do not count idle allocation as optimizer time. Completed preflight charges above remain retained.",
+  "failed_wandb_id": "smo7gh62",
+  "failed_wandb_state": "crashed",
+  "last_history_step": -1,
+  "process_inspection_utc": "2026-10-13T14:46:43.502974+00:00",
+  "owned_processes_present": false,
+  "historical_worker_start_ticks": "Not recorded by the original launcher and unavailable after exit; exact worker PIDs from the preserved log are confirmed absent.",
+  "recovery_scope": "Only the zero-update Cube search and five unstarted registered jobs; no completed optimization/evaluation replay."
+}

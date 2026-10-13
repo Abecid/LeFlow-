@@ -1,0 +1,36 @@
+{
+  "utc": "2026-10-13T14:48:50.957933+00:00",
+  "runtime_commit": "747f635ad36af2cbe3e2bbb0b7997efe9caccaa1",
+  "runtime_files": 245,
+  "runtime_mismatches": [],
+  "worker_pids": {
+    "3289446": false,
+    "3289447": false,
+    "3289448": false,
+    "3289449": false
+  },
+  "failed_run_inventory": [
+    {
+      "path": "gradient-preflight.json",
+      "bytes": 1554
+    },
+    {
+      "path": "identity.json",
+      "bytes": 1123
+    },
+    {
+      "path": "native-preflight.json",
+      "bytes": 893
+    },
+    {
+      "path": "run.lock",
+      "bytes": 0
+    }
+  ],
+  "wandb": {
+    "id": "smo7gh62",
+    "state": "crashed",
+    "lastHistoryStep": -1,
+    "summary": {}
+  }
+}

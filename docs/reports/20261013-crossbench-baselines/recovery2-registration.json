@@ -1,0 +1,45 @@
+{
+  "created_utc": "2026-10-13T14:48:50.957933+00:00",
+  "source": "747f635ad36af2cbe3e2bbb0b7997efe9caccaa1",
+  "runtime_files": 245,
+  "retained_completed": 10,
+  "remaining_jobs": [
+    [
+      "cube",
+      "action_flow_search"
+    ],
+    [
+      "cube",
+      "sage_port"
+    ],
+    [
+      "pusht",
+      "diffusion_policy_port"
+    ],
+    [
+      "cube",
+      "diffusion_policy_port"
+    ],
+    [
+      "pusht",
+      "feedback_wm_port"
+    ],
+    [
+      "cube",
+      "feedback_wm_port"
+    ]
+  ],
+  "failed_before_first_update": true,
+  "prior_attempt_evidence": "failures/cube-action-flow-search-wandb-init",
+  "prior_attempt_measured_gpu_hours": 0.004973845973921319,
+  "recovery_script_sha256": "47efeff6f0c036bb81582612553e567e56373e9befcb8ea81811374d65f89c40",
+  "execution_source_changed": false,
+  "optimizer_or_registered_evaluation_replayed": false,
+  "preserve_online_logging": true,
+  "cube_tf32_override": "0",
+  "pushT_settings_changed": false,
+  "ranks_per_job": 4,
+  "lanes": 2,
+  "no_retry_on_failure": true,
+  "authorization": "Existing explicit sixteen-job execution; operational recovery starts only still-unconsumed policy optimization/evaluation, with no expanded budgets."
+}
