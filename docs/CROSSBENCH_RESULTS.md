@@ -47,3 +47,13 @@ Snapshot: 2026-10-13T16:05:18.765579+00:00. Queue failure hold: False. Lane stat
 The registered methods use two disjoint four-GPU lanes. No missing score is estimated. All archived case outcomes are actual native simulator success flags. CPU/synthetic checks alone are not benchmark results.
 
 Source/data/protocol details: [launch record](CROSSBENCH_RUNS_20261013.md). Complete/interim training logs and all physical milestone reports: [archive](reports/20261013-crossbench-baselines/).
+
+## Final preservation and interpretation
+
+All 16 runs reached 20,000 updates and have four complete 50-case reports, passing CPU audits, finished W&B records and zero-return queue entries. All 64 reports have zero controller timeouts. The queue finished at 15:44:43 UTC; the publication watcher verified all 454 native artifact/report paths at commit `c54f7966b9f07d9f078641b7df39c02e0dc2f553` and exited at 16:06:32 UTC. An independent final check verified the newly completed run and unchanged prior declarations. The subsequent [owned-process check](reports/20261013-crossbench-baselines/batch-final-health.json) found no remaining owned training/preflight/queue processes.
+
+SAGE has the highest selected development score on both datasets: 40/50 PushT and 49/50 Cube. Retrieval repair selects 39/50 PushT but 32/50 Cube; LeFlow selects 12/50 PushT versus plain flow 17/50, and 40/50 Cube versus plain flow 38/50. These negative findings and task differences are retained. Custom ports, different trained systems and reused one-seed development selection prevent SOTA, generalization or causal-component conclusions.
+
+All [16 contact sheets](reports/20261013-crossbench-baselines/visual-review/README.md) were inspected in full, covering every saved frame and goal from 160 archived trajectories. The subset is the first ten registered cases per run; no new evaluation or rendering was performed in the simulator. The full 50-case outcome records remain the quantitative evidence.
+
+The completed runs consumed **14.0533655446664329 optimizer GPUh** and **3.229509477849221886 registered-evaluation GPUh**. The [component ledger](reports/20261013-crossbench-baselines/measured-compute-summary.json) additionally retains measured cache preparation, current preflights and the failed W&B-attempt preflights. Unmeasured failed precision-preflight and startup waiting time are explicitly excluded rather than recorded as zero; this is not a full cluster bill. Earlier MetaWorld evidence remains separate and unchanged. No further GPU work is authorized by batch completion.

@@ -1,0 +1,34 @@
+{
+  "utc": "2026-10-13T16:19:23.690924+00:00",
+  "verified_commit": "c54f7966b9f07d9f078641b7df39c02e0dc2f553",
+  "live_remote": "c54f7966b9f07d9f078641b7df39c02e0dc2f553",
+  "completed_runs": 16,
+  "total_full_reports": 64,
+  "new_reports_checked": 4,
+  "new_completed_artifact_report_paths_verified": 24,
+  "changed_paths_verified": 28,
+  "prior_completed_artifact_declarations_unchanged": true,
+  "metaworld_ledger_unchanged": true,
+  "new_runs": [
+    {
+      "dataset": "cube",
+      "method": "feedback_wm_port",
+      "curve": [
+        35,
+        38,
+        42,
+        43
+      ],
+      "selected_step": 20000,
+      "selected_successes": 43,
+      "timeouts": 0,
+      "paired_vs_vanilla": {
+        "wins": 8,
+        "regressions": 3,
+        "both_fail": 4
+      },
+      "optimization_gpu_hours": 0.4757749640962316,
+      "evaluation_gpu_hours": 0.34567570061112446
+    }
+  ]
+}

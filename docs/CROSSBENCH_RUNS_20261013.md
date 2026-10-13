@@ -79,3 +79,7 @@ Current launch/check/evidence records: [batch archive](reports/20261013-crossben
 Source is frozen immediately before formal launch after the server checks.
 Native50 results and MetaWorld104 results are reported separately; backbones and
 native success predicates differ. SAGE/Feedback-WM retain paper-port labels.
+
+## Final October 13 completion
+
+All sixteen registered runs completed with zero return codes at 15:44:43 UTC. All 64 physical 50-case evaluation reports and sixteen finished W&B/source/checkpoint audits were remotely verified by the publication watcher at 16:06:32 UTC. The final owned-process check found no training, preflight or queue processes. All 16 contact sheets (160 archived trajectories, first ten cases per run) were subsequently inspected in full; no simulator/model work was repeated. See [final results and compute](CROSSBENCH_RESULTS.md) and [visual review scope](reports/20261013-crossbench-baselines/visual-review/README.md). All registered budgets are consumed or closed. Idle resources do not authorize further work; final tests remain sealed.

@@ -1,0 +1,3199 @@
+{
+  "kind": "Measured native validation frames, composed from all 160 archived selected-checkpoint NPZ files",
+  "sheets": [
+    {
+      "dataset": "cube",
+      "method": "action_flow_search",
+      "selected_step": 5000,
+      "report": "docs/reports/20261013-crossbench-baselines/runs/cube/action_flow_search/validation/step_0005000/report.json.gz",
+      "report_sha256": "1b2cd67ffeb4ed089baee202bdf33422f26cefb1c752ce283fb84cbba55870a3",
+      "file": "docs/reports/20261013-crossbench-baselines/visual-review/cube-action_flow_search.png",
+      "sha256": "191a605f087ed78175e66d281c9a5e794492d77d62f7cb590ceefcabf7367ee3",
+      "width": 1292,
+      "height": 2450,
+      "cases": [
+        {
+          "case_index": 0,
+          "id": "cube/val/0001371/000084",
+          "success": true,
+          "steps": 1,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            1
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/action_flow_search/selected-trajectories/00000.npz",
+          "npz_sha256": "6f596fb5111d7c729f4af19106289c38523dae3b3548dd0decfecb4664e8ccba",
+          "initial_rgb_sha256": "3f73a91bad6436e96a3cae4b500339d5a366abb05498895d93aaeeee754d3ed9",
+          "goal_rgb_sha256": "d5cabdc10da258db5b51ecc8fde62b457f51d5dc6467d3706d7f8eda03705d75"
+        },
+        {
+          "case_index": 1,
+          "id": "cube/val/0001514/000118",
+          "success": false,
+          "steps": 50,
+          "failure_reason": "action_limit",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/action_flow_search/selected-trajectories/00001.npz",
+          "npz_sha256": "46097d6203834dc386359e363eb0daa8e20d1d2959335b9a960c5ae3f7abce4c",
+          "initial_rgb_sha256": "66f3363ecebf0b9f070e8af47de5e96c0bc8d32cc08a80e1159628ce1e11684f",
+          "goal_rgb_sha256": "02b9dc61a48a2d1c6b0aa22521d711f47846f1b88698bfe5fd2ddb858dee2ec6"
+        },
+        {
+          "case_index": 2,
+          "id": "cube/val/0001645/000057",
+          "success": false,
+          "steps": 50,
+          "failure_reason": "action_limit",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/action_flow_search/selected-trajectories/00002.npz",
+          "npz_sha256": "0eca703ebbdbde93c39c254e55aceefafc5c8e59898da973053a0fa2b45cebcc",
+          "initial_rgb_sha256": "710818471336e072d929132759dee0bdb65c2552e60a945fc15e97644c7e6e2e",
+          "goal_rgb_sha256": "6e2cf14be640b0fabcce505db1cd9bbf3d7c7b37527dd99cbab05e2c854d44d7"
+        },
+        {
+          "case_index": 3,
+          "id": "cube/val/0007213/000112",
+          "success": false,
+          "steps": 50,
+          "failure_reason": "action_limit",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/action_flow_search/selected-trajectories/00003.npz",
+          "npz_sha256": "319ddb3f5117ba1e5d155702a15c702108b32c26deeaa0f480ea4690106ac056",
+          "initial_rgb_sha256": "52716dba7467cf1ccc669c3b308dd5b5ac103996ba366413a62205befd50dbf7",
+          "goal_rgb_sha256": "6e6d34128a52280419447a2ba536579d9d0727f0d53b87125dc040c0eb18302f"
+        },
+        {
+          "case_index": 4,
+          "id": "cube/val/0009965/000165",
+          "success": true,
+          "steps": 1,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            1
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/action_flow_search/selected-trajectories/00004.npz",
+          "npz_sha256": "6000a2b51fb6247f2146575dbe0765e450ad73ecc906c0fdbd8a807ada27be97",
+          "initial_rgb_sha256": "ac56bea4e1f3d00dd4686828c332fabe139a4133da4e12a4227ba05d7ba98e38",
+          "goal_rgb_sha256": "672cb0b63bab3c35ca74d299113c8071eb4fef5a3f264b9cd23c7770777da7e4"
+        },
+        {
+          "case_index": 5,
+          "id": "cube/val/0005033/000124",
+          "success": false,
+          "steps": 50,
+          "failure_reason": "action_limit",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/action_flow_search/selected-trajectories/00005.npz",
+          "npz_sha256": "610ad16405643f37e1862912aba15a5cb01b2877d751ea334218658202056b2f",
+          "initial_rgb_sha256": "1a88b8dce10d3e7d1c43640f276f0ae2076744b1db355a55ff86405c02a5b10f",
+          "goal_rgb_sha256": "934312e584da270a4c046ee6e49532f500881f94a5100f8c616054cef1c4aa80"
+        },
+        {
+          "case_index": 6,
+          "id": "cube/val/0004057/000053",
+          "success": true,
+          "steps": 16,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            3,
+            6,
+            9,
+            12,
+            16
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/action_flow_search/selected-trajectories/00006.npz",
+          "npz_sha256": "49b56792a055b9e67a568195e63ae3f6c94bbd3d25874fe5d36a421f91c4223e",
+          "initial_rgb_sha256": "fe3fe019f67cc7f1e226d4757a4d63e229ebc7397ad7fcb25a68fcdd794a4997",
+          "goal_rgb_sha256": "5e3325556bc98618bd1bbbd6bc851515192a27a8d754b8a3b10f2cc03befa10e"
+        },
+        {
+          "case_index": 7,
+          "id": "cube/val/0002090/000115",
+          "success": false,
+          "steps": 50,
+          "failure_reason": "action_limit",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/action_flow_search/selected-trajectories/00007.npz",
+          "npz_sha256": "df3484e1955014a827fcfa14549010ffad25907cd32172b6251423f09d875802",
+          "initial_rgb_sha256": "aa51a17bfa6c83c054b718c92c08aee91bd557eca98a5bc498e3e7d6f40103eb",
+          "goal_rgb_sha256": "f1656b891a7ad6841588a984d58f69f9c15b4f8bef089fae4ed3b93e90bdef24"
+        },
+        {
+          "case_index": 8,
+          "id": "cube/val/0004519/000037",
+          "success": true,
+          "steps": 18,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            3,
+            7,
+            10,
+            14,
+            18
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/action_flow_search/selected-trajectories/00008.npz",
+          "npz_sha256": "3a7e3b8c0a68feb1843414b068a6db9c05058602ea5831439cfc19b6c6dad538",
+          "initial_rgb_sha256": "85307a77ff7c35ab49ef34159a8109c34e3c4c242c67b229e3536f4f2abfd859",
+          "goal_rgb_sha256": "fa8ed8de81472d1088df70a35ed6d9934b99df8258786588efffbea88e7e672b"
+        },
+        {
+          "case_index": 9,
+          "id": "cube/val/0008782/000106",
+          "success": false,
+          "steps": 50,
+          "failure_reason": "action_limit",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/action_flow_search/selected-trajectories/00009.npz",
+          "npz_sha256": "facaa3cd18d5ae9b1c51e0059ce815149e80c638f24f02f718fd490a9312e28d",
+          "initial_rgb_sha256": "1f4f79ab96b1a2009560a9a0f75787359cc50145768f7ac1b11cc2060fe14937",
+          "goal_rgb_sha256": "398e73a75800bda0d3b040de79b1b38b4493e47d3e4107b9c50a1b7e59ad3bba"
+        }
+      ]
+    },
+    {
+      "dataset": "cube",
+      "method": "diffusion_policy_port",
+      "selected_step": 20000,
+      "report": "docs/reports/20261013-crossbench-baselines/runs/cube/diffusion_policy_port/validation/step_0020000/report.json.gz",
+      "report_sha256": "8f16cef7d7d517f93fb7e66be27bc50dc42ce0327ebe54a20c774623ed77ad85",
+      "file": "docs/reports/20261013-crossbench-baselines/visual-review/cube-diffusion_policy_port.png",
+      "sha256": "d61e670a61cb3cf5fc2f56c056ba2c43ce7fc2f2776661682d6f8633473e2ba0",
+      "width": 1292,
+      "height": 2450,
+      "cases": [
+        {
+          "case_index": 0,
+          "id": "cube/val/0001371/000084",
+          "success": true,
+          "steps": 1,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            1
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/diffusion_policy_port/selected-trajectories/00000.npz",
+          "npz_sha256": "3b2fefeb67e949793c85732287c668d99bd0e86332b5d19479ee4d62e90fda99",
+          "initial_rgb_sha256": "3f73a91bad6436e96a3cae4b500339d5a366abb05498895d93aaeeee754d3ed9",
+          "goal_rgb_sha256": "d5cabdc10da258db5b51ecc8fde62b457f51d5dc6467d3706d7f8eda03705d75"
+        },
+        {
+          "case_index": 1,
+          "id": "cube/val/0001514/000118",
+          "success": true,
+          "steps": 50,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/diffusion_policy_port/selected-trajectories/00001.npz",
+          "npz_sha256": "2bf0750d052dffb068f0a64c69d3d5579900b72d678f1ceac87f151b2794c782",
+          "initial_rgb_sha256": "66f3363ecebf0b9f070e8af47de5e96c0bc8d32cc08a80e1159628ce1e11684f",
+          "goal_rgb_sha256": "02b9dc61a48a2d1c6b0aa22521d711f47846f1b88698bfe5fd2ddb858dee2ec6"
+        },
+        {
+          "case_index": 2,
+          "id": "cube/val/0001645/000057",
+          "success": true,
+          "steps": 19,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            3,
+            7,
+            11,
+            15,
+            19
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/diffusion_policy_port/selected-trajectories/00002.npz",
+          "npz_sha256": "517fa83ed19e1bd0e8417f52bdeed94cd2dace8461dbdb50eeef78937d409693",
+          "initial_rgb_sha256": "710818471336e072d929132759dee0bdb65c2552e60a945fc15e97644c7e6e2e",
+          "goal_rgb_sha256": "6e2cf14be640b0fabcce505db1cd9bbf3d7c7b37527dd99cbab05e2c854d44d7"
+        },
+        {
+          "case_index": 3,
+          "id": "cube/val/0007213/000112",
+          "success": true,
+          "steps": 37,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            7,
+            14,
+            22,
+            29,
+            37
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/diffusion_policy_port/selected-trajectories/00003.npz",
+          "npz_sha256": "a9db5cca48295d95f3d61fe2ef933d0f66c30ef45f374ea23b4e2e8fb67a86d1",
+          "initial_rgb_sha256": "52716dba7467cf1ccc669c3b308dd5b5ac103996ba366413a62205befd50dbf7",
+          "goal_rgb_sha256": "6e6d34128a52280419447a2ba536579d9d0727f0d53b87125dc040c0eb18302f"
+        },
+        {
+          "case_index": 4,
+          "id": "cube/val/0009965/000165",
+          "success": true,
+          "steps": 1,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            1
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/diffusion_policy_port/selected-trajectories/00004.npz",
+          "npz_sha256": "cf41b420ab2543a3306aa53f5b2e6cbf9b79ad9b2bd1a8c25433ab15f2ab9a14",
+          "initial_rgb_sha256": "ac56bea4e1f3d00dd4686828c332fabe139a4133da4e12a4227ba05d7ba98e38",
+          "goal_rgb_sha256": "672cb0b63bab3c35ca74d299113c8071eb4fef5a3f264b9cd23c7770777da7e4"
+        },
+        {
+          "case_index": 5,
+          "id": "cube/val/0005033/000124",
+          "success": true,
+          "steps": 24,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            4,
+            9,
+            14,
+            19,
+            24
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/diffusion_policy_port/selected-trajectories/00005.npz",
+          "npz_sha256": "eadad8a140d12fcd4bd9584ceb8501b3d2a008d4788475bd22a6a17b5569f262",
+          "initial_rgb_sha256": "1a88b8dce10d3e7d1c43640f276f0ae2076744b1db355a55ff86405c02a5b10f",
+          "goal_rgb_sha256": "934312e584da270a4c046ee6e49532f500881f94a5100f8c616054cef1c4aa80"
+        },
+        {
+          "case_index": 6,
+          "id": "cube/val/0004057/000053",
+          "success": true,
+          "steps": 47,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            9,
+            18,
+            28,
+            37,
+            47
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/diffusion_policy_port/selected-trajectories/00006.npz",
+          "npz_sha256": "6f38d53a2afafdc925629b499aa3798244132d7701d1b929a23bf8f245b874af",
+          "initial_rgb_sha256": "fe3fe019f67cc7f1e226d4757a4d63e229ebc7397ad7fcb25a68fcdd794a4997",
+          "goal_rgb_sha256": "5e3325556bc98618bd1bbbd6bc851515192a27a8d754b8a3b10f2cc03befa10e"
+        },
+        {
+          "case_index": 7,
+          "id": "cube/val/0002090/000115",
+          "success": true,
+          "steps": 13,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            2,
+            5,
+            7,
+            10,
+            13
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/diffusion_policy_port/selected-trajectories/00007.npz",
+          "npz_sha256": "f5208f5135ffe73b4b25804caddf3ae430c37f8528a8070ca8d7de45511f4fef",
+          "initial_rgb_sha256": "aa51a17bfa6c83c054b718c92c08aee91bd557eca98a5bc498e3e7d6f40103eb",
+          "goal_rgb_sha256": "f1656b891a7ad6841588a984d58f69f9c15b4f8bef089fae4ed3b93e90bdef24"
+        },
+        {
+          "case_index": 8,
+          "id": "cube/val/0004519/000037",
+          "success": false,
+          "steps": 50,
+          "failure_reason": "action_limit",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/diffusion_policy_port/selected-trajectories/00008.npz",
+          "npz_sha256": "fbdf794a84ca2beba6a23e89197846930d16776a2bf4282d4f75202c5d3f4a2c",
+          "initial_rgb_sha256": "85307a77ff7c35ab49ef34159a8109c34e3c4c242c67b229e3536f4f2abfd859",
+          "goal_rgb_sha256": "fa8ed8de81472d1088df70a35ed6d9934b99df8258786588efffbea88e7e672b"
+        },
+        {
+          "case_index": 9,
+          "id": "cube/val/0008782/000106",
+          "success": false,
+          "steps": 50,
+          "failure_reason": "action_limit",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/diffusion_policy_port/selected-trajectories/00009.npz",
+          "npz_sha256": "bcf20989885c973f44678884065a9f8d2f4d22d3d096e4a74ca5b63f95c02667",
+          "initial_rgb_sha256": "1f4f79ab96b1a2009560a9a0f75787359cc50145768f7ac1b11cc2060fe14937",
+          "goal_rgb_sha256": "398e73a75800bda0d3b040de79b1b38b4493e47d3e4107b9c50a1b7e59ad3bba"
+        }
+      ]
+    },
+    {
+      "dataset": "cube",
+      "method": "execution_revision",
+      "selected_step": 15000,
+      "report": "docs/reports/20261013-crossbench-baselines/runs/cube/execution_revision/validation/step_0015000/report.json.gz",
+      "report_sha256": "ef12760590b5e80569d51165ea2faeef6723f3b4345ca9382502f9c83da4ec94",
+      "file": "docs/reports/20261013-crossbench-baselines/visual-review/cube-execution_revision.png",
+      "sha256": "ec8645adbb1462efbfd91e708207387048987ca874224a847be05df31ec470bc",
+      "width": 1292,
+      "height": 2450,
+      "cases": [
+        {
+          "case_index": 0,
+          "id": "cube/val/0001371/000084",
+          "success": true,
+          "steps": 1,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            1
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/execution_revision/selected-trajectories/00000.npz",
+          "npz_sha256": "7ba0a5dce64b917fe571ec7a60d8fdde6fe8366a5bfff5c6dbcb467ddd37084f",
+          "initial_rgb_sha256": "3f73a91bad6436e96a3cae4b500339d5a366abb05498895d93aaeeee754d3ed9",
+          "goal_rgb_sha256": "d5cabdc10da258db5b51ecc8fde62b457f51d5dc6467d3706d7f8eda03705d75"
+        },
+        {
+          "case_index": 1,
+          "id": "cube/val/0001514/000118",
+          "success": false,
+          "steps": 50,
+          "failure_reason": "action_limit",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/execution_revision/selected-trajectories/00001.npz",
+          "npz_sha256": "c15706f4fc9ae93faba95a4d77652b0a0a7a8a13a8a8f66c91356eddfcdaa427",
+          "initial_rgb_sha256": "66f3363ecebf0b9f070e8af47de5e96c0bc8d32cc08a80e1159628ce1e11684f",
+          "goal_rgb_sha256": "02b9dc61a48a2d1c6b0aa22521d711f47846f1b88698bfe5fd2ddb858dee2ec6"
+        },
+        {
+          "case_index": 2,
+          "id": "cube/val/0001645/000057",
+          "success": true,
+          "steps": 5,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/execution_revision/selected-trajectories/00002.npz",
+          "npz_sha256": "e41475b159132c57640911eb1a85ab29ee7df668ec7fed84aaa54c2b2db97df1",
+          "initial_rgb_sha256": "710818471336e072d929132759dee0bdb65c2552e60a945fc15e97644c7e6e2e",
+          "goal_rgb_sha256": "6e2cf14be640b0fabcce505db1cd9bbf3d7c7b37527dd99cbab05e2c854d44d7"
+        },
+        {
+          "case_index": 3,
+          "id": "cube/val/0007213/000112",
+          "success": false,
+          "steps": 50,
+          "failure_reason": "action_limit",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/execution_revision/selected-trajectories/00003.npz",
+          "npz_sha256": "1f5732933b5d269ae0aa2b913f03a8f9b1ec4a83ec71b56b8a8fb71d2fc7392b",
+          "initial_rgb_sha256": "52716dba7467cf1ccc669c3b308dd5b5ac103996ba366413a62205befd50dbf7",
+          "goal_rgb_sha256": "6e6d34128a52280419447a2ba536579d9d0727f0d53b87125dc040c0eb18302f"
+        },
+        {
+          "case_index": 4,
+          "id": "cube/val/0009965/000165",
+          "success": true,
+          "steps": 1,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            1
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/execution_revision/selected-trajectories/00004.npz",
+          "npz_sha256": "1d242f89f47c816d1b0987c5bf6bd26470e3f780bb9310f31584cc852f414067",
+          "initial_rgb_sha256": "ac56bea4e1f3d00dd4686828c332fabe139a4133da4e12a4227ba05d7ba98e38",
+          "goal_rgb_sha256": "672cb0b63bab3c35ca74d299113c8071eb4fef5a3f264b9cd23c7770777da7e4"
+        },
+        {
+          "case_index": 5,
+          "id": "cube/val/0005033/000124",
+          "success": true,
+          "steps": 1,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            1
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/execution_revision/selected-trajectories/00005.npz",
+          "npz_sha256": "fc30554321a11d98ce9e8e65d78964c965b6b895dddf8134ae66b92055741fde",
+          "initial_rgb_sha256": "1a88b8dce10d3e7d1c43640f276f0ae2076744b1db355a55ff86405c02a5b10f",
+          "goal_rgb_sha256": "934312e584da270a4c046ee6e49532f500881f94a5100f8c616054cef1c4aa80"
+        },
+        {
+          "case_index": 6,
+          "id": "cube/val/0004057/000053",
+          "success": true,
+          "steps": 4,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/execution_revision/selected-trajectories/00006.npz",
+          "npz_sha256": "98d3e5596c613e7a1d04d71b101b1624294a13cefd86b846a409ae7ae7093b7a",
+          "initial_rgb_sha256": "fe3fe019f67cc7f1e226d4757a4d63e229ebc7397ad7fcb25a68fcdd794a4997",
+          "goal_rgb_sha256": "5e3325556bc98618bd1bbbd6bc851515192a27a8d754b8a3b10f2cc03befa10e"
+        },
+        {
+          "case_index": 7,
+          "id": "cube/val/0002090/000115",
+          "success": false,
+          "steps": 50,
+          "failure_reason": "action_limit",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/execution_revision/selected-trajectories/00007.npz",
+          "npz_sha256": "0d4fadaf591156f25000c39c32c5e62b594d02ee7fc3076be536fe54b36d261d",
+          "initial_rgb_sha256": "aa51a17bfa6c83c054b718c92c08aee91bd557eca98a5bc498e3e7d6f40103eb",
+          "goal_rgb_sha256": "f1656b891a7ad6841588a984d58f69f9c15b4f8bef089fae4ed3b93e90bdef24"
+        },
+        {
+          "case_index": 8,
+          "id": "cube/val/0004519/000037",
+          "success": false,
+          "steps": 50,
+          "failure_reason": "action_limit",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/execution_revision/selected-trajectories/00008.npz",
+          "npz_sha256": "6ee3784da84863031902ca5723f957b07d020aacedfaef5beae47a85977654ac",
+          "initial_rgb_sha256": "85307a77ff7c35ab49ef34159a8109c34e3c4c242c67b229e3536f4f2abfd859",
+          "goal_rgb_sha256": "fa8ed8de81472d1088df70a35ed6d9934b99df8258786588efffbea88e7e672b"
+        },
+        {
+          "case_index": 9,
+          "id": "cube/val/0008782/000106",
+          "success": false,
+          "steps": 50,
+          "failure_reason": "action_limit",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/execution_revision/selected-trajectories/00009.npz",
+          "npz_sha256": "94dc8870215cfdeba00a9f42c92513de567ab3c77772cc11ac8cd2000553d199",
+          "initial_rgb_sha256": "1f4f79ab96b1a2009560a9a0f75787359cc50145768f7ac1b11cc2060fe14937",
+          "goal_rgb_sha256": "398e73a75800bda0d3b040de79b1b38b4493e47d3e4107b9c50a1b7e59ad3bba"
+        }
+      ]
+    },
+    {
+      "dataset": "cube",
+      "method": "feedback_wm_port",
+      "selected_step": 20000,
+      "report": "docs/reports/20261013-crossbench-baselines/runs/cube/feedback_wm_port/validation/step_0020000/report.json.gz",
+      "report_sha256": "967508bb8c941a9a97a7b0e53061197f2418bfc1e337f9d368adc9e89895a5db",
+      "file": "docs/reports/20261013-crossbench-baselines/visual-review/cube-feedback_wm_port.png",
+      "sha256": "1461fde23272da5654a311d0fc88f6fb9296248208b6c1e19ceb518a77a6cceb",
+      "width": 1292,
+      "height": 2450,
+      "cases": [
+        {
+          "case_index": 0,
+          "id": "cube/val/0001371/000084",
+          "success": true,
+          "steps": 1,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            1
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/feedback_wm_port/selected-trajectories/00000.npz",
+          "npz_sha256": "956936088923f38637ff9b92a2822f4bf1d66880038e827c256cc498bb7f123e",
+          "initial_rgb_sha256": "3f73a91bad6436e96a3cae4b500339d5a366abb05498895d93aaeeee754d3ed9",
+          "goal_rgb_sha256": "d5cabdc10da258db5b51ecc8fde62b457f51d5dc6467d3706d7f8eda03705d75"
+        },
+        {
+          "case_index": 1,
+          "id": "cube/val/0001514/000118",
+          "success": true,
+          "steps": 35,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            7,
+            14,
+            21,
+            28,
+            35
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/feedback_wm_port/selected-trajectories/00001.npz",
+          "npz_sha256": "5499d400e9f33432de6fe042dd02ab9827ec8544b1019dc070f93fbcc0cba6bf",
+          "initial_rgb_sha256": "66f3363ecebf0b9f070e8af47de5e96c0bc8d32cc08a80e1159628ce1e11684f",
+          "goal_rgb_sha256": "02b9dc61a48a2d1c6b0aa22521d711f47846f1b88698bfe5fd2ddb858dee2ec6"
+        },
+        {
+          "case_index": 2,
+          "id": "cube/val/0001645/000057",
+          "success": true,
+          "steps": 8,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            1,
+            3,
+            4,
+            6,
+            8
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/feedback_wm_port/selected-trajectories/00002.npz",
+          "npz_sha256": "75284a6300f655c0260f1a49e6e44b627cee5c1122745c6ddf18cd67b7ba4a6c",
+          "initial_rgb_sha256": "710818471336e072d929132759dee0bdb65c2552e60a945fc15e97644c7e6e2e",
+          "goal_rgb_sha256": "6e2cf14be640b0fabcce505db1cd9bbf3d7c7b37527dd99cbab05e2c854d44d7"
+        },
+        {
+          "case_index": 3,
+          "id": "cube/val/0007213/000112",
+          "success": true,
+          "steps": 22,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            4,
+            8,
+            13,
+            17,
+            22
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/feedback_wm_port/selected-trajectories/00003.npz",
+          "npz_sha256": "6737a058b22c43ee919c194a8b8619b3488b271f492b344ab34e38175cfeb840",
+          "initial_rgb_sha256": "52716dba7467cf1ccc669c3b308dd5b5ac103996ba366413a62205befd50dbf7",
+          "goal_rgb_sha256": "6e6d34128a52280419447a2ba536579d9d0727f0d53b87125dc040c0eb18302f"
+        },
+        {
+          "case_index": 4,
+          "id": "cube/val/0009965/000165",
+          "success": true,
+          "steps": 1,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            1
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/feedback_wm_port/selected-trajectories/00004.npz",
+          "npz_sha256": "d2729844feb9a999c902e0b5434b92e1979cbebaa7ba7d3a1ce35a448ca28951",
+          "initial_rgb_sha256": "ac56bea4e1f3d00dd4686828c332fabe139a4133da4e12a4227ba05d7ba98e38",
+          "goal_rgb_sha256": "672cb0b63bab3c35ca74d299113c8071eb4fef5a3f264b9cd23c7770777da7e4"
+        },
+        {
+          "case_index": 5,
+          "id": "cube/val/0005033/000124",
+          "success": true,
+          "steps": 12,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            2,
+            4,
+            7,
+            9,
+            12
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/feedback_wm_port/selected-trajectories/00005.npz",
+          "npz_sha256": "cbf4a4183e8d8f23bae8d96ec36cd9343de018d819068ac507b05a00daff2fd1",
+          "initial_rgb_sha256": "1a88b8dce10d3e7d1c43640f276f0ae2076744b1db355a55ff86405c02a5b10f",
+          "goal_rgb_sha256": "934312e584da270a4c046ee6e49532f500881f94a5100f8c616054cef1c4aa80"
+        },
+        {
+          "case_index": 6,
+          "id": "cube/val/0004057/000053",
+          "success": true,
+          "steps": 37,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            7,
+            14,
+            22,
+            29,
+            37
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/feedback_wm_port/selected-trajectories/00006.npz",
+          "npz_sha256": "a23d95ca0d24b4ac0b61c49d21e2cbd18c3416382199217603d1e8ef42d847af",
+          "initial_rgb_sha256": "fe3fe019f67cc7f1e226d4757a4d63e229ebc7397ad7fcb25a68fcdd794a4997",
+          "goal_rgb_sha256": "5e3325556bc98618bd1bbbd6bc851515192a27a8d754b8a3b10f2cc03befa10e"
+        },
+        {
+          "case_index": 7,
+          "id": "cube/val/0002090/000115",
+          "success": true,
+          "steps": 12,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            2,
+            4,
+            7,
+            9,
+            12
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/feedback_wm_port/selected-trajectories/00007.npz",
+          "npz_sha256": "2c2491b5f456727b36c71f979b27cbb6cc71808272a86d94d7827f0dcc7ac5b9",
+          "initial_rgb_sha256": "aa51a17bfa6c83c054b718c92c08aee91bd557eca98a5bc498e3e7d6f40103eb",
+          "goal_rgb_sha256": "f1656b891a7ad6841588a984d58f69f9c15b4f8bef089fae4ed3b93e90bdef24"
+        },
+        {
+          "case_index": 8,
+          "id": "cube/val/0004519/000037",
+          "success": true,
+          "steps": 49,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            9,
+            19,
+            29,
+            39,
+            49
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/feedback_wm_port/selected-trajectories/00008.npz",
+          "npz_sha256": "77e8b98a5663ea73c405bc90ff006739d5dbdff80159622b9d6178719f7511d7",
+          "initial_rgb_sha256": "85307a77ff7c35ab49ef34159a8109c34e3c4c242c67b229e3536f4f2abfd859",
+          "goal_rgb_sha256": "fa8ed8de81472d1088df70a35ed6d9934b99df8258786588efffbea88e7e672b"
+        },
+        {
+          "case_index": 9,
+          "id": "cube/val/0008782/000106",
+          "success": false,
+          "steps": 50,
+          "failure_reason": "action_limit",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/feedback_wm_port/selected-trajectories/00009.npz",
+          "npz_sha256": "cc6d9c2c7eed24ecde0046164bada3bf606346b7683de26c5e41251b8a3c0abe",
+          "initial_rgb_sha256": "1f4f79ab96b1a2009560a9a0f75787359cc50145768f7ac1b11cc2060fe14937",
+          "goal_rgb_sha256": "398e73a75800bda0d3b040de79b1b38b4493e47d3e4107b9c50a1b7e59ad3bba"
+        }
+      ]
+    },
+    {
+      "dataset": "cube",
+      "method": "leflow",
+      "selected_step": 10000,
+      "report": "docs/reports/20261013-crossbench-baselines/runs/cube/leflow/validation/step_0010000/report.json.gz",
+      "report_sha256": "6fa84d3e4a54759c0daaffcba6d347603eea7525dbd7d7e25c10090f2eaf642b",
+      "file": "docs/reports/20261013-crossbench-baselines/visual-review/cube-leflow.png",
+      "sha256": "db7b2527eebfa19c251a43392454cf2d36644e1dc886e7afa8cb39a2b5061494",
+      "width": 1292,
+      "height": 2450,
+      "cases": [
+        {
+          "case_index": 0,
+          "id": "cube/val/0001371/000084",
+          "success": true,
+          "steps": 1,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            1
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/leflow/selected-trajectories/00000.npz",
+          "npz_sha256": "de62de73f2554fb8b63badc681b7ed982003b498d1caa50eae7dc11d5f2f86d3",
+          "initial_rgb_sha256": "3f73a91bad6436e96a3cae4b500339d5a366abb05498895d93aaeeee754d3ed9",
+          "goal_rgb_sha256": "d5cabdc10da258db5b51ecc8fde62b457f51d5dc6467d3706d7f8eda03705d75"
+        },
+        {
+          "case_index": 1,
+          "id": "cube/val/0001514/000118",
+          "success": true,
+          "steps": 9,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            1,
+            3,
+            5,
+            7,
+            9
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/leflow/selected-trajectories/00001.npz",
+          "npz_sha256": "7e7ef3073f4c7204ae9dddb58464c7f67caeca4db372a044e0598842d5f16fff",
+          "initial_rgb_sha256": "66f3363ecebf0b9f070e8af47de5e96c0bc8d32cc08a80e1159628ce1e11684f",
+          "goal_rgb_sha256": "02b9dc61a48a2d1c6b0aa22521d711f47846f1b88698bfe5fd2ddb858dee2ec6"
+        },
+        {
+          "case_index": 2,
+          "id": "cube/val/0001645/000057",
+          "success": true,
+          "steps": 7,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            1,
+            2,
+            4,
+            5,
+            7
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/leflow/selected-trajectories/00002.npz",
+          "npz_sha256": "2ef9cd8a86c4a5f0d6584e48b9052dcb4e26262ca4b668609081f31fff303045",
+          "initial_rgb_sha256": "710818471336e072d929132759dee0bdb65c2552e60a945fc15e97644c7e6e2e",
+          "goal_rgb_sha256": "6e2cf14be640b0fabcce505db1cd9bbf3d7c7b37527dd99cbab05e2c854d44d7"
+        },
+        {
+          "case_index": 3,
+          "id": "cube/val/0007213/000112",
+          "success": true,
+          "steps": 29,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            5,
+            11,
+            17,
+            23,
+            29
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/leflow/selected-trajectories/00003.npz",
+          "npz_sha256": "97ce4b937786265c68aa708bf29b3f23c8de376a2b2dab6568b7125985bcdb8c",
+          "initial_rgb_sha256": "52716dba7467cf1ccc669c3b308dd5b5ac103996ba366413a62205befd50dbf7",
+          "goal_rgb_sha256": "6e6d34128a52280419447a2ba536579d9d0727f0d53b87125dc040c0eb18302f"
+        },
+        {
+          "case_index": 4,
+          "id": "cube/val/0009965/000165",
+          "success": true,
+          "steps": 1,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            1
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/leflow/selected-trajectories/00004.npz",
+          "npz_sha256": "85bd3a5c79f122fea4b849252592ce5f015148ed11b8493f40728ae5600cd371",
+          "initial_rgb_sha256": "ac56bea4e1f3d00dd4686828c332fabe139a4133da4e12a4227ba05d7ba98e38",
+          "goal_rgb_sha256": "672cb0b63bab3c35ca74d299113c8071eb4fef5a3f264b9cd23c7770777da7e4"
+        },
+        {
+          "case_index": 5,
+          "id": "cube/val/0005033/000124",
+          "success": false,
+          "steps": 50,
+          "failure_reason": "action_limit",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/leflow/selected-trajectories/00005.npz",
+          "npz_sha256": "94f48a0126274ab0acff364b3be17e004bb7136d57f77cb5085c5d5cec49444e",
+          "initial_rgb_sha256": "1a88b8dce10d3e7d1c43640f276f0ae2076744b1db355a55ff86405c02a5b10f",
+          "goal_rgb_sha256": "934312e584da270a4c046ee6e49532f500881f94a5100f8c616054cef1c4aa80"
+        },
+        {
+          "case_index": 6,
+          "id": "cube/val/0004057/000053",
+          "success": true,
+          "steps": 14,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            2,
+            5,
+            8,
+            11,
+            14
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/leflow/selected-trajectories/00006.npz",
+          "npz_sha256": "3f8623ab8048703a4b59865d3937b0c076be2860cad5aea9d872966c6d43f0db",
+          "initial_rgb_sha256": "fe3fe019f67cc7f1e226d4757a4d63e229ebc7397ad7fcb25a68fcdd794a4997",
+          "goal_rgb_sha256": "5e3325556bc98618bd1bbbd6bc851515192a27a8d754b8a3b10f2cc03befa10e"
+        },
+        {
+          "case_index": 7,
+          "id": "cube/val/0002090/000115",
+          "success": true,
+          "steps": 18,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            3,
+            7,
+            10,
+            14,
+            18
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/leflow/selected-trajectories/00007.npz",
+          "npz_sha256": "e06df6b04a454baeb6e2c4eb150f4b5602a47e3a9fb8321826b4c8140554423e",
+          "initial_rgb_sha256": "aa51a17bfa6c83c054b718c92c08aee91bd557eca98a5bc498e3e7d6f40103eb",
+          "goal_rgb_sha256": "f1656b891a7ad6841588a984d58f69f9c15b4f8bef089fae4ed3b93e90bdef24"
+        },
+        {
+          "case_index": 8,
+          "id": "cube/val/0004519/000037",
+          "success": false,
+          "steps": 50,
+          "failure_reason": "action_limit",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/leflow/selected-trajectories/00008.npz",
+          "npz_sha256": "2f933346040d864cb18b108d65b0de36649b888eefbe110b8e9a31f3bf51699b",
+          "initial_rgb_sha256": "85307a77ff7c35ab49ef34159a8109c34e3c4c242c67b229e3536f4f2abfd859",
+          "goal_rgb_sha256": "fa8ed8de81472d1088df70a35ed6d9934b99df8258786588efffbea88e7e672b"
+        },
+        {
+          "case_index": 9,
+          "id": "cube/val/0008782/000106",
+          "success": true,
+          "steps": 38,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            7,
+            15,
+            22,
+            30,
+            38
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/leflow/selected-trajectories/00009.npz",
+          "npz_sha256": "57be5514245e7101841215b439ceaa290c46dc6edcdd0d78c62a9493cb8d1c0b",
+          "initial_rgb_sha256": "1f4f79ab96b1a2009560a9a0f75787359cc50145768f7ac1b11cc2060fe14937",
+          "goal_rgb_sha256": "398e73a75800bda0d3b040de79b1b38b4493e47d3e4107b9c50a1b7e59ad3bba"
+        }
+      ]
+    },
+    {
+      "dataset": "cube",
+      "method": "retrieval_repair_ttt",
+      "selected_step": 10000,
+      "report": "docs/reports/20261013-crossbench-baselines/runs/cube/retrieval_repair_ttt/validation/step_0010000/report.json.gz",
+      "report_sha256": "0af6341a5c424d14c147d025d4c574ea3bee243e9fddc7ae0987f2efcf793204",
+      "file": "docs/reports/20261013-crossbench-baselines/visual-review/cube-retrieval_repair_ttt.png",
+      "sha256": "462e2ff397a28d662021d42f68001a96cb399fb69bfdc12ba57c93dd327e6249",
+      "width": 1292,
+      "height": 2450,
+      "cases": [
+        {
+          "case_index": 0,
+          "id": "cube/val/0001371/000084",
+          "success": true,
+          "steps": 1,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            1
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/retrieval_repair_ttt/selected-trajectories/00000.npz",
+          "npz_sha256": "f4f270b8763b6c9bf3376cc1017f7ff01282841a6d3d3378c09f4a6ed5f17c6b",
+          "initial_rgb_sha256": "3f73a91bad6436e96a3cae4b500339d5a366abb05498895d93aaeeee754d3ed9",
+          "goal_rgb_sha256": "d5cabdc10da258db5b51ecc8fde62b457f51d5dc6467d3706d7f8eda03705d75"
+        },
+        {
+          "case_index": 1,
+          "id": "cube/val/0001514/000118",
+          "success": false,
+          "steps": 50,
+          "failure_reason": "action_limit",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/retrieval_repair_ttt/selected-trajectories/00001.npz",
+          "npz_sha256": "bfd2e7223fecbf9ea30a6d602e8183a266b44ae2821cb163f23545a782be44e9",
+          "initial_rgb_sha256": "66f3363ecebf0b9f070e8af47de5e96c0bc8d32cc08a80e1159628ce1e11684f",
+          "goal_rgb_sha256": "02b9dc61a48a2d1c6b0aa22521d711f47846f1b88698bfe5fd2ddb858dee2ec6"
+        },
+        {
+          "case_index": 2,
+          "id": "cube/val/0001645/000057",
+          "success": false,
+          "steps": 50,
+          "failure_reason": "action_limit",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/retrieval_repair_ttt/selected-trajectories/00002.npz",
+          "npz_sha256": "2c52bd049a0c30bf2b9e5305d9552668d6f16b76e79f836aa88f09b94f71914d",
+          "initial_rgb_sha256": "710818471336e072d929132759dee0bdb65c2552e60a945fc15e97644c7e6e2e",
+          "goal_rgb_sha256": "6e2cf14be640b0fabcce505db1cd9bbf3d7c7b37527dd99cbab05e2c854d44d7"
+        },
+        {
+          "case_index": 3,
+          "id": "cube/val/0007213/000112",
+          "success": false,
+          "steps": 50,
+          "failure_reason": "action_limit",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/retrieval_repair_ttt/selected-trajectories/00003.npz",
+          "npz_sha256": "7a706f8eb2b168fd8d762f63665d294f035347a0d7792ee2a6a754ab56645439",
+          "initial_rgb_sha256": "52716dba7467cf1ccc669c3b308dd5b5ac103996ba366413a62205befd50dbf7",
+          "goal_rgb_sha256": "6e6d34128a52280419447a2ba536579d9d0727f0d53b87125dc040c0eb18302f"
+        },
+        {
+          "case_index": 4,
+          "id": "cube/val/0009965/000165",
+          "success": true,
+          "steps": 1,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            1
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/retrieval_repair_ttt/selected-trajectories/00004.npz",
+          "npz_sha256": "42e298c018adf737c210b0de29e37f50be826408a84a496a991005c06930e390",
+          "initial_rgb_sha256": "ac56bea4e1f3d00dd4686828c332fabe139a4133da4e12a4227ba05d7ba98e38",
+          "goal_rgb_sha256": "672cb0b63bab3c35ca74d299113c8071eb4fef5a3f264b9cd23c7770777da7e4"
+        },
+        {
+          "case_index": 5,
+          "id": "cube/val/0005033/000124",
+          "success": true,
+          "steps": 20,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            4,
+            8,
+            12,
+            16,
+            20
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/retrieval_repair_ttt/selected-trajectories/00005.npz",
+          "npz_sha256": "3797311b0f7ac1d21f111ff9a35afa4532123a004eb49e1828abe664723519a7",
+          "initial_rgb_sha256": "1a88b8dce10d3e7d1c43640f276f0ae2076744b1db355a55ff86405c02a5b10f",
+          "goal_rgb_sha256": "934312e584da270a4c046ee6e49532f500881f94a5100f8c616054cef1c4aa80"
+        },
+        {
+          "case_index": 6,
+          "id": "cube/val/0004057/000053",
+          "success": true,
+          "steps": 18,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            3,
+            7,
+            10,
+            14,
+            18
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/retrieval_repair_ttt/selected-trajectories/00006.npz",
+          "npz_sha256": "786e811eb69eb512bafe6a1b64aef1517de3a90518f5dc198baab49a1901ba2b",
+          "initial_rgb_sha256": "fe3fe019f67cc7f1e226d4757a4d63e229ebc7397ad7fcb25a68fcdd794a4997",
+          "goal_rgb_sha256": "5e3325556bc98618bd1bbbd6bc851515192a27a8d754b8a3b10f2cc03befa10e"
+        },
+        {
+          "case_index": 7,
+          "id": "cube/val/0002090/000115",
+          "success": false,
+          "steps": 50,
+          "failure_reason": "action_limit",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/retrieval_repair_ttt/selected-trajectories/00007.npz",
+          "npz_sha256": "aceddaf6d8c7f692510c1c8f14076506329018c66c4bc4e4cbc949adb561ff44",
+          "initial_rgb_sha256": "aa51a17bfa6c83c054b718c92c08aee91bd557eca98a5bc498e3e7d6f40103eb",
+          "goal_rgb_sha256": "f1656b891a7ad6841588a984d58f69f9c15b4f8bef089fae4ed3b93e90bdef24"
+        },
+        {
+          "case_index": 8,
+          "id": "cube/val/0004519/000037",
+          "success": true,
+          "steps": 16,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            3,
+            6,
+            9,
+            12,
+            16
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/retrieval_repair_ttt/selected-trajectories/00008.npz",
+          "npz_sha256": "c5cab5a9a01e2ec249d60789b12ef9d4447aad347bf2cdecd0c040d02d34828f",
+          "initial_rgb_sha256": "85307a77ff7c35ab49ef34159a8109c34e3c4c242c67b229e3536f4f2abfd859",
+          "goal_rgb_sha256": "fa8ed8de81472d1088df70a35ed6d9934b99df8258786588efffbea88e7e672b"
+        },
+        {
+          "case_index": 9,
+          "id": "cube/val/0008782/000106",
+          "success": false,
+          "steps": 50,
+          "failure_reason": "action_limit",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/retrieval_repair_ttt/selected-trajectories/00009.npz",
+          "npz_sha256": "7ccaf2324a570232a19d6bfbd18f3e2fff4d3eb61e6f5c833b7b4f81a3eab3f2",
+          "initial_rgb_sha256": "1f4f79ab96b1a2009560a9a0f75787359cc50145768f7ac1b11cc2060fe14937",
+          "goal_rgb_sha256": "398e73a75800bda0d3b040de79b1b38b4493e47d3e4107b9c50a1b7e59ad3bba"
+        }
+      ]
+    },
+    {
+      "dataset": "cube",
+      "method": "sage_port",
+      "selected_step": 20000,
+      "report": "docs/reports/20261013-crossbench-baselines/runs/cube/sage_port/validation/step_0020000/report.json.gz",
+      "report_sha256": "3d8913c5965a377fcb69879a9a911ef8e63a7629e19092f307e8dec1aba1440a",
+      "file": "docs/reports/20261013-crossbench-baselines/visual-review/cube-sage_port.png",
+      "sha256": "a192d1cdd68e58fd3bb8f9d31e1bb08a24362eccccb88c3f8a12851e719012ba",
+      "width": 1292,
+      "height": 2450,
+      "cases": [
+        {
+          "case_index": 0,
+          "id": "cube/val/0001371/000084",
+          "success": true,
+          "steps": 1,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            1
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/sage_port/selected-trajectories/00000.npz",
+          "npz_sha256": "2fc72fab37ab1c0def472d7277bd76bdd5480aac96fe092afe8a8f5c5b7b8217",
+          "initial_rgb_sha256": "3f73a91bad6436e96a3cae4b500339d5a366abb05498895d93aaeeee754d3ed9",
+          "goal_rgb_sha256": "d5cabdc10da258db5b51ecc8fde62b457f51d5dc6467d3706d7f8eda03705d75"
+        },
+        {
+          "case_index": 1,
+          "id": "cube/val/0001514/000118",
+          "success": true,
+          "steps": 10,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            2,
+            4,
+            6,
+            8,
+            10
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/sage_port/selected-trajectories/00001.npz",
+          "npz_sha256": "67df213eca0cadb242acdcfc2bcc7e1f936cb85a62121a222115c3fb28c7b437",
+          "initial_rgb_sha256": "66f3363ecebf0b9f070e8af47de5e96c0bc8d32cc08a80e1159628ce1e11684f",
+          "goal_rgb_sha256": "02b9dc61a48a2d1c6b0aa22521d711f47846f1b88698bfe5fd2ddb858dee2ec6"
+        },
+        {
+          "case_index": 2,
+          "id": "cube/val/0001645/000057",
+          "success": true,
+          "steps": 7,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            1,
+            2,
+            4,
+            5,
+            7
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/sage_port/selected-trajectories/00002.npz",
+          "npz_sha256": "c5697d92c5852090a0e985ba74651a442b6b1edb4f62cec75b6469efc69d0ee5",
+          "initial_rgb_sha256": "710818471336e072d929132759dee0bdb65c2552e60a945fc15e97644c7e6e2e",
+          "goal_rgb_sha256": "6e2cf14be640b0fabcce505db1cd9bbf3d7c7b37527dd99cbab05e2c854d44d7"
+        },
+        {
+          "case_index": 3,
+          "id": "cube/val/0007213/000112",
+          "success": true,
+          "steps": 20,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            4,
+            8,
+            12,
+            16,
+            20
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/sage_port/selected-trajectories/00003.npz",
+          "npz_sha256": "aa397e995eaafd5f00811a81249f4f86f2ce79d4b19b57d886592b63f36f5fb8",
+          "initial_rgb_sha256": "52716dba7467cf1ccc669c3b308dd5b5ac103996ba366413a62205befd50dbf7",
+          "goal_rgb_sha256": "6e6d34128a52280419447a2ba536579d9d0727f0d53b87125dc040c0eb18302f"
+        },
+        {
+          "case_index": 4,
+          "id": "cube/val/0009965/000165",
+          "success": true,
+          "steps": 1,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            1
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/sage_port/selected-trajectories/00004.npz",
+          "npz_sha256": "5b5589d33089fa86dced5506dd49191dcd8152c0e041100ab6e30f05b9ca27da",
+          "initial_rgb_sha256": "ac56bea4e1f3d00dd4686828c332fabe139a4133da4e12a4227ba05d7ba98e38",
+          "goal_rgb_sha256": "672cb0b63bab3c35ca74d299113c8071eb4fef5a3f264b9cd23c7770777da7e4"
+        },
+        {
+          "case_index": 5,
+          "id": "cube/val/0005033/000124",
+          "success": true,
+          "steps": 1,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            1
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/sage_port/selected-trajectories/00005.npz",
+          "npz_sha256": "22cb8f5c741ab87ce0cd8b73e60efe6e01a4e5539bfe7aea6b8497efa7928cff",
+          "initial_rgb_sha256": "1a88b8dce10d3e7d1c43640f276f0ae2076744b1db355a55ff86405c02a5b10f",
+          "goal_rgb_sha256": "934312e584da270a4c046ee6e49532f500881f94a5100f8c616054cef1c4aa80"
+        },
+        {
+          "case_index": 6,
+          "id": "cube/val/0004057/000053",
+          "success": true,
+          "steps": 12,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            2,
+            4,
+            7,
+            9,
+            12
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/sage_port/selected-trajectories/00006.npz",
+          "npz_sha256": "bf7f2e1ed7103aec11028b8e4c404e2942e891eefaeb4e4079e2cac852fb7d53",
+          "initial_rgb_sha256": "fe3fe019f67cc7f1e226d4757a4d63e229ebc7397ad7fcb25a68fcdd794a4997",
+          "goal_rgb_sha256": "5e3325556bc98618bd1bbbd6bc851515192a27a8d754b8a3b10f2cc03befa10e"
+        },
+        {
+          "case_index": 7,
+          "id": "cube/val/0002090/000115",
+          "success": true,
+          "steps": 13,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            2,
+            5,
+            7,
+            10,
+            13
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/sage_port/selected-trajectories/00007.npz",
+          "npz_sha256": "d25e1aa31d0fab1299a58eb97fb82f5f6b2413cb0ec6d49b40f5f2d882dd5821",
+          "initial_rgb_sha256": "aa51a17bfa6c83c054b718c92c08aee91bd557eca98a5bc498e3e7d6f40103eb",
+          "goal_rgb_sha256": "f1656b891a7ad6841588a984d58f69f9c15b4f8bef089fae4ed3b93e90bdef24"
+        },
+        {
+          "case_index": 8,
+          "id": "cube/val/0004519/000037",
+          "success": true,
+          "steps": 14,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            2,
+            5,
+            8,
+            11,
+            14
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/sage_port/selected-trajectories/00008.npz",
+          "npz_sha256": "b95dfdb5e5e189595a0f6a6f1af9642cbe478b1d73afbd3639d57c2780f313b7",
+          "initial_rgb_sha256": "85307a77ff7c35ab49ef34159a8109c34e3c4c242c67b229e3536f4f2abfd859",
+          "goal_rgb_sha256": "fa8ed8de81472d1088df70a35ed6d9934b99df8258786588efffbea88e7e672b"
+        },
+        {
+          "case_index": 9,
+          "id": "cube/val/0008782/000106",
+          "success": true,
+          "steps": 23,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            4,
+            9,
+            13,
+            18,
+            23
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/sage_port/selected-trajectories/00009.npz",
+          "npz_sha256": "f424c4a416c7004fa9e0614355532061a0e7a4cc997edca596bdc6b79884c69b",
+          "initial_rgb_sha256": "1f4f79ab96b1a2009560a9a0f75787359cc50145768f7ac1b11cc2060fe14937",
+          "goal_rgb_sha256": "398e73a75800bda0d3b040de79b1b38b4493e47d3e4107b9c50a1b7e59ad3bba"
+        }
+      ]
+    },
+    {
+      "dataset": "cube",
+      "method": "vanilla_action_flow",
+      "selected_step": 15000,
+      "report": "docs/reports/20261013-crossbench-baselines/runs/cube/vanilla_action_flow/validation/step_0015000/report.json.gz",
+      "report_sha256": "9bccc1c82dbe80e62f1f28dff887819334583303adb2b57f9cedfc9637edd7a9",
+      "file": "docs/reports/20261013-crossbench-baselines/visual-review/cube-vanilla_action_flow.png",
+      "sha256": "b6ea0ae9700e7210de14ed044087e8d2ba00396a96766a7f1c3d78ff75de0b15",
+      "width": 1292,
+      "height": 2450,
+      "cases": [
+        {
+          "case_index": 0,
+          "id": "cube/val/0001371/000084",
+          "success": true,
+          "steps": 1,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            1
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/vanilla_action_flow/selected-trajectories/00000.npz",
+          "npz_sha256": "c6123f3b95b79e26b8c731629b620fe886de694e14d8ad5d6261e82ea1460347",
+          "initial_rgb_sha256": "3f73a91bad6436e96a3cae4b500339d5a366abb05498895d93aaeeee754d3ed9",
+          "goal_rgb_sha256": "d5cabdc10da258db5b51ecc8fde62b457f51d5dc6467d3706d7f8eda03705d75"
+        },
+        {
+          "case_index": 1,
+          "id": "cube/val/0001514/000118",
+          "success": true,
+          "steps": 16,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            3,
+            6,
+            9,
+            12,
+            16
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/vanilla_action_flow/selected-trajectories/00001.npz",
+          "npz_sha256": "c1eed7ad36dd671b1b3149d5b174a2eb2d745a984b1d01321c366c28b37fd0b5",
+          "initial_rgb_sha256": "66f3363ecebf0b9f070e8af47de5e96c0bc8d32cc08a80e1159628ce1e11684f",
+          "goal_rgb_sha256": "02b9dc61a48a2d1c6b0aa22521d711f47846f1b88698bfe5fd2ddb858dee2ec6"
+        },
+        {
+          "case_index": 2,
+          "id": "cube/val/0001645/000057",
+          "success": true,
+          "steps": 8,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            1,
+            3,
+            4,
+            6,
+            8
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/vanilla_action_flow/selected-trajectories/00002.npz",
+          "npz_sha256": "23d3f4149a2c7cc0988ab003809eaaa8a130412b06f0b089dc78a9201cc83eaa",
+          "initial_rgb_sha256": "710818471336e072d929132759dee0bdb65c2552e60a945fc15e97644c7e6e2e",
+          "goal_rgb_sha256": "6e2cf14be640b0fabcce505db1cd9bbf3d7c7b37527dd99cbab05e2c854d44d7"
+        },
+        {
+          "case_index": 3,
+          "id": "cube/val/0007213/000112",
+          "success": false,
+          "steps": 50,
+          "failure_reason": "action_limit",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/vanilla_action_flow/selected-trajectories/00003.npz",
+          "npz_sha256": "d4d73ed28e70a854e90070813a884e3fc1eac72ddc1a1372869261ea51df4ce7",
+          "initial_rgb_sha256": "52716dba7467cf1ccc669c3b308dd5b5ac103996ba366413a62205befd50dbf7",
+          "goal_rgb_sha256": "6e6d34128a52280419447a2ba536579d9d0727f0d53b87125dc040c0eb18302f"
+        },
+        {
+          "case_index": 4,
+          "id": "cube/val/0009965/000165",
+          "success": true,
+          "steps": 1,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            1
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/vanilla_action_flow/selected-trajectories/00004.npz",
+          "npz_sha256": "b27993320a7c979012a0e5d746b6739c9f9f7193fba946d6c698688adfdebc14",
+          "initial_rgb_sha256": "ac56bea4e1f3d00dd4686828c332fabe139a4133da4e12a4227ba05d7ba98e38",
+          "goal_rgb_sha256": "672cb0b63bab3c35ca74d299113c8071eb4fef5a3f264b9cd23c7770777da7e4"
+        },
+        {
+          "case_index": 5,
+          "id": "cube/val/0005033/000124",
+          "success": false,
+          "steps": 50,
+          "failure_reason": "action_limit",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/vanilla_action_flow/selected-trajectories/00005.npz",
+          "npz_sha256": "6b4612bd8b3fd38e5a311cc941cc5a6a40311894dcef67260061396a0755b47e",
+          "initial_rgb_sha256": "1a88b8dce10d3e7d1c43640f276f0ae2076744b1db355a55ff86405c02a5b10f",
+          "goal_rgb_sha256": "934312e584da270a4c046ee6e49532f500881f94a5100f8c616054cef1c4aa80"
+        },
+        {
+          "case_index": 6,
+          "id": "cube/val/0004057/000053",
+          "success": true,
+          "steps": 12,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            2,
+            4,
+            7,
+            9,
+            12
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/vanilla_action_flow/selected-trajectories/00006.npz",
+          "npz_sha256": "ec0192118b2712b3bd2c0ea3371cf6588ea15e91fc9d987d9f8b87aa027a29c7",
+          "initial_rgb_sha256": "fe3fe019f67cc7f1e226d4757a4d63e229ebc7397ad7fcb25a68fcdd794a4997",
+          "goal_rgb_sha256": "5e3325556bc98618bd1bbbd6bc851515192a27a8d754b8a3b10f2cc03befa10e"
+        },
+        {
+          "case_index": 7,
+          "id": "cube/val/0002090/000115",
+          "success": true,
+          "steps": 13,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            2,
+            5,
+            7,
+            10,
+            13
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/vanilla_action_flow/selected-trajectories/00007.npz",
+          "npz_sha256": "c9bf621efb30779b69f68450f189dd19c31ed8319263608d73da4aa78da34b62",
+          "initial_rgb_sha256": "aa51a17bfa6c83c054b718c92c08aee91bd557eca98a5bc498e3e7d6f40103eb",
+          "goal_rgb_sha256": "f1656b891a7ad6841588a984d58f69f9c15b4f8bef089fae4ed3b93e90bdef24"
+        },
+        {
+          "case_index": 8,
+          "id": "cube/val/0004519/000037",
+          "success": false,
+          "steps": 50,
+          "failure_reason": "action_limit",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/vanilla_action_flow/selected-trajectories/00008.npz",
+          "npz_sha256": "2ff16ad50f0fc790ba883a2e7d11e4d1e6c314f8af4e330359ffcd405c592ea6",
+          "initial_rgb_sha256": "85307a77ff7c35ab49ef34159a8109c34e3c4c242c67b229e3536f4f2abfd859",
+          "goal_rgb_sha256": "fa8ed8de81472d1088df70a35ed6d9934b99df8258786588efffbea88e7e672b"
+        },
+        {
+          "case_index": 9,
+          "id": "cube/val/0008782/000106",
+          "success": true,
+          "steps": 22,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            4,
+            8,
+            13,
+            17,
+            22
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/cube/vanilla_action_flow/selected-trajectories/00009.npz",
+          "npz_sha256": "ac6a26d180eb0aa95a42c4bc6d6185198664aa62ea69207c702461079b2d9b27",
+          "initial_rgb_sha256": "1f4f79ab96b1a2009560a9a0f75787359cc50145768f7ac1b11cc2060fe14937",
+          "goal_rgb_sha256": "398e73a75800bda0d3b040de79b1b38b4493e47d3e4107b9c50a1b7e59ad3bba"
+        }
+      ]
+    },
+    {
+      "dataset": "pusht",
+      "method": "action_flow_search",
+      "selected_step": 5000,
+      "report": "docs/reports/20261013-crossbench-baselines/runs/pusht/action_flow_search/validation/step_0005000/report.json.gz",
+      "report_sha256": "3ea94ed0a24a0f48fc9b41ed5f8e1f2a276b739f121c406f123f08344220d748",
+      "file": "docs/reports/20261013-crossbench-baselines/visual-review/pusht-action_flow_search.png",
+      "sha256": "57038aa99c826aef03c7a8c9f048f35f5c5da1588863de5dabc440b3b2a45916",
+      "width": 1292,
+      "height": 2450,
+      "cases": [
+        {
+          "case_index": 0,
+          "id": "pusht/val/0002481/000039",
+          "success": false,
+          "steps": 50,
+          "failure_reason": "action_limit",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/action_flow_search/selected-trajectories/00000.npz",
+          "npz_sha256": "3e6fd7f447a700ba18e6289cace875e87567006c60484b2d1b62b1eb34e78b45",
+          "initial_rgb_sha256": "58dbdb493640a8b6bd0eb442d5f93fe3e46f1841181f8f5c525e70b18d377e87",
+          "goal_rgb_sha256": "dc05910141f7fc26e89fb71307c1ba814ed808ae6e5ff306b0c819fcf3e4ed47"
+        },
+        {
+          "case_index": 1,
+          "id": "pusht/val/0002980/000149",
+          "success": true,
+          "steps": 17,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            3,
+            6,
+            10,
+            13,
+            17
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/action_flow_search/selected-trajectories/00001.npz",
+          "npz_sha256": "b13f732abe672c824abff2e54d9461dbe336b6a82381fe7af9264183fa8c333b",
+          "initial_rgb_sha256": "acf3e1f75a68a67ec84e5465a5719ecec49227933acbad4019c7e8204edf068c",
+          "goal_rgb_sha256": "54ee9a819d4b149945baa24433de4df77462734487176ca69fd42abb69781331"
+        },
+        {
+          "case_index": 2,
+          "id": "pusht/val/0003251/000029",
+          "success": false,
+          "steps": 50,
+          "failure_reason": "action_limit",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/action_flow_search/selected-trajectories/00002.npz",
+          "npz_sha256": "3c4325555bbe28e8c41ee19ee2c8358ea1732819728c5501965599f3c0cf2db5",
+          "initial_rgb_sha256": "335f7f8341f57e1461faad414a76fd03c7fcaff57be05b88b1b9797b0caf3f68",
+          "goal_rgb_sha256": "2a9629f228a1494bf5719ef9d86a4ba330f7e2eedd04342a1d6b08d9f5b6c407"
+        },
+        {
+          "case_index": 3,
+          "id": "pusht/val/0013555/000059",
+          "success": false,
+          "steps": 50,
+          "failure_reason": "action_limit",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/action_flow_search/selected-trajectories/00003.npz",
+          "npz_sha256": "28ef70c6c30934a892ee821c960ab3f79cc3145e20436ceef3b2df470e66f0cf",
+          "initial_rgb_sha256": "2792825aab26e4d4dadefc5aa97663a963395c0fdf6b18058263786e996f63b4",
+          "goal_rgb_sha256": "bffcffd0d8a3f144c11a05168b2839ef7337b4806da2c8c870789c4c5c5b29ad"
+        },
+        {
+          "case_index": 4,
+          "id": "pusht/val/0016443/000071",
+          "success": false,
+          "steps": 50,
+          "failure_reason": "action_limit",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/action_flow_search/selected-trajectories/00004.npz",
+          "npz_sha256": "edf65c63123e8896173326a064cfe2a5ca7c7f86fc5f639020ac83146b3f50dc",
+          "initial_rgb_sha256": "353017bee9613e03688e321a40f1a996e40045151a0c6d96a6152178e649d833",
+          "goal_rgb_sha256": "a6bd3ffdd95ed431cb044200f1b4d6679d05c1eb4c3e796ea2e83baf5aa17313"
+        },
+        {
+          "case_index": 5,
+          "id": "pusht/val/0009466/000045",
+          "success": true,
+          "steps": 9,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            1,
+            3,
+            5,
+            7,
+            9
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/action_flow_search/selected-trajectories/00005.npz",
+          "npz_sha256": "ad03041270628d6091dad29b54450aacfbe139eb8997a7973617b7eae966164c",
+          "initial_rgb_sha256": "f4218a4ccdb72ef42a87172904b3d681353a199c5c55fd9ec1dab1a10e1c9be8",
+          "goal_rgb_sha256": "80305ac0cc8b1388382f640afa2574c35718a69a6625831fa3f1beaca31e0ffb"
+        },
+        {
+          "case_index": 6,
+          "id": "pusht/val/0007590/000025",
+          "success": true,
+          "steps": 13,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            2,
+            5,
+            7,
+            10,
+            13
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/action_flow_search/selected-trajectories/00006.npz",
+          "npz_sha256": "6124163fdaa85efb36bccb4d561c86c24aac2424424e1e7955bca9667eaa90ca",
+          "initial_rgb_sha256": "e866102729ebe7f57714cc34db94b2b006b08c7d06cefe8a39a61645d4c5e85a",
+          "goal_rgb_sha256": "c66828674cbb07b25468e0fb866c36204dec8239c51010cea095405fa729fbab"
+        },
+        {
+          "case_index": 7,
+          "id": "pusht/val/0003982/000075",
+          "success": true,
+          "steps": 39,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            7,
+            15,
+            23,
+            31,
+            39
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/action_flow_search/selected-trajectories/00007.npz",
+          "npz_sha256": "7306767e5d7aceff63ab3cb0ea87978e1e01f2f98380d989b46361c74983ae4f",
+          "initial_rgb_sha256": "663aa0b77de52c2b7b26fb672759c6fd6bf49761d7e9d3e1c69f43100cff6e0a",
+          "goal_rgb_sha256": "1553124b3e095b055865bfd809daf002c923fc5232f1da3f0464a822e10e52ca"
+        },
+        {
+          "case_index": 8,
+          "id": "pusht/val/0008531/000016",
+          "success": true,
+          "steps": 40,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            8,
+            16,
+            24,
+            32,
+            40
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/action_flow_search/selected-trajectories/00008.npz",
+          "npz_sha256": "c838f4826b1d138358a34c980a8920755beef772b52746a522b921747a3b08be",
+          "initial_rgb_sha256": "b6a860452a4a8857cdd911dfbbca0bf369b26c056db5a5394d4ba6e7ab24da9e",
+          "goal_rgb_sha256": "69c93664a134ff76a73b7528bc5ccdeb56d8d6693cb545e0874e4d238ed606ef"
+        },
+        {
+          "case_index": 9,
+          "id": "pusht/val/0016738/000074",
+          "success": true,
+          "steps": 22,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            4,
+            8,
+            13,
+            17,
+            22
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/action_flow_search/selected-trajectories/00009.npz",
+          "npz_sha256": "b04a91f3703a7ca70c1264a133273a56827c759b5f34f4415be5c9f15c32ead6",
+          "initial_rgb_sha256": "ed21201f33c3ddb08853fe85b381cf5badc5bd4f98c7aaeb990b05161bfaf286",
+          "goal_rgb_sha256": "7c5e28d0c8bdc3d2e2b5a930bc06ced39498d1b8dc2ef884893bc35828bd5ecb"
+        }
+      ]
+    },
+    {
+      "dataset": "pusht",
+      "method": "diffusion_policy_port",
+      "selected_step": 10000,
+      "report": "docs/reports/20261013-crossbench-baselines/runs/pusht/diffusion_policy_port/validation/step_0010000/report.json.gz",
+      "report_sha256": "f820d88db9619d321ea65d4195e00dbd5849cd172b7f62b925c9dac6c0467dbd",
+      "file": "docs/reports/20261013-crossbench-baselines/visual-review/pusht-diffusion_policy_port.png",
+      "sha256": "d8510eefc8b9b9148a4223046f6c58b1643c541c0327ec319661f0faac9d1a60",
+      "width": 1292,
+      "height": 2450,
+      "cases": [
+        {
+          "case_index": 0,
+          "id": "pusht/val/0002481/000039",
+          "success": false,
+          "steps": 50,
+          "failure_reason": "action_limit",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/diffusion_policy_port/selected-trajectories/00000.npz",
+          "npz_sha256": "6af395cbeb4089c892bc8290dde10a39a6e3cece143965db08d0b4d95027214f",
+          "initial_rgb_sha256": "58dbdb493640a8b6bd0eb442d5f93fe3e46f1841181f8f5c525e70b18d377e87",
+          "goal_rgb_sha256": "dc05910141f7fc26e89fb71307c1ba814ed808ae6e5ff306b0c819fcf3e4ed47"
+        },
+        {
+          "case_index": 1,
+          "id": "pusht/val/0002980/000149",
+          "success": false,
+          "steps": 50,
+          "failure_reason": "action_limit",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/diffusion_policy_port/selected-trajectories/00001.npz",
+          "npz_sha256": "889252ce135ee636ffe030d68611c13480cf9b238eec88b7b44611e97544b661",
+          "initial_rgb_sha256": "acf3e1f75a68a67ec84e5465a5719ecec49227933acbad4019c7e8204edf068c",
+          "goal_rgb_sha256": "54ee9a819d4b149945baa24433de4df77462734487176ca69fd42abb69781331"
+        },
+        {
+          "case_index": 2,
+          "id": "pusht/val/0003251/000029",
+          "success": false,
+          "steps": 50,
+          "failure_reason": "action_limit",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/diffusion_policy_port/selected-trajectories/00002.npz",
+          "npz_sha256": "d0fa71a80bdff0986b30c036148b2b2e0bea23368cc72a7becb741ff664f8009",
+          "initial_rgb_sha256": "335f7f8341f57e1461faad414a76fd03c7fcaff57be05b88b1b9797b0caf3f68",
+          "goal_rgb_sha256": "2a9629f228a1494bf5719ef9d86a4ba330f7e2eedd04342a1d6b08d9f5b6c407"
+        },
+        {
+          "case_index": 3,
+          "id": "pusht/val/0013555/000059",
+          "success": false,
+          "steps": 50,
+          "failure_reason": "action_limit",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/diffusion_policy_port/selected-trajectories/00003.npz",
+          "npz_sha256": "e60c40f1d3033240f9566435e22e5508342055668a1d78eddc72f826d4dadf13",
+          "initial_rgb_sha256": "2792825aab26e4d4dadefc5aa97663a963395c0fdf6b18058263786e996f63b4",
+          "goal_rgb_sha256": "bffcffd0d8a3f144c11a05168b2839ef7337b4806da2c8c870789c4c5c5b29ad"
+        },
+        {
+          "case_index": 4,
+          "id": "pusht/val/0016443/000071",
+          "success": false,
+          "steps": 50,
+          "failure_reason": "action_limit",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/diffusion_policy_port/selected-trajectories/00004.npz",
+          "npz_sha256": "83039f8469e71d442cb0bde924d916d02703f068beb80dc0b6a49fef0e550118",
+          "initial_rgb_sha256": "353017bee9613e03688e321a40f1a996e40045151a0c6d96a6152178e649d833",
+          "goal_rgb_sha256": "a6bd3ffdd95ed431cb044200f1b4d6679d05c1eb4c3e796ea2e83baf5aa17313"
+        },
+        {
+          "case_index": 5,
+          "id": "pusht/val/0009466/000045",
+          "success": false,
+          "steps": 50,
+          "failure_reason": "action_limit",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/diffusion_policy_port/selected-trajectories/00005.npz",
+          "npz_sha256": "0928bbda121a5622ff6e8cd87e0849a17dba3e619b7062b6c32e9fd08836538e",
+          "initial_rgb_sha256": "f4218a4ccdb72ef42a87172904b3d681353a199c5c55fd9ec1dab1a10e1c9be8",
+          "goal_rgb_sha256": "80305ac0cc8b1388382f640afa2574c35718a69a6625831fa3f1beaca31e0ffb"
+        },
+        {
+          "case_index": 6,
+          "id": "pusht/val/0007590/000025",
+          "success": false,
+          "steps": 50,
+          "failure_reason": "action_limit",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/diffusion_policy_port/selected-trajectories/00006.npz",
+          "npz_sha256": "dd61d878663ccf503a6b1a8be3410bbb8ea584f79fe3382a4c2477ff8186c168",
+          "initial_rgb_sha256": "e866102729ebe7f57714cc34db94b2b006b08c7d06cefe8a39a61645d4c5e85a",
+          "goal_rgb_sha256": "c66828674cbb07b25468e0fb866c36204dec8239c51010cea095405fa729fbab"
+        },
+        {
+          "case_index": 7,
+          "id": "pusht/val/0003982/000075",
+          "success": false,
+          "steps": 50,
+          "failure_reason": "action_limit",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/diffusion_policy_port/selected-trajectories/00007.npz",
+          "npz_sha256": "dd3f380bc2507193a7a2fe867ba95ef6484b8e6682e667f202d1759526b63bbb",
+          "initial_rgb_sha256": "663aa0b77de52c2b7b26fb672759c6fd6bf49761d7e9d3e1c69f43100cff6e0a",
+          "goal_rgb_sha256": "1553124b3e095b055865bfd809daf002c923fc5232f1da3f0464a822e10e52ca"
+        },
+        {
+          "case_index": 8,
+          "id": "pusht/val/0008531/000016",
+          "success": false,
+          "steps": 50,
+          "failure_reason": "action_limit",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/diffusion_policy_port/selected-trajectories/00008.npz",
+          "npz_sha256": "5670e8ede6b02541562c4aed22cc03f01222e9aee42d661bf3ab691d64b343ea",
+          "initial_rgb_sha256": "b6a860452a4a8857cdd911dfbbca0bf369b26c056db5a5394d4ba6e7ab24da9e",
+          "goal_rgb_sha256": "69c93664a134ff76a73b7528bc5ccdeb56d8d6693cb545e0874e4d238ed606ef"
+        },
+        {
+          "case_index": 9,
+          "id": "pusht/val/0016738/000074",
+          "success": false,
+          "steps": 50,
+          "failure_reason": "action_limit",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/diffusion_policy_port/selected-trajectories/00009.npz",
+          "npz_sha256": "51547cb950aa978fc3f8e231624b2a56fb9c468d166361184ef18e52606c773b",
+          "initial_rgb_sha256": "ed21201f33c3ddb08853fe85b381cf5badc5bd4f98c7aaeb990b05161bfaf286",
+          "goal_rgb_sha256": "7c5e28d0c8bdc3d2e2b5a930bc06ced39498d1b8dc2ef884893bc35828bd5ecb"
+        }
+      ]
+    },
+    {
+      "dataset": "pusht",
+      "method": "execution_revision",
+      "selected_step": 15000,
+      "report": "docs/reports/20261013-crossbench-baselines/runs/pusht/execution_revision/validation/step_0015000/report.json.gz",
+      "report_sha256": "21ac9686825b8193b59de7824616234dc587d88e93259fdad3cc3a850edc6179",
+      "file": "docs/reports/20261013-crossbench-baselines/visual-review/pusht-execution_revision.png",
+      "sha256": "b130b3fa78afabb07b5d5b8549483a89907ed9cd26e5ae33a95f126721d51613",
+      "width": 1292,
+      "height": 2450,
+      "cases": [
+        {
+          "case_index": 0,
+          "id": "pusht/val/0002481/000039",
+          "success": false,
+          "steps": 50,
+          "failure_reason": "action_limit",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/execution_revision/selected-trajectories/00000.npz",
+          "npz_sha256": "cb372518dc8c2f9bc7923af596aad9c0bbdab05d8fe6e701809165b55bbc97f3",
+          "initial_rgb_sha256": "58dbdb493640a8b6bd0eb442d5f93fe3e46f1841181f8f5c525e70b18d377e87",
+          "goal_rgb_sha256": "dc05910141f7fc26e89fb71307c1ba814ed808ae6e5ff306b0c819fcf3e4ed47"
+        },
+        {
+          "case_index": 1,
+          "id": "pusht/val/0002980/000149",
+          "success": true,
+          "steps": 43,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            8,
+            17,
+            25,
+            34,
+            43
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/execution_revision/selected-trajectories/00001.npz",
+          "npz_sha256": "c672c7653551de11ae72fc6327f2dd2fade1d228606b9db27104b60e8130d468",
+          "initial_rgb_sha256": "acf3e1f75a68a67ec84e5465a5719ecec49227933acbad4019c7e8204edf068c",
+          "goal_rgb_sha256": "54ee9a819d4b149945baa24433de4df77462734487176ca69fd42abb69781331"
+        },
+        {
+          "case_index": 2,
+          "id": "pusht/val/0003251/000029",
+          "success": true,
+          "steps": 22,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            4,
+            8,
+            13,
+            17,
+            22
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/execution_revision/selected-trajectories/00002.npz",
+          "npz_sha256": "8036303c5c076c6630f12734dea6460592df5b06543756b4aa0a345f92aabe4e",
+          "initial_rgb_sha256": "335f7f8341f57e1461faad414a76fd03c7fcaff57be05b88b1b9797b0caf3f68",
+          "goal_rgb_sha256": "2a9629f228a1494bf5719ef9d86a4ba330f7e2eedd04342a1d6b08d9f5b6c407"
+        },
+        {
+          "case_index": 3,
+          "id": "pusht/val/0013555/000059",
+          "success": true,
+          "steps": 22,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            4,
+            8,
+            13,
+            17,
+            22
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/execution_revision/selected-trajectories/00003.npz",
+          "npz_sha256": "df7096f1684d039db3a746dae164fa1d8c46cec211dd09a4d3d9fc17b509d626",
+          "initial_rgb_sha256": "2792825aab26e4d4dadefc5aa97663a963395c0fdf6b18058263786e996f63b4",
+          "goal_rgb_sha256": "bffcffd0d8a3f144c11a05168b2839ef7337b4806da2c8c870789c4c5c5b29ad"
+        },
+        {
+          "case_index": 4,
+          "id": "pusht/val/0016443/000071",
+          "success": false,
+          "steps": 50,
+          "failure_reason": "action_limit",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/execution_revision/selected-trajectories/00004.npz",
+          "npz_sha256": "24606e4a19523fb929085de3c913f067d3e3e562df9ccf3bdf8fb47b62961262",
+          "initial_rgb_sha256": "353017bee9613e03688e321a40f1a996e40045151a0c6d96a6152178e649d833",
+          "goal_rgb_sha256": "a6bd3ffdd95ed431cb044200f1b4d6679d05c1eb4c3e796ea2e83baf5aa17313"
+        },
+        {
+          "case_index": 5,
+          "id": "pusht/val/0009466/000045",
+          "success": true,
+          "steps": 13,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            2,
+            5,
+            7,
+            10,
+            13
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/execution_revision/selected-trajectories/00005.npz",
+          "npz_sha256": "a5731fb77217fb1dc343e5cb9f1214199356b042fd54c2c0f6d8369d16be4745",
+          "initial_rgb_sha256": "f4218a4ccdb72ef42a87172904b3d681353a199c5c55fd9ec1dab1a10e1c9be8",
+          "goal_rgb_sha256": "80305ac0cc8b1388382f640afa2574c35718a69a6625831fa3f1beaca31e0ffb"
+        },
+        {
+          "case_index": 6,
+          "id": "pusht/val/0007590/000025",
+          "success": true,
+          "steps": 36,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            7,
+            14,
+            21,
+            28,
+            36
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/execution_revision/selected-trajectories/00006.npz",
+          "npz_sha256": "5fec050637974257fd2b1d520ea2e2440bcc0325b85020e6f6a0ffb0820832fa",
+          "initial_rgb_sha256": "e866102729ebe7f57714cc34db94b2b006b08c7d06cefe8a39a61645d4c5e85a",
+          "goal_rgb_sha256": "c66828674cbb07b25468e0fb866c36204dec8239c51010cea095405fa729fbab"
+        },
+        {
+          "case_index": 7,
+          "id": "pusht/val/0003982/000075",
+          "success": true,
+          "steps": 25,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            5,
+            10,
+            15,
+            20,
+            25
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/execution_revision/selected-trajectories/00007.npz",
+          "npz_sha256": "3ac03385fe09ab03219669e378d967371af4082a203af2bd7ab7785e34e9c54f",
+          "initial_rgb_sha256": "663aa0b77de52c2b7b26fb672759c6fd6bf49761d7e9d3e1c69f43100cff6e0a",
+          "goal_rgb_sha256": "1553124b3e095b055865bfd809daf002c923fc5232f1da3f0464a822e10e52ca"
+        },
+        {
+          "case_index": 8,
+          "id": "pusht/val/0008531/000016",
+          "success": false,
+          "steps": 50,
+          "failure_reason": "action_limit",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/execution_revision/selected-trajectories/00008.npz",
+          "npz_sha256": "c827468057bd7560da572512f6b12dcc3d4888e0ae3a7025cff454aa1d8284c9",
+          "initial_rgb_sha256": "b6a860452a4a8857cdd911dfbbca0bf369b26c056db5a5394d4ba6e7ab24da9e",
+          "goal_rgb_sha256": "69c93664a134ff76a73b7528bc5ccdeb56d8d6693cb545e0874e4d238ed606ef"
+        },
+        {
+          "case_index": 9,
+          "id": "pusht/val/0016738/000074",
+          "success": true,
+          "steps": 24,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            4,
+            9,
+            14,
+            19,
+            24
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/execution_revision/selected-trajectories/00009.npz",
+          "npz_sha256": "d5796719cf1d5bd0d30affb42541c522e6fcfe93e61241ada4d0ce2e238c307d",
+          "initial_rgb_sha256": "ed21201f33c3ddb08853fe85b381cf5badc5bd4f98c7aaeb990b05161bfaf286",
+          "goal_rgb_sha256": "7c5e28d0c8bdc3d2e2b5a930bc06ced39498d1b8dc2ef884893bc35828bd5ecb"
+        }
+      ]
+    },
+    {
+      "dataset": "pusht",
+      "method": "feedback_wm_port",
+      "selected_step": 20000,
+      "report": "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/validation/step_0020000/report.json.gz",
+      "report_sha256": "fe97c298e59f5517a23637a0467d7eae76ee8e2b3eddf5558519f4c50560f29e",
+      "file": "docs/reports/20261013-crossbench-baselines/visual-review/pusht-feedback_wm_port.png",
+      "sha256": "80e3d1541cf082f61f5b0be79475a09a129f8aca4436c918e2ed3a85762a518d",
+      "width": 1292,
+      "height": 2450,
+      "cases": [
+        {
+          "case_index": 0,
+          "id": "pusht/val/0002481/000039",
+          "success": true,
+          "steps": 33,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            6,
+            13,
+            19,
+            26,
+            33
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/selected-trajectories/00000.npz",
+          "npz_sha256": "73562f240958a0898cc47ae414da56f6acb06c8edaf1dd90970f08ec601973db",
+          "initial_rgb_sha256": "58dbdb493640a8b6bd0eb442d5f93fe3e46f1841181f8f5c525e70b18d377e87",
+          "goal_rgb_sha256": "dc05910141f7fc26e89fb71307c1ba814ed808ae6e5ff306b0c819fcf3e4ed47"
+        },
+        {
+          "case_index": 1,
+          "id": "pusht/val/0002980/000149",
+          "success": false,
+          "steps": 50,
+          "failure_reason": "action_limit",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/selected-trajectories/00001.npz",
+          "npz_sha256": "b6bd2e8a2af3d7eefcee5211deeeda4bccd5120cf6bde60868fdfe6cc95635ab",
+          "initial_rgb_sha256": "acf3e1f75a68a67ec84e5465a5719ecec49227933acbad4019c7e8204edf068c",
+          "goal_rgb_sha256": "54ee9a819d4b149945baa24433de4df77462734487176ca69fd42abb69781331"
+        },
+        {
+          "case_index": 2,
+          "id": "pusht/val/0003251/000029",
+          "success": true,
+          "steps": 19,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            3,
+            7,
+            11,
+            15,
+            19
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/selected-trajectories/00002.npz",
+          "npz_sha256": "0d9757bbbfba79e02c3e9fddcb1eeade6ba1c6f6e6071235f7e36196c0b1d433",
+          "initial_rgb_sha256": "335f7f8341f57e1461faad414a76fd03c7fcaff57be05b88b1b9797b0caf3f68",
+          "goal_rgb_sha256": "2a9629f228a1494bf5719ef9d86a4ba330f7e2eedd04342a1d6b08d9f5b6c407"
+        },
+        {
+          "case_index": 3,
+          "id": "pusht/val/0013555/000059",
+          "success": false,
+          "steps": 50,
+          "failure_reason": "action_limit",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/selected-trajectories/00003.npz",
+          "npz_sha256": "d7fe7b5baca1f0dc79bf6314e5bb48efaa18a899e112da067167469aaaa6d80e",
+          "initial_rgb_sha256": "2792825aab26e4d4dadefc5aa97663a963395c0fdf6b18058263786e996f63b4",
+          "goal_rgb_sha256": "bffcffd0d8a3f144c11a05168b2839ef7337b4806da2c8c870789c4c5c5b29ad"
+        },
+        {
+          "case_index": 4,
+          "id": "pusht/val/0016443/000071",
+          "success": false,
+          "steps": 50,
+          "failure_reason": "action_limit",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/selected-trajectories/00004.npz",
+          "npz_sha256": "9577dfd58e9c9e56149bc0204a5be853f929ac94154f65bca5a617709514c1c3",
+          "initial_rgb_sha256": "353017bee9613e03688e321a40f1a996e40045151a0c6d96a6152178e649d833",
+          "goal_rgb_sha256": "a6bd3ffdd95ed431cb044200f1b4d6679d05c1eb4c3e796ea2e83baf5aa17313"
+        },
+        {
+          "case_index": 5,
+          "id": "pusht/val/0009466/000045",
+          "success": true,
+          "steps": 47,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            9,
+            18,
+            28,
+            37,
+            47
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/selected-trajectories/00005.npz",
+          "npz_sha256": "a3e5613fada697fc552f50b76489fbcabb48b869ed79d3d1528bbdcc0c3bf02e",
+          "initial_rgb_sha256": "f4218a4ccdb72ef42a87172904b3d681353a199c5c55fd9ec1dab1a10e1c9be8",
+          "goal_rgb_sha256": "80305ac0cc8b1388382f640afa2574c35718a69a6625831fa3f1beaca31e0ffb"
+        },
+        {
+          "case_index": 6,
+          "id": "pusht/val/0007590/000025",
+          "success": false,
+          "steps": 50,
+          "failure_reason": "action_limit",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/selected-trajectories/00006.npz",
+          "npz_sha256": "a14bb49fba5a1d2722583c70e7a497baf2ecf3408d3213bda42be03a6ba31b87",
+          "initial_rgb_sha256": "e866102729ebe7f57714cc34db94b2b006b08c7d06cefe8a39a61645d4c5e85a",
+          "goal_rgb_sha256": "c66828674cbb07b25468e0fb866c36204dec8239c51010cea095405fa729fbab"
+        },
+        {
+          "case_index": 7,
+          "id": "pusht/val/0003982/000075",
+          "success": false,
+          "steps": 50,
+          "failure_reason": "action_limit",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/selected-trajectories/00007.npz",
+          "npz_sha256": "596a19ec4ef9aeb7bc85e8244ab1e79852879a11880e8f4d5cf12d61203e908b",
+          "initial_rgb_sha256": "663aa0b77de52c2b7b26fb672759c6fd6bf49761d7e9d3e1c69f43100cff6e0a",
+          "goal_rgb_sha256": "1553124b3e095b055865bfd809daf002c923fc5232f1da3f0464a822e10e52ca"
+        },
+        {
+          "case_index": 8,
+          "id": "pusht/val/0008531/000016",
+          "success": true,
+          "steps": 18,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            3,
+            7,
+            10,
+            14,
+            18
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/selected-trajectories/00008.npz",
+          "npz_sha256": "b91ac313d124ad05d76da45caf119430029478837ad1df65fa40c2d97d56f2e3",
+          "initial_rgb_sha256": "b6a860452a4a8857cdd911dfbbca0bf369b26c056db5a5394d4ba6e7ab24da9e",
+          "goal_rgb_sha256": "69c93664a134ff76a73b7528bc5ccdeb56d8d6693cb545e0874e4d238ed606ef"
+        },
+        {
+          "case_index": 9,
+          "id": "pusht/val/0016738/000074",
+          "success": false,
+          "steps": 50,
+          "failure_reason": "action_limit",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/selected-trajectories/00009.npz",
+          "npz_sha256": "2e313febd5636a88223912f9ba5b96c3ba95c227473842133dc22562dabda859",
+          "initial_rgb_sha256": "ed21201f33c3ddb08853fe85b381cf5badc5bd4f98c7aaeb990b05161bfaf286",
+          "goal_rgb_sha256": "7c5e28d0c8bdc3d2e2b5a930bc06ced39498d1b8dc2ef884893bc35828bd5ecb"
+        }
+      ]
+    },
+    {
+      "dataset": "pusht",
+      "method": "leflow",
+      "selected_step": 5000,
+      "report": "docs/reports/20261013-crossbench-baselines/runs/pusht/leflow/validation/step_0005000/report.json.gz",
+      "report_sha256": "37f51abc67456732ef6734a732e655f58a1187ac5bd8885dafad4cf13d0890fd",
+      "file": "docs/reports/20261013-crossbench-baselines/visual-review/pusht-leflow.png",
+      "sha256": "b210b561aac109cacaaedc0d658676962f10596d382ae590420b2e3bfce00a33",
+      "width": 1292,
+      "height": 2450,
+      "cases": [
+        {
+          "case_index": 0,
+          "id": "pusht/val/0002481/000039",
+          "success": true,
+          "steps": 43,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            8,
+            17,
+            25,
+            34,
+            43
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/leflow/selected-trajectories/00000.npz",
+          "npz_sha256": "42624c5462f9b33434bc6fc1985c048e4af3b605956d2e5e63e814bab87deb95",
+          "initial_rgb_sha256": "58dbdb493640a8b6bd0eb442d5f93fe3e46f1841181f8f5c525e70b18d377e87",
+          "goal_rgb_sha256": "dc05910141f7fc26e89fb71307c1ba814ed808ae6e5ff306b0c819fcf3e4ed47"
+        },
+        {
+          "case_index": 1,
+          "id": "pusht/val/0002980/000149",
+          "success": false,
+          "steps": 50,
+          "failure_reason": "action_limit",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/leflow/selected-trajectories/00001.npz",
+          "npz_sha256": "236f682fdf2315ee679230ba46c352655918e7cb081a3aa7458084bc3d2807af",
+          "initial_rgb_sha256": "acf3e1f75a68a67ec84e5465a5719ecec49227933acbad4019c7e8204edf068c",
+          "goal_rgb_sha256": "54ee9a819d4b149945baa24433de4df77462734487176ca69fd42abb69781331"
+        },
+        {
+          "case_index": 2,
+          "id": "pusht/val/0003251/000029",
+          "success": true,
+          "steps": 20,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            4,
+            8,
+            12,
+            16,
+            20
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/leflow/selected-trajectories/00002.npz",
+          "npz_sha256": "762ac215577b109d99e96394d45b0da25ba0b6a21eb21d84ad98c902b5b259dc",
+          "initial_rgb_sha256": "335f7f8341f57e1461faad414a76fd03c7fcaff57be05b88b1b9797b0caf3f68",
+          "goal_rgb_sha256": "2a9629f228a1494bf5719ef9d86a4ba330f7e2eedd04342a1d6b08d9f5b6c407"
+        },
+        {
+          "case_index": 3,
+          "id": "pusht/val/0013555/000059",
+          "success": true,
+          "steps": 15,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            3,
+            6,
+            9,
+            12,
+            15
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/leflow/selected-trajectories/00003.npz",
+          "npz_sha256": "09731ddabd9f419bf9050e74aa583440aa07e7fbc5d72e39f9325336b7a37ab6",
+          "initial_rgb_sha256": "2792825aab26e4d4dadefc5aa97663a963395c0fdf6b18058263786e996f63b4",
+          "goal_rgb_sha256": "bffcffd0d8a3f144c11a05168b2839ef7337b4806da2c8c870789c4c5c5b29ad"
+        },
+        {
+          "case_index": 4,
+          "id": "pusht/val/0016443/000071",
+          "success": false,
+          "steps": 50,
+          "failure_reason": "action_limit",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/leflow/selected-trajectories/00004.npz",
+          "npz_sha256": "86a2f437bd73850ad16a5b22d013c3800c500188b5c0b3ea299f096d0a939da6",
+          "initial_rgb_sha256": "353017bee9613e03688e321a40f1a996e40045151a0c6d96a6152178e649d833",
+          "goal_rgb_sha256": "a6bd3ffdd95ed431cb044200f1b4d6679d05c1eb4c3e796ea2e83baf5aa17313"
+        },
+        {
+          "case_index": 5,
+          "id": "pusht/val/0009466/000045",
+          "success": false,
+          "steps": 50,
+          "failure_reason": "action_limit",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/leflow/selected-trajectories/00005.npz",
+          "npz_sha256": "c52fb1636a39edb6b1350264ef6a0ab07781c26ef1e873bac75762b220d97fe6",
+          "initial_rgb_sha256": "f4218a4ccdb72ef42a87172904b3d681353a199c5c55fd9ec1dab1a10e1c9be8",
+          "goal_rgb_sha256": "80305ac0cc8b1388382f640afa2574c35718a69a6625831fa3f1beaca31e0ffb"
+        },
+        {
+          "case_index": 6,
+          "id": "pusht/val/0007590/000025",
+          "success": false,
+          "steps": 50,
+          "failure_reason": "action_limit",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/leflow/selected-trajectories/00006.npz",
+          "npz_sha256": "55264480442f18a9d17de666bc6351d027feffd52aea8e3c2f3f899578ccaeb9",
+          "initial_rgb_sha256": "e866102729ebe7f57714cc34db94b2b006b08c7d06cefe8a39a61645d4c5e85a",
+          "goal_rgb_sha256": "c66828674cbb07b25468e0fb866c36204dec8239c51010cea095405fa729fbab"
+        },
+        {
+          "case_index": 7,
+          "id": "pusht/val/0003982/000075",
+          "success": false,
+          "steps": 50,
+          "failure_reason": "action_limit",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/leflow/selected-trajectories/00007.npz",
+          "npz_sha256": "a3131d77e7a09711ae6bfb0fe72a249084316942e58e6efc248d0bc2f58288f1",
+          "initial_rgb_sha256": "663aa0b77de52c2b7b26fb672759c6fd6bf49761d7e9d3e1c69f43100cff6e0a",
+          "goal_rgb_sha256": "1553124b3e095b055865bfd809daf002c923fc5232f1da3f0464a822e10e52ca"
+        },
+        {
+          "case_index": 8,
+          "id": "pusht/val/0008531/000016",
+          "success": false,
+          "steps": 50,
+          "failure_reason": "action_limit",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/leflow/selected-trajectories/00008.npz",
+          "npz_sha256": "651be6bc9a96366fe2e60533ff2faa9489690a68e8badb4c8944ebc7f42b73d8",
+          "initial_rgb_sha256": "b6a860452a4a8857cdd911dfbbca0bf369b26c056db5a5394d4ba6e7ab24da9e",
+          "goal_rgb_sha256": "69c93664a134ff76a73b7528bc5ccdeb56d8d6693cb545e0874e4d238ed606ef"
+        },
+        {
+          "case_index": 9,
+          "id": "pusht/val/0016738/000074",
+          "success": false,
+          "steps": 50,
+          "failure_reason": "action_limit",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/leflow/selected-trajectories/00009.npz",
+          "npz_sha256": "89d97acace654bd3f6205595d44360597008e72c619e65d98033888ae5077e87",
+          "initial_rgb_sha256": "ed21201f33c3ddb08853fe85b381cf5badc5bd4f98c7aaeb990b05161bfaf286",
+          "goal_rgb_sha256": "7c5e28d0c8bdc3d2e2b5a930bc06ced39498d1b8dc2ef884893bc35828bd5ecb"
+        }
+      ]
+    },
+    {
+      "dataset": "pusht",
+      "method": "retrieval_repair_ttt",
+      "selected_step": 10000,
+      "report": "docs/reports/20261013-crossbench-baselines/runs/pusht/retrieval_repair_ttt/validation/step_0010000/report.json.gz",
+      "report_sha256": "1529dd7204ea819db2cbf692e279c72ce0c333639cbf319ce9875726019078b2",
+      "file": "docs/reports/20261013-crossbench-baselines/visual-review/pusht-retrieval_repair_ttt.png",
+      "sha256": "ae6ce8e6a372b3a4797dddb62c40468177a74b1e2a54fbf2182fd3a51627c216",
+      "width": 1292,
+      "height": 2450,
+      "cases": [
+        {
+          "case_index": 0,
+          "id": "pusht/val/0002481/000039",
+          "success": false,
+          "steps": 50,
+          "failure_reason": "action_limit",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/retrieval_repair_ttt/selected-trajectories/00000.npz",
+          "npz_sha256": "6f9d49a395f8d51506730ae479c61ee5dd114c7b77430fb17c6dd6d96790a8fe",
+          "initial_rgb_sha256": "58dbdb493640a8b6bd0eb442d5f93fe3e46f1841181f8f5c525e70b18d377e87",
+          "goal_rgb_sha256": "dc05910141f7fc26e89fb71307c1ba814ed808ae6e5ff306b0c819fcf3e4ed47"
+        },
+        {
+          "case_index": 1,
+          "id": "pusht/val/0002980/000149",
+          "success": true,
+          "steps": 25,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            5,
+            10,
+            15,
+            20,
+            25
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/retrieval_repair_ttt/selected-trajectories/00001.npz",
+          "npz_sha256": "1b2b9d51292cb69903051d1c958c4b064218e0d1164acf18ff6b50b6cd63780d",
+          "initial_rgb_sha256": "acf3e1f75a68a67ec84e5465a5719ecec49227933acbad4019c7e8204edf068c",
+          "goal_rgb_sha256": "54ee9a819d4b149945baa24433de4df77462734487176ca69fd42abb69781331"
+        },
+        {
+          "case_index": 2,
+          "id": "pusht/val/0003251/000029",
+          "success": true,
+          "steps": 23,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            4,
+            9,
+            13,
+            18,
+            23
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/retrieval_repair_ttt/selected-trajectories/00002.npz",
+          "npz_sha256": "c68e2ac421b3de9c215ca7aee79eb062d7942e617b431bf81f85155bb8d03185",
+          "initial_rgb_sha256": "335f7f8341f57e1461faad414a76fd03c7fcaff57be05b88b1b9797b0caf3f68",
+          "goal_rgb_sha256": "2a9629f228a1494bf5719ef9d86a4ba330f7e2eedd04342a1d6b08d9f5b6c407"
+        },
+        {
+          "case_index": 3,
+          "id": "pusht/val/0013555/000059",
+          "success": true,
+          "steps": 24,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            4,
+            9,
+            14,
+            19,
+            24
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/retrieval_repair_ttt/selected-trajectories/00003.npz",
+          "npz_sha256": "e7842712dd88117c73b8f96d04d8e3125698868398dbb82a88ea890984b19225",
+          "initial_rgb_sha256": "2792825aab26e4d4dadefc5aa97663a963395c0fdf6b18058263786e996f63b4",
+          "goal_rgb_sha256": "bffcffd0d8a3f144c11a05168b2839ef7337b4806da2c8c870789c4c5c5b29ad"
+        },
+        {
+          "case_index": 4,
+          "id": "pusht/val/0016443/000071",
+          "success": false,
+          "steps": 50,
+          "failure_reason": "action_limit",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/retrieval_repair_ttt/selected-trajectories/00004.npz",
+          "npz_sha256": "2e85d812715180c52a2a5c40a65728a8355defeccc6cc74c0c8c296f557654eb",
+          "initial_rgb_sha256": "353017bee9613e03688e321a40f1a996e40045151a0c6d96a6152178e649d833",
+          "goal_rgb_sha256": "a6bd3ffdd95ed431cb044200f1b4d6679d05c1eb4c3e796ea2e83baf5aa17313"
+        },
+        {
+          "case_index": 5,
+          "id": "pusht/val/0009466/000045",
+          "success": false,
+          "steps": 50,
+          "failure_reason": "action_limit",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/retrieval_repair_ttt/selected-trajectories/00005.npz",
+          "npz_sha256": "ec968c7e7c57d55c60c6d9ab846dc66fd5b7b1d86b847c7b05679ec410243861",
+          "initial_rgb_sha256": "f4218a4ccdb72ef42a87172904b3d681353a199c5c55fd9ec1dab1a10e1c9be8",
+          "goal_rgb_sha256": "80305ac0cc8b1388382f640afa2574c35718a69a6625831fa3f1beaca31e0ffb"
+        },
+        {
+          "case_index": 6,
+          "id": "pusht/val/0007590/000025",
+          "success": true,
+          "steps": 15,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            3,
+            6,
+            9,
+            12,
+            15
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/retrieval_repair_ttt/selected-trajectories/00006.npz",
+          "npz_sha256": "1fe61b02f1e14c05496a6ba7ac215eafbd9e2942d62b203fdfbd2b4bdd259a05",
+          "initial_rgb_sha256": "e866102729ebe7f57714cc34db94b2b006b08c7d06cefe8a39a61645d4c5e85a",
+          "goal_rgb_sha256": "c66828674cbb07b25468e0fb866c36204dec8239c51010cea095405fa729fbab"
+        },
+        {
+          "case_index": 7,
+          "id": "pusht/val/0003982/000075",
+          "success": true,
+          "steps": 41,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            8,
+            16,
+            24,
+            32,
+            41
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/retrieval_repair_ttt/selected-trajectories/00007.npz",
+          "npz_sha256": "f8d37b4fd184fbc91748264189966c275c3ecb7761cea10a14585469bd8c37e9",
+          "initial_rgb_sha256": "663aa0b77de52c2b7b26fb672759c6fd6bf49761d7e9d3e1c69f43100cff6e0a",
+          "goal_rgb_sha256": "1553124b3e095b055865bfd809daf002c923fc5232f1da3f0464a822e10e52ca"
+        },
+        {
+          "case_index": 8,
+          "id": "pusht/val/0008531/000016",
+          "success": true,
+          "steps": 37,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            7,
+            14,
+            22,
+            29,
+            37
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/retrieval_repair_ttt/selected-trajectories/00008.npz",
+          "npz_sha256": "577fe530a033e720e2e6514930bd9866f124701045bbee710d6cb55fb8f71899",
+          "initial_rgb_sha256": "b6a860452a4a8857cdd911dfbbca0bf369b26c056db5a5394d4ba6e7ab24da9e",
+          "goal_rgb_sha256": "69c93664a134ff76a73b7528bc5ccdeb56d8d6693cb545e0874e4d238ed606ef"
+        },
+        {
+          "case_index": 9,
+          "id": "pusht/val/0016738/000074",
+          "success": true,
+          "steps": 23,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            4,
+            9,
+            13,
+            18,
+            23
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/retrieval_repair_ttt/selected-trajectories/00009.npz",
+          "npz_sha256": "1e3b4194495f9fb8f1c18c706c26406e06a6e3656bfd92bf75b6bebe72ba3b6d",
+          "initial_rgb_sha256": "ed21201f33c3ddb08853fe85b381cf5badc5bd4f98c7aaeb990b05161bfaf286",
+          "goal_rgb_sha256": "7c5e28d0c8bdc3d2e2b5a930bc06ced39498d1b8dc2ef884893bc35828bd5ecb"
+        }
+      ]
+    },
+    {
+      "dataset": "pusht",
+      "method": "sage_port",
+      "selected_step": 15000,
+      "report": "docs/reports/20261013-crossbench-baselines/runs/pusht/sage_port/validation/step_0015000/report.json.gz",
+      "report_sha256": "727e9838efcb494af0f3e337a5c84cadeba97c86cf8d95a8bee3b82338ea0620",
+      "file": "docs/reports/20261013-crossbench-baselines/visual-review/pusht-sage_port.png",
+      "sha256": "0c7a4d602a639bc59687ccf80e3b556638166d5e1650f9a49b11505a38b8819a",
+      "width": 1292,
+      "height": 2450,
+      "cases": [
+        {
+          "case_index": 0,
+          "id": "pusht/val/0002481/000039",
+          "success": true,
+          "steps": 14,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            2,
+            5,
+            8,
+            11,
+            14
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/sage_port/selected-trajectories/00000.npz",
+          "npz_sha256": "c0eb8b156575acd3c5caa69e2b827602e67a054765a82169c5adee9042f980f3",
+          "initial_rgb_sha256": "58dbdb493640a8b6bd0eb442d5f93fe3e46f1841181f8f5c525e70b18d377e87",
+          "goal_rgb_sha256": "dc05910141f7fc26e89fb71307c1ba814ed808ae6e5ff306b0c819fcf3e4ed47"
+        },
+        {
+          "case_index": 1,
+          "id": "pusht/val/0002980/000149",
+          "success": true,
+          "steps": 25,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            5,
+            10,
+            15,
+            20,
+            25
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/sage_port/selected-trajectories/00001.npz",
+          "npz_sha256": "9be700ab66fcd7c8df163113ae8dda018a60984391be063ca34219490687f2cc",
+          "initial_rgb_sha256": "acf3e1f75a68a67ec84e5465a5719ecec49227933acbad4019c7e8204edf068c",
+          "goal_rgb_sha256": "54ee9a819d4b149945baa24433de4df77462734487176ca69fd42abb69781331"
+        },
+        {
+          "case_index": 2,
+          "id": "pusht/val/0003251/000029",
+          "success": true,
+          "steps": 16,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            3,
+            6,
+            9,
+            12,
+            16
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/sage_port/selected-trajectories/00002.npz",
+          "npz_sha256": "108f87f39bb306b6f30581107bec1dbd61bf9c20884552ab1c7fa40fb67356e7",
+          "initial_rgb_sha256": "335f7f8341f57e1461faad414a76fd03c7fcaff57be05b88b1b9797b0caf3f68",
+          "goal_rgb_sha256": "2a9629f228a1494bf5719ef9d86a4ba330f7e2eedd04342a1d6b08d9f5b6c407"
+        },
+        {
+          "case_index": 3,
+          "id": "pusht/val/0013555/000059",
+          "success": true,
+          "steps": 28,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            5,
+            11,
+            16,
+            22,
+            28
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/sage_port/selected-trajectories/00003.npz",
+          "npz_sha256": "bccf39d35c2c93e9a808ce4d9eed5abba7ec1842f3b4d34d5747602a16c30691",
+          "initial_rgb_sha256": "2792825aab26e4d4dadefc5aa97663a963395c0fdf6b18058263786e996f63b4",
+          "goal_rgb_sha256": "bffcffd0d8a3f144c11a05168b2839ef7337b4806da2c8c870789c4c5c5b29ad"
+        },
+        {
+          "case_index": 4,
+          "id": "pusht/val/0016443/000071",
+          "success": true,
+          "steps": 21,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            4,
+            8,
+            12,
+            16,
+            21
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/sage_port/selected-trajectories/00004.npz",
+          "npz_sha256": "bb3a4768f436e36084c5766c9bf9bb9fad3fb24329fd4fb90b264b3ad07151ab",
+          "initial_rgb_sha256": "353017bee9613e03688e321a40f1a996e40045151a0c6d96a6152178e649d833",
+          "goal_rgb_sha256": "a6bd3ffdd95ed431cb044200f1b4d6679d05c1eb4c3e796ea2e83baf5aa17313"
+        },
+        {
+          "case_index": 5,
+          "id": "pusht/val/0009466/000045",
+          "success": true,
+          "steps": 32,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            6,
+            12,
+            19,
+            25,
+            32
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/sage_port/selected-trajectories/00005.npz",
+          "npz_sha256": "4219836b22573d5370bd66a3ee2d5dfb41c4dbb97f106e382701fe0503fd0fd2",
+          "initial_rgb_sha256": "f4218a4ccdb72ef42a87172904b3d681353a199c5c55fd9ec1dab1a10e1c9be8",
+          "goal_rgb_sha256": "80305ac0cc8b1388382f640afa2574c35718a69a6625831fa3f1beaca31e0ffb"
+        },
+        {
+          "case_index": 6,
+          "id": "pusht/val/0007590/000025",
+          "success": false,
+          "steps": 50,
+          "failure_reason": "action_limit",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/sage_port/selected-trajectories/00006.npz",
+          "npz_sha256": "3c6f1413f9ad2341dd494898a0c6635075e19f84c26dc5eabec33b3f7a9fce5f",
+          "initial_rgb_sha256": "e866102729ebe7f57714cc34db94b2b006b08c7d06cefe8a39a61645d4c5e85a",
+          "goal_rgb_sha256": "c66828674cbb07b25468e0fb866c36204dec8239c51010cea095405fa729fbab"
+        },
+        {
+          "case_index": 7,
+          "id": "pusht/val/0003982/000075",
+          "success": true,
+          "steps": 42,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            8,
+            16,
+            25,
+            33,
+            42
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/sage_port/selected-trajectories/00007.npz",
+          "npz_sha256": "c9be5cb402e0702225835f64810a29a2973f13196453194114b7460a2dd580cc",
+          "initial_rgb_sha256": "663aa0b77de52c2b7b26fb672759c6fd6bf49761d7e9d3e1c69f43100cff6e0a",
+          "goal_rgb_sha256": "1553124b3e095b055865bfd809daf002c923fc5232f1da3f0464a822e10e52ca"
+        },
+        {
+          "case_index": 8,
+          "id": "pusht/val/0008531/000016",
+          "success": true,
+          "steps": 21,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            4,
+            8,
+            12,
+            16,
+            21
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/sage_port/selected-trajectories/00008.npz",
+          "npz_sha256": "865f4fc41ef9ae828746b596d0ad25cc3d6726c4a2c5d6ac6aa893d04871f8a4",
+          "initial_rgb_sha256": "b6a860452a4a8857cdd911dfbbca0bf369b26c056db5a5394d4ba6e7ab24da9e",
+          "goal_rgb_sha256": "69c93664a134ff76a73b7528bc5ccdeb56d8d6693cb545e0874e4d238ed606ef"
+        },
+        {
+          "case_index": 9,
+          "id": "pusht/val/0016738/000074",
+          "success": true,
+          "steps": 23,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            4,
+            9,
+            13,
+            18,
+            23
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/sage_port/selected-trajectories/00009.npz",
+          "npz_sha256": "d0770589b629eb2c41b31e655fef779ec139fdbc0e6d199af7b332a832f8d5fc",
+          "initial_rgb_sha256": "ed21201f33c3ddb08853fe85b381cf5badc5bd4f98c7aaeb990b05161bfaf286",
+          "goal_rgb_sha256": "7c5e28d0c8bdc3d2e2b5a930bc06ced39498d1b8dc2ef884893bc35828bd5ecb"
+        }
+      ]
+    },
+    {
+      "dataset": "pusht",
+      "method": "vanilla_action_flow",
+      "selected_step": 20000,
+      "report": "docs/reports/20261013-crossbench-baselines/runs/pusht/vanilla_action_flow/validation/step_0020000/report.json.gz",
+      "report_sha256": "eb76d9c55865b498f782b848ff8b20f3734a7b0b5b48737f4a4e9ac74e9f7e0c",
+      "file": "docs/reports/20261013-crossbench-baselines/visual-review/pusht-vanilla_action_flow.png",
+      "sha256": "13f4dcd09c23ddb4873574d2a58ba7fd07a4c589b9fff5fade2f807ffbe8b05e",
+      "width": 1292,
+      "height": 2450,
+      "cases": [
+        {
+          "case_index": 0,
+          "id": "pusht/val/0002481/000039",
+          "success": false,
+          "steps": 50,
+          "failure_reason": "action_limit",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/vanilla_action_flow/selected-trajectories/00000.npz",
+          "npz_sha256": "616a5708d713447609e5e0a8e274394c4bcb6667404ef540cfcd11c987ef0b56",
+          "initial_rgb_sha256": "58dbdb493640a8b6bd0eb442d5f93fe3e46f1841181f8f5c525e70b18d377e87",
+          "goal_rgb_sha256": "dc05910141f7fc26e89fb71307c1ba814ed808ae6e5ff306b0c819fcf3e4ed47"
+        },
+        {
+          "case_index": 1,
+          "id": "pusht/val/0002980/000149",
+          "success": true,
+          "steps": 31,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            6,
+            12,
+            18,
+            24,
+            31
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/vanilla_action_flow/selected-trajectories/00001.npz",
+          "npz_sha256": "19f34bc2e3b01cdd08e640b8285d5c8c5aae229e43af19b233e0aa2b7380ce93",
+          "initial_rgb_sha256": "acf3e1f75a68a67ec84e5465a5719ecec49227933acbad4019c7e8204edf068c",
+          "goal_rgb_sha256": "54ee9a819d4b149945baa24433de4df77462734487176ca69fd42abb69781331"
+        },
+        {
+          "case_index": 2,
+          "id": "pusht/val/0003251/000029",
+          "success": true,
+          "steps": 41,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            8,
+            16,
+            24,
+            32,
+            41
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/vanilla_action_flow/selected-trajectories/00002.npz",
+          "npz_sha256": "656e92f09f75620a13d7a76bfb3aae593409c2b65428103b8672d8650ad613f2",
+          "initial_rgb_sha256": "335f7f8341f57e1461faad414a76fd03c7fcaff57be05b88b1b9797b0caf3f68",
+          "goal_rgb_sha256": "2a9629f228a1494bf5719ef9d86a4ba330f7e2eedd04342a1d6b08d9f5b6c407"
+        },
+        {
+          "case_index": 3,
+          "id": "pusht/val/0013555/000059",
+          "success": false,
+          "steps": 50,
+          "failure_reason": "action_limit",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/vanilla_action_flow/selected-trajectories/00003.npz",
+          "npz_sha256": "848734c13b6ddaf765d3c5b3aa4a127324c802e954c3363050ec46303d12f309",
+          "initial_rgb_sha256": "2792825aab26e4d4dadefc5aa97663a963395c0fdf6b18058263786e996f63b4",
+          "goal_rgb_sha256": "bffcffd0d8a3f144c11a05168b2839ef7337b4806da2c8c870789c4c5c5b29ad"
+        },
+        {
+          "case_index": 4,
+          "id": "pusht/val/0016443/000071",
+          "success": false,
+          "steps": 50,
+          "failure_reason": "action_limit",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/vanilla_action_flow/selected-trajectories/00004.npz",
+          "npz_sha256": "bdd56b484c57d5d2cdf0873e0be31c7b369200f1ef589a16a60043529f1afcf3",
+          "initial_rgb_sha256": "353017bee9613e03688e321a40f1a996e40045151a0c6d96a6152178e649d833",
+          "goal_rgb_sha256": "a6bd3ffdd95ed431cb044200f1b4d6679d05c1eb4c3e796ea2e83baf5aa17313"
+        },
+        {
+          "case_index": 5,
+          "id": "pusht/val/0009466/000045",
+          "success": false,
+          "steps": 50,
+          "failure_reason": "action_limit",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/vanilla_action_flow/selected-trajectories/00005.npz",
+          "npz_sha256": "9a9873d409d74368aeb882b078727761f7d7ce4902b77d206651181ca9773a16",
+          "initial_rgb_sha256": "f4218a4ccdb72ef42a87172904b3d681353a199c5c55fd9ec1dab1a10e1c9be8",
+          "goal_rgb_sha256": "80305ac0cc8b1388382f640afa2574c35718a69a6625831fa3f1beaca31e0ffb"
+        },
+        {
+          "case_index": 6,
+          "id": "pusht/val/0007590/000025",
+          "success": false,
+          "steps": 50,
+          "failure_reason": "action_limit",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/vanilla_action_flow/selected-trajectories/00006.npz",
+          "npz_sha256": "b03c753aa69a7e4e2e7258daaf21eaaebd5ced8132d1dbdb9cac5f1b2cabe13d",
+          "initial_rgb_sha256": "e866102729ebe7f57714cc34db94b2b006b08c7d06cefe8a39a61645d4c5e85a",
+          "goal_rgb_sha256": "c66828674cbb07b25468e0fb866c36204dec8239c51010cea095405fa729fbab"
+        },
+        {
+          "case_index": 7,
+          "id": "pusht/val/0003982/000075",
+          "success": false,
+          "steps": 50,
+          "failure_reason": "action_limit",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/vanilla_action_flow/selected-trajectories/00007.npz",
+          "npz_sha256": "8d262c6aa0c2918a5f58050bc6aebb92be2df1b41c7e01247629375c7263e158",
+          "initial_rgb_sha256": "663aa0b77de52c2b7b26fb672759c6fd6bf49761d7e9d3e1c69f43100cff6e0a",
+          "goal_rgb_sha256": "1553124b3e095b055865bfd809daf002c923fc5232f1da3f0464a822e10e52ca"
+        },
+        {
+          "case_index": 8,
+          "id": "pusht/val/0008531/000016",
+          "success": true,
+          "steps": 19,
+          "failure_reason": "success",
+          "action_indices": [
+            0,
+            3,
+            7,
+            11,
+            15,
+            19
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/vanilla_action_flow/selected-trajectories/00008.npz",
+          "npz_sha256": "858c65ce080d54fdeac86f630c94e50ae06a4cc339dc196ec886c6d9a04b1b6d",
+          "initial_rgb_sha256": "b6a860452a4a8857cdd911dfbbca0bf369b26c056db5a5394d4ba6e7ab24da9e",
+          "goal_rgb_sha256": "69c93664a134ff76a73b7528bc5ccdeb56d8d6693cb545e0874e4d238ed606ef"
+        },
+        {
+          "case_index": 9,
+          "id": "pusht/val/0016738/000074",
+          "success": false,
+          "steps": 50,
+          "failure_reason": "action_limit",
+          "action_indices": [
+            0,
+            10,
+            20,
+            30,
+            40,
+            50
+          ],
+          "npz": "docs/reports/20261013-crossbench-baselines/runs/pusht/vanilla_action_flow/selected-trajectories/00009.npz",
+          "npz_sha256": "2bb91fc6853e59a3d9b9d490c534dddbdd26b1eeadef184eaec695c2535f82e6",
+          "initial_rgb_sha256": "ed21201f33c3ddb08853fe85b381cf5badc5bd4f98c7aaeb990b05161bfaf286",
+          "goal_rgb_sha256": "7c5e28d0c8bdc3d2e2b5a930bc06ced39498d1b8dc2ef884893bc35828bd5ecb"
+        }
+      ]
+    }
+  ],
+  "sheet_count": 16,
+  "archived_case_count": 160,
+  "all_archived_frames_displayed": true,
+  "same_initial_and_goal_pixels_across_methods": true,
+  "source_frame_size": [
+    224,
+    224
+  ],
+  "display_frame_size": [
+    176,
+    176
+  ],
+  "resize": "Lanczos, no cropping or pixel overlays",
+  "source": "747f635ad36af2cbe3e2bbb0b7997efe9caccaa1",
+  "model_calls": 0,
+  "simulator_calls": 0,
+  "optimizer_updates": 0,
+  "sealed_test_reads": 0,
+  "visual_inspection": "Record separately after viewing every finished sheet"
+}

@@ -1,0 +1,117 @@
+{
+  "utc": "2026-10-13T16:26:38.429306+00:00",
+  "reviewer": "Codex visual inspection in original-resolution image viewer",
+  "sheets_inspected": 16,
+  "archived_trajectories_inspected": 160,
+  "scope": "Every complete finished PNG, all ten rows, all archived frames and recorded goals; not all 800 selected evaluation trajectories",
+  "layout_findings": "No overlapping text, missing glyphs, introduced cropping, or illegible labels observed. Empty columns on short rollouts are intentional. Source camera occlusion/edge truncation is preserved.",
+  "case_mapping": "NPZ stems are original case-plan indices, not lexicographically sorted report positions; reconstructed order verified against report case-plan SHA256.",
+  "limitations": [
+    "These are first ten case-plan indices, not selected successes or a representative sample.",
+    "Success labels are recorded native outcomes; visual review is not a replacement evaluation or an independent numeric success audit.",
+    "No intermediate frames were synthesized; original 224-pixel images are preserved in NPZ and displayed at 176 pixels with Lanczos resizing.",
+    "Single seed, development checkpoint selection, different trained systems/custom ports and backbone exposure prevent causal-component, generalization or SOTA claims."
+  ],
+  "images": [
+    {
+      "file": "docs/reports/20261013-crossbench-baselines/visual-review/cube-action_flow_search.png",
+      "sha256": "191a605f087ed78175e66d281c9a5e794492d77d62f7cb590ceefcabf7367ee3",
+      "all_rows_inspected": true,
+      "finding": "All ten rows inspected. Several failures leave the cube on the table while the recorded goal shows a different configuration; rows 00001, 00003, 00007 and 00009 make this visible. No missing panels or unreadable labels."
+    },
+    {
+      "file": "docs/reports/20261013-crossbench-baselines/visual-review/cube-diffusion_policy_port.png",
+      "sha256": "d61e670a61cb3cf5fc2f56c056ba2c43ce7fc2f2776661682d6f8633473e2ba0",
+      "all_rows_inspected": true,
+      "finding": "All ten rows inspected. Rows 00008 and 00009 retain discrepancies at the action limit; row 00001 reaches reported success on action 50. The sheet preserves both short and long trajectories."
+    },
+    {
+      "file": "docs/reports/20261013-crossbench-baselines/visual-review/cube-execution_revision.png",
+      "sha256": "ec8645adbb1462efbfd91e708207387048987ca874224a847be05df31ec470bc",
+      "all_rows_inspected": true,
+      "finding": "All ten rows inspected. Several failed rows show the cube remaining on the table, while rows 00000, 00004 and 00005 stop after one action. Empty space in short rows is intentional, not missing data."
+    },
+    {
+      "file": "docs/reports/20261013-crossbench-baselines/visual-review/cube-feedback_wm_port.png",
+      "sha256": "1461fde23272da5654a311d0fc88f6fb9296248208b6c1e19ceb518a77a6cceb",
+      "all_rows_inspected": true,
+      "finding": "All ten rows inspected. Row 00009 remains a reported failure with the cube on the table; row 00008 succeeds at action 49. No label/frame overlap or crop introduced by the composition."
+    },
+    {
+      "file": "docs/reports/20261013-crossbench-baselines/visual-review/cube-leflow.png",
+      "sha256": "db7b2527eebfa19c251a43392454cf2d36644e1dc886e7afa8cb39a2b5061494",
+      "all_rows_inspected": true,
+      "finding": "All ten rows inspected. Rows 00005 and 00008 remain reported failures despite visible arm/cube motion. Goal panels, action labels and short-rollout spacing are readable."
+    },
+    {
+      "file": "docs/reports/20261013-crossbench-baselines/visual-review/cube-retrieval_repair_ttt.png",
+      "sha256": "462e2ff397a28d662021d42f68001a96cb399fb69bfdc12ba57c93dd327e6249",
+      "all_rows_inspected": true,
+      "finding": "All ten rows inspected. Failures in rows 00001, 00002, 00003, 00007 and 00009 retain different cube/gripper configurations from the goal. Source camera edge truncation is preserved, not cropped by the sheet."
+    },
+    {
+      "file": "docs/reports/20261013-crossbench-baselines/visual-review/cube-sage_port.png",
+      "sha256": "a192d1cdd68e58fd3bb8f9d31e1bb08a24362eccccb88c3f8a12851e719012ba",
+      "all_rows_inspected": true,
+      "finding": "All ten archived rows are reported successes; therefore this sheet does not include the one failure among the full 50 selected cases. All rows, including one-action successes, were inspected and are readable."
+    },
+    {
+      "file": "docs/reports/20261013-crossbench-baselines/visual-review/cube-vanilla_action_flow.png",
+      "sha256": "b6ea0ae9700e7210de14ed044087e8d2ba00396a96766a7f1c3d78ff75de0b15",
+      "all_rows_inspected": true,
+      "finding": "All ten rows and every saved frame inspected. Rows 00003, 00005 and 00008 retain a visibly different cube/gripper configuration from the recorded goal at the action limit. One-action successes are shown without duplicated intermediate frames."
+    },
+    {
+      "file": "docs/reports/20261013-crossbench-baselines/visual-review/pusht-action_flow_search.png",
+      "sha256": "57038aa99c826aef03c7a8c9f048f35f5c5da1588863de5dabc440b3b2a45916",
+      "all_rows_inspected": true,
+      "finding": "All ten rows inspected. The four reported failures are rows 00000, 00002, 00003 and 00004. Some endpoints look close to the goal, illustrating why the saved native success flag is retained."
+    },
+    {
+      "file": "docs/reports/20261013-crossbench-baselines/visual-review/pusht-diffusion_policy_port.png",
+      "sha256": "d8510eefc8b9b9148a4223046f6c58b1643c541c0327ec319661f0faac9d1a60",
+      "all_rows_inspected": true,
+      "finding": "All ten archived rows are reported failures, although the complete selected report has 11 successes out of 50. Visible pose drift in several rows is preserved. The fixed first-ten subset is not representative performance evidence."
+    },
+    {
+      "file": "docs/reports/20261013-crossbench-baselines/visual-review/pusht-execution_revision.png",
+      "sha256": "b130b3fa78afabb07b5d5b8549483a89907ed9cd26e5ae33a95f126721d51613",
+      "all_rows_inspected": true,
+      "finding": "All ten rows inspected. Rows 00000, 00004 and 00008 are reported failures; other rows show varying amounts of object translation/rotation before success. No clipping or overlap in the finished sheet."
+    },
+    {
+      "file": "docs/reports/20261013-crossbench-baselines/visual-review/pusht-feedback_wm_port.png",
+      "sha256": "80e3d1541cf082f61f5b0be79475a09a129f8aca4436c918e2ed3a85762a518d",
+      "all_rows_inspected": true,
+      "finding": "All ten rows inspected. Rows 00000, 00002, 00005 and 00008 are reported successes. Failures include visible pose rotation away from the goal; all saved action samples and goal panels are present."
+    },
+    {
+      "file": "docs/reports/20261013-crossbench-baselines/visual-review/pusht-leflow.png",
+      "sha256": "b210b561aac109cacaaedc0d658676962f10596d382ae590420b2e3bfce00a33",
+      "all_rows_inspected": true,
+      "finding": "All ten rows inspected. Rows 00000, 00002 and 00003 are reported successes. Remaining rows retain pose or agent-position differences; visual similarity alone is not substituted for the native predicate."
+    },
+    {
+      "file": "docs/reports/20261013-crossbench-baselines/visual-review/pusht-retrieval_repair_ttt.png",
+      "sha256": "ae6ce8e6a372b3a4797dddb62c40468177a74b1e2a54fbf2182fd3a51627c216",
+      "all_rows_inspected": true,
+      "finding": "All ten rows inspected. Rows 00000, 00004 and 00005 are reported failures. Several successful endpoints look close to the recorded object/agent arrangement, without treating image similarity as a new success test."
+    },
+    {
+      "file": "docs/reports/20261013-crossbench-baselines/visual-review/pusht-sage_port.png",
+      "sha256": "0c7a4d602a639bc59687ccf80e3b556638166d5e1650f9a49b11505a38b8819a",
+      "all_rows_inspected": true,
+      "finding": "All ten rows inspected. Row 00006 is the only reported failure in this archived subset and retains a shifted object/agent arrangement. All remaining rows and captions are readable."
+    },
+    {
+      "file": "docs/reports/20261013-crossbench-baselines/visual-review/pusht-vanilla_action_flow.png",
+      "sha256": "13f4dcd09c23ddb4873574d2a58ba7fd07a4c589b9fff5fade2f807ffbe8b05e",
+      "all_rows_inspected": true,
+      "finding": "All ten rows inspected. Rows 00001, 00002 and 00008 are the reported successes. Several failures visibly stop with a different object pose from the recorded goal; all panels and labels are readable."
+    }
+  ],
+  "model_calls": 0,
+  "simulator_calls": 0,
+  "optimizer_updates": 0,
+  "final_tests_read": false
+}

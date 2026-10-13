@@ -1583,5 +1583,15 @@
     }
   ],
   "failed_runs": [],
-  "execution_state": "complete"
+  "execution_state": "complete",
+  "visual_review": {
+    "index": "docs/reports/20261013-crossbench-baselines/visual-review/index.json",
+    "index_sha256": "4747801a82625d86fbecef04c9d0ababec5c469a1dcae99468f9195e64e261c3",
+    "inspection": "docs/reports/20261013-crossbench-baselines/visual-review/inspection.json",
+    "inspection_sha256": "1c725eaccc2d45c85f9e8166e27c3ba9006cd5c80baf432efd906edb7d6b4d37",
+    "sheets_inspected": 16,
+    "archived_trajectories_inspected": 160,
+    "model_calls": 0,
+    "simulator_calls": 0
+  }
 }

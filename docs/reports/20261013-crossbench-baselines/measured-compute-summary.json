@@ -1,0 +1,35 @@
+{
+  "unit": "GPU hours",
+  "optimization": "14.0533655446664329",
+  "registered_evaluation": "3.229509477849221886",
+  "completed_run_native_preflights": "0.0408936909508580974",
+  "completed_run_no_update_ddp_preflights": "0.00779029801487922662",
+  "failed_wandb_attempt_preflights": "0.00497384597392131886",
+  "cache_preparation": [
+    {
+      "source": "docs/reports/20261013-crossbench-baselines/cache/pusht/manifest.json.gz",
+      "seconds": "162.26606340147555",
+      "encoder_gpus": 1,
+      "gpu_hours": "0.045073906500409875"
+    },
+    {
+      "source": "docs/reports/20261013-crossbench-baselines/cache/cube/manifest.json.gz",
+      "seconds": "488.3616515696049",
+      "encoder_gpus": 4,
+      "gpu_hours": "0.542624057299561"
+    },
+    {
+      "source": "docs/reports/20261013-crossbench-baselines/precision-recovery.json",
+      "seconds": "491.9257512707263",
+      "encoder_gpus": 4,
+      "gpu_hours": "0.5465841680785847777777777778"
+    }
+  ],
+  "known_measured_native_components_total": "18.47081498933386908165777778",
+  "limitations": [
+    "Not a full cluster bill.",
+    "Earlier failed Cube precision preflight and W&B startup waiting durations remain unmeasured, not zero.",
+    "CPU-only audit, image composition and visual review are not optimizer charges."
+  ],
+  "source_records": "Per-run complete/native-preflight/gradient-preflight JSON, cache manifests, precision-recovery.json and preserved failed W&B attempt preflights."
+}
