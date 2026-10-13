@@ -22,12 +22,21 @@ jobs:
           filter: blob:none
           sparse-checkout: |
             leflow_refinement
+            crossbench
+            flow_jepa
             tests
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
       - run: pip install torch==2.8.0 --index-url https://download.pytorch.org/whl/cpu
-      - run: python -m unittest discover -s tests -p 'test_leflow_refinement*.py' -v
+      - run: pip install numpy==2.2.6 h5py omegaconf
+      - run: python -m unittest discover -s tests -p 'test_leflow_refinement*.py' -v 2>&1 | tee refinement-tests.log
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: refinement-numerical-checks
+          path: refinement-tests.log
+          retention-days: 14
   released:
     runs-on: ubuntu-latest
     timeout-minutes: 30
