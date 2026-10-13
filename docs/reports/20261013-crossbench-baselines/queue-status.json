@@ -1,7 +1,33 @@
 {
-  "failed": true,
+  "failed": false,
   "lanes": {
     "A": {
+      "command": [
+        "/tmp/mtxu-crossbench-20261013/env/bin/python",
+        "-u",
+        "-m",
+        "crossbench.prepare",
+        "--task",
+        "cube",
+        "--source-json",
+        "/tmp/mtxu-leflow-20261004/data/prepared/cube/source.json",
+        "--output",
+        "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/cache/cube",
+        "--gpus",
+        "4",
+        "--batch-size",
+        "512"
+      ],
+      "physical_gpus": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "pid": 3223197,
+      "state": "preparing_cube_cache"
+    },
+    "B": {
       "command": [
         "/tmp/mtxu-crossbench-20261013/env/bin/python",
         "-u",
@@ -14,52 +40,29 @@
         "--task",
         "pusht",
         "--method",
-        "execution_revision",
+        "sage_port",
         "--cache",
         "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/cache/pusht",
         "--run-dir",
-        "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/pusht/execution_revision"
+        "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/pusht/sage_port"
       ],
       "dataset": "pusht",
-      "method": "execution_revision",
-      "physical_gpus": [
-        "0",
-        "1",
-        "2",
-        "3"
-      ],
-      "pid": 3187704,
-      "state": "training_and_periodic_evaluation"
-    },
-    "B": {
-      "command": [
-        "/tmp/mtxu-crossbench-20261013/env/bin/python",
-        "-u",
-        "-m",
-        "crossbench.preflight",
-        "--task",
-        "cube",
-        "--method",
-        "vanilla_action_flow",
-        "--cache",
-        "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/cache/cube",
-        "--output",
-        "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/cube/vanilla_action_flow/native-preflight.json"
-      ],
-      "dataset": "cube",
-      "error": "RuntimeError('cube-vanilla_action_flow-preflight.log exited 1; inspect preserved log before resuming')",
-      "method": "vanilla_action_flow",
+      "method": "sage_port",
       "physical_gpus": [
         "4",
         "5",
         "6",
         "7"
       ],
-      "pid": 3215737,
-      "state": "failed_hold"
+      "pid": 3223318,
+      "state": "training_and_periodic_evaluation"
     }
   },
   "pending": [
+    [
+      "cube",
+      "vanilla_action_flow"
+    ],
     [
       "cube",
       "retrieval_repair_ttt"
@@ -75,10 +78,6 @@
     [
       "cube",
       "action_flow_search"
-    ],
-    [
-      "pusht",
-      "sage_port"
     ],
     [
       "cube",
@@ -621,5 +620,5 @@
     }
   ],
   "source": "747f635ad36af2cbe3e2bbb0b7997efe9caccaa1",
-  "utc": "2026-10-13T10:42:06.159729+00:00"
+  "utc": "2026-10-13T10:47:03.371501+00:00"
 }

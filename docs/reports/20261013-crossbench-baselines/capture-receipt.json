@@ -1,5 +1,5 @@
 {
-  "utc": "2026-10-13T10:46:18.627567+00:00",
+  "utc": "2026-10-13T10:48:58.465012+00:00",
   "artifacts": {
     "launcher.json": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/launcher.json",
@@ -18,8 +18,8 @@
     },
     "queue-status.json": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/queue-status.json",
-      "original_sha256": "eb27bbd517d67687fabea38f0e3cb0f66ed546946ec880fc69b9cfd928a92851",
-      "stored_sha256": "eb27bbd517d67687fabea38f0e3cb0f66ed546946ec880fc69b9cfd928a92851"
+      "original_sha256": "be6c5bfaed86897b6062329dbb0d9865d1ee068f63b5d8f1df6561dbcd64560f",
+      "stored_sha256": "be6c5bfaed86897b6062329dbb0d9865d1ee068f63b5d8f1df6561dbcd64560f"
     },
     "queue-complete.json": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/queue-complete.json",
@@ -100,6 +100,11 @@
       "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/logs/cube-cache.log",
       "original_sha256": "28245a127dd2555574cb15ae3dc9a84942ad77d55c19823a374a32527214b2f9",
       "stored_sha256": "210a7d316542a55e3cceea099a4cabb61145136eaad95cb78b98a7e8f8a45f3f"
+    },
+    "preparation-logs/cube-cache-strict-fp32.log.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/logs/cube-cache-strict-fp32.log",
+      "original_sha256": "ca4f2e9a38456f0259737cda892971fe697b0dfdbce25ea77f854ccb7e10a4f0",
+      "stored_sha256": "bffee586990e1554abdc7acb84edad36a24ee69e8f89f24a019136cdb4aab361"
     },
     "cache/cube-tf32-original/manifest.json.gz": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/cache/cube-tf32-original/manifest.json",
@@ -580,6 +585,36 @@
       "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/pusht/retrieval_repair_ttt/validation/step_0010000/trajectories/00009.npz",
       "original_sha256": "1e3b4194495f9fb8f1c18c706c26406e06a6e3656bfd92bf75b6bebe72ba3b6d",
       "stored_sha256": "1e3b4194495f9fb8f1c18c706c26406e06a6e3656bfd92bf75b6bebe72ba3b6d"
+    },
+    "runs/pusht/sage_port/identity.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/pusht/sage_port/identity.json",
+      "original_sha256": "5fa5647c068d3ce4b54d0412edcaac9e73f410c1117262ae86bff24fd2e3052f",
+      "stored_sha256": "5fa5647c068d3ce4b54d0412edcaac9e73f410c1117262ae86bff24fd2e3052f"
+    },
+    "runs/pusht/sage_port/usage.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/pusht/sage_port/usage.json",
+      "original_sha256": "244f7b69aaaf9784d5d72a7cb99f5741d0720694324e61ad560fcc5fa81073cc",
+      "stored_sha256": "244f7b69aaaf9784d5d72a7cb99f5741d0720694324e61ad560fcc5fa81073cc"
+    },
+    "runs/pusht/sage_port/native-preflight.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/pusht/sage_port/native-preflight.json",
+      "original_sha256": "09ed5239b9888020bb1d3ada4ebefa7ab039bb5063c7e0089cab9e01e6444c81",
+      "stored_sha256": "09ed5239b9888020bb1d3ada4ebefa7ab039bb5063c7e0089cab9e01e6444c81"
+    },
+    "runs/pusht/sage_port/gradient-preflight.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/pusht/sage_port/gradient-preflight.json",
+      "original_sha256": "375444f3638dea2503f444e3ad5509caf17db3acf8acab567e77efa026b8ba9c",
+      "stored_sha256": "375444f3638dea2503f444e3ad5509caf17db3acf8acab567e77efa026b8ba9c"
+    },
+    "runs/pusht/sage_port/wandb.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/pusht/sage_port/wandb.json",
+      "original_sha256": "510afbbf7837d918e28232a75ea90f27cb2f9b16708b5fa9d4628e7d46e9d4cd",
+      "stored_sha256": "510afbbf7837d918e28232a75ea90f27cb2f9b16708b5fa9d4628e7d46e9d4cd"
+    },
+    "runs/pusht/sage_port/metrics.jsonl.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/pusht/sage_port/metrics.jsonl",
+      "original_sha256": "bd6b9714477f91c45f4b3c89b434ea5d112ef85082c2403c4743cedf998654b3",
+      "stored_sha256": "6d031ff651f7c0768164b830434f03bb8cb14b8406c0489e515a056e8e98f2c1"
     },
     "runs/pusht/vanilla_action_flow/identity.json": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/pusht/vanilla_action_flow/identity.json",
