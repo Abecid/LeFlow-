@@ -1,13 +1,13 @@
 # LeFlow BTM-JEPA training: experiment status and results
 
-**Latest check: October 13, 16:00 UTC — remote monitoring access is blocked again.**
-Campaign, authenticated W&B/CPU-probe and GPU reads each failed twice during SSH
-banner exchange (exit 255, empty output). No fresh remote state or active ETA
-could be verified. The last successful campaign check at 15:44 UTC was incomplete:
-BTM saved 23,830 updates; flow saved 23,000 / logged 23,040; both completion markers
-were absent. Cached GPU samples at 15:44–15:46 UTC were idle; current hardware is
-unknown. See the [access-failure report](reports/20261013T160039Z.md) and preserved
-[previous published report](reports/20261013T150054Z.md).
+**Latest check: October 13, 16:15 UTC — complete remote monitoring access restored.**
+Campaign, authenticated W&B/CPU-probe and GPU reads succeeded on their first
+attempts. Fresh records still show the campaign interrupted/incomplete: BTM saved
+23,830 updates; flow saved 23,000 / logged 23,040; both completion markers remain
+absent. All eight GPUs were idle in the observed samples. No training recovery,
+new evaluations or active completion ETA were verified. See the
+[access-recovery report](reports/20261013T161503Z.md); the
+[previous access failure](reports/20261013T160039Z.md) remains preserved.
 
 **Verified October 6, 2026, 1:09–1:11 AM EDT (05:09–05:11 UTC).**
 
@@ -20,11 +20,11 @@ training artifacts were found in the inspected deployment and configured/default
 cache locations. The [run inventory](snapshots/20261006T050931Z/run-inventory.json)
 records this scope; it is not a claim about every directory on the server.
 
-**The full experiment suite has not been run, and the paired pilot was incomplete at the last successful check.** BTM reached its planned training and validation endpoint; flow stopped short. Available single-seed validation results **do not establish that BTM improves long-horizon success or preserves success with a controlled speedup**. The cached October 13, 15:44:46–15:44:50 UTC collection had no new training/evaluation results since the October 5 report. W&B observations at 15:44:54/55 UTC agreed with the same incomplete state. All three current monitoring reads failed, so present campaign recovery, completion and hardware state are unknown. No fresh scientific comparison is claimed.
+**The full experiment suite has not been run, and the paired pilot remains incomplete.** BTM reached its planned training and validation endpoint; flow stopped short. Available single-seed validation results **do not establish that BTM improves long-horizon success or preserves success with a controlled speedup**. The fresh October 13, 16:14:44–16:14:48 UTC collection contains unchanged full training/evaluation histories, exact paired identities, protocol and checkpoint metadata. W&B observations at 16:15:01/03 UTC agree with the same incomplete state. Access recovery does not establish training recovery. No new scientific comparison is claimed.
 
 ## What ran
 
-Campaign status in this table is cached from October 13, 15:44:50 UTC; it was not freshly verified by the 15:59 heartbeat.
+Campaign status in this table was freshly checked on October 13, 16:14:44–16:14:48 UTC.
 
 | Experiment | Status |
 |---|---|
@@ -36,9 +36,9 @@ Campaign status in this table is cached from October 13, 15:44:50 UTC; it was no
 | Held-out test and additional training seeds | Not run |
 | Exact published LeFlow reproduction; V-JEPA 2.1 / Meta-World | Not performed; the latter is not implemented |
 
-Only **one trained baseline** is available. The broader controls have no results in the inspected campaign. The cached 15:44:46–15:44:50 UTC collection found no known campaign trainer or flow controller through the collector's name/path filters and accessible process view; the original supervisor remained intentionally stopped. Both completion markers were absent. BTM's final checkpoint metadata was valid at epoch 10, next batch 0, with recorded trainer exit zero. Flow needed **830 updates from its recoverable checkpoint**, including replay of 40 logged but unsaved updates, plus final validation. Cached W&B checks at 15:44:54/55 UTC reported both runs `finished` at steps 23,830/23,040 and runtimes 8,304/9,240 seconds. The CPU probe at 15:44:46 UTC was unchanged; campaign and probe records preserved the same manifest. Current checkpoint state could not be reread or rehashed.
+Only **one trained baseline** is available. The broader controls have no results in the inspected campaign. The fresh 16:14:44–16:14:48 UTC collection found no known campaign trainer or flow controller through the collector's name/path filters and accessible process view; the original supervisor remains intentionally stopped. Both completion markers are absent. BTM's final checkpoint metadata is valid at epoch 10, next batch 0, with recorded trainer exit zero. Flow needs **830 updates from its recoverable checkpoint**, including replay of 40 logged but unsaved updates, plus final validation. W&B checks at 16:15:01/03 UTC report both runs `finished` at steps 23,830/23,040 and runtimes 8,304/9,240 seconds. The CPU probe at 16:14:46 UTC is unchanged; campaign and probe records preserve the same manifest. Checkpoint metadata was reread, but checkpoint bytes were not rehashed in this check.
 
-Cached GPU query/collector observations at 15:44:45/50 UTC showed all eight devices at zero reported memory and utilization, with no compute-process entries in the separate query. The 15:46:01 UTC detailed follow-up also showed all eight devices at 0 MiB/0%, no process entries, temperatures 27–30°C, P0 throughout and zero reported uncorrected volatile ECC errors. This followed the prior unattributed activity; the point samples do not establish continuing inactivity or identify those workloads. All current remote reads failed during SSH banner exchange. **There is no verified active completion ETA.** Monitoring changed no GPU jobs; current state remains unknown until read access returns.
+GPU query/collector observations at 16:14:44/48 UTC show all eight devices at zero reported memory and utilization, with no compute-process entries in the separate query. These point samples do not establish continuing inactivity or identify earlier workloads. Temperatures and hardware-error diagnostics were not collected in this check. **There is no verified active completion ETA.** Monitoring changed no GPU jobs; the complete evaluation-cycle history is unchanged and no running recovery was observed.
 
 ## How good is BTM relative to flow?
 
