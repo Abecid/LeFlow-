@@ -5,7 +5,7 @@ Sixteen authorized fresh runs; completed MetaWorld results are reused. Training 
 | Dataset | Method | State | Success curve /50 | Best measured |
 | --- | --- | --- | --- | ---: |
 | pusht | execution_revision | training / periodic evaluation | pending | pending |
-| pusht | leflow | training / periodic evaluation | 12 / 8 / 9 / 12 | 12 |
+| pusht | leflow | completed, audited | 12 / 8 / 9 / 12 | 12 |
 | pusht | retrieval_repair_ttt | training / periodic evaluation | 34 / 39 / 37 | 39 |
 | pusht | vanilla_action_flow | completed, audited | 7 / 13 / 15 / 17 | 17 |
 

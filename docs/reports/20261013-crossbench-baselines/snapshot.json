@@ -1,5 +1,5 @@
 {
-  "utc": "2026-10-13T10:15:24.048273+00:00",
+  "utc": "2026-10-13T10:19:20.721356+00:00",
   "runs": [
     {
       "dataset": "pusht",
@@ -8,9 +8,9 @@
         "cap": 28800.0,
         "evaluation_seconds": 0.0,
         "final_update_overrun_seconds": 0.0,
-        "optimization_gpu_hours": 0.03427949719751874,
-        "optimization_seconds": 123.40618991106749,
-        "step": 396
+        "optimization_gpu_hours": 0.2844668674055073,
+        "optimization_seconds": 1024.0807226598263,
+        "step": 3323
       },
       "wandb.json": {
         "id": "0a7tgv4j",
@@ -380,9 +380,9 @@
         "cap": 28800.0,
         "evaluation_seconds": 94.65722761303186,
         "final_update_overrun_seconds": 0.0,
-        "optimization_gpu_hours": 1.5580894564733736,
-        "optimization_seconds": 5609.122043304145,
-        "step": 16671
+        "optimization_gpu_hours": 1.8084354671028753,
+        "optimization_seconds": 6510.367681570351,
+        "step": 19340
       },
       "wandb.json": {
         "id": "jvbbolss",
