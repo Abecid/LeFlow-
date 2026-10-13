@@ -85,8 +85,15 @@
     77,
     78,
     79,
-    80
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86
   ],
   "active_range_bytes": {},
-  "completed": false
+  "completed": true,
+  "archive_sha256_verified": true
 }

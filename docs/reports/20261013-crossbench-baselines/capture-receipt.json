@@ -1,5 +1,5 @@
 {
-  "utc": "2026-10-13T10:19:20.721356+00:00",
+  "utc": "2026-10-13T10:24:20.612909+00:00",
   "artifacts": {
     "launcher.json": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/launcher.json",
@@ -18,8 +18,8 @@
     },
     "queue-status.json": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/queue-status.json",
-      "original_sha256": "1c6484adce64f1307938d1050b3aef88fcf5790e9d708962aaba5ece49fde41a",
-      "stored_sha256": "1c6484adce64f1307938d1050b3aef88fcf5790e9d708962aaba5ece49fde41a"
+      "original_sha256": "8729a6e0a80443bd750a00b8c17ecefb884807f79e6ddd6b5bf4c5dc6b82a1b1",
+      "stored_sha256": "8729a6e0a80443bd750a00b8c17ecefb884807f79e6ddd6b5bf4c5dc6b82a1b1"
     },
     "runtime-files.json": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runtime-files.json",
@@ -43,8 +43,8 @@
     },
     "cube-download-progress.json": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/cube-download-progress.json",
-      "original_sha256": "175824a9ba0ae309151ba2054753da953c442b0386ec942ae30da5f34a306782",
-      "stored_sha256": "175824a9ba0ae309151ba2054753da953c442b0386ec942ae30da5f34a306782"
+      "original_sha256": "8e2f270add45892d638c0c07470e2717cff1542cfa1dfdf58781a0ede19919e6",
+      "stored_sha256": "8e2f270add45892d638c0c07470e2717cff1542cfa1dfdf58781a0ede19919e6"
     },
     "cube-recovery-launcher-file-transfer-race.json": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/cube-recovery-launcher-file-transfer-race.json",
@@ -61,6 +61,46 @@
       "original_sha256": "1356a4d1213b4e99b47f882100fcd666c4a55dc481fc1fb2d77800e008eaf83a",
       "stored_sha256": "a9cc3c03775f3162a3c835a098b99d6af7a47336511386f0a2466362848e1f58"
     },
+    "runs/pusht/action_flow_search/identity.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/pusht/action_flow_search/identity.json",
+      "original_sha256": "761dff106502953edfa19bf615032759e87fd4cabb2ec6b1bdd182ce31589e4d",
+      "stored_sha256": "761dff106502953edfa19bf615032759e87fd4cabb2ec6b1bdd182ce31589e4d"
+    },
+    "runs/pusht/action_flow_search/usage.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/pusht/action_flow_search/usage.json",
+      "original_sha256": "d119518d9bb0f750d93c17c487b838deb72de6cc670e1643b59c02ccb365be63",
+      "stored_sha256": "d119518d9bb0f750d93c17c487b838deb72de6cc670e1643b59c02ccb365be63"
+    },
+    "runs/pusht/action_flow_search/native-preflight.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/pusht/action_flow_search/native-preflight.json",
+      "original_sha256": "fb7496e5a3dc4f185516ba263c17bf672eb38f540387fa8b29a832a5b4c95847",
+      "stored_sha256": "fb7496e5a3dc4f185516ba263c17bf672eb38f540387fa8b29a832a5b4c95847"
+    },
+    "runs/pusht/action_flow_search/gradient-preflight.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/pusht/action_flow_search/gradient-preflight.json",
+      "original_sha256": "ba09b6534e18a04e3d9502bb72f6b69dc02560588aa71296b9327cdc1f05dc4e",
+      "stored_sha256": "ba09b6534e18a04e3d9502bb72f6b69dc02560588aa71296b9327cdc1f05dc4e"
+    },
+    "runs/pusht/action_flow_search/wandb.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/pusht/action_flow_search/wandb.json",
+      "original_sha256": "0a7c8d669612ec29684c95ed8ea023c2d8c64969695eb5c5358a32ac2d078ee9",
+      "stored_sha256": "0a7c8d669612ec29684c95ed8ea023c2d8c64969695eb5c5358a32ac2d078ee9"
+    },
+    "runs/pusht/action_flow_search/best.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/pusht/action_flow_search/best.json",
+      "original_sha256": "311489e2061a9750a108b26cb0e7fb242d1220c3e0d046299a0c817fb3401dc5",
+      "stored_sha256": "311489e2061a9750a108b26cb0e7fb242d1220c3e0d046299a0c817fb3401dc5"
+    },
+    "runs/pusht/action_flow_search/metrics.jsonl.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/pusht/action_flow_search/metrics.jsonl",
+      "original_sha256": "bd85a4dedfafa39081c01e2061682cb47ff4928ad94177659858aa114980b1d8",
+      "stored_sha256": "44ae0a32ee8eaa79068d52c560e24fb658c46b48ec3814387e5df7cc1e19846b"
+    },
+    "runs/pusht/action_flow_search/validation/step_0005000/report.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/pusht/action_flow_search/validation/step_0005000/report.json",
+      "original_sha256": "48ff823d7bb3d30da5c074014390c93d732a7577e7413e02f57f79ffee9f2d98",
+      "stored_sha256": "3ea94ed0a24a0f48fc9b41ed5f8e1f2a276b739f121c406f123f08344220d748"
+    },
     "runs/pusht/execution_revision/identity.json": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/pusht/execution_revision/identity.json",
       "original_sha256": "07451c7ff4fab9cf3426efbacdad132477d11439515c63984f521e4a57391aca",
@@ -68,8 +108,8 @@
     },
     "runs/pusht/execution_revision/usage.json": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/pusht/execution_revision/usage.json",
-      "original_sha256": "fccba32c44f818fc38b82155dacfb695205e81abca43b9fbd4109c594304c6bc",
-      "stored_sha256": "fccba32c44f818fc38b82155dacfb695205e81abca43b9fbd4109c594304c6bc"
+      "original_sha256": "7959287acdc3144d2dfce106a4bd975e246663baa898aa82e5829aca235a53cb",
+      "stored_sha256": "7959287acdc3144d2dfce106a4bd975e246663baa898aa82e5829aca235a53cb"
     },
     "runs/pusht/execution_revision/native-preflight.json": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/pusht/execution_revision/native-preflight.json",
@@ -86,10 +126,20 @@
       "original_sha256": "c44b13a34d39ddb671e029e218b1ab163ff2c68e0dd8991bdf5c16f8a1d1295f",
       "stored_sha256": "c44b13a34d39ddb671e029e218b1ab163ff2c68e0dd8991bdf5c16f8a1d1295f"
     },
+    "runs/pusht/execution_revision/best.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/pusht/execution_revision/best.json",
+      "original_sha256": "6cf7a4d8e484f249d1a57f64816533176f646a7a29da1b719a478dde6c9cff60",
+      "stored_sha256": "6cf7a4d8e484f249d1a57f64816533176f646a7a29da1b719a478dde6c9cff60"
+    },
     "runs/pusht/execution_revision/metrics.jsonl.gz": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/pusht/execution_revision/metrics.jsonl",
-      "original_sha256": "3b6b4283b43efdf588d2f9be8604b36a34dd6bdb040cd9b5154a4baf4f00cd37",
-      "stored_sha256": "6b847b5c6b349ea7e43101950bfadf666badc6ff0000dc25f4b29d1e77b5ea78"
+      "original_sha256": "ffd1f48ec0f4ef440a2d7344027ac349ad4b6002cf5c9d18d63a4f227dde2e84",
+      "stored_sha256": "67652c94193a5602986d73f6907ceba9594438d8e24898d358952c0f586fc42c"
+    },
+    "runs/pusht/execution_revision/validation/step_0005000/report.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/pusht/execution_revision/validation/step_0005000/report.json",
+      "original_sha256": "cfc27b3301dbd462e3d62778d3e67d17f9fa94d191cb3428597fdcd41e4eb554",
+      "stored_sha256": "1088f82bf58c51e5ed83f3045615c7c97a683177222b6a3a05dbc14284700c23"
     },
     "runs/pusht/leflow/identity.json": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/pusht/leflow/identity.json",
@@ -213,8 +263,8 @@
     },
     "runs/pusht/retrieval_repair_ttt/usage.json": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/pusht/retrieval_repair_ttt/usage.json",
-      "original_sha256": "57d7eaa11839484fc6c6af8d83c5ecf0d289c25dbe35fde7051bbbc7098a644b",
-      "stored_sha256": "57d7eaa11839484fc6c6af8d83c5ecf0d289c25dbe35fde7051bbbc7098a644b"
+      "original_sha256": "a4c364e2c73386b7579e923d09781cd26059164c375c626c9c7c792558985298",
+      "stored_sha256": "a4c364e2c73386b7579e923d09781cd26059164c375c626c9c7c792558985298"
     },
     "runs/pusht/retrieval_repair_ttt/native-preflight.json": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/pusht/retrieval_repair_ttt/native-preflight.json",
@@ -236,10 +286,20 @@
       "original_sha256": "1316eb6018e6e7caa2b8290ad457ee127d063a399a2f076a99384d0ad5e195a1",
       "stored_sha256": "1316eb6018e6e7caa2b8290ad457ee127d063a399a2f076a99384d0ad5e195a1"
     },
+    "runs/pusht/retrieval_repair_ttt/complete.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/pusht/retrieval_repair_ttt/complete.json",
+      "original_sha256": "98fb5e17d2a269192da34b936aefd01b976922f7d32ad6e1772396fcef520146",
+      "stored_sha256": "98fb5e17d2a269192da34b936aefd01b976922f7d32ad6e1772396fcef520146"
+    },
+    "runs/pusht/retrieval_repair_ttt/final-audit.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/pusht/retrieval_repair_ttt/final-audit.json",
+      "original_sha256": "40e2408b8dcd1f71f26f72d009676c20036cca8f0ea4cf2ef840987874e1b723",
+      "stored_sha256": "40e2408b8dcd1f71f26f72d009676c20036cca8f0ea4cf2ef840987874e1b723"
+    },
     "runs/pusht/retrieval_repair_ttt/metrics.jsonl.gz": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/pusht/retrieval_repair_ttt/metrics.jsonl",
-      "original_sha256": "84204b3c23ce700dafb478e99c0112d86fcc8fb548e0c26dc44e1a082d8f94ef",
-      "stored_sha256": "8742e3b4b209c94b38ec4e630a6a0de308f0b150543bc16db36cb650b6b7476f"
+      "original_sha256": "b50e8ca761bb985105acca867b053b04acf2289d3c1e6dcfa296cc8600c3481f",
+      "stored_sha256": "bdcb206e3c9a8da08425c030dbec4abfd1b03854b7ad3d9e052f094e433c026c"
     },
     "runs/pusht/retrieval_repair_ttt/validation/step_0005000/report.json.gz": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/pusht/retrieval_repair_ttt/validation/step_0005000/report.json",
@@ -255,6 +315,61 @@
       "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/pusht/retrieval_repair_ttt/validation/step_0015000/report.json",
       "original_sha256": "7f2a473ed9c83761281197ea910a667e147bffdefd7cb5a0c380da7006d7d527",
       "stored_sha256": "8a9d55b4784833bdbfe8e3c0f9bf1f4a1abe9cdbb1705c902dbdec9f51f72953"
+    },
+    "runs/pusht/retrieval_repair_ttt/validation/step_0020000/report.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/pusht/retrieval_repair_ttt/validation/step_0020000/report.json",
+      "original_sha256": "466f18cf3b0e0d8f611e84dc802d9a0e39c8ee318251cd2985ddc95eb691e5c9",
+      "stored_sha256": "52acac3251b8cf4e3f2dd25e800f937bb8be4f4286c61f03cd6da6c8dbe5eb12"
+    },
+    "runs/pusht/retrieval_repair_ttt/selected-trajectories/00000.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/pusht/retrieval_repair_ttt/validation/step_0010000/trajectories/00000.npz",
+      "original_sha256": "6f9d49a395f8d51506730ae479c61ee5dd114c7b77430fb17c6dd6d96790a8fe",
+      "stored_sha256": "6f9d49a395f8d51506730ae479c61ee5dd114c7b77430fb17c6dd6d96790a8fe"
+    },
+    "runs/pusht/retrieval_repair_ttt/selected-trajectories/00001.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/pusht/retrieval_repair_ttt/validation/step_0010000/trajectories/00001.npz",
+      "original_sha256": "1b2b9d51292cb69903051d1c958c4b064218e0d1164acf18ff6b50b6cd63780d",
+      "stored_sha256": "1b2b9d51292cb69903051d1c958c4b064218e0d1164acf18ff6b50b6cd63780d"
+    },
+    "runs/pusht/retrieval_repair_ttt/selected-trajectories/00002.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/pusht/retrieval_repair_ttt/validation/step_0010000/trajectories/00002.npz",
+      "original_sha256": "c68e2ac421b3de9c215ca7aee79eb062d7942e617b431bf81f85155bb8d03185",
+      "stored_sha256": "c68e2ac421b3de9c215ca7aee79eb062d7942e617b431bf81f85155bb8d03185"
+    },
+    "runs/pusht/retrieval_repair_ttt/selected-trajectories/00003.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/pusht/retrieval_repair_ttt/validation/step_0010000/trajectories/00003.npz",
+      "original_sha256": "e7842712dd88117c73b8f96d04d8e3125698868398dbb82a88ea890984b19225",
+      "stored_sha256": "e7842712dd88117c73b8f96d04d8e3125698868398dbb82a88ea890984b19225"
+    },
+    "runs/pusht/retrieval_repair_ttt/selected-trajectories/00004.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/pusht/retrieval_repair_ttt/validation/step_0010000/trajectories/00004.npz",
+      "original_sha256": "2e85d812715180c52a2a5c40a65728a8355defeccc6cc74c0c8c296f557654eb",
+      "stored_sha256": "2e85d812715180c52a2a5c40a65728a8355defeccc6cc74c0c8c296f557654eb"
+    },
+    "runs/pusht/retrieval_repair_ttt/selected-trajectories/00005.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/pusht/retrieval_repair_ttt/validation/step_0010000/trajectories/00005.npz",
+      "original_sha256": "ec968c7e7c57d55c60c6d9ab846dc66fd5b7b1d86b847c7b05679ec410243861",
+      "stored_sha256": "ec968c7e7c57d55c60c6d9ab846dc66fd5b7b1d86b847c7b05679ec410243861"
+    },
+    "runs/pusht/retrieval_repair_ttt/selected-trajectories/00006.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/pusht/retrieval_repair_ttt/validation/step_0010000/trajectories/00006.npz",
+      "original_sha256": "1fe61b02f1e14c05496a6ba7ac215eafbd9e2942d62b203fdfbd2b4bdd259a05",
+      "stored_sha256": "1fe61b02f1e14c05496a6ba7ac215eafbd9e2942d62b203fdfbd2b4bdd259a05"
+    },
+    "runs/pusht/retrieval_repair_ttt/selected-trajectories/00007.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/pusht/retrieval_repair_ttt/validation/step_0010000/trajectories/00007.npz",
+      "original_sha256": "f8d37b4fd184fbc91748264189966c275c3ecb7761cea10a14585469bd8c37e9",
+      "stored_sha256": "f8d37b4fd184fbc91748264189966c275c3ecb7761cea10a14585469bd8c37e9"
+    },
+    "runs/pusht/retrieval_repair_ttt/selected-trajectories/00008.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/pusht/retrieval_repair_ttt/validation/step_0010000/trajectories/00008.npz",
+      "original_sha256": "577fe530a033e720e2e6514930bd9866f124701045bbee710d6cb55fb8f71899",
+      "stored_sha256": "577fe530a033e720e2e6514930bd9866f124701045bbee710d6cb55fb8f71899"
+    },
+    "runs/pusht/retrieval_repair_ttt/selected-trajectories/00009.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/pusht/retrieval_repair_ttt/validation/step_0010000/trajectories/00009.npz",
+      "original_sha256": "1e3b4194495f9fb8f1c18c706c26406e06a6e3656bfd92bf75b6bebe72ba3b6d",
+      "stored_sha256": "1e3b4194495f9fb8f1c18c706c26406e06a6e3656bfd92bf75b6bebe72ba3b6d"
     },
     "runs/pusht/vanilla_action_flow/identity.json": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/pusht/vanilla_action_flow/identity.json",
@@ -373,13 +488,13 @@
     },
     "analysis/matrix.csv": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/analysis/matrix.csv",
-      "original_sha256": "db585104938cf906813f86c2d0e16cf872f734a49737b2b97a475aa4a0543d6d",
-      "stored_sha256": "db585104938cf906813f86c2d0e16cf872f734a49737b2b97a475aa4a0543d6d"
+      "original_sha256": "58e57dfc71d79adebc090bc18f546f934cb91f7176f271f0163de40eeb363e73",
+      "stored_sha256": "58e57dfc71d79adebc090bc18f546f934cb91f7176f271f0163de40eeb363e73"
     },
     "analysis/matrix.json": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/analysis/matrix.json",
-      "original_sha256": "4ed06bda0101636e515db99973a52e6a9e2e5afa51264baaed573e121f63a001",
-      "stored_sha256": "4ed06bda0101636e515db99973a52e6a9e2e5afa51264baaed573e121f63a001"
+      "original_sha256": "c93686fa659b973a51f9173678b371ddee3c48e01dc625cb8d7c8fd95a691e85",
+      "stored_sha256": "c93686fa659b973a51f9173678b371ddee3c48e01dc625cb8d7c8fd95a691e85"
     }
   },
   "final_test_outcomes_read": false

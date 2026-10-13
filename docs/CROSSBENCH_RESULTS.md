@@ -4,9 +4,10 @@ Sixteen authorized fresh runs; completed MetaWorld results are reused. Training 
 
 | Dataset | Method | State | Success curve /50 | Best measured |
 | --- | --- | --- | --- | ---: |
-| pusht | execution_revision | training / periodic evaluation | pending | pending |
+| pusht | action_flow_search | training / periodic evaluation | 37 | 37 |
+| pusht | execution_revision | training / periodic evaluation | 33 | 33 |
 | pusht | leflow | completed, audited | 12 / 8 / 9 / 12 | 12 |
-| pusht | retrieval_repair_ttt | training / periodic evaluation | 34 / 39 / 37 | 39 |
+| pusht | retrieval_repair_ttt | completed, audited | 34 / 39 / 37 / 38 | 39 |
 | pusht | vanilla_action_flow | completed, audited | 7 / 13 / 15 / 17 | 17 |
 
 The remaining registered methods are queued until their dataset is prepared. No missing score is estimated. All archived case outcomes are actual native simulator success flags. CPU/synthetic checks alone are not benchmark results.
