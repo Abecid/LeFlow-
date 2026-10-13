@@ -1,0 +1,368 @@
+{
+  "scheduled_heartbeat_utc": "2026-10-13T14:14:18.494Z",
+  "recorded_utc": "2026-10-13T14:22:14+00:00",
+  "status": "gpu_read_restored_campaign_and_online_unverified",
+  "fresh_campaign_records_verified": false,
+  "fresh_online_state_verified": false,
+  "fresh_cpu_probe_verified": false,
+  "fresh_gpu_state_verified": true,
+  "current_campaign_state": null,
+  "current_online_state": null,
+  "current_hardware_state": {
+    "scope": "Separate GPU-process query only; point sample, not sustained monitoring.",
+    "sample": {
+      "observed_utc": "2026-10-13T14:19:37+00:00",
+      "gpus": [
+        {
+          "index": 0,
+          "utilization_percent": 0.0,
+          "memory_mib": 0.0
+        },
+        {
+          "index": 1,
+          "utilization_percent": 0.0,
+          "memory_mib": 0.0
+        },
+        {
+          "index": 2,
+          "utilization_percent": 0.0,
+          "memory_mib": 0.0
+        },
+        {
+          "index": 3,
+          "utilization_percent": 0.0,
+          "memory_mib": 0.0
+        },
+        {
+          "index": 4,
+          "utilization_percent": 0.0,
+          "memory_mib": 0.0
+        },
+        {
+          "index": 5,
+          "utilization_percent": 0.0,
+          "memory_mib": 0.0
+        },
+        {
+          "index": 6,
+          "utilization_percent": 0.0,
+          "memory_mib": 0.0
+        },
+        {
+          "index": 7,
+          "utilization_percent": 0.0,
+          "memory_mib": 0.0
+        }
+      ],
+      "processes": [],
+      "finished_utc": "2026-10-13T14:19:37+00:00"
+    }
+  },
+  "new_training_metrics_since_last_good": null,
+  "new_evaluations_since_last_good": null,
+  "attempts": {
+    "campaign_collector": {
+      "count": 2,
+      "exit_codes": [
+        255,
+        255
+      ],
+      "output_bytes": [
+        2719744,
+        0
+      ],
+      "stderr_by_attempt": [
+        "Timeout, server [internal address redacted] not responding.",
+        "Connection timed out during banner exchange\nConnection to UNKNOWN port 65535 timed out"
+      ],
+      "output_validation": [
+        "invalid JSON: unterminated string; rejected",
+        "empty; rejected"
+      ],
+      "first_error_address_redacted": true
+    },
+    "online_readback": {
+      "count": 2,
+      "exit_codes": [
+        255,
+        255
+      ],
+      "output_bytes": [
+        0,
+        0
+      ],
+      "stderr_by_attempt": [
+        "Connection timed out during banner exchange\nConnection to UNKNOWN port 65535 timed out",
+        "Connection timed out during banner exchange\nConnection to UNKNOWN port 65535 timed out"
+      ]
+    },
+    "gpu_process_query": {
+      "count": 1,
+      "exit_codes": [
+        0
+      ],
+      "output_bytes": [
+        844
+      ],
+      "stderr_by_attempt": [
+        ""
+      ]
+    }
+  },
+  "cached_campaign": {
+    "evidence_is_cached": true,
+    "collection_started_utc": "2026-10-13T13:45:23+00:00",
+    "collection_finished_utc": "2026-10-13T13:45:26+00:00",
+    "raw_snapshot_sha256": "8265e59c5765de2a7c8b6f08894b681ff0299a2ac11ab8359926d3026b50202e",
+    "frozen_source_commit": "69babde283f504120dae3dfc6e9188a0e2242be4",
+    "manifest_sha256": "6410f2f196e6fd50a84ae82a192edc718ce169885144195cc63693faaa7f7f26",
+    "encoder_sha256": "48938400ae3464c9680731287f583a9cb516f55a8ec64ea13a91be47fb15b607",
+    "runs": {
+      "btm_3072": {
+        "saved_step": 23830,
+        "logged_step": 23830,
+        "selected_checkpoint_step": 1000,
+        "metric_rows": 2465,
+        "evaluation_records": 99,
+        "complete_three_offset_cycles": 33,
+        "completion_marker_present": false
+      },
+      "flow_3072": {
+        "saved_step": 23000,
+        "logged_step": 23040,
+        "selected_checkpoint_step": 1000,
+        "metric_rows": 2383,
+        "evaluation_records": 96,
+        "complete_three_offset_cycles": 32,
+        "completion_marker_present": false
+      }
+    },
+    "known_campaign_trainer_or_flow_controller_visible": false,
+    "process_scope": "Campaign name/path filters in accessible process namespace; original supervisor intentionally stopped.",
+    "collection_errors": [],
+    "completion": false,
+    "recovery": "not_verified",
+    "flow_updates_needed_from_saved_checkpoint": 830,
+    "full_config_provenance_metrics_evaluations_checkpoint_markers_unchanged_since_baseline": true
+  },
+  "cached_online": {
+    "evidence_is_cached": true,
+    "observed_utc": "2026-10-13T12:59:40+00:00",
+    "runs": {
+      "btm": {
+        "run_id": "z78m0zk6",
+        "state": "finished",
+        "step": 23830,
+        "runtime_seconds": 8304,
+        "checked_utc": "2026-10-13T12:59:58+00:00"
+      },
+      "flow": {
+        "run_id": "g0u3w723",
+        "state": "finished",
+        "step": 23040,
+        "runtime_seconds": 9240,
+        "checked_utc": "2026-10-13T12:59:59+00:00"
+      }
+    },
+    "manifest_sha256": "6410f2f196e6fd50a84ae82a192edc718ce169885144195cc63693faaa7f7f26",
+    "cpu_probe": {
+      "source": "Actual frozen LatentSegments.__getitem__ reads on CPU",
+      "clips": 32,
+      "episode_ids": [
+        4,
+        5
+      ],
+      "spacing_counts": {
+        "1": 20,
+        "2": 11,
+        "4": 1
+      },
+      "loss_probe_512_unique_episodes": 28
+    },
+    "raw_snapshot_sha256": "ac8f219e7ba16a4f82e23a34ba78f867c4338f97871d0422788df11413e578ec"
+  },
+  "cached_collector_hardware": {
+    "evidence_is_cached": true,
+    "observed_utc": "2026-10-13T13:45:26+00:00",
+    "units": {
+      "utilization.gpu": "%",
+      "memory.used": "MiB",
+      "memory.total": "MiB",
+      "power.draw": "W"
+    },
+    "gpus": [
+      {
+        "index": "0",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "0",
+        "memory.used": "0",
+        "memory.total": "81920",
+        "power.draw": "55.65"
+      },
+      {
+        "index": "1",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "0",
+        "memory.used": "0",
+        "memory.total": "81920",
+        "power.draw": "53.42"
+      },
+      {
+        "index": "2",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "0",
+        "memory.used": "0",
+        "memory.total": "81920",
+        "power.draw": "56.46"
+      },
+      {
+        "index": "3",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "0",
+        "memory.used": "0",
+        "memory.total": "81920",
+        "power.draw": "54.83"
+      },
+      {
+        "index": "4",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "0",
+        "memory.used": "0",
+        "memory.total": "81920",
+        "power.draw": "58.13"
+      },
+      {
+        "index": "5",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "0",
+        "memory.used": "0",
+        "memory.total": "81920",
+        "power.draw": "56.97"
+      },
+      {
+        "index": "6",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "0",
+        "memory.used": "0",
+        "memory.total": "81920",
+        "power.draw": "54.29"
+      },
+      {
+        "index": "7",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "0",
+        "memory.used": "0",
+        "memory.total": "81920",
+        "power.draw": "56.31"
+      }
+    ]
+  },
+  "current_access_blocker": {
+    "affected_reads": [
+      "full campaign collection",
+      "authenticated W&B/CPU-probe readback"
+    ],
+    "campaign_first_attempt": {
+      "stage": "SSH connection lost during output transfer",
+      "stderr_address_redacted": "Timeout, server [internal address redacted] not responding.",
+      "partial_bytes": 2719744,
+      "complete_json": false,
+      "accepted_as_current_evidence": false
+    },
+    "campaign_retry_and_both_online_attempts": {
+      "stage": "SSH banner exchange",
+      "exact_error": "Connection timed out during banner exchange\nConnection to UNKNOWN port 65535 timed out"
+    },
+    "cause": "unknown",
+    "connection_or_authentication_settings_changed": false
+  },
+  "connection_investigation": {
+    "local_alias_configuration_resolves": true,
+    "configured_jump_route_present": true,
+    "configured_identity_file_exists": true,
+    "collector_and_online_probe_present": true,
+    "last_successful_campaign_and_gpu_receipt_reviewed": "20261013-1344",
+    "prior_failure_report_reviewed": "20261013T140032Z",
+    "prior_partial_recovery_report_reviewed": "20261013T134523Z",
+    "recent_report_commits_reviewed": true,
+    "successful_ssh_read_this_check": true,
+    "failure_layer": "Campaign output transfer interrupted, then campaign retry and both online reads failed during SSH banner exchange.",
+    "remaining_requirement": "Successful complete campaign collection and authenticated W&B/CPU-probe readback."
+  },
+  "current_campaign_recovery": "not_verified",
+  "current_campaign_completion": null,
+  "current_eta": null,
+  "research_goals_demonstrated_by_available_evidence": {
+    "higher_primary_success": false,
+    "controlled_efficiency_with_retained_success": false
+  },
+  "results_report": "20261006T050931Z",
+  "previous_monitoring_report": "20261013T140032Z",
+  "source_sha256": {
+    "campaign-heartbeat-20261013-1414-attempt1.json": "27dced372ebdeb39ba349056bb5c33c8d3a3e8f16fee5d0d2c4839410ec1d86e",
+    "campaign-heartbeat-20261013-1414.json": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "online-heartbeat-20261013-1414-attempt1.json": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "online-heartbeat-20261013-1414.json": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "gpu-process-map-20261013-1414.json": "38e55c0ce4b5b81f79b891d73d2f994f9dcd1539be88dc8bc7c1f43cb2d68dd5",
+    "campaign-heartbeat-20261013-1344.json": "8265e59c5765de2a7c8b6f08894b681ff0299a2ac11ab8359926d3026b50202e",
+    "online-heartbeat-20261013-1258.json": "ac8f219e7ba16a4f82e23a34ba78f867c4338f97871d0422788df11413e578ec",
+    "gpu-process-map-20261013-1344.json": "a0850806f11ada7d521b18a5a53bbbe472477a0eeb6a816a70edfdc7d2f674f0"
+  },
+  "gpu_jobs_changed_by_monitor": false,
+  "test_split_used_by_monitor": false,
+  "monitor_action": "keep_active",
+  "last_good_snapshots_preserved": true,
+  "independent_payload_audit": "passed",
+  "fresh_gpu_process_query": {
+    "evidence_is_cached": false,
+    "sample": {
+      "observed_utc": "2026-10-13T14:19:37+00:00",
+      "gpus": [
+        {
+          "index": 0,
+          "utilization_percent": 0.0,
+          "memory_mib": 0.0
+        },
+        {
+          "index": 1,
+          "utilization_percent": 0.0,
+          "memory_mib": 0.0
+        },
+        {
+          "index": 2,
+          "utilization_percent": 0.0,
+          "memory_mib": 0.0
+        },
+        {
+          "index": 3,
+          "utilization_percent": 0.0,
+          "memory_mib": 0.0
+        },
+        {
+          "index": 4,
+          "utilization_percent": 0.0,
+          "memory_mib": 0.0
+        },
+        {
+          "index": 5,
+          "utilization_percent": 0.0,
+          "memory_mib": 0.0
+        },
+        {
+          "index": 6,
+          "utilization_percent": 0.0,
+          "memory_mib": 0.0
+        },
+        {
+          "index": 7,
+          "utilization_percent": 0.0,
+          "memory_mib": 0.0
+        }
+      ],
+      "processes": [],
+      "finished_utc": "2026-10-13T14:19:37+00:00"
+    },
+    "raw_snapshot_sha256": "38e55c0ce4b5b81f79b891d73d2f994f9dcd1539be88dc8bc7c1f43cb2d68dd5",
+    "full_payload_unchanged_except_timestamps_from": "20261013-1344"
+  }
+}
