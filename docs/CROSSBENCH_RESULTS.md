@@ -7,7 +7,7 @@ Sixteen authorized fresh runs; completed MetaWorld results are reused. Training 
 | cube | action_flow_search | completed, audited | 28 / 26 / 28 / 25 | 28 |
 | cube | diffusion_policy_port | completed, audited | 28 / 32 / 36 / 38 | 38 |
 | cube | execution_revision | completed, audited | 28 / 30 / 32 / 31 | 32 |
-| cube | feedback_wm_port | training / periodic evaluation | 35 / 38 / 42 | 42 |
+| cube | feedback_wm_port | completed, audited | 35 / 38 / 42 / 43 | 43 |
 | cube | leflow | completed, audited | 33 / 40 / 37 / 40 | 40 |
 | cube | retrieval_repair_ttt | completed, audited | 30 / 32 / 32 / 31 | 32 |
 | cube | sage_port | completed, audited | 44 / 48 / 48 / 49 | 49 |
@@ -28,6 +28,7 @@ Paired outcomes at each method’s selected development checkpoint:
 | cube | action_flow_search | 2 | 12 | 10 |
 | cube | diffusion_policy_port | 4 | 4 | 8 |
 | cube | execution_revision | 4 | 10 | 8 |
+| cube | feedback_wm_port | 8 | 3 | 4 |
 | cube | leflow | 5 | 3 | 7 |
 | cube | retrieval_repair_ttt | 5 | 11 | 7 |
 | cube | sage_port | 12 | 1 | 0 |
@@ -41,7 +42,7 @@ Paired outcomes at each method’s selected development checkpoint:
 
 These pairs compare different trained systems on identical development cases. They do not isolate the effect of TTT or search, or reveal rejected-action counterfactuals.
 
-Snapshot: 2026-10-13T15:41:44.173574+00:00. Queue failure hold: False. Lane states: {'A': 'training_and_periodic_evaluation', 'B': 'completed'}.
+Snapshot: 2026-10-13T16:05:18.765579+00:00. Queue failure hold: False. Lane states: {'A': 'completed', 'B': 'completed'}.
 
 The registered methods use two disjoint four-GPU lanes. No missing score is estimated. All archived case outcomes are actual native simulator success flags. CPU/synthetic checks alone are not benchmark results.
 

@@ -338,6 +338,26 @@
     },
     {
       "dataset": "cube",
+      "method": "feedback_wm_port",
+      "reference": "vanilla_action_flow",
+      "regressions": [
+        "cube/val/0002008/000149",
+        "cube/val/0004293/000051",
+        "cube/val/0008782/000106"
+      ],
+      "wins": [
+        "cube/val/0000859/000100",
+        "cube/val/0002985/000041",
+        "cube/val/0003396/000018",
+        "cube/val/0004118/000026",
+        "cube/val/0004519/000037",
+        "cube/val/0005033/000124",
+        "cube/val/0007213/000112",
+        "cube/val/0007821/000121"
+      ]
+    },
+    {
+      "dataset": "cube",
       "method": "retrieval_repair_ttt",
       "reference": "vanilla_action_flow",
       "regressions": [
@@ -1306,13 +1326,55 @@
       "world_transitions": 0
     },
     {
+      "curve": [
+        {
+          "checkpoint": "step_0005000",
+          "successes": 35,
+          "timeouts": 0
+        },
+        {
+          "checkpoint": "step_0010000",
+          "successes": 38,
+          "timeouts": 0
+        },
+        {
+          "checkpoint": "step_0015000",
+          "successes": 42,
+          "timeouts": 0
+        },
+        {
+          "checkpoint": "step_0020000",
+          "successes": 43,
+          "timeouts": 0
+        }
+      ],
       "dataset": "cube",
-      "episodes": null,
-      "last_update": 4436,
+      "episodes": 50,
+      "evaluation_gpu_hours": 0.34567570061112446,
+      "failure_ids": [
+        "cube/val/0000560/000032",
+        "cube/val/0002008/000149",
+        "cube/val/0002777/000008",
+        "cube/val/0004293/000051",
+        "cube/val/0008782/000106",
+        "cube/val/0008908/000033",
+        "cube/val/0009070/000039"
+      ],
+      "last_update": 20000,
+      "mean_decision_ms": 78.23951284332973,
+      "mean_steps": 17.84,
       "method": "feedback_wm_port",
-      "selected_step": null,
-      "status": "incomplete",
-      "successes": null
+      "optimization_gpu_hours": 0.4757749640962316,
+      "selected_step": 20000,
+      "status": "completed",
+      "success_rate": 0.86,
+      "successes": 43,
+      "timeouts": 0,
+      "wilson95": [
+        0.738135428014719,
+        0.9304925473797714
+      ],
+      "world_transitions": 1845
     },
     {
       "curve": [
