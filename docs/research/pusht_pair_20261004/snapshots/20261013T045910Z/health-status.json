@@ -1,0 +1,395 @@
+{
+  "scheduled_heartbeat_utc": "2026-10-13T04:58:46.455Z",
+  "status": "all_gpus_idle_campaign_unchanged",
+  "publication_reason": "All eight GPUs now report zero utilization and device memory with no driver-listed compute processes, confirmed by a second query. This supersedes the latest published active-GPU observation without establishing campaign recovery or workload completion.",
+  "attempts": {
+    "campaign_collector": {
+      "count": 1,
+      "exit_codes": [
+        0
+      ],
+      "output_bytes": [
+        4122104
+      ]
+    },
+    "online_readback": {
+      "count": 1,
+      "exit_codes": [
+        0
+      ],
+      "output_bytes": [
+        775
+      ]
+    },
+    "gpu_process_query": {
+      "count": 1,
+      "exit_codes": [
+        0
+      ],
+      "output_bytes": [
+        844
+      ]
+    },
+    "gpu_followup": {
+      "count": 1,
+      "exit_codes": [
+        0
+      ],
+      "output_bytes": [
+        1821
+      ]
+    }
+  },
+  "fresh_campaign": {
+    "evidence_is_cached": false,
+    "collection_started_utc": "2026-10-13T04:59:10+00:00",
+    "collection_finished_utc": "2026-10-13T04:59:14+00:00",
+    "raw_snapshot_sha256": "09091a7b2285d589ee1b9520813bec67568b276a2bb722b816d4b413716dc06c",
+    "frozen_source_commit": "69babde283f504120dae3dfc6e9188a0e2242be4",
+    "manifest_sha256": "6410f2f196e6fd50a84ae82a192edc718ce169885144195cc63693faaa7f7f26",
+    "encoder_sha256": "48938400ae3464c9680731287f583a9cb516f55a8ec64ea13a91be47fb15b607",
+    "runs": {
+      "btm_3072": {
+        "saved_step": 23830,
+        "logged_step": 23830,
+        "selected_checkpoint_step": 1000,
+        "metric_rows": 2465,
+        "evaluation_records": 99,
+        "complete_three_offset_cycles": 33,
+        "completion_marker_present": false
+      },
+      "flow_3072": {
+        "saved_step": 23000,
+        "logged_step": 23040,
+        "selected_checkpoint_step": 1000,
+        "metric_rows": 2383,
+        "evaluation_records": 96,
+        "complete_three_offset_cycles": 32,
+        "completion_marker_present": false
+      }
+    },
+    "known_campaign_trainer_or_flow_controller_visible": false,
+    "process_scope": "Campaign name/path filters in accessible process namespace; original supervisor intentionally stopped.",
+    "collection_errors": [],
+    "completion": false,
+    "recovery": "not_verified",
+    "flow_updates_needed_from_saved_checkpoint": 830,
+    "full_config_provenance_metrics_evaluations_checkpoint_markers_unchanged_since_baseline": true
+  },
+  "comparison_baseline_collection_finished_utc": "2026-10-13T04:44:21+00:00",
+  "new_training_metrics": 0,
+  "new_evaluations": 0,
+  "fresh_online": {
+    "observed_utc": "2026-10-13T04:59:10+00:00",
+    "runs": {
+      "btm": {
+        "run_id": "z78m0zk6",
+        "state": "finished",
+        "step": 23830,
+        "runtime_seconds": 8304,
+        "checked_utc": "2026-10-13T04:59:17+00:00"
+      },
+      "flow": {
+        "run_id": "g0u3w723",
+        "state": "finished",
+        "step": 23040,
+        "runtime_seconds": 9240,
+        "checked_utc": "2026-10-13T04:59:18+00:00"
+      }
+    },
+    "manifest_sha256": "6410f2f196e6fd50a84ae82a192edc718ce169885144195cc63693faaa7f7f26",
+    "cpu_probe": {
+      "source": "Actual frozen LatentSegments.__getitem__ reads on CPU",
+      "clips": 32,
+      "episode_ids": [
+        4,
+        5
+      ],
+      "spacing_counts": {
+        "1": 20,
+        "2": 11,
+        "4": 1
+      },
+      "loss_probe_512_unique_episodes": 28
+    },
+    "unchanged_except_timestamps": true
+  },
+  "initial_gpu_query": {
+    "observed_utc": "2026-10-13T04:59:13+00:00",
+    "gpus": [
+      {
+        "index": 0,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 1,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 2,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 3,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 4,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 5,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 6,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 7,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      }
+    ],
+    "processes": [],
+    "finished_utc": "2026-10-13T04:59:13+00:00"
+  },
+  "collector_hardware": {
+    "observed_utc": "2026-10-13T04:59:14+00:00",
+    "units": {
+      "utilization.gpu": "%",
+      "memory.used": "MiB",
+      "memory.total": "MiB",
+      "power.draw": "W"
+    },
+    "gpus": [
+      {
+        "index": "0",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "0",
+        "memory.used": "0",
+        "memory.total": "81920",
+        "power.draw": "55.65"
+      },
+      {
+        "index": "1",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "0",
+        "memory.used": "0",
+        "memory.total": "81920",
+        "power.draw": "53.75"
+      },
+      {
+        "index": "2",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "0",
+        "memory.used": "0",
+        "memory.total": "81920",
+        "power.draw": "56.46"
+      },
+      {
+        "index": "3",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "0",
+        "memory.used": "0",
+        "memory.total": "81920",
+        "power.draw": "54.83"
+      },
+      {
+        "index": "4",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "0",
+        "memory.used": "0",
+        "memory.total": "81920",
+        "power.draw": "58.13"
+      },
+      {
+        "index": "5",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "0",
+        "memory.used": "0",
+        "memory.total": "81920",
+        "power.draw": "56.97"
+      },
+      {
+        "index": "6",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "0",
+        "memory.used": "0",
+        "memory.total": "81920",
+        "power.draw": "54.56"
+      },
+      {
+        "index": "7",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "0",
+        "memory.used": "0",
+        "memory.total": "81920",
+        "power.draw": "56.31"
+      }
+    ]
+  },
+  "followup_gpu_query": {
+    "observed_utc": "2026-10-13T04:59:43+00:00",
+    "gpus": [
+      {
+        "index": 0,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 1,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 2,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 3,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 4,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 5,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 6,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 7,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      }
+    ],
+    "processes": [],
+    "finished_utc": "2026-10-13T04:59:43+00:00",
+    "hardware_health_fields": [
+      "index",
+      "utilization_percent",
+      "memory_mib",
+      "power_watts",
+      "temperature_c",
+      "pstate",
+      "uncorrected_volatile_ecc_errors"
+    ],
+    "hardware_health_rows": [
+      [
+        "0",
+        "0",
+        "0",
+        "55.65",
+        "28",
+        "P0",
+        "0"
+      ],
+      [
+        "1",
+        "0",
+        "0",
+        "53.75",
+        "30",
+        "P0",
+        "0"
+      ],
+      [
+        "2",
+        "0",
+        "0",
+        "56.73",
+        "29",
+        "P0",
+        "0"
+      ],
+      [
+        "3",
+        "0",
+        "0",
+        "54.83",
+        "27",
+        "P0",
+        "0"
+      ],
+      [
+        "4",
+        "0",
+        "0",
+        "58.13",
+        "27",
+        "P0",
+        "0"
+      ],
+      [
+        "5",
+        "0",
+        "0",
+        "56.97",
+        "29",
+        "P0",
+        "0"
+      ],
+      [
+        "6",
+        "0",
+        "0",
+        "54.56",
+        "29",
+        "P0",
+        "0"
+      ],
+      [
+        "7",
+        "0",
+        "0",
+        "56.64",
+        "27",
+        "P0",
+        "0"
+      ]
+    ]
+  },
+  "hardware_queries_are_non_atomic": true,
+  "prior_workload_ownership_and_campaign_association": "unresolved",
+  "prior_workload_departure_cause": "unknown",
+  "visibility_limit": "No driver-listed compute processes in these samples. Campaign process collection remains limited to name/path filters and accessible processes.",
+  "current_campaign_completion": false,
+  "current_campaign_recovery": "not_verified",
+  "current_eta": null,
+  "research_goals_demonstrated_by_available_evidence": {
+    "higher_primary_success": false,
+    "controlled_efficiency_with_retained_success": false
+  },
+  "results_report": "20261006T050931Z",
+  "previous_monitoring_report": "20261013T025917Z",
+  "source_sha256": {
+    "campaign-heartbeat-20261013-0458.json": "09091a7b2285d589ee1b9520813bec67568b276a2bb722b816d4b413716dc06c",
+    "campaign-heartbeat-20261013-0443.json": "d45f35c8f3993087e95bf3b9e124511a5f09f283526789bf934093b3fda92219",
+    "online-heartbeat-20261013-0458.json": "4d9afd0698ca9cbb583f8ea9ff66c94ccc4bd0309e42b6e869484a5d8bf5e267",
+    "online-heartbeat-20261013-0443.json": "067f7543b7c1f7adfe39736114d4e61ebd940cdceec187ea9a97de4e55e72016",
+    "gpu-process-map-20261013-0458.json": "3bed5e8e11f929f3719c962d630984f26a813bae9fb5d60febd6929bb0b32f65",
+    "gpu-process-map-20261013-0443.json": "ba8363e1e2309e07a23dbdfbdbbb233c0e74c684de054980c6f710d18596a49b",
+    "gpu-followup-20261013-0458.json": "480eaad1f759ea7553174947d4d53c365e9a8ee6b185bff31a366ed99bddf1bb"
+  },
+  "gpu_jobs_changed_by_monitor": false,
+  "test_split_used_by_monitor": false,
+  "monitor_action": "keep_active",
+  "independent_payload_audit": "passed"
+}
