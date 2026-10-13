@@ -1,3 +1,22 @@
+# First two complete: vanilla98, Diffusion Policy74; next GPU wave running
+
+The completed curves are77/84/89/98 and43/69/70/74, selecting20k98 and74 out of104.
+All eight evaluations have zero timeouts. Both source/data/bank/case/checkpoint
+CPU audits pass. Preserved GMM80/retrieval80 references have not been retrained.
+Vanilla98 is the strongest measured development controller, though one seed and
+reused development selection do not establish independent superiority.
+
+Fixed-world action search is training on GPUs0–3; Feedback-WM is training on4–7;
+SAGE remains next in laneA. At the04:00UTC readback, search scores74/79 at5k/10k
+with zero timeouts; Feedback-WM scores42 at5k with62 timeouts. All original
+budgets and tests remain unchanged. Each method has its own frozen checkout,
+optimizer, full periodic metrics and actual physical evaluation records.
+
+[Vanilla result and failures](VANILLA_ACTION_FLOW_RESULTS.md) ·
+[Diffusion result and failures](DIFFUSION_POLICY_PORT_RESULTS.md).
+
+Historical launch/iteration snapshots follow.
+
 # First two curves: vanilla flow77/84, Diffusion Policy43/69
 
 At the latest preserved readback, vanilla conditional action flow has completed

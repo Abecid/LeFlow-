@@ -1,0 +1,12 @@
+{
+  "bank_hash": "007df33e6d256c3cddb2ac6230af0aa5f4906df53d06e29b1e259d9c2b7e8644",
+  "code": "0a19c7c67d791fd99376216399b03e8cb71d78c0",
+  "id": "ms76k64y",
+  "manifest": "419c1c111ca292b604dddc6a7a70a4659ddb339e186f90db2575879e33711b51",
+  "method": "action_flow_search",
+  "protocol": "a09bc156bf6a19f94fe3ec54b83df815f86c84e7da2f37c3f4f204201f0c8bd3",
+  "seed": 3072,
+  "wandb_url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/ms76k64y",
+  "world_hash": "ae3f910da43f0a43dd65945394444a0b11719ed042cdacffacc2faaf824ec5a3",
+  "world_size": 4
+}

@@ -1,0 +1,109 @@
+{
+  "case_identities_match": true,
+  "checkpoints": {
+    "10000": {
+      "path": "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/vanilla_action_flow/campaign/runs/vanilla_action_flow_3072/checkpoints/step_0010000.pt",
+      "sha256": "cf396a3b706129ae90fe3cfbcd0babad5647603cec9c6eb9556a9f518ba6c5d5",
+      "step": 10000
+    },
+    "15000": {
+      "path": "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/vanilla_action_flow/campaign/runs/vanilla_action_flow_3072/checkpoints/step_0015000.pt",
+      "sha256": "8c349afaba9fcf7bb296ae8a62942a150959502d711e8e956e6cfe834006ab97",
+      "step": 15000
+    },
+    "20000": {
+      "path": "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/vanilla_action_flow/campaign/runs/vanilla_action_flow_3072/checkpoints/step_0020000.pt",
+      "sha256": "2467aa768fe6acde94f8dc304ce933ea233c8b67dc975cec8d8edb7bc18afdca",
+      "step": 20000
+    },
+    "5000": {
+      "path": "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/vanilla_action_flow/campaign/runs/vanilla_action_flow_3072/checkpoints/step_0005000.pt",
+      "sha256": "1d05ca0b5994f3233eaeaff5d0019331336e7e15ddbfbe5d865857899ed7dd22",
+      "step": 5000
+    },
+    "best": {
+      "path": "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/vanilla_action_flow/campaign/runs/vanilla_action_flow_3072/best.pt",
+      "sha256": "29acce916d4f4a779d81c90be643295af801a14782b4fbdbc6017aa5d8191415",
+      "step": 20000
+    },
+    "last": {
+      "path": "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/vanilla_action_flow/campaign/runs/vanilla_action_flow_3072/last.pt",
+      "sha256": "a590ff6582c63b4e1f31738eccc76a1dfec32e0d6df1f6b0014c4a3d39c0e035",
+      "step": 20000
+    }
+  },
+  "complete": {
+    "best": 0.9423076923076923,
+    "best_step": 20000,
+    "optimization_gpu_hours": 0.6130960510422786,
+    "step": 20000,
+    "stop_reason": "update_limit",
+    "validation_gpu_hours": 1.4752659894981317,
+    "validation_steps": [
+      5000,
+      10000,
+      15000,
+      20000
+    ],
+    "wall_seconds": 1907.6395302340388
+  },
+  "curve": [
+    {
+      "sha256": "2f296fa0cbd2261a47310ba9663380e5d88dc68495435c61e7924e8daa598981",
+      "step": 5000,
+      "successes": 77,
+      "timeouts": 0
+    },
+    {
+      "sha256": "8ea00042da0f777ef9d9fda7f87a6e2d8240e8adb732b80de6b8cba7bd83ac4c",
+      "step": 10000,
+      "successes": 84,
+      "timeouts": 0
+    },
+    {
+      "sha256": "4c986c1cedf703df3a6596b41d4942df783b00918b20f0019630f9ba1b9f1bdb",
+      "step": 15000,
+      "successes": 89,
+      "timeouts": 0
+    },
+    {
+      "sha256": "4754e476c5b0cf372b1b53310ff013f98b7d944462b1975e4592c49611cbd2ff",
+      "step": 20000,
+      "successes": 98,
+      "timeouts": 0
+    }
+  ],
+  "final_tests_read": false,
+  "method": "vanilla_action_flow",
+  "model_forward_calls": 0,
+  "optimizer_updates": 0,
+  "runtime_files_verified": 214,
+  "selected": {
+    "sha256": "4754e476c5b0cf372b1b53310ff013f98b7d944462b1975e4592c49611cbd2ff",
+    "step": 20000,
+    "successes": 98,
+    "timeouts": 0
+  },
+  "simulator_calls": 0,
+  "source": "0a19c7c67d791fd99376216399b03e8cb71d78c0",
+  "source_data_bank_checkpoint_audit_passed": true,
+  "train_episodes": 6222,
+  "usage": {
+    "global_batch": 64,
+    "gpu_count": 4,
+    "last_update_overrun_gpu_seconds": 0.0,
+    "optimization_cap_gpu_seconds": 28800,
+    "optimization_gpu_hours": 0.6130960510422786,
+    "optimization_gpu_seconds": 2207.145783752203,
+    "step": 20000,
+    "stop_check": "optimizer boundary; final-update overrun reported",
+    "validation_gpu_hours": 1.4752659894981317,
+    "validation_gpu_seconds": 5310.9575621932745,
+    "validation_steps": [
+      5000,
+      10000,
+      15000,
+      20000
+    ]
+  }
+}

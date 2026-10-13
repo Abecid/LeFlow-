@@ -1,3 +1,18 @@
+# New baseline evidence supersedes the80 strongest-reference premise
+
+October12: vanilla conditional action flow completes77/84/89/98, selecting98/104
+under the same registered development protocol. It uses no world search, TTT,
+workspace revision or residual repair. [Audited findings](VANILLA_ACTION_FLOW_RESULTS.md)
+include19 wins/one regression versus retrieval80 and20/two versus GMM80.
+The proposed execution-calibrated repair controller80 does not outperform this
+standard BC control. Do not relabel the baseline as our novel method or claim
+our extra mechanisms improve the strongest measured controller. The thesis below
+remains a research question; its contribution/effectiveness evidence must be
+reassessed against the98 baseline after the remaining comparisons complete.
+
+Historical formulation/design blueprint follows; the retained method equations
+remain accurate, but its strongest-flow-reference framing is superseded.
+
 # Paper blueprint: execution-calibrated bounded flow repair
 
 October 12, 2026. This is the paper's proposed framing, the implemented

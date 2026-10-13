@@ -1,0 +1,12 @@
+{
+  "bank_hash": "23a8aa8f4476ac854c91cb31640fed60d43613901411b916c51413bda21f03b3",
+  "code": "0a19c7c67d791fd99376216399b03e8cb71d78c0",
+  "id": "rc8s6gp6",
+  "manifest": "8f008dccf4dc557d3f5cf5c89e29081cfb78295f3b3fd800c943dc3feae9d812",
+  "method": "feedback_wm_port",
+  "protocol": "3f5bce5305139a3df11949e38d13ccc9a22ccae3fba748c2e1f873eef0308054",
+  "seed": 3072,
+  "wandb_url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/rc8s6gp6",
+  "world_hash": "ae3f910da43f0a43dd65945394444a0b11719ed042cdacffacc2faaf824ec5a3",
+  "world_size": 4
+}

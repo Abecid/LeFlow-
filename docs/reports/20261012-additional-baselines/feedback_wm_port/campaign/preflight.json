@@ -1,0 +1,28 @@
+{
+  "bank_states": 130662,
+  "batch_loss": 1.1199640035629272,
+  "exact_previous_consumed_training_fields": 8,
+  "factual_train_feedback_exercised": true,
+  "frozen_world_unchanged": true,
+  "full_controller_latency_ms": [
+    98.4709057956934,
+    97.59633243083954,
+    98.30647520720959,
+    97.55649231374264,
+    97.54829108715057
+  ],
+  "gpu_count": 1,
+  "gpu_hours": 0.005486128257794513,
+  "max_gpu_gib": 9.425464153289795,
+  "mean_ms": 97.89569936692715,
+  "method": "feedback_wm_port",
+  "optimizer_updates": 0,
+  "parameters": 2503688,
+  "parts": {
+    "noise_mse": 1.1199640035629272
+  },
+  "seconds": 19.750061286613345,
+  "simulator_episodes": 0,
+  "training_examples_only": true,
+  "unused_history_not_loaded_or_transferred": true
+}

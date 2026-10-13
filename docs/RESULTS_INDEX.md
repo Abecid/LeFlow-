@@ -1,3 +1,16 @@
+# Completed new controls: vanilla flow98 and Diffusion Policy74
+
+[Vanilla conditional action flow](VANILLA_ACTION_FLOW_RESULTS.md) completes
+77/84/89/98, selecting20k98/104; [Diffusion Policy port](DIFFUSION_POLICY_PORT_RESULTS.md)
+completes43/69/70/74, selecting20k74/104. All eight evaluations have zero timeouts.
+Both pass source/data/bank/case/checkpoint audits; no old baseline was retrained.
+The simple98 control exceeds the retained proposed80 method. All scores remain
+single-seed development selections. The active five-method batch continues with
+fixed-world search, Feedback-WM and SAGE. Current ledger:18 complete comparisons,
+69 complete evaluation reports, three active/queued methods.
+
+Earlier index snapshots follow and are historical where superseded.
+
 # Five additional baseline comparisons authorized and queued
 
 The new [five-method GPU batch](ADDITIONAL_BASELINE_RUNS_20261012.md) is registered

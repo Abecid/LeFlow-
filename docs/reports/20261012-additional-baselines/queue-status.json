@@ -1,25 +1,34 @@
 {
   "source": "0a19c7c67d791fd99376216399b03e8cb71d78c0",
-  "updated_utc": "2026-10-13T02:54:11.964225+00:00",
+  "updated_utc": "2026-10-13T03:39:33.730333+00:00",
   "lanes": {
     "A": {
-      "current": "vanilla_action_flow",
-      "pid": 2722401,
+      "current": "action_flow_search",
+      "pid": 2761749,
       "state": "preflight_then_training",
       "remaining": [
-        "action_flow_search",
         "sage_port"
       ],
-      "completed": []
+      "completed": [
+        {
+          "method": "vanilla_action_flow",
+          "returncode": 0,
+          "ended_utc": "2026-10-13T03:30:30.108995+00:00"
+        }
+      ]
     },
     "B": {
-      "current": "diffusion_policy_port",
-      "pid": 2722403,
+      "current": "feedback_wm_port",
+      "pid": 2771651,
       "state": "preflight_then_training",
-      "remaining": [
-        "feedback_wm_port"
-      ],
-      "completed": []
+      "remaining": [],
+      "completed": [
+        {
+          "method": "diffusion_policy_port",
+          "returncode": 0,
+          "ended_utc": "2026-10-13T03:39:33.260277+00:00"
+        }
+      ]
     }
   }
 }

@@ -1,0 +1,29 @@
+{
+  "pid": 2761749,
+  "start_ticks": 1018273679,
+  "source": "0a19c7c67d791fd99376216399b03e8cb71d78c0",
+  "runtime_files_verified": 214,
+  "utc": "2026-10-13T03:30:30.668106+00:00",
+  "gpu_lane": "A",
+  "physical_gpus": "0,1,2,3",
+  "command": [
+    "/tmp/mtxu-flow-jepa-20261007/env/bin/python",
+    "-u",
+    "-m",
+    "scripts.operations.controller_grounded",
+    "--record",
+    "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/action_flow_search",
+    "--variant",
+    "action_flow_search",
+    "--gpus",
+    "4",
+    "--previous",
+    "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison",
+    "--cache",
+    "/tmp/mtxu-additional-baselines-20261012/action_flow_search",
+    "--reuse-bank",
+    "/tmp/mtxu-flow-reasoning-20261010/route_bank.pt"
+  ],
+  "fresh_seed": 3072,
+  "final_tests": false
+}

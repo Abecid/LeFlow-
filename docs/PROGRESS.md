@@ -1,3 +1,23 @@
+# October12: vanilla98 and Diffusion Policy74 completed and audited
+
+Both authorized fresh policies complete20k and all four fixed104 evaluations.
+Vanilla curve77/84/89/98 selects98; diffusion43/69/70/74 selects74. All eight
+reports have zero timeouts. CPU audits verify214 runtime hashes, same6222expert
+TRAIN episodes, unchanged original world/bank tensors, all checkpoint identities,
+paired reset/hash/seed cases and finite learned weights. The vanilla controller
+has zero predicted-world calls and no retrieval/workspace/TTT/repair. It gains19
+cases and losesone versus retrieval80;20/two versus GMM80. Its six failures are
+pick-place4 and reach2, all at200 actions. Diffusion has30 action-limit failures.
+
+Updated the project and paper framing: the proposed80 controller does not beat
+the new98 standard BC control; extra-mechanism efficacy remains unproven.
+Search and Feedback-WM now use the two four-GPU lanes; SAGE is next. First
+search curves74/79 have zero timeouts, while FWM5k42 has62. Source/budgets stay
+frozen. Final tests remain sealed. Full records, negative findings and CPU audit
+script are preserved; live remote verification follows publication.
+
+Earlier progress follows.
+
 # October12: first additional baseline curves77/84 and43/69
 
 Vanilla conditional action flow completes5k and10k with77/84 successes; Diffusion

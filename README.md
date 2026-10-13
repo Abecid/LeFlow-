@@ -1,3 +1,18 @@
+# New baseline result: vanilla conditional action flow98/104
+
+The first two newly authorized comparisons are complete: vanilla conditional
+flow77/84/89/98 selects20k98/104, and Diffusion Policy43/69/70/74 selects20k74/104.
+Both have zero controller timeouts at all four fixed104 evaluations. Their
+source/data/bank/checkpoint audits pass. These are single-seed development
+results; the new98 baseline exceeds the retained proposed repair controller80.
+Fixed-world action search, Feedback-WM and SAGE remain in the authorized batch.
+
+[Vanilla full findings](docs/VANILLA_ACTION_FLOW_RESULTS.md) ·
+[Diffusion Policy full findings](docs/DIFFUSION_POLICY_PORT_RESULTS.md) ·
+[Live five-method batch](docs/ADDITIONAL_BASELINE_RUNS_20261012.md).
+
+Historical project overview follows; its80 best-reference statements are superseded.
+
 # Execution-calibrated visual planning with V-JEPA 2.1 (LeFlow fork)
 
 **New baseline implementations (not yet trained/evaluated):** vanilla action-flow BC,
