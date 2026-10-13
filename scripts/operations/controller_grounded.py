@@ -74,6 +74,21 @@ def main(a):
     with (record/'tests.log').open('a') as log:
         subprocess.run([sys.executable,'-m','unittest','discover','-s','tests','-p','test_execution.py','-v'],
                        env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
+        if a.variant in ('vanilla_action_flow','action_flow_search'):
+            subprocess.run([sys.executable,'-m','unittest','discover','-s','tests',
+                            '-p','test_additional_action_flow.py','-v'],
+                           env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
+        if a.variant in ('sage_port','diffusion_policy_port'):
+            subprocess.run([sys.executable,'-m','unittest','discover','-s','tests',
+                            '-p','test_published_policy_ports.py','-v'],
+                           env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
+        if a.variant == 'feedback_wm_port':
+            subprocess.run([sys.executable,'-m','unittest','discover','-s','tests',
+                            '-p','test_published_policy_ports.py','-v'],
+                           env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
+            subprocess.run([sys.executable,'-m','unittest','discover','-s','tests',
+                            '-p','test_feedback_wm_port.py','-v'],
+                           env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
         if a.variant in ('latent_revision','execution_revision','flow_reasoning','progress_ttt','guided_ttt','repair_flow_ttt','retrieval_repair_ttt','shifted_repair_ttt','progress_objective_ttt','bayesian_repair_ttt','nonlinear_repair_ttt'):
             subprocess.run([sys.executable,'-m','unittest','discover','-s','tests','-p','test_latent_revision.py','-v'],
                            env=env,stdout=log,stderr=subprocess.STDOUT,check=True)

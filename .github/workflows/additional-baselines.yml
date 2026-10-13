@@ -1,0 +1,28 @@
+name: Additional policy baselines - CPU smoke tests
+on:
+  push:
+    branches: [main]
+    paths:
+      - "flow_jepa/baselines/**"
+      - "flow_jepa/execution/train.py"
+      - "tests/test_additional_action_flow.py"
+      - "tests/test_published_policy_ports.py"
+      - "tests/test_feedback_wm_port.py"
+      - ".github/workflows/additional-baselines.yml"
+  workflow_dispatch:
+jobs:
+  pytorch-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: python -m pip install --upgrade pip
+      - run: pip install torch --index-url https://download.pytorch.org/whl/cpu
+      - run: pip install numpy h5py
+      - run: python -m compileall -q flow_jepa/baselines flow_jepa/execution/train.py scripts/operations/controller_grounded.py
+      - run: python -m unittest discover -s tests -p "test_additional_action_flow.py" -v
+      - run: python -m unittest discover -s tests -p "test_published_policy_ports.py" -v
+      - run: python -m unittest discover -s tests -p "test_feedback_wm_port.py" -v
