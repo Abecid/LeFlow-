@@ -76,7 +76,9 @@ def main():
                 '--data-root',a.data_root,'--gpus','4','--execute','--tasks',*a.tasks]
             if a.publish:cmd.append('--publish')
             status('baseline_campaign',command=cmd)
-            subprocess.run(cmd,cwd=frozen,check=True)
+            baseline_runtime = base/'runtime'
+            training_source = baseline_runtime if baseline_runtime.exists() else frozen
+            subprocess.run(cmd,cwd=training_source,check=True)
         for task in a.tasks:
             required=[base/'cache'/task/'manifest.json',base/'runs'/task/'leflow'/'best.pt',
                       base/'runs'/task/'leflow'/'complete.json']
