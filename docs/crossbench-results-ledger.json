@@ -644,7 +644,31 @@
       "evaluation_gpu_hours": 0.017374207634064887
     }
   ],
-  "active_runs": [],
+  "active_runs": [
+    {
+      "dataset": "cube",
+      "method": "action_flow_search",
+      "curve": [],
+      "evidence": "docs/reports/20261013-crossbench-baselines/runs/cube/action_flow_search",
+      "online": {},
+      "artifact_sha256": {
+        "docs/reports/20261013-crossbench-baselines/runs/cube/action_flow_search/native-preflight.json": "ede0de1ff226c11f251c881e279a270f77445444cbc1f97fbf13873730ee20db",
+        "docs/reports/20261013-crossbench-baselines/runs/cube/action_flow_search/identity.json": "6d35bec7671fadcf4668c2699528737e01d43e6b6287fdceaa3e3e2a5cc3fe3f",
+        "docs/reports/20261013-crossbench-baselines/runs/cube/action_flow_search/gradient-preflight.json": "8ee567a1a513205c54e1eac4c115eee23573e93413e5f7119ea256a1bb6c9b7a",
+        "docs/reports/20261013-crossbench-baselines/runs/cube/action_flow_search/failure.json": "df856d627eb21743e2d55128ec9e1d1d13218abf186bd99f6d3bd8df7e0f2a1b"
+      }
+    },
+    {
+      "dataset": "cube",
+      "method": "sage_port",
+      "curve": [],
+      "evidence": "docs/reports/20261013-crossbench-baselines/runs/cube/sage_port",
+      "online": {},
+      "artifact_sha256": {
+        "docs/reports/20261013-crossbench-baselines/runs/cube/sage_port/native-preflight.json": "bab7d1e416f1431d42619b53638e7c49f597f25cc27b1d78bc6542c64c0aacd9"
+      }
+    }
+  ],
   "queued_runs": [
     {
       "dataset": "pusht",
@@ -653,10 +677,6 @@
     {
       "dataset": "pusht",
       "method": "feedback_wm_port"
-    },
-    {
-      "dataset": "cube",
-      "method": "sage_port"
     },
     {
       "dataset": "cube",
@@ -1005,20 +1025,6 @@
       ]
     }
   ],
-  "failed_runs": [
-    {
-      "dataset": "cube",
-      "method": "action_flow_search",
-      "curve": [],
-      "evidence": "docs/reports/20261013-crossbench-baselines/runs/cube/action_flow_search",
-      "online": {},
-      "artifact_sha256": {
-        "docs/reports/20261013-crossbench-baselines/runs/cube/action_flow_search/native-preflight.json": "ede0de1ff226c11f251c881e279a270f77445444cbc1f97fbf13873730ee20db",
-        "docs/reports/20261013-crossbench-baselines/runs/cube/action_flow_search/identity.json": "6d35bec7671fadcf4668c2699528737e01d43e6b6287fdceaa3e3e2a5cc3fe3f",
-        "docs/reports/20261013-crossbench-baselines/runs/cube/action_flow_search/gradient-preflight.json": "8ee567a1a513205c54e1eac4c115eee23573e93413e5f7119ea256a1bb6c9b7a",
-        "docs/reports/20261013-crossbench-baselines/runs/cube/action_flow_search/failure.json": "df856d627eb21743e2d55128ec9e1d1d13218abf186bd99f6d3bd8df7e0f2a1b"
-      },
-      "status": "failed_hold"
-    }
-  ]
+  "failed_runs": [],
+  "execution_state": "registered recovery in progress"
 }

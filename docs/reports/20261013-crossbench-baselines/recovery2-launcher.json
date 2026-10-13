@@ -1,0 +1,10 @@
+{
+  "pid": 3483698,
+  "start_ticks": "1022380807",
+  "utc": "2026-10-13T14:55:01.955358+00:00",
+  "source": "747f635ad36af2cbe3e2bbb0b7997efe9caccaa1",
+  "script": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/run_queue_recovery2.py",
+  "queue_sha256": "47efeff6f0c036bb81582612553e567e56373e9befcb8ea81811374d65f89c40",
+  "retained_completed": 10,
+  "remaining_registered_jobs": 6
+}

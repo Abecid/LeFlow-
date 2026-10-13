@@ -1,27 +1,22 @@
 {
-  "failed": true,
+  "failed": false,
   "lanes": {
     "A": {
       "command": [
         "/tmp/mtxu-crossbench-20261013/env/bin/python",
         "-u",
         "-m",
-        "torch.distributed.run",
-        "--standalone",
-        "--nproc_per_node=4",
-        "-m",
-        "crossbench.train",
+        "crossbench.preflight",
         "--task",
         "cube",
         "--method",
         "action_flow_search",
         "--cache",
         "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/cache/cube",
-        "--run-dir",
-        "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/cube/action_flow_search"
+        "--output",
+        "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/cube/action_flow_search/native-preflight.json"
       ],
       "dataset": "cube",
-      "error": "RuntimeError('cube-action_flow_search.log exited 1; inspect preserved log before resuming')",
       "method": "action_flow_search",
       "physical_gpus": [
         "0",
@@ -29,45 +24,39 @@
         "2",
         "3"
       ],
-      "pid": 3289441,
-      "state": "failed_hold"
+      "pid": 3484874,
+      "start_ticks": "1022387200",
+      "state": "native_preflight"
     },
     "B": {
       "command": [
         "/tmp/mtxu-crossbench-20261013/env/bin/python",
         "-u",
         "-m",
-        "torch.distributed.run",
-        "--standalone",
-        "--nproc_per_node=4",
-        "-m",
-        "crossbench.train",
+        "crossbench.preflight",
         "--task",
         "cube",
         "--method",
-        "execution_revision",
+        "sage_port",
         "--cache",
         "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/cache/cube",
-        "--run-dir",
-        "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/cube/execution_revision"
+        "--output",
+        "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/cube/sage_port/native-preflight.json"
       ],
       "dataset": "cube",
-      "method": "execution_revision",
+      "method": "sage_port",
       "physical_gpus": [
         "4",
         "5",
         "6",
         "7"
       ],
-      "pid": 3276686,
-      "state": "training_and_periodic_evaluation"
+      "pid": 3484873,
+      "start_ticks": "1022387200",
+      "state": "native_preflight"
     }
   },
   "pending": [
-    [
-      "cube",
-      "sage_port"
-    ],
     [
       "pusht",
       "diffusion_policy_port"
@@ -1083,5 +1072,5 @@
     }
   ],
   "source": "747f635ad36af2cbe3e2bbb0b7997efe9caccaa1",
-  "utc": "2026-10-13T12:16:57.886627+00:00"
+  "utc": "2026-10-13T14:56:05.896909+00:00"
 }

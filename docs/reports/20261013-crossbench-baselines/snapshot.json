@@ -1,5 +1,5 @@
 {
-  "utc": "2026-10-13T14:29:00.866087+00:00",
+  "utc": "2026-10-13T14:56:13.923654+00:00",
   "runs": [
     {
       "dataset": "cube",
@@ -729,6 +729,11 @@
           "world_transitions": 78720
         }
       ]
+    },
+    {
+      "dataset": "cube",
+      "method": "sage_port",
+      "curve": []
     },
     {
       "dataset": "cube",

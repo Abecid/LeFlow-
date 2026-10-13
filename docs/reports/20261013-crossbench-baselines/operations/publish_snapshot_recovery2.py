@@ -55,11 +55,15 @@ if queue['failed']:
   if (row['dataset'],row['method'])in failed_pairs:
    ledger['active_runs'].remove(row);row['status']='failed_hold';ledger['failed_runs'].append(row)
    old=f"| {row['dataset']} | {row['method']} | training / periodic evaluation |"
-   lines=[line.replace(old,f"| {row['dataset']} | {row['method']} | failed before optimization |")for line in lines]
+   lines=[line.replace(old,f"| {row['dataset']} | {row['method']} | failed; inspection required |")for line in lines]
 (repo/'docs/CROSSBENCH_RESULTS.md').write_text('\n'.join(lines)+'\n')
 (repo/'docs/crossbench-results-ledger.json').write_text(json.dumps(ledger,indent=2)+'\n')
 count=len(ledger['completed_runs']);reports=sum(len(v['curve'])for v in ledger['completed_runs'])
-state='failure hold'if queue['failed']else('complete'if count==16 else 'registered recovery in progress')
+launch_path=base/'recovery2-launcher.json'
+waiting=launch_path.exists()and queue['utc']<json.loads(launch_path.read_text())['utc']
+state='recovery coordinator waiting for GPU acquisition; inherited failure preserved'if waiting else('failure hold'if queue['failed']else('complete'if count==16 else 'registered recovery in progress'))
+ledger['execution_state']=state
+(repo/'docs/crossbench-results-ledger.json').write_text(json.dumps(ledger,indent=2)+'\n')
 brief=f"""Native PushT/Cube status: **{count}/16 completed, {reports}/64 full physical reports; {state}**. Frozen training source remains `747f635ad36af2cbe3e2bbb0b7997efe9caccaa1`; seed3072/global64,20k updates OR8 optimizer GPUh, four native50 evaluations,50 actions/10 seconds. Native records use [their separate ledger](docs/crossbench-results-ledger.json). The MetaWorld21-comparison/81-report ledger is unchanged.
 
 Cube search's first attempt stopped at W&B initialization before any optimizer update or registered evaluation. Its native preflight0.004619815980291201GPUh and no-update DDP0.00035402999363011786GPUh remain preserved. Startup wait time is unmeasured and is not an optimizer charge. Ten completed runs are retained by the second operational recovery; only Cube search and five unstarted registered jobs are eligible. No changed training source, completed work replay, extra method, seed, data or budget is authorized. A failed recovery holds again without automatic restart.

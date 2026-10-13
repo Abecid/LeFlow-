@@ -33,6 +33,16 @@ while True:
    "'results':[(r['dataset'],r['method'])for r in q['results']],"
    "'queue_complete':json.loads((b/'recovery2-queue-complete.json').read_text())if(b/'recovery2-queue-complete.json').exists()else None}))").encode(),capture_output=True)
   q=json.loads(response.stdout);assert q['source']==SOURCE
+  # The inherited queue failure predates this coordinator while it waits for GPU locks.
+  launch_probe=call(SSH+['python3 -'],input=("from pathlib import Path;import json;"
+   f"b=Path('{BASE}');l=json.loads((b/'recovery2-launcher.json').read_text());s=json.loads((b/'queue-status.json').read_text());"
+   "p=Path('/proc',str(l['pid']));v=(p/'stat').read_text().rsplit(')',1)[1].split()[19]if p.exists()else None;"
+   "print(json.dumps({'waiting':s['utc']<l['utc'],'owned_coordinator_alive':v==l['start_ticks']}))").encode(),capture_output=True)
+  phase=json.loads(launch_probe.stdout)
+  if phase['waiting']:
+   if not phase['owned_coordinator_alive']:raise RuntimeError('Recovery coordinator exited before claiming GPU lanes; inspect preserved log, never relaunch automatically')
+   state(state='waiting_for_gpu_acquisition',completed=len(published),message='Registered six-job recovery waits for existing GPU locks; no GPU work started by this recovery')
+   time.sleep(60);continue
   done={tuple(r)for r in q['results']}
   if done!=published or q['failed']:
    for task,method in sorted(done):
@@ -63,7 +73,7 @@ while True:
     call(['git','commit','-m',f'Preserve {len(done)} completed native cross-benchmark runs and full evaluations'],cwd=REPO)
    pending_commit=git('rev-parse','HEAD')
    call(['git','-c','http.postBuffer=524288000','push','origin','HEAD:main'],cwd=REPO)
-   verify=call([sys.executable,str(WORK/'verify_publication.py'),'--repo',str(REPO)],capture_output=True)
+   verify=call([sys.executable,str(WORK/'verify_publication_recovery2.py'),'--repo',str(REPO)],capture_output=True)
    receipt=json.loads(verify.stdout);assert receipt['completed_native_runs']==len(done)
    published=done;pending_commit=None
    state(state='published',completed=len(done),verification=receipt,failed_queue=q['failed'])
