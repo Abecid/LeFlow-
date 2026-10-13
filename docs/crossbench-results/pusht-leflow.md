@@ -13,6 +13,6 @@ The fixed four-checkpoint success curve is **12 / 8 / 9 / 12 /50**, selecting **
 
 Selected failure reasons: {'action_limit': 38}. Selected mean action count is 45.82; world transitions total 147,520. These are factual selected trajectories, not outcomes of rejected actions.
 
-This benchmark uses released frozen LeWM features rather than MetaWorld V-JEPA. The source and latent cache retain all14,948 TRAIN episodes; training samples1,439,235 native-safe starts among1,496,570 nominal starts. Raw out-of-box commands are preserved, not clipped or given fabricated labels. Factual history and complete goal prefixes respect native limits; all controllers share this rule. Validation cases remain unchanged. Full-source normalization/backbone exposure are documented in the campaign runbook.
+This benchmark uses released frozen LeWM features rather than MetaWorld V-JEPA. The latent cache retains 14,948 TRAIN episodes; 14,948 episodes provide 1,439,235 native-safe starts among 1,496,570 nominal starts. Raw out-of-box commands are preserved, not clipped or given fabricated labels. Factual history and complete goal prefixes respect native limits; all controllers share this rule. Validation cases remain unchanged. Full-source normalization/backbone exposure are documented in the campaign runbook.
 
 One seed and50 repeatedly selected development cases are screening evidence, not independent final evaluation or native-method SOTA. Other controllers continue under the same ceilings; no extra seed, MetaWorld retraining or sealed test was run.

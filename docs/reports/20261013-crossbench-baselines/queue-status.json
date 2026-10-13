@@ -36,30 +36,26 @@
         "/tmp/mtxu-crossbench-20261013/env/bin/python",
         "-u",
         "-m",
-        "torch.distributed.run",
-        "--standalone",
-        "--nproc_per_node=4",
-        "-m",
-        "crossbench.train",
+        "crossbench.prepare",
         "--task",
-        "pusht",
-        "--method",
-        "action_flow_search",
-        "--cache",
-        "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/cache/pusht",
-        "--run-dir",
-        "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/pusht/action_flow_search"
+        "cube",
+        "--source-json",
+        "/tmp/mtxu-leflow-20261004/data/prepared/cube/source.json",
+        "--output",
+        "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/cache/cube",
+        "--gpus",
+        "4",
+        "--batch-size",
+        "512"
       ],
-      "dataset": "pusht",
-      "method": "action_flow_search",
       "physical_gpus": [
         "4",
         "5",
         "6",
         "7"
       ],
-      "pid": 3195234,
-      "state": "training_and_periodic_evaluation"
+      "pid": 3206865,
+      "state": "preparing_cube_cache"
     }
   },
   "pending": [
@@ -436,8 +432,103 @@
       "method": "retrieval_repair_ttt",
       "returncode": 0,
       "utc": "2026-10-13T10:20:34.907756+00:00"
+    },
+    {
+      "best": {
+        "checkpoint_sha256": "b2b532383283f7f5e8016f25dea33603fbcac3c63ee4d0d3eceb30ff41515bf8",
+        "metrics": {
+          "episodes": 50,
+          "failure_ids": [
+            "pusht/val/0002481/000039",
+            "pusht/val/0003251/000029",
+            "pusht/val/0003692/000081",
+            "pusht/val/0004158/000063",
+            "pusht/val/0004684/000092",
+            "pusht/val/0006540/000014",
+            "pusht/val/0006712/000021",
+            "pusht/val/0007987/000033",
+            "pusht/val/0008980/000043",
+            "pusht/val/0013555/000059",
+            "pusht/val/0015959/000106",
+            "pusht/val/0016443/000071",
+            "pusht/val/0017254/000000"
+          ],
+          "mean_decision_ms": 73.30794960968882,
+          "mean_steps": 31.24,
+          "success_rate": 0.74,
+          "successes": 37,
+          "timeouts": 0,
+          "wilson95": [
+            0.6044657801100008,
+            0.8412862034863262
+          ],
+          "world_transitions": 156480
+        },
+        "step": 5000
+      },
+      "complete": {
+        "evaluation_gpu_hours": 0.04190744902731644,
+        "identity": {
+          "cache": "bd363bb3cb3900cf7bf855b6a2038f31b8f9734b2786ccbc999fc828c5cba09c",
+          "fixture": false,
+          "ranks": 4,
+          "source": "50bd3c4cd056676a963a1ecbc0ba0e2d8a83fd1901190c8e815cc80635fcdf68",
+          "spec": {
+            "action_block": 5,
+            "action_budget": 50,
+            "candidates": 4,
+            "controller_seconds": 10.0,
+            "dataset": "pusht",
+            "dim": 192,
+            "eval_episodes": 50,
+            "flow_steps": 8,
+            "global_batch": 64,
+            "goal_offset": 25,
+            "history": 4,
+            "horizon": 5,
+            "learning_rate": 0.0001,
+            "method": "action_flow_search",
+            "optimization_gpu_seconds": 28800.0,
+            "patches": 1,
+            "primitive_dim": 2,
+            "protocol": "crossbench-shared-lewm-v2",
+            "repair_radius": 0.25,
+            "repair_steps": 4,
+            "rounds": 3,
+            "seed": 3072,
+            "targets": 8,
+            "updates": 20000,
+            "weight_decay": 0.05,
+            "width": 256
+          },
+          "window_sampling": {
+            "eligible_episodes": 14948,
+            "eligible_starts": 1439235,
+            "native_safe_factual_history_and_goals": true,
+            "nominal_episodes": 14948,
+            "nominal_starts": 1496570
+          },
+          "world": "48938400ae3464c9680731287f583a9cb516f55a8ec64ea13a91be47fb15b607"
+        },
+        "optimization_gpu_hours": 0.5329562084087067,
+        "selected_success_rate": 0.74,
+        "status": "completed",
+        "step": 20000,
+        "stop_reason": "update_limit",
+        "validation_steps": [
+          5000,
+          10000,
+          15000,
+          20000
+        ],
+        "wall_seconds": 588.7713033258915
+      },
+      "dataset": "pusht",
+      "method": "action_flow_search",
+      "returncode": 0,
+      "utc": "2026-10-13T10:31:42.362526+00:00"
     }
   ],
   "source": "747f635ad36af2cbe3e2bbb0b7997efe9caccaa1",
-  "utc": "2026-10-13T10:20:56.432637+00:00"
+  "utc": "2026-10-13T10:31:45.786841+00:00"
 }

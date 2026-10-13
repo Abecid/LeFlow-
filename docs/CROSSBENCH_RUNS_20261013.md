@@ -37,12 +37,24 @@ the pinned working packages and installs the exact SWM commit with VCS metadata;
 it does not modify the older experiment environments. Native reset/render/action/
 self-goal-success and all18 CPU/native tests pass.
 
-Cube's official compressed archive is46184624478 bytes. A connection interruption
-after8024727442 bytes is preserved for resumable recovery. Preparation uses the
-remaining roughly1.9TiB scratch space. Cube's encoder/checkpoint and source
-revision remain pinned in its preparation metadata. No task success is inferred
-from tests or data preparation; formal run identities/online links are added only
-after GPU training is verified.
+Cube's official compressed archive is 46,184,624,478 bytes. The interrupted
+8,021,606,400-byte prefix was preserved and recovery used four parallel HTTP
+range workers. The complete archive matches the official SHA256
+`3725d6a01abd492164441ef0a27e588f52b94a118fab56b96987b1a34a6c2600`.
+Extraction and source metadata are complete: 10,000 episodes and 2,010,000 frames,
+with 8,000 TRAIN, 1,000 validation and 1,000 reserved test episodes. One four-GPU
+lane now prepares the TRAIN/validation cache while the other trains PushT.
+No reserved test images, actions or outcomes are read by the policy cache.
+
+The persistent GPU queue is PID3160064/start1020541048. Formal training stays
+frozen at `747f635ad36af2cbe3e2bbb0b7997efe9caccaa1` (245 runtime files).
+A separate CPU publication watcher audits completed processes/checkpoints and
+preserves all four physical evaluations, periodic logs, failures and selected
+measured trajectory archives. It publishes from its own checkout and verifies
+remote bytes. It does not launch GPU work, edit frozen source or add experiments.
+The exact [operations scripts](reports/20261013-crossbench-baselines/operations/)
+are preserved. Raw trajectory archives have not been turned into visually
+reviewed figures; their presence is not a visual-inspection claim.
 
 Server record: `/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines`.
 Runtime: `/tmp/mtxu-crossbench-20261013/env/bin/python`.
