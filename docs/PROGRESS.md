@@ -1,4 +1,4 @@
-# October 13 native campaign: first four completed comparisons
+# October 13 native campaign: first five completed comparisons
 
 All eight A800 GPUs are allocated in two disjoint four-GPU lanes for exactly
 16 PushT/Cube jobs; completed MetaWorld results are reused. Frozen source747f635,
@@ -8,7 +8,7 @@ separate from MetaWorld104.
 
 Completed PushT curves at5k/10k/15k/20k: vanilla7/13/15/17 selects17;
 LeFlow12/8/9/12 selects12; action-flow search37/29/24/31 selects37;
-retrieval-repair TTT34/39/37/38 selects39. All16 physical reports have zero
+retrieval-repair TTT34/39/37/38 selects39; execution-revision GMM33/30/38/33 selects38. All20 physical reports have zero
 controller timeouts. These are different trained systems and development
 selection, not a causal TTT experiment or a final SOTA claim. Against selected
 vanilla17, search has23wins/3regressions and retrieval-repair25wins/3regressions.
@@ -17,8 +17,11 @@ runs are finished. Full records and negative findings are preserved in
 [the native results](CROSSBENCH_RESULTS.md).
 
 Cube's official46.18GB archive is fully SHA256 verified and extracted. Its
-10,000 episodes/2,010,000 frames split8000/1000/1000. Four GPUs encode FP32
-batch512 with ordered bounded prefetch; four continue PushT GMM training.
+10,000 episodes/2,010,000 frames split8000/1000/1000. Cube preflight exposed cuDNN TF32 batch/single encoder drift. A TRAIN-only
+probe isolated it and verified strict FP32 removes the discrepancy. Recovery
+preserves all five completed runs, rebuilds only Cube cache with strict FP32 on
+four GPUs, and trains remaining PushT methods on the other four. It dispatches
+only11 unstarted jobs; no completed optimization/evaluation is replayed.
 The remaining registered jobs run automatically under the same ceilings.
 A CPU-only watcher publishes each completed run from a separate reporting
 checkout, checks remote bytes and holds on GPU queue failure. No extra methods,

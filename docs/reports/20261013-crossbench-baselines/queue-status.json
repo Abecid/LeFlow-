@@ -1,5 +1,5 @@
 {
-  "failed": false,
+  "failed": true,
   "lanes": {
     "A": {
       "command": [
@@ -36,33 +36,30 @@
         "/tmp/mtxu-crossbench-20261013/env/bin/python",
         "-u",
         "-m",
-        "crossbench.prepare",
+        "crossbench.preflight",
         "--task",
         "cube",
-        "--source-json",
-        "/tmp/mtxu-leflow-20261004/data/prepared/cube/source.json",
-        "--output",
+        "--method",
+        "vanilla_action_flow",
+        "--cache",
         "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/cache/cube",
-        "--gpus",
-        "4",
-        "--batch-size",
-        "512"
+        "--output",
+        "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/cube/vanilla_action_flow/native-preflight.json"
       ],
+      "dataset": "cube",
+      "error": "RuntimeError('cube-vanilla_action_flow-preflight.log exited 1; inspect preserved log before resuming')",
+      "method": "vanilla_action_flow",
       "physical_gpus": [
         "4",
         "5",
         "6",
         "7"
       ],
-      "pid": 3206865,
-      "state": "preparing_cube_cache"
+      "pid": 3215737,
+      "state": "failed_hold"
     }
   },
   "pending": [
-    [
-      "cube",
-      "vanilla_action_flow"
-    ],
     [
       "cube",
       "retrieval_repair_ttt"
@@ -527,8 +524,102 @@
       "method": "action_flow_search",
       "returncode": 0,
       "utc": "2026-10-13T10:31:42.362526+00:00"
+    },
+    {
+      "best": {
+        "checkpoint_sha256": "6cc68289feb3387757196f1ecad5e5b95d8b3d1a9d0bd597c7e9527ebf25dd14",
+        "metrics": {
+          "episodes": 50,
+          "failure_ids": [
+            "pusht/val/0000787/000018",
+            "pusht/val/0002481/000039",
+            "pusht/val/0004158/000063",
+            "pusht/val/0005164/000064",
+            "pusht/val/0007987/000033",
+            "pusht/val/0008531/000016",
+            "pusht/val/0012628/000013",
+            "pusht/val/0012720/000012",
+            "pusht/val/0014009/000101",
+            "pusht/val/0016443/000071",
+            "pusht/val/0017156/000019",
+            "pusht/val/0017254/000000"
+          ],
+          "mean_decision_ms": 65.66220240208251,
+          "mean_steps": 34.56,
+          "success_rate": 0.76,
+          "successes": 38,
+          "timeouts": 0,
+          "wilson95": [
+            0.6258705062480763,
+            0.8570274759812779
+          ],
+          "world_transitions": 173280
+        },
+        "step": 15000
+      },
+      "complete": {
+        "evaluation_gpu_hours": 0.039419525178770225,
+        "identity": {
+          "cache": "bd363bb3cb3900cf7bf855b6a2038f31b8f9734b2786ccbc999fc828c5cba09c",
+          "fixture": false,
+          "ranks": 4,
+          "source": "50bd3c4cd056676a963a1ecbc0ba0e2d8a83fd1901190c8e815cc80635fcdf68",
+          "spec": {
+            "action_block": 5,
+            "action_budget": 50,
+            "candidates": 4,
+            "controller_seconds": 10.0,
+            "dataset": "pusht",
+            "dim": 192,
+            "eval_episodes": 50,
+            "flow_steps": 8,
+            "global_batch": 64,
+            "goal_offset": 25,
+            "history": 4,
+            "horizon": 5,
+            "learning_rate": 0.0001,
+            "method": "execution_revision",
+            "optimization_gpu_seconds": 28800.0,
+            "patches": 1,
+            "primitive_dim": 2,
+            "protocol": "crossbench-shared-lewm-v2",
+            "repair_radius": 0.25,
+            "repair_steps": 4,
+            "rounds": 3,
+            "seed": 3072,
+            "targets": 8,
+            "updates": 20000,
+            "weight_decay": 0.05,
+            "width": 256
+          },
+          "window_sampling": {
+            "eligible_episodes": 14948,
+            "eligible_starts": 1439235,
+            "native_safe_factual_history_and_goals": true,
+            "nominal_episodes": 14948,
+            "nominal_starts": 1496570
+          },
+          "world": "48938400ae3464c9680731287f583a9cb516f55a8ec64ea13a91be47fb15b607"
+        },
+        "optimization_gpu_hours": 1.6814695824682713,
+        "selected_success_rate": 0.76,
+        "status": "completed",
+        "step": 20000,
+        "stop_reason": "update_limit",
+        "validation_steps": [
+          5000,
+          10000,
+          15000,
+          20000
+        ],
+        "wall_seconds": 1627.7053736932576
+      },
+      "dataset": "pusht",
+      "method": "execution_revision",
+      "returncode": 0,
+      "utc": "2026-10-13T10:42:06.159678+00:00"
     }
   ],
   "source": "747f635ad36af2cbe3e2bbb0b7997efe9caccaa1",
-  "utc": "2026-10-13T10:31:45.786841+00:00"
+  "utc": "2026-10-13T10:42:06.159729+00:00"
 }

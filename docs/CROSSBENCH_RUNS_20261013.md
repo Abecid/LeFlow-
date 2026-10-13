@@ -46,8 +46,24 @@ with 8,000 TRAIN, 1,000 validation and 1,000 reserved test episodes. One four-GP
 lane now prepares the TRAIN/validation cache while the other trains PushT.
 No reserved test images, actions or outcomes are read by the policy cache.
 
-The persistent GPU queue is PID3160064/start1020541048. Formal training stays
-frozen at `747f635ad36af2cbe3e2bbb0b7997efe9caccaa1` (245 runtime files).
+The original queue completed five PushT comparisons and held after Cube's
+preflight detected max-absolute encoder mismatch0.00243434. A TRAIN-only probe
+reproduced cached batch201 exactly, isolating the difference to batch versus
+single-image cuDNN TF32 arithmetic. Strict FP32 and an independent environment
+verification both reduce the difference to0.00000160933, below the unchanged
+0.001 guard. Cube's original cache/manifest and failed preflight logs are retained;
+its initial preparation took the recorded `preparation_seconds` on four GPUs.
+Failed preflight GPU time was not measured and is not reported as zero.
+No Cube policy optimization or registered validation occurred before the fix.
+
+The recovery queue retains all five completed runs and dispatches only the
+11 unstarted comparisons, using the original frozen source
+`747f635ad36af2cbe3e2bbb0b7997efe9caccaa1` (245 runtime files). Recovery master
+PID3222098/start1020885976 runs two four-GPU lanes. It rebuilds Cube's cache and
+sets `NVIDIA_TF32_OVERRIDE=0` for all Cube preparation, training and evaluation;
+PushT's completed cache and numerical settings stay fixed. No completed updates
+or evaluations are replayed; budgets and methods are unchanged.
+
 A separate CPU publication watcher audits completed processes/checkpoints and
 preserves all four physical evaluations, periodic logs, failures and selected
 measured trajectory archives. It publishes from its own checkout and verifies

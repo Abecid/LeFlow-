@@ -1,0 +1,36 @@
+{
+  "utc": "2026-10-13T10:45:53.630252+00:00",
+  "cause": "Default cuDNN TF32 leads to batch-dependent frozen encoder features",
+  "NVIDIA_TF32_OVERRIDE": "0",
+  "all_cube_methods_same_precision": true,
+  "preparation_rebuild_only": true,
+  "Cube_optimizer_updates_before_fix": 0,
+  "completed_runs_preserved": [
+    [
+      "pusht",
+      "vanilla_action_flow"
+    ],
+    [
+      "pusht",
+      "leflow"
+    ],
+    [
+      "pusht",
+      "retrieval_repair_ttt"
+    ],
+    [
+      "pusht",
+      "action_flow_search"
+    ],
+    [
+      "pusht",
+      "execution_revision"
+    ]
+  ],
+  "original_cache": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/cache/cube-tf32-original",
+  "original_cache_sha256": "ce8083e9abf153a57ef4e5be55bac0efc024d47220a01b2c1d56c520a4853dc4",
+  "original_preparation_seconds": 491.9257512707263,
+  "original_encoder_gpus": 4,
+  "failed_preflight_gpu_seconds": "not measured; not zero",
+  "no_completed_optimizer_or_eval_replayed": true
+}

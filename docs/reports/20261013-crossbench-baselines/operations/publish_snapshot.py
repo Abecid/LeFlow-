@@ -27,7 +27,9 @@ for r in x['runs']:
   dest=repo/'docs/crossbench-results';dest.mkdir(exist_ok=True);(dest/(task+'-'+m+'.md')).write_text('\n'.join(report)+'\n')
  else:ledger['active_runs'].append(entry)
 queue=json.loads((base/'queue-status.json').read_text())
-for task,m in queue['pending']:
+methods=('leflow','vanilla_action_flow','execution_revision','action_flow_search','sage_port','diffusion_policy_port','feedback_wm_port','retrieval_repair_ttt')
+seen={(r['dataset'],r['method'])for r in x['runs']}
+for task,m in [(t,m)for t in ('pusht','cube')for m in methods if(t,m)not in seen]:
  ledger['queued_runs'].append({'dataset':task,'method':m})
  lines.append(f"| {task} | {m} | queued | pending | pending |")
 lines+=['','Paired outcomes at each method’s selected development checkpoint:','','| Dataset | Method versus plain flow | Additional successes | Lost successes | Both fail |','| --- | --- | ---: | ---: | ---: |']
@@ -42,5 +44,5 @@ for (task,m),report in sorted(selected_reports.items()):
  both_fail=[k for k,v in records.items()if not v['success']and not reference[k]['success']]
  ledger['paired_comparisons'].append({'dataset':task,'method':m,'reference':'vanilla_action_flow','wins':wins,'regressions':losses,'both_fail':both_fail})
  lines.append(f"| {task} | {m} | {len(wins)} | {len(losses)} | {len(both_fail)} |")
-lines+=['','These pairs compare different trained systems on identical development cases. They do not isolate the effect of TTT or search, or reveal rejected-action counterfactuals.','','The remaining registered methods are queued and use two disjoint four-GPU lanes. No missing score is estimated. All archived case outcomes are actual native simulator success flags. CPU/synthetic checks alone are not benchmark results.','','Source/data/protocol details: [launch record](CROSSBENCH_RUNS_20261013.md). Complete/interim training logs and all physical milestone reports: [archive](reports/20261013-crossbench-baselines/).']
+lines+=['','These pairs compare different trained systems on identical development cases. They do not isolate the effect of TTT or search, or reveal rejected-action counterfactuals.','',f"Snapshot: {x['utc']}. Queue failure hold: {queue['failed']}. Lane states: { {k:v['state'] for k,v in queue['lanes'].items()} }.",'','The registered methods use two disjoint four-GPU lanes. No missing score is estimated. All archived case outcomes are actual native simulator success flags. CPU/synthetic checks alone are not benchmark results.','','Source/data/protocol details: [launch record](CROSSBENCH_RUNS_20261013.md). Complete/interim training logs and all physical milestone reports: [archive](reports/20261013-crossbench-baselines/).']
 (repo/'docs/CROSSBENCH_RESULTS.md').write_text('\n'.join(lines)+'\n');(repo/'docs/crossbench-results-ledger.json').write_text(json.dumps(ledger,indent=2)+'\n');print('Published rows prepared',len(ledger['completed_runs']),'completed',len(ledger['active_runs']),'active')

@@ -1,0 +1,26 @@
+{
+  "original_flags": {
+    "cudnn": true,
+    "matmul": false,
+    "precision": "highest"
+  },
+  "default": {
+    "batch_vs_cache": 0.0,
+    "single_vs_batch": 0.002434343099594116,
+    "single_vs_cache": 0.002434343099594116,
+    "feature_abs_max": 3.529588460922241,
+    "feature_abs_mean": 0.807356059551239
+  },
+  "strict_fp32": {
+    "single_vs_batch": 1.6093254089355469e-06,
+    "single_vs_old_cache": 0.002434343099594116,
+    "batch_vs_old_cache": 0.004815056920051575
+  },
+  "TRAIN_episode": 9947,
+  "start": 146,
+  "batch": 201,
+  "seconds": 3.384958738461137,
+  "optimizer_updates": 0,
+  "validation_cases": 0,
+  "test_cases": 0
+}

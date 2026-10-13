@@ -7,8 +7,11 @@ def add(name,path,compress=False):
  if path.suffix=='.jsonl' and raw and not raw.endswith(b'\n'):raw=raw.rsplit(b'\n',1)[0]+b'\n'
  data=gzip.compress(raw,mtime=0)if compress else raw;items[name]=data
  receipts[name]={'source':str(path),'original_sha256':hashlib.sha256(raw).hexdigest(),'stored_sha256':hashlib.sha256(data).hexdigest()}
-for name in ['launcher.json','allocation.json','plan.json','queue-status.json','queue-complete.json','runtime-files.json','initial-preparation.json','pusht-cache-repair.json','cube-recovery-launcher.json','cube-download-progress.json','cube-recovery-launcher-file-transfer-race.json']:
+for name in ['launcher.json','allocation.json','plan.json','queue-status.json','queue-complete.json','runtime-files.json','initial-preparation.json','pusht-cache-repair.json','cube-recovery-launcher.json','cube-download-progress.json','cube-recovery-launcher-file-transfer-race.json','pre-recovery-queue-status.json','pre-recovery-allocation.json','recovery-plan.json','recovery-launcher.json','recovery-queue-complete.json','precision-recovery.json','cube-numerical-diagnostic.json','cube-precision-env-verification.json']:
  add(name,BASE/name)
+for name in ['cube-vanilla_action_flow-preflight.log','cube-cache.log','cube-cache-strict-fp32.log']:
+ add('preparation-logs/'+name+'.gz',BASE/'logs'/name,True)
+add('cache/cube-tf32-original/manifest.json.gz',BASE/'cache/cube-tf32-original/manifest.json',True)
 summary={'utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'runs':[],'final_test_outcomes_read':False}
 for task in ['pusht','cube']:
  add('cache/'+task+'/manifest.json.gz',BASE/'cache'/task/'manifest.json',True)

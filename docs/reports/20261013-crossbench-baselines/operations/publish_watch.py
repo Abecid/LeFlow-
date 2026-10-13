@@ -22,6 +22,8 @@ if not (REPO/'.git').exists():
  call(['git','clone','--filter=blob:none','--no-checkout','https://github.com/Abecid/LeFlow-.git',str(REPO)])
  call(['git','fetch','origin','main'],cwd=REPO)
  call(['git','checkout','--detach','origin/main'],cwd=REPO)
+ call(['git','config','user.name','Adam Lee'],cwd=REPO)
+ call(['git','config','user.email','cmlee3211@gmail.com'],cwd=REPO)
 published=set();pending_commit=None
 while True:
  try:
@@ -29,7 +31,7 @@ while True:
    f"b=Path('{BASE}');q=json.loads((b/'queue-status.json').read_text());"
    "print(json.dumps({'source':q['source'],'failed':q['failed'],"
    "'results':[(r['dataset'],r['method'])for r in q['results']],"
-   "'queue_complete':json.loads((b/'queue-complete.json').read_text())if(b/'queue-complete.json').exists()else None}))").encode(),capture_output=True)
+   "'queue_complete':json.loads((b/'recovery-queue-complete.json').read_text())if(b/'recovery-queue-complete.json').exists()else None}))").encode(),capture_output=True)
   q=json.loads(response.stdout);assert q['source']==SOURCE
   done={tuple(r)for r in q['results']}
   if done!=published or q['failed']:
@@ -40,7 +42,14 @@ while True:
      f"subprocess.run(['{PYTHON}','{BASE}/audit_run.py','--dataset','{task}','--method','{method}'],check=True)if not p.exists()else None")
     call(SSH+['python3 -'],input=script.encode())
    # Private reporting checkout only. Preserve any unpushed report commit.
-   if git('status','--porcelain'):raise RuntimeError('Private publication checkout has uncommitted files; preserve before recovery')
+   if git('status','--porcelain'):
+    dirty=set(git('diff','--name-only').splitlines())|set(git('diff','--cached','--name-only').splitlines())|set(git('ls-files','--others','--exclude-standard').splitlines())
+    prefixes=('docs/CROSSBENCH_RESULTS.md','docs/crossbench-results-ledger.json','docs/crossbench-results/','docs/reports/20261013-crossbench-baselines/')
+    if not all(any(path==prefix or path.startswith(prefix)for prefix in prefixes)for path in dirty):
+     raise RuntimeError('Unrelated private-checkout changes; refuse overwrite')
+    call(['git','add','docs/CROSSBENCH_RESULTS.md','docs/crossbench-results-ledger.json','docs/crossbench-results','docs/reports/20261013-crossbench-baselines'],cwd=REPO)
+    call(['git','commit','-m','Preserve interrupted native publication before retry'],cwd=REPO)
+    pending_commit=git('rev-parse','HEAD')
    if pending_commit:call(['git','branch','publication-retry-'+str(time.time_ns()),pending_commit],cwd=REPO)
    call(['git','fetch','origin','main'],cwd=REPO)
    call(['git','checkout','--detach','origin/main'],cwd=REPO)

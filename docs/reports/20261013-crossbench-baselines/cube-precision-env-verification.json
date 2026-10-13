@@ -1,0 +1,9 @@
+{
+  "NVIDIA_TF32_OVERRIDE": "0",
+  "single_vs_batch_max_abs": 1.6093254089355469e-06,
+  "TRAIN_episode": 9947,
+  "seconds": 3.4186468943953514,
+  "optimizer_updates": 0,
+  "validation_cases": 0,
+  "test_cases": 0
+}
