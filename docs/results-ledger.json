@@ -4,11 +4,11 @@
   "publication_contract": "A run is publication-complete only when these artifacts and its findings report are committed and verified on origin/main. Local ledger membership alone does not prove remote publication.",
   "active_runs": [
     {
-      "run_key": "additional-vanilla_action_flow-3072-20261012",
+      "run_key": "j1m6jzog",
       "method": "vanilla_action_flow",
       "label": "vanilla action flow",
       "seed": 3072,
-      "status": "registered_pending_preflight",
+      "status": "training_or_periodic_evaluation_verified",
       "source": "0a19c7c67d791fd99376216399b03e8cb71d78c0",
       "registered_source": "0a19c7c67d791fd99376216399b03e8cb71d78c0",
       "runtime_files_verified": 214,
@@ -22,7 +22,32 @@
       "development_cases": 104,
       "evaluation_rounds": 4,
       "final_tests": false,
-      "artifact_sha256": {}
+      "artifact_sha256": {
+        "docs/reports/20261012-additional-baselines/vanilla_action_flow/launcher.json": "b9b8808b8a63344814b5970298df1e9369a5dad12271ab90ef436a1db25db45f",
+        "docs/reports/20261012-additional-baselines/vanilla_action_flow/worker.json": "ddd5d395d7f47c41134593d33e357677564afafd4b9b67053b05c33b9abb886e",
+        "docs/reports/20261012-additional-baselines/vanilla_action_flow/tests.log": "7aa5b0c07acd29ee357433cf3109c92644a3902f719e665ec9f4db62a5ec666b",
+        "docs/reports/20261012-additional-baselines/vanilla_action_flow/status.json": "ed7d129223e8afcc6682f2a430a6866a65c4672915dc131732307c6296a1597d",
+        "docs/reports/20261012-additional-baselines/vanilla_action_flow/campaign/route-bank.json": "eabc33156ea6fc5ccb4d99fab1c3d29a6391ddae7e70c5fb1c3b37e54c322f19",
+        "docs/reports/20261012-additional-baselines/vanilla_action_flow/campaign/reuse.json": "2c1799cf3503bd6a7f563dcba3e22f14f35ab34e5264e4b917f9f0a3dafc32e2",
+        "docs/reports/20261012-additional-baselines/vanilla_action_flow/campaign/allocation.json": "d579f89010c5f66e9fe5cfe76cc38ec7bc27a4c24a6a60941cf39e175bbb8638",
+        "docs/reports/20261012-additional-baselines/vanilla_action_flow/campaign/ddp-check.json": "fe1687402d0029d139e22b142a31daa0015ad5ca6fe1103c8971cd8b31c142d1",
+        "docs/reports/20261012-additional-baselines/vanilla_action_flow/campaign/preflight.json": "89bb1b8a16212f7455be41413d344cd1f886b9f87c6a1454866900745c401658",
+        "docs/reports/20261012-additional-baselines/vanilla_action_flow/run/metrics.jsonl.gz": "e5be0a6d27cef2c3c4f5642831ef5ac8060847e301038a01d5f5e0615fe79e75",
+        "docs/reports/20261012-additional-baselines/vanilla_action_flow/run/compute_usage.json": "08dd0ef1d24aac699d9140cfd0272022b042a3b1c516b45840c6f4a8bc13ce17",
+        "docs/reports/20261012-additional-baselines/vanilla_action_flow/run/run.json": "763cfbf8c78583fcd1b18c986138823134cc7c6e44a561b3b3875260c914d0c3",
+        "docs/reports/20261012-additional-baselines/vanilla_action_flow/run/validation/step_0005000.json.gz": "0c24f065209954ce65803b2a65ef4e6657ae71a4fb309d30856dddf2f263679c"
+      },
+      "wandb_url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/j1m6jzog",
+      "verified_step": 7600,
+      "metric_rows": 154,
+      "metrics_artifact": "docs/reports/20261012-additional-baselines/vanilla_action_flow/run/metrics.jsonl.gz",
+      "curve": [
+        {
+          "step": 5000,
+          "successes": 77,
+          "timeouts": 0
+        }
+      ]
     },
     {
       "run_key": "additional-action_flow_search-3072-20261012",
@@ -67,11 +92,11 @@
       "artifact_sha256": {}
     },
     {
-      "run_key": "additional-diffusion_policy_port-3072-20261012",
+      "run_key": "cnlxvbpf",
       "method": "diffusion_policy_port",
       "label": "diffusion policy port",
       "seed": 3072,
-      "status": "registered_pending_preflight",
+      "status": "training_or_periodic_evaluation_verified",
       "source": "0a19c7c67d791fd99376216399b03e8cb71d78c0",
       "registered_source": "0a19c7c67d791fd99376216399b03e8cb71d78c0",
       "runtime_files_verified": 214,
@@ -85,7 +110,25 @@
       "development_cases": 104,
       "evaluation_rounds": 4,
       "final_tests": false,
-      "artifact_sha256": {}
+      "artifact_sha256": {
+        "docs/reports/20261012-additional-baselines/diffusion_policy_port/launcher.json": "fde8c8b6c7bc07422ae31d47ad1fb1a765a02ac97a8d34923dc2bbb4fed1734d",
+        "docs/reports/20261012-additional-baselines/diffusion_policy_port/worker.json": "ceb54f00276371b91e93972ca5dec7805990da90968a659b5d8e5fa3a273c5a4",
+        "docs/reports/20261012-additional-baselines/diffusion_policy_port/tests.log": "f0801165191e5d74dd958ffa91631fce5dae42a5f766d0025c78732e006088fa",
+        "docs/reports/20261012-additional-baselines/diffusion_policy_port/status.json": "256aaecdd5aebcbf2f1559b4edd7582019d456717419586452ee9452e0e23844",
+        "docs/reports/20261012-additional-baselines/diffusion_policy_port/campaign/route-bank.json": "8c8a308114ab32a043f2e77c3e9dd5e65592d142b0f8c15f4cb54d163793fb44",
+        "docs/reports/20261012-additional-baselines/diffusion_policy_port/campaign/reuse.json": "2f794ec7c6e87d51302b13f843b73e026b1c7f06611f190fabc24af7a534f54f",
+        "docs/reports/20261012-additional-baselines/diffusion_policy_port/campaign/allocation.json": "e9220a7b0532fa2b4592f2332d721893c97525ee4fc107dbae2d5ae5693276d5",
+        "docs/reports/20261012-additional-baselines/diffusion_policy_port/campaign/ddp-check.json": "d306573fe7fa935ca6a51a5e59a2dd24a652a85972b16c119edf9e7e9eed3870",
+        "docs/reports/20261012-additional-baselines/diffusion_policy_port/campaign/preflight.json": "3f5a32bf02d2c227bd4fe9012747c5da8202415d1cf6d62a8a7d0ec1b8780c38",
+        "docs/reports/20261012-additional-baselines/diffusion_policy_port/run/metrics.jsonl.gz": "b78b77b117d0a33f3cc51ec8db1111c8a9f613365a5a846d108668e8e1ffaf6a",
+        "docs/reports/20261012-additional-baselines/diffusion_policy_port/run/compute_usage.json": "38fb17fd71ec21bd8cb36d43efa4a126870a837443c433da7d508459ff887fc9",
+        "docs/reports/20261012-additional-baselines/diffusion_policy_port/run/run.json": "24ca2ab6ea8965bbbb106723e7f488d0a1441392a6df122adc07b823b14e0168"
+      },
+      "wandb_url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/cnlxvbpf",
+      "verified_step": 5000,
+      "metric_rows": 101,
+      "metrics_artifact": "docs/reports/20261012-additional-baselines/diffusion_policy_port/run/metrics.jsonl.gz",
+      "curve": []
     },
     {
       "run_key": "additional-feedback_wm_port-3072-20261012",

@@ -1,0 +1,24 @@
+{
+  "command": [
+    "/tmp/mtxu-flow-jepa-20261007/env/bin/python",
+    "-m",
+    "torch.distributed.run",
+    "--nnodes=1",
+    "--nproc_per_node=4",
+    "--rdzv-backend=c10d",
+    "--rdzv-endpoint=127.0.0.1:0",
+    "-m",
+    "flow_jepa.execution.train",
+    "--config",
+    "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/vanilla_action_flow/repo/config/flow_metaworld_vanilla_action_flow.json",
+    "--root",
+    "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/vanilla_action_flow/campaign",
+    "--run-dir",
+    "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/vanilla_action_flow/campaign/runs/vanilla_action_flow_3072",
+    "--world",
+    "/home/mtxu/adam/LeFlow-experiments/20261009-repaired-comparison/campaign/runs/world_3072/best.pt",
+    "--bank",
+    "/tmp/mtxu-additional-baselines-20261012/vanilla_action_flow/route_bank.pt"
+  ],
+  "pid": 2724735
+}

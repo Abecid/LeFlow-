@@ -1,0 +1,114 @@
+{
+  "checked_utc": "2026-10-13T03:06:36.897899+00:00",
+  "source": "0a19c7c67d791fd99376216399b03e8cb71d78c0",
+  "methods": {
+    "vanilla_action_flow": {
+      "runtime_files_verified": 214,
+      "compute_usage.json": {
+        "global_batch": 64,
+        "gpu_count": 4,
+        "last_update_overrun_gpu_seconds": 0.0,
+        "optimization_cap_gpu_seconds": 28800,
+        "optimization_gpu_hours": 0.23606871231562562,
+        "optimization_gpu_seconds": 849.8473643362522,
+        "step": 7616,
+        "stop_check": "optimizer boundary; final-update overrun reported",
+        "validation_gpu_hours": 0.4329986555294858,
+        "validation_gpu_seconds": 1558.795159906149,
+        "validation_steps": [
+          5000
+        ]
+      },
+      "run": {
+        "bank_hash": "e4d7b4ae88be9b4071f8fe665f7b23edf19e5718c18d0a1b628d048a58a12a72",
+        "code": "0a19c7c67d791fd99376216399b03e8cb71d78c0",
+        "id": "j1m6jzog",
+        "manifest": "3860ef719332674621dfbab365e0117ab0c14fde6ea1b039263fdccd20f7506d",
+        "method": "vanilla_action_flow",
+        "protocol": "558648d4ca456d597d0fff344a536081833710b42db7a08eeda4b1354c170837",
+        "seed": 3072,
+        "wandb_url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/j1m6jzog",
+        "world_hash": "ae3f910da43f0a43dd65945394444a0b11719ed042cdacffacc2faaf824ec5a3",
+        "world_size": 4
+      },
+      "evaluations": [
+        {
+          "step": 5000,
+          "successes": 77,
+          "timeouts": 0
+        }
+      ],
+      "coordinator_alive": true,
+      "latest_training": {
+        "train/flow_loss": 0.131853386759758,
+        "train/goal_offset_mean": 26.015625,
+        "train/late_window_fraction": 0.015625,
+        "train/loss": 0.131853386759758,
+        "train/sample_start_mean": 15.03125,
+        "step": 7600,
+        "train/lr": 6.872939455602431e-05,
+        "train/execution_weight": 0.0,
+        "train/grad_norm": 1.3161998987197876,
+        "budget/optimization_gpu_hours": 0.23559185833566718,
+        "system/update_seconds": 0.024337030947208405,
+        "system/update_examples_per_second": 2629.737379996271,
+        "system/peak_gpu_gib": 9.613457679748535
+      },
+      "metric_rows": 154
+    },
+    "action_flow_search": {
+      "runtime_files_verified": 214
+    },
+    "sage_port": {
+      "runtime_files_verified": 214
+    },
+    "diffusion_policy_port": {
+      "runtime_files_verified": 214,
+      "compute_usage.json": {
+        "global_batch": 64,
+        "gpu_count": 4,
+        "last_update_overrun_gpu_seconds": 0.0,
+        "optimization_cap_gpu_seconds": 28800,
+        "optimization_gpu_hours": 0.1583590325464805,
+        "optimization_gpu_seconds": 570.0925171673298,
+        "step": 5000,
+        "stop_check": "optimizer boundary; final-update overrun reported",
+        "validation_gpu_hours": 0.0,
+        "validation_gpu_seconds": 0.0,
+        "validation_steps": []
+      },
+      "run": {
+        "bank_hash": "ca88357a9e915aefd25a6fd4b85ff5a2851af50cb2e46660f224291031f4c57b",
+        "code": "0a19c7c67d791fd99376216399b03e8cb71d78c0",
+        "id": "cnlxvbpf",
+        "manifest": "2bf950bb205f9bfc0814754a82a1862744b389639e8a9cbf012066307ec1a999",
+        "method": "diffusion_policy_port",
+        "protocol": "581f09c55815438da6efd04095f65dd60c11e2c9b20dcc79bf632f1e9932f765",
+        "seed": 3072,
+        "wandb_url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/cnlxvbpf",
+        "world_hash": "ae3f910da43f0a43dd65945394444a0b11719ed042cdacffacc2faaf824ec5a3",
+        "world_size": 4
+      },
+      "coordinator_alive": true,
+      "latest_training": {
+        "train/goal_offset_mean": 27.109375,
+        "train/late_window_fraction": 0.015625,
+        "train/loss": 0.06280409544706345,
+        "train/noise_mse": 0.06280409544706345,
+        "train/sample_start_mean": 13.625,
+        "step": 5000,
+        "train/lr": 8.550728330453025e-05,
+        "train/execution_weight": 0.0,
+        "train/grad_norm": 0.6157078742980957,
+        "budget/optimization_gpu_hours": 0.1583590325464805,
+        "system/update_seconds": 0.02828618325293064,
+        "system/update_examples_per_second": 2262.5887496988184,
+        "system/peak_gpu_gib": 0.0941152572631836
+      },
+      "metric_rows": 101
+    },
+    "feedback_wm_port": {
+      "runtime_files_verified": 214
+    }
+  }
+}

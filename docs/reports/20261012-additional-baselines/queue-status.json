@@ -1,0 +1,25 @@
+{
+  "source": "0a19c7c67d791fd99376216399b03e8cb71d78c0",
+  "updated_utc": "2026-10-13T02:54:11.964225+00:00",
+  "lanes": {
+    "A": {
+      "current": "vanilla_action_flow",
+      "pid": 2722401,
+      "state": "preflight_then_training",
+      "remaining": [
+        "action_flow_search",
+        "sage_port"
+      ],
+      "completed": []
+    },
+    "B": {
+      "current": "diffusion_policy_port",
+      "pid": 2722403,
+      "state": "preflight_then_training",
+      "remaining": [
+        "feedback_wm_port"
+      ],
+      "completed": []
+    }
+  }
+}

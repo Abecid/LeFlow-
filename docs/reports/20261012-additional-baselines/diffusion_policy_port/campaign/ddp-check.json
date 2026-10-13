@@ -1,0 +1,49 @@
+{
+  "global_batch": 64,
+  "gpu_count": 4,
+  "gpu_hours": 0.0022354904810587563,
+  "gradient_sync_exact": true,
+  "optimizer_updates": 0,
+  "parameters_unchanged": true,
+  "rank_records": [
+    [
+      {
+        "depth": 1,
+        "gradient_elements": 2503688,
+        "loss": 1.1189924478530884,
+        "seconds": 0.3834800962358713,
+        "unused_parameters": []
+      }
+    ],
+    [
+      {
+        "depth": 1,
+        "gradient_elements": 2503688,
+        "loss": 1.04315984249115,
+        "seconds": 0.38104357942938805,
+        "unused_parameters": []
+      }
+    ],
+    [
+      {
+        "depth": 1,
+        "gradient_elements": 2503688,
+        "loss": 1.160049557685852,
+        "seconds": 0.3867120873183012,
+        "unused_parameters": []
+      }
+    ],
+    [
+      {
+        "depth": 1,
+        "gradient_elements": 2503688,
+        "loss": 1.10948646068573,
+        "seconds": 0.38693008944392204,
+        "unused_parameters": []
+      }
+    ]
+  ],
+  "seconds": 2.011941432952881,
+  "simulator_episodes": 0,
+  "world_gradients_absent": true
+}

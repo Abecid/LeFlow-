@@ -1,0 +1,23 @@
+test_bank_rejects_evaluation_examples (test_execution.ExecutionTests.test_bank_rejects_evaluation_examples) ... ok
+test_exact_executed_prefix_and_fixed_prediction_budget (test_execution.ExecutionTests.test_exact_executed_prefix_and_fixed_prediction_budget) ... ok
+test_observed_execution_loss_backpropagates_to_policy_only (test_execution.ExecutionTests.test_observed_execution_loss_backpropagates_to_policy_only) ... ok
+test_terminal_window_does_not_reward_early_transient_match (test_execution.ExecutionTests.test_terminal_window_does_not_reward_early_transient_match) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.158s
+
+OK
+test_shared_data_and_budget (test_additional_baseline_contract.TestAdditionalBaselineContract.test_shared_data_and_budget) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.134s
+
+OK
+test_diffusion_training_and_sampling (test_published_policy_ports.TestPublishedPorts.test_diffusion_training_and_sampling) ... ok
+test_sage_loss_and_subgoal (test_published_policy_ports.TestPublishedPorts.test_sage_loss_and_subgoal) ... ok
+test_sage_world_search_and_execution_prefix (test_published_policy_ports.TestPublishedPorts.test_sage_world_search_and_execution_prefix) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.188s
+
+OK

@@ -1,3 +1,14 @@
+# Authorized GPU batch now launched
+
+The user has explicitly authorized actual training/evaluation on all eight
+server GPUs. The [registered batch record](ADDITIONAL_BASELINE_RUNS_20261012.md)
+supersedes the historical implementation-only/one-method-at-a-time status below.
+Two four-GPU lanes run the five methods under the unchanged single-seed budget.
+The optimized dataset uses the exact AlignedSegments sampling/state/action
+fields but omits unused TTT-history tensors; real TRAIN byte checks precede training.
+
+Historical implementation specification follows.
+
 # Five additional MetaWorld controller baselines (implementation, not scores)
 
 **State:** code added to main; no GPU training, 104-case validation, sealed-test

@@ -1,0 +1,12 @@
+{
+  "bank_hash": "ca88357a9e915aefd25a6fd4b85ff5a2851af50cb2e46660f224291031f4c57b",
+  "code": "0a19c7c67d791fd99376216399b03e8cb71d78c0",
+  "id": "cnlxvbpf",
+  "manifest": "2bf950bb205f9bfc0814754a82a1862744b389639e8a9cbf012066307ec1a999",
+  "method": "diffusion_policy_port",
+  "protocol": "581f09c55815438da6efd04095f65dd60c11e2c9b20dcc79bf632f1e9932f765",
+  "seed": 3072,
+  "wandb_url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/cnlxvbpf",
+  "world_hash": "ae3f910da43f0a43dd65945394444a0b11719ed042cdacffacc2faaf824ec5a3",
+  "world_size": 4
+}

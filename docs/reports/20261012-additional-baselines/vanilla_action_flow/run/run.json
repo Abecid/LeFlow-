@@ -1,0 +1,12 @@
+{
+  "bank_hash": "e4d7b4ae88be9b4071f8fe665f7b23edf19e5718c18d0a1b628d048a58a12a72",
+  "code": "0a19c7c67d791fd99376216399b03e8cb71d78c0",
+  "id": "j1m6jzog",
+  "manifest": "3860ef719332674621dfbab365e0117ab0c14fde6ea1b039263fdccd20f7506d",
+  "method": "vanilla_action_flow",
+  "protocol": "558648d4ca456d597d0fff344a536081833710b42db7a08eeda4b1354c170837",
+  "seed": 3072,
+  "wandb_url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/j1m6jzog",
+  "world_hash": "ae3f910da43f0a43dd65945394444a0b11719ed042cdacffacc2faaf824ec5a3",
+  "world_size": 4
+}

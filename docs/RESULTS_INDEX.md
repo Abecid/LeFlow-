@@ -1,3 +1,14 @@
+# Five additional baseline comparisons authorized and queued
+
+The new [five-method GPU batch](ADDITIONAL_BASELINE_RUNS_20261012.md) is registered
+under the user's latest explicit instruction. Its two four-GPU lanes use all eight
+available A800s, unchanged data/seed/batch/compute/development limits, and the
+published [method adaptations](ADDITIONAL_BASELINES_20261012.md). The sixteen
+completed comparisons below remain preserved; the five new runs have no reported
+success result yet. Completed runs require immediate full result publication.
+
+Earlier completed-comparison index follows.
+
 # Results and completion publication
 
 Updated October 12, 2026. Nonlinear episodic memory completes **73/66/67/72**,

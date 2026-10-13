@@ -1,3 +1,30 @@
+# October 12: five additional baseline comparisons launched
+
+The user explicitly requested training/evaluation of vanilla_action_flow,
+action_flow_search, sage_port, diffusion_policy_port and feedback_wm_port on all
+available server GPUs. Recovered and fast-forwarded the implementations from
+origin/main4bd023f. Added real no-update distributed launch checks and a final
+cap-bound evaluation guard, and eliminated loading/transfer of unused TTT-history
+fields with consumed TRAIN byte verification. Frozen source0a19c7c has214 runtime
+files, all matched in five isolated server checkouts. CPU tests pass in the actual
+established GPU environment; GPU checks precede optimizer dispatch.
+
+The persistent queue starts at2026-10-13T02:54:11UTC (October12 19:54Pacific),
+PID2722390/start1018055754. Two four-A800 lanes launch vanilla flow and Diffusion
+Policy first; fixed-world search/SAGE and Feedback-WM follow in their respective
+lanes. All eight GPUs were idle and have been reserved via the existing non-
+preemptive locks. All five are registered in the active ledger under seed3072,
+global64,6222expert TRAIN episodes,20k/28800optimizer-GPU-second ceilings,
+four fixed104 development evaluations and200-action/10-second controller limits.
+No final tests, extra seeds, older baseline reruns or unrelated variants.
+
+Updated the existing15-minute completion monitor for this authorized batch.
+Read [batch state](ADDITIONAL_BASELINE_RUNS_20261012.md). Historical no-new-run
+holds are superseded for these five methods only. No training success or task
+success score is inferred from queue registration; live launch checks follow.
+
+Earlier progress follows.
+
 # October 12: paper thesis, formulation and design preserved
 
 Added PAPER_BLUEPRINT.md at the user's request. It defines the main direction as

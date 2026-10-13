@@ -6,11 +6,11 @@ LeFlow21 references are reused. No prior baseline is retrained.
 
 | Method | Queue lane / physical GPUs | State |
 | --- | --- | --- |
-| Vanilla conditional action flow | A: 0–3, first | Registered; real preflight pending |
-| Action flow + fixed world search | A: 0–3, second | Registered; real preflight pending |
-| SAGE-inspired MetaWorld port | A: 0–3, third | Registered; real preflight pending |
-| Diffusion Policy port | B: 4–7, first | Registered; real preflight pending |
-| Feedback World Model-inspired port | B: 4–7, second | Registered; real preflight pending |
+| Vanilla conditional action flow | A: 0–3, first | Training verified;5k evaluation pending |
+| Action flow + fixed world search | A: 0–3, second | Queued; source and CPU tests verified |
+| SAGE-inspired MetaWorld port | A: 0–3, third | Queued; source and CPU tests verified |
+| Diffusion Policy port | B: 4–7, first | Training verified;5k evaluation pending |
+| Feedback World Model-inspired port | B: 4–7, second | Queued; source and CPU tests verified |
 
 All eight A800 80GiB GPUs were verified idle before allocation. Scratch has about
 1.9TiB free; persistent storage has about305GiB free. Frozen execution source is
@@ -45,3 +45,25 @@ Queue execution, source hashes, preflight/DDP reports, process identities and W&
 links will be added after launch verification. All results and failure findings
 must be published to origin/main as each run completes. Registration alone is
 not evidence of successful training or completed evaluation.
+
+## Verified first two launches
+
+At the03:00UTC snapshot (October12 20:00Pacific), vanilla flow and Diffusion Policy
+have both reached5,000 updates, with finite metrics and their first evaluation
+in progress. Their exact consumed TRAIN fields match eight original examples.
+All four ranks have synchronized finite gradients, no unused policy parameters,
+unchanged preflight weights and no world gradients. Measured full-controller
+preflight means are51.66ms and76.39ms respectively. The other three methods
+remain in the persistent queue; their GPU preflight results are not yet claimed.
+
+- [Vanilla flow live metrics](https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/j1m6jzog).
+- [Diffusion Policy live metrics](https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/cnlxvbpf).
+- [Source-verified snapshot](reports/20261012-additional-baselines/live-snapshot.json).
+- [Exact launch/preflight/DDP and metric archive](reports/20261012-additional-baselines/).
+
+All13 CPU tests passed in the established runtime. First5k optimization consumption
+is0.15778/0.15836GPUh; the8GPUh ceilings remain unchanged. Updated snapshots are
+sequential readbacks rather than an atomic global training checkpoint. At the
+training readback all eight GPUs had owned workers; disjoint device groups avoid
+sharing the physical GPU used for per-case controller timing. No task-success
+result is inferred from falling training loss.
