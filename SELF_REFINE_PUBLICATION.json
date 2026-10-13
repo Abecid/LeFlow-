@@ -1,0 +1,32 @@
+{
+  "recorded_utc": "2026-10-13T09:41:29.380800+00:00",
+  "repository": "Abecid/LeFlow-",
+  "publication_branch": "codex/self-refine-archive-20261013",
+  "source_and_tests_commit": "d18089623c0573f241f45d406aeca5376279091e",
+  "archive_sha256": "7c50a4de30e300ee58ea7f6a32cce0bbf9f3597c5e210c4f53104998b23dd42a",
+  "executable_files_unchanged_from_archive": true,
+  "expected_git_trees": {
+    "self_refine": "0186ed084982ec95c5d447f470efa8e53f67cec7",
+    "tests/self_refine": "fdb8acd3d88c52dea8d4dfae6eb196e6df9da312",
+    "config/self_refine": "819a6c27b8cde471036ec17db39a98996fc806ea"
+  },
+  "validation": {
+    "command": "OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 python -m pytest -q tests/self_refine",
+    "tests": 83,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "seconds": 1.617,
+    "scope": "CPU synthetic tests only, not native checkpoint or robot benchmark results"
+  },
+  "training_jobs_launched_in_retry": 0,
+  "native_evaluation_jobs_launched_in_retry": 0,
+  "native_checkpoint_parity_gate_executed_in_retry": false,
+  "task_success_comparison_available_from_retry": false,
+  "existing_runtime_and_results_overwritten": false,
+  "remaining": [
+    "Released-checkpoint/CUDA preflight",
+    "Actual native benchmark comparisons",
+    "Measured comparison analysis and publication"
+  ]
+}
