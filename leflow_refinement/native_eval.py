@@ -33,10 +33,14 @@ def case_plan(source, count, seed, offset, allowed_episodes):
     """Native frame-weighted sampling restricted to registered validation episodes."""
     ep = np.asarray(source['episode_idx' if 'episode_idx' in source else 'ep_idx'])
     step = np.asarray(source['step_idx'])
-    lengths = {int(e):int(step[ep==e].max())+1 for e in np.unique(ep)}
+    if ep.ndim != 1 or step.shape != ep.shape or offset < 0:
+        raise ValueError('Invalid episode/step columns or goal offset')
+    unique, inverse = np.unique(ep, return_inverse=True)
+    lengths = np.zeros(len(unique), dtype=np.int64)
+    np.maximum.at(lengths, inverse, step.astype(np.int64)+1)
     if not allowed_episodes:
         raise ValueError('An explicit nonempty validation episode split is required')
-    valid = np.flatnonzero((step <= np.asarray([lengths[int(e)]-offset-1 for e in ep]))
+    valid = np.flatnonzero((step <= lengths[inverse]-offset-1)
                            & np.isin(ep, list(allowed_episodes)))
     if count < 1 or len(valid) < count:
         raise ValueError('Insufficient native starting points')
@@ -134,8 +138,8 @@ def run(args):
     source_identity = dict(path=str(source_path),bytes=source_path.stat().st_size,sha256=sha256(source_path))
     transform = dict(pixels=image_transform(),goal=image_transform())
     world = World(**OmegaConf.to_container(cfg.world,resolve=True),image_shape=(224,224))
-    engine = NativeRuntime.load(args.checkpoint,world_checkpoint=args.world_checkpoint,device=args.device)
     try:
+        engine = NativeRuntime.load(args.checkpoint,world_checkpoint=args.world_checkpoint,device=args.device)
         ac = processors['action']; block = engine.model.action_block
         space = world.envs.envs[0].action_space
         lower = np.tile((space.low-ac.mean_)/ac.scale_,block)
@@ -194,7 +198,7 @@ def run(args):
         save_json(out/'comparison.json',[dict(variant=n,**r['metrics']) for n,r in zip(names,reports)])
         return reports
     finally:
-        world.close()
+        world.envs.close()
 
 
 def main():
