@@ -8,6 +8,7 @@ on:
       - "tests/test_additional_action_flow.py"
       - "tests/test_published_policy_ports.py"
       - "tests/test_feedback_wm_port.py"
+      - "tests/test_additional_baseline_contract.py"
       - ".github/workflows/additional-baselines.yml"
   workflow_dispatch:
 jobs:
@@ -26,3 +27,4 @@ jobs:
       - run: python -m unittest discover -s tests -p "test_additional_action_flow.py" -v
       - run: python -m unittest discover -s tests -p "test_published_policy_ports.py" -v
       - run: python -m unittest discover -s tests -p "test_feedback_wm_port.py" -v
+      - run: python -m unittest discover -s tests -p "test_additional_baseline_contract.py" -v

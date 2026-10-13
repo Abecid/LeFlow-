@@ -74,6 +74,11 @@ def main(a):
     with (record/'tests.log').open('a') as log:
         subprocess.run([sys.executable,'-m','unittest','discover','-s','tests','-p','test_execution.py','-v'],
                        env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
+        if a.variant in ('vanilla_action_flow','action_flow_search','sage_port',
+                         'diffusion_policy_port','feedback_wm_port'):
+            subprocess.run([sys.executable,'-m','unittest','discover','-s','tests',
+                            '-p','test_additional_baseline_contract.py','-v'],
+                           env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
         if a.variant in ('vanilla_action_flow','action_flow_search'):
             subprocess.run([sys.executable,'-m','unittest','discover','-s','tests',
                             '-p','test_additional_action_flow.py','-v'],

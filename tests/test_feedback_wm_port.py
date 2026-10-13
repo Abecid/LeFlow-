@@ -40,6 +40,12 @@ class TestFeedbackPort(unittest.TestCase):
         self.assertEqual(ctrl.feedback_steps,0)
         self.assertIsNone(ctrl._feedback)
 
+    def test_strict_diffusion_checkpoint_compatibility(self):
+        from flow_jepa.baselines.diffusion_port import DiffusionActionPolicy
+        reference=DiffusionActionPolicy(cfg())
+        feedback=FeedbackWorldPolicy(cfg())
+        feedback.load_state_dict(reference.state_dict(), strict=True)
+
     def test_diffusion_training_still_works(self):
         m=FeedbackWorldPolicy(cfg())
         batch=dict(z=torch.randn(2,4,4,16),a=torch.randn(2,5,8))

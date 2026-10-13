@@ -36,7 +36,13 @@ export LD_LIBRARY_PATH="$runtime/lib${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
 export MUJOCO_GL=egl FLOW_EGL_DEVICES=0,0,0,0,0,0,0,0
 export LIBGL_ALWAYS_SOFTWARE=1 GALLIUM_DRIVER=llvmpipe LP_NUM_THREADS=2
 export __EGL_VENDOR_LIBRARY_FILENAMES="$runtime/share/glvnd/egl_vendor.d/50_mesa.json"
+reuse_flags=()
+route_bank="${LEFLOW_ROUTE_BANK:-/tmp/mtxu-flow-reasoning-20261010/route_bank.pt}"
+if [[ -f "$route_bank" ]]; then
+  reuse_flags=(--reuse-bank "$route_bank")
+else
+  echo "Shared route bank unavailable; coordinator will rebuild from TRAIN episodes" >&2
+fi
 exec "$runtime/bin/python" -u -m scripts.operations.controller_grounded \
   --record "$record" --variant "$variant" --gpus "$gpus" \
-  --previous "$previous" --cache "$cache" \
-  --reuse-bank "${LEFLOW_ROUTE_BANK:-/tmp/mtxu-flow-reasoning-20261010/route_bank.pt}"
+  --previous "$previous" --cache "$cache" "${reuse_flags[@]}"

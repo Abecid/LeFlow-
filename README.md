@@ -1,5 +1,11 @@
 # Execution-calibrated visual planning with V-JEPA 2.1 (LeFlow fork)
 
+**New baseline implementations (not yet trained/evaluated):** vanilla action-flow BC,
+fixed-world action-flow search, SAGE-inspired subgoal planning, adapted Diffusion
+Policy and Feedback-WM. See [run protocol, code, and preflight instructions](docs/ADDITIONAL_BASELINES_20261012.md).
+Their results are **not** part of the completed sixteen-method ledger below.
+
+
 **Current status, October 12, 2026:** all sixteen registered shared-world
 comparisons are complete. The latest LaCT-inspired nonlinear episodic memory
 run scores **73 / 66 / 67 / 72 out of 104**, selecting 73 at 5k updates. It does

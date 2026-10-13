@@ -27,6 +27,27 @@ class TestPublishedPorts(unittest.TestCase):
         self.assertTrue(torch.isfinite(model.actor.output.weight.grad).all())
         self.assertIn("subgoal_loss",values)
 
+    def test_sage_world_search_and_execution_prefix(self):
+        class World:
+            def __init__(self):
+                self.calls = 0
+
+            def rollout(self, start, actions, budget=None):
+                self.calls += len(start)*actions.shape[1]
+                return start[:, None].expand(-1,5,-1,-1).clone()
+
+        c=conf("sage_port")
+        world=World()
+        model=SagePolicy(c)
+        ctrl=SageController(model,world,c,bank=None)
+        start=torch.randn(1,4,16)
+        goal=torch.randn_like(start)
+        command,_,cost,_=ctrl.plan(start,goal)
+        self.assertEqual(tuple(command.shape),(8,))
+        self.assertLessEqual(float(command.abs().max()),1.)
+        self.assertTrue(float("-inf")<cost<float("inf"))
+        self.assertEqual(world.calls,480)
+
     def test_diffusion_training_and_sampling(self):
         c=conf("diffusion_policy_port");model=DiffusionActionPolicy(c)
         batch=dict(z=torch.randn(2,4,4,16),a=torch.randn(2,5,8))
