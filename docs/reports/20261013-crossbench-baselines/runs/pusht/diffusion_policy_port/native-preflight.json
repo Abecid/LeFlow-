@@ -1,0 +1,28 @@
+{
+  "action_dim": 2,
+  "block_dim": 10,
+  "decision_ms": [
+    347.0734376460314,
+    39.304280653595924,
+    40.30580259859562
+  ],
+  "fresh_cache_max_abs": 0.0009658336639404297,
+  "gpu_hours": 0.0009252173194868697,
+  "latent_dim": 192,
+  "method": "diffusion_policy_port",
+  "optimizer_updates": 0,
+  "reset_audit": {
+    "first_observation": "recorded_initial_pixels_as_in_native_evaluate_from_dataset",
+    "recorded_initial_sha256": "1002f0d9e46b3364142a1e600000da919da23b85824cf75018e70acba0163a75",
+    "render_sha256": "c43a388eddc1c75b0061b87170341b151cf7ee33bee56b1512a8d7c58c4798b3",
+    "seed": 103072
+  },
+  "seconds": 3.330782350152731,
+  "source": "50bd3c4cd056676a963a1ecbc0ba0e2d8a83fd1901190c8e815cc80635fcdf68",
+  "status": "passed",
+  "task": "pusht",
+  "test_cases_read": 0,
+  "training_cases_only": true,
+  "validation_cases_read": 0,
+  "warm_mean_ms": 39.80504162609577
+}

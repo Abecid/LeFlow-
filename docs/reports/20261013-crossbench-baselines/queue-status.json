@@ -6,65 +6,65 @@
         "/tmp/mtxu-crossbench-20261013/env/bin/python",
         "-u",
         "-m",
-        "crossbench.preflight",
+        "torch.distributed.run",
+        "--standalone",
+        "--nproc_per_node=4",
+        "-m",
+        "crossbench.train",
         "--task",
         "cube",
         "--method",
-        "action_flow_search",
+        "diffusion_policy_port",
         "--cache",
         "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/cache/cube",
-        "--output",
-        "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/cube/action_flow_search/native-preflight.json"
+        "--run-dir",
+        "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/cube/diffusion_policy_port"
       ],
       "dataset": "cube",
-      "method": "action_flow_search",
+      "method": "diffusion_policy_port",
       "physical_gpus": [
         "0",
         "1",
         "2",
         "3"
       ],
-      "pid": 3484874,
-      "start_ticks": "1022387200",
-      "state": "native_preflight"
+      "pid": 3504883,
+      "start_ticks": "1022495724",
+      "state": "training_and_periodic_evaluation"
     },
     "B": {
       "command": [
         "/tmp/mtxu-crossbench-20261013/env/bin/python",
         "-u",
         "-m",
-        "crossbench.preflight",
+        "torch.distributed.run",
+        "--standalone",
+        "--nproc_per_node=4",
+        "-m",
+        "crossbench.train",
         "--task",
-        "cube",
+        "pusht",
         "--method",
-        "sage_port",
+        "diffusion_policy_port",
         "--cache",
-        "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/cache/cube",
-        "--output",
-        "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/cube/sage_port/native-preflight.json"
+        "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/cache/pusht",
+        "--run-dir",
+        "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/pusht/diffusion_policy_port"
       ],
-      "dataset": "cube",
-      "method": "sage_port",
+      "dataset": "pusht",
+      "method": "diffusion_policy_port",
       "physical_gpus": [
         "4",
         "5",
         "6",
         "7"
       ],
-      "pid": 3484873,
-      "start_ticks": "1022387200",
-      "state": "native_preflight"
+      "pid": 3502270,
+      "start_ticks": "1022482229",
+      "state": "training_and_periodic_evaluation"
     }
   },
   "pending": [
-    [
-      "pusht",
-      "diffusion_policy_port"
-    ],
-    [
-      "cube",
-      "diffusion_policy_port"
-    ],
     [
       "pusht",
       "feedback_wm_port"
@@ -1069,8 +1069,195 @@
       "method": "execution_revision",
       "returncode": 0,
       "utc": "2026-10-13T12:16:57.886602+00:00"
+    },
+    {
+      "best": {
+        "checkpoint_sha256": "f76c64b70aad42725482a36705a28482070cbab0ac0afae1be08c018a295b3fd",
+        "metrics": {
+          "episodes": 50,
+          "failure_ids": [
+            "cube/val/0008504/000021"
+          ],
+          "mean_decision_ms": 62.23729752549311,
+          "mean_steps": 9.64,
+          "success_rate": 0.98,
+          "successes": 49,
+          "timeouts": 0,
+          "wilson95": [
+            0.8950431352816304,
+            0.9964608319110235
+          ],
+          "world_transitions": 59040
+        },
+        "step": 20000
+      },
+      "complete": {
+        "evaluation_gpu_hours": 0.2355817739230891,
+        "identity": {
+          "cache": "f991dc8fbb238a15e0b951af6483519d40c7680fd9cf966d89df2de8cb5fb02e",
+          "fixture": false,
+          "ranks": 4,
+          "source": "50bd3c4cd056676a963a1ecbc0ba0e2d8a83fd1901190c8e815cc80635fcdf68",
+          "spec": {
+            "action_block": 5,
+            "action_budget": 50,
+            "candidates": 4,
+            "controller_seconds": 10.0,
+            "dataset": "cube",
+            "dim": 192,
+            "eval_episodes": 50,
+            "flow_steps": 8,
+            "global_batch": 64,
+            "goal_offset": 25,
+            "history": 4,
+            "horizon": 5,
+            "learning_rate": 0.0001,
+            "method": "sage_port",
+            "optimization_gpu_seconds": 28800.0,
+            "patches": 1,
+            "primitive_dim": 5,
+            "protocol": "crossbench-shared-lewm-v2",
+            "repair_radius": 0.25,
+            "repair_steps": 4,
+            "rounds": 3,
+            "seed": 3072,
+            "targets": 8,
+            "updates": 20000,
+            "weight_decay": 0.05,
+            "width": 256
+          },
+          "window_sampling": {
+            "eligible_episodes": 8000,
+            "eligible_starts": 1408000,
+            "native_safe_factual_history_and_goals": true,
+            "nominal_episodes": 8000,
+            "nominal_starts": 1408000
+          },
+          "world": "2839a907362f403f9136383016e91774373a295d958ae75121791f22a9fddf89"
+        },
+        "optimization_gpu_hours": 0.6599823799356819,
+        "selected_success_rate": 0.98,
+        "status": "completed",
+        "step": 20000,
+        "stop_reason": "update_limit",
+        "validation_steps": [
+          5000,
+          10000,
+          15000,
+          20000
+        ],
+        "wall_seconds": 882.9069754686207
+      },
+      "dataset": "cube",
+      "method": "sage_port",
+      "returncode": 0,
+      "utc": "2026-10-13T15:11:43.789369+00:00"
+    },
+    {
+      "best": {
+        "checkpoint_sha256": "4ac8955f469cce6278177b73e5affa640e1eefb1b93642f49ff594958b3d7f7d",
+        "metrics": {
+          "episodes": 50,
+          "failure_ids": [
+            "cube/val/0000560/000032",
+            "cube/val/0000859/000100",
+            "cube/val/0001514/000118",
+            "cube/val/0001645/000057",
+            "cube/val/0001968/000118",
+            "cube/val/0002008/000149",
+            "cube/val/0002090/000115",
+            "cube/val/0002777/000008",
+            "cube/val/0002985/000041",
+            "cube/val/0003106/000118",
+            "cube/val/0003396/000018",
+            "cube/val/0003510/000063",
+            "cube/val/0004118/000026",
+            "cube/val/0005033/000124",
+            "cube/val/0007213/000112",
+            "cube/val/0007447/000118",
+            "cube/val/0008504/000021",
+            "cube/val/0008782/000106",
+            "cube/val/0008908/000033",
+            "cube/val/0008993/000025",
+            "cube/val/0009070/000039",
+            "cube/val/0009458/000118"
+          ],
+          "mean_decision_ms": 75.3685040645442,
+          "mean_steps": 24.56,
+          "success_rate": 0.56,
+          "successes": 28,
+          "timeouts": 0,
+          "wilson95": [
+            0.4230578680014353,
+            0.6883801278976466
+          ],
+          "world_transitions": 127200
+        },
+        "step": 5000
+      },
+      "complete": {
+        "evaluation_gpu_hours": 0.4415715718931622,
+        "identity": {
+          "cache": "f991dc8fbb238a15e0b951af6483519d40c7680fd9cf966d89df2de8cb5fb02e",
+          "fixture": false,
+          "ranks": 4,
+          "source": "50bd3c4cd056676a963a1ecbc0ba0e2d8a83fd1901190c8e815cc80635fcdf68",
+          "spec": {
+            "action_block": 5,
+            "action_budget": 50,
+            "candidates": 4,
+            "controller_seconds": 10.0,
+            "dataset": "cube",
+            "dim": 192,
+            "eval_episodes": 50,
+            "flow_steps": 8,
+            "global_batch": 64,
+            "goal_offset": 25,
+            "history": 4,
+            "horizon": 5,
+            "learning_rate": 0.0001,
+            "method": "action_flow_search",
+            "optimization_gpu_seconds": 28800.0,
+            "patches": 1,
+            "primitive_dim": 5,
+            "protocol": "crossbench-shared-lewm-v2",
+            "repair_radius": 0.25,
+            "repair_steps": 4,
+            "rounds": 3,
+            "seed": 3072,
+            "targets": 8,
+            "updates": 20000,
+            "weight_decay": 0.05,
+            "width": 256
+          },
+          "window_sampling": {
+            "eligible_episodes": 8000,
+            "eligible_starts": 1408000,
+            "native_safe_factual_history_and_goals": true,
+            "nominal_episodes": 8000,
+            "nominal_starts": 1408000
+          },
+          "world": "2839a907362f403f9136383016e91774373a295d958ae75121791f22a9fddf89"
+        },
+        "optimization_gpu_hours": 0.5946197339850995,
+        "selected_success_rate": 0.56,
+        "status": "completed",
+        "step": 20000,
+        "stop_reason": "update_limit",
+        "validation_steps": [
+          5000,
+          10000,
+          15000,
+          20000
+        ],
+        "wall_seconds": 1003.7895179986954
+      },
+      "dataset": "cube",
+      "method": "action_flow_search",
+      "returncode": 0,
+      "utc": "2026-10-13T15:13:54.632046+00:00"
     }
   ],
   "source": "747f635ad36af2cbe3e2bbb0b7997efe9caccaa1",
-  "utc": "2026-10-13T14:56:05.896909+00:00"
+  "utc": "2026-10-13T15:14:11.119721+00:00"
 }

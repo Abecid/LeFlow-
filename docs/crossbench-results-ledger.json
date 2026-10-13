@@ -5,6 +5,71 @@
   "completed_runs": [
     {
       "dataset": "cube",
+      "method": "action_flow_search",
+      "curve": [
+        {
+          "step": 5000,
+          "successes": 28,
+          "timeouts": 0,
+          "report": "docs/reports/20261013-crossbench-baselines/runs/cube/action_flow_search/validation/step_0005000/report.json.gz"
+        },
+        {
+          "step": 10000,
+          "successes": 26,
+          "timeouts": 0,
+          "report": "docs/reports/20261013-crossbench-baselines/runs/cube/action_flow_search/validation/step_0010000/report.json.gz"
+        },
+        {
+          "step": 15000,
+          "successes": 28,
+          "timeouts": 0,
+          "report": "docs/reports/20261013-crossbench-baselines/runs/cube/action_flow_search/validation/step_0015000/report.json.gz"
+        },
+        {
+          "step": 20000,
+          "successes": 25,
+          "timeouts": 0,
+          "report": "docs/reports/20261013-crossbench-baselines/runs/cube/action_flow_search/validation/step_0020000/report.json.gz"
+        }
+      ],
+      "evidence": "docs/reports/20261013-crossbench-baselines/runs/cube/action_flow_search",
+      "online": {
+        "id": "4kchht08",
+        "url": "https://wandb.ai/attentionx2023/leflow-crossbench/runs/4kchht08"
+      },
+      "artifact_sha256": {
+        "docs/reports/20261013-crossbench-baselines/runs/cube/action_flow_search/usage.json": "12d70f439b6c82ea49f886b666f6ae288ec9d184c24108ce1d26f54fbd5972f1",
+        "docs/reports/20261013-crossbench-baselines/runs/cube/action_flow_search/best.json": "9ba26bcf01cf10b2a151d349467620cdce2db6dd97a7d2f1b068f3f8c2357c64",
+        "docs/reports/20261013-crossbench-baselines/runs/cube/action_flow_search/metrics.jsonl.gz": "796ce9de15478f7ff2e0fa6dcd83ec76300259717afbf2e426e49276d50c7a0e",
+        "docs/reports/20261013-crossbench-baselines/runs/cube/action_flow_search/native-preflight.json": "7cfb854afb6369f9e977eb12eba12c00b6db0876e3c679c0ab2c412ad8668148",
+        "docs/reports/20261013-crossbench-baselines/runs/cube/action_flow_search/identity.json": "6d35bec7671fadcf4668c2699528737e01d43e6b6287fdceaa3e3e2a5cc3fe3f",
+        "docs/reports/20261013-crossbench-baselines/runs/cube/action_flow_search/gradient-preflight.json": "0d78e2e6f7faba3b6f8ca7eaa0133fe906317a79bd16678a3a4726e46479ed3a",
+        "docs/reports/20261013-crossbench-baselines/runs/cube/action_flow_search/complete.json": "50c5640fcc196ddda2f40a6752361c13642b6482c4cd46619ddd2e46a5f7c43e",
+        "docs/reports/20261013-crossbench-baselines/runs/cube/action_flow_search/wandb.json": "868099328d55bf81c472f7a04f9f693cc6b098f2026a4bc8011d506f774ea7ca",
+        "docs/reports/20261013-crossbench-baselines/runs/cube/action_flow_search/failure.json": "df856d627eb21743e2d55128ec9e1d1d13218abf186bd99f6d3bd8df7e0f2a1b",
+        "docs/reports/20261013-crossbench-baselines/runs/cube/action_flow_search/final-audit.json": "f61f2c6b118465755270d2ca77804bccaaf5913ce5d2a1b16991e78812d4aa82",
+        "docs/reports/20261013-crossbench-baselines/runs/cube/action_flow_search/selected-trajectories/00008.npz": "3a7e3b8c0a68feb1843414b068a6db9c05058602ea5831439cfc19b6c6dad538",
+        "docs/reports/20261013-crossbench-baselines/runs/cube/action_flow_search/selected-trajectories/00009.npz": "facaa3cd18d5ae9b1c51e0059ce815149e80c638f24f02f718fd490a9312e28d",
+        "docs/reports/20261013-crossbench-baselines/runs/cube/action_flow_search/selected-trajectories/00004.npz": "6000a2b51fb6247f2146575dbe0765e450ad73ecc906c0fdbd8a807ada27be97",
+        "docs/reports/20261013-crossbench-baselines/runs/cube/action_flow_search/selected-trajectories/00005.npz": "610ad16405643f37e1862912aba15a5cb01b2877d751ea334218658202056b2f",
+        "docs/reports/20261013-crossbench-baselines/runs/cube/action_flow_search/selected-trajectories/00007.npz": "df3484e1955014a827fcfa14549010ffad25907cd32172b6251423f09d875802",
+        "docs/reports/20261013-crossbench-baselines/runs/cube/action_flow_search/selected-trajectories/00006.npz": "49b56792a055b9e67a568195e63ae3f6c94bbd3d25874fe5d36a421f91c4223e",
+        "docs/reports/20261013-crossbench-baselines/runs/cube/action_flow_search/selected-trajectories/00002.npz": "0eca703ebbdbde93c39c254e55aceefafc5c8e59898da973053a0fa2b45cebcc",
+        "docs/reports/20261013-crossbench-baselines/runs/cube/action_flow_search/selected-trajectories/00003.npz": "319ddb3f5117ba1e5d155702a15c702108b32c26deeaa0f480ea4690106ac056",
+        "docs/reports/20261013-crossbench-baselines/runs/cube/action_flow_search/selected-trajectories/00001.npz": "46097d6203834dc386359e363eb0daa8e20d1d2959335b9a960c5ae3f7abce4c",
+        "docs/reports/20261013-crossbench-baselines/runs/cube/action_flow_search/selected-trajectories/00000.npz": "6f596fb5111d7c729f4af19106289c38523dae3b3548dd0decfecb4664e8ccba",
+        "docs/reports/20261013-crossbench-baselines/runs/cube/action_flow_search/validation/step_0020000/report.json.gz": "fc5e8e01e5b2d123865d9886b0ac93df2af99be9ad0913081eb5bc0353fbcb81",
+        "docs/reports/20261013-crossbench-baselines/runs/cube/action_flow_search/validation/step_0010000/report.json.gz": "1ce5b39554d06135e47971d3da367e07df2b9c710db7eaf3fd04ff92bb680a1d",
+        "docs/reports/20261013-crossbench-baselines/runs/cube/action_flow_search/validation/step_0005000/report.json.gz": "1b2cd67ffeb4ed089baee202bdf33422f26cefb1c752ce283fb84cbba55870a3",
+        "docs/reports/20261013-crossbench-baselines/runs/cube/action_flow_search/validation/step_0015000/report.json.gz": "27c458514e4929783933bc088e6eb8fea13ed1b43395ad559fcea4aa5b1ad237"
+      },
+      "selected_step": 5000,
+      "selected_successes": 28,
+      "optimization_gpu_hours": 0.5946197339850995,
+      "evaluation_gpu_hours": 0.4415715718931622
+    },
+    {
+      "dataset": "cube",
       "method": "execution_revision",
       "curve": [
         {
@@ -194,6 +259,70 @@
       "selected_successes": 32,
       "optimization_gpu_hours": 1.8685919297859073,
       "evaluation_gpu_hours": 0.3938796893859075
+    },
+    {
+      "dataset": "cube",
+      "method": "sage_port",
+      "curve": [
+        {
+          "step": 5000,
+          "successes": 44,
+          "timeouts": 0,
+          "report": "docs/reports/20261013-crossbench-baselines/runs/cube/sage_port/validation/step_0005000/report.json.gz"
+        },
+        {
+          "step": 10000,
+          "successes": 48,
+          "timeouts": 0,
+          "report": "docs/reports/20261013-crossbench-baselines/runs/cube/sage_port/validation/step_0010000/report.json.gz"
+        },
+        {
+          "step": 15000,
+          "successes": 48,
+          "timeouts": 0,
+          "report": "docs/reports/20261013-crossbench-baselines/runs/cube/sage_port/validation/step_0015000/report.json.gz"
+        },
+        {
+          "step": 20000,
+          "successes": 49,
+          "timeouts": 0,
+          "report": "docs/reports/20261013-crossbench-baselines/runs/cube/sage_port/validation/step_0020000/report.json.gz"
+        }
+      ],
+      "evidence": "docs/reports/20261013-crossbench-baselines/runs/cube/sage_port",
+      "online": {
+        "id": "gl3nvfwr",
+        "url": "https://wandb.ai/attentionx2023/leflow-crossbench/runs/gl3nvfwr"
+      },
+      "artifact_sha256": {
+        "docs/reports/20261013-crossbench-baselines/runs/cube/sage_port/usage.json": "9e2cbc29b387846f2e48bb2890b7a3ef93eab983d87830de649e62a7a3d023df",
+        "docs/reports/20261013-crossbench-baselines/runs/cube/sage_port/best.json": "da7ea1d5bd02eac6e0c29acfcf07377d0a67c45a0e3956266cbdf168e11f378b",
+        "docs/reports/20261013-crossbench-baselines/runs/cube/sage_port/metrics.jsonl.gz": "30c3e03458d83a2149a12d4b2388486f30951bb74f6d5e4e1576c3fc83a4edd2",
+        "docs/reports/20261013-crossbench-baselines/runs/cube/sage_port/native-preflight.json": "bab7d1e416f1431d42619b53638e7c49f597f25cc27b1d78bc6542c64c0aacd9",
+        "docs/reports/20261013-crossbench-baselines/runs/cube/sage_port/identity.json": "f32ad7ad87707ceb3af01b62dc5762a4332ea36f679529625fab3b5ff62fc48d",
+        "docs/reports/20261013-crossbench-baselines/runs/cube/sage_port/gradient-preflight.json": "89a5fe7a09be7393d3206f3fe9815392000204bfc6398c3bec25c25abb55bed0",
+        "docs/reports/20261013-crossbench-baselines/runs/cube/sage_port/complete.json": "4bb1f281309c2111922e6f4278e75a814ca47497f46db5802808ce4dd36962fc",
+        "docs/reports/20261013-crossbench-baselines/runs/cube/sage_port/wandb.json": "d321b140cc49042db2de09f13b906fdf243486473da4f4a81cd9771855d8ed6d",
+        "docs/reports/20261013-crossbench-baselines/runs/cube/sage_port/final-audit.json": "a5e64988c8c213a2e902ad25292e53c316baadfc2e512a77643e10fc78f735ee",
+        "docs/reports/20261013-crossbench-baselines/runs/cube/sage_port/selected-trajectories/00008.npz": "b95dfdb5e5e189595a0f6a6f1af9642cbe478b1d73afbd3639d57c2780f313b7",
+        "docs/reports/20261013-crossbench-baselines/runs/cube/sage_port/selected-trajectories/00009.npz": "f424c4a416c7004fa9e0614355532061a0e7a4cc997edca596bdc6b79884c69b",
+        "docs/reports/20261013-crossbench-baselines/runs/cube/sage_port/selected-trajectories/00004.npz": "5b5589d33089fa86dced5506dd49191dcd8152c0e041100ab6e30f05b9ca27da",
+        "docs/reports/20261013-crossbench-baselines/runs/cube/sage_port/selected-trajectories/00005.npz": "22cb8f5c741ab87ce0cd8b73e60efe6e01a4e5539bfe7aea6b8497efa7928cff",
+        "docs/reports/20261013-crossbench-baselines/runs/cube/sage_port/selected-trajectories/00007.npz": "d25e1aa31d0fab1299a58eb97fb82f5f6b2413cb0ec6d49b40f5f2d882dd5821",
+        "docs/reports/20261013-crossbench-baselines/runs/cube/sage_port/selected-trajectories/00006.npz": "bf7f2e1ed7103aec11028b8e4c404e2942e891eefaeb4e4079e2cac852fb7d53",
+        "docs/reports/20261013-crossbench-baselines/runs/cube/sage_port/selected-trajectories/00002.npz": "c5697d92c5852090a0e985ba74651a442b6b1edb4f62cec75b6469efc69d0ee5",
+        "docs/reports/20261013-crossbench-baselines/runs/cube/sage_port/selected-trajectories/00003.npz": "aa397e995eaafd5f00811a81249f4f86f2ce79d4b19b57d886592b63f36f5fb8",
+        "docs/reports/20261013-crossbench-baselines/runs/cube/sage_port/selected-trajectories/00001.npz": "67df213eca0cadb242acdcfc2bcc7e1f936cb85a62121a222115c3fb28c7b437",
+        "docs/reports/20261013-crossbench-baselines/runs/cube/sage_port/selected-trajectories/00000.npz": "2fc72fab37ab1c0def472d7277bd76bdd5480aac96fe092afe8a8f5c5b7b8217",
+        "docs/reports/20261013-crossbench-baselines/runs/cube/sage_port/validation/step_0020000/report.json.gz": "3d8913c5965a377fcb69879a9a911ef8e63a7629e19092f307e8dec1aba1440a",
+        "docs/reports/20261013-crossbench-baselines/runs/cube/sage_port/validation/step_0010000/report.json.gz": "8a66390e52d9cc25332b2f895c4f77fd6bccff4bbd4d9ab5e3ca857910f5f1a1",
+        "docs/reports/20261013-crossbench-baselines/runs/cube/sage_port/validation/step_0005000/report.json.gz": "880b94d4fbd095d9dbb08543c866a1ebc287d0cae6a1f491dae98cc40960aee3",
+        "docs/reports/20261013-crossbench-baselines/runs/cube/sage_port/validation/step_0015000/report.json.gz": "337c522866865d1c838c0d4ff9c3651940d2a7275ef377939107497edceee5c0"
+      },
+      "selected_step": 20000,
+      "selected_successes": 49,
+      "optimization_gpu_hours": 0.6599823799356819,
+      "evaluation_gpu_hours": 0.2355817739230891
     },
     {
       "dataset": "cube",
@@ -647,40 +776,77 @@
   "active_runs": [
     {
       "dataset": "cube",
-      "method": "action_flow_search",
-      "curve": [],
-      "evidence": "docs/reports/20261013-crossbench-baselines/runs/cube/action_flow_search",
-      "online": {},
+      "method": "diffusion_policy_port",
+      "curve": [
+        {
+          "step": 5000,
+          "successes": 28,
+          "timeouts": 0,
+          "report": "docs/reports/20261013-crossbench-baselines/runs/cube/diffusion_policy_port/validation/step_0005000/report.json.gz"
+        }
+      ],
+      "evidence": "docs/reports/20261013-crossbench-baselines/runs/cube/diffusion_policy_port",
+      "online": {
+        "id": "ey27d26g",
+        "url": "https://wandb.ai/attentionx2023/leflow-crossbench/runs/ey27d26g"
+      },
       "artifact_sha256": {
-        "docs/reports/20261013-crossbench-baselines/runs/cube/action_flow_search/native-preflight.json": "ede0de1ff226c11f251c881e279a270f77445444cbc1f97fbf13873730ee20db",
-        "docs/reports/20261013-crossbench-baselines/runs/cube/action_flow_search/identity.json": "6d35bec7671fadcf4668c2699528737e01d43e6b6287fdceaa3e3e2a5cc3fe3f",
-        "docs/reports/20261013-crossbench-baselines/runs/cube/action_flow_search/gradient-preflight.json": "8ee567a1a513205c54e1eac4c115eee23573e93413e5f7119ea256a1bb6c9b7a",
-        "docs/reports/20261013-crossbench-baselines/runs/cube/action_flow_search/failure.json": "df856d627eb21743e2d55128ec9e1d1d13218abf186bd99f6d3bd8df7e0f2a1b"
+        "docs/reports/20261013-crossbench-baselines/runs/cube/diffusion_policy_port/usage.json": "c119b1240be665ba2ef5e243f5bb02a39b4c4c043078503cf71e0599debf0a8d",
+        "docs/reports/20261013-crossbench-baselines/runs/cube/diffusion_policy_port/best.json": "7a984042213c09098ee4ea3c249bf43448537cbe94d119b69cb03a7ce530cf49",
+        "docs/reports/20261013-crossbench-baselines/runs/cube/diffusion_policy_port/metrics.jsonl.gz": "94b67cd5f021b5aaa778584c4557427b49b54b4bb3e35956a7e23acdff7d99d2",
+        "docs/reports/20261013-crossbench-baselines/runs/cube/diffusion_policy_port/native-preflight.json": "a13759ade7621fc106da966dbd50ee2df9659b7bd4472d63968c50b53f919850",
+        "docs/reports/20261013-crossbench-baselines/runs/cube/diffusion_policy_port/identity.json": "4998058a9a72333c82fbc4f4c85239ceeec943c4ae45e13525c62e0359b806ac",
+        "docs/reports/20261013-crossbench-baselines/runs/cube/diffusion_policy_port/gradient-preflight.json": "ba1c48ee227d6f562d95de647e3cc2bbd55d242d40033b5b9cdf93e39bca1db9",
+        "docs/reports/20261013-crossbench-baselines/runs/cube/diffusion_policy_port/wandb.json": "1be58a3663a57c9bf3472d11a7ea47c45966528c1a6ba2c9276167651b5a8ec2",
+        "docs/reports/20261013-crossbench-baselines/runs/cube/diffusion_policy_port/validation/step_0005000/report.json.gz": "8169d27c06d0abc2984e79693b0a964f9b9105954b2a4869c777597640749dbb"
       }
     },
     {
-      "dataset": "cube",
-      "method": "sage_port",
-      "curve": [],
-      "evidence": "docs/reports/20261013-crossbench-baselines/runs/cube/sage_port",
-      "online": {},
+      "dataset": "pusht",
+      "method": "diffusion_policy_port",
+      "curve": [
+        {
+          "step": 5000,
+          "successes": 4,
+          "timeouts": 0,
+          "report": "docs/reports/20261013-crossbench-baselines/runs/pusht/diffusion_policy_port/validation/step_0005000/report.json.gz"
+        },
+        {
+          "step": 10000,
+          "successes": 11,
+          "timeouts": 0,
+          "report": "docs/reports/20261013-crossbench-baselines/runs/pusht/diffusion_policy_port/validation/step_0010000/report.json.gz"
+        },
+        {
+          "step": 15000,
+          "successes": 10,
+          "timeouts": 0,
+          "report": "docs/reports/20261013-crossbench-baselines/runs/pusht/diffusion_policy_port/validation/step_0015000/report.json.gz"
+        }
+      ],
+      "evidence": "docs/reports/20261013-crossbench-baselines/runs/pusht/diffusion_policy_port",
+      "online": {
+        "id": "v4gff79r",
+        "url": "https://wandb.ai/attentionx2023/leflow-crossbench/runs/v4gff79r"
+      },
       "artifact_sha256": {
-        "docs/reports/20261013-crossbench-baselines/runs/cube/sage_port/native-preflight.json": "bab7d1e416f1431d42619b53638e7c49f597f25cc27b1d78bc6542c64c0aacd9"
+        "docs/reports/20261013-crossbench-baselines/runs/pusht/diffusion_policy_port/usage.json": "99a6accbc454950ecfc5bf96223dd87f8b2748ef304dfdd1d3fa5d21b6219509",
+        "docs/reports/20261013-crossbench-baselines/runs/pusht/diffusion_policy_port/best.json": "9ee65bb32b48dd6fa7a1cef18424c2969b305f7d179535dbf021afffeb4deed1",
+        "docs/reports/20261013-crossbench-baselines/runs/pusht/diffusion_policy_port/metrics.jsonl.gz": "2ff44aa5e6f6b36252ec70602a789899d77b9ba108413f97eba1b61494b342e8",
+        "docs/reports/20261013-crossbench-baselines/runs/pusht/diffusion_policy_port/native-preflight.json": "3c39bb5ed02a6873e79153e9fb9ed98e79f0170be57c6415b442121446fde72e",
+        "docs/reports/20261013-crossbench-baselines/runs/pusht/diffusion_policy_port/identity.json": "8edc45354a870e6b12af096d9ce88b036360d1dc0fb6f3d8a250f4f7ae399de2",
+        "docs/reports/20261013-crossbench-baselines/runs/pusht/diffusion_policy_port/gradient-preflight.json": "9d6f294088ada180eaf81b8204de869fdfcdccdad3ec779839ea35807bc019a5",
+        "docs/reports/20261013-crossbench-baselines/runs/pusht/diffusion_policy_port/wandb.json": "04cd930a3051c316cfc6f1093899a1a5269740b4befa20ffc417c169bfae3d3a",
+        "docs/reports/20261013-crossbench-baselines/runs/pusht/diffusion_policy_port/validation/step_0010000/report.json.gz": "f820d88db9619d321ea65d4195e00dbd5849cd172b7f62b925c9dac6c0467dbd",
+        "docs/reports/20261013-crossbench-baselines/runs/pusht/diffusion_policy_port/validation/step_0005000/report.json.gz": "64fb96f6b0a68e59b594b86b76573b63cffe9339d657aa525e6d1e7902783be6",
+        "docs/reports/20261013-crossbench-baselines/runs/pusht/diffusion_policy_port/validation/step_0015000/report.json.gz": "e0b14610be54033076e65cc91115e487203d2cbeec1af003318f2f89e5b42245"
       }
     }
   ],
   "queued_runs": [
     {
       "dataset": "pusht",
-      "method": "diffusion_policy_port"
-    },
-    {
-      "dataset": "pusht",
       "method": "feedback_wm_port"
-    },
-    {
-      "dataset": "cube",
-      "method": "diffusion_policy_port"
     },
     {
       "dataset": "cube",
@@ -689,6 +855,41 @@
   ],
   "final_tests_read": false,
   "paired_comparisons": [
+    {
+      "dataset": "cube",
+      "method": "action_flow_search",
+      "reference": "vanilla_action_flow",
+      "wins": [
+        "cube/val/0004519/000037",
+        "cube/val/0007821/000121"
+      ],
+      "regressions": [
+        "cube/val/0001514/000118",
+        "cube/val/0001645/000057",
+        "cube/val/0001968/000118",
+        "cube/val/0002008/000149",
+        "cube/val/0002090/000115",
+        "cube/val/0003106/000118",
+        "cube/val/0003510/000063",
+        "cube/val/0007447/000118",
+        "cube/val/0008504/000021",
+        "cube/val/0008782/000106",
+        "cube/val/0008993/000025",
+        "cube/val/0009458/000118"
+      ],
+      "both_fail": [
+        "cube/val/0000560/000032",
+        "cube/val/0000859/000100",
+        "cube/val/0002777/000008",
+        "cube/val/0002985/000041",
+        "cube/val/0003396/000018",
+        "cube/val/0004118/000026",
+        "cube/val/0005033/000124",
+        "cube/val/0007213/000112",
+        "cube/val/0008908/000033",
+        "cube/val/0009070/000039"
+      ]
+    },
     {
       "dataset": "cube",
       "method": "execution_revision",
@@ -781,6 +982,29 @@
         "cube/val/0007213/000112",
         "cube/val/0008908/000033"
       ]
+    },
+    {
+      "dataset": "cube",
+      "method": "sage_port",
+      "reference": "vanilla_action_flow",
+      "wins": [
+        "cube/val/0000560/000032",
+        "cube/val/0000859/000100",
+        "cube/val/0002777/000008",
+        "cube/val/0002985/000041",
+        "cube/val/0003396/000018",
+        "cube/val/0004118/000026",
+        "cube/val/0004519/000037",
+        "cube/val/0005033/000124",
+        "cube/val/0007213/000112",
+        "cube/val/0007821/000121",
+        "cube/val/0008908/000033",
+        "cube/val/0009070/000039"
+      ],
+      "regressions": [
+        "cube/val/0008504/000021"
+      ],
+      "both_fail": []
     },
     {
       "dataset": "pusht",

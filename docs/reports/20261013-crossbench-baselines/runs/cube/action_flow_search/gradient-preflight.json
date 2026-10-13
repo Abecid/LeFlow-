@@ -11,7 +11,7 @@
       "loss": 1.2511008977890015
     }
   ],
-  "gpu_hours": 0.00035402999363011786,
+  "gpu_hours": 0.0003169641498890188,
   "identity": {
     "cache": "f991dc8fbb238a15e0b951af6483519d40c7680fd9cf966d89df2de8cb5fb02e",
     "fixture": false,
@@ -56,5 +56,5 @@
   },
   "optimizer_updates": 0,
   "ranks": 4,
-  "seconds": 0.31862699426710606
+  "seconds": 0.2852677349001169
 }

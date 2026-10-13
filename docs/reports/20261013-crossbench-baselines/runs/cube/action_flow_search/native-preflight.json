@@ -2,12 +2,12 @@
   "action_dim": 5,
   "block_dim": 25,
   "decision_ms": [
-    477.29771584272385,
-    75.76093263924122,
-    69.99586708843708
+    489.28519524633884,
+    75.90717077255249,
+    75.16581937670708
   ],
   "fresh_cache_max_abs": 1.6093254089355469e-06,
-  "gpu_hours": 0.004619815980291201,
+  "gpu_hours": 0.0045711101555368965,
   "latent_dim": 192,
   "method": "action_flow_search",
   "optimizer_updates": 0,
@@ -17,12 +17,12 @@
     "render_sha256": "1405ebbce34c69ed8cf724d0a063c1b2b676900eec8e48c7fef6a20a56927a2b",
     "seed": 103072
   },
-  "seconds": 16.631337529048324,
+  "seconds": 16.455996559932828,
   "source": "50bd3c4cd056676a963a1ecbc0ba0e2d8a83fd1901190c8e815cc80635fcdf68",
   "status": "passed",
   "task": "cube",
   "test_cases_read": 0,
   "training_cases_only": true,
   "validation_cases_read": 0,
-  "warm_mean_ms": 72.87839986383915
+  "warm_mean_ms": 75.53649507462978
 }

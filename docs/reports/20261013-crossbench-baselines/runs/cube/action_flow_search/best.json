@@ -1,0 +1,41 @@
+{
+  "checkpoint_sha256": "4ac8955f469cce6278177b73e5affa640e1eefb1b93642f49ff594958b3d7f7d",
+  "metrics": {
+    "episodes": 50,
+    "failure_ids": [
+      "cube/val/0000560/000032",
+      "cube/val/0000859/000100",
+      "cube/val/0001514/000118",
+      "cube/val/0001645/000057",
+      "cube/val/0001968/000118",
+      "cube/val/0002008/000149",
+      "cube/val/0002090/000115",
+      "cube/val/0002777/000008",
+      "cube/val/0002985/000041",
+      "cube/val/0003106/000118",
+      "cube/val/0003396/000018",
+      "cube/val/0003510/000063",
+      "cube/val/0004118/000026",
+      "cube/val/0005033/000124",
+      "cube/val/0007213/000112",
+      "cube/val/0007447/000118",
+      "cube/val/0008504/000021",
+      "cube/val/0008782/000106",
+      "cube/val/0008908/000033",
+      "cube/val/0008993/000025",
+      "cube/val/0009070/000039",
+      "cube/val/0009458/000118"
+    ],
+    "mean_decision_ms": 75.3685040645442,
+    "mean_steps": 24.56,
+    "success_rate": 0.56,
+    "successes": 28,
+    "timeouts": 0,
+    "wilson95": [
+      0.4230578680014353,
+      0.6883801278976466
+    ],
+    "world_transitions": 127200
+  },
+  "step": 5000
+}

@@ -1,0 +1,20 @@
+{
+  "checkpoint_sha256": "f76c64b70aad42725482a36705a28482070cbab0ac0afae1be08c018a295b3fd",
+  "metrics": {
+    "episodes": 50,
+    "failure_ids": [
+      "cube/val/0008504/000021"
+    ],
+    "mean_decision_ms": 62.23729752549311,
+    "mean_steps": 9.64,
+    "success_rate": 0.98,
+    "successes": 49,
+    "timeouts": 0,
+    "wilson95": [
+      0.8950431352816304,
+      0.9964608319110235
+    ],
+    "world_transitions": 59040
+  },
+  "step": 20000
+}

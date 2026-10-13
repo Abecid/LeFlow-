@@ -1,7 +1,7 @@
 <!-- native-crossbench-current:start -->
 # October 13 native campaign checkpoint
 
-Native PushT/Cube status: **10/16 completed, 40/64 full physical reports; registered recovery in progress**. Frozen training source remains `747f635ad36af2cbe3e2bbb0b7997efe9caccaa1`; seed3072/global64,20k updates OR8 optimizer GPUh, four native50 evaluations,50 actions/10 seconds. Native records use [their separate ledger](crossbench-results-ledger.json). The MetaWorld21-comparison/81-report ledger is unchanged.
+Native PushT/Cube status: **12/16 completed, 48/64 full physical reports; registered recovery in progress**. Frozen training source remains `747f635ad36af2cbe3e2bbb0b7997efe9caccaa1`; seed3072/global64,20k updates OR8 optimizer GPUh, four native50 evaluations,50 actions/10 seconds. Native records use [their separate ledger](crossbench-results-ledger.json). The MetaWorld21-comparison/81-report ledger is unchanged.
 
 Cube search's first attempt stopped at W&B initialization before any optimizer update or registered evaluation. Its native preflight0.004619815980291201GPUh and no-update DDP0.00035402999363011786GPUh remain preserved. Startup wait time is unmeasured and is not an optimizer charge. Ten completed runs are retained by the second operational recovery; only Cube search and five unstarted registered jobs are eligible. No changed training source, completed work replay, extra method, seed, data or budget is authorized. A failed recovery holds again without automatic restart.
 
