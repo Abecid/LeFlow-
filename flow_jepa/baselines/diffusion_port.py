@@ -43,6 +43,8 @@ class SinusoidalTimeEmbedding(nn.Module):
         self.width = width
 
     def forward(self, t):
+        if t.ndim != 1:
+            raise ValueError('Expected one scalar timestep per sample [B]')
         half = self.width // 2
         freqs = torch.exp(-math.log(10000.) *
                           torch.arange(half,device=t.device,dtype=t.dtype) /
@@ -68,7 +70,7 @@ class DenoiseUNet(nn.Module):
 
     def forward(self,noisy,t,context):
         # noisy:[B,5,8], t:[B] normalized [0,1], context:[B,256].
-        cond=context+self.time(t[:,None].float())
+        cond=context+self.time(t.float())
         x=self.down_a(self.head(noisy.transpose(1,2)),cond)
         middle=self.mid_b(self.mid_a(self.down(x),cond),cond)
         up=self.up(F.interpolate(middle,size=x.shape[-1],mode="nearest"))
