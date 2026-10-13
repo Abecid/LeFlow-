@@ -1,0 +1,112 @@
+{
+  "utc": "2026-10-13T14:58:49.222965+00:00",
+  "queue_pid": 3483698,
+  "queue_start_ticks": "1022380807",
+  "failed": false,
+  "completed": 10,
+  "lanes": {
+    "A": {
+      "dataset": "cube",
+      "method": "action_flow_search",
+      "physical_gpus": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "pid": 3485325,
+      "start_ticks": "1022389174",
+      "state": "training_and_periodic_evaluation",
+      "usage.json": {
+        "cap": 28800.0,
+        "evaluation_seconds": 0.0,
+        "final_update_overrun_seconds": 0.0,
+        "optimization_gpu_hours": 0.10557617121479577,
+        "optimization_seconds": 380.0742163732648,
+        "step": 3322
+      },
+      "wandb.json": {
+        "id": "4kchht08",
+        "url": "https://wandb.ai/attentionx2023/leflow-crossbench/runs/4kchht08"
+      }
+    },
+    "B": {
+      "dataset": "cube",
+      "method": "sage_port",
+      "physical_gpus": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "pid": 3485148,
+      "start_ticks": "1022388259",
+      "state": "training_and_periodic_evaluation",
+      "usage.json": {
+        "cap": 28800.0,
+        "evaluation_seconds": 0.0,
+        "final_update_overrun_seconds": 0.0,
+        "optimization_gpu_hours": 0.11376331904282172,
+        "optimization_seconds": 409.5479485541582,
+        "step": 3503
+      },
+      "wandb.json": {
+        "id": "gl3nvfwr",
+        "url": "https://wandb.ai/attentionx2023/leflow-crossbench/runs/gl3nvfwr"
+      }
+    }
+  },
+  "owned_workers": [
+    {
+      "pid": 3485148,
+      "start_ticks": "1022388259",
+      "command": "/tmp/mtxu-crossbench-20261013/env/bin/python -u -m torch.distributed.run --standalone --nproc_per_node=4 -m crossbench.train --task cube --method sage_port --cache /home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/cache/cube --run-dir /home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/cube/sage_port "
+    },
+    {
+      "pid": 3485158,
+      "start_ticks": "1022388394",
+      "command": "/tmp/mtxu-crossbench-20261013/env/bin/python -u -m crossbench.train --task cube --method sage_port --cache /home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/cache/cube --run-dir /home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/cube/sage_port "
+    },
+    {
+      "pid": 3485159,
+      "start_ticks": "1022388394",
+      "command": "/tmp/mtxu-crossbench-20261013/env/bin/python -u -m crossbench.train --task cube --method sage_port --cache /home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/cache/cube --run-dir /home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/cube/sage_port "
+    },
+    {
+      "pid": 3485160,
+      "start_ticks": "1022388394",
+      "command": "/tmp/mtxu-crossbench-20261013/env/bin/python -u -m crossbench.train --task cube --method sage_port --cache /home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/cache/cube --run-dir /home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/cube/sage_port "
+    },
+    {
+      "pid": 3485161,
+      "start_ticks": "1022388394",
+      "command": "/tmp/mtxu-crossbench-20261013/env/bin/python -u -m crossbench.train --task cube --method sage_port --cache /home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/cache/cube --run-dir /home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/cube/sage_port "
+    },
+    {
+      "pid": 3485325,
+      "start_ticks": "1022389174",
+      "command": "/tmp/mtxu-crossbench-20261013/env/bin/python -u -m torch.distributed.run --standalone --nproc_per_node=4 -m crossbench.train --task cube --method action_flow_search --cache /home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/cache/cube --run-dir /home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/cube/action_flow_search "
+    },
+    {
+      "pid": 3485365,
+      "start_ticks": "1022389302",
+      "command": "/tmp/mtxu-crossbench-20261013/env/bin/python -u -m crossbench.train --task cube --method action_flow_search --cache /home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/cache/cube --run-dir /home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/cube/action_flow_search "
+    },
+    {
+      "pid": 3485366,
+      "start_ticks": "1022389302",
+      "command": "/tmp/mtxu-crossbench-20261013/env/bin/python -u -m crossbench.train --task cube --method action_flow_search --cache /home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/cache/cube --run-dir /home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/cube/action_flow_search "
+    },
+    {
+      "pid": 3485367,
+      "start_ticks": "1022389302",
+      "command": "/tmp/mtxu-crossbench-20261013/env/bin/python -u -m crossbench.train --task cube --method action_flow_search --cache /home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/cache/cube --run-dir /home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/cube/action_flow_search "
+    },
+    {
+      "pid": 3485368,
+      "start_ticks": "1022389302",
+      "command": "/tmp/mtxu-crossbench-20261013/env/bin/python -u -m crossbench.train --task cube --method action_flow_search --cache /home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/cache/cube --run-dir /home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/cube/action_flow_search "
+    }
+  ],
+  "queue_identity_matches": true
+}
