@@ -13,7 +13,7 @@ from flow_jepa.common import save_json, file_hash
 
 
 def make_cache(root,task='pusht',dim=16):
-    root=Path(root);pd=2 if task=='pusht' else 4
+    root=Path(root);pd=2 if task=='pusht' else 5
     rng=np.random.default_rng(17);rows=[]
     with h5py.File(root/'cache.h5','w') as f:
         z=rng.normal(size=(800,1,dim)).astype('f4')

@@ -42,7 +42,7 @@ class TestCore(unittest.TestCase):
         self.assertTrue(torch.allclose(u.unit(u.physical(a)),a,atol=1.e-6))
         with self.assertRaises(ValueError):u.unit(torch.tensor([[513.,0.]]),strict=True)
     def test_all_methods_both_action_spaces(self):
-        for dataset,dim in [('pusht',2),('cube',4)]:
+        for dataset,dim in [('pusht',2),('cube',5)]:
             for method in METHODS:
                 with self.subTest(dataset=dataset,method=method):
                     s=Spec(dataset,method,dim=16,width=32,primitive_dim=dim)

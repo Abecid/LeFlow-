@@ -67,5 +67,5 @@ jobs:
           python-version: '3.11'
       - run: sudo apt-get update -qq && sudo apt-get install -y libosmesa6 libgl1 libegl1
       - run: pip install torch==2.8.0 torchvision==0.23.0 --index-url https://download.pytorch.org/whl/cpu
-      - run: pip install 'stable-worldmodel @ git+https://github.com/galilai-group/stable-worldmodel.git@06b1f4c24ccb237a9b2d6bb65bf010a6a5b41e83' gymnasium==1.2.0 numpy==2.2.6 pygame==2.6.1 pymunk==7.1.0 shapely==2.1.2 ogbench==1.2.0 mujoco==3.3.7 dm-control==1.0.34 omegaconf hdf5plugin
+      - run: pip install 'stable-worldmodel @ git+https://github.com/galilai-group/stable-worldmodel.git@06b1f4c24ccb237a9b2d6bb65bf010a6a5b41e83' gymnasium==1.2.0 numpy==2.2.6 pygame==2.6.1 pymunk==7.1.0 shapely==2.1.2 ogbench==1.2.0 mujoco==3.3.7 dm-control==1.0.34 omegaconf hdf5plugin opencv-python-headless==4.12.0.88
       - run: python -m unittest discover -s tests -p 'test_crossbench_native.py' -v

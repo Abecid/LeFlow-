@@ -47,7 +47,7 @@ class Spec:
             raise ValueError('Only the two new datasets and eight registered methods are allowed')
         if self.patches != 1 or self.horizon != 5:
             raise ValueError('Released compact LeWM state and five-block planning are required')
-        if self.primitive_dim != {'pusht': 2, 'cube': 4}[self.dataset]:
+        if self.primitive_dim != {'pusht': 2, 'cube': 5}[self.dataset]:
             raise ValueError('Native primitive action dimension mismatch')
         if min(self.dim, self.action_block, self.eval_episodes, self.updates,
                self.global_batch, self.action_budget, self.goal_offset) <= 0:
@@ -73,7 +73,7 @@ def matrix():
         'metaworld': {'status': 'reuse_completed', 'source_commit':
             'a5ffc726c23fe6069a4e4a95239c4c08d2c81005',
             'results': 'docs/results-ledger.json', 'retrain': False},
-        'jobs': [asdict(Spec(dataset=d, method=m, primitive_dim=2 if d=='pusht' else 4))
+        'jobs': [asdict(Spec(dataset=d, method=m, primitive_dim=2 if d=='pusht' else 5))
                  for d in ('pusht','cube') for m in METHODS],
         'status': 'implementation_only_until_native_preflight_and_server_launch',
         'sealed_final_tests_enabled': False,
