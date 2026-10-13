@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-13",
+  "implementation": "leflow_refinement",
+  "tested_commit": "456e2709b6fc4923c8e99b6a053e96c06c82a6fd",
+  "github_actions": {
+    "run_id": 38378300822,
+    "numerical_job_id": 115232209852,
+    "world_interface_job_id": 115232210319,
+    "numerical": "success",
+    "world_interfaces": "success",
+    "tests_passed": 33,
+    "native_world_interface_checks_passed": 8
+  },
+  "benchmark": {
+    "status": "blocked_not_started",
+    "training_started": false,
+    "evaluation_started": false,
+    "measured_success_rates": null,
+    "new_method_optimizer_updates": 0,
+    "reasons": [
+      "This session does not have authenticated SSH access to the existing NVIDIA GPU server.",
+      "The README-referenced hsiangwei0903/LeFlow pretrained-head repository returned HTTP 401 / not found for PushT and Cube."
+    ],
+    "public_head_status": [
+      {"task": "pusht", "pretrained_head": "blocked"},
+      {"task": "cube", "pretrained_head": "blocked"}
+    ],
+    "scope": "Jobs attempted by this session; other server activity was not inspected."
+  },
+  "interface_checks_are_not_benchmarks": true,
+  "interface_checks": [
+    {"task": "pusht", "variant": "leflow", "head_source": "randomly_initialized_head_interface_check_only", "latent_dim": 192, "action_block_coordinates": 10, "gradient_norm_sum": 0.0, "flow_batches": 4, "world_candidate_transitions": 10},
+    {"task": "pusht", "variant": "pnp", "head_source": "randomly_initialized_head_interface_check_only", "latent_dim": 192, "action_block_coordinates": 10, "gradient_norm_sum": 0.0, "flow_batches": 6, "world_candidate_transitions": 10},
+    {"task": "pusht", "variant": "world_gradient", "head_source": "randomly_initialized_head_interface_check_only", "latent_dim": 192, "action_block_coordinates": 10, "gradient_norm_sum": 0.02079721726477146, "flow_batches": 6, "world_candidate_transitions": 30},
+    {"task": "pusht", "variant": "world_pnp", "head_source": "randomly_initialized_head_interface_check_only", "latent_dim": 192, "action_block_coordinates": 10, "gradient_norm_sum": 0.022863006219267845, "flow_batches": 6, "world_candidate_transitions": 30},
+    {"task": "cube", "variant": "leflow", "head_source": "randomly_initialized_head_interface_check_only", "latent_dim": 192, "action_block_coordinates": 25, "gradient_norm_sum": 0.0, "flow_batches": 4, "world_candidate_transitions": 10},
+    {"task": "cube", "variant": "pnp", "head_source": "randomly_initialized_head_interface_check_only", "latent_dim": 192, "action_block_coordinates": 25, "gradient_norm_sum": 0.0, "flow_batches": 6, "world_candidate_transitions": 10},
+    {"task": "cube", "variant": "world_gradient", "head_source": "randomly_initialized_head_interface_check_only", "latent_dim": 192, "action_block_coordinates": 25, "gradient_norm_sum": 0.05772967077791691, "flow_batches": 6, "world_candidate_transitions": 30},
+    {"task": "cube", "variant": "world_pnp", "head_source": "randomly_initialized_head_interface_check_only", "latent_dim": 192, "action_block_coordinates": 25, "gradient_norm_sum": 0.06760578602552414, "flow_batches": 6, "world_candidate_transitions": 30}
+  ],
+  "local_tests": {"passed": 33, "torch": "2.10.0+cpu", "cuda_available": false},
+  "launch_attempt": {
+    "evaluation_started": false,
+    "reason": "no_existing_NVIDIA_server_runtime",
+    "status": "blocked_before_launch",
+    "training_started": false
+  },
+  "evidence_sha256": {
+    "refinement-tests.log": "8beb52fae25f5567d448b890d5c81343b19193c4815eb6247e2dc9883068b58a",
+    "released_interfaces.json": "bde92a30bc2ebf92a1bd32ec2ea907542c1fe27f78b0585dea37b6ddad12fff7",
+    "pretrained_head_status.json": "27b2d5e52ed28c1ea92154898058baa1a59b45d637c49ef2e846fb6eb118870c",
+    "dataset_sizes.json": "c74e2d869b1ad2892e815ee098e3e2c5ea794834ab6f746d0023565af3aa70fe",
+    "tested-source.zip": "4d5f228ea3a37f80fc48d532a38e56b9b65e9e525e87b55b95948795d0574264"
+  },
+  "source_sha256": {
+    "campaign.py": "1c7825f7dff72a9cfa9adb3a2452f9ea97bd6a2398b1333e79ec23db89238c61",
+    "compare.py": "58f859a2c0569c63f74bc8b26c2fdf68f82ff9d796b133b9167516d6a6eed53a",
+    "core.py": "bfad6ddff7c6ac0b74f82fba278c063a5aff00338dfa2703e2e97b98cb216bdb",
+    "crossbench.py": "88d973d19ae7e5af254687017b435c17f283e4c0c2133085b3d11d2ba3360b43",
+    "native_eval.py": "9cc402592476b0cb287ede28d9b92d10aa3c6f759df02c7c61d361b4f8c7352e",
+    "runtime.py": "1a53c1d209d9ba09508d7d68d8f5c3c4aa652992d05f47675d7a443b1e6c4369"
+  },
+  "preserved": ["Completed MetaWorld experiments", "Original crossbench runtime files", "Sealed final tests", "Concurrently added self_refine package"],
+  "not_implemented_in_this_scope": ["DA-SIP adaptive allocation", "RepFusion learned conditioning", "Test-time weight adaptation"],
+  "interface_test_configuration": {"samples": 2, "steps": 4, "horizon": 5, "refine_at": [1, 2], "repeats": 1, "radius": 0.05, "consistency_weight": 0.0}
+}
