@@ -1,0 +1,42 @@
+{
+  "cache": "bd363bb3cb3900cf7bf855b6a2038f31b8f9734b2786ccbc999fc828c5cba09c",
+  "fixture": false,
+  "ranks": 4,
+  "source": "50bd3c4cd056676a963a1ecbc0ba0e2d8a83fd1901190c8e815cc80635fcdf68",
+  "spec": {
+    "action_block": 5,
+    "action_budget": 50,
+    "candidates": 4,
+    "controller_seconds": 10.0,
+    "dataset": "pusht",
+    "dim": 192,
+    "eval_episodes": 50,
+    "flow_steps": 8,
+    "global_batch": 64,
+    "goal_offset": 25,
+    "history": 4,
+    "horizon": 5,
+    "learning_rate": 0.0001,
+    "method": "execution_revision",
+    "optimization_gpu_seconds": 28800.0,
+    "patches": 1,
+    "primitive_dim": 2,
+    "protocol": "crossbench-shared-lewm-v2",
+    "repair_radius": 0.25,
+    "repair_steps": 4,
+    "rounds": 3,
+    "seed": 3072,
+    "targets": 8,
+    "updates": 20000,
+    "weight_decay": 0.05,
+    "width": 256
+  },
+  "window_sampling": {
+    "eligible_episodes": 14948,
+    "eligible_starts": 1439235,
+    "native_safe_factual_history_and_goals": true,
+    "nominal_episodes": 14948,
+    "nominal_starts": 1496570
+  },
+  "world": "48938400ae3464c9680731287f583a9cb516f55a8ec64ea13a91be47fb15b607"
+}

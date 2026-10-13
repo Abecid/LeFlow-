@@ -1,0 +1,20 @@
+{
+  "pid": 3135114,
+  "start_ticks": 1020399333,
+  "utc": "2026-10-13T09:24:47.210186+00:00",
+  "command": [
+    "/tmp/mtxu-crossbench-20261013/env/bin/python",
+    "-u",
+    "-m",
+    "crossbench.prepare",
+    "--task",
+    "pusht",
+    "--source-json",
+    "/tmp/mtxu-leflow-20261004/data/prepared/pusht/source.json",
+    "--output",
+    "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/cache/pusht",
+    "--latent-manifest",
+    "/tmp/mtxu-leflow-20261004/data/latents/pusht/manifest.json"
+  ],
+  "reason": "Preserve raw actions; native-safe factual window protocol v2"
+}

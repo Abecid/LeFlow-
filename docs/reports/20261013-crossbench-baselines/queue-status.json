@@ -1,0 +1,354 @@
+{
+  "failed": false,
+  "lanes": {
+    "A": {
+      "command": [
+        "/tmp/mtxu-crossbench-20261013/env/bin/python",
+        "-u",
+        "-m",
+        "torch.distributed.run",
+        "--standalone",
+        "--nproc_per_node=4",
+        "-m",
+        "crossbench.train",
+        "--task",
+        "pusht",
+        "--method",
+        "execution_revision",
+        "--cache",
+        "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/cache/pusht",
+        "--run-dir",
+        "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/pusht/execution_revision"
+      ],
+      "dataset": "pusht",
+      "method": "execution_revision",
+      "physical_gpus": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "pid": 3187704,
+      "state": "training_and_periodic_evaluation"
+    },
+    "B": {
+      "command": [
+        "/tmp/mtxu-crossbench-20261013/env/bin/python",
+        "-u",
+        "-m",
+        "torch.distributed.run",
+        "--standalone",
+        "--nproc_per_node=4",
+        "-m",
+        "crossbench.train",
+        "--task",
+        "pusht",
+        "--method",
+        "retrieval_repair_ttt",
+        "--cache",
+        "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/cache/pusht",
+        "--run-dir",
+        "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/pusht/retrieval_repair_ttt"
+      ],
+      "dataset": "pusht",
+      "method": "retrieval_repair_ttt",
+      "physical_gpus": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "pid": 3161446,
+      "state": "training_and_periodic_evaluation"
+    }
+  },
+  "pending": [
+    [
+      "cube",
+      "vanilla_action_flow"
+    ],
+    [
+      "cube",
+      "retrieval_repair_ttt"
+    ],
+    [
+      "cube",
+      "leflow"
+    ],
+    [
+      "cube",
+      "execution_revision"
+    ],
+    [
+      "pusht",
+      "action_flow_search"
+    ],
+    [
+      "cube",
+      "action_flow_search"
+    ],
+    [
+      "pusht",
+      "sage_port"
+    ],
+    [
+      "cube",
+      "sage_port"
+    ],
+    [
+      "pusht",
+      "diffusion_policy_port"
+    ],
+    [
+      "cube",
+      "diffusion_policy_port"
+    ],
+    [
+      "pusht",
+      "feedback_wm_port"
+    ],
+    [
+      "cube",
+      "feedback_wm_port"
+    ]
+  ],
+  "results": [
+    {
+      "best": {
+        "checkpoint_sha256": "8a121708c0f4512c5b10026739a20ff0544f400fd9bfa67a9e2b0ae7520983cb",
+        "metrics": {
+          "episodes": 50,
+          "failure_ids": [
+            "pusht/val/0000787/000018",
+            "pusht/val/0002082/000053",
+            "pusht/val/0002481/000039",
+            "pusht/val/0003692/000081",
+            "pusht/val/0003815/000095",
+            "pusht/val/0003982/000075",
+            "pusht/val/0004684/000092",
+            "pusht/val/0005771/000018",
+            "pusht/val/0006104/000097",
+            "pusht/val/0006540/000014",
+            "pusht/val/0007278/000101",
+            "pusht/val/0007590/000025",
+            "pusht/val/0007774/000011",
+            "pusht/val/0007987/000033",
+            "pusht/val/0008047/000095",
+            "pusht/val/0008980/000043",
+            "pusht/val/0009466/000045",
+            "pusht/val/0012621/000055",
+            "pusht/val/0012628/000013",
+            "pusht/val/0012720/000012",
+            "pusht/val/0013555/000059",
+            "pusht/val/0014009/000101",
+            "pusht/val/0014798/000037",
+            "pusht/val/0015059/000049",
+            "pusht/val/0015959/000106",
+            "pusht/val/0016217/000024",
+            "pusht/val/0016443/000071",
+            "pusht/val/0016738/000074",
+            "pusht/val/0017156/000019",
+            "pusht/val/0017244/000022",
+            "pusht/val/0017254/000000",
+            "pusht/val/0017853/000087",
+            "pusht/val/0018271/000051"
+          ],
+          "mean_decision_ms": 9.851604545226548,
+          "mean_steps": 42.76,
+          "success_rate": 0.34,
+          "successes": 17,
+          "timeouts": 0,
+          "wilson95": [
+            0.2243676963506106,
+            0.47846431458517147
+          ],
+          "world_transitions": 0
+        },
+        "step": 20000
+      },
+      "complete": {
+        "evaluation_gpu_hours": 0.017374207634064887,
+        "identity": {
+          "cache": "bd363bb3cb3900cf7bf855b6a2038f31b8f9734b2786ccbc999fc828c5cba09c",
+          "fixture": false,
+          "ranks": 4,
+          "source": "50bd3c4cd056676a963a1ecbc0ba0e2d8a83fd1901190c8e815cc80635fcdf68",
+          "spec": {
+            "action_block": 5,
+            "action_budget": 50,
+            "candidates": 4,
+            "controller_seconds": 10.0,
+            "dataset": "pusht",
+            "dim": 192,
+            "eval_episodes": 50,
+            "flow_steps": 8,
+            "global_batch": 64,
+            "goal_offset": 25,
+            "history": 4,
+            "horizon": 5,
+            "learning_rate": 0.0001,
+            "method": "vanilla_action_flow",
+            "optimization_gpu_seconds": 28800.0,
+            "patches": 1,
+            "primitive_dim": 2,
+            "protocol": "crossbench-shared-lewm-v2",
+            "repair_radius": 0.25,
+            "repair_steps": 4,
+            "rounds": 3,
+            "seed": 3072,
+            "targets": 8,
+            "updates": 20000,
+            "weight_decay": 0.05,
+            "width": 256
+          },
+          "window_sampling": {
+            "eligible_episodes": 14948,
+            "eligible_starts": 1439235,
+            "native_safe_factual_history_and_goals": true,
+            "nominal_episodes": 14948,
+            "nominal_starts": 1496570
+          },
+          "world": "48938400ae3464c9680731287f583a9cb516f55a8ec64ea13a91be47fb15b607"
+        },
+        "optimization_gpu_hours": 0.5186292956479721,
+        "selected_success_rate": 0.34,
+        "status": "completed",
+        "step": 20000,
+        "stop_reason": "update_limit",
+        "validation_steps": [
+          5000,
+          10000,
+          15000,
+          20000
+        ],
+        "wall_seconds": 551.1509372089058
+      },
+      "dataset": "pusht",
+      "method": "vanilla_action_flow",
+      "returncode": 0,
+      "utc": "2026-10-13T09:59:26.595232+00:00"
+    },
+    {
+      "best": {
+        "checkpoint_sha256": "58dbf57a03672617ad1c55473d16fbf28f91e7826455af8d0de41b62d23eb310",
+        "metrics": {
+          "episodes": 50,
+          "failure_ids": [
+            "pusht/val/0000787/000018",
+            "pusht/val/0001627/000063",
+            "pusht/val/0002082/000053",
+            "pusht/val/0002980/000149",
+            "pusht/val/0003377/000057",
+            "pusht/val/0003815/000095",
+            "pusht/val/0003831/000076",
+            "pusht/val/0003982/000075",
+            "pusht/val/0004158/000063",
+            "pusht/val/0004684/000092",
+            "pusht/val/0005164/000064",
+            "pusht/val/0005467/000003",
+            "pusht/val/0005771/000018",
+            "pusht/val/0006104/000097",
+            "pusht/val/0006540/000014",
+            "pusht/val/0006712/000021",
+            "pusht/val/0007278/000101",
+            "pusht/val/0007590/000025",
+            "pusht/val/0007774/000011",
+            "pusht/val/0007987/000033",
+            "pusht/val/0008047/000095",
+            "pusht/val/0008531/000016",
+            "pusht/val/0008980/000043",
+            "pusht/val/0009466/000045",
+            "pusht/val/0010550/000017",
+            "pusht/val/0010690/000117",
+            "pusht/val/0012621/000055",
+            "pusht/val/0012628/000013",
+            "pusht/val/0014009/000101",
+            "pusht/val/0015959/000106",
+            "pusht/val/0016443/000071",
+            "pusht/val/0016738/000074",
+            "pusht/val/0017156/000019",
+            "pusht/val/0017244/000022",
+            "pusht/val/0017254/000000",
+            "pusht/val/0017853/000087",
+            "pusht/val/0018271/000051",
+            "pusht/val/0018618/000061"
+          ],
+          "mean_decision_ms": 45.63502091793202,
+          "mean_steps": 45.82,
+          "success_rate": 0.24,
+          "successes": 12,
+          "timeouts": 0,
+          "wilson95": [
+            0.14297252401872207,
+            0.3741294937519236
+          ],
+          "world_transitions": 147520
+        },
+        "step": 5000
+      },
+      "complete": {
+        "evaluation_gpu_hours": 0.040505016466809644,
+        "identity": {
+          "cache": "bd363bb3cb3900cf7bf855b6a2038f31b8f9734b2786ccbc999fc828c5cba09c",
+          "fixture": false,
+          "ranks": 4,
+          "source": "50bd3c4cd056676a963a1ecbc0ba0e2d8a83fd1901190c8e815cc80635fcdf68",
+          "spec": {
+            "action_block": 5,
+            "action_budget": 50,
+            "candidates": 4,
+            "controller_seconds": 10.0,
+            "dataset": "pusht",
+            "dim": 192,
+            "eval_episodes": 50,
+            "flow_steps": 8,
+            "global_batch": 64,
+            "goal_offset": 25,
+            "history": 4,
+            "horizon": 5,
+            "learning_rate": 0.0001,
+            "method": "leflow",
+            "optimization_gpu_seconds": 28800.0,
+            "patches": 1,
+            "primitive_dim": 2,
+            "protocol": "crossbench-shared-lewm-v2",
+            "repair_radius": 0.25,
+            "repair_steps": 4,
+            "rounds": 3,
+            "seed": 3072,
+            "targets": 8,
+            "updates": 20000,
+            "weight_decay": 0.05,
+            "width": 256
+          },
+          "window_sampling": {
+            "eligible_episodes": 14948,
+            "eligible_starts": 1439235,
+            "native_safe_factual_history_and_goals": true,
+            "nominal_episodes": 14948,
+            "nominal_starts": 1496570
+          },
+          "world": "48938400ae3464c9680731287f583a9cb516f55a8ec64ea13a91be47fb15b607"
+        },
+        "optimization_gpu_hours": 0.769966474690785,
+        "selected_success_rate": 0.24,
+        "status": "completed",
+        "step": 20000,
+        "stop_reason": "update_limit",
+        "validation_steps": [
+          5000,
+          10000,
+          15000,
+          20000
+        ],
+        "wall_seconds": 812.1593108400702
+      },
+      "dataset": "pusht",
+      "method": "leflow",
+      "returncode": 0,
+      "utc": "2026-10-13T10:13:44.746636+00:00"
+    }
+  ],
+  "source": "747f635ad36af2cbe3e2bbb0b7997efe9caccaa1",
+  "utc": "2026-10-13T10:14:05.574569+00:00"
+}

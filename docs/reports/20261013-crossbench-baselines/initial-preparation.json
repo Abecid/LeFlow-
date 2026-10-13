@@ -1,0 +1,41 @@
+{
+  "utc": "2026-10-13T09:06:33.663371+00:00",
+  "source": "8fea74f + recorded preparation-only throughput patch",
+  "data_root": "/tmp/mtxu-leflow-20261004/data",
+  "runtime": "/tmp/mtxu-crossbench-20261013/env/bin/python",
+  "children": {
+    "cube": {
+      "stage": "cube-source",
+      "pid": 3115632,
+      "start_ticks": 1020289978,
+      "args": [
+        "/tmp/mtxu-crossbench-20261013/env/bin/python",
+        "-u",
+        "scripts/prepare_data.py",
+        "--task",
+        "cube"
+      ]
+    },
+    "pusht": {
+      "stage": "pusht-cache",
+      "pid": 3115633,
+      "start_ticks": 1020289978,
+      "args": [
+        "/tmp/mtxu-crossbench-20261013/env/bin/python",
+        "-u",
+        "-m",
+        "crossbench.prepare",
+        "--task",
+        "pusht",
+        "--source-json",
+        "/tmp/mtxu-leflow-20261004/data/prepared/pusht/source.json",
+        "--output",
+        "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/cache/pusht",
+        "--batch-size",
+        "512",
+        "--latent-manifest",
+        "/tmp/mtxu-leflow-20261004/data/latents/pusht/manifest.json"
+      ]
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "checkpoint_sha256": "53269da292692af79c0bfb755ce390c6fe354ff689b546485790da584053db21",
+  "metrics": {
+    "episodes": 50,
+    "failure_ids": [
+      "pusht/val/0002481/000039",
+      "pusht/val/0004684/000092",
+      "pusht/val/0005164/000064",
+      "pusht/val/0006540/000014",
+      "pusht/val/0009466/000045",
+      "pusht/val/0012720/000012",
+      "pusht/val/0015025/000018",
+      "pusht/val/0015959/000106",
+      "pusht/val/0016443/000071",
+      "pusht/val/0016846/000004",
+      "pusht/val/0017156/000019"
+    ],
+    "mean_decision_ms": 54.62385406831234,
+    "mean_steps": 31.48,
+    "success_rate": 0.78,
+    "successes": 39,
+    "timeouts": 0,
+    "wilson95": [
+      0.6475818431054045,
+      0.8724621377569771
+    ],
+    "world_transitions": 104960
+  },
+  "step": 10000
+}
