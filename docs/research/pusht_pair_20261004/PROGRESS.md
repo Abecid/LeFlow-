@@ -1,13 +1,13 @@
 # LeFlow BTM-JEPA training: experiment status and results
 
-**Latest check: October 13, 09:59–10:00 UTC — GPU activity returned; campaign unchanged.**
-The follow-up lists eight unidentified GPU processes, with 1,637 MiB device memory
-per GPU on 0–3 and 2,033 MiB on 4–7. Ownership and campaign association are unresolved.
-BTM remains at 23,830 saved steps, flow at 23,000 saved / 23,040 logged, with no
-new evaluations and both completion markers absent. The campaign is incomplete,
-recovery is unverified and there is no active ETA. See the
-[latest health report](reports/20261013T095925Z.md) and preserved
-[previous idle-GPU report](reports/20261013T045910Z.md).
+**Latest check: October 13, 11:29 UTC — campaign unchanged; monitoring partly blocked.**
+Full campaign records and device telemetry were freshly collected. The separate
+W&B/CPU-probe and GPU-process reads each failed twice during SSH banner exchange;
+their current state remains unverified. BTM remains at 23,830 saved steps, flow
+at 23,000 saved / 23,040 logged, with no new evaluations and both completion
+markers absent. Recovery is unverified and there is no active ETA. See the
+[latest partial-access report](reports/20261013T112922Z.md) and preserved
+[previous health report](reports/20261013T095925Z.md).
 
 **Verified October 6, 2026, 1:09–1:11 AM EDT (05:09–05:11 UTC).**
 
@@ -20,11 +20,11 @@ training artifacts were found in the inspected deployment and configured/default
 cache locations. The [run inventory](snapshots/20261006T050931Z/run-inventory.json)
 records this scope; it is not a claim about every directory on the server.
 
-**The full experiment suite has not been run, and the paired pilot is incomplete.** BTM reached its planned training and validation endpoint. Flow stopped short. The available single-seed validation results **do not establish that BTM improves long-horizon success or preserves success with a controlled speedup**. Through the October 13, 09:59:28 UTC full collection, no new training/evaluation results had been observed since the October 5 report. Campaign records and authenticated W&B readback are freshly verified. New GPU activity has unresolved ownership and does not establish campaign recovery.
+**The full experiment suite has not been run, and the paired pilot is incomplete.** BTM reached its planned training and validation endpoint. Flow stopped short. The available single-seed validation results **do not establish that BTM improves long-horizon success or preserves success with a controlled speedup**. Through the October 13, 11:29:26 UTC full collection, no new training/evaluation results had been observed since the October 5 report. Campaign records are freshly verified; authenticated W&B, the independent CPU probe and driver-process mapping are currently blocked by SSH timeouts. Device activity has unresolved ownership and does not establish campaign recovery.
 
 ## What ran
 
-Campaign status in this table was last verified at 09:59:28 UTC on October 13.
+Campaign status in this table was last verified at 11:29:26 UTC on October 13.
 
 | Experiment | Status |
 |---|---|
@@ -36,9 +36,9 @@ Campaign status in this table was last verified at 09:59:28 UTC on October 13.
 | Held-out test and additional training seeds | Not run |
 | Exact published LeFlow reproduction; V-JEPA 2.1 / Meta-World | Not performed; the latter is not implemented |
 
-Only **one trained baseline** is available. The broader controls have no results in the inspected campaign. The October 13, 09:59:25–28 UTC full collection found no known campaign trainer or flow controller through the collector's name/path filters and accessible process view; the original supervisor remains intentionally stopped. Both completion markers are absent. BTM's final checkpoint metadata remains valid at epoch 10, next batch 0, with recorded trainer exit zero. Flow needs **830 updates from its recoverable checkpoint**, including replay of 40 logged but unsaved updates, plus final validation. W&B checks at 09:59:36 UTC report both runs `finished` with unchanged steps 23,830/23,040 and runtimes 8,304/9,240 seconds. The CPU dataset probe and manifest match the preceding check.
+Only **one trained baseline** is available. The broader controls have no results in the inspected campaign. The October 13, 11:29:22–26 UTC full collection found no known campaign trainer or flow controller through the collector's name/path filters and accessible process view; the original supervisor remains intentionally stopped. Both completion markers are absent. BTM's final checkpoint metadata remains valid at epoch 10, next batch 0, with recorded trainer exit zero. Flow needs **830 updates from its recoverable checkpoint**, including replay of 40 logged but unsaved updates, plus final validation. The last successful W&B checks at 11:14:29/30 UTC reported both runs `finished` at steps 23,830/23,040 and runtimes 8,304/9,240 seconds. Those online readings and the preceding CPU dataset probe are cached; neither was refreshed after two SSH failures.
 
-At 09:59:25 UTC, the driver lists five unidentified compute processes on GPUs 0 and 4–7. The 10:00:14 follow-up lists eight, one per device: GPUs 0–3 each use 1,637 MiB device memory and GPUs 4–7 each use 2,033 MiB, at 15/80/77/65/30/44/49/54% utilization. Process names and accessible process directories do not reveal ownership. Separate health readings show 29–36°C and zero volatile uncorrected ECC errors; these limited readings do not certify comprehensive hardware health. Hardware samples are non-atomic, and activity does not prove campaign recovery or completion. **There is no active completion ETA.** Monitoring changed no GPU jobs.
+At 11:29:26 UTC, device memory is 1,611/1,639/1,611/1,639/2,221/2,221/2,221/2,221 MiB and utilization is 0/0/100/0/24/59/52/64%. The separate GPU-process query failed twice, so current driver identities and process counts are unverified. The last successful process mapping at 11:14:19 UTC showed eight unidentified entries; their ownership remains unresolved. Current temperature and hardware-error diagnostics were not verified. Activity does not establish campaign recovery or completion. **There is no active completion ETA.** Monitoring changed no GPU jobs.
 
 ## How good is BTM relative to flow?
 
