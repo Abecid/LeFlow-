@@ -29,6 +29,7 @@ def main(a):
                  'action_flow_search':'flow_metaworld_action_flow_search.json',
                  'sage_port':'flow_metaworld_sage_port.json',
                  'diffusion_policy_port':'flow_metaworld_diffusion_policy_port.json',
+                 'feedback_wm_port':'flow_metaworld_feedback_wm_port.json',
                  'flow_reasoning':'flow_metaworld_flow_reasoning.json',
                  'progress_ttt':'flow_metaworld_progress_ttt.json',
                  'guided_ttt':'flow_metaworld_guided_ttt.json',
@@ -172,7 +173,7 @@ def main(a):
 if __name__=='__main__':
     p=argparse.ArgumentParser()
     for name in ('record','previous','cache'):p.add_argument('--'+name,required=True)
-    p.add_argument('--variant',choices=['controller_grounded','latent_revision','execution_revision','vanilla_action_flow','action_flow_search','sage_port','diffusion_policy_port','flow_reasoning','progress_ttt','guided_ttt','repair_flow_ttt','retrieval_repair_ttt','shifted_repair_ttt','progress_objective_ttt','bayesian_repair_ttt','nonlinear_repair_ttt'],default='controller_grounded')
+    p.add_argument('--variant',choices=['controller_grounded','latent_revision','execution_revision','vanilla_action_flow','action_flow_search','sage_port','diffusion_policy_port','feedback_wm_port','flow_reasoning','progress_ttt','guided_ttt','repair_flow_ttt','retrieval_repair_ttt','shifted_repair_ttt','progress_objective_ttt','bayesian_repair_ttt','nonlinear_repair_ttt'],default='controller_grounded')
     p.add_argument('--reuse-bank')
     p.add_argument('--reference-policy')
     p.add_argument('--gpus',type=int,choices=[4,8],default=8)
