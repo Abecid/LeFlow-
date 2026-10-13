@@ -1,143 +1,38 @@
-# Four new baseline comparisons complete; SAGE continues
+# Execution-calibrated visual planning with V-JEPA 2.1
 
-All four runs completed 20,000 fresh updates and four fixed 104-case development
-evaluations. Source/data/checkpoint audits pass and W&B reports each run finished.
+**Current status: all five additional baseline runs are trained, evaluated, audited and published.** The project retains 21 completed shared-world comparisons and 81 complete development evaluation reports. No training run is active.
 
-| Method | Success at 5k /10k /15k /20k | Selected /104 | Selected timeouts |
-| --- | --- | ---: | ---: |
-| [Vanilla action flow](docs/VANILLA_ACTION_FLOW_RESULTS.md) | 77 /84 /89 /98 | **98** | 0 |
-| [Action flow + world search](docs/ACTION_FLOW_SEARCH_RESULTS.md) | 74 /79 /84 /78 | 84 | 0 |
-| [Diffusion Policy port](docs/DIFFUSION_POLICY_PORT_RESULTS.md) | 43 /69 /70 /74 | 74 | 0 |
-| [Feedback-WM-inspired port](docs/FEEDBACK_WM_PORT_RESULTS.md) | 42 /65 /75 /76 | 76 | 28 |
+| New comparison | 5k /10k /15k /20k successes | Selected /104 |
+| --- | --- | ---: |
+| [vanilla_action_flow](docs/VANILLA_ACTION_FLOW_RESULTS.md) | 77 / 84 / 89 / 98 | **98** |
+| [action_flow_search](docs/ACTION_FLOW_SEARCH_RESULTS.md) | 74 / 79 / 84 / 78 | **84** |
+| [sage_port](docs/SAGE_PORT_RESULTS.md) | 62 / 77 / 77 / 75 | **77** |
+| [diffusion_policy_port](docs/DIFFUSION_POLICY_PORT_RESULTS.md) | 43 / 69 / 70 / 74 | **74** |
+| [feedback_wm_port](docs/FEEDBACK_WM_PORT_RESULTS.md) | 42 / 65 / 75 / 76 | **76** |
 
-SAGE continues on physical GPUs 0–3. Both GPU lanes used all eight A800s while
-two methods overlapped; the other lane has now completed. Preserved references
-were reused. No extra seed, ablation, final test or budget extension was launched.
-The retained proposed retrieval-repair method scores 80, below vanilla flow 98.
-These are development selections from one seed, not independent SOTA evidence.
+**Vanilla conditional action flow is the strongest measured development controller at 98/104.** Our retained execution-calibrated retrieval-repair method scores 80/104. These results do not establish a gain from our TTT/reasoning/repair mechanism over the stronger BC baseline. The plain baseline has no retrieval, world search, workspace, TTT or residual repair.
 
-Twenty selected-checkpoint contact sheets from the first two runs were individually
-visually inspected. The stored Diffusion Policy pick-place example moves the hand
-toward the goal while leaving the object behind; its assembly example stalls near
-the initial object location. These are observations from saved cases, not inferred
-causes or invented trajectories. All full metrics and paired outcomes are preserved.
+Read the [completed five-method report](docs/ADDITIONAL_BASELINE_RUNS_20261012.md), [full experiment index](docs/RESULTS_INDEX.md), [results ledger](docs/results-ledger.json) and [paper blueprint](docs/PAPER_BLUEPRINT.md). They preserve negative results, full curves, implementation differences, paired failures and contribution boundaries.
 
-Historical progress snapshots follow.
+## Research direction
 
-# New baseline result: vanilla conditional action flow98/104
+The proposed mechanism uses observed action-prefix outcomes to correct predicted costs, condition planning, and generate bounded action-flow repairs around a retained incumbent. Its scientific target is better physical decisions per unit of controller compute. Additional inference, lower prediction MAE and retained predicted-cost incumbents do not by themselves demonstrate useful scaling or better execution. The current strongest baseline changes what this mechanism must beat.
 
-The first two newly authorized comparisons are complete: vanilla conditional
-flow77/84/89/98 selects20k98/104, and Diffusion Policy43/69/70/74 selects20k74/104.
-Both have zero controller timeouts at all four fixed104 evaluations. Their
-source/data/bank/checkpoint audits pass. These are single-seed development
-results; the new98 baseline exceeds the retained proposed repair controller80.
-Fixed-world action search, Feedback-WM and SAGE remain in the authorized batch.
+## Fixed setup and limits
 
-[Vanilla full findings](docs/VANILLA_ACTION_FLOW_RESULTS.md) ·
-[Diffusion Policy full findings](docs/DIFFUSION_POLICY_PORT_RESULTS.md) ·
-[Live five-method batch](docs/ADDITIONAL_BASELINE_RUNS_20261012.md).
+Training uses 6,222 successful expert episodes, frozen cached V-JEPA 2.1 ViT-L features/shared spatial world, seed 3072 and global batch 64. Each learned policy has a 20k-update OR eight optimizer-GPUh ceiling. Four fixed 104-case development evaluations cover 13 tasks under 200 primitive actions AND ten cumulative controller seconds. The reserved 3,200-case final benchmark remains sealed. One seed and repeatedly selected development cases do not establish native-benchmark SOTA, independent generalization or component causality. All method ports retain their explicit fidelity caveats.
 
-Historical project overview follows; its80 best-reference statements are superseded.
+## Implementation and evidence
 
-# Execution-calibrated visual planning with V-JEPA 2.1 (LeFlow fork)
+- [Controllers/training](flow_jepa/execution/), [baseline ports](flow_jepa/baselines/), [LeFlow TTT](flow_jepa/leflow_ttt/) and [configurations](config/).
+- [Exact new-method adaptations](docs/ADDITIONAL_BASELINES_20261012.md), [released baseline fidelity](docs/RELEASE_BASELINES.md) and [all measured results](docs/RESULTS_INDEX.md).
+- [Chronological progress](docs/PROGRESS.md), [historical sampler repairs](docs/REPAIR_RESULTS.md) and [earlier different-world campaign](docs/REPAIRED_VALIDATION_RESULTS.md).
 
-**New baseline implementations (not yet trained/evaluated):** vanilla action-flow BC,
-fixed-world action-flow search, SAGE-inspired subgoal planning, adapted Diffusion
-Policy and Feedback-WM. See [run protocol, code, and preflight instructions](docs/ADDITIONAL_BASELINES_20261012.md).
-Their results are **not** part of the completed sixteen-method ledger below.
-
-
-**Current status, October 12, 2026:** all sixteen registered shared-world
-comparisons are complete. The latest LaCT-inspired nonlinear episodic memory
-run scores **73 / 66 / 67 / 72 out of 104**, selecting 73 at 5k updates. It does
-not improve on the retained **80/104 (76.92%)** retrieval-repair or
-execution-revision references. No training run is active.
-
-Start with the [complete experiment index](docs/RESULTS_INDEX.md), which links
-all methods, training curves, baseline comparisons, implementation sources,
-negative results, failure analyses and earlier campaigns. The
-[machine-readable ledger](docs/results-ledger.json) preserves 16 current
-comparisons and 61 complete development evaluations with artifact hashes.
-
-The [paper blueprint](docs/PAPER_BLUEPRINT.md) states the central thesis, exact
-formulation, contribution/evidence boundaries, related-work positioning, paper
-outline and figure designs, and the missing experiments for stronger claims.
-
-| Reference | Best development success | Scope |
-| --- | ---: | --- |
-| Retrieval-conditioned bounded flow repair | **80/104** | Action flow, bounded residual repairs, linear episodic correction |
-| Execution-revision controller | **80/104** | GMM proposer; no flow/diffusion generator |
-| Latest nonlinear episodic flow repair | **73/104** | LaCT-inspired memory trained through factual prefix updates |
-| LeFlow release-module/spatial port | 21/104 | Released core modules with documented shared-world adaptation |
-| HWM paper port | 5/104 | Robotics implementation unavailable; time-limited paper port |
-| Released CEM | 24/104 | Released solver on the shared frozen world |
-
-## Research direction and observed behavior
-
-The research direction is **execution-calibrated bounded flow repair**: use
-observed action-prefix outcomes to correct predicted costs, condition action
-generation and bounded repairs, and retain the incumbent during search.
-Whether the correction mechanism improves physical decisions and provides useful
-inference scaling remains unestablished. This is a V-JEPA 2.1 / MetaWorld study;
-the current method uses no BTM and is not an unchanged published LeFlow model.
-
-- [Retrieval-repair](docs/RETRIEVAL_REPAIR_TTT_RESULTS.md) reaches 80/104 but
-  does not exceed the preserved GMM reference. Their selected checkpoints have
-  different case-level successes and failures.
-- [Nonlinear memory](docs/NONLINEAR_REPAIR_TTT_RESULTS.md) improves aggregate
-  next-prefix prediction error while task success remains below 80. Assembly
-  and pick-place remain 0/8 throughout; reach falls from 8/8 to 4/8. The learned
-  empty-history prior worsens prediction error relative to the raw world.
-- [Goal-progress supervision](docs/PROGRESS_OBJECTIVE_TTT_RESULTS.md),
-  [Bayesian repair acceptance](docs/BAYESIAN_REPAIR_TTT_RESULTS.md), and
-  [shifted-plan training](docs/SHIFTED_REPAIR_TTT_RESULTS.md) select 78, 77,
-  and 79 respectively. These negative results are retained.
-- Lower action losses, smaller repair targets and shrinking proposal spread do
-  not establish better execution. Route provenance and sparse trajectory images
-  support diagnostics, not causal claims about rejected actions or contact forces.
-- [Released baseline findings](docs/RELEASE_BASELINE_RESULTS.md) distinguish
-  implementation provenance, continuing loss improvement, and severe controller
-  time limits for HWM/CEM from unrestricted method capability.
-
-## Data, budget and claim limits
-
-Policy training uses **6,222 successful expert episodes**, frozen cached
-V-JEPA 2.1 features and a shared frozen spatial world, seed 3072 and global batch
-64. Each trained policy stops at 20,000 updates or eight optimizer GPU-hours;
-consumed compute differs. Four fixed **104-case development evaluations** cover
-13 tasks under 200 primitive actions and ten cumulative controller seconds.
-[The protocol audit](docs/RELEASE_BASELINES.md) documents baseline adaptations.
-
-These are repeatedly used development cases with one training seed. Best-checkpoint
-selection is not independent testing; convergence of all baselines is not
-established. The reserved 3,200-case final evaluation remains unused by the current
-comparison. No native-benchmark SOTA, general superiority, component causality or
-inference-scaling result is claimed.
-
-## Implementations and reproducibility
-
-- [Current controllers and training](flow_jepa/execution/),
-  [baseline ports and pinned upstream provenance](flow_jepa/baselines/),
-  [direct LeFlow TTT](flow_jepa/leflow_ttt/), and [experiment configurations](config/).
-- [Latest complete results, behavior and visual evidence](docs/NONLINEAR_REPAIR_TTT_RESULTS.md).
-- [All experiments, source mapping and failure findings](docs/RESULTS_INDEX.md).
-- [Chronological decisions, repairs and runtime history](docs/PROGRESS.md).
-- [Historical sampler repairs](docs/REPAIR_RESULTS.md) and
-  [different-world experiments](docs/REPAIRED_VALIDATION_RESULTS.md).
-
-Full training metrics, evaluation records, compute accounting, selected trajectory
-contact sheets, source identities and checkpoint paths/hashes are preserved in
-[the evidence archive](docs/reports/). Model binaries and raw datasets remain on
-the server; they are not stored in Git. Run
-`python3 scripts/analysis/verify_result_publications.py` to verify the current
-ledger and paired development-case identities without running models or opening
-final-test outcomes. Every completed run must be published to `origin/main`,
-including unsuccessful experiments.
+Full periodic metrics, physical case records, compute, measured selected-trajectory contact sheets, source identities and checkpoint hashes remain in [the report archive](docs/reports/). Raw datasets and large checkpoints remain on the server. Run `python3 scripts/analysis/verify_result_publications.py` to check the ledger and shared case identities without running models or opening final tests. Completed runs and their negative findings must be pushed to `origin/main`.
 
 Original LeFlow release documentation and attribution follow.
 
 ---
-
 # LeFlow: Latent Path Flow Planning for LeWorldModel
 
 LeFlow adds a learned goal-conditioned planner on top of a frozen

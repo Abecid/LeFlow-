@@ -1,3 +1,20 @@
+# October 12: all five new baseline runs completed
+
+Vanilla flow 77/84/89/98 selects 98; world search 74/79/84/78 selects 84;
+SAGE 62/77/77/75 selects 77; diffusion 43/69/70/74 selects 74;
+Feedback-WM 42/65/75/76 selects 76 with 28 selected controller timeouts.
+All policies reach 20k updates under the original ceilings. All five frozen
+source/data/bank/checkpoint CPU audits pass, W&B reports finished, the persistent
+queue has five zero return codes, and no owned training process remains.
+Full periodic metrics, all 20 evaluations, paired outcomes, actual compute and
+selected-case CSV matrices are preserved. The retained proposed 80 method is below
+the vanilla BC 98 control; paper framing and current overviews reflect that.
+No extra seed, baseline rerun, ablation, budget extension or final test was launched.
+The ledger contains 21 completed comparisons /81 reports and no active entries.
+Final verification and publication are part of completing this authorized batch.
+
+Earlier chronological progress follows.
+
 # October 12: world search 84 and Feedback-WM 76 completed
 
 Four additional methods now have completed 20k training, all four fixed evaluations,

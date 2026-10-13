@@ -1,0 +1,83 @@
+{
+  "reviewed_utc": "2026-10-13T04:49:38.891286+00:00",
+  "every_exported_image_visually_inspected": true,
+  "rendered_count": 10,
+  "scope": "All ten original saved selected-checkpoint cases, not a representative sample of all 104 cases.",
+  "checks": [
+    "Readable complete labels",
+    "All five measured frames and goal visible",
+    "No clipping, overlap or missing glyphs"
+  ],
+  "images": [
+    {
+      "case": "validation/assembly/00000",
+      "file": "assembly-00000.png",
+      "sha256": "fdf1116824b12aed7e146b78eac8d034c6d7a9f05e1295c4fcf725ae5bfa9e19",
+      "visual_checks_passed": true,
+      "observation": "Header, all measured frames/action indices and actual expert goal are readable. The simulator record supplies the success label; images do not establish contact-force or causal failure explanations."
+    },
+    {
+      "case": "validation/coffee-button/00000",
+      "file": "coffee-button-00000.png",
+      "sha256": "6c94838f268c9a54ee2d390c02b866a0f83f0560db6ad24420b4c6e01bb840de",
+      "visual_checks_passed": true,
+      "observation": "Header, all measured frames/action indices and actual expert goal are readable. The simulator record supplies the success label; images do not establish contact-force or causal failure explanations."
+    },
+    {
+      "case": "validation/dial-turn/00000",
+      "file": "dial-turn-00000.png",
+      "sha256": "127eaa0bf9be5815d12001b2246c2a6f00a796decf0e6240d49a3a1776cea10f",
+      "visual_checks_passed": true,
+      "observation": "Header, all measured frames/action indices and actual expert goal are readable. The simulator record supplies the success label; images do not establish contact-force or causal failure explanations."
+    },
+    {
+      "case": "validation/door-close/00000",
+      "file": "door-close-00000.png",
+      "sha256": "b808b6ce7e13a19098bbdbbd40549370f1e155db017c9331baa81b7390a8f817",
+      "visual_checks_passed": true,
+      "observation": "Header, all measured frames/action indices and actual expert goal are readable. The simulator record supplies the success label; images do not establish contact-force or causal failure explanations."
+    },
+    {
+      "case": "validation/drawer-close/00004",
+      "file": "drawer-close-00004.png",
+      "sha256": "e02587e4a99a36190664014fb02d5a9b67b9aa716624216a9d0ec8db171ac3e1",
+      "visual_checks_passed": true,
+      "observation": "Header, all measured frames/action indices and actual expert goal are readable. The simulator record supplies the success label; images do not establish contact-force or causal failure explanations."
+    },
+    {
+      "case": "validation/faucet-open/00003",
+      "file": "faucet-open-00003.png",
+      "sha256": "2ef0c92a7b09132c3962373a781baad21213de5e57cba000a361fd82659ced28",
+      "visual_checks_passed": true,
+      "observation": "Header, all measured frames/action indices and actual expert goal are readable. The simulator record supplies the success label; images do not establish contact-force or causal failure explanations."
+    },
+    {
+      "case": "validation/handle-press/00000",
+      "file": "handle-press-00000.png",
+      "sha256": "d8b90646a23853389a5ce5685fe72e8438eb3aaa747c4646612a9e5d3b399c64",
+      "visual_checks_passed": true,
+      "observation": "Header, all measured frames/action indices and actual expert goal are readable. The simulator record supplies the success label; images do not establish contact-force or causal failure explanations."
+    },
+    {
+      "case": "validation/pick-place/00000",
+      "file": "pick-place-00000.png",
+      "sha256": "02c05cb7a9f3bed2a3d858ee3b28b75ee511b2f1cbc7be58276ace71da671fb8",
+      "visual_checks_passed": true,
+      "observation": "Header, all measured frames/action indices and actual expert goal are readable. The simulator record supplies the success label; images do not establish contact-force or causal failure explanations."
+    },
+    {
+      "case": "validation/reach/00003",
+      "file": "reach-00003.png",
+      "sha256": "7baf2b0e803f66f8043368bbac362d298318aee938b3ee9f7fd3e3a10349af6b",
+      "visual_checks_passed": true,
+      "observation": "Header, all measured frames/action indices and actual expert goal are readable. The simulator record supplies the success label; images do not establish contact-force or causal failure explanations."
+    },
+    {
+      "case": "validation/reach/00005",
+      "file": "reach-00005.png",
+      "sha256": "db616ff60eaaa553df4238e8f1a6a4a0beaa7a6644197ffd69b7c3b3ee991d10",
+      "visual_checks_passed": true,
+      "observation": "Header, all measured frames/action indices and actual expert goal are readable. The simulator record supplies the success label; images do not establish contact-force or causal failure explanations."
+    }
+  ]
+}

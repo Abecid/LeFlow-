@@ -1,0 +1,115 @@
+{
+  "checked_utc": "2026-10-13T04:52:21.944701+00:00",
+  "methods": {
+    "vanilla_action_flow": {
+      "coordinator_absent": true,
+      "wandb_state": "finished",
+      "wandb_url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/j1m6jzog",
+      "online_step": 20000,
+      "final_checkpoint_successes": 98,
+      "selected_step": 20000,
+      "selected_successes": 98,
+      "completed_status": "completed_validation_ready_for_analysis",
+      "audit_passed": true
+    },
+    "action_flow_search": {
+      "coordinator_absent": true,
+      "wandb_state": "finished",
+      "wandb_url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/ms76k64y",
+      "online_step": 20000,
+      "final_checkpoint_successes": 78,
+      "selected_step": 15000,
+      "selected_successes": 84,
+      "completed_status": "completed_validation_ready_for_analysis",
+      "audit_passed": true
+    },
+    "sage_port": {
+      "coordinator_absent": true,
+      "wandb_state": "finished",
+      "wandb_url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/kfv02fj4",
+      "online_step": 20000,
+      "final_checkpoint_successes": 75,
+      "selected_step": 10000,
+      "selected_successes": 77,
+      "completed_status": "completed_validation_ready_for_analysis",
+      "audit_passed": true
+    },
+    "diffusion_policy_port": {
+      "coordinator_absent": true,
+      "wandb_state": "finished",
+      "wandb_url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/cnlxvbpf",
+      "online_step": 20000,
+      "final_checkpoint_successes": 74,
+      "selected_step": 20000,
+      "selected_successes": 74,
+      "completed_status": "completed_validation_ready_for_analysis",
+      "audit_passed": true
+    },
+    "feedback_wm_port": {
+      "coordinator_absent": true,
+      "wandb_state": "finished",
+      "wandb_url": "https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/rc8s6gp6",
+      "online_step": 20000,
+      "final_checkpoint_successes": 76,
+      "selected_step": 20000,
+      "selected_successes": 76,
+      "completed_status": "completed_validation_ready_for_analysis",
+      "audit_passed": true
+    }
+  },
+  "final_tests_read": false,
+  "optimizer_updates": 0,
+  "model_calls": 0,
+  "simulator_calls": 0,
+  "queue_complete": {
+    "source": "0a19c7c67d791fd99376216399b03e8cb71d78c0",
+    "completed_utc": "2026-10-13T04:50:37.039966+00:00",
+    "all_five_succeeded": true,
+    "seconds": 6985.580047443509,
+    "lanes": {
+      "A": {
+        "state": "completed",
+        "completed": [
+          {
+            "method": "vanilla_action_flow",
+            "returncode": 0,
+            "ended_utc": "2026-10-13T03:30:30.108995+00:00"
+          },
+          {
+            "method": "action_flow_search",
+            "returncode": 0,
+            "ended_utc": "2026-10-13T04:09:50.483908+00:00"
+          },
+          {
+            "method": "sage_port",
+            "returncode": 0,
+            "ended_utc": "2026-10-13T04:50:37.027713+00:00"
+          }
+        ],
+        "remaining": []
+      },
+      "B": {
+        "state": "completed",
+        "completed": [
+          {
+            "method": "diffusion_policy_port",
+            "returncode": 0,
+            "ended_utc": "2026-10-13T03:39:33.260277+00:00"
+          },
+          {
+            "method": "feedback_wm_port",
+            "returncode": 0,
+            "ended_utc": "2026-10-13T04:25:11.756350+00:00"
+          }
+        ],
+        "remaining": []
+      }
+    }
+  },
+  "owned_training_processes": [],
+  "gpu_status_csv": "0, 0 %, 0 MiB\n1, 0 %, 0 MiB\n2, 0 %, 0 MiB\n3, 0 %, 0 MiB\n4, 0 %, 0 MiB\n5, 0 %, 0 MiB\n6, 0 %, 0 MiB\n7, 0 %, 0 MiB\n",
+  "storage_free_bytes": {
+    "/tmp": 1979210555392,
+    "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines": 290212655104
+  }
+}

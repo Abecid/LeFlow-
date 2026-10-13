@@ -1,3 +1,19 @@
+# October 12: five additional comparisons completed; launches held
+
+All five authorized methods have completed 20k updates and four fixed evaluations.
+The completed curves/selects are vanilla 77/84/89/98 ->98; search 74/79/84/78 ->84;
+SAGE 62/77/77/75 ->77; diffusion 43/69/70/74 ->74; feedback 42/65/75/76 ->76.
+All source/data/checkpoint audits, finished online states and queue/process exit
+checks pass. Preserve the frozen 0a19c7c execution trees, all metrics/evaluations
+and checkpoints. Do not restart completed coordinators or run extra seeds,
+variants, ablations, old baseline retraining or sealed tests without new explicit
+authorization. The strongest measured controller is plain vanilla flow 98; the
+proposed retrieval-repair80 does not beat it. Read the final batch report and
+ledger (21 completed comparisons, 81 reports, zero active) before any future work.
+The monitor should stay quiet when there is no new authorized active run.
+
+Earlier authorization/status is historical where superseded.
+
 # October 12: five new baseline training/evaluation runs authorized
 
 The user explicitly requested actual training and evaluation of all five newly

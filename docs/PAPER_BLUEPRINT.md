@@ -1,3 +1,20 @@
+# Completed baseline batch: the paper must confront vanilla flow 98
+
+All five additional methods are now complete and audited. Vanilla action-flow
+BC scores 98/104 versus world search 84, diffusion74 and feedback76; the SAGE port
+scores 77/104. Our retained proposed repair method remains80. The
+[full report](ADDITIONAL_BASELINE_RUNS_20261012.md) preserves exact curves and limits.
+The intended thesis—execution-calibrated bounded flow repair—remains a research
+question, with implementation and negative results. Current evidence does not
+support claiming that our TTT/reasoning/repair improves the strongest controller.
+The plain BC baseline cannot be relabeled as our novel mechanism. Future authorized
+work should establish a useful correction of a strong action-flow incumbent and
+measure real success per controller allowance; additional complexity alone is
+not a contribution. No new experiment is authorized by this blueprint.
+
+Historical formulation/design notes follow; their strongest-reference framing
+is superseded by the measured baseline comparison.
+
 # New baseline evidence supersedes the80 strongest-reference premise
 
 October12: vanilla conditional action flow completes77/84/89/98, selecting98/104

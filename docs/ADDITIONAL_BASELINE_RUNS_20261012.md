@@ -1,127 +1,73 @@
-# Four new baseline comparisons complete; SAGE continues
+# Five baseline training and evaluation runs completed
 
-All four runs completed 20,000 fresh updates and four fixed 104-case development
-evaluations. Source/data/checkpoint audits pass and W&B reports each run finished.
+All five fresh seed-3072 runs completed **20,000 updates and four fixed 104-case development evaluations each**. They used two disjoint four-GPU lanes on the eight available A800 80GB GPUs. Preserved LeFlow/GMM/retrieval references were reused.
 
-| Method | Success at 5k /10k /15k /20k | Selected /104 | Selected timeouts |
-| --- | --- | ---: | ---: |
-| [Vanilla action flow](VANILLA_ACTION_FLOW_RESULTS.md) | 77 /84 /89 /98 | **98** | 0 |
-| [Action flow + world search](ACTION_FLOW_SEARCH_RESULTS.md) | 74 /79 /84 /78 | 84 | 0 |
-| [Diffusion Policy port](DIFFUSION_POLICY_PORT_RESULTS.md) | 43 /69 /70 /74 | 74 | 0 |
-| [Feedback-WM-inspired port](FEEDBACK_WM_PORT_RESULTS.md) | 42 /65 /75 /76 | 76 | 28 |
+| Method | 5k /10k /15k /20k successes | Selected /104 | Selected update | Timeouts |
+| --- | --- | ---: | ---: | ---: |
+| [Vanilla action flow](VANILLA_ACTION_FLOW_RESULTS.md) | 77 / 84 / 89 / 98 | **98** | 20,000 | 0 |
+| [Action flow + world search](ACTION_FLOW_SEARCH_RESULTS.md) | 74 / 79 / 84 / 78 | **84** | 15,000 | 0 |
+| [SAGE-inspired port](SAGE_PORT_RESULTS.md) | 62 / 77 / 77 / 75 | **77** | 10,000 | 0 |
+| [Diffusion Policy port](DIFFUSION_POLICY_PORT_RESULTS.md) | 43 / 69 / 70 / 74 | **74** | 20,000 | 0 |
+| [Feedback-WM-inspired port](FEEDBACK_WM_PORT_RESULTS.md) | 42 / 65 / 75 / 76 | **76** | 20,000 | 28 |
 
-SAGE continues on physical GPUs 0–3. Both GPU lanes used all eight A800s while
-two methods overlapped; the other lane has now completed. Preserved references
-were reused. No extra seed, ablation, final test or budget extension was launched.
-The retained proposed retrieval-repair method scores 80, below vanilla flow 98.
-These are development selections from one seed, not independent SOTA evidence.
+**The plain action-flow baseline is the strongest measured controller at 98/104. Our retained proposed retrieval-repair method remains 80/104 and does not outperform it.** The new world-search controller selects 84; its local-goal/retrieval interface differs from vanilla flow, so this does not isolate a single cause. Do not relabel the vanilla BC control as a novel reasoning/TTT method.
 
-Twenty selected-checkpoint contact sheets from the first two runs were individually
-visually inspected. The stored Diffusion Policy pick-place example moves the hand
-toward the goal while leaving the object behind; its assembly example stalls near
-the initial object location. These are observations from saved cases, not inferred
-causes or invented trajectories. All full metrics and paired outcomes are preserved.
+## Fixed experimental setup
 
-Historical progress snapshots follow.
+- Same 6,222 successful expert TRAIN episodes, frozen V-JEPA 2.1 ViT-L features and shared spatial world, seed 3072 and global batch 64.
+- Same ceiling: 20k optimizer updates OR 28,800 aggregate optimizer GPU-seconds per policy. All five stopped at the update ceiling, with zero cap overrun.
+- Same 104 development cases: 13 tasks × eight resets, evaluated at 5k/10k/15k/20k; earliest ties select checkpoints.
+- Same 200 primitive actions AND 10 cumulative controller seconds per case, including image encoding and planning.
+- The reserved 3,200-case final benchmark remains sealed. No extra seed, ablation, prior-baseline retraining or budget extension was run.
 
-# First two complete: vanilla98, Diffusion Policy74; next GPU wave running
+Policies are small (about 2.5–5.0M parameters) and train on cached frozen features, which explains the short optimizer time. There are 1,280,000 sampled windows per policy across 20k global-64 updates; sampling is with replacement, so there is no conventional epoch count. Equal ceilings are not equal consumed GPU time, architecture, world calls or convergence. Vanilla and diffusion success are still rising at the last checkpoint; convergence is not established.
 
-The completed curves are77/84/89/98 and43/69/70/74, selecting20k98 and74 out of104.
-All eight evaluations have zero timeouts. Both source/data/bank/case/checkpoint
-CPU audits pass. Preserved GMM80/retrieval80 references have not been retrained.
-Vanilla98 is the strongest measured development controller, though one seed and
-reused development selection do not establish independent superiority.
+## Observed failures and interpretation
 
-Fixed-world action search is training on GPUs0–3; Feedback-WM is training on4–7;
-SAGE remains next in laneA. At the04:00UTC readback, search scores74/79 at5k/10k
-with zero timeouts; Feedback-WM scores42 at5k with62 timeouts. All original
-budgets and tests remain unchanged. Each method has its own frozen checkout,
-optimizer, full periodic metrics and actual physical evaluation records.
+Vanilla has six action-limit failures: four pick-place and two reach cases, with zero timeouts. World search has 20 action-limit failures and regresses from 84 at 15k to 78 at 20k. Diffusion Policy has 30 action-limit failures, including all eight pick-place cases. Feedback-WM has 28 failures, all exhausting controller time at 166–198 actions; it also remains 0/8 on pick-place. Faster guidance could recover controller allowance, but these logs cannot tell whether more actions would succeed.
 
-[Vanilla result and failures](VANILLA_ACTION_FLOW_RESULTS.md) ·
-[Diffusion result and failures](DIFFUSION_POLICY_PORT_RESULTS.md).
+SAGE selects 77/104 with 27 action-limit failures and zero timeouts. Selected per-task counts and all factual case failures appear below and in its report.
 
-Historical launch/iteration snapshots follow.
+The independent diffusion and feedback training checkpoints are close but not bit-identical at any saved milestone (maximum absolute 20k weight difference 0.00053736). Feedback wins five cases and loses three against diffusion; 76 versus 74 is not a feedback-only causal ablation. SAGE and Feedback-WM are paper-inspired ports; Diffusion Policy is an image-goal/V-JEPA adaptation. Exact upstream differences remain in the [method specification](ADDITIONAL_BASELINES_20261012.md).
 
-# First two curves: vanilla flow77/84, Diffusion Policy43/69
+One seed and repeatedly reused development checkpoint selection do not establish native-benchmark SOTA or independent generalization. The simpler baseline changes the target the proposed mechanism must improve. This batch is a completed comparison, not authorization for another run.
 
-At the latest preserved readback, vanilla conditional action flow has completed
-5k/10k evaluations scoring77/84 out of104; Diffusion Policy scores43/69. All
-four evaluations have zero timeouts. Training continues under the original
-finite budgets. The vanilla10k score exceeds the preserved80 development
-reference by four cases; this is an interim single-seed development result,
-not independent proof of superiority. The simple baseline changes which
-comparator our proposed mechanism needs to beat. All paired case identities
-and outcomes are preserved in the per-method analysis files.
+## Selected per-task success /8
 
-Historical launch snapshots follow.
+| Task | Vanilla flow | World search | SAGE port | Diffusion port | Feedback port |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| assembly | 8 | 5 | 0 | 1 | 2 |
+| button-press-topdown | 8 | 8 | 8 | 7 | 8 |
+| coffee-button | 8 | 8 | 8 | 8 | 8 |
+| dial-turn | 8 | 8 | 1 | 2 | 3 |
+| door-close | 8 | 8 | 8 | 8 | 8 |
+| door-open | 8 | 6 | 8 | 8 | 7 |
+| drawer-close | 8 | 8 | 8 | 6 | 6 |
+| drawer-open | 8 | 8 | 7 | 8 | 8 |
+| faucet-open | 8 | 6 | 8 | 7 | 7 |
+| handle-press | 8 | 8 | 8 | 8 | 8 |
+| pick-place | 4 | 1 | 0 | 0 | 0 |
+| plate-slide | 8 | 8 | 8 | 8 | 8 |
+| reach | 6 | 2 | 5 | 3 | 3 |
 
-# Five authorized additional baseline runs — October 12, 2026
+## Actual resource consumption
 
-The user requested training and evaluation of all five implemented methods.
-These are fresh, single-seed comparisons; preserved GMM80, retrieval80 and
-LeFlow21 references are reused. No prior baseline is retrained.
+| Method | Optimization GPUh | Evaluation GPUh | Train + eval wall minutes | Mean selected decision ms |
+| --- | ---: | ---: | ---: | ---: |
+| Vanilla action flow | 0.613096 | 1.475266 | 31.79 | 55.83 |
+| Action flow + world search | 0.601418 | 1.836139 | 37.01 | 91.62 |
+| SAGE-inspired port | 0.714042 | 1.807850 | 38.38 | 75.02 |
+| Diffusion Policy port | 0.592600 | 2.238335 | 42.87 | 81.37 |
+| Feedback-WM-inspired port | 0.581692 | 2.275778 | 43.29 | 107.17 |
 
-| Method | Queue lane / physical GPUs | State |
-| --- | --- | --- |
-| Vanilla conditional action flow | A: 0–3, first | Training verified;5k evaluation pending |
-| Action flow + fixed world search | A: 0–3, second | Queued; source and CPU tests verified |
-| SAGE-inspired MetaWorld port | A: 0–3, third | Queued; source and CPU tests verified |
-| Diffusion Policy port | B: 4–7, first | Training verified;5k evaluation pending |
-| Feedback World Model-inspired port | B: 4–7, second | Queued; source and CPU tests verified |
+Total measured optimization, evaluation, GPU preflight and no-update DDP checks for this batch: **12.774646841 GPUh**. CPU route-bank adoption, audit time and idle allocation are not GPU optimization charges. This is component accounting, not a complete server bill. The common world/encoder was reused rather than trained five times. The two-lane queue completed in about 116.43 wall minutes, including launch/preflight work.
 
-All eight A800 80GiB GPUs were verified idle before allocation. Scratch has about
-1.9TiB free; persistent storage has about305GiB free. Frozen execution source is
-`0a19c7c67d791fd99376216399b03e8cb71d78c0` with214 checked runtime files.
-Each method has its own frozen checkout, optimizer/checkpoints, W&B identity,
-full periodic training metrics and physical evaluation records. Two four-GPU
-lanes overlap independent runs; within each lane runs are sequential.
+## Verification and preserved evidence
 
-Every run uses the same6222 successful expert TRAIN episodes, original frozen
-V-JEPA encoder/shared world, seed3072, global64, 20k updates OR28800 aggregate
-optimizer GPU-seconds, fixed104 development cases at5k/10k/15k/20k, and200 actions/
-10 cumulative controller seconds. Actual consumed compute is reported separately.
-Final tests remain disabled. SAGE/FWM are explicitly labeled adaptations.
+All five CPU audits verify the 214 frozen runtime files, source/config/manifest identities, 6,222 TRAIN route IDs, unchanged bank tensors/world hash, finite checkpoint weights, every saved milestone and selected checkpoint. All four-rank preflight gradient checks pass. All five coordinators exited successfully and all five W&B runs report finished. The persistent queue completed with five zero return codes.
 
-Before optimization, the real GPU preflight checks exact consumed TRAIN fields
-against the established sampler and exercises Feedback-WM with a factual TRAIN
-prefix. All five datasets omit unused execution-history tensors without changing
-sampled states/actions. The no-update four-rank check verifies finite, exactly
-synchronized policy gradients and no gradients/changes in the frozen world.
-The dispatcher also handles a final development checkpoint if a new baseline
-reaches its optimizer cap between scheduled milestones.
+Full periodic metrics, all 20 physical evaluation reports, per-task/paired analyses, process/online identities, checkpoint paths/hashes and actual compute records are preserved in the [batch archive](reports/20261012-additional-baselines/), [selected table](reports/20261012-additional-baselines/selected-results.csv), and [per-case matrix](reports/20261012-additional-baselines/selected-per-case.csv). Large model/data binaries stay on the authorized server.
 
-[Method specifications and upstream differences](ADDITIONAL_BASELINES_20261012.md)
-remain authoritative. The search control has480 world transitions per decision,
-versus320 for retrieval repair; this is a common-time comparison, not equal world
-calls or a pure no-workspace ablation. Diffusion/FWM share the same architecture
-and DDPM objective but are registered here as separate fresh runs; checkpoint
-identity will be examined before interpreting the guidance comparison.
+Fifty contact sheets from the original saved selected-checkpoint trajectories across all five methods were individually visually inspected. They show measured frames and an actual expert goal, with primitive action indices. The saved diffusion pick-place example moves the hand while the object remains behind; its assembly example stays near the starting object location. These observations do not establish a physical cause and are not a representative sample of all cases. Their source trajectory hashes and per-image visual checks are preserved.
 
-Server batch record: `/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines`.
-Queue execution, source hashes, preflight/DDP reports, process identities and W&B
-links will be added after launch verification. All results and failure findings
-must be published to origin/main as each run completes. Registration alone is
-not evidence of successful training or completed evaluation.
-
-## Verified first two launches
-
-At the03:00UTC snapshot (October12 20:00Pacific), vanilla flow and Diffusion Policy
-have both reached5,000 updates, with finite metrics and their first evaluation
-in progress. Their exact consumed TRAIN fields match eight original examples.
-All four ranks have synchronized finite gradients, no unused policy parameters,
-unchanged preflight weights and no world gradients. Measured full-controller
-preflight means are51.66ms and76.39ms respectively. The other three methods
-remain in the persistent queue; their GPU preflight results are not yet claimed.
-
-- [Vanilla flow live metrics](https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/j1m6jzog).
-- [Diffusion Policy live metrics](https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/cnlxvbpf).
-- [Source-verified snapshot](reports/20261012-additional-baselines/live-snapshot.json).
-- [Exact launch/preflight/DDP and metric archive](reports/20261012-additional-baselines/).
-
-All13 CPU tests passed in the established runtime. First5k optimization consumption
-is0.15778/0.15836GPUh; the8GPUh ceilings remain unchanged. Updated snapshots are
-sequential readbacks rather than an atomic global training checkpoint. At the
-training readback all eight GPUs had owned workers; disjoint device groups avoid
-sharing the physical GPU used for per-case controller timing. No task-success
-result is inferred from falling training loss.
+Execution source: `0a19c7c67d791fd99376216399b03e8cb71d78c0`. Server batch: `/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines`. The [ledger](results-ledger.json) and [publication verifier](../scripts/analysis/verify_result_publications.py) cover all 21 retained current comparisons and 81 complete evaluation reports.

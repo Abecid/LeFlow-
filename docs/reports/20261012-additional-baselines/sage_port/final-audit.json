@@ -1,0 +1,109 @@
+{
+  "case_identities_match": true,
+  "checkpoints": {
+    "10000": {
+      "path": "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/sage_port/campaign/runs/sage_port_3072/checkpoints/step_0010000.pt",
+      "sha256": "c0dc2a6b49a0d71eb494741a3c5072bfe5a1167ae2de960b9f47a7230f9ebe19",
+      "step": 10000
+    },
+    "15000": {
+      "path": "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/sage_port/campaign/runs/sage_port_3072/checkpoints/step_0015000.pt",
+      "sha256": "fcf75e9051c72af4cdc7f07a2d296e159c9a0a1490f82888214f5389f6ca5945",
+      "step": 15000
+    },
+    "20000": {
+      "path": "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/sage_port/campaign/runs/sage_port_3072/checkpoints/step_0020000.pt",
+      "sha256": "506ba90f29bfb2764cab7333fffb4b95710f6bb76129c96aa4300d0c70da2ec9",
+      "step": 20000
+    },
+    "5000": {
+      "path": "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/sage_port/campaign/runs/sage_port_3072/checkpoints/step_0005000.pt",
+      "sha256": "29a1e03dd27f5d35239f5ecb686d5ed060e52132c3af446e1b1560659e83851c",
+      "step": 5000
+    },
+    "best": {
+      "path": "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/sage_port/campaign/runs/sage_port_3072/best.pt",
+      "sha256": "8e792a9214c26a3f5d59c1d4d9e011353f6691abe2daddd93aeb84af7953f2dc",
+      "step": 10000
+    },
+    "last": {
+      "path": "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/sage_port/campaign/runs/sage_port_3072/last.pt",
+      "sha256": "4f51995ce0faeb0f13aff582250519324cfab26b5c807128fc08c11fcd2c2fc8",
+      "step": 20000
+    }
+  },
+  "complete": {
+    "best": 0.7403846153846154,
+    "best_step": 10000,
+    "optimization_gpu_hours": 0.714041812999381,
+    "step": 20000,
+    "stop_reason": "update_limit",
+    "validation_gpu_hours": 1.8078497107492553,
+    "validation_steps": [
+      5000,
+      10000,
+      15000,
+      20000
+    ],
+    "wall_seconds": 2302.5576860699803
+  },
+  "curve": [
+    {
+      "sha256": "515737be93f2f5f1a331c54a604d768c6446d9e03495d9a8a8c25699ff82dc3e",
+      "step": 5000,
+      "successes": 62,
+      "timeouts": 0
+    },
+    {
+      "sha256": "d9f03fc6acde363d42621678ec22007ca218e76d6b35f6eb7e4bdbdd53e5c96f",
+      "step": 10000,
+      "successes": 77,
+      "timeouts": 0
+    },
+    {
+      "sha256": "b86cb1a9181d3f3d7ffa2dff77b0ec31ea4edc8905e3cb8a243e9e5bb6f542be",
+      "step": 15000,
+      "successes": 77,
+      "timeouts": 0
+    },
+    {
+      "sha256": "ccc097c44caf24cc22b2352eecdc75ede8e4b984b456364673d76518b15f22dd",
+      "step": 20000,
+      "successes": 75,
+      "timeouts": 0
+    }
+  ],
+  "final_tests_read": false,
+  "method": "sage_port",
+  "model_forward_calls": 0,
+  "optimizer_updates": 0,
+  "runtime_files_verified": 214,
+  "selected": {
+    "sha256": "d9f03fc6acde363d42621678ec22007ca218e76d6b35f6eb7e4bdbdd53e5c96f",
+    "step": 10000,
+    "successes": 77,
+    "timeouts": 0
+  },
+  "simulator_calls": 0,
+  "source": "0a19c7c67d791fd99376216399b03e8cb71d78c0",
+  "source_data_bank_checkpoint_audit_passed": true,
+  "train_episodes": 6222,
+  "usage": {
+    "global_batch": 64,
+    "gpu_count": 4,
+    "last_update_overrun_gpu_seconds": 0.0,
+    "optimization_cap_gpu_seconds": 28800,
+    "optimization_gpu_hours": 0.714041812999381,
+    "optimization_gpu_seconds": 2570.5505267977715,
+    "step": 20000,
+    "stop_check": "optimizer boundary; final-update overrun reported",
+    "validation_gpu_hours": 1.8078497107492553,
+    "validation_gpu_seconds": 6508.258958697319,
+    "validation_steps": [
+      5000,
+      10000,
+      15000,
+      20000
+    ]
+  }
+}

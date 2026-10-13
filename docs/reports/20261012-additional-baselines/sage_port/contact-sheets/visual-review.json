@@ -1,0 +1,83 @@
+{
+  "reviewed_utc": "2026-10-13T04:53:54.644335+00:00",
+  "every_exported_image_visually_inspected": true,
+  "rendered_count": 10,
+  "scope": "All ten pre-existing saved selected-checkpoint cases, not a representative sample of all 104.",
+  "checks": [
+    "Complete readable labels",
+    "Every measured frame and goal visible",
+    "No clipping, overlap or missing glyphs"
+  ],
+  "images": [
+    {
+      "case": "validation/assembly/00000",
+      "file": "assembly-00000.png",
+      "sha256": "8d91792e3d80b48e7008bc6a9ba6013b7f29deb3db284ba1357371b2e7038787",
+      "visual_checks_passed": true,
+      "observation": "Complete readable header, measured five-frame sequence/action indices and actual expert goal. Success uses the simulator record; physical causes cannot be inferred from sampled images."
+    },
+    {
+      "case": "validation/coffee-button/00000",
+      "file": "coffee-button-00000.png",
+      "sha256": "b664f761fe0c4b916b0003a270c4a3bdb33770a20fae094624b7fbc3ab11f33a",
+      "visual_checks_passed": true,
+      "observation": "Complete readable header, measured five-frame sequence/action indices and actual expert goal. Success uses the simulator record; physical causes cannot be inferred from sampled images."
+    },
+    {
+      "case": "validation/dial-turn/00000",
+      "file": "dial-turn-00000.png",
+      "sha256": "6113e4ac8f1e62a7cdb54a5f3be3655d8aa2f0773e487575492ffedea32514d7",
+      "visual_checks_passed": true,
+      "observation": "Complete readable header, measured five-frame sequence/action indices and actual expert goal. Success uses the simulator record; physical causes cannot be inferred from sampled images."
+    },
+    {
+      "case": "validation/door-close/00000",
+      "file": "door-close-00000.png",
+      "sha256": "00f88a0b211f15f0c1c14a3cd1bec491c3f68e86fd8b5b4a066f947c131b74ee",
+      "visual_checks_passed": true,
+      "observation": "Complete readable header, measured five-frame sequence/action indices and actual expert goal. Success uses the simulator record; physical causes cannot be inferred from sampled images."
+    },
+    {
+      "case": "validation/drawer-close/00004",
+      "file": "drawer-close-00004.png",
+      "sha256": "a50c533cbf5dbcfe76aeb762eca47c16c375db75f73c63bf98d56bcad984ee21",
+      "visual_checks_passed": true,
+      "observation": "Complete readable header, measured five-frame sequence/action indices and actual expert goal. Success uses the simulator record; physical causes cannot be inferred from sampled images."
+    },
+    {
+      "case": "validation/faucet-open/00003",
+      "file": "faucet-open-00003.png",
+      "sha256": "d2ff459142ef7b0f6c22c4e10f40cbebe93e28b4e7d41ea4c39af3d1ebe6a8b0",
+      "visual_checks_passed": true,
+      "observation": "Complete readable header, measured five-frame sequence/action indices and actual expert goal. Success uses the simulator record; physical causes cannot be inferred from sampled images."
+    },
+    {
+      "case": "validation/handle-press/00000",
+      "file": "handle-press-00000.png",
+      "sha256": "a433b47639ff70f3747086092377cc358d8b51c8595968e5055caffcd34fa338",
+      "visual_checks_passed": true,
+      "observation": "Complete readable header, measured five-frame sequence/action indices and actual expert goal. Success uses the simulator record; physical causes cannot be inferred from sampled images."
+    },
+    {
+      "case": "validation/pick-place/00000",
+      "file": "pick-place-00000.png",
+      "sha256": "0e0995bbf6f3e9af1c558ce6072630fe9e4d2511d5c99613f815e71381d2954c",
+      "visual_checks_passed": true,
+      "observation": "Complete readable header, measured five-frame sequence/action indices and actual expert goal. Success uses the simulator record; physical causes cannot be inferred from sampled images."
+    },
+    {
+      "case": "validation/reach/00003",
+      "file": "reach-00003.png",
+      "sha256": "57af1e0010651f1ee1620805bf924192601902d5ce6b27370c5872475b416c39",
+      "visual_checks_passed": true,
+      "observation": "Complete readable header, measured five-frame sequence/action indices and actual expert goal. Success uses the simulator record; physical causes cannot be inferred from sampled images."
+    },
+    {
+      "case": "validation/reach/00005",
+      "file": "reach-00005.png",
+      "sha256": "cd70c06f18e75b521b67e7224ad5dbac062ed19c560442a131abdac7b9546a18",
+      "visual_checks_passed": true,
+      "observation": "Complete readable header, measured five-frame sequence/action indices and actual expert goal. Success uses the simulator record; physical causes cannot be inferred from sampled images."
+    }
+  ]
+}

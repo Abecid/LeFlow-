@@ -1,116 +1,40 @@
-# Four new baseline comparisons complete; SAGE continues
+# Completed results and publication index
 
-All four runs completed 20,000 fresh updates and four fixed 104-case development
-evaluations. Source/data/checkpoint audits pass and W&B reports each run finished.
+**All 21 registered current comparisons are complete; no run remains active.** The latest five-method batch adds 20 physical development evaluations, giving 81 complete evaluation reports. Every trained policy has four fixed checkpoints. These are single-seed development selections; final tests remain sealed.
 
-| Method | Success at 5k /10k /15k /20k | Selected /104 | Selected timeouts |
+The [five-method report](ADDITIONAL_BASELINE_RUNS_20261012.md) contains the common setup, full new curves, per-task and paired comparisons, actual compute and failure findings. The [machine-readable ledger](results-ledger.json) records immutable source/run identities and artifact hashes.
+
+**Vanilla flow 98 is the strongest measured reference. Our proposed retrieval-repair 80 does not outperform it.** Do not identify the standard BC controller as a new reasoning/TTT method or claim scaling benefits from development scores alone.
+
+## All preserved comparisons
+
+| Method and full report | Success curve /104 | Selected | Optimization GPUh |
 | --- | --- | ---: | ---: |
-| [Vanilla action flow](VANILLA_ACTION_FLOW_RESULTS.md) | 77 /84 /89 /98 | **98** | 0 |
-| [Action flow + world search](ACTION_FLOW_SEARCH_RESULTS.md) | 74 /79 /84 /78 | 84 | 0 |
-| [Diffusion Policy port](DIFFUSION_POLICY_PORT_RESULTS.md) | 43 /69 /70 /74 | 74 | 0 |
-| [Feedback-WM-inspired port](FEEDBACK_WM_PORT_RESULTS.md) | 42 /65 /75 /76 | 76 | 28 |
+| [vanilla_action_flow](VANILLA_ACTION_FLOW_RESULTS.md) | 77 / 84 / 89 / 98 | 98 at 20,000 | 0.613 |
+| [action_flow_search](ACTION_FLOW_SEARCH_RESULTS.md) | 74 / 79 / 84 / 78 | 84 at 15,000 | 0.601 |
+| [execution_revision](EXECUTION_REVISION_RESULTS.md) | 80 / 78 / 79 / 76 | 80 at 5,000 | 3.233 |
+| [repair_flow_ttt](REPAIR_FLOW_TTT_RESULTS.md) | 80 / 73 / 75 / 75 | 80 at 5,000 | 1.620 |
+| [retrieval_repair_ttt](RETRIEVAL_REPAIR_TTT_RESULTS.md) | 75 / 77 / 79 / 80 | 80 at 20,000 | 1.749 |
+| [controller_grounded](CONTROLLER_GROUNDED_RESULTS.md) | 79 / 78 / 75 / 78 | 79 at 5,000 | 2.422 |
+| [flow_reasoning](FLOW_REASONING_RESULTS.md) | 79 / 75 / 76 / 76 | 79 at 5,000 | 3.166 |
+| [shifted_repair_ttt](SHIFTED_REPAIR_TTT_RESULTS.md) | 79 / 78 / 74 / 78 | 79 at 5,000 | 2.233 |
+| [progress_objective_ttt](PROGRESS_OBJECTIVE_TTT_RESULTS.md) | 72 / 72 / 78 / 77 | 78 at 15,000 | 4.585 |
+| [progress_ttt](PROGRESS_TTT_RESULTS.md) | 77 / 76 / 78 / 74 | 78 at 15,000 | 3.542 |
+| [bayesian_repair_ttt](BAYESIAN_REPAIR_TTT_RESULTS.md) | 71 / 76 / 77 / 77 | 77 at 15,000 | 4.148 |
+| [latent_revision](LATENT_REVISION_RESULTS.md) | 73 / 75 / 74 / 77 | 77 at 20,000 | 3.244 |
+| [sage_port](SAGE_PORT_RESULTS.md) | 62 / 77 / 77 / 75 | 77 at 10,000 | 0.714 |
+| [feedback_wm_port](FEEDBACK_WM_PORT_RESULTS.md) | 42 / 65 / 75 / 76 | 76 at 20,000 | 0.582 |
+| [guided_ttt](GUIDED_TTT_RESULTS.md) | 72 / 70 / 72 / 75 | 75 at 20,000 | 4.595 |
+| [diffusion_policy_port](DIFFUSION_POLICY_PORT_RESULTS.md) | 43 / 69 / 70 / 74 | 74 at 20,000 | 0.593 |
+| [nonlinear_repair_ttt](NONLINEAR_REPAIR_TTT_RESULTS.md) | 73 / 66 / 67 / 72 | 73 at 5,000 | 4.813 |
+| [leflow_ttt](LEFLOW_TTT_RESULTS.md) | 27 / 21 / 27 / 29 | 29 at 20,000 | 2.437 |
+| [cem_release](RELEASE_BASELINE_RESULTS.md) | 24 | 24 at 0 | 0.000 |
+| [leflow_release](RELEASE_BASELINE_RESULTS.md) | 14 / 21 / 19 / 14 | 21 at 10,000 | 0.852 |
+| [hwm_paper](RELEASE_BASELINE_RESULTS.md) | 2 / 3 / 5 / 5 | 5 at 15,000 | 2.077 |
 
-SAGE continues on physical GPUs 0–3. Both GPU lanes used all eight A800s while
-two methods overlapped; the other lane has now completed. Preserved references
-were reused. No extra seed, ablation, final test or budget extension was launched.
-The retained proposed retrieval-repair method scores 80, below vanilla flow 98.
-These are development selections from one seed, not independent SOTA evidence.
+Each learned run uses seed 3072, global batch 64, the same 6,222 successful expert TRAIN episodes and frozen shared representation/world, a 20k-update OR eight optimizer-GPUh ceiling, and the same 104-case development/controller limits. Equal caps are not equal consumed compute or convergence. CEM has no learned head. SAGE/Feedback-WM are inspired ports; Diffusion Policy and LeFlow have documented shared-backbone adaptation differences. Final success within 200 actions and ten cumulative controller seconds is the primary metric.
 
-Twenty selected-checkpoint contact sheets from the first two runs were individually
-visually inspected. The stored Diffusion Policy pick-place example moves the hand
-toward the goal while leaving the object behind; its assembly example stalls near
-the initial object location. These are observations from saved cases, not inferred
-causes or invented trajectories. All full metrics and paired outcomes are preserved.
-
-Historical progress snapshots follow.
-
-# Completed new controls: vanilla flow98 and Diffusion Policy74
-
-[Vanilla conditional action flow](VANILLA_ACTION_FLOW_RESULTS.md) completes
-77/84/89/98, selecting20k98/104; [Diffusion Policy port](DIFFUSION_POLICY_PORT_RESULTS.md)
-completes43/69/70/74, selecting20k74/104. All eight evaluations have zero timeouts.
-Both pass source/data/bank/case/checkpoint audits; no old baseline was retrained.
-The simple98 control exceeds the retained proposed80 method. All scores remain
-single-seed development selections. The active five-method batch continues with
-fixed-world search, Feedback-WM and SAGE. Current ledger:18 complete comparisons,
-69 complete evaluation reports, three active/queued methods.
-
-Earlier index snapshots follow and are historical where superseded.
-
-# Five additional baseline comparisons authorized and queued
-
-The new [five-method GPU batch](ADDITIONAL_BASELINE_RUNS_20261012.md) is registered
-under the user's latest explicit instruction. Its two four-GPU lanes use all eight
-available A800s, unchanged data/seed/batch/compute/development limits, and the
-published [method adaptations](ADDITIONAL_BASELINES_20261012.md). The sixteen
-completed comparisons below remain preserved; the five new runs have no reported
-success result yet. Completed runs require immediate full result publication.
-
-Earlier completed-comparison index follows.
-
-# Results and completion publication
-
-Updated October 12, 2026. Nonlinear episodic memory completes **73/66/67/72**,
-selecting **5k 73/104**, below the retained **80/104** references. All scores use
-the same 104 development cases and seed 3072; final tests remain sealed. Custom
-method ports, one seed, reused cases and matched ceilings do not establish
-native-benchmark SOTA, component causality or generalization.
-
-## Current iteration status
-
-[Nonlinear memory is complete](NONLINEAR_REPAIR_TTT_RESULTS.md). Its 800 periodic
-records, four complete evaluations, four controller timeouts and 40 inspected
-contact sheets are preserved with identity and compute records. The final CPU
-audit verifies source/runtime/data/bank/checkpoints and nonlinear memory accounting;
-all 44 owned processes exited and W&B mxujto8j finished. No run remains active.
-[Further launches are held for review](NONLINEAR_REPAIR_TTT_REVIEW.md); the user
-authorized this one candidate only. The monitor stays available for future explicitly
-authorized and registered work. Cumulative measured components: 118.74095081704824 GPUh,
-excluding the disclosed unmeasured preparation; this is not a full cluster bill.
-Complete evidence was live-remotely verified at `c2390264afa2164722f12b0f194b376da567069a`:
-618 artifact blobs and 61 reports. See the [publication receipt](reports/20261012-nonlinear-repair-ttt/publication-final-verification.json).
-
-## Preserved comparisons
-
-The four learned-model scores correspond to5k/10k/15k/20k total updates. CEM has
-no head training. All completed reports, full evaluation records, periodic
-training metrics and compute records remain in Git; checkpoints stay on the
-server with recorded paths/hashes. Highest development success selects the
-checkpoint, with earliest ties.
-
-| Method and findings | Success curve /104 | Selected | Optimization GPUh |
-| --- | --- | ---: | ---: |
-| [Nonlinear episodic repair](NONLINEAR_REPAIR_TTT_RESULTS.md) | 73 / 66 / 67 / 72 | 73 at5k | 4.813 |
-| [Bayesian posterior repair](BAYESIAN_REPAIR_TTT_RESULTS.md) | 71 / 76 / 77 / 77 | 77 at15k | 4.148 |
-| [Execution-calibrated goal progress](PROGRESS_OBJECTIVE_TTT_RESULTS.md) | 72 / 72 / 78 / 77 | 78 at15k | 4.585 |
-| [Shifted-plan repair](SHIFTED_REPAIR_TTT_RESULTS.md) | 79 / 78 / 74 / 78 | 79 at5k | 2.233 |
-| [Retrieval-conditioned repair](RETRIEVAL_REPAIR_TTT_RESULTS.md) | 75 / 77 / 79 / 80 | 80 at20k | 1.749 |
-| [Repair-flow TTT](REPAIR_FLOW_TTT_RESULTS.md) | 80 / 73 / 75 / 75 | 80 at5k | 1.620 |
-| [Guided action-flow TTT](GUIDED_TTT_RESULTS.md) | 72 / 70 / 72 / 75 | 75 at20k | 4.595 |
-| [Execution revision, GMM](EXECUTION_REVISION_RESULTS.md) | 80 / 78 / 79 / 76 | 80 at5k | 3.233 |
-| [Reasoning-conditioned action flow](FLOW_REASONING_RESULTS.md) | 79 / 75 / 76 / 76 | 79 at5k | 3.166 |
-| [Flow + episodic adaptation](PROGRESS_TTT_RESULTS.md) | 77 / 76 / 78 / 74 | 78 at15k | 3.542 |
-| [Controller-grounded planner](CONTROLLER_GROUNDED_RESULTS.md) | 79 / 78 / 75 / 78 | 79 at5k | 2.422 |
-| [Latent revision](LATENT_REVISION_RESULTS.md) | 73 / 75 / 74 / 77 | 77 at20k | 3.244 |
-| [Direct LeFlow TTT](LEFLOW_TTT_RESULTS.md) | 27 / 21 / 27 / 29 | 29 at20k | 2.437 |
-| [LeFlow release-module/spatial port](RELEASE_BASELINE_RESULTS.md) | 14 / 21 / 19 / 14 | 21 at10k | .852 |
-| [HWM paper port](RELEASE_BASELINE_RESULTS.md) | 2 / 3 / 5 / 5 | 5 at15k | 2.077 |
-| [Released CEM](RELEASE_BASELINE_RESULTS.md) | 24 | 24 | 0 |
-
-Optimization excludes validation and shared-world training; those costs are
-preserved in the reports. Caps are matched, consumed compute is not. Each learned
-method stopped at20k updates within the8 optimization-GPUh ceiling. The identical
-6,222 successful training episodes supply policy training, with replacement
-window sampling; no conventional epoch count is implied. The controller
-allowance is10 cumulative seconds and200 primitive actions. The 80/104 GMM
-controller does not use a diffusion/flow generator.
-
-The machine-readable [results ledger](results-ledger.json) points to each run's
-identity, complete marker, metrics, all evaluations and SHA256 hashes. Its
-read-only verifier checks the hashed evidence artifacts,61 evaluation reports and all
-104 case identities across the sixteen current comparisons. Run
-`python3 scripts/analysis/verify_result_publications.py` from the repository.
-It invokes no models or simulators and does not read final-test outcomes.
+The publication verifier checks all hashed artifacts and all 81 evaluation reports against identical episode/reset/model-seed/task identities. It performs no model/simulator calls and reads no final-test outcomes. Run `python3 scripts/analysis/verify_result_publications.py`. [Final live-server health](reports/20261012-additional-baselines/batch-final-health.json) and [remote publication receipt](reports/20261012-additional-baselines/publication-final-verification.json) preserve completion and exact delivery verification.
 
 ## Earlier campaigns
 

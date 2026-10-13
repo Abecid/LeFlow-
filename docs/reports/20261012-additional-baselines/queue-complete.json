@@ -1,0 +1,45 @@
+{
+  "source": "0a19c7c67d791fd99376216399b03e8cb71d78c0",
+  "completed_utc": "2026-10-13T04:50:37.039966+00:00",
+  "all_five_succeeded": true,
+  "seconds": 6985.580047443509,
+  "lanes": {
+    "A": {
+      "state": "completed",
+      "completed": [
+        {
+          "method": "vanilla_action_flow",
+          "returncode": 0,
+          "ended_utc": "2026-10-13T03:30:30.108995+00:00"
+        },
+        {
+          "method": "action_flow_search",
+          "returncode": 0,
+          "ended_utc": "2026-10-13T04:09:50.483908+00:00"
+        },
+        {
+          "method": "sage_port",
+          "returncode": 0,
+          "ended_utc": "2026-10-13T04:50:37.027713+00:00"
+        }
+      ],
+      "remaining": []
+    },
+    "B": {
+      "state": "completed",
+      "completed": [
+        {
+          "method": "diffusion_policy_port",
+          "returncode": 0,
+          "ended_utc": "2026-10-13T03:39:33.260277+00:00"
+        },
+        {
+          "method": "feedback_wm_port",
+          "returncode": 0,
+          "ended_utc": "2026-10-13T04:25:11.756350+00:00"
+        }
+      ],
+      "remaining": []
+    }
+  }
+}

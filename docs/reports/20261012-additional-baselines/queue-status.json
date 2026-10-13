@@ -1,12 +1,9 @@
 {
   "source": "0a19c7c67d791fd99376216399b03e8cb71d78c0",
-  "updated_utc": "2026-10-13T04:25:11.756433+00:00",
+  "updated_utc": "2026-10-13T04:50:37.027787+00:00",
   "lanes": {
     "A": {
-      "current": "sage_port",
-      "pid": 2803962,
-      "state": "preflight_then_training",
-      "remaining": [],
+      "state": "completed",
       "completed": [
         {
           "method": "vanilla_action_flow",
@@ -17,8 +14,14 @@
           "method": "action_flow_search",
           "returncode": 0,
           "ended_utc": "2026-10-13T04:09:50.483908+00:00"
+        },
+        {
+          "method": "sage_port",
+          "returncode": 0,
+          "ended_utc": "2026-10-13T04:50:37.027713+00:00"
         }
-      ]
+      ],
+      "remaining": []
     },
     "B": {
       "state": "completed",

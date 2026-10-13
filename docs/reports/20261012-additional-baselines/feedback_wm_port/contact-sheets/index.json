@@ -1,0 +1,177 @@
+{
+  "method": "feedback_wm_port",
+  "step": 20000,
+  "measured_frames": true,
+  "records": [
+    {
+      "case": "validation/assembly/00000",
+      "success": false,
+      "steps": 180,
+      "sample_indices": [
+        0,
+        45,
+        90,
+        135,
+        180
+      ],
+      "path": "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/feedback_wm_port/contact-sheets/assembly-00000.png",
+      "sha256": "7e9307a42f1c44ccd8e48b481b84861d5353c72cf34777f657fe22cbf0ec1c1f",
+      "trajectory_path": "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/feedback_wm_port/campaign/runs/feedback_wm_port_3072/trajectories/step_0020000/assembly/00000.npz",
+      "trajectory_sha256": "80da426978e3e047173226e1062e6ae8a06dfb8d55cbfc3263cf1c6f03866fbd",
+      "initial_rgb_exact": true
+    },
+    {
+      "case": "validation/coffee-button/00000",
+      "success": true,
+      "steps": 30,
+      "sample_indices": [
+        0,
+        7,
+        15,
+        22,
+        30
+      ],
+      "path": "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/feedback_wm_port/contact-sheets/coffee-button-00000.png",
+      "sha256": "e1f89e5f068120368908d4ae61f2173e8cafefeec185fb5d3d1b3763dd190cb7",
+      "trajectory_path": "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/feedback_wm_port/campaign/runs/feedback_wm_port_3072/trajectories/step_0020000/coffee-button/00000.npz",
+      "trajectory_sha256": "fb7ca087973ca93cc77b5232d9edc181c8a92135a1a6d6d6760c030828b523f4",
+      "initial_rgb_exact": true
+    },
+    {
+      "case": "validation/dial-turn/00000",
+      "success": true,
+      "steps": 144,
+      "sample_indices": [
+        0,
+        36,
+        72,
+        108,
+        144
+      ],
+      "path": "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/feedback_wm_port/contact-sheets/dial-turn-00000.png",
+      "sha256": "d96cfc434acbeff93f533064ddb319fd1026aa5c804239af694352eac5ca7bea",
+      "trajectory_path": "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/feedback_wm_port/campaign/runs/feedback_wm_port_3072/trajectories/step_0020000/dial-turn/00000.npz",
+      "trajectory_sha256": "8a5401a595ebd6e39c1757ad645bc67c0afcffd92a7c9c35366b5b97c7f59ff2",
+      "initial_rgb_exact": true
+    },
+    {
+      "case": "validation/door-close/00000",
+      "success": true,
+      "steps": 76,
+      "sample_indices": [
+        0,
+        19,
+        38,
+        57,
+        76
+      ],
+      "path": "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/feedback_wm_port/contact-sheets/door-close-00000.png",
+      "sha256": "9d2003e094fbf2b1b85987bfb59358f50388ccc6f20f640c2a59bb918681b7de",
+      "trajectory_path": "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/feedback_wm_port/campaign/runs/feedback_wm_port_3072/trajectories/step_0020000/door-close/00000.npz",
+      "trajectory_sha256": "f6f62997ab2bde66fb8255ba2954cd3d89cf084a8c9acaadcfa19b8c4bd9dfa4",
+      "initial_rgb_exact": true
+    },
+    {
+      "case": "validation/drawer-close/00004",
+      "success": true,
+      "steps": 83,
+      "sample_indices": [
+        0,
+        20,
+        41,
+        62,
+        83
+      ],
+      "path": "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/feedback_wm_port/contact-sheets/drawer-close-00004.png",
+      "sha256": "246a88ecb97c2ac066ee04a5372d27814045b1897d1cba409bdc4a78503be63c",
+      "trajectory_path": "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/feedback_wm_port/campaign/runs/feedback_wm_port_3072/trajectories/step_0020000/drawer-close/00004.npz",
+      "trajectory_sha256": "9f0ba0595244c9ef0125c0bceede0859e701ae6c7c1e4dcfdcb873c78f19ea06",
+      "initial_rgb_exact": true
+    },
+    {
+      "case": "validation/faucet-open/00003",
+      "success": true,
+      "steps": 61,
+      "sample_indices": [
+        0,
+        15,
+        30,
+        45,
+        61
+      ],
+      "path": "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/feedback_wm_port/contact-sheets/faucet-open-00003.png",
+      "sha256": "c66220c3364427f1f66adb6aac6625188206d3fef7940b72a9f1f9f00be78d6a",
+      "trajectory_path": "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/feedback_wm_port/campaign/runs/feedback_wm_port_3072/trajectories/step_0020000/faucet-open/00003.npz",
+      "trajectory_sha256": "1550974cd39aea9774ac5dd68bf619d9dc7715d280684d086d48e23449db92c5",
+      "initial_rgb_exact": true
+    },
+    {
+      "case": "validation/handle-press/00000",
+      "success": true,
+      "steps": 16,
+      "sample_indices": [
+        0,
+        4,
+        8,
+        12,
+        16
+      ],
+      "path": "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/feedback_wm_port/contact-sheets/handle-press-00000.png",
+      "sha256": "05ac9e09fed3be28942dafd95421c4af16e8f951f20b17085ea16780ccc13ab6",
+      "trajectory_path": "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/feedback_wm_port/campaign/runs/feedback_wm_port_3072/trajectories/step_0020000/handle-press/00000.npz",
+      "trajectory_sha256": "0547d130bff206b330bb60ac246a91e8e034392aff7526ee81f25bb0fd646079",
+      "initial_rgb_exact": true
+    },
+    {
+      "case": "validation/pick-place/00000",
+      "success": false,
+      "steps": 184,
+      "sample_indices": [
+        0,
+        46,
+        92,
+        138,
+        184
+      ],
+      "path": "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/feedback_wm_port/contact-sheets/pick-place-00000.png",
+      "sha256": "470601b2be78762ef175adaf814a12846f99e4bc06c3ee60722be064e3716570",
+      "trajectory_path": "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/feedback_wm_port/campaign/runs/feedback_wm_port_3072/trajectories/step_0020000/pick-place/00000.npz",
+      "trajectory_sha256": "bdc97e9399092febe7d243c6a129801346e14a875ee54d86223f746f5602526d",
+      "initial_rgb_exact": true
+    },
+    {
+      "case": "validation/reach/00003",
+      "success": true,
+      "steps": 44,
+      "sample_indices": [
+        0,
+        11,
+        22,
+        33,
+        44
+      ],
+      "path": "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/feedback_wm_port/contact-sheets/reach-00003.png",
+      "sha256": "4b7ad70131c39c6a9cdb3bb932e4c04a90712d842463ec20e95aa84f4e24c02b",
+      "trajectory_path": "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/feedback_wm_port/campaign/runs/feedback_wm_port_3072/trajectories/step_0020000/reach/00003.npz",
+      "trajectory_sha256": "59d3607732fcd0b272da39b761d23a67f06dbcc09f9dbecd46374f40f3f7115a",
+      "initial_rgb_exact": true
+    },
+    {
+      "case": "validation/reach/00005",
+      "success": true,
+      "steps": 45,
+      "sample_indices": [
+        0,
+        11,
+        22,
+        33,
+        45
+      ],
+      "path": "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/feedback_wm_port/contact-sheets/reach-00005.png",
+      "sha256": "b82a84b839346beb8d27c6109b8ade97d891459fc398fbd9261a34bfbff17440",
+      "trajectory_path": "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/feedback_wm_port/campaign/runs/feedback_wm_port_3072/trajectories/step_0020000/reach/00005.npz",
+      "trajectory_sha256": "f7c3e4aded265132e8a650487b55f9d241fb690b3984241a935218dfe629e2f3",
+      "initial_rgb_exact": true
+    }
+  ]
+}

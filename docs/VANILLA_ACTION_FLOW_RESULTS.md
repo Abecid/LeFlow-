@@ -1,8 +1,8 @@
 # Vanilla conditional action flow: completed development result
 
-One fresh seed3072 run completed20,000 updates and four fixed104 evaluations. The curve is **77 / 84 / 89 / 98**, selecting **98/104 (94.23%) at20000**.
+One fresh seed 3072 run completed 20,000 updates and four fixed 104 evaluations. The curve is **77 / 84 / 89 / 98**, selecting **98/104 (94.23%) at 20,000**.
 
-[Online run](https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/j1m6jzog) and [complete evidence](reports/20261012-additional-baselines/vanilla_action_flow/). Source `0a19c7c67d791fd99376216399b03e8cb71d78c0` and214 runtime hashes, original data/world/bank tensors, all milestone/selected checkpoints and fixed-case identities pass the CPU audit. Coordinator exited successfully; W&B completion is independently recorded below when verified.
+[Online run](https://wandb.ai/attentionx2023/flow-jepa-metaworld/runs/j1m6jzog) and [complete evidence](reports/20261012-additional-baselines/vanilla_action_flow/). Source `0a19c7c67d791fd99376216399b03e8cb71d78c0` and 214 runtime hashes, original data/world/bank tensors, all milestone/selected checkpoints and fixed-case identities pass the CPU audit. Coordinator exited successfully; W&B completion is independently recorded below when verified.
 
 | Update | Success /104 | Timeouts | Mean decision ms |
 | --- | ---: | ---: | ---: |
@@ -40,6 +40,8 @@ Selected success exceeds GMM80 and retrieval80 by18 cases. The six failures are 
 
 The retained proposed repair controller80 does not outperform this98 baseline. Do not relabel the standard BC control as a new reasoning/TTT method or preserve the previous claim that80 is the strongest measured reference.
 
-The protocol is unchanged:6222 successful expert TRAIN episodes, frozen shared encoder/world, seed3072/global64,20k updates OR8 optimizer-GPUh, four104 development evaluations,200 primitive actions and10 cumulative controller seconds. Four physical A800s were used; actual consumption was **0.613096 optimization GPUh** and **1.475266 evaluation GPUh**. Preparation is separately preserved. Equal ceilings are not equal consumed compute. Model binaries remain on the server; the audit records every checkpoint path/hash.
+The protocol is unchanged: 6,222 successful expert TRAIN episodes, frozen shared encoder/world, seed 3072/global batch 64, 20k updates OR 8 optimizer-GPUh, four 104 development evaluations, 200 primitive actions and 10 cumulative controller seconds. Four physical A800s were used; actual consumption was **0.613096 optimization GPUh** and **1.475266 evaluation GPUh**. Preparation is separately preserved. Equal ceilings are not equal consumed compute. Model binaries remain on the server; the audit records every checkpoint path/hash.
 
 One training seed and repeatedly reused development checkpoint selection do not establish independent generalization or native-benchmark SOTA. Final tests remain sealed. Retain all failures and per-case/paired records; calibration or surrogate losses are not physical-success labels.
+
+Ten original saved selected-checkpoint [contact sheets](reports/20261012-additional-baselines/vanilla_action_flow/contact-sheets/) were individually visually inspected. Each preserves measured RGB/action indices and the actual expert goal; source trajectory hashes and per-image visual checks are stored beside it. They are a saved subset, not a representative sample of all 104 cases.
