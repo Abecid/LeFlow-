@@ -2,8 +2,11 @@ name: Cross-benchmark controller checks
 on:
   push:
     branches: [main]
-    paths: ['crossbench/**', 'tests/test_crossbench*.py', 'scripts/operations/crossbench*', '.github/workflows/crossbench.yml']
+    paths: ['crossbench/**', 'tests/test_crossbench*.py', 'tests/crossbench*.py', 'scripts/operations/crossbench*', '.github/workflows/crossbench.yml']
   workflow_dispatch:
+concurrency:
+  group: crossbench-${{ github.ref }}
+  cancel-in-progress: true
 permissions:
   contents: read
 jobs:
@@ -15,6 +18,21 @@ jobs:
       MKL_NUM_THREADS: '1'
     steps:
       - uses: actions/checkout@v4
+        with:
+          filter: blob:none
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /*.py
+            /*.txt
+            /*.md
+            /crossbench/
+            /flow_jepa/
+            /btm_jepa/
+            /tests/
+            /config/
+            /scripts/
+            /docs/results-ledger.json
+            /docs/CROSSBENCH_BASELINES.md
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
@@ -30,6 +48,8 @@ jobs:
           result=unittest.TextTestRunner(verbosity=2).run(suite)
           if not result.wasSuccessful(): raise SystemExit(1)
           PY
+      - name: Two-rank training and gradient synchronization
+        run: python -m torch.distributed.run --standalone --nproc_per_node=2 tests/crossbench_ddp_check.py
       - name: Export tracked runtime source
         if: always()
         run: |
@@ -39,7 +59,7 @@ jobs:
           with zipfile.ZipFile('runtime-source.zip','w',zipfile.ZIP_DEFLATED) as z:
               for f in subprocess.check_output(['git','ls-files'],text=True).splitlines():
                   p=Path(f)
-                  if 'docs/reports/' in f or '.git/' in f: continue
+                  if not p.is_file() or 'docs/reports/' in f or '.git/' in f: continue
                   if p.suffix in {'.py','.json','.yaml','.yml','.toml','.sh','.md','.txt'} and p.stat().st_size<400000:
                       z.write(p,f)
               z.writestr('SOURCE_COMMIT',subprocess.check_output(['git','rev-parse','HEAD'],text=True))
@@ -62,6 +82,21 @@ jobs:
       CROSSBENCH_NATIVE_TEST: '1'
     steps:
       - uses: actions/checkout@v4
+        with:
+          filter: blob:none
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /*.py
+            /*.txt
+            /*.md
+            /crossbench/
+            /flow_jepa/
+            /btm_jepa/
+            /tests/
+            /config/
+            /scripts/
+            /docs/results-ledger.json
+            /docs/CROSSBENCH_BASELINES.md
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
@@ -69,3 +104,6 @@ jobs:
       - run: pip install torch==2.8.0 torchvision==0.23.0 --index-url https://download.pytorch.org/whl/cpu
       - run: pip install 'stable-worldmodel @ git+https://github.com/galilai-group/stable-worldmodel.git@06b1f4c24ccb237a9b2d6bb65bf010a6a5b41e83' gymnasium==1.2.0 numpy==2.2.6 pygame==2.6.1 pymunk==7.1.0 shapely==2.1.2 ogbench==1.2.0 mujoco==3.3.7 dm-control==1.0.34 omegaconf hdf5plugin opencv-python-headless==4.12.0.88
       - run: python -m unittest discover -s tests -p 'test_crossbench_native.py' -v
+      - run: pip install transformers==4.57.6 huggingface-hub==0.36.0 einops==0.8.1
+      - name: Released LeWM encoder and differentiable dynamics interfaces
+        run: python tests/crossbench_released_model_check.py

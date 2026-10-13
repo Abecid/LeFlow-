@@ -20,7 +20,8 @@ class TestNative(unittest.TestCase):
                     if task=='pusht':
                         state=base._get_obs().copy()
                         source['state']=np.stack([state,state])
-                        action=state[:2].astype(env.action_space.dtype)
+                        # Pinned SWM PushT uses normalized relative deltas, not pixel coordinates.
+                        action=np.zeros(pd,dtype=env.action_space.dtype)
                     else:
                         qpos=base._data.qpos.copy();qvel=base._data.qvel.copy()
                         obj=base._data.joint('object_joint_0').qpos.copy()

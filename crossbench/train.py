@@ -80,7 +80,7 @@ def run(s,root,run_dir,device,rank=0,size=1,*,world=None,eval_fn=evaluate,allow_
     data=Windows(root,s);probe=[data[rank*(s.global_batch//size)+j] for j in range(min(2,s.global_batch//size))]
     batch={k:torch.stack([r[k] for r in probe]).to(device) for k in probe[0]}
     wrapped=Objective(model,world,bank)
-    if size>1:wrapped=DDP(wrapped,device_ids=[torch.device(device).index],find_unused_parameters=s.method=='retrieval_repair_ttt')
+    if size>1:wrapped=DDP(wrapped,device_ids=([torch.device(device).index] if torch.device(device).type=='cuda' else None),find_unused_parameters=s.method=='retrieval_repair_ttt')
     checks=[];synchronize(device);pre_start=time.perf_counter()
     for step in (1,2):
         wrapped.zero_grad(set_to_none=True);loss,_=wrapped(batch,step);loss.backward()
