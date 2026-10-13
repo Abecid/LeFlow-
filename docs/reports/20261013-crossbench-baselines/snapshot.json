@@ -1,5 +1,5 @@
 {
-  "utc": "2026-10-13T15:33:50.794376+00:00",
+  "utc": "2026-10-13T15:41:44.173574+00:00",
   "runs": [
     {
       "dataset": "cube",
@@ -770,17 +770,128 @@
       "method": "feedback_wm_port",
       "usage.json": {
         "cap": 28800.0,
-        "evaluation_seconds": 0.0,
+        "evaluation_seconds": 940.5767463445663,
         "final_update_overrun_seconds": 0.0,
-        "optimization_gpu_hours": 0.12414902465624941,
-        "optimization_seconds": 446.9364887624979,
-        "step": 5000
+        "optimization_gpu_hours": 0.4190348109168311,
+        "optimization_seconds": 1508.525319300592,
+        "step": 17594
       },
       "wandb.json": {
         "id": "8hwzjm03",
         "url": "https://wandb.ai/attentionx2023/leflow-crossbench/runs/8hwzjm03"
       },
-      "curve": []
+      "best.json": {
+        "checkpoint_sha256": "356d93917edd32d449246c66d5d26191312519567c42e18bf8c97acbce958437",
+        "metrics": {
+          "episodes": 50,
+          "failure_ids": [
+            "cube/val/0000560/000032",
+            "cube/val/0002008/000149",
+            "cube/val/0002777/000008",
+            "cube/val/0003106/000118",
+            "cube/val/0004293/000051",
+            "cube/val/0008504/000021",
+            "cube/val/0008908/000033",
+            "cube/val/0009070/000039"
+          ],
+          "mean_decision_ms": 78.70847903156898,
+          "mean_steps": 18.34,
+          "success_rate": 0.84,
+          "successes": 42,
+          "timeouts": 0,
+          "wilson95": [
+            0.7148551903823401,
+            0.9166267863791231
+          ],
+          "world_transitions": 1908
+        },
+        "step": 15000
+      },
+      "curve": [
+        {
+          "checkpoint": "step_0005000",
+          "episodes": 50,
+          "failure_ids": [
+            "cube/val/0000859/000100",
+            "cube/val/0001514/000118",
+            "cube/val/0002008/000149",
+            "cube/val/0002777/000008",
+            "cube/val/0002985/000041",
+            "cube/val/0003396/000018",
+            "cube/val/0004118/000026",
+            "cube/val/0004293/000051",
+            "cube/val/0007213/000112",
+            "cube/val/0007447/000118",
+            "cube/val/0008504/000021",
+            "cube/val/0008782/000106",
+            "cube/val/0008908/000033",
+            "cube/val/0009070/000039",
+            "cube/val/0009458/000118"
+          ],
+          "mean_decision_ms": 78.88283195646471,
+          "mean_steps": 21.58,
+          "success_rate": 0.7,
+          "successes": 35,
+          "timeouts": 0,
+          "wilson95": [
+            0.562493877226366,
+            0.8089661091039063
+          ],
+          "world_transitions": 2169
+        },
+        {
+          "checkpoint": "step_0010000",
+          "episodes": 50,
+          "failure_ids": [
+            "cube/val/0000560/000032",
+            "cube/val/0001968/000118",
+            "cube/val/0002008/000149",
+            "cube/val/0002777/000008",
+            "cube/val/0003106/000118",
+            "cube/val/0004057/000053",
+            "cube/val/0004118/000026",
+            "cube/val/0004293/000051",
+            "cube/val/0008504/000021",
+            "cube/val/0008782/000106",
+            "cube/val/0008908/000033",
+            "cube/val/0009070/000039"
+          ],
+          "mean_decision_ms": 78.77251488152403,
+          "mean_steps": 19.7,
+          "success_rate": 0.76,
+          "successes": 38,
+          "timeouts": 0,
+          "wilson95": [
+            0.6258705062480763,
+            0.8570274759812779
+          ],
+          "world_transitions": 1989
+        },
+        {
+          "checkpoint": "step_0015000",
+          "episodes": 50,
+          "failure_ids": [
+            "cube/val/0000560/000032",
+            "cube/val/0002008/000149",
+            "cube/val/0002777/000008",
+            "cube/val/0003106/000118",
+            "cube/val/0004293/000051",
+            "cube/val/0008504/000021",
+            "cube/val/0008908/000033",
+            "cube/val/0009070/000039"
+          ],
+          "mean_decision_ms": 78.70847903156898,
+          "mean_steps": 18.34,
+          "success_rate": 0.84,
+          "successes": 42,
+          "timeouts": 0,
+          "wilson95": [
+            0.7148551903823401,
+            0.9166267863791231
+          ],
+          "world_transitions": 1908
+        }
+      ]
     },
     {
       "dataset": "cube",

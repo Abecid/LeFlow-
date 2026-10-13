@@ -7,7 +7,7 @@ Sixteen authorized fresh runs; completed MetaWorld results are reused. Training 
 | cube | action_flow_search | completed, audited | 28 / 26 / 28 / 25 | 28 |
 | cube | diffusion_policy_port | completed, audited | 28 / 32 / 36 / 38 | 38 |
 | cube | execution_revision | completed, audited | 28 / 30 / 32 / 31 | 32 |
-| cube | feedback_wm_port | training / periodic evaluation | pending | pending |
+| cube | feedback_wm_port | training / periodic evaluation | 35 / 38 / 42 | 42 |
 | cube | leflow | completed, audited | 33 / 40 / 37 / 40 | 40 |
 | cube | retrieval_repair_ttt | completed, audited | 30 / 32 / 32 / 31 | 32 |
 | cube | sage_port | completed, audited | 44 / 48 / 48 / 49 | 49 |
@@ -15,7 +15,7 @@ Sixteen authorized fresh runs; completed MetaWorld results are reused. Training 
 | pusht | action_flow_search | completed, audited | 37 / 29 / 24 / 31 | 37 |
 | pusht | diffusion_policy_port | completed, audited | 4 / 11 / 10 / 11 | 11 |
 | pusht | execution_revision | completed, audited | 33 / 30 / 38 / 33 | 38 |
-| pusht | feedback_wm_port | training / periodic evaluation | 15 / 13 / 24 / 27 | 27 |
+| pusht | feedback_wm_port | completed, audited | 15 / 13 / 24 / 27 | 27 |
 | pusht | leflow | completed, audited | 12 / 8 / 9 / 12 | 12 |
 | pusht | retrieval_repair_ttt | completed, audited | 34 / 39 / 37 / 38 | 39 |
 | pusht | sage_port | completed, audited | 39 / 36 / 40 / 38 | 40 |
@@ -34,13 +34,14 @@ Paired outcomes at each method’s selected development checkpoint:
 | pusht | action_flow_search | 23 | 3 | 10 |
 | pusht | diffusion_policy_port | 3 | 9 | 30 |
 | pusht | execution_revision | 24 | 3 | 9 |
+| pusht | feedback_wm_port | 15 | 5 | 18 |
 | pusht | leflow | 7 | 12 | 26 |
 | pusht | retrieval_repair_ttt | 25 | 3 | 8 |
 | pusht | sage_port | 24 | 1 | 9 |
 
 These pairs compare different trained systems on identical development cases. They do not isolate the effect of TTT or search, or reveal rejected-action counterfactuals.
 
-Snapshot: 2026-10-13T15:33:50.794376+00:00. Queue failure hold: False. Lane states: {'A': 'training_and_periodic_evaluation', 'B': 'completed'}.
+Snapshot: 2026-10-13T15:41:44.173574+00:00. Queue failure hold: False. Lane states: {'A': 'training_and_periodic_evaluation', 'B': 'completed'}.
 
 The registered methods use two disjoint four-GPU lanes. No missing score is estimated. All archived case outcomes are actual native simulator success flags. CPU/synthetic checks alone are not benchmark results.
 

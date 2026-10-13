@@ -646,6 +646,70 @@
     },
     {
       "dataset": "pusht",
+      "method": "feedback_wm_port",
+      "curve": [
+        {
+          "step": 5000,
+          "successes": 15,
+          "timeouts": 0,
+          "report": "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/validation/step_0005000/report.json.gz"
+        },
+        {
+          "step": 10000,
+          "successes": 13,
+          "timeouts": 0,
+          "report": "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/validation/step_0010000/report.json.gz"
+        },
+        {
+          "step": 15000,
+          "successes": 24,
+          "timeouts": 0,
+          "report": "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/validation/step_0015000/report.json.gz"
+        },
+        {
+          "step": 20000,
+          "successes": 27,
+          "timeouts": 0,
+          "report": "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/validation/step_0020000/report.json.gz"
+        }
+      ],
+      "evidence": "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port",
+      "online": {
+        "id": "5ol8rxc6",
+        "url": "https://wandb.ai/attentionx2023/leflow-crossbench/runs/5ol8rxc6"
+      },
+      "artifact_sha256": {
+        "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/usage.json": "e5768a8cea33eb01d5ceedf1a3febf81c69344ae92ab6985811da83f3c2c64d1",
+        "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/best.json": "1134605b3b1ae23f453a563d4e49ed2861c26dcaba60a0cfd1168372731faf27",
+        "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/metrics.jsonl.gz": "110f9418aa8992e4ac5e0558839ef2136a45aae749e35f68e0c46f0a32b9030d",
+        "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/native-preflight.json": "be7e3526f21382af2ce3fef42d8cc95d434145f4df8ddf317d2012dc7920db9e",
+        "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/identity.json": "8312a0f29e70ae20a99355be9aabf8bce5c4f235dde92249530875b87443c669",
+        "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/gradient-preflight.json": "78029387758537b90c5ac84f77d3d0e29ebdcc1d645e4e46659847c66ff367ca",
+        "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/complete.json": "f32996727c6bcc36905265fa4e1df2e848fed10818f77509e42c96ad07f9fdfb",
+        "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/wandb.json": "8180828964c67b68a5aa2982ebf0c8d1f66c1ecd221509132f7a32e6d43f894b",
+        "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/final-audit.json": "017b04710543d934f7c3a41ab2ed15b244f0e98c9b210e8f53970a902a54411e",
+        "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/selected-trajectories/00008.npz": "b91ac313d124ad05d76da45caf119430029478837ad1df65fa40c2d97d56f2e3",
+        "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/selected-trajectories/00009.npz": "2e313febd5636a88223912f9ba5b96c3ba95c227473842133dc22562dabda859",
+        "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/selected-trajectories/00004.npz": "9577dfd58e9c9e56149bc0204a5be853f929ac94154f65bca5a617709514c1c3",
+        "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/selected-trajectories/00005.npz": "a3e5613fada697fc552f50b76489fbcabb48b869ed79d3d1528bbdcc0c3bf02e",
+        "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/selected-trajectories/00007.npz": "596a19ec4ef9aeb7bc85e8244ab1e79852879a11880e8f4d5cf12d61203e908b",
+        "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/selected-trajectories/00006.npz": "a14bb49fba5a1d2722583c70e7a497baf2ecf3408d3213bda42be03a6ba31b87",
+        "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/selected-trajectories/00002.npz": "0d9757bbbfba79e02c3e9fddcb1eeade6ba1c6f6e6071235f7e36196c0b1d433",
+        "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/selected-trajectories/00003.npz": "d7fe7b5baca1f0dc79bf6314e5bb48efaa18a899e112da067167469aaaa6d80e",
+        "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/selected-trajectories/00001.npz": "b6bd2e8a2af3d7eefcee5211deeeda4bccd5120cf6bde60868fdfe6cc95635ab",
+        "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/selected-trajectories/00000.npz": "73562f240958a0898cc47ae414da56f6acb06c8edaf1dd90970f08ec601973db",
+        "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/validation/step_0020000/report.json.gz": "fe97c298e59f5517a23637a0467d7eae76ee8e2b3eddf5558519f4c50560f29e",
+        "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/validation/step_0010000/report.json.gz": "430a5bba04870e5f4972041f4804b90ff7f65f0a57e441d268058a16e209cc6a",
+        "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/validation/step_0005000/report.json.gz": "2a2b4524482712dc5619cee32a6f524530cafeb404cc299f14f2bdc2c698cb5b",
+        "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/validation/step_0015000/report.json.gz": "dca8db703f1e97cbaa5f182749a5148935f9825edbc7ced52253ede174197f94"
+      },
+      "selected_step": 20000,
+      "selected_successes": 27,
+      "optimization_gpu_hours": 0.5078860932236744,
+      "evaluation_gpu_hours": 0.05050335832561056
+    },
+    {
+      "dataset": "pusht",
       "method": "leflow",
       "curve": [
         {
@@ -905,78 +969,42 @@
     {
       "dataset": "cube",
       "method": "feedback_wm_port",
-      "curve": [],
+      "curve": [
+        {
+          "step": 5000,
+          "successes": 35,
+          "timeouts": 0,
+          "report": "docs/reports/20261013-crossbench-baselines/runs/cube/feedback_wm_port/validation/step_0005000/report.json.gz"
+        },
+        {
+          "step": 10000,
+          "successes": 38,
+          "timeouts": 0,
+          "report": "docs/reports/20261013-crossbench-baselines/runs/cube/feedback_wm_port/validation/step_0010000/report.json.gz"
+        },
+        {
+          "step": 15000,
+          "successes": 42,
+          "timeouts": 0,
+          "report": "docs/reports/20261013-crossbench-baselines/runs/cube/feedback_wm_port/validation/step_0015000/report.json.gz"
+        }
+      ],
       "evidence": "docs/reports/20261013-crossbench-baselines/runs/cube/feedback_wm_port",
       "online": {
         "id": "8hwzjm03",
         "url": "https://wandb.ai/attentionx2023/leflow-crossbench/runs/8hwzjm03"
       },
       "artifact_sha256": {
-        "docs/reports/20261013-crossbench-baselines/runs/cube/feedback_wm_port/usage.json": "edfbbfa8ffd71dd087f25245b6c5de1d06129cfae7a7b68abd0cefa141a65a49",
-        "docs/reports/20261013-crossbench-baselines/runs/cube/feedback_wm_port/metrics.jsonl.gz": "297c22d677bdf3d20ff8d9fa0386c16aa92d284b1c85c7c682fcaa4452313d01",
+        "docs/reports/20261013-crossbench-baselines/runs/cube/feedback_wm_port/usage.json": "7b2cab202020c55cec23112dbfd79e0856645fda0d2db6e0c597faba8f85e5ab",
+        "docs/reports/20261013-crossbench-baselines/runs/cube/feedback_wm_port/best.json": "1b808372e5b92b857772a1f9379f8d1b060c916a390cab216c104ae61d5a2b42",
+        "docs/reports/20261013-crossbench-baselines/runs/cube/feedback_wm_port/metrics.jsonl.gz": "8372df3fc56aa0e802976f89e51cce6ea513860e8d9468e8518c07823e7675f0",
         "docs/reports/20261013-crossbench-baselines/runs/cube/feedback_wm_port/native-preflight.json": "1eec6953085a51b77ddea1054a8fb3f180fc55f5351320ac811d7c97a4cc38b2",
         "docs/reports/20261013-crossbench-baselines/runs/cube/feedback_wm_port/identity.json": "1ef2fc9d21df03df8a9e3cfee891f52448b000ea8fcc4e3de7d56c5af23d245d",
         "docs/reports/20261013-crossbench-baselines/runs/cube/feedback_wm_port/gradient-preflight.json": "e24d705034d08994b2cfa0b4f5ffade28e65385a0372e6483b91a10ed2a2dc9f",
-        "docs/reports/20261013-crossbench-baselines/runs/cube/feedback_wm_port/wandb.json": "70397f28e38f4588fbde4967c664d914ed14df195133823baf6d28f292fc7a66"
-      }
-    },
-    {
-      "dataset": "pusht",
-      "method": "feedback_wm_port",
-      "curve": [
-        {
-          "step": 5000,
-          "successes": 15,
-          "timeouts": 0,
-          "report": "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/validation/step_0005000/report.json.gz"
-        },
-        {
-          "step": 10000,
-          "successes": 13,
-          "timeouts": 0,
-          "report": "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/validation/step_0010000/report.json.gz"
-        },
-        {
-          "step": 15000,
-          "successes": 24,
-          "timeouts": 0,
-          "report": "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/validation/step_0015000/report.json.gz"
-        },
-        {
-          "step": 20000,
-          "successes": 27,
-          "timeouts": 0,
-          "report": "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/validation/step_0020000/report.json.gz"
-        }
-      ],
-      "evidence": "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port",
-      "online": {
-        "id": "5ol8rxc6",
-        "url": "https://wandb.ai/attentionx2023/leflow-crossbench/runs/5ol8rxc6"
-      },
-      "artifact_sha256": {
-        "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/usage.json": "e5768a8cea33eb01d5ceedf1a3febf81c69344ae92ab6985811da83f3c2c64d1",
-        "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/best.json": "1134605b3b1ae23f453a563d4e49ed2861c26dcaba60a0cfd1168372731faf27",
-        "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/metrics.jsonl.gz": "110f9418aa8992e4ac5e0558839ef2136a45aae749e35f68e0c46f0a32b9030d",
-        "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/native-preflight.json": "be7e3526f21382af2ce3fef42d8cc95d434145f4df8ddf317d2012dc7920db9e",
-        "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/identity.json": "8312a0f29e70ae20a99355be9aabf8bce5c4f235dde92249530875b87443c669",
-        "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/gradient-preflight.json": "78029387758537b90c5ac84f77d3d0e29ebdcc1d645e4e46659847c66ff367ca",
-        "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/complete.json": "f32996727c6bcc36905265fa4e1df2e848fed10818f77509e42c96ad07f9fdfb",
-        "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/wandb.json": "8180828964c67b68a5aa2982ebf0c8d1f66c1ecd221509132f7a32e6d43f894b",
-        "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/selected-trajectories/00008.npz": "b91ac313d124ad05d76da45caf119430029478837ad1df65fa40c2d97d56f2e3",
-        "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/selected-trajectories/00009.npz": "2e313febd5636a88223912f9ba5b96c3ba95c227473842133dc22562dabda859",
-        "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/selected-trajectories/00004.npz": "9577dfd58e9c9e56149bc0204a5be853f929ac94154f65bca5a617709514c1c3",
-        "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/selected-trajectories/00005.npz": "a3e5613fada697fc552f50b76489fbcabb48b869ed79d3d1528bbdcc0c3bf02e",
-        "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/selected-trajectories/00007.npz": "596a19ec4ef9aeb7bc85e8244ab1e79852879a11880e8f4d5cf12d61203e908b",
-        "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/selected-trajectories/00006.npz": "a14bb49fba5a1d2722583c70e7a497baf2ecf3408d3213bda42be03a6ba31b87",
-        "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/selected-trajectories/00002.npz": "0d9757bbbfba79e02c3e9fddcb1eeade6ba1c6f6e6071235f7e36196c0b1d433",
-        "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/selected-trajectories/00003.npz": "d7fe7b5baca1f0dc79bf6314e5bb48efaa18a899e112da067167469aaaa6d80e",
-        "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/selected-trajectories/00001.npz": "b6bd2e8a2af3d7eefcee5211deeeda4bccd5120cf6bde60868fdfe6cc95635ab",
-        "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/selected-trajectories/00000.npz": "73562f240958a0898cc47ae414da56f6acb06c8edaf1dd90970f08ec601973db",
-        "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/validation/step_0020000/report.json.gz": "fe97c298e59f5517a23637a0467d7eae76ee8e2b3eddf5558519f4c50560f29e",
-        "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/validation/step_0010000/report.json.gz": "430a5bba04870e5f4972041f4804b90ff7f65f0a57e441d268058a16e209cc6a",
-        "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/validation/step_0005000/report.json.gz": "2a2b4524482712dc5619cee32a6f524530cafeb404cc299f14f2bdc2c698cb5b",
-        "docs/reports/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/validation/step_0015000/report.json.gz": "dca8db703f1e97cbaa5f182749a5148935f9825edbc7ced52253ede174197f94"
+        "docs/reports/20261013-crossbench-baselines/runs/cube/feedback_wm_port/wandb.json": "70397f28e38f4588fbde4967c664d914ed14df195133823baf6d28f292fc7a66",
+        "docs/reports/20261013-crossbench-baselines/runs/cube/feedback_wm_port/validation/step_0010000/report.json.gz": "98735cc2f80f026a86fed9a5a0033a35dfc4fafecbe128e23ae2a23efb547588",
+        "docs/reports/20261013-crossbench-baselines/runs/cube/feedback_wm_port/validation/step_0005000/report.json.gz": "6f0447ac2b74717c3c4eba3ee10ac695782b2a09f28ba343005610f9a4d41739",
+        "docs/reports/20261013-crossbench-baselines/runs/cube/feedback_wm_port/validation/step_0015000/report.json.gz": "cb5af4f65d5a1ba36b724856e7f7a749cef4f626e94d9012add1b7889a3be275"
       }
     }
   ],
@@ -1306,6 +1334,55 @@
         "pusht/val/0016443/000071",
         "pusht/val/0017156/000019",
         "pusht/val/0017254/000000"
+      ]
+    },
+    {
+      "dataset": "pusht",
+      "method": "feedback_wm_port",
+      "reference": "vanilla_action_flow",
+      "wins": [
+        "pusht/val/0002481/000039",
+        "pusht/val/0003692/000081",
+        "pusht/val/0005771/000018",
+        "pusht/val/0006104/000097",
+        "pusht/val/0007278/000101",
+        "pusht/val/0007774/000011",
+        "pusht/val/0008047/000095",
+        "pusht/val/0009466/000045",
+        "pusht/val/0012628/000013",
+        "pusht/val/0014798/000037",
+        "pusht/val/0015059/000049",
+        "pusht/val/0017244/000022",
+        "pusht/val/0017254/000000",
+        "pusht/val/0017853/000087",
+        "pusht/val/0018271/000051"
+      ],
+      "regressions": [
+        "pusht/val/0001871/000053",
+        "pusht/val/0002980/000149",
+        "pusht/val/0003831/000076",
+        "pusht/val/0005164/000064",
+        "pusht/val/0015025/000018"
+      ],
+      "both_fail": [
+        "pusht/val/0000787/000018",
+        "pusht/val/0002082/000053",
+        "pusht/val/0003815/000095",
+        "pusht/val/0003982/000075",
+        "pusht/val/0004684/000092",
+        "pusht/val/0006540/000014",
+        "pusht/val/0007590/000025",
+        "pusht/val/0007987/000033",
+        "pusht/val/0008980/000043",
+        "pusht/val/0012621/000055",
+        "pusht/val/0012720/000012",
+        "pusht/val/0013555/000059",
+        "pusht/val/0014009/000101",
+        "pusht/val/0015959/000106",
+        "pusht/val/0016217/000024",
+        "pusht/val/0016443/000071",
+        "pusht/val/0016738/000074",
+        "pusht/val/0017156/000019"
       ]
     },
     {

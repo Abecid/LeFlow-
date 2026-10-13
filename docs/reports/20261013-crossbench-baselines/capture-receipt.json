@@ -1,5 +1,5 @@
 {
-  "utc": "2026-10-13T15:33:50.794376+00:00",
+  "utc": "2026-10-13T15:41:44.173574+00:00",
   "artifacts": {
     "launcher.json": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/launcher.json",
@@ -498,8 +498,8 @@
     },
     "runs/cube/feedback_wm_port/usage.json": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/cube/feedback_wm_port/usage.json",
-      "original_sha256": "edfbbfa8ffd71dd087f25245b6c5de1d06129cfae7a7b68abd0cefa141a65a49",
-      "stored_sha256": "edfbbfa8ffd71dd087f25245b6c5de1d06129cfae7a7b68abd0cefa141a65a49"
+      "original_sha256": "7b2cab202020c55cec23112dbfd79e0856645fda0d2db6e0c597faba8f85e5ab",
+      "stored_sha256": "7b2cab202020c55cec23112dbfd79e0856645fda0d2db6e0c597faba8f85e5ab"
     },
     "runs/cube/feedback_wm_port/native-preflight.json": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/cube/feedback_wm_port/native-preflight.json",
@@ -516,10 +516,30 @@
       "original_sha256": "70397f28e38f4588fbde4967c664d914ed14df195133823baf6d28f292fc7a66",
       "stored_sha256": "70397f28e38f4588fbde4967c664d914ed14df195133823baf6d28f292fc7a66"
     },
+    "runs/cube/feedback_wm_port/best.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/cube/feedback_wm_port/best.json",
+      "original_sha256": "1b808372e5b92b857772a1f9379f8d1b060c916a390cab216c104ae61d5a2b42",
+      "stored_sha256": "1b808372e5b92b857772a1f9379f8d1b060c916a390cab216c104ae61d5a2b42"
+    },
     "runs/cube/feedback_wm_port/metrics.jsonl.gz": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/cube/feedback_wm_port/metrics.jsonl",
-      "original_sha256": "98127af1dd48b8321028e0ae7457058d59407e95dc8e9f2d44a28151f45483c9",
-      "stored_sha256": "297c22d677bdf3d20ff8d9fa0386c16aa92d284b1c85c7c682fcaa4452313d01"
+      "original_sha256": "9357d802eab6a4d25d2aa7dca893aff671706af7556382e70b4a07391154d5c1",
+      "stored_sha256": "8372df3fc56aa0e802976f89e51cce6ea513860e8d9468e8518c07823e7675f0"
+    },
+    "runs/cube/feedback_wm_port/validation/step_0005000/report.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/cube/feedback_wm_port/validation/step_0005000/report.json",
+      "original_sha256": "e8c335c4959d1f0e7efb309bd8b1360afa8f9be5968d6f1b29ffa7b928190722",
+      "stored_sha256": "6f0447ac2b74717c3c4eba3ee10ac695782b2a09f28ba343005610f9a4d41739"
+    },
+    "runs/cube/feedback_wm_port/validation/step_0010000/report.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/cube/feedback_wm_port/validation/step_0010000/report.json",
+      "original_sha256": "7f207df711d320c5d9867529c22ced375a44cb3d76674c4ff5da939f484c00c3",
+      "stored_sha256": "98735cc2f80f026a86fed9a5a0033a35dfc4fafecbe128e23ae2a23efb547588"
+    },
+    "runs/cube/feedback_wm_port/validation/step_0015000/report.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/cube/feedback_wm_port/validation/step_0015000/report.json",
+      "original_sha256": "6e809a77762f458e954df3061671cdb0b336642b9cbed914e94939f2461e7ee0",
+      "stored_sha256": "cb5af4f65d5a1ba36b724856e7f7a749cef4f626e94d9012add1b7889a3be275"
     },
     "runs/cube/leflow/identity.json": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/cube/leflow/identity.json",
@@ -1360,6 +1380,11 @@
       "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/complete.json",
       "original_sha256": "f32996727c6bcc36905265fa4e1df2e848fed10818f77509e42c96ad07f9fdfb",
       "stored_sha256": "f32996727c6bcc36905265fa4e1df2e848fed10818f77509e42c96ad07f9fdfb"
+    },
+    "runs/pusht/feedback_wm_port/final-audit.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/final-audit.json",
+      "original_sha256": "017b04710543d934f7c3a41ab2ed15b244f0e98c9b210e8f53970a902a54411e",
+      "stored_sha256": "017b04710543d934f7c3a41ab2ed15b244f0e98c9b210e8f53970a902a54411e"
     },
     "runs/pusht/feedback_wm_port/metrics.jsonl.gz": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines/runs/pusht/feedback_wm_port/metrics.jsonl",
