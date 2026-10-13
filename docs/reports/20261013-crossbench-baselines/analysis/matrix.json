@@ -176,6 +176,13 @@
         "pusht/val/0017853/000087",
         "pusht/val/0018271/000051"
       ]
+    },
+    {
+      "dataset": "cube",
+      "method": "vanilla_action_flow",
+      "reference": "vanilla_action_flow",
+      "regressions": [],
+      "wins": []
     }
   ],
   "rows": [
@@ -657,13 +664,60 @@
       "successes": null
     },
     {
+      "curve": [
+        {
+          "checkpoint": "step_0005000",
+          "successes": 29,
+          "timeouts": 0
+        },
+        {
+          "checkpoint": "step_0010000",
+          "successes": 37,
+          "timeouts": 0
+        },
+        {
+          "checkpoint": "step_0015000",
+          "successes": 38,
+          "timeouts": 0
+        },
+        {
+          "checkpoint": "step_0020000",
+          "successes": 38,
+          "timeouts": 0
+        }
+      ],
       "dataset": "cube",
-      "episodes": null,
-      "last_update": 5000,
+      "episodes": 50,
+      "evaluation_gpu_hours": 0.3567764157077504,
+      "failure_ids": [
+        "cube/val/0000560/000032",
+        "cube/val/0000859/000100",
+        "cube/val/0002777/000008",
+        "cube/val/0002985/000041",
+        "cube/val/0003396/000018",
+        "cube/val/0004118/000026",
+        "cube/val/0004519/000037",
+        "cube/val/0005033/000124",
+        "cube/val/0007213/000112",
+        "cube/val/0007821/000121",
+        "cube/val/0008908/000033",
+        "cube/val/0009070/000039"
+      ],
+      "last_update": 20000,
+      "mean_decision_ms": 11.477540297608071,
+      "mean_steps": 17.88,
       "method": "vanilla_action_flow",
-      "selected_step": null,
-      "status": "incomplete",
-      "successes": null
+      "optimization_gpu_hours": 0.5579047460750574,
+      "selected_step": 15000,
+      "status": "completed",
+      "success_rate": 0.76,
+      "successes": 38,
+      "timeouts": 0,
+      "wilson95": [
+        0.6258705062480763,
+        0.8570274759812779
+      ],
+      "world_transitions": 0
     },
     {
       "dataset": "cube",
@@ -708,9 +762,10 @@
     {
       "dataset": "cube",
       "episodes": null,
+      "last_update": 6598,
       "method": "retrieval_repair_ttt",
       "selected_step": null,
-      "status": "not_started",
+      "status": "incomplete",
       "successes": null
     }
   ],
