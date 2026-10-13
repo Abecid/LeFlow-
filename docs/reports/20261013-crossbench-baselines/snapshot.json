@@ -1,5 +1,5 @@
 {
-  "utc": "2026-10-13T15:19:59.661531+00:00",
+  "utc": "2026-10-13T15:26:36.216626+00:00",
   "runs": [
     {
       "dataset": "cube",
@@ -279,56 +279,48 @@
       "method": "diffusion_policy_port",
       "usage.json": {
         "cap": 28800.0,
-        "evaluation_seconds": 373.4631001204252,
+        "evaluation_seconds": 1050.342845134437,
         "final_update_overrun_seconds": 0.0,
-        "optimization_gpu_hours": 0.20379117322878706,
-        "optimization_seconds": 733.6482236236334,
-        "step": 7935
+        "optimization_gpu_hours": 0.42424498144330247,
+        "optimization_seconds": 1527.281933195889,
+        "step": 16278
       },
       "wandb.json": {
         "id": "ey27d26g",
         "url": "https://wandb.ai/attentionx2023/leflow-crossbench/runs/ey27d26g"
       },
       "best.json": {
-        "checkpoint_sha256": "d10e4934151602e3c8843319c551ac981fb2657f20ff5375e8ddc5a4ad000ffe",
+        "checkpoint_sha256": "b12edbf0fb3a5c80110e48c77153fba18c840c0c7a8f1d747e80c06322d4efc7",
         "metrics": {
           "episodes": 50,
           "failure_ids": [
-            "cube/val/0000560/000032",
             "cube/val/0000859/000100",
-            "cube/val/0001514/000118",
-            "cube/val/0001645/000057",
-            "cube/val/0002008/000149",
-            "cube/val/0002090/000115",
             "cube/val/0002777/000008",
             "cube/val/0002985/000041",
-            "cube/val/0003106/000118",
             "cube/val/0003396/000018",
             "cube/val/0004118/000026",
-            "cube/val/0004273/000149",
             "cube/val/0004293/000051",
             "cube/val/0004519/000037",
             "cube/val/0005033/000124",
-            "cube/val/0007213/000112",
-            "cube/val/0007447/000118",
+            "cube/val/0006817/000054",
+            "cube/val/0007971/000052",
             "cube/val/0008504/000021",
             "cube/val/0008782/000106",
             "cube/val/0008908/000033",
-            "cube/val/0008993/000025",
             "cube/val/0009070/000039"
           ],
-          "mean_decision_ms": 36.14753519317934,
-          "mean_steps": 26.04,
-          "success_rate": 0.56,
-          "successes": 28,
+          "mean_decision_ms": 35.8826037729159,
+          "mean_steps": 21.74,
+          "success_rate": 0.72,
+          "successes": 36,
           "timeouts": 0,
           "wilson95": [
-            0.4230578680014353,
-            0.6883801278976466
+            0.5833461285401034,
+            0.8252598564231963
           ],
           "world_transitions": 0
         },
-        "step": 5000
+        "step": 15000
       },
       "curve": [
         {
@@ -366,6 +358,70 @@
           "wilson95": [
             0.4230578680014353,
             0.6883801278976466
+          ],
+          "world_transitions": 0
+        },
+        {
+          "checkpoint": "step_0010000",
+          "episodes": 50,
+          "failure_ids": [
+            "cube/val/0000560/000032",
+            "cube/val/0000859/000100",
+            "cube/val/0001968/000118",
+            "cube/val/0002777/000008",
+            "cube/val/0002985/000041",
+            "cube/val/0003106/000118",
+            "cube/val/0003396/000018",
+            "cube/val/0004057/000053",
+            "cube/val/0004118/000026",
+            "cube/val/0004293/000051",
+            "cube/val/0004519/000037",
+            "cube/val/0005033/000124",
+            "cube/val/0006817/000054",
+            "cube/val/0007971/000052",
+            "cube/val/0008504/000021",
+            "cube/val/0008782/000106",
+            "cube/val/0008908/000033",
+            "cube/val/0009070/000039"
+          ],
+          "mean_decision_ms": 35.97087587649916,
+          "mean_steps": 23.4,
+          "success_rate": 0.64,
+          "successes": 32,
+          "timeouts": 0,
+          "wilson95": [
+            0.5014076201030195,
+            0.7586143703281711
+          ],
+          "world_transitions": 0
+        },
+        {
+          "checkpoint": "step_0015000",
+          "episodes": 50,
+          "failure_ids": [
+            "cube/val/0000859/000100",
+            "cube/val/0002777/000008",
+            "cube/val/0002985/000041",
+            "cube/val/0003396/000018",
+            "cube/val/0004118/000026",
+            "cube/val/0004293/000051",
+            "cube/val/0004519/000037",
+            "cube/val/0005033/000124",
+            "cube/val/0006817/000054",
+            "cube/val/0007971/000052",
+            "cube/val/0008504/000021",
+            "cube/val/0008782/000106",
+            "cube/val/0008908/000033",
+            "cube/val/0009070/000039"
+          ],
+          "mean_decision_ms": 35.8826037729159,
+          "mean_steps": 21.74,
+          "success_rate": 0.72,
+          "successes": 36,
+          "timeouts": 0,
+          "wilson95": [
+            0.5833461285401034,
+            0.8252598564231963
           ],
           "world_transitions": 0
         }
@@ -1750,9 +1806,9 @@
         "cap": 28800.0,
         "evaluation_seconds": 90.30231941491365,
         "final_update_overrun_seconds": 0.0,
-        "optimization_gpu_hours": 0.41796542714039486,
-        "optimization_seconds": 1504.6755377054214,
-        "step": 16471
+        "optimization_gpu_hours": 0.5110900199185643,
+        "optimization_seconds": 1839.9240717068315,
+        "step": 20000
       },
       "wandb.json": {
         "id": "v4gff79r",
@@ -1815,6 +1871,63 @@
           "world_transitions": 0
         },
         "step": 10000
+      },
+      "complete.json": {
+        "evaluation_gpu_hours": 0.0335074752693375,
+        "identity": {
+          "cache": "bd363bb3cb3900cf7bf855b6a2038f31b8f9734b2786ccbc999fc828c5cba09c",
+          "fixture": false,
+          "ranks": 4,
+          "source": "50bd3c4cd056676a963a1ecbc0ba0e2d8a83fd1901190c8e815cc80635fcdf68",
+          "spec": {
+            "action_block": 5,
+            "action_budget": 50,
+            "candidates": 4,
+            "controller_seconds": 10.0,
+            "dataset": "pusht",
+            "dim": 192,
+            "eval_episodes": 50,
+            "flow_steps": 8,
+            "global_batch": 64,
+            "goal_offset": 25,
+            "history": 4,
+            "horizon": 5,
+            "learning_rate": 0.0001,
+            "method": "diffusion_policy_port",
+            "optimization_gpu_seconds": 28800.0,
+            "patches": 1,
+            "primitive_dim": 2,
+            "protocol": "crossbench-shared-lewm-v2",
+            "repair_radius": 0.25,
+            "repair_steps": 4,
+            "rounds": 3,
+            "seed": 3072,
+            "targets": 8,
+            "updates": 20000,
+            "weight_decay": 0.05,
+            "width": 256
+          },
+          "window_sampling": {
+            "eligible_episodes": 14948,
+            "eligible_starts": 1439235,
+            "native_safe_factual_history_and_goals": true,
+            "nominal_episodes": 14948,
+            "nominal_starts": 1496570
+          },
+          "world": "48938400ae3464c9680731287f583a9cb516f55a8ec64ea13a91be47fb15b607"
+        },
+        "optimization_gpu_hours": 0.5110900199185643,
+        "selected_success_rate": 0.22,
+        "status": "completed",
+        "step": 20000,
+        "stop_reason": "update_limit",
+        "validation_steps": [
+          5000,
+          10000,
+          15000,
+          20000
+        ],
+        "wall_seconds": 559.5834943912923
       },
       "curve": [
         {
@@ -1987,6 +2100,61 @@
           "wilson95": [
             0.11243629945973886,
             0.3303737210448524
+          ],
+          "world_transitions": 0
+        },
+        {
+          "checkpoint": "step_0020000",
+          "episodes": 50,
+          "failure_ids": [
+            "pusht/val/0000787/000018",
+            "pusht/val/0001871/000053",
+            "pusht/val/0002082/000053",
+            "pusht/val/0002301/000099",
+            "pusht/val/0002481/000039",
+            "pusht/val/0003377/000057",
+            "pusht/val/0003692/000081",
+            "pusht/val/0003815/000095",
+            "pusht/val/0003831/000076",
+            "pusht/val/0003982/000075",
+            "pusht/val/0004158/000063",
+            "pusht/val/0004684/000092",
+            "pusht/val/0005164/000064",
+            "pusht/val/0006104/000097",
+            "pusht/val/0006540/000014",
+            "pusht/val/0007278/000101",
+            "pusht/val/0007590/000025",
+            "pusht/val/0007774/000011",
+            "pusht/val/0007987/000033",
+            "pusht/val/0008047/000095",
+            "pusht/val/0008531/000016",
+            "pusht/val/0008980/000043",
+            "pusht/val/0009466/000045",
+            "pusht/val/0012621/000055",
+            "pusht/val/0012628/000013",
+            "pusht/val/0012720/000012",
+            "pusht/val/0013555/000059",
+            "pusht/val/0014009/000101",
+            "pusht/val/0015059/000049",
+            "pusht/val/0015959/000106",
+            "pusht/val/0016217/000024",
+            "pusht/val/0016443/000071",
+            "pusht/val/0016738/000074",
+            "pusht/val/0016846/000004",
+            "pusht/val/0017156/000019",
+            "pusht/val/0017244/000022",
+            "pusht/val/0017853/000087",
+            "pusht/val/0018271/000051",
+            "pusht/val/0018618/000061"
+          ],
+          "mean_decision_ms": 37.28734845878138,
+          "mean_steps": 44.9,
+          "success_rate": 0.22,
+          "successes": 11,
+          "timeouts": 0,
+          "wilson95": [
+            0.12753786224302288,
+            0.35241815689459555
           ],
           "world_transitions": 0
         }
@@ -2225,6 +2393,129 @@
             0.7756323036493895
           ],
           "world_transitions": 168000
+        }
+      ]
+    },
+    {
+      "dataset": "pusht",
+      "method": "feedback_wm_port",
+      "usage.json": {
+        "cap": 28800.0,
+        "evaluation_seconds": 50.114244654774666,
+        "final_update_overrun_seconds": 0.0,
+        "optimization_gpu_hours": 0.21862331865769294,
+        "optimization_seconds": 787.0439471676946,
+        "step": 8308
+      },
+      "wandb.json": {
+        "id": "5ol8rxc6",
+        "url": "https://wandb.ai/attentionx2023/leflow-crossbench/runs/5ol8rxc6"
+      },
+      "best.json": {
+        "checkpoint_sha256": "b3171872c3ac1ccd31f1d689f86d848cbf7c54de5b45b305239af66e4e2ccf9d",
+        "metrics": {
+          "episodes": 50,
+          "failure_ids": [
+            "pusht/val/0000787/000018",
+            "pusht/val/0001627/000063",
+            "pusht/val/0001871/000053",
+            "pusht/val/0002082/000053",
+            "pusht/val/0002301/000099",
+            "pusht/val/0003692/000081",
+            "pusht/val/0003815/000095",
+            "pusht/val/0003831/000076",
+            "pusht/val/0003982/000075",
+            "pusht/val/0004158/000063",
+            "pusht/val/0004684/000092",
+            "pusht/val/0005467/000003",
+            "pusht/val/0006104/000097",
+            "pusht/val/0006540/000014",
+            "pusht/val/0007590/000025",
+            "pusht/val/0008047/000095",
+            "pusht/val/0008531/000016",
+            "pusht/val/0008980/000043",
+            "pusht/val/0012621/000055",
+            "pusht/val/0012628/000013",
+            "pusht/val/0012720/000012",
+            "pusht/val/0013555/000059",
+            "pusht/val/0014009/000101",
+            "pusht/val/0014798/000037",
+            "pusht/val/0015025/000018",
+            "pusht/val/0015059/000049",
+            "pusht/val/0015959/000106",
+            "pusht/val/0016217/000024",
+            "pusht/val/0016443/000071",
+            "pusht/val/0016738/000074",
+            "pusht/val/0016846/000004",
+            "pusht/val/0017156/000019",
+            "pusht/val/0017244/000022",
+            "pusht/val/0017853/000087",
+            "pusht/val/0018618/000061"
+          ],
+          "mean_decision_ms": 79.64364958598333,
+          "mean_steps": 41.94,
+          "success_rate": 0.3,
+          "successes": 15,
+          "timeouts": 0,
+          "wilson95": [
+            0.1910338908960936,
+            0.4375061227736339
+          ],
+          "world_transitions": 3825
+        },
+        "step": 5000
+      },
+      "curve": [
+        {
+          "checkpoint": "step_0005000",
+          "episodes": 50,
+          "failure_ids": [
+            "pusht/val/0000787/000018",
+            "pusht/val/0001627/000063",
+            "pusht/val/0001871/000053",
+            "pusht/val/0002082/000053",
+            "pusht/val/0002301/000099",
+            "pusht/val/0003692/000081",
+            "pusht/val/0003815/000095",
+            "pusht/val/0003831/000076",
+            "pusht/val/0003982/000075",
+            "pusht/val/0004158/000063",
+            "pusht/val/0004684/000092",
+            "pusht/val/0005467/000003",
+            "pusht/val/0006104/000097",
+            "pusht/val/0006540/000014",
+            "pusht/val/0007590/000025",
+            "pusht/val/0008047/000095",
+            "pusht/val/0008531/000016",
+            "pusht/val/0008980/000043",
+            "pusht/val/0012621/000055",
+            "pusht/val/0012628/000013",
+            "pusht/val/0012720/000012",
+            "pusht/val/0013555/000059",
+            "pusht/val/0014009/000101",
+            "pusht/val/0014798/000037",
+            "pusht/val/0015025/000018",
+            "pusht/val/0015059/000049",
+            "pusht/val/0015959/000106",
+            "pusht/val/0016217/000024",
+            "pusht/val/0016443/000071",
+            "pusht/val/0016738/000074",
+            "pusht/val/0016846/000004",
+            "pusht/val/0017156/000019",
+            "pusht/val/0017244/000022",
+            "pusht/val/0017853/000087",
+            "pusht/val/0018618/000061"
+          ],
+          "mean_decision_ms": 79.64364958598333,
+          "mean_steps": 41.94,
+          "success_rate": 0.3,
+          "successes": 15,
+          "timeouts": 0,
+          "wilson95": [
+            0.1910338908960936,
+            0.4375061227736339
+          ],
+          "world_transitions": 3825
         }
       ]
     },
