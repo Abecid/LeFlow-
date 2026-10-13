@@ -78,6 +78,13 @@ def component_types(c):
         if method == 'vanilla_action_flow':
             return method, VanillaActionFlowPolicy, AlignedSegments, VanillaActionFlowController
         return method, ActionFlowSearchPolicy, AlignedSegments, ActionFlowSearchController
+    if method == 'sage_port':
+        from ..baselines.sage_port import SagePolicy, SageController, SageSegments
+        return method, SagePolicy, SageSegments, SageController
+    if method == 'diffusion_policy_port':
+        from ..baselines.diffusion_port import DiffusionActionPolicy, DiffusionPolicyController
+        from .aligned import AlignedSegments
+        return method, DiffusionActionPolicy, AlignedSegments, DiffusionPolicyController
     raise ValueError(f'Unsupported isolated candidate: {method}')
 
 
@@ -248,7 +255,7 @@ def train(args):
                 for group in optimizer.param_groups: group['lr']=tc['learning_rate']*lr_factor
                 weight = 0.1 * min(1.0, max(0.0, (step-1000)/1000))
                 item = {k:v.to(device, non_blocking=True) for k,v in next(iterator).items()}
-                if method in ('vanilla_action_flow','action_flow_search','flow_reasoning','progress_ttt','guided_ttt','repair_flow_ttt','retrieval_repair_ttt','shifted_repair_ttt','progress_objective_ttt','bayesian_repair_ttt','nonlinear_repair_ttt'):
+                if method in ('vanilla_action_flow','action_flow_search','sage_port','diffusion_policy_port','flow_reasoning','progress_ttt','guided_ttt','repair_flow_ttt','retrieval_repair_ttt','shifted_repair_ttt','progress_objective_ttt','bayesian_repair_ttt','nonlinear_repair_ttt'):
                     weight = 0.
                     # All ranks use the same balanced depth, so one rank's
                     # deeper rollout cannot silently dominate every update.
