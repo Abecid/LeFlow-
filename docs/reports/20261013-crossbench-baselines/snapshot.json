@@ -1,5 +1,5 @@
 {
-  "utc": "2026-10-13T10:48:58.465012+00:00",
+  "utc": "2026-10-13T10:54:02.231547+00:00",
   "runs": [
     {
       "dataset": "pusht",
@@ -1068,17 +1068,105 @@
       "method": "sage_port",
       "usage.json": {
         "cap": 28800.0,
-        "evaluation_seconds": 0.0,
+        "evaluation_seconds": 58.68881297856569,
         "final_update_overrun_seconds": 0.0,
-        "optimization_gpu_hours": 0.08525444754295879,
-        "optimization_seconds": 306.91601115465164,
-        "step": 2782
+        "optimization_gpu_hours": 0.37093052787706254,
+        "optimization_seconds": 1335.3499003574252,
+        "step": 12020
       },
       "wandb.json": {
         "id": "i5gfhx08",
         "url": "https://wandb.ai/attentionx2023/leflow-crossbench/runs/i5gfhx08"
       },
-      "curve": []
+      "best.json": {
+        "checkpoint_sha256": "201287a12a3175a00f538dea1561bd2f374046e9a8de18ee4243332f7b51d591",
+        "metrics": {
+          "episodes": 50,
+          "failure_ids": [
+            "pusht/val/0003815/000095",
+            "pusht/val/0003831/000076",
+            "pusht/val/0003982/000075",
+            "pusht/val/0004684/000092",
+            "pusht/val/0007774/000011",
+            "pusht/val/0007987/000033",
+            "pusht/val/0012621/000055",
+            "pusht/val/0014009/000101",
+            "pusht/val/0015025/000018",
+            "pusht/val/0016217/000024",
+            "pusht/val/0017254/000000"
+          ],
+          "mean_decision_ms": 60.82100624917075,
+          "mean_steps": 26.98,
+          "success_rate": 0.78,
+          "successes": 39,
+          "timeouts": 0,
+          "wilson95": [
+            0.6475818431054045,
+            0.8724621377569771
+          ],
+          "world_transitions": 138240
+        },
+        "step": 5000
+      },
+      "curve": [
+        {
+          "checkpoint": "step_0005000",
+          "episodes": 50,
+          "failure_ids": [
+            "pusht/val/0003815/000095",
+            "pusht/val/0003831/000076",
+            "pusht/val/0003982/000075",
+            "pusht/val/0004684/000092",
+            "pusht/val/0007774/000011",
+            "pusht/val/0007987/000033",
+            "pusht/val/0012621/000055",
+            "pusht/val/0014009/000101",
+            "pusht/val/0015025/000018",
+            "pusht/val/0016217/000024",
+            "pusht/val/0017254/000000"
+          ],
+          "mean_decision_ms": 60.82100624917075,
+          "mean_steps": 26.98,
+          "success_rate": 0.78,
+          "successes": 39,
+          "timeouts": 0,
+          "wilson95": [
+            0.6475818431054045,
+            0.8724621377569771
+          ],
+          "world_transitions": 138240
+        },
+        {
+          "checkpoint": "step_0010000",
+          "episodes": 50,
+          "failure_ids": [
+            "pusht/val/0001871/000053",
+            "pusht/val/0002082/000053",
+            "pusht/val/0004684/000092",
+            "pusht/val/0007590/000025",
+            "pusht/val/0007987/000033",
+            "pusht/val/0008047/000095",
+            "pusht/val/0008980/000043",
+            "pusht/val/0012621/000055",
+            "pusht/val/0012720/000012",
+            "pusht/val/0014798/000037",
+            "pusht/val/0015959/000106",
+            "pusht/val/0016217/000024",
+            "pusht/val/0017156/000019",
+            "pusht/val/0018618/000061"
+          ],
+          "mean_decision_ms": 58.68472271692862,
+          "mean_steps": 31.12,
+          "success_rate": 0.72,
+          "successes": 36,
+          "timeouts": 0,
+          "wilson95": [
+            0.5833461285401034,
+            0.8252598564231963
+          ],
+          "world_transitions": 156960
+        }
+      ]
     },
     {
       "dataset": "pusht",

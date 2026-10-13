@@ -8,7 +8,7 @@ Sixteen authorized fresh runs; completed MetaWorld results are reused. Training 
 | pusht | execution_revision | completed, audited | 33 / 30 / 38 / 33 | 38 |
 | pusht | leflow | completed, audited | 12 / 8 / 9 / 12 | 12 |
 | pusht | retrieval_repair_ttt | completed, audited | 34 / 39 / 37 / 38 | 39 |
-| pusht | sage_port | training / periodic evaluation | pending | pending |
+| pusht | sage_port | training / periodic evaluation | 39 / 36 | 39 |
 | pusht | vanilla_action_flow | completed, audited | 7 / 13 / 15 / 17 | 17 |
 | pusht | diffusion_policy_port | queued | pending | pending |
 | pusht | feedback_wm_port | queued | pending | pending |
@@ -32,7 +32,7 @@ Paired outcomes at each method’s selected development checkpoint:
 
 These pairs compare different trained systems on identical development cases. They do not isolate the effect of TTT or search, or reveal rejected-action counterfactuals.
 
-Snapshot: 2026-10-13T10:48:58.465012+00:00. Queue failure hold: False. Lane states: {'A': 'preparing_cube_cache', 'B': 'training_and_periodic_evaluation'}.
+Snapshot: 2026-10-13T10:54:02.231547+00:00. Queue failure hold: False. Lane states: {'A': 'preparing_cube_cache', 'B': 'training_and_periodic_evaluation'}.
 
 The registered methods use two disjoint four-GPU lanes. No missing score is estimated. All archived case outcomes are actual native simulator success flags. CPU/synthetic checks alone are not benchmark results.
 

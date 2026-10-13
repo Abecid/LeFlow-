@@ -1,8 +1,8 @@
 {
   "cap": 28800.0,
-  "evaluation_seconds": 0.0,
+  "evaluation_seconds": 58.68881297856569,
   "final_update_overrun_seconds": 0.0,
-  "optimization_gpu_hours": 0.08525444754295879,
-  "optimization_seconds": 306.91601115465164,
-  "step": 2782
+  "optimization_gpu_hours": 0.37093052787706254,
+  "optimization_seconds": 1335.3499003574252,
+  "step": 12020
 }

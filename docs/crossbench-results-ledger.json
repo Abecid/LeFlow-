@@ -328,19 +328,35 @@
     {
       "dataset": "pusht",
       "method": "sage_port",
-      "curve": [],
+      "curve": [
+        {
+          "step": 5000,
+          "successes": 39,
+          "timeouts": 0,
+          "report": "docs/reports/20261013-crossbench-baselines/runs/pusht/sage_port/validation/step_0005000/report.json.gz"
+        },
+        {
+          "step": 10000,
+          "successes": 36,
+          "timeouts": 0,
+          "report": "docs/reports/20261013-crossbench-baselines/runs/pusht/sage_port/validation/step_0010000/report.json.gz"
+        }
+      ],
       "evidence": "docs/reports/20261013-crossbench-baselines/runs/pusht/sage_port",
       "online": {
         "id": "i5gfhx08",
         "url": "https://wandb.ai/attentionx2023/leflow-crossbench/runs/i5gfhx08"
       },
       "artifact_sha256": {
-        "docs/reports/20261013-crossbench-baselines/runs/pusht/sage_port/usage.json": "244f7b69aaaf9784d5d72a7cb99f5741d0720694324e61ad560fcc5fa81073cc",
-        "docs/reports/20261013-crossbench-baselines/runs/pusht/sage_port/metrics.jsonl.gz": "6d031ff651f7c0768164b830434f03bb8cb14b8406c0489e515a056e8e98f2c1",
+        "docs/reports/20261013-crossbench-baselines/runs/pusht/sage_port/usage.json": "49642b6d9f619d94c7a350cfc0049c089ff3752cde38f02f0fa299173c51d3df",
+        "docs/reports/20261013-crossbench-baselines/runs/pusht/sage_port/best.json": "6c72d87512994697c443c49f974767a69480bdb95eddb8c76a50d300103461e1",
+        "docs/reports/20261013-crossbench-baselines/runs/pusht/sage_port/metrics.jsonl.gz": "31979e1c9db83a2dd754c9171db65741f2c2ddbf05305c4bd5c45a2709224d56",
         "docs/reports/20261013-crossbench-baselines/runs/pusht/sage_port/native-preflight.json": "09ed5239b9888020bb1d3ada4ebefa7ab039bb5063c7e0089cab9e01e6444c81",
         "docs/reports/20261013-crossbench-baselines/runs/pusht/sage_port/identity.json": "5fa5647c068d3ce4b54d0412edcaac9e73f410c1117262ae86bff24fd2e3052f",
         "docs/reports/20261013-crossbench-baselines/runs/pusht/sage_port/gradient-preflight.json": "375444f3638dea2503f444e3ad5509caf17db3acf8acab567e77efa026b8ba9c",
-        "docs/reports/20261013-crossbench-baselines/runs/pusht/sage_port/wandb.json": "510afbbf7837d918e28232a75ea90f27cb2f9b16708b5fa9d4628e7d46e9d4cd"
+        "docs/reports/20261013-crossbench-baselines/runs/pusht/sage_port/wandb.json": "510afbbf7837d918e28232a75ea90f27cb2f9b16708b5fa9d4628e7d46e9d4cd",
+        "docs/reports/20261013-crossbench-baselines/runs/pusht/sage_port/validation/step_0010000/report.json.gz": "553e395557fe93267e6a32ce12a9a77ac7e82f121f06934959f8f9976798cd1e",
+        "docs/reports/20261013-crossbench-baselines/runs/pusht/sage_port/validation/step_0005000/report.json.gz": "6faac22fb84d94ff0cd392fce949c9aef0139f60434dfa88d047fee469fbe6f8"
       }
     }
   ],
