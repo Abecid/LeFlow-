@@ -1,0 +1,56 @@
+name: Cross-benchmark controller checks
+on:
+  push:
+    branches: [main]
+    paths:
+      - "crossbench/**"
+      - "tests/test_crossbench*.py"
+      - "scripts/operations/crossbench*"
+      - ".github/workflows/crossbench.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  cpu:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      OMP_NUM_THREADS: "1"
+      MKL_NUM_THREADS: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install torch==2.8.0 --index-url https://download.pytorch.org/whl/cpu
+      - run: pip install numpy h5py omegaconf hdf5plugin pillow
+      - name: Run focused tests when present
+        run: |
+          if test -d crossbench; then
+            python -m compileall -q crossbench
+            python -m unittest discover -s tests -p 'test_crossbench*.py' -v
+          else
+            echo 'Source snapshot only; crossbench implementation not yet added.'
+          fi
+      - name: Export tracked runtime source for reproducibility
+        if: always()
+        run: |
+          python - <<'PY'
+          import subprocess, zipfile
+          from pathlib import Path
+          files = subprocess.check_output(['git', 'ls-files'], text=True).splitlines()
+          with zipfile.ZipFile('runtime-source.zip', 'w', zipfile.ZIP_DEFLATED) as z:
+              for f in files:
+                  p=Path(f)
+                  if 'docs/reports/' in f or '.git/' in f:
+                      continue
+                  if p.suffix in {'.py','.json','.yaml','.yml','.toml','.sh','.md','.txt'} and p.stat().st_size < 400000:
+                      z.write(p, f)
+              z.writestr('SOURCE_COMMIT',subprocess.check_output(['git','rev-parse','HEAD'],text=True))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: runtime-source
+          path: runtime-source.zip
+          retention-days: 7
