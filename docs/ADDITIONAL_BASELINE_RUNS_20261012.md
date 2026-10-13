@@ -1,3 +1,16 @@
+# First two curves: vanilla flow77/84, Diffusion Policy43/69
+
+At the latest preserved readback, vanilla conditional action flow has completed
+5k/10k evaluations scoring77/84 out of104; Diffusion Policy scores43/69. All
+four evaluations have zero timeouts. Training continues under the original
+finite budgets. The vanilla10k score exceeds the preserved80 development
+reference by four cases; this is an interim single-seed development result,
+not independent proof of superiority. The simple baseline changes which
+comparator our proposed mechanism needs to beat. All paired case identities
+and outcomes are preserved in the per-method analysis files.
+
+Historical launch snapshots follow.
+
 # Five authorized additional baseline runs — October 12, 2026
 
 The user requested training and evaluation of all five implemented methods.

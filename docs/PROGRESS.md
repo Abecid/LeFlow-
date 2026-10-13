@@ -1,3 +1,15 @@
+# October12: first additional baseline curves77/84 and43/69
+
+Vanilla conditional action flow completes5k and10k with77/84 successes; Diffusion
+Policy completes43/69. All four fixed104 evaluations have zero timeouts. The
+vanilla10k baseline exceeds the previous80 development reference. Neither model
+has completed its20k run yet; selection and reused-development limits remain.
+Per-task metrics and paired case identity/outcomes against GMM80, retrieval80,
+flow-reasoning79 and LeFlow21 are preserved. Source and budgets remain unchanged.
+Both GPU groups continue; the other three methods remain in the persistent queue.
+
+Earlier progress follows.
+
 # October 12: five additional baseline comparisons launched
 
 The user explicitly requested training/evaluation of vanilla_action_flow,

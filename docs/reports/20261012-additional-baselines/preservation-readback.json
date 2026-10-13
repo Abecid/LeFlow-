@@ -1,5 +1,5 @@
 {
-  "checked_utc": "2026-10-13T03:06:36.897899+00:00",
+  "checked_utc": "2026-10-13T03:20:44.378467+00:00",
   "artifacts": {
     "queue-launcher.json": {
       "original_sha256": "b29bca8e048a4f0f62430cfdc7b22f6369877836c88ca6fac13be81149e75994",
@@ -86,15 +86,15 @@
       "source": "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/vanilla_action_flow/campaign/runs/vanilla_action_flow_3072/run.json"
     },
     "vanilla_action_flow/run/compute_usage.json": {
-      "original_sha256": "08dd0ef1d24aac699d9140cfd0272022b042a3b1c516b45840c6f4a8bc13ce17",
-      "stored_sha256": "08dd0ef1d24aac699d9140cfd0272022b042a3b1c516b45840c6f4a8bc13ce17",
-      "bytes": 439,
+      "original_sha256": "f08ebb8943a4542e6b2aaa9b74acfc42f73839b84560c3e7385e15c30d085ee6",
+      "stored_sha256": "f08ebb8943a4542e6b2aaa9b74acfc42f73839b84560c3e7385e15c30d085ee6",
+      "bytes": 450,
       "source": "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/vanilla_action_flow/campaign/runs/vanilla_action_flow_3072/compute_usage.json"
     },
     "vanilla_action_flow/run/metrics.jsonl.gz": {
-      "original_sha256": "27cf65ad272b6144b476371777e795df6749d6eacbbb03ef53df05a43302f341",
-      "stored_sha256": "e5be0a6d27cef2c3c4f5642831ef5ac8060847e301038a01d5f5e0615fe79e75",
-      "bytes": 13739,
+      "original_sha256": "cc64bdcdd03a5f9f1758d2ef85960ae50e9e8c4ca3e5e13e46e1e80a66564e2d",
+      "stored_sha256": "339631a8d2557ec2d6211a28945842995fefb96abe2ed9e124b4cbd8a0155984",
+      "bytes": 26431,
       "source": "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/vanilla_action_flow/campaign/runs/vanilla_action_flow_3072/metrics.jsonl"
     },
     "vanilla_action_flow/run/validation/step_0005000.json.gz": {
@@ -102,6 +102,12 @@
       "stored_sha256": "0c24f065209954ce65803b2a65ef4e6657ae71a4fb309d30856dddf2f263679c",
       "bytes": 107841,
       "source": "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/vanilla_action_flow/campaign/runs/vanilla_action_flow_3072/validation/step_0005000.json"
+    },
+    "vanilla_action_flow/run/validation/step_0010000.json.gz": {
+      "original_sha256": "8ea00042da0f777ef9d9fda7f87a6e2d8240e8adb732b80de6b8cba7bd83ac4c",
+      "stored_sha256": "c0f9671efeca34e11c85266061c05c898e1f3f50e36091202568c3459d4df97c",
+      "bytes": 98341,
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/vanilla_action_flow/campaign/runs/vanilla_action_flow_3072/validation/step_0010000.json"
     },
     "diffusion_policy_port/launcher.json": {
       "original_sha256": "fde8c8b6c7bc07422ae31d47ad1fb1a765a02ac97a8d34923dc2bbb4fed1734d",
@@ -164,16 +170,28 @@
       "source": "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/diffusion_policy_port/campaign/runs/diffusion_policy_port_3072/run.json"
     },
     "diffusion_policy_port/run/compute_usage.json": {
-      "original_sha256": "38fb17fd71ec21bd8cb36d43efa4a126870a837443c433da7d508459ff887fc9",
-      "stored_sha256": "38fb17fd71ec21bd8cb36d43efa4a126870a837443c433da7d508459ff887fc9",
-      "bytes": 397,
+      "original_sha256": "a499a279dde7f8d38a1128aa888fcfd1bc78a07277341f0437a7087dd7569b4e",
+      "stored_sha256": "a499a279dde7f8d38a1128aa888fcfd1bc78a07277341f0437a7087dd7569b4e",
+      "bytes": 452,
       "source": "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/diffusion_policy_port/campaign/runs/diffusion_policy_port_3072/compute_usage.json"
     },
     "diffusion_policy_port/run/metrics.jsonl.gz": {
-      "original_sha256": "e87cfeea0a5814026cad5ec61c6d5eaff648e4125c9de8ad03dc537752405352",
-      "stored_sha256": "b78b77b117d0a33f3cc51ec8db1111c8a9f613365a5a846d108668e8e1ffaf6a",
-      "bytes": 8686,
+      "original_sha256": "115c38a171942f06df608ccb9bc2f6428584385f36a9b7d812ddd10a79393612",
+      "stored_sha256": "ec088bc35af9c7a68d36e71516d6b2f1d1c1d01b511aa62f4712ba0084461e33",
+      "bytes": 23409,
       "source": "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/diffusion_policy_port/campaign/runs/diffusion_policy_port_3072/metrics.jsonl"
+    },
+    "diffusion_policy_port/run/validation/step_0005000.json.gz": {
+      "original_sha256": "3f0c2b11388318e8a59db4f239c8ff7da34e811eb89abd75b06243784dac365f",
+      "stored_sha256": "e919a3ef508dd43af900623e4f87e3a57f29b540c17a3e06be112f56e6138219",
+      "bytes": 148543,
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/diffusion_policy_port/campaign/runs/diffusion_policy_port_3072/validation/step_0005000.json"
+    },
+    "diffusion_policy_port/run/validation/step_0010000.json.gz": {
+      "original_sha256": "a0db691f16e48f1dc6c6639b5f721f5af8a9cda106ac8ea735c41a6ae577dc13",
+      "stored_sha256": "e69a0a88be94075cd557bc0f7ce85f1a7dd087b5189fcb87cb0e7b2e6febd382",
+      "bytes": 118736,
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261012-additional-baselines/diffusion_policy_port/campaign/runs/diffusion_policy_port_3072/validation/step_0010000.json"
     }
   },
   "final_tests_read": false
