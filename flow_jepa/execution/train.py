@@ -245,7 +245,7 @@ def train(args):
         # At a binding compute cap, use the last trained checkpoint for the
         # remaining scheduled validation slot; never extend optimization.
         return (step > 0 and step not in validation_steps and len(validation_steps) < 4
-                and (step % 5000 == 0 or (method in ('flow_reasoning','progress_ttt','guided_ttt','repair_flow_ttt','retrieval_repair_ttt','shifted_repair_ttt','progress_objective_ttt','bayesian_repair_ttt','nonlinear_repair_ttt') and used >= cap)))
+                and (step % 5000 == 0 or (method in ('vanilla_action_flow','action_flow_search','sage_port','diffusion_policy_port','feedback_wm_port','flow_reasoning','progress_ttt','guided_ttt','repair_flow_ttt','retrieval_repair_ttt','shifted_repair_ttt','progress_objective_ttt','bayesian_repair_ttt','nonlinear_repair_ttt') and used >= cap)))
 
     try:
         while (step < steps and used < cap) or validation_due():

@@ -86,7 +86,7 @@ def run(args):
             data_checks['previous_decision_causal_history_checked']=8
             data_checks['previous_retrieval_excludes_query_episode']=True
     world_hash_before={k:v.clone() for k,v in world.state_dict().items()}
-    loss,parts=model(batch,world,weight=0. if method in ('flow_reasoning','progress_ttt','guided_ttt','repair_flow_ttt','retrieval_repair_ttt','shifted_repair_ttt','progress_objective_ttt','bayesian_repair_ttt','nonlinear_repair_ttt') else 0.1);loss.backward()
+    loss,parts=model(batch,world,weight=0. if method in ('vanilla_action_flow','action_flow_search','sage_port','diffusion_policy_port','feedback_wm_port','flow_reasoning','progress_ttt','guided_ttt','repair_flow_ttt','retrieval_repair_ttt','shifted_repair_ttt','progress_objective_ttt','bayesian_repair_ttt','nonlinear_repair_ttt') else 0.1);loss.backward()
     assert torch.isfinite(loss) and all(p.grad is None for p in world.parameters())
     assert all(torch.equal(v,world_hash_before[k]) for k,v in world.state_dict().items())
     encoder=Encoder(c['encoder'],root,device)
@@ -95,6 +95,13 @@ def run(args):
         initial=f['initial_rgb'][:]
         goal=(torch.tensor(f['goal'][:],device=device).float()-bank.mean)/bank.std
     model.eval();controller=ControllerType(model,world,c,bank)
+    if method == 'feedback_wm_port':
+        # Populate feedback from a factual TRAIN action/outcome, not from an
+        # imagined policy rollout or a repeated image used for latency timing.
+        with torch.no_grad():
+            controller._predicted_next=world(batch['z'][0:1,0],batch['a'][0:1,0]).detach()
+            controller.observe(batch['z'][0:1,1])
+        data_checks['factual_train_feedback_exercised']=True
     if method in ('latent_revision','execution_revision','flow_reasoning','progress_ttt','guided_ttt','repair_flow_ttt','retrieval_repair_ttt','shifted_repair_ttt','progress_objective_ttt','bayesian_repair_ttt','nonlinear_repair_ttt'):
         history=model.factual_history(batch,world)
         # Training transitions only; exercise the populated memory path for

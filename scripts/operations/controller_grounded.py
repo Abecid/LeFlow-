@@ -173,7 +173,7 @@ def main(a):
         cmd=[sys.executable,'-m','torch.distributed.run','--nnodes=1',f'--nproc_per_node={a.gpus}',
              '--rdzv-backend=c10d','--rdzv-endpoint=127.0.0.1:0','-m','flow_jepa.execution.train',
              '--config',cfg,'--root',str(root),'--run-dir',str(run_dir),'--world',str(world),'--bank',bank]
-        if a.variant in ('repair_flow_ttt','retrieval_repair_ttt','shifted_repair_ttt','progress_objective_ttt','bayesian_repair_ttt','nonlinear_repair_ttt') and not (root/'ddp-check.json').exists():
+        if a.variant in ('vanilla_action_flow','action_flow_search','sage_port','diffusion_policy_port','feedback_wm_port','repair_flow_ttt','retrieval_repair_ttt','shifted_repair_ttt','progress_objective_ttt','bayesian_repair_ttt','nonlinear_repair_ttt') and not (root/'ddp-check.json').exists():
             status('no_update_distributed_gradient_check')
             check_cmd=cmd[:cmd.index('flow_jepa.execution.train')]+['flow_jepa.execution.ddp_check',
                 '--config',cfg,'--root',str(root),'--world',str(world),'--output',str(root/'ddp-check.json'),'--bank',bank]
