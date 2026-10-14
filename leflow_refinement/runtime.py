@@ -9,7 +9,8 @@ import time
 import torch
 from torch import Tensor
 
-from .core import PlannerOps, RefinementConfig, sample, select
+from .core import PlannerOps, RefinementConfig
+from .noise_search import noise_variants, plan as plan_candidates
 
 
 def sha256(path):
@@ -25,9 +26,9 @@ def synchronize(device):
         torch.cuda.synchronize(device)
 
 
-def variants():
+def variants(*, include_noise=False):
     """Fixed, untuned first comparison; equal flow work != equal total work."""
-    return {
+    result = {
         'leflow': RefinementConfig(mode='euler'),
         'more_samples': RefinementConfig(mode='euler', samples=96),
         'more_steps': RefinementConfig(mode='euler', steps=24),
@@ -35,6 +36,9 @@ def variants():
         'world_gradient': RefinementConfig(mode='gradient'),
         'world_pnp': RefinementConfig(mode='world_pnp'),
     }
+    if include_noise:
+        result.update(noise_variants())
+    return result
 
 
 class NativeRuntime:
@@ -112,11 +116,12 @@ class NativeRuntime:
         ops = self.ops(check)
         base_rng = torch.Generator(device=self.device).manual_seed(seed)
         perturb_rng = torch.Generator(device=self.device).manual_seed(seed + 1000000007)
-        paths = sample(start, goal, ops, cfg, initial_noise=initial_noise,
-                       generator=base_rng, perturb_generator=perturb_rng)
-        result = select(paths, ops)
+        result = plan_candidates(start, goal, ops, cfg, initial_noise=initial_noise,
+                                 generator=base_rng, perturb_generator=perturb_rng)
         synchronize(self.device)
         result['telemetry'] = dict(**ops.compute.as_dict(),
             planner_seconds=time.perf_counter()-started, configuration=asdict(cfg),
             initial_noise_seed=seed, perturbation_seed=seed+1000000007)
+        if 'noise_search' in result:
+            result['telemetry']['noise_search'] = result['noise_search']
         return result
