@@ -63,6 +63,10 @@ class Work:
     backward_calls: int = 0
     guided_candidates: int = 0
     refinement_rounds: int = 0
+    gradient_norm_sum: float = 0.0
+    gradient_tokens: int = 0
+    zero_gradient_tokens: int = 0
+    max_correction_l2: float = 0.0
     controller_ms: float = 0.0
 
     def as_dict(self) -> dict:
@@ -82,7 +86,8 @@ def _finite(x: Tensor, label: str) -> None:
 
 
 def correct_clean(clean: Tensor, start: Tensor, goal: Tensor, *,
-                  energy: Energy, config: RefinementConfig, work: Work) -> Tensor:
+                  energy: Energy, config: RefinementConfig, work: Work,
+                  check: Callable[[], None] | None = None) -> Tensor:
     """Bound each token's correction in L2; never train model parameters.
 
 Explicitly disable inference_mode as stable-worldmodel callers may enable it.
@@ -93,6 +98,7 @@ Microbatching bounds gradient memory. Energy must be candidate-independent.
         return clean
     results = []
     for lo in range(0, len(clean), config.guidance_batch_size):
+        if check is not None: check()
         hi = lo + config.guidance_batch_size
         with torch.inference_mode(False), torch.enable_grad():
             y = clean[lo:hi].detach().clone().requires_grad_(True)
@@ -109,6 +115,12 @@ Microbatching bounds gradient memory. Energy must be candidate-independent.
             results.append(updated.detach())
             work.backward_calls += 1
             work.guided_candidates += len(y)
+            work.gradient_norm_sum += float(norm.detach().sum())
+            work.gradient_tokens += norm.numel()
+            work.zero_gradient_tokens += int((norm.detach() == 0).sum())
+            work.max_correction_l2 = max(work.max_correction_l2,
+                                        float((updated-y).detach().norm(dim=-1).max()))
+        if check is not None: check()
     return torch.cat(results, dim=0)
 
 
@@ -126,6 +138,7 @@ def sample_interiors(
     energy: Energy | None = None,
     work: Work | None = None,
     initial_noise: Tensor | None = None,
+    check: Callable[[], None] | None = None,
 ) -> tuple[Tensor, Work]:
     """Return [B,N,H-1,D] interiors; zero refinement matches native Euler.
 
@@ -172,12 +185,14 @@ noise sampler/gradient corrector changes; fixed endpoints stay outside x.
         dt = 1.0 / flow_steps
 
         def velocity(state: Tensor, times: Tensor) -> Tensor:
+            if check is not None: check()
             value = flow(state, times, zs, zg)
             if value.shape != state.shape:
                 raise ValueError("flow velocity shape must equal path-interior shape")
             _finite(value, "flow velocity")
             work.flow_calls += 1
             work.flow_samples += q
+            if check is not None: check()
             return value
 
         for i in range(flow_steps):
@@ -188,7 +203,7 @@ noise sampler/gradient corrector changes; fixed endpoints stay outside x.
                 for _ in range(config.rounds):
                     clean = x + (1.0 - t) * v
                     if guided:
-                        clean = correct_clean(clean, zs, zg, energy=energy, config=config, work=work)
+                        clean = correct_clean(clean, zs, zg, energy=energy, config=config, work=work, check=check)
                     if stochastic:
                         noise = torch.randn(shape, device=x.device, dtype=x.dtype, generator=perturb_generator)
                         x = t * clean + (1.0 - t) * noise

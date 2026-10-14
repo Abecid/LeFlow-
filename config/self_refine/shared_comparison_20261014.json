@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "training_updates": 0,
+  "tasks": [
+    "pusht",
+    "cube"
+  ],
+  "seeds": [
+    3072
+  ],
+  "policy_seed": 3072,
+  "num_eval": 50,
+  "batch_size": 1,
+  "job_timeout_seconds": 900,
+  "methods": [
+    {
+      "name": "leflow",
+      "num_samples": 64,
+      "flow_steps": 16,
+      "refinement": {
+        "mode": "native"
+      }
+    },
+    {
+      "name": "leflow_more_samples",
+      "num_samples": 96,
+      "flow_steps": 16,
+      "refinement": {
+        "mode": "native"
+      }
+    },
+    {
+      "name": "leflow_more_steps",
+      "num_samples": 64,
+      "flow_steps": 24,
+      "refinement": {
+        "mode": "native"
+      }
+    },
+    {
+      "name": "pnp",
+      "num_samples": 64,
+      "flow_steps": 16,
+      "refinement": {
+        "mode": "pnp",
+        "indices": [
+          4,
+          8,
+          12,
+          14
+        ],
+        "rounds": 2
+      }
+    },
+    {
+      "name": "guidance_only",
+      "num_samples": 64,
+      "flow_steps": 16,
+      "refinement": {
+        "mode": "guidance",
+        "indices": [
+          4,
+          8,
+          12,
+          14
+        ],
+        "rounds": 2,
+        "radius": 0.05,
+        "consistency_weight": 0.1,
+        "guidance_batch_size": 64
+      }
+    },
+    {
+      "name": "guided_pnp",
+      "num_samples": 64,
+      "flow_steps": 16,
+      "refinement": {
+        "mode": "guided_pnp",
+        "indices": [
+          4,
+          8,
+          12,
+          14
+        ],
+        "rounds": 2,
+        "radius": 0.05,
+        "consistency_weight": 0.1,
+        "guidance_batch_size": 64
+      }
+    }
+  ],
+  "benchmark_family": "retained_crossbench_leflow",
+  "controller_seconds": 10.0,
+  "primitive_actions": 50,
+  "numerical_precision": {
+    "dtype": "float32",
+    "NVIDIA_TF32_OVERRIDE": "0",
+    "applies_to": "all six reference/refinement variants on both datasets",
+    "prior_PushT_reference_precision": "default cuDNN TF32 permitted; preserved as historical evidence"
+  }
+}

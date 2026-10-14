@@ -1,3 +1,18 @@
+# October14: execute the requested self-refinement transfer
+
+The latest user request authorizes the six inference-only P&P/world-feedback
+comparisons. Run twelve transfers on the existing immutable PushT/Cube LeFlow
+heads with50 original cases and50-actions/10-controller-seconds, zero optimizer
+updates, one case seed and all eight idle GPUs. Keep shared strict FP32 and
+registered batching/configurations. Read docs/SELF_REFINE_SHARED_RUN_20261014.md.
+Author checkpoints are unavailable; original four-task native-author results
+remain pending. No Reacher/TwoRoom training, old-baseline retraining, new seed,
+method tuning or sealed tests is implied. Preserve completed batches and publish
+all completed/failed new evidence from the reporting checkout. Freeze the launch
+runtime; never replay incomplete or completed cases without inspecting charges.
+
+Earlier status follows, superseded only for this explicit inference scope.
+
 <!-- native-crossbench-current:start -->
 # Native campaign operational status
 
