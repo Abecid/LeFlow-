@@ -151,7 +151,7 @@ def run(args):
         names = list(variants()) if args.variant == 'all' else [args.variant]
         reports=[]
         for name in names:
-            refinement = variants()[name]
+            refinement = variants(include_noise=True)[name]
             identity = jsonable(dict(protocol='native-swm-validation-refinement-v1',task=args.task,
                 split_file_sha256=sha256(args.split_file),validation_episode_ids=allowed,
                 native_execution=OmegaConf.to_container(cfg.plan_config,resolve=True),
@@ -205,7 +205,7 @@ def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--task',choices=('pusht','cube','tworoom','reacher'),required=True)
     for k in ('source','split-file','checkpoint','world-checkpoint','output'):p.add_argument('--'+k,required=True)
-    p.add_argument('--variant',choices=('all',*variants()),default='all')
+    p.add_argument('--variant',choices=('all',*variants(include_noise=True)),default='all')
     p.add_argument('--cases',type=int,default=50);p.add_argument('--seed',type=int,default=42)
     p.add_argument('--device',default='cuda:0');p.add_argument('--cpu-threads',type=int,default=1)
     p.add_argument('--legacy-unbounded',action='store_true',help='Explicit native legacy unclipped scoring control')
