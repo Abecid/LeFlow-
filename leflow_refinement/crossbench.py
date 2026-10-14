@@ -12,7 +12,8 @@ from pathlib import Path
 
 import torch
 
-from .core import PlannerOps, RefinementConfig, sample, select
+from .core import PlannerOps
+from .noise_search import plan as plan_candidates
 from .runtime import variants
 
 
@@ -45,11 +46,12 @@ class RefinementController:
         # Match legacy LeFlow's GLOBAL initial-noise stream exactly. Dedicated
         # perturbation stream cannot consume the next decision's initial pool.
         perturb = torch.Generator(device=z.device).manual_seed(torch.initial_seed()+1000000007+self.decisions)
-        paths = sample(z[:, 0], goal[:, 0], ops, self.cfg, perturb_generator=perturb)
-        out = select(paths, ops)
+        out = plan_candidates(z[:, 0], goal[:, 0], ops, self.cfg, perturb_generator=perturb)
         self.trace.append(dict(**ops.compute.as_dict(), local_cost=float(out['costs'][0]),
                                selected_index=int(out['selected_indices'][0]),
                                refinement=asdict(self.cfg)))
+        if 'noise_search' in out:
+            self.trace[-1]['noise_search'] = out['noise_search']
         self.decisions += 1
         return out['actions'][0, 0]
 
@@ -136,10 +138,10 @@ def main():
     p = argparse.ArgumentParser(description=__doc__)
     for name in ('cache', 'checkpoint', 'output'):
         p.add_argument('--'+name, required=True)
-    p.add_argument('--variant', choices=tuple(variants()), default='world_pnp')
+    p.add_argument('--variant', choices=tuple(variants(include_noise=True)), default='world_pnp')
     p.add_argument('--device', default='cuda:0')
     a = p.parse_args()
-    print(json.dumps(evaluate(a.cache, a.checkpoint, a.output, variants()[a.variant],
+    print(json.dumps(evaluate(a.cache, a.checkpoint, a.output, variants(include_noise=True)[a.variant],
                              device=a.device)['metrics'], indent=2))
 
 
