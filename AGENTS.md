@@ -1,3 +1,23 @@
+# October14 noise-search comparison completed; no further launches authorized
+
+All12 noise-search transfers completed600 physical cases on retained LeFlow
+heads. PushT/Cube results: CEM9/41, shellCEM10/39, sequentialrandom12/40,
+shellrandom15/39, best-of19213/36, shellbest-of19211/39; reference12/40 reused.
+All185 CPU checks and both real-TRAIN gates passed. Source f75fb375/271files
+remained frozen; all reported policy/world fingerprints equal, zero optimizer
+updates and controller timeouts,12 finished W&B runs, no owned process remains.
+Coordinator381032/start1028628113 exited: never revive it or replay these cases.
+Read docs/NOISE_CEM_SHARED_RESULTS_20261014.md and failure analysis, separate
+noise-cem-shared-ledger.json. Stronger surrogate optimization did not yield a
+reliable success-compute improvement. Preserve negative outcomes, all raw reports
+and600 server trajectory hashes; do not claim an unperformed visual review.
+Original author-native four-task comparison remains pending checkpoint access.
+No new methods, training, seeds, sweeps, ablations, sealed tests or missing-head
+training are authorized. All old16 baseline,12 P&P and MetaWorld evidence stays
+unchanged. Complete final publication and verify remote bytes.
+
+Earlier status follows, superseded by this completed batch.
+
 # October14: execute the explicitly requested noise-space CEM comparison
 
 The user now authorizes all six implemented noise-search variants on the retained

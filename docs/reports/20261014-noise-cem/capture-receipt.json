@@ -1,5 +1,5 @@
 {
-  "utc": "2026-10-14T08:27:41.585190+00:00",
+  "utc": "2026-10-14T08:30:55.708440+00:00",
   "files": {
     "launcher.json": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/launcher.json",
@@ -18,8 +18,18 @@
     },
     "status.json": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/status.json",
-      "original_sha256": "3de7791cb7e94e1fff77da29d7b6bbf624d290c01abde43c0447542b9c44e080",
-      "stored_sha256": "3de7791cb7e94e1fff77da29d7b6bbf624d290c01abde43c0447542b9c44e080"
+      "original_sha256": "7122fcaf02d34ef815f6b2aa4e55f52218e8ed4007398868b455daa5678d634a",
+      "stored_sha256": "7122fcaf02d34ef815f6b2aa4e55f52218e8ed4007398868b455daa5678d634a"
+    },
+    "complete.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/complete.json",
+      "original_sha256": "2211d6844183b148fa3d0e0e088f66764ff0362c31f3aef0a8d4e37d5daf25cb",
+      "stored_sha256": "2211d6844183b148fa3d0e0e088f66764ff0362c31f3aef0a8d4e37d5daf25cb"
+    },
+    "final-audit.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/final-audit.json",
+      "original_sha256": "2db94eb2b013de236de343e3c9fbb574c12e596beb7f47ecab9b9be29085fbb0",
+      "stored_sha256": "2db94eb2b013de236de343e3c9fbb574c12e596beb7f47ecab9b9be29085fbb0"
     },
     "runtime-files.json": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/runtime-files.json",
@@ -30,6 +40,11 @@
       "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/allocation.json",
       "original_sha256": "bf2b0d5227d0d0ee1ffb475a3fa01d577376f6ef75cde54fa4ae254f975de5f5",
       "stored_sha256": "bf2b0d5227d0d0ee1ffb475a3fa01d577376f6ef75cde54fa4ae254f975de5f5"
+    },
+    "trajectory-inventory.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/trajectory-inventory.json",
+      "original_sha256": "960143507da6da6259609a20e4366394afe529880a1fae9838dfea10a1e35c60",
+      "stored_sha256": "960143507da6da6259609a20e4366394afe529880a1fae9838dfea10a1e35c60"
     },
     "preflight/cube.json": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/preflight/cube.json",
@@ -103,8 +118,8 @@
     },
     "logs/pusht-noise_bon192_shell.log.gz": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/logs/pusht-noise_bon192_shell.log",
-      "original_sha256": "024364f33aa8214fa75da542d8a512409b081e8c01af9b4471b1fe66175ff0e0",
-      "stored_sha256": "4c4ca88d55ca18c5b88b7d58e476721ff1584d1a2f1ef982e13abee0dd4ffb17"
+      "original_sha256": "9952f8802a976b47fdfc1765098209f8def695e0904bf68b014d2ca31a748a49",
+      "stored_sha256": "c7443d313f2694debfaa36e4ed3a7f5b506d8c54fbdd68cd0fec44d7b3fda58d"
     },
     "logs/pusht-noise_cem.log.gz": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/logs/pusht-noise_cem.log",

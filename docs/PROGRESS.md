@@ -1,3 +1,23 @@
+## October14 — all six noise-space search variants evaluated
+
+All12 inference jobs completed600 cases on8 A800 GPUs with185 CPU checks and
+both real-TRAIN GPU gates passed. Unprojected CEM9/50 PushT,41/50 Cube; shell
+CEM10/39. Retained reference12/40; matched random12/40 and shellrandom15/39.
+One-batch192 controls13/36 and shell11/39. Zero optimizer updates/timeouts,
+unchanged policy/world fingerprints and271 frozen source files; all12 W&B runs
+finished and coordinator381032 exited with no owned process. Measured simulator
+evaluation durations sum to1844.150241 single-GPU process-seconds
+(0.512263956 GPUh); this excludes loading, preflight, waiting and online
+log sync, is not optimizer compute and is not a complete cluster bill.
+
+CEM reduces its surrogate more strongly but does not provide a reliable task
+success-compute improvement. All old baseline results remain byte-identical.
+[Full results](NOISE_CEM_SHARED_RESULTS_20261014.md), [failure analysis](NOISE_CEM_SHARED_FAILURE_ANALYSIS_20261014.md),
+[ledger](noise-cem-shared-ledger.json), [final audit](reports/20261014-noise-cem/final-audit.json).
+All600 trajectory archives are retained/hash-inventoried on the server; first10
+per run are archived in Git. No new figure was rendered or claimed inspected.
+Original author-native planner weights remain unavailable; no extra run queued.
+
 ## October14 — requested noise-search inference comparison launched
 
 Source f75fb375a950f39cad2c51347d67230694cd2dea.185 CPU checks and both

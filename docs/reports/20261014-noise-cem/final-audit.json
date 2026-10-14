@@ -1,0 +1,205 @@
+{
+  "all_600_trajectories_stored_and_hashed": true,
+  "completed_jobs": [
+    {
+      "cases": 50,
+      "frozen_state_equal": true,
+      "method": "noise_random_shell",
+      "report_sha256": "c689d1d16d255459e08db51d314136bdfa55a2a14855e32068d1a455598df235",
+      "successes": 15,
+      "task": "pusht",
+      "timeouts": 0,
+      "wall_seconds": 73.40608007088304,
+      "wandb": {
+        "id": "zjbr3fjm",
+        "url": "https://wandb.ai/attentionx2023/leflow-noise-search/runs/zjbr3fjm"
+      }
+    },
+    {
+      "cases": 50,
+      "frozen_state_equal": true,
+      "method": "noise_cem_shell",
+      "report_sha256": "2c65a3eaa4baca0b6b498bf12d9592c6407fb63362a60b7db4d395f960c0876d",
+      "successes": 10,
+      "task": "pusht",
+      "timeouts": 0,
+      "wall_seconds": 76.58948702923954,
+      "wandb": {
+        "id": "q46t4fap",
+        "url": "https://wandb.ai/attentionx2023/leflow-noise-search/runs/q46t4fap"
+      }
+    },
+    {
+      "cases": 50,
+      "frozen_state_equal": true,
+      "method": "noise_cem",
+      "report_sha256": "dc29281cdc6afd74f325748036255d34a4d79ad6cc2ca1fe0fcc37cdaef1c5fe",
+      "successes": 41,
+      "task": "cube",
+      "timeouts": 0,
+      "wall_seconds": 236.2206026110798,
+      "wandb": {
+        "id": "xf5lrm4j",
+        "url": "https://wandb.ai/attentionx2023/leflow-noise-search/runs/xf5lrm4j"
+      }
+    },
+    {
+      "cases": 50,
+      "frozen_state_equal": true,
+      "method": "noise_random",
+      "report_sha256": "6647c5fcf72e291072da68f7d146e751b977a69116d6faf4d371d5913cd3b4a4",
+      "successes": 40,
+      "task": "cube",
+      "timeouts": 0,
+      "wall_seconds": 242.86155165731907,
+      "wandb": {
+        "id": "pve9ryf5",
+        "url": "https://wandb.ai/attentionx2023/leflow-noise-search/runs/pve9ryf5"
+      }
+    },
+    {
+      "cases": 50,
+      "frozen_state_equal": true,
+      "method": "noise_random_shell",
+      "report_sha256": "8ae6db2d9c7028e508f1136874c134080d54bb08a0717a8303ee9b0f7898f4a5",
+      "successes": 39,
+      "task": "cube",
+      "timeouts": 0,
+      "wall_seconds": 244.9082598350942,
+      "wandb": {
+        "id": "oykbzfbr",
+        "url": "https://wandb.ai/attentionx2023/leflow-noise-search/runs/oykbzfbr"
+      }
+    },
+    {
+      "cases": 50,
+      "frozen_state_equal": true,
+      "method": "noise_random",
+      "report_sha256": "12f13e3e5ae604d727a42b63218c9143b446cc217b81d9f6d6987cfb6ed1864c",
+      "successes": 12,
+      "task": "pusht",
+      "timeouts": 0,
+      "wall_seconds": 72.40150821208954,
+      "wandb": {
+        "id": "s3r8qrg2",
+        "url": "https://wandb.ai/attentionx2023/leflow-noise-search/runs/s3r8qrg2"
+      }
+    },
+    {
+      "cases": 50,
+      "frozen_state_equal": true,
+      "method": "noise_bon192",
+      "report_sha256": "6eb36af003b40eba9b7083ada64015eca96504846f059ab1824010ccc3dd09ea",
+      "successes": 13,
+      "task": "pusht",
+      "timeouts": 0,
+      "wall_seconds": 40.81722734682262,
+      "wandb": {
+        "id": "1knzmm32",
+        "url": "https://wandb.ai/attentionx2023/leflow-noise-search/runs/1knzmm32"
+      }
+    },
+    {
+      "cases": 50,
+      "frozen_state_equal": true,
+      "method": "noise_cem_shell",
+      "report_sha256": "18c647ba8ff261957ffc27826ebc420c89a2b5615fc8971f7586c9f8df65239b",
+      "successes": 39,
+      "task": "cube",
+      "timeouts": 0,
+      "wall_seconds": 247.08864920586348,
+      "wandb": {
+        "id": "vs93ob1b",
+        "url": "https://wandb.ai/attentionx2023/leflow-noise-search/runs/vs93ob1b"
+      }
+    },
+    {
+      "cases": 50,
+      "frozen_state_equal": true,
+      "method": "noise_bon192",
+      "report_sha256": "25f96cf4ad2b6e2430fce441422e6cc86cd8b34d5fa7508c18fbb707b3847909",
+      "successes": 36,
+      "task": "cube",
+      "timeouts": 0,
+      "wall_seconds": 247.94240630976856,
+      "wandb": {
+        "id": "xnuw5jbx",
+        "url": "https://wandb.ai/attentionx2023/leflow-noise-search/runs/xnuw5jbx"
+      }
+    },
+    {
+      "cases": 50,
+      "frozen_state_equal": true,
+      "method": "noise_cem",
+      "report_sha256": "29d5974ae32477f539686edd7dc0400d9d85d578c391cc663d20ed4ef5f913c5",
+      "successes": 9,
+      "task": "pusht",
+      "timeouts": 0,
+      "wall_seconds": 77.54260839521885,
+      "wandb": {
+        "id": "nn4teb80",
+        "url": "https://wandb.ai/attentionx2023/leflow-noise-search/runs/nn4teb80"
+      }
+    },
+    {
+      "cases": 50,
+      "frozen_state_equal": true,
+      "method": "noise_bon192_shell",
+      "report_sha256": "97c9297a7e050532920782a819471ac2f6da2b10dfe54f3b3a91c2b7d68fa23f",
+      "successes": 39,
+      "task": "cube",
+      "timeouts": 0,
+      "wall_seconds": 243.992327734828,
+      "wandb": {
+        "id": "5awh54fl",
+        "url": "https://wandb.ai/attentionx2023/leflow-noise-search/runs/5awh54fl"
+      }
+    },
+    {
+      "cases": 50,
+      "frozen_state_equal": true,
+      "method": "noise_bon192_shell",
+      "report_sha256": "522671be968423079d4f46382bed96d8decd827272538f4c2548d72832cb0d55",
+      "successes": 11,
+      "task": "pusht",
+      "timeouts": 0,
+      "wall_seconds": 40.37953269481659,
+      "wandb": {
+        "id": "lzyjdr9b",
+        "url": "https://wandb.ai/attentionx2023/leflow-noise-search/runs/lzyjdr9b"
+      }
+    }
+  ],
+  "optimizer_updates": 0,
+  "owned_processes": [],
+  "physical_cases": 600,
+  "runtime_files_verified": 271,
+  "runtime_source": "f75fb375a950f39cad2c51347d67230694cd2dea",
+  "status": "completed",
+  "utc": "2026-10-14T08:29:33.654449+00:00",
+  "versions": {
+    "dm-control": "1.0.34",
+    "mujoco": "3.3.7",
+    "numpy": "2.2.6",
+    "ogbench": "1.2.0",
+    "stable-worldmodel": "0.0.6",
+    "torch": "2.8.0+cu126",
+    "torchvision": "0.23.0+cu126",
+    "wandb": "0.22.3"
+  },
+  "visual_review_claimed": false,
+  "wandb_states": {
+    "1knzmm32": "finished",
+    "5awh54fl": "finished",
+    "lzyjdr9b": "finished",
+    "nn4teb80": "finished",
+    "oykbzfbr": "finished",
+    "pve9ryf5": "finished",
+    "q46t4fap": "finished",
+    "s3r8qrg2": "finished",
+    "vs93ob1b": "finished",
+    "xf5lrm4j": "finished",
+    "xnuw5jbx": "finished",
+    "zjbr3fjm": "finished"
+  }
+}

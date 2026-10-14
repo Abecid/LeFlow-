@@ -5,9 +5,7 @@
       "state": "completed"
     },
     "1": {
-      "method": "noise_bon192_shell",
-      "state": "running",
-      "task": "pusht"
+      "state": "completed"
     },
     "2": {
       "state": "completed"
@@ -140,8 +138,18 @@
       "returncode": 0,
       "successes": 39,
       "task": "cube"
+    },
+    {
+      "completed": "2026-10-14T08:29:01.932790+00:00",
+      "evaluation_wall_seconds": 40.37953269481659,
+      "gpu": "1",
+      "job_wall_seconds": 427.89676237106323,
+      "method": "noise_bon192_shell",
+      "returncode": 0,
+      "successes": 11,
+      "task": "pusht"
     }
   ],
   "source": "f75fb375a950f39cad2c51347d67230694cd2dea",
-  "utc": "2026-10-14T08:26:37.436233+00:00"
+  "utc": "2026-10-14T08:29:01.946273+00:00"
 }
