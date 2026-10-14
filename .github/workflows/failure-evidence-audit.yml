@@ -1,0 +1,69 @@
+name: Read-only failure evidence audit
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/failure-evidence-audit.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  evidence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: 9f2e440f0b0fe2e6e5783a6c84ca2ef1f5c34dc4
+          filter: blob:none
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /*.py
+            /AGENTS.md
+            /crossbench/
+            /leflow_refinement/
+            /self_refine/
+            /flow_jepa/
+            /btm_jepa/
+            /config/
+            /tests/
+            /docs/*.md
+            /docs/*.json
+            /docs/reports/20261013-crossbench-baselines/runs/*/leflow/
+            /docs/reports/20261013-crossbench-baselines/cache/
+            /docs/reports/20261014-noise-cem/
+            /docs/reports/20261014-self-refine/
+            !**/selected-trajectories/*.npz
+            **/selected-trajectories/00000.npz
+            **/selected-trajectories/00001.npz
+      - name: Archive existing evidence only (no training or simulation)
+        shell: bash
+        run: |
+          python - <<'PY'
+          import gzip, hashlib, json, pathlib, subprocess, zipfile
+          root=pathlib.Path('.')
+          commit=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip()
+          assert commit=='9f2e440f0b0fe2e6e5783a6c84ca2ef1f5c34dc4'
+          files=[]
+          for base in ('crossbench','leflow_refinement','self_refine','flow_jepa','btm_jepa','config','tests','docs'):
+              for p in sorted((root/base).rglob('*')):
+                  if p.is_file() and p.suffix in {'.py','.md','.json','.jsonl','.gz','.yaml','.yml','.npz'}:
+                      if p.stat().st_size<8*1024*1024: files.append(p)
+          files.extend(sorted(root.glob('*.py')))
+          files.append(root/'AGENTS.md')
+          summary={'source_commit':commit,'kind':'existing_artifacts_only','optimizer_updates':0,'simulator_steps':0,'training_curves':{},'files':{}}
+          for p in files:
+              summary['files'][str(p)]=hashlib.sha256(p.read_bytes()).hexdigest()
+              if p.name=='metrics.jsonl.gz':
+                  records=[json.loads(x) for x in gzip.decompress(p.read_bytes()).decode().splitlines() if x.strip()]
+                  summary['training_curves'][str(p)]={'rows':len(records),'milestones':[r for r in records if r.get('step') in (1,1000,5000,10000,15000,20000)]}
+          with zipfile.ZipFile('failure-evidence.zip','w',zipfile.ZIP_DEFLATED) as z:
+              for p in files:z.write(p,str(p))
+              z.writestr('AUDIT_EXPORT.json',json.dumps(summary,indent=2))
+          print(json.dumps({k:v for k,v in summary.items() if k!='files'},indent=2))
+          print('EXPORTED_FILES',len(files),'BYTES',pathlib.Path('failure-evidence.zip').stat().st_size)
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: immutable-failure-evidence-9f2e440
+          path: failure-evidence.zip
+          retention-days: 14
