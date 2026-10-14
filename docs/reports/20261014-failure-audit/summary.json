@@ -1,0 +1,116 @@
+{
+  "audited_source": "9f2e440f0b0fe2e6e5783a6c84ca2ef1f5c34dc4",
+  "audit_script_commit": "43797a45b105824513a00ca4e1de150ccdbba653",
+  "scope": "Existing records and CPU graph/numerical checks. No new learned-policy or simulator execution.",
+  "new_optimizer_updates": 0,
+  "new_simulator_steps": 0,
+  "archive_files_sha256_verified": 856,
+  "archive_hash_mismatches": 0,
+  "validated_inference_reports": 24,
+  "existing_physical_cases": 1200,
+  "recorded_controller_timeouts": 0,
+  "cpu_tests": {
+    "passed": 185,
+    "subtests_passed": 10,
+    "failed": 0,
+    "scope": "Synthetic sampler/adapter/protocol regressions, not trained control accuracy"
+  },
+  "selected_heads": [
+    {
+      "dataset": "pusht",
+      "selected_step": 5000,
+      "final_step": 20000,
+      "selected_successes": 12,
+      "eligible_starts": 1439235,
+      "selected_training_draws": 320000,
+      "selected_draws_per_eligible_start": 0.2223403405281278,
+      "final_training_draws": 1280000,
+      "final_draws_per_eligible_start": 0.8893613621125112,
+      "interpretation": "Draw-count ratio, not distinct coverage or an epoch: sampling is episode-uniform with replacement.",
+      "optimization_gpu_hours": 0.769966474690785
+    },
+    {
+      "dataset": "cube",
+      "selected_step": 10000,
+      "final_step": 20000,
+      "selected_successes": 40,
+      "eligible_starts": 1408000,
+      "selected_training_draws": 640000,
+      "selected_draws_per_eligible_start": 0.45454545454545453,
+      "final_training_draws": 1280000,
+      "final_draws_per_eligible_start": 0.9090909090909091,
+      "interpretation": "Draw-count ratio, not distinct coverage or an epoch: sampling is episode-uniform with replacement.",
+      "optimization_gpu_hours": 0.7561598268420332
+    }
+  ],
+  "consistency_graph": {
+    "source": "crossbench/models.py::LeFlowPolicy.loss",
+    "source_sha256": "e27974d61cbac9739afb6245a0c924e048bbd0e5a607700d001ef9c9bd5b59ea",
+    "scope": "Exact loss graph, synthetic frozen dynamics; no learned checkpoint or physical trial.",
+    "flow_parameter_tensors": 63,
+    "flow_tensors_connected_to_consistency": 0,
+    "inverse_parameter_tensors": 14,
+    "inverse_tensors_connected_to_consistency": 14,
+    "inverse_nonzero_consistency_gradient_tensors": 14,
+    "frozen_world_has_parameter_gradients": false,
+    "forward_context_in_consistency": "One encoded state per independent transition, rather than the three-state history used by inference after warmup.",
+    "conclusion": "This loss regularizes the inverse decoder on recorded paths. It does not train the flow generator with dynamics feedback."
+  },
+  "illustrative_case": {
+    "case_id": "pusht/val/0002481/000039",
+    "rows": [
+      {
+        "method": "pusht-leflow",
+        "report": "docs/reports/20261014-self-refine/jobs/pusht-leflow/report.json.gz",
+        "success": true,
+        "actions": 43,
+        "first_decision_selected_terminal_mse": 0.019084390252828598,
+        "first_decision_observed_prefix_goal_mse": 0.3963240385055542,
+        "first_decision_observed_prefix_prediction_mse": 0.009745405055582523
+      },
+      {
+        "method": "pusht-guided_pnp",
+        "report": "docs/reports/20261014-self-refine/jobs/pusht-guided_pnp/report.json.gz",
+        "success": false,
+        "actions": 50,
+        "first_decision_selected_terminal_mse": 0.038347695022821426,
+        "first_decision_observed_prefix_goal_mse": 0.3809293210506439,
+        "first_decision_observed_prefix_prediction_mse": 0.00775641854852438
+      },
+      {
+        "method": "pusht-noise_cem",
+        "report": "docs/reports/20261014-noise-cem/jobs/pusht-noise_cem/report.json.gz",
+        "success": false,
+        "actions": 50,
+        "first_decision_selected_terminal_mse": 0.017633726820349693,
+        "first_decision_observed_prefix_goal_mse": 0.4038296639919281,
+        "first_decision_observed_prefix_prediction_mse": 0.005680405534803867
+      },
+      {
+        "method": "pusht-noise_random",
+        "report": "docs/reports/20261014-noise-cem/jobs/pusht-noise_random/report.json.gz",
+        "success": true,
+        "actions": 23,
+        "first_decision_selected_terminal_mse": 0.019084390252828598,
+        "first_decision_observed_prefix_goal_mse": 0.3963240385055542,
+        "first_decision_observed_prefix_prediction_mse": 0.009745405055582523
+      }
+    ],
+    "interpretation": "These are complete closed-loop policy outcomes. They do not isolate the causal effect of the first action because later replanning differs."
+  },
+  "visual_review": {
+    "case_ids": ["pusht/val/0002481/000039", "pusht/val/0002980/000149"],
+    "methods_each": ["pusht-leflow", "pusht-guidance_only", "pusht-guided_pnp", "pusht-noise_cem", "pusht-noise_random"],
+    "images": [
+      {"name": "case-00000.png", "sha256": "ad9abc4d06801fb21317bcf091ab1260530a35e768fbf4a160d6820523db7bc4"},
+      {"name": "case-00001.png", "sha256": "4cc8862a76f78b428fd01f50f5add5eb6c4f07adad545ae694d43ed6cabf99a3"}
+    ],
+    "scope": "Two fixed cases, five saved controller trajectories each, six archived frames and goal per row. Not a representative or complete visual review."
+  },
+  "limitations": [
+    "No dataset/checkpoint replay: trained policy weights and source HDF5 data were not in the exported repository evidence.",
+    "Across-trajectory cost/error medians are descriptive, not matched counterfactual accuracy measurements.",
+    "Absence of a flow consistency gradient is also present in the inspected upstream LeFlow training code; not an isolated explanation of our reproduction gap."
+  ],
+  "inference": "Shared base-policy/decoder quality and score-versus-execution mismatch are higher-priority diagnostics than another sampler. No single causal implementation bug established."
+}
