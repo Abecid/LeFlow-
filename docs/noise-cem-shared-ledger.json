@@ -4,17 +4,31 @@
   "completed": [
     {
       "task": "pusht",
-      "method": "noise_random_shell",
-      "successes": 15,
+      "method": "noise_bon192",
+      "successes": 13,
       "timeouts": 0,
-      "mean_decision_ms": 144.92719272177106,
-      "world_transitions": 420480,
+      "mean_decision_ms": 66.70465075876564,
+      "world_transitions": 445440,
       "checkpoint_sha256": "58dbf57a03672617ad1c55473d16fbf28f91e7826455af8d0de41b62d23eb310",
       "cases_sha256": "a62c270d5eacc70298036457d85a025d9fd46a566dca12204f0bd53dda4c493a",
       "optimizer_updates": 0,
-      "report": "docs/reports/20261014-noise-cem/jobs/pusht-noise_random_shell/report.json.gz",
-      "report_original_sha256": "c689d1d16d255459e08db51d314136bdfa55a2a14855e32068d1a455598df235",
-      "wall_seconds": 73.40608007088304
+      "report": "docs/reports/20261014-noise-cem/jobs/pusht-noise_bon192/report.json.gz",
+      "report_original_sha256": "6eb36af003b40eba9b7083ada64015eca96504846f059ab1824010ccc3dd09ea",
+      "wall_seconds": 40.81722734682262
+    },
+    {
+      "task": "pusht",
+      "method": "noise_cem",
+      "successes": 9,
+      "timeouts": 0,
+      "mean_decision_ms": 143.0466841093375,
+      "world_transitions": 453120,
+      "checkpoint_sha256": "58dbf57a03672617ad1c55473d16fbf28f91e7826455af8d0de41b62d23eb310",
+      "cases_sha256": "a62c270d5eacc70298036457d85a025d9fd46a566dca12204f0bd53dda4c493a",
+      "optimizer_updates": 0,
+      "report": "docs/reports/20261014-noise-cem/jobs/pusht-noise_cem/report.json.gz",
+      "report_original_sha256": "29d5974ae32477f539686edd7dc0400d9d85d578c391cc663d20ed4ef5f913c5",
+      "wall_seconds": 77.54260839521885
     },
     {
       "task": "pusht",
@@ -29,9 +43,75 @@
       "report": "docs/reports/20261014-noise-cem/jobs/pusht-noise_cem_shell/report.json.gz",
       "report_original_sha256": "2c65a3eaa4baca0b6b498bf12d9592c6407fb63362a60b7db4d395f960c0876d",
       "wall_seconds": 76.58948702923954
+    },
+    {
+      "task": "pusht",
+      "method": "noise_random",
+      "successes": 12,
+      "timeouts": 0,
+      "mean_decision_ms": 142.33546717539093,
+      "world_transitions": 424320,
+      "checkpoint_sha256": "58dbf57a03672617ad1c55473d16fbf28f91e7826455af8d0de41b62d23eb310",
+      "cases_sha256": "a62c270d5eacc70298036457d85a025d9fd46a566dca12204f0bd53dda4c493a",
+      "optimizer_updates": 0,
+      "report": "docs/reports/20261014-noise-cem/jobs/pusht-noise_random/report.json.gz",
+      "report_original_sha256": "12f13e3e5ae604d727a42b63218c9143b446cc217b81d9f6d6987cfb6ed1864c",
+      "wall_seconds": 72.40150821208954
+    },
+    {
+      "task": "pusht",
+      "method": "noise_random_shell",
+      "successes": 15,
+      "timeouts": 0,
+      "mean_decision_ms": 144.92719272177106,
+      "world_transitions": 420480,
+      "checkpoint_sha256": "58dbf57a03672617ad1c55473d16fbf28f91e7826455af8d0de41b62d23eb310",
+      "cases_sha256": "a62c270d5eacc70298036457d85a025d9fd46a566dca12204f0bd53dda4c493a",
+      "optimizer_updates": 0,
+      "report": "docs/reports/20261014-noise-cem/jobs/pusht-noise_random_shell/report.json.gz",
+      "report_original_sha256": "c689d1d16d255459e08db51d314136bdfa55a2a14855e32068d1a455598df235",
+      "wall_seconds": 73.40608007088304
     }
   ],
   "paired": [
+    {
+      "task": "pusht",
+      "method": "noise_bon192",
+      "wins": [
+        "pusht/val/0016443/000071",
+        "pusht/val/0000787/000018",
+        "pusht/val/0017853/000087",
+        "pusht/val/0005771/000018",
+        "pusht/val/0010550/000017",
+        "pusht/val/0005467/000003"
+      ],
+      "regressions": [
+        "pusht/val/0002481/000039",
+        "pusht/val/0003251/000029",
+        "pusht/val/0003692/000081",
+        "pusht/val/0016846/000004",
+        "pusht/val/0015059/000049"
+      ]
+    },
+    {
+      "task": "pusht",
+      "method": "noise_cem",
+      "wins": [
+        "pusht/val/0016443/000071",
+        "pusht/val/0007590/000025",
+        "pusht/val/0010690/000117",
+        "pusht/val/0017853/000087"
+      ],
+      "regressions": [
+        "pusht/val/0002481/000039",
+        "pusht/val/0003251/000029",
+        "pusht/val/0016217/000024",
+        "pusht/val/0003692/000081",
+        "pusht/val/0015059/000049",
+        "pusht/val/0015025/000018",
+        "pusht/val/0002301/000099"
+      ]
+    },
     {
       "task": "pusht",
       "method": "noise_cem_shell",
@@ -50,6 +130,20 @@
         "pusht/val/0015059/000049",
         "pusht/val/0015025/000018",
         "pusht/val/0002301/000099"
+      ]
+    },
+    {
+      "task": "pusht",
+      "method": "noise_random",
+      "wins": [
+        "pusht/val/0010690/000117",
+        "pusht/val/0005771/000018",
+        "pusht/val/0017254/000000"
+      ],
+      "regressions": [
+        "pusht/val/0003692/000081",
+        "pusht/val/0015059/000049",
+        "pusht/val/0015025/000018"
       ]
     },
     {
@@ -73,6 +167,24 @@
   "matched_random_comparisons": [
     {
       "task": "pusht",
+      "candidate": "noise_cem",
+      "control": "noise_random",
+      "wins": [
+        "pusht/val/0016443/000071",
+        "pusht/val/0007590/000025",
+        "pusht/val/0017853/000087"
+      ],
+      "regressions": [
+        "pusht/val/0002481/000039",
+        "pusht/val/0003251/000029",
+        "pusht/val/0016217/000024",
+        "pusht/val/0005771/000018",
+        "pusht/val/0002301/000099",
+        "pusht/val/0017254/000000"
+      ]
+    },
+    {
+      "task": "pusht",
       "candidate": "noise_cem_shell",
       "control": "noise_random_shell",
       "wins": [
@@ -90,10 +202,30 @@
         "pusht/val/0002301/000099",
         "pusht/val/0017254/000000"
       ]
+    },
+    {
+      "task": "pusht",
+      "candidate": "noise_cem",
+      "control": "noise_bon192",
+      "wins": [
+        "pusht/val/0007590/000025",
+        "pusht/val/0010690/000117",
+        "pusht/val/0016846/000004"
+      ],
+      "regressions": [
+        "pusht/val/0016217/000024",
+        "pusht/val/0000787/000018",
+        "pusht/val/0015025/000018",
+        "pusht/val/0005771/000018",
+        "pusht/val/0010550/000017",
+        "pusht/val/0005467/000003",
+        "pusht/val/0002301/000099"
+      ]
     }
   ],
   "optimizer_updates": 0,
   "expected_runs": 12,
+  "processes_exited_after_logging": 2,
   "native_author_rows_pending": [
     "reacher",
     "tworoom"
