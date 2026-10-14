@@ -5,7 +5,7 @@ def add(name,path,zip=False):
  if not path.exists():return
  raw=path.read_bytes();data=gzip.compress(raw,mtime=0)if zip else raw;items[name]=data
  receipt[name]={'source':str(path),'original_sha256':hashlib.sha256(raw).hexdigest(),'stored_sha256':hashlib.sha256(data).hexdigest()}
-for n in ['launcher.json','registration.json','status.json','complete.json','runtime-files.json','allocation.json','batching-pusht.json','batching-cube.json','batching-validation-history.json']:
+for n in ['launcher.json','registration.json','status.json','complete.json','final-audit.json','runtime-files.json','allocation.json','batching-pusht.json','batching-cube.json','batching-validation-history.json']:
  add(n,B/n)
 for p in (B/'preflight').glob('*.json'):add('preflight/'+p.name,p)
 for p in (B/'logs').glob('*.log'):add('logs/'+p.name+'.gz',p,True)

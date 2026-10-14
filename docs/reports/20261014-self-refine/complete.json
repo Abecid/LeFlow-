@@ -1,0 +1,127 @@
+{
+  "all_twelve_completed": true,
+  "optimizer_updates": 0,
+  "results": [
+    {
+      "completed": "2026-10-14T06:25:55.320336+00:00",
+      "evaluation_wall_seconds": 33.30019747465849,
+      "gpu": "2",
+      "job_wall_seconds": 64.5989282131195,
+      "method": "leflow_more_samples",
+      "returncode": 0,
+      "successes": 16,
+      "task": "pusht"
+    },
+    {
+      "completed": "2026-10-14T06:25:57.522375+00:00",
+      "evaluation_wall_seconds": 33.3309153560549,
+      "gpu": "0",
+      "job_wall_seconds": 66.80068016052246,
+      "method": "leflow",
+      "returncode": 0,
+      "successes": 12,
+      "task": "pusht"
+    },
+    {
+      "completed": "2026-10-14T06:26:03.080026+00:00",
+      "evaluation_wall_seconds": 40.95129615999758,
+      "gpu": "4",
+      "job_wall_seconds": 72.35804653167725,
+      "method": "leflow_more_steps",
+      "returncode": 0,
+      "successes": 11,
+      "task": "pusht"
+    },
+    {
+      "completed": "2026-10-14T06:28:18.644256+00:00",
+      "evaluation_wall_seconds": 175.36096223071218,
+      "gpu": "3",
+      "job_wall_seconds": 207.92277765274048,
+      "method": "leflow_more_samples",
+      "returncode": 0,
+      "successes": 37,
+      "task": "cube"
+    },
+    {
+      "completed": "2026-10-14T06:28:19.242013+00:00",
+      "evaluation_wall_seconds": 172.70066857896745,
+      "gpu": "1",
+      "job_wall_seconds": 208.52015089988708,
+      "method": "leflow",
+      "returncode": 0,
+      "successes": 40,
+      "task": "cube"
+    },
+    {
+      "completed": "2026-10-14T06:28:32.314579+00:00",
+      "evaluation_wall_seconds": 179.94683779217303,
+      "gpu": "5",
+      "job_wall_seconds": 221.59254670143127,
+      "method": "leflow_more_steps",
+      "returncode": 0,
+      "successes": 37,
+      "task": "cube"
+    },
+    {
+      "completed": "2026-10-14T06:29:39.027090+00:00",
+      "evaluation_wall_seconds": 194.28820976242423,
+      "gpu": "2",
+      "job_wall_seconds": 223.14411401748657,
+      "method": "guidance_only",
+      "returncode": 0,
+      "successes": 12,
+      "task": "pusht"
+    },
+    {
+      "completed": "2026-10-14T06:30:00.741525+00:00",
+      "evaluation_wall_seconds": 201.40858662128448,
+      "gpu": "4",
+      "job_wall_seconds": 237.1771538257599,
+      "method": "guided_pnp",
+      "returncode": 0,
+      "successes": 4,
+      "task": "pusht"
+    },
+    {
+      "completed": "2026-10-14T06:30:29.183764+00:00",
+      "evaluation_wall_seconds": 41.69013329222798,
+      "gpu": "6",
+      "job_wall_seconds": 338.46183347702026,
+      "method": "pnp",
+      "returncode": 0,
+      "successes": 7,
+      "task": "pusht"
+    },
+    {
+      "completed": "2026-10-14T06:30:52.786220+00:00",
+      "evaluation_wall_seconds": 247.50818682461977,
+      "gpu": "0",
+      "job_wall_seconds": 294.8638792037964,
+      "method": "guidance_only",
+      "returncode": 0,
+      "successes": 36,
+      "task": "cube"
+    },
+    {
+      "completed": "2026-10-14T06:32:38.387662+00:00",
+      "evaluation_wall_seconds": 226.38866113871336,
+      "gpu": "3",
+      "job_wall_seconds": 259.19645380973816,
+      "method": "guided_pnp",
+      "returncode": 0,
+      "successes": 37,
+      "task": "cube"
+    },
+    {
+      "completed": "2026-10-14T06:36:23.481544+00:00",
+      "evaluation_wall_seconds": 177.1372848469764,
+      "gpu": "7",
+      "job_wall_seconds": 692.7600076198578,
+      "method": "pnp",
+      "returncode": 0,
+      "successes": 38,
+      "task": "cube"
+    }
+  ],
+  "utc": "2026-10-14T06:36:23.508365+00:00"
+}

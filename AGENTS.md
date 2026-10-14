@@ -1,3 +1,18 @@
+# October14 self-refinement transfer completed; further launches held
+
+All12 inference-only comparisons completed600 cases on frozen PushT/Cube LeFlow
+heads. Reference12/40, more candidates16/37, more steps11/37, plain P&P7/38,
+gradient-only12/36, guided P&P4/37. All have zero timeouts and zero weight updates.
+CPU86 tests, both real-head GPU gates, frozen-state292-file audits and12 finished
+W&B runs pass. No owned GPU job remains. Read the new result and failure reports.
+The native four-task author-checkpoint comparison remains pending; never call
+these author-checkpoint or native-SOTA reproductions. Do not rerun these consumed
+comparisons, train missing baselines, introduce variants or inspect sealed tests
+without explicit new authorization. Original16-run and MetaWorld evidence stays
+unchanged. Publish all final records, negative findings and verify remote bytes.
+
+Earlier status is superseded where applicable.
+
 # October14: execute the requested self-refinement transfer
 
 The latest user request authorizes the six inference-only P&P/world-feedback

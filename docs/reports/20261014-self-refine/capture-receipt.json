@@ -1,5 +1,5 @@
 {
-  "utc": "2026-10-14T06:28:56.794216+00:00",
+  "utc": "2026-10-14T06:51:33.413267+00:00",
   "files": {
     "launcher.json": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/launcher.json",
@@ -13,8 +13,18 @@
     },
     "status.json": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/status.json",
-      "original_sha256": "9b151f56dcd621e74b36d8b516a4088dd4a09463da910b15e83c4f12279a4a20",
-      "stored_sha256": "9b151f56dcd621e74b36d8b516a4088dd4a09463da910b15e83c4f12279a4a20"
+      "original_sha256": "62844b6bc1f61f05a738be64255e5dccf95c038e8d6cce5476694515bf4d2739",
+      "stored_sha256": "62844b6bc1f61f05a738be64255e5dccf95c038e8d6cce5476694515bf4d2739"
+    },
+    "complete.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/complete.json",
+      "original_sha256": "fbb5fb1e8eee9ba9ec1e5abc4a56ce0939d063a6180444b6f4371d55d3930036",
+      "stored_sha256": "fbb5fb1e8eee9ba9ec1e5abc4a56ce0939d063a6180444b6f4371d55d3930036"
+    },
+    "final-audit.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/final-audit.json",
+      "original_sha256": "8f88c4768157f6fee2a8ba49fd1f790fd0b5e0d68e4a018f017db4501937f80a",
+      "stored_sha256": "8f88c4768157f6fee2a8ba49fd1f790fd0b5e0d68e4a018f017db4501937f80a"
     },
     "runtime-files.json": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/runtime-files.json",
@@ -68,13 +78,13 @@
     },
     "logs/cube-guidance_only.log.gz": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/logs/cube-guidance_only.log",
-      "original_sha256": "3fc402989d6c7fbae16be5b4045029b8bd497a239511a654b678e341315cd68f",
-      "stored_sha256": "15ef239653663401f747017b6fb4e41ea6532d80d7eaf12baba7f2085cdbaf44"
+      "original_sha256": "1593a99dbb798490515323972aac575b473f476da116b21e3d8a36ffceea9b24",
+      "stored_sha256": "6a69bb2b91c601eebc2a7db763780e5626002b2ff31121a66e38b7675ac73e76"
     },
     "logs/cube-guided_pnp.log.gz": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/logs/cube-guided_pnp.log",
-      "original_sha256": "be050cd4a5dac728e2435dbaa3da960d682361d25d4160830e272c970d6af126",
-      "stored_sha256": "31f8cac594e4eed210105d9c78814b384d49c0414031625d18aa20e3019fd8ad"
+      "original_sha256": "abc80dc5b1ae86cf2e264533c651ec177976aa114a0e6d822f2426a3c4a3dad1",
+      "stored_sha256": "fcb0a085fb79e88a69d9493024067436d0ab2906c560c2dcf9c075599a45541f"
     },
     "logs/cube-leflow.log.gz": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/logs/cube-leflow.log",
@@ -93,8 +103,8 @@
     },
     "logs/cube-pnp.log.gz": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/logs/cube-pnp.log",
-      "original_sha256": "cb32578b55595edb550456b718b3a6315d8025de589946e79c4b588680b35bb5",
-      "stored_sha256": "73c0c19cbaf8e0f4564f1f38f8927dd3418661a962a89489acc2dc253edeb706"
+      "original_sha256": "44bad5bbcb740e2a0fd3eba24a87ffd99c57d2069a14fc3b79389541efad7121",
+      "stored_sha256": "f65b9c1cffbc3027816cdd4079a73272c45dc7566dd1dd1506b6b6c391873889"
     },
     "logs/cube-preflight-final.log.gz": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/logs/cube-preflight-final.log",
@@ -118,13 +128,13 @@
     },
     "logs/pusht-guidance_only.log.gz": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/logs/pusht-guidance_only.log",
-      "original_sha256": "b4dc7d207823ea0910ac682adfcc8ac05915cab869f192b04e1fdcc43b49a5b3",
-      "stored_sha256": "825bbb11289fbdb224284ccf90450ea760ec692e74dbb9789cd9b83d9054997f"
+      "original_sha256": "89564ee4dea0653e45f9d06c7e07919ed4da53873e8674cf7f1225773e5cb9cd",
+      "stored_sha256": "ebbcbf76b8289e1e913f9e2e4c4184d05080b7104ac75f6a9bed12337cdcf677"
     },
     "logs/pusht-guided_pnp.log.gz": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/logs/pusht-guided_pnp.log",
-      "original_sha256": "5ef468aa4a8611f83ce0008acd83b2811e70a70770632de1d70a47453d037a1f",
-      "stored_sha256": "ce319de09a9fa6cdbd01dc56c1fe9f0325d4eaee4f399ed547e10607495a7f29"
+      "original_sha256": "a708c0eedabf217f82e97955821a7f9bfbdd78705a7fa2fdf9cc93870c8a06ff",
+      "stored_sha256": "7af38369c7cd90dbc87494ec94a75fc250d33385fb527267df42b72c3403f5f6"
     },
     "logs/pusht-leflow.log.gz": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/logs/pusht-leflow.log",
@@ -143,8 +153,8 @@
     },
     "logs/pusht-pnp.log.gz": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/logs/pusht-pnp.log",
-      "original_sha256": "978075abf0fe5d0cacd21aaa820ac31b0dcc00915fa4a26b2d6907232a8bc87b",
-      "stored_sha256": "61ab32dddd562bddd3cf75b9e56d15858bfd7dd848271728fbffdbef68305828"
+      "original_sha256": "05c4189f24a69462fad2fdb87275853c774a8711776bfb2b86cc4007176d9c44",
+      "stored_sha256": "f5357ab2f1284ad858c16828952378608f1752245b56907a8d6cea089cfc0840"
     },
     "logs/pusht-preflight-final.log.gz": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/logs/pusht-preflight-final.log",
@@ -168,123 +178,68 @@
     },
     "jobs/cube-guidance_only/progress.json": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guidance_only/progress.json",
-      "original_sha256": "e4541878b68e7dbf55a9069b31a5ea610aa6febb85461c2fdefd4d9e40a11f30",
-      "stored_sha256": "e4541878b68e7dbf55a9069b31a5ea610aa6febb85461c2fdefd4d9e40a11f30"
+      "original_sha256": "bed1adc9c817eac59cc749e6d52f59dbcc52040a02b64099a66e495a9e8d86be",
+      "stored_sha256": "bed1adc9c817eac59cc749e6d52f59dbcc52040a02b64099a66e495a9e8d86be"
+    },
+    "jobs/cube-guidance_only/report.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guidance_only/report.json",
+      "original_sha256": "a7564286d44bf76622a4df498b6aa8cf2ae7c2dda9dbba835545c31ade6d7370",
+      "stored_sha256": "1750a583edfa861417d815846e2b81ef29ed1c39208f0e2414a2429b46ed02cc"
     },
     "jobs/cube-guidance_only/wandb.json": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guidance_only/wandb.json",
       "original_sha256": "3ff9da89442530798d73838f0bb1ce2b09d23318fd4299608d8e071ad8e2da9a",
       "stored_sha256": "3ff9da89442530798d73838f0bb1ce2b09d23318fd4299608d8e071ad8e2da9a"
     },
-    "jobs/cube-guidance_only/partial-outcomes/00000.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guidance_only/outcomes/00000.json",
-      "original_sha256": "52a3be5567ea923cf7e3974287086b726c2c1130ea7f845ad3cf3185fc75c2c8",
-      "stored_sha256": "709e9d5b36bc333df25031cb5a948013ebf618034d63088123b64ad21d7ce085"
+    "jobs/cube-guidance_only/selected-trajectories/00000.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guidance_only/trajectories/00000.npz",
+      "original_sha256": "173c603511c5123e8f0a8d7cbd59c18e3028d877c47735dcf75b5b7a00d8ebce",
+      "stored_sha256": "173c603511c5123e8f0a8d7cbd59c18e3028d877c47735dcf75b5b7a00d8ebce"
     },
-    "jobs/cube-guidance_only/partial-outcomes/00001.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guidance_only/outcomes/00001.json",
-      "original_sha256": "e3903952c6e967e9539d419b03c6a877294e7dac1a860fe79ebb27314ccee4eb",
-      "stored_sha256": "7c120a948ac875d9c99dcc459bb1875587199cac225961ee28a54f884adb2d19"
+    "jobs/cube-guidance_only/selected-trajectories/00001.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guidance_only/trajectories/00001.npz",
+      "original_sha256": "89e0b30b4f2a4fd3070cdc03273048c6bc036b1e86a4c52b421cc7082b548aa0",
+      "stored_sha256": "89e0b30b4f2a4fd3070cdc03273048c6bc036b1e86a4c52b421cc7082b548aa0"
     },
-    "jobs/cube-guidance_only/partial-outcomes/00002.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guidance_only/outcomes/00002.json",
-      "original_sha256": "1f19f2140571c8d794fd840d128d32f29b4a6ff9a4c80e81a3cceabc5f9bba08",
-      "stored_sha256": "512dad1e4b6c91a56a6599db154bf4bd9e28a6e7acafd78676cd11e9894df61f"
+    "jobs/cube-guidance_only/selected-trajectories/00002.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guidance_only/trajectories/00002.npz",
+      "original_sha256": "c5f6ed7647b3715b76b13e7a7ffbf0ab9649cc8952598c0ac01e08599c32e8c8",
+      "stored_sha256": "c5f6ed7647b3715b76b13e7a7ffbf0ab9649cc8952598c0ac01e08599c32e8c8"
     },
-    "jobs/cube-guidance_only/partial-outcomes/00003.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guidance_only/outcomes/00003.json",
-      "original_sha256": "aa7e100eea4c343a1ac72e0bc7094f529689b516603ab2ede9b1bd4355d79a2c",
-      "stored_sha256": "565caf5d78d28dc6c126f2f34d329130a8dba25274f604538045cc2aaf088f8e"
+    "jobs/cube-guidance_only/selected-trajectories/00003.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guidance_only/trajectories/00003.npz",
+      "original_sha256": "94b4ee8802e34d6e3221ca2c17b27d69d7bab0205e0f8e5b9d3c35104315576d",
+      "stored_sha256": "94b4ee8802e34d6e3221ca2c17b27d69d7bab0205e0f8e5b9d3c35104315576d"
     },
-    "jobs/cube-guidance_only/partial-outcomes/00004.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guidance_only/outcomes/00004.json",
-      "original_sha256": "141c14000b90ec36573ab6e8a5f9e1faeb221d74ae0e7835af4d81a802e5eeac",
-      "stored_sha256": "4f3047401810014744f5c4323b62aa8d725dd5caf20a183f6127a9ead4fcbc89"
+    "jobs/cube-guidance_only/selected-trajectories/00004.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guidance_only/trajectories/00004.npz",
+      "original_sha256": "68817c7886b867386f4138d053b56cec6c13270097b0853c18ff586962ab3f89",
+      "stored_sha256": "68817c7886b867386f4138d053b56cec6c13270097b0853c18ff586962ab3f89"
     },
-    "jobs/cube-guidance_only/partial-outcomes/00005.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guidance_only/outcomes/00005.json",
-      "original_sha256": "734cf83762de9aca12553cdc305a70a3e30bbbb220868d8d5b93d1119366e6f7",
-      "stored_sha256": "576703d742a20237a882a9d96b9d67eb785ba7c87caf4cf3a15f5a9de0666998"
+    "jobs/cube-guidance_only/selected-trajectories/00005.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guidance_only/trajectories/00005.npz",
+      "original_sha256": "29f888ae4153982ca67e9277dd0dae559abbcb07bc390dc1194d18fc5d2c8ce2",
+      "stored_sha256": "29f888ae4153982ca67e9277dd0dae559abbcb07bc390dc1194d18fc5d2c8ce2"
     },
-    "jobs/cube-guidance_only/partial-outcomes/00006.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guidance_only/outcomes/00006.json",
-      "original_sha256": "e4fc83ac0641c4baa33d51753a6a69ef69fc0f49c4c9382b90d757147991f4f9",
-      "stored_sha256": "269dcdfddeb3867cebad4caf3ea5d40899a584f312089e78737f17a7ebfb9135"
+    "jobs/cube-guidance_only/selected-trajectories/00006.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guidance_only/trajectories/00006.npz",
+      "original_sha256": "d85257f335e48cbddb50dfa9e3d0980051c2c0afb88eb404cbcce4cb86f2739b",
+      "stored_sha256": "d85257f335e48cbddb50dfa9e3d0980051c2c0afb88eb404cbcce4cb86f2739b"
     },
-    "jobs/cube-guidance_only/partial-outcomes/00007.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guidance_only/outcomes/00007.json",
-      "original_sha256": "9af5ded53ebecee7d1b0d7eeea7b7a9f53c372ceeda01d7ef4928bbaa8711155",
-      "stored_sha256": "1e6fd4ef6fbe6302a7ca55476c6dda886dc9a82d014c0b9d6e2924bfeb0cf823"
+    "jobs/cube-guidance_only/selected-trajectories/00007.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guidance_only/trajectories/00007.npz",
+      "original_sha256": "c3969fcd70b2b9fc9988e9815a45331ff1e3f8c3fb961d697c436577bf409b81",
+      "stored_sha256": "c3969fcd70b2b9fc9988e9815a45331ff1e3f8c3fb961d697c436577bf409b81"
     },
-    "jobs/cube-guidance_only/partial-outcomes/00008.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guidance_only/outcomes/00008.json",
-      "original_sha256": "f0078aadb896e2bf122a62f4b91796de502cb2664c8ab456b0000de8c8c7f45b",
-      "stored_sha256": "9500e2c9c8779198a55dcf7784324ecabefaec16282979d141b1d8a10d356ea3"
+    "jobs/cube-guidance_only/selected-trajectories/00008.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guidance_only/trajectories/00008.npz",
+      "original_sha256": "479ef41d4650be300dc7ebd939eb746bb22b7b7b5e51b265ad258cc324dde976",
+      "stored_sha256": "479ef41d4650be300dc7ebd939eb746bb22b7b7b5e51b265ad258cc324dde976"
     },
-    "jobs/cube-guidance_only/partial-outcomes/00009.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guidance_only/outcomes/00009.json",
-      "original_sha256": "f71debc26ef2adca9e91785e36387a25153a5998c68a9cbbc1c53ff08819ce02",
-      "stored_sha256": "2499a0c44138242f988f76166c34ee8ae477d1dcb22195283200923af44c4464"
-    },
-    "jobs/cube-guidance_only/partial-outcomes/00010.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guidance_only/outcomes/00010.json",
-      "original_sha256": "28e8f7514b35795587dd6d92ce2762884aa635c06fba495b4298a50e833280d2",
-      "stored_sha256": "aad212b44fe701d374cdaa391d9a2faed9764fdb7795374dda7bbf0ed624fb37"
-    },
-    "jobs/cube-guidance_only/partial-outcomes/00011.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guidance_only/outcomes/00011.json",
-      "original_sha256": "1a570618b0ed09b8a34561189e25bb69e368a2dea74535b99d92b8d19ce523d4",
-      "stored_sha256": "54a2f3f1c38bfdfa5fc205f385181b7fbe6d4e555fe34e0fc53269d8fde5cff2"
-    },
-    "jobs/cube-guidance_only/partial-outcomes/00012.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guidance_only/outcomes/00012.json",
-      "original_sha256": "d729c8d003c7fb10676e9a7430cb2bc53c1191050e9953c7d7f8ec3e26cbc52a",
-      "stored_sha256": "4dd34f7c000a53d3833eb4b0da718c01bc2731d8c8af26355fa8dbbdad3cc315"
-    },
-    "jobs/cube-guidance_only/partial-outcomes/00013.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guidance_only/outcomes/00013.json",
-      "original_sha256": "1f6108599e63a16bd7dc50639d89fec938b0bfef85420fbeaa3f50a0939bce8f",
-      "stored_sha256": "002773d5507c3a2579656ba3f3805f8bb32495261b7e7a831fae57f1a6a81fd9"
-    },
-    "jobs/cube-guidance_only/partial-outcomes/00014.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guidance_only/outcomes/00014.json",
-      "original_sha256": "4d799a73c6caf145af2cfd3fdac07ae3d5bb307e1f88e8e0ae21124a61876cbe",
-      "stored_sha256": "ccf182281034aa190774fb3816b8dd63f17e84a9393d83548d6a813b937a0225"
-    },
-    "jobs/cube-guidance_only/partial-outcomes/00015.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guidance_only/outcomes/00015.json",
-      "original_sha256": "12107d5659c284cf13a0f052e3f801bfc6aad294ee31828fffdf77c35106f390",
-      "stored_sha256": "13feeb67833cde9a2cce5c0f5888276199092d5549274b573927c59ac9f6f8f8"
-    },
-    "jobs/cube-guidance_only/partial-outcomes/00016.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guidance_only/outcomes/00016.json",
-      "original_sha256": "d2d0c33d4a178730beb5cd68790577ccc3f1bf4a5383109a6b1af3d0d691a8c9",
-      "stored_sha256": "26265614f4772ad977d1135df74f4669ab00268b44bb316460743f41e42cd6ba"
-    },
-    "jobs/cube-guidance_only/partial-outcomes/00017.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guidance_only/outcomes/00017.json",
-      "original_sha256": "5e0e57a7a9d0a78ed764d5f8e90c2962f320df576f050533ee39b3fa7abe919e",
-      "stored_sha256": "b0b77a9aa11b8eba2e0854f0f2113982fbe5022b60018091e82856b36bd7fb27"
-    },
-    "jobs/cube-guidance_only/partial-outcomes/00018.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guidance_only/outcomes/00018.json",
-      "original_sha256": "fe9543c34e1af0e2a6e8bd43dd8845271322a69e628bf0f6279f8143b5067d46",
-      "stored_sha256": "47b8e29bdbbbb551577d30742853494bffd6d047375c8cfb983f9d1112cc1f9d"
-    },
-    "jobs/cube-guidance_only/partial-outcomes/00019.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guidance_only/outcomes/00019.json",
-      "original_sha256": "dd0ed5d91f01a6277efbcd82530b7a1b5b09a11fdbc8e7b1b7ca0c7f21fe0c66",
-      "stored_sha256": "4b8e58986a6e229c31c51a2e90d390b598063d07ca3a38daa74774151dfc7ce8"
-    },
-    "jobs/cube-guidance_only/partial-outcomes/00020.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guidance_only/outcomes/00020.json",
-      "original_sha256": "1b1b3d1d4c3f0adc088eefaa9d0a7209dd80cb0dc2bb521aa3cc09af1bc0f6c6",
-      "stored_sha256": "41a3fba4e82b9e62738fd42709b2443a3a62d8f1a4b4c62416f57efefbfca4e4"
-    },
-    "jobs/cube-guidance_only/partial-outcomes/00021.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guidance_only/outcomes/00021.json",
-      "original_sha256": "e20abc9ede704a8db13e179f8099e11fd03bae4a2697b8477bd6a51c48e32201",
-      "stored_sha256": "34338befee10649ce1c4ec14fc5447b9125bad7b815e16877fdeab959605889a"
+    "jobs/cube-guidance_only/selected-trajectories/00009.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guidance_only/trajectories/00009.npz",
+      "original_sha256": "a8f36fc1e13ec6f5eb415ec52aeeebf04924fba3c4b65744aae5f9ec7f1ff056",
+      "stored_sha256": "a8f36fc1e13ec6f5eb415ec52aeeebf04924fba3c4b65744aae5f9ec7f1ff056"
     },
     "jobs/cube-guided_pnp/identity.json": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guided_pnp/identity.json",
@@ -298,28 +253,68 @@
     },
     "jobs/cube-guided_pnp/progress.json": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guided_pnp/progress.json",
-      "original_sha256": "f30c1dd62625cd2e3119af5dccc7e73b030138f8b57c07b69ff609befdf313d8",
-      "stored_sha256": "f30c1dd62625cd2e3119af5dccc7e73b030138f8b57c07b69ff609befdf313d8"
+      "original_sha256": "0a2f7699589f31ec13cbe8ca5b83d51637ec00b8e93fe7a0752a29aa6195b7c6",
+      "stored_sha256": "0a2f7699589f31ec13cbe8ca5b83d51637ec00b8e93fe7a0752a29aa6195b7c6"
+    },
+    "jobs/cube-guided_pnp/report.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guided_pnp/report.json",
+      "original_sha256": "43919d44bef03b4ab29472183b7ca3eda6301586e00c9a66ac74f3dee5d3f71f",
+      "stored_sha256": "afb1c936e994a7c67ca0e8e48ef3f3ab80954aaa713fb8fc5a0e7b76293d70b1"
     },
     "jobs/cube-guided_pnp/wandb.json": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guided_pnp/wandb.json",
       "original_sha256": "95349ba0968b8308250ef71a57a1e97c4db89e400ff91bd5c82da58d41883892",
       "stored_sha256": "95349ba0968b8308250ef71a57a1e97c4db89e400ff91bd5c82da58d41883892"
     },
-    "jobs/cube-guided_pnp/partial-outcomes/00000.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guided_pnp/outcomes/00000.json",
-      "original_sha256": "663b8216f2ea96070f0c92588d0250fff3612545abb803da322b2c617cc201d3",
-      "stored_sha256": "7feb95cf456bb85025035deb677bb9e5c1da717886f711928e9157878a728fcd"
+    "jobs/cube-guided_pnp/selected-trajectories/00000.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guided_pnp/trajectories/00000.npz",
+      "original_sha256": "8274abb34427033429854b8da89b4467d55366ac54a799f1af2ee94462e9ef68",
+      "stored_sha256": "8274abb34427033429854b8da89b4467d55366ac54a799f1af2ee94462e9ef68"
     },
-    "jobs/cube-guided_pnp/partial-outcomes/00001.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guided_pnp/outcomes/00001.json",
-      "original_sha256": "084177adec6f41d5d3bf0c021ca31721586dd9f9c316e36a6d3f4e4632b6e9d4",
-      "stored_sha256": "68a37fa10329512129a73d60b6ddd3984c015771206b0372298855c43df23f94"
+    "jobs/cube-guided_pnp/selected-trajectories/00001.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guided_pnp/trajectories/00001.npz",
+      "original_sha256": "6e9ae4c876366a101457f6ae28a7d994c49f04ccf989fc767834c490fd12077b",
+      "stored_sha256": "6e9ae4c876366a101457f6ae28a7d994c49f04ccf989fc767834c490fd12077b"
     },
-    "jobs/cube-guided_pnp/partial-outcomes/00002.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guided_pnp/outcomes/00002.json",
-      "original_sha256": "c5e4f513fe8bf3e45676e12c0057b190f4c110adb325fa8008440d0a2b43e42a",
-      "stored_sha256": "35ed3b5e323b5287329676fabbe3ff89cb7cf4e0200df53be01e8c98abdc835b"
+    "jobs/cube-guided_pnp/selected-trajectories/00002.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guided_pnp/trajectories/00002.npz",
+      "original_sha256": "509cca911a0996639b8df03cc09addc4d3b26f3016e20b8fe395a3bc9e82c039",
+      "stored_sha256": "509cca911a0996639b8df03cc09addc4d3b26f3016e20b8fe395a3bc9e82c039"
+    },
+    "jobs/cube-guided_pnp/selected-trajectories/00003.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guided_pnp/trajectories/00003.npz",
+      "original_sha256": "133fea4574f6dcfd7d65a513ac471d1123e54246c2b6accb7246cede25d35a42",
+      "stored_sha256": "133fea4574f6dcfd7d65a513ac471d1123e54246c2b6accb7246cede25d35a42"
+    },
+    "jobs/cube-guided_pnp/selected-trajectories/00004.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guided_pnp/trajectories/00004.npz",
+      "original_sha256": "507866afff0d4261833386ea9e7a90b928527ee89b09d0c0716a0fb1d8abc48c",
+      "stored_sha256": "507866afff0d4261833386ea9e7a90b928527ee89b09d0c0716a0fb1d8abc48c"
+    },
+    "jobs/cube-guided_pnp/selected-trajectories/00005.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guided_pnp/trajectories/00005.npz",
+      "original_sha256": "e1e43ce5cc6fcfa228f2e4fe1e3fdeece95efe4702d901857a043e81c99fa02b",
+      "stored_sha256": "e1e43ce5cc6fcfa228f2e4fe1e3fdeece95efe4702d901857a043e81c99fa02b"
+    },
+    "jobs/cube-guided_pnp/selected-trajectories/00006.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guided_pnp/trajectories/00006.npz",
+      "original_sha256": "b84d518e440d991a43ca2ac0a760adf8b5702888ced1bbd2b23315bcc2e1d206",
+      "stored_sha256": "b84d518e440d991a43ca2ac0a760adf8b5702888ced1bbd2b23315bcc2e1d206"
+    },
+    "jobs/cube-guided_pnp/selected-trajectories/00007.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guided_pnp/trajectories/00007.npz",
+      "original_sha256": "d2d19c86a26cb077e8a3ca4bdf8ed2f6c8ebab29129cffd5b8bd14e9d80767a9",
+      "stored_sha256": "d2d19c86a26cb077e8a3ca4bdf8ed2f6c8ebab29129cffd5b8bd14e9d80767a9"
+    },
+    "jobs/cube-guided_pnp/selected-trajectories/00008.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guided_pnp/trajectories/00008.npz",
+      "original_sha256": "45b11efc44e9eb61889dfbf8af5c6afc6cb5eb4b4ec745e07fe5980ab7308259",
+      "stored_sha256": "45b11efc44e9eb61889dfbf8af5c6afc6cb5eb4b4ec745e07fe5980ab7308259"
+    },
+    "jobs/cube-guided_pnp/selected-trajectories/00009.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guided_pnp/trajectories/00009.npz",
+      "original_sha256": "675107fbffb4892c63ba78f35f1affd2e7a887daf49bc54a1046c165d689e725",
+      "stored_sha256": "675107fbffb4892c63ba78f35f1affd2e7a887daf49bc54a1046c165d689e725"
     },
     "jobs/cube-leflow/identity.json": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-leflow/identity.json",
@@ -633,208 +628,68 @@
     },
     "jobs/pusht-guidance_only/progress.json": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/progress.json",
-      "original_sha256": "625eef6d41c3360087d81a3436ac9c8b2231333520ab53646d4911b133227151",
-      "stored_sha256": "625eef6d41c3360087d81a3436ac9c8b2231333520ab53646d4911b133227151"
+      "original_sha256": "6f6b1234df87fbea46a1bec1b79c2681b59e008355fe312659b7b892d5aa9d14",
+      "stored_sha256": "6f6b1234df87fbea46a1bec1b79c2681b59e008355fe312659b7b892d5aa9d14"
+    },
+    "jobs/pusht-guidance_only/report.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/report.json",
+      "original_sha256": "dda3caa50344f1a6e24e5b2e0a6f243bb47469cd10a973a95fc054322ae9b0ca",
+      "stored_sha256": "2fa6e70a7beea495e002cc4e99f1a1e3b43167adbbec6ea53d4ae89592e67930"
     },
     "jobs/pusht-guidance_only/wandb.json": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/wandb.json",
       "original_sha256": "3f075846513263af801911fe288c8b29c72edee3e7057257917d8fa076599398",
       "stored_sha256": "3f075846513263af801911fe288c8b29c72edee3e7057257917d8fa076599398"
     },
-    "jobs/pusht-guidance_only/partial-outcomes/00000.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00000.json",
-      "original_sha256": "245346e4aeaf952554a744a7da16fe70ea8df10c5718d147ed019aec19e42846",
-      "stored_sha256": "5fe96a4988856b42efb85fda862a025ccfbdf6f9dad444d36738910b42e000b5"
+    "jobs/pusht-guidance_only/selected-trajectories/00000.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/trajectories/00000.npz",
+      "original_sha256": "64973142185ea0b3510b8b9a6444769b08a1278635199ba79c2b19f653cb70d0",
+      "stored_sha256": "64973142185ea0b3510b8b9a6444769b08a1278635199ba79c2b19f653cb70d0"
     },
-    "jobs/pusht-guidance_only/partial-outcomes/00001.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00001.json",
-      "original_sha256": "e21b96262e412562aff2042f5c0eb0f7b007850c5952cf90cbeacfc5b79ceda3",
-      "stored_sha256": "683b487ee4b32b99e63d7ac6f36e98341ebb2c6f549af1391c2b1c9872c8ccd1"
+    "jobs/pusht-guidance_only/selected-trajectories/00001.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/trajectories/00001.npz",
+      "original_sha256": "8b1ab84674e7c0269cac9769e0c173c3d68aed4a6211cac26e18647f6d0be422",
+      "stored_sha256": "8b1ab84674e7c0269cac9769e0c173c3d68aed4a6211cac26e18647f6d0be422"
     },
-    "jobs/pusht-guidance_only/partial-outcomes/00002.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00002.json",
-      "original_sha256": "26219d86c6b6fdcbd6938beebb98122e7244dfd0cf307474449714d92a7c0e36",
-      "stored_sha256": "ff0724a086bb6895586a637da22f383d3e386916335ffa177e3560aa8d26aec2"
+    "jobs/pusht-guidance_only/selected-trajectories/00002.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/trajectories/00002.npz",
+      "original_sha256": "9dd3becbb52a5294cac3a230b5bc778107e92e58903ef02771f146b466133df4",
+      "stored_sha256": "9dd3becbb52a5294cac3a230b5bc778107e92e58903ef02771f146b466133df4"
     },
-    "jobs/pusht-guidance_only/partial-outcomes/00003.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00003.json",
-      "original_sha256": "7633c0b011f928472f5b7edd024207b3d743050b2f5085b2362b2027a8cb9f55",
-      "stored_sha256": "183c981c307e5e82b7809bc2330cd396a8fbd9b47ff51502e578c46c0448d6d8"
+    "jobs/pusht-guidance_only/selected-trajectories/00003.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/trajectories/00003.npz",
+      "original_sha256": "df5c85c2801b64bd79a1709a959bf821d614db1c693588b5104a0e087935182c",
+      "stored_sha256": "df5c85c2801b64bd79a1709a959bf821d614db1c693588b5104a0e087935182c"
     },
-    "jobs/pusht-guidance_only/partial-outcomes/00004.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00004.json",
-      "original_sha256": "2e2ffb14acfd4667a1834f327b825bf51d627dcc391527fb59105f3cac3a9e66",
-      "stored_sha256": "da880fc21810087d5b6ed3a931a228f22fc95769754b7061ac1499b06e9253a8"
+    "jobs/pusht-guidance_only/selected-trajectories/00004.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/trajectories/00004.npz",
+      "original_sha256": "59d7e8d391b5ec8b03d7107d6158a853e6a1f341ed7bfd00ccdfad5ff39f933d",
+      "stored_sha256": "59d7e8d391b5ec8b03d7107d6158a853e6a1f341ed7bfd00ccdfad5ff39f933d"
     },
-    "jobs/pusht-guidance_only/partial-outcomes/00005.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00005.json",
-      "original_sha256": "dff6bb3b75d78b3c6ad5c367411f38683031a5148db92002057d63dbe4eda7a5",
-      "stored_sha256": "4a6e1f6e60a0c6bc0a4fb1b42314b013fc018e29f0a711558334cf63260241e7"
+    "jobs/pusht-guidance_only/selected-trajectories/00005.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/trajectories/00005.npz",
+      "original_sha256": "33ec990415c9d66853f9dd0922e299d76d2186fc5c1baa5f6e1c993568097820",
+      "stored_sha256": "33ec990415c9d66853f9dd0922e299d76d2186fc5c1baa5f6e1c993568097820"
     },
-    "jobs/pusht-guidance_only/partial-outcomes/00006.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00006.json",
-      "original_sha256": "798dbedfa231b88da8494947ca664e7b3083d2709647d8c3015e3d07ca1c2c5a",
-      "stored_sha256": "bc042939a52e40e12df953fc952b0a71732d4674c93778c55bfbbfe0c1cfd6b3"
+    "jobs/pusht-guidance_only/selected-trajectories/00006.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/trajectories/00006.npz",
+      "original_sha256": "f8bcd5c422c07570ec1c472510b18cdabb6ab33cc317184fcffc86844d85b1e9",
+      "stored_sha256": "f8bcd5c422c07570ec1c472510b18cdabb6ab33cc317184fcffc86844d85b1e9"
     },
-    "jobs/pusht-guidance_only/partial-outcomes/00007.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00007.json",
-      "original_sha256": "4697fddbc40aae58b23200f48cd45a6302c922ef413dc50c58566eb7a17b4052",
-      "stored_sha256": "981431828c0089b3a496cb6472d1b447348a0548d6694da0160ce18bce4bd743"
+    "jobs/pusht-guidance_only/selected-trajectories/00007.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/trajectories/00007.npz",
+      "original_sha256": "0b3eaa15a6ef137f4b8bb92c8848759cf9d932bec7e403c69545efdf4c343637",
+      "stored_sha256": "0b3eaa15a6ef137f4b8bb92c8848759cf9d932bec7e403c69545efdf4c343637"
     },
-    "jobs/pusht-guidance_only/partial-outcomes/00008.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00008.json",
-      "original_sha256": "120409d90bcedefcb88f085224ebd9a8ee105a4c24c381bde359fcc1f1d66725",
-      "stored_sha256": "7e0a478a85297d05af4192f5ff2f6539e000ea07c0e6d0d454c759590ad287b0"
+    "jobs/pusht-guidance_only/selected-trajectories/00008.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/trajectories/00008.npz",
+      "original_sha256": "aab3c536e421452e4d76b7f937686909659903614e11b9300ba73da8d995393c",
+      "stored_sha256": "aab3c536e421452e4d76b7f937686909659903614e11b9300ba73da8d995393c"
     },
-    "jobs/pusht-guidance_only/partial-outcomes/00009.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00009.json",
-      "original_sha256": "03b1849e4f89c74edb013a174903fabc5ebd8b36ba85315837732ef62022aa3f",
-      "stored_sha256": "f59a46b71b28eac83dbecdb3352c51d1b5d15e8f323ef1818b400406eb0b6d6c"
-    },
-    "jobs/pusht-guidance_only/partial-outcomes/00010.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00010.json",
-      "original_sha256": "1b5b9a38a6ef23b5a0d14a06b65f5b0a644c2827138f93cd9da2bcbe77788959",
-      "stored_sha256": "cf195b3dbdaa98023b3898742b1b7f0d2251c26562030874357a5706452703b0"
-    },
-    "jobs/pusht-guidance_only/partial-outcomes/00011.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00011.json",
-      "original_sha256": "201eb2e3096fb9d8c6592dcbd1998c1c67e1c778ab1119a2d1c2598041c0559d",
-      "stored_sha256": "2247a216563dd70bee0fbccb189446cadfa2dd0f6b5ec0fcf6a6da0536320280"
-    },
-    "jobs/pusht-guidance_only/partial-outcomes/00012.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00012.json",
-      "original_sha256": "08ddc4f0363e35c42574724cc178296854edcf6c04c0f67c32539b2bb1f4ae50",
-      "stored_sha256": "9086bd0fc9c8ee8b866793bfac9221fecb6ec6faee1984229279c1311bcd97a8"
-    },
-    "jobs/pusht-guidance_only/partial-outcomes/00013.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00013.json",
-      "original_sha256": "81e4b08a5c70976772b894cdbbfbb8aae5f20c2031f0cf8898185df64cfbce07",
-      "stored_sha256": "572168ace6f2e7b397ac0ada01fbd8a88f67ba3fad93ebd859d82a2064933b42"
-    },
-    "jobs/pusht-guidance_only/partial-outcomes/00014.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00014.json",
-      "original_sha256": "6ad6dbeecdfcfd251ff5d17944ea6589173f6c8df116d90c960e886baee1e361",
-      "stored_sha256": "984162a74e3953441c54c2e5603883aaa6db5d6a81633126c6e08aa193bb196e"
-    },
-    "jobs/pusht-guidance_only/partial-outcomes/00015.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00015.json",
-      "original_sha256": "42e8a92e0553198788f26d12bb43be720312749c5625235d7b9a6fe5e7421553",
-      "stored_sha256": "8a61404b33721508687689c7c3d977d5f0888c94183be0dd46ecbb2f3be18665"
-    },
-    "jobs/pusht-guidance_only/partial-outcomes/00016.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00016.json",
-      "original_sha256": "23e2f1c7d6606622d13fe1f17722f7f84e5358b2426ed60f8960461d5073b4d3",
-      "stored_sha256": "7768d07de948dbbc0d2e5cd0761b8324b4029280d8f6fec4ec53c16fec8a33cf"
-    },
-    "jobs/pusht-guidance_only/partial-outcomes/00017.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00017.json",
-      "original_sha256": "60d8dc00cf537b7f01fd0f445d283fd9e5123515f19c3d6740c30bba7614d01c",
-      "stored_sha256": "e7f9f7239e98abeb9e64ef9ade36c1e85e091e33937c08e03d11c6f3ba198247"
-    },
-    "jobs/pusht-guidance_only/partial-outcomes/00018.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00018.json",
-      "original_sha256": "d87b0b33b81ebdf2cee92f4e9a6609cafe54ad8e3c2cd40cdf07e116b5eec4f3",
-      "stored_sha256": "941d4e29e368e5e897c8423a445d94cf8329565266848708db0d55d4b2f6c2fc"
-    },
-    "jobs/pusht-guidance_only/partial-outcomes/00019.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00019.json",
-      "original_sha256": "2a54b0717c53947fe6da8ead26919192fa629c285975783870aa2fc207997496",
-      "stored_sha256": "41ab040cb57c08509a89331b8fa757d9abc0f99dcd9c3c27b15f7477b8d05f25"
-    },
-    "jobs/pusht-guidance_only/partial-outcomes/00020.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00020.json",
-      "original_sha256": "38fef9d8f8095d0a8fa1d2530b7c0bf069fe30b67033878c7c72bca6dcb98e31",
-      "stored_sha256": "85ea394731c7dd803400f4b2364782796914ae6d4db8016892937c7827103297"
-    },
-    "jobs/pusht-guidance_only/partial-outcomes/00021.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00021.json",
-      "original_sha256": "38afd632ef19d4cfdbafdf504d4d5d13e26258974f349090a347bcea8f3495ae",
-      "stored_sha256": "803eed04a5dfa8c6a4403a1329082d89e53f772cc5683629ac4b460eefbbcddb"
-    },
-    "jobs/pusht-guidance_only/partial-outcomes/00022.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00022.json",
-      "original_sha256": "123a483d0d8a861cf9222d8e0cc8a729a232649881be52deefcfe00f53159dc8",
-      "stored_sha256": "946fb7c2e490c6f11d7afe3d1b47b87730838652752041ede85b892d3506246d"
-    },
-    "jobs/pusht-guidance_only/partial-outcomes/00023.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00023.json",
-      "original_sha256": "251cc5cde02117aa1ea6fead5a6b1fe9181b76313941c20362c8665fd6a86838",
-      "stored_sha256": "ca485ff12da0323ed9d5048c73018cc9096f025a00149dbf5262296a9d62ba8d"
-    },
-    "jobs/pusht-guidance_only/partial-outcomes/00024.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00024.json",
-      "original_sha256": "4db7d8978f31111b18fa8d175e00915ce6d182a5f59bd5029f86774b38abecfd",
-      "stored_sha256": "74f244bfd630fa6cb88bcfbd00699632cdbc6d7fbfbb11cbe4f3b9f28b76d55f"
-    },
-    "jobs/pusht-guidance_only/partial-outcomes/00025.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00025.json",
-      "original_sha256": "76ddc07a79aba3cb244190fe8517127f2dbb52dc968ab5a885d68f655ec32a16",
-      "stored_sha256": "57c8c6e3484ad5f921a0f30fcc41c365ace02ca0224a6caae0ad8d282683cc60"
-    },
-    "jobs/pusht-guidance_only/partial-outcomes/00026.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00026.json",
-      "original_sha256": "c4c7eda646456697ba680c1b23cf854033d468c77ba250b1b6b4abb8648014b6",
-      "stored_sha256": "bfa4a9cb54b8acf900e0b83fa468e33508c7b2316ec7d34ba90f95f4948b9e5e"
-    },
-    "jobs/pusht-guidance_only/partial-outcomes/00027.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00027.json",
-      "original_sha256": "27e7ab95c48e3b2325acc9b0971e63776f3754677cd2bd9b80f467e0b08ff23a",
-      "stored_sha256": "a9fa05be3c1b32aa94fbf2ddaf75036688b131d1082ac0d404f4a5ef6438e539"
-    },
-    "jobs/pusht-guidance_only/partial-outcomes/00028.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00028.json",
-      "original_sha256": "850ff2cea8e816e4e367acefec93b00109d4b48bb2510f2a898155bad5ae08b6",
-      "stored_sha256": "9803c65f9e54ebfe3935a7c2d18fef9a36e700716810a80dae716331e38d5414"
-    },
-    "jobs/pusht-guidance_only/partial-outcomes/00029.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00029.json",
-      "original_sha256": "8c82c2aac092eab03f343e96b11538daa512c2638c32d2776b1fbd2e974ec843",
-      "stored_sha256": "f21bfad5610a5d62a7f9fbce5b09789a8e6eb631cad5413da64661ad6999e6df"
-    },
-    "jobs/pusht-guidance_only/partial-outcomes/00030.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00030.json",
-      "original_sha256": "53eb5d89bec319647eddfb434165021b3137e2c5b7cdb78af567adc208b4a838",
-      "stored_sha256": "a1401f67ceae75311d61e43f260850dd2244f626559f709de493503193cc4a4d"
-    },
-    "jobs/pusht-guidance_only/partial-outcomes/00031.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00031.json",
-      "original_sha256": "9b2c1232ec0b2ceab59f65a6b6dbae0bf87b60aa821ca97a44e4163acbf80a0c",
-      "stored_sha256": "3ea7bbb4084d0dbaa51c45b153c639fb82de5ad569dfcb2af200da0aee0484c5"
-    },
-    "jobs/pusht-guidance_only/partial-outcomes/00032.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00032.json",
-      "original_sha256": "bd9c7695ad0acbc84a4c9e5ecc5865d70cc0511779f799e0af99f62afdce31e4",
-      "stored_sha256": "28acff294f52cb543f8d7ec26f507739a371a7017d529a55e1bd045ae8e81b67"
-    },
-    "jobs/pusht-guidance_only/partial-outcomes/00033.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00033.json",
-      "original_sha256": "09124b672b1ed5f0e757ff79a28f2bf259e69f89c24e29180c6a11013cd4b7fa",
-      "stored_sha256": "9c065cabc1af3af61da7a6193d0d92e94480039c39e5336090229fdfcb7f64db"
-    },
-    "jobs/pusht-guidance_only/partial-outcomes/00034.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00034.json",
-      "original_sha256": "caf402fc0e3aa9768a76f6b5261182271b1d6154266a60b3c9d84df47cfcc2de",
-      "stored_sha256": "5bd915ff5cfdeb2e10f2b037835932ef39c757f5484c10557efe213de43a4396"
-    },
-    "jobs/pusht-guidance_only/partial-outcomes/00035.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00035.json",
-      "original_sha256": "6724f7ffb835a5b02ec3556ed67083ae6806d1bb42ff59b867ccf0162b2bd1fe",
-      "stored_sha256": "358227b0fdc420ccaeeba5a70a9e352e589bc8df767bef1dd0a99df43a742f0f"
-    },
-    "jobs/pusht-guidance_only/partial-outcomes/00036.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00036.json",
-      "original_sha256": "362e4a6054de7b02e85e74a31e212ed4981d03645ec12335d8941cff695ba5d9",
-      "stored_sha256": "e1f06ead3683d42794d06cc6532929fa7535ceb2a7ff16831e0420c7370add57"
-    },
-    "jobs/pusht-guidance_only/partial-outcomes/00037.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00037.json",
-      "original_sha256": "920e33177cd4b3e8c0d47ace780a69b6673deeb639e9d923f8204e49d99ac37a",
-      "stored_sha256": "016b7bcf93cfd9db99517dd1a5554fe24d8e804c6d12d08c3360a27d097ac2a9"
-    },
-    "jobs/pusht-guidance_only/partial-outcomes/00038.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00038.json",
-      "original_sha256": "db86a2e035463b5e83b7871075c698f808049a3a4eb2f3e7a4173fbd879dc43c",
-      "stored_sha256": "72804ce7ccf2211af99d8dfe627622f8a87ae00a9c0b928e73cd47c8f982de10"
+    "jobs/pusht-guidance_only/selected-trajectories/00009.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/trajectories/00009.npz",
+      "original_sha256": "6d063c1a28786f2a8ff144c705a2e525f675dbf631bd9c07727681977f24b738",
+      "stored_sha256": "6d063c1a28786f2a8ff144c705a2e525f675dbf631bd9c07727681977f24b738"
     },
     "jobs/pusht-guided_pnp/identity.json": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/identity.json",
@@ -848,188 +703,68 @@
     },
     "jobs/pusht-guided_pnp/progress.json": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/progress.json",
-      "original_sha256": "665ffa9497d81507e0e9c93de5cde675e1553ff38b6ef3d5fa86364ba693f76f",
-      "stored_sha256": "665ffa9497d81507e0e9c93de5cde675e1553ff38b6ef3d5fa86364ba693f76f"
+      "original_sha256": "cdc4a48a046830cd888a8d76b0f28fc30b1686ea9029fc053c4aa28c174ffe4d",
+      "stored_sha256": "cdc4a48a046830cd888a8d76b0f28fc30b1686ea9029fc053c4aa28c174ffe4d"
+    },
+    "jobs/pusht-guided_pnp/report.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/report.json",
+      "original_sha256": "e633adf3c71e7b85a5b49b5a2788275ccdd6a2f4e18a492c6e687bb9e95ee038",
+      "stored_sha256": "99879d255e77769984a3d2d1fb5789609855eb90a168e9833d4cbe0d19b9f43f"
     },
     "jobs/pusht-guided_pnp/wandb.json": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/wandb.json",
       "original_sha256": "9a1ee5ad62f24f624b4a25ef85941fd89dc3696ace0be6f519ffe15e12bef985",
       "stored_sha256": "9a1ee5ad62f24f624b4a25ef85941fd89dc3696ace0be6f519ffe15e12bef985"
     },
-    "jobs/pusht-guided_pnp/partial-outcomes/00000.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00000.json",
-      "original_sha256": "c50f32b41c9be8c3b12545a60348fd56dc91f804fb3ae635be0a46c5cf9e7048",
-      "stored_sha256": "097af18e3bd27e221a9d911880936a55c4916da5792c5960972b72c570e79d6c"
+    "jobs/pusht-guided_pnp/selected-trajectories/00000.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/trajectories/00000.npz",
+      "original_sha256": "dd679d35fe22dc2b895294ada182651f1dfa61000e9c994eb244219d8044a01e",
+      "stored_sha256": "dd679d35fe22dc2b895294ada182651f1dfa61000e9c994eb244219d8044a01e"
     },
-    "jobs/pusht-guided_pnp/partial-outcomes/00001.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00001.json",
-      "original_sha256": "809e3f9706374d6178ad7738388fa28f1f7b5fbb88aa84c293db718084d586aa",
-      "stored_sha256": "10f1eae5da8ea31ffbdfe40c8b15c590863380348d8d5de3bc5e620efb4a47e0"
+    "jobs/pusht-guided_pnp/selected-trajectories/00001.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/trajectories/00001.npz",
+      "original_sha256": "7de92b533c57f34a659976043b0589e5b2afcec33559cf461a588baa71608675",
+      "stored_sha256": "7de92b533c57f34a659976043b0589e5b2afcec33559cf461a588baa71608675"
     },
-    "jobs/pusht-guided_pnp/partial-outcomes/00002.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00002.json",
-      "original_sha256": "8c289211daff23a43a4a62b9825eb28d232a3903269b071eef89396b2800adb0",
-      "stored_sha256": "650f35758107105a789e85cc9c6d3134763e04dc78dc18873bd06d395c6e0e36"
+    "jobs/pusht-guided_pnp/selected-trajectories/00002.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/trajectories/00002.npz",
+      "original_sha256": "5715da7e1d757e521dbdfb36fb0367c1eb9de36e588601b8842ca2f4c1e78874",
+      "stored_sha256": "5715da7e1d757e521dbdfb36fb0367c1eb9de36e588601b8842ca2f4c1e78874"
     },
-    "jobs/pusht-guided_pnp/partial-outcomes/00003.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00003.json",
-      "original_sha256": "c72592c3de37c10e26a947c2a5fe35774ce7c76b9ca13336966cae181b1d8426",
-      "stored_sha256": "94528b4089c75f502e257874d22b26239f7b33f502f552b9960453b3e9f0eace"
+    "jobs/pusht-guided_pnp/selected-trajectories/00003.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/trajectories/00003.npz",
+      "original_sha256": "0de143ff9edf274f214ac43d356cf59de2d72a452783f9a3b6bca2a059c8f755",
+      "stored_sha256": "0de143ff9edf274f214ac43d356cf59de2d72a452783f9a3b6bca2a059c8f755"
     },
-    "jobs/pusht-guided_pnp/partial-outcomes/00004.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00004.json",
-      "original_sha256": "840781380ded745735171ca1d2ba40d1835157dc2155e10aa06601466794deae",
-      "stored_sha256": "aa8e62213d67e0c8a8d8dfed8bcd169bacf4996286d0698f453a1c0c8d4d9ecc"
+    "jobs/pusht-guided_pnp/selected-trajectories/00004.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/trajectories/00004.npz",
+      "original_sha256": "da29147e038b15e96c7fd29fb94bf4ec061c115733505e070fa76bee594f60ed",
+      "stored_sha256": "da29147e038b15e96c7fd29fb94bf4ec061c115733505e070fa76bee594f60ed"
     },
-    "jobs/pusht-guided_pnp/partial-outcomes/00005.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00005.json",
-      "original_sha256": "e368221fbf430128721f1dd61f3df0054f4f126b4214198003536fa211cf63fb",
-      "stored_sha256": "f93fb191f91bd131524c92883faafd8405933cd065165028315818bdcd605e5c"
+    "jobs/pusht-guided_pnp/selected-trajectories/00005.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/trajectories/00005.npz",
+      "original_sha256": "5bb32634a5c13e8bcbf3fbc4358dafe9a5cb63fc5ade99ef384d70c4b0a02bac",
+      "stored_sha256": "5bb32634a5c13e8bcbf3fbc4358dafe9a5cb63fc5ade99ef384d70c4b0a02bac"
     },
-    "jobs/pusht-guided_pnp/partial-outcomes/00006.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00006.json",
-      "original_sha256": "2b29e2ed9c4d5f7cb698a14126fcd45e84020f60c87781111967bbfb2c6ddd5f",
-      "stored_sha256": "b27302e0ac6d2cb294af2438941f4364c8a96f3c7585601e067785993db5d1cc"
+    "jobs/pusht-guided_pnp/selected-trajectories/00006.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/trajectories/00006.npz",
+      "original_sha256": "825ad796ee305e35bc4f2c2822250911994c55c232e098c5c058056c0132cc4f",
+      "stored_sha256": "825ad796ee305e35bc4f2c2822250911994c55c232e098c5c058056c0132cc4f"
     },
-    "jobs/pusht-guided_pnp/partial-outcomes/00007.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00007.json",
-      "original_sha256": "052a14db70432a350a2399e324d01b527176f694c84388fb1ea2738f620d5de4",
-      "stored_sha256": "007d44180a9aec3ecfd843081aa8630e89befed5abc1041e9885bbf7e2ba80f3"
+    "jobs/pusht-guided_pnp/selected-trajectories/00007.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/trajectories/00007.npz",
+      "original_sha256": "5cc50b9e47f6920f92ad358ab98f3db1ab3a990428a9395ea912b5528849f378",
+      "stored_sha256": "5cc50b9e47f6920f92ad358ab98f3db1ab3a990428a9395ea912b5528849f378"
     },
-    "jobs/pusht-guided_pnp/partial-outcomes/00008.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00008.json",
-      "original_sha256": "2b8f47aece4476f3962df57a36bf591b531216b0cf38ea189872ba178674d293",
-      "stored_sha256": "d7ab67fb913681828f9f450f8d1dc9a1a3ce39e65ff65cecd0656c561aa25da6"
+    "jobs/pusht-guided_pnp/selected-trajectories/00008.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/trajectories/00008.npz",
+      "original_sha256": "7636c8869ff8dd2dfb9d861933b6453301cd902bae5cddf1945d97255263cf18",
+      "stored_sha256": "7636c8869ff8dd2dfb9d861933b6453301cd902bae5cddf1945d97255263cf18"
     },
-    "jobs/pusht-guided_pnp/partial-outcomes/00009.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00009.json",
-      "original_sha256": "5853251205331c433bbd840c819d1139d889b8e4d69d2320d0ac23b5841da9fe",
-      "stored_sha256": "af8c0213e5f30100c7506289b8eb441aca1a6a72116484d61c94be957cbc7fb4"
-    },
-    "jobs/pusht-guided_pnp/partial-outcomes/00010.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00010.json",
-      "original_sha256": "e39712d9b38a26a701a40d0becaf90322dd3406bec12ccf1e3c9d848851dd35d",
-      "stored_sha256": "84be4b125bbb78680155daaac9d4dab5e915c6751012dee119eab7bd21dcf581"
-    },
-    "jobs/pusht-guided_pnp/partial-outcomes/00011.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00011.json",
-      "original_sha256": "4a2168e7272db372d6ca0aeea112e3e72260a876b0a7c289ddc31cc435beae52",
-      "stored_sha256": "e095ca841aa2385b7db2b603e5d7cae1c8d2473b3be1abc3cb606e968f2a0518"
-    },
-    "jobs/pusht-guided_pnp/partial-outcomes/00012.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00012.json",
-      "original_sha256": "d80be566e6ec40c53e20d14432ce585d6cd2cf28a89791bd410514f8b5d1d2e5",
-      "stored_sha256": "4605bd2a6706e74de74d6abc58463b0cac457bde9ac379f291c6e17818f4697b"
-    },
-    "jobs/pusht-guided_pnp/partial-outcomes/00013.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00013.json",
-      "original_sha256": "72752d31af9f9a71f4d78440ab06ae5dad8a5206d20499278484c3dfcd254e92",
-      "stored_sha256": "2a6f6ea467ddbf172e709dd844ab2d00745b3e6a52f91dc9d77d84fbd0246819"
-    },
-    "jobs/pusht-guided_pnp/partial-outcomes/00014.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00014.json",
-      "original_sha256": "bb734189a66d41b648101995ee8ffbf4796e55c076d06f8c11d61051f41c4dee",
-      "stored_sha256": "bff08915b28dd6093cfa0830f94785b94424737b1de7b371211e3b7919f10aca"
-    },
-    "jobs/pusht-guided_pnp/partial-outcomes/00015.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00015.json",
-      "original_sha256": "622fd46282632df5c0a78701ea8e567649efb68b6259feeafc8299857e66b057",
-      "stored_sha256": "bac64908173b0341dcbd7a69eb883dd75f75a35bf893d62f699601ec31180755"
-    },
-    "jobs/pusht-guided_pnp/partial-outcomes/00016.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00016.json",
-      "original_sha256": "89d9e92d374596a284ad0147d26ebd1189730a0c2487578fcbfb006ddf376e18",
-      "stored_sha256": "fb7eafc034300cdec3b3e9fc41fe7baf80ee28a9657b049ab44efc473b1fa546"
-    },
-    "jobs/pusht-guided_pnp/partial-outcomes/00017.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00017.json",
-      "original_sha256": "327ff90058cabf0af8a05658995b5ac7167c5ac5eb77fe2b421b9c8841c8d0bb",
-      "stored_sha256": "ef155f98b76e15f3661df73f6ca3c2967f4084a88f03aad2aeb307c17cddba55"
-    },
-    "jobs/pusht-guided_pnp/partial-outcomes/00018.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00018.json",
-      "original_sha256": "08a4077d14699bbe031150d99cb19be8df07f276d6bdbd38eb75b5eed81e50c4",
-      "stored_sha256": "4fe2047979ee4b15ac9b205cab9b7f01ac0381a3f736fe0b4b18767bdc5d5e6c"
-    },
-    "jobs/pusht-guided_pnp/partial-outcomes/00019.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00019.json",
-      "original_sha256": "22efbc5ce3b665620d423da2f3cd430d26c55e2ebcfd80b872cd9bdca0701b76",
-      "stored_sha256": "032210018d5a7f9ee21e3b8129df7aaacf5c794ce3484ae6b41a4bb3c8e015f1"
-    },
-    "jobs/pusht-guided_pnp/partial-outcomes/00020.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00020.json",
-      "original_sha256": "998d1d000d168eb44b5d674c82df8dca46ad4f0a458c1a194669db0997efc924",
-      "stored_sha256": "79b0fcda0d8e6a510f13e88bb52f6e65e3c28d6d57fed907ff93ca188bb36890"
-    },
-    "jobs/pusht-guided_pnp/partial-outcomes/00021.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00021.json",
-      "original_sha256": "04f18a937ed80810214557a0602b14841f7f57f3dee49eab4ae34b435d23d409",
-      "stored_sha256": "073e64da15c1b22aa597c56be51896bba044b91174d712c8de1f53580d340730"
-    },
-    "jobs/pusht-guided_pnp/partial-outcomes/00022.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00022.json",
-      "original_sha256": "94603efa8877b579585d5575c860ef4104cf9f0c5bbc25d83c8e64d41a22880a",
-      "stored_sha256": "4c6c449bdf575be9725e9750b917f14c5a552bf1fbc9af8f1c1a6cacb64cc9c0"
-    },
-    "jobs/pusht-guided_pnp/partial-outcomes/00023.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00023.json",
-      "original_sha256": "5136dbba74c89d826786e12f30ac677b2bd721663461c1cc6ea68c98e7cf4fe0",
-      "stored_sha256": "36c011ef24faa03c98ebaae9530a3191a42f3c0514b761ebe2ed74441fdd4317"
-    },
-    "jobs/pusht-guided_pnp/partial-outcomes/00024.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00024.json",
-      "original_sha256": "5deb437fb147232baafd6c9f21c012abbdc1763c1bcd464537365b793b5d8bcf",
-      "stored_sha256": "b34297a45064db1e15c81afc253d444de1de66a2abf53f7fa4591a809974cb68"
-    },
-    "jobs/pusht-guided_pnp/partial-outcomes/00025.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00025.json",
-      "original_sha256": "4fa0d2af71263e9a987b6f08a8d5d0f72830b9b3bb1e96b925672ffb6575a45f",
-      "stored_sha256": "94083635bcbfeedbad2fc971d72128659fff8abe107766c532df0994c8f3bc76"
-    },
-    "jobs/pusht-guided_pnp/partial-outcomes/00026.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00026.json",
-      "original_sha256": "d0d511d1ec32182b4c57a333d37c6ac59b3bd938ca0d756114ada679225ccdb8",
-      "stored_sha256": "ee51a12f5d6f978190ccb0e84a75a4c829b87909628ffa7bb150c4d202343152"
-    },
-    "jobs/pusht-guided_pnp/partial-outcomes/00027.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00027.json",
-      "original_sha256": "f87b3cd33efb11daace7d76e6e7c97bd5bc574730ec7c6dd9cb8695030040a6c",
-      "stored_sha256": "e8daf63ff02e0f381dfcef467966895318cae7e6a8538922c5ed56bb7f8fb033"
-    },
-    "jobs/pusht-guided_pnp/partial-outcomes/00028.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00028.json",
-      "original_sha256": "49196ea67060ab2fa9ab8c6387c2a2155e8aae8c67b3c01ba8d226bca186d88c",
-      "stored_sha256": "c8c7e7f9b930829f8eadfa43f30ba58789427061fccd9515555c3699b745b20d"
-    },
-    "jobs/pusht-guided_pnp/partial-outcomes/00029.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00029.json",
-      "original_sha256": "cd13054ef6daa3f7b1b88575de581263a595b302e12e965a5ed7dd867788ccb8",
-      "stored_sha256": "98e1531de351b0846b62208b838c11b862b23343f0dfedadfd6184399c5c2a73"
-    },
-    "jobs/pusht-guided_pnp/partial-outcomes/00030.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00030.json",
-      "original_sha256": "8d522fdf2ed43ccfa8bc1e7982e9f98e3a2c7dbf08ed63f3c4fde59f245cce47",
-      "stored_sha256": "982dd8532ff99072a5e24ddb0b04b4d067088f9123fe9d8753bb87f1f8b2420b"
-    },
-    "jobs/pusht-guided_pnp/partial-outcomes/00031.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00031.json",
-      "original_sha256": "d6b43ce9a8ac6dd8396b592f1dd4b4c4068bb9b4a8954f081da84d60cbe73482",
-      "stored_sha256": "26f800b0c057469365b1a218fa6682f38834c3fdb52051e6c2354341b2fe5d58"
-    },
-    "jobs/pusht-guided_pnp/partial-outcomes/00032.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00032.json",
-      "original_sha256": "2b62bdf4049341f845702eb536ed739869548557e5ca45442251df2541a1b10a",
-      "stored_sha256": "e16aa0572d548469df2b88b223d45855fcdffe7ac136793715e96ca7b1afbf96"
-    },
-    "jobs/pusht-guided_pnp/partial-outcomes/00033.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00033.json",
-      "original_sha256": "3c9e90071d1d1a3c24466f1c7d026378305659e8d12d491eb814d1403a272b32",
-      "stored_sha256": "7fe09b80d360574bb6fc5bc94d5bca5d4989692aa73a0a311905b15930fd1158"
-    },
-    "jobs/pusht-guided_pnp/partial-outcomes/00034.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00034.json",
-      "original_sha256": "e84f5d809761aec937bc9aaf7e2c2dc0ca4d4bcb5b109a1596e6222c85e28633",
-      "stored_sha256": "90bdfea2f2414a5ddf5f90355751d84d79d4b2642a206ee453a32850c7ffef00"
+    "jobs/pusht-guided_pnp/selected-trajectories/00009.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/trajectories/00009.npz",
+      "original_sha256": "392376684090d17c7af920ef5f5d226c633c9f6136a685573a8d0b4cc3e0c001",
+      "stored_sha256": "392376684090d17c7af920ef5f5d226c633c9f6136a685573a8d0b4cc3e0c001"
     },
     "jobs/pusht-leflow/identity.json": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-leflow/identity.json",

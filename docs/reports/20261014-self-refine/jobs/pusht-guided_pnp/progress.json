@@ -1,8 +1,8 @@
 {
-  "completed": 34,
+  "completed": 50,
   "expected": 50,
   "metrics": {
-    "episodes": 34,
+    "episodes": 50,
     "failure_ids": [
       "pusht/val/0002481/000039",
       "pusht/val/0002980/000149",
@@ -35,17 +35,31 @@
       "pusht/val/0005771/000018",
       "pusht/val/0006540/000014",
       "pusht/val/0017244/000022",
-      "pusht/val/0007774/000011"
+      "pusht/val/0007774/000011",
+      "pusht/val/0018618/000061",
+      "pusht/val/0003831/000076",
+      "pusht/val/0018271/000051",
+      "pusht/val/0012628/000013",
+      "pusht/val/0010550/000017",
+      "pusht/val/0008047/000095",
+      "pusht/val/0003377/000057",
+      "pusht/val/0006104/000097",
+      "pusht/val/0004158/000063",
+      "pusht/val/0002082/000053",
+      "pusht/val/0005467/000003",
+      "pusht/val/0017254/000000",
+      "pusht/val/0008980/000043",
+      "pusht/val/0007278/000101"
     ],
-    "mean_decision_ms": 400.6738639241475,
-    "mean_steps": 49.0,
-    "success_rate": 0.058823529411764705,
-    "successes": 2,
+    "mean_decision_ms": 392.9006468519998,
+    "mean_steps": 48.52,
+    "success_rate": 0.08,
+    "successes": 4,
     "timeouts": 0,
     "wilson95": [
-      0.016282313063842452,
-      0.1909393688946371
+      0.031549003255790686,
+      0.18838502545063704
     ],
-    "world_transitions": 961920
+    "world_transitions": 1399680
   }
 }

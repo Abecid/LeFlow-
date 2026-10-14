@@ -1,3 +1,20 @@
+# October14: completed self-refinement inference transfer
+
+All12 comparisons completed600 physical cases with no model training. Frozen
+LeFlow reference12/50 PushT and40/50 Cube reproduces all prior case success flags
+under the explicit common strict-FP32 setting. More candidates16/37, more steps
+11/37, plain P&P7/38, gradient-only12/36, guided P&P4/37. All failures reach50
+actions; none is a controller timeout. Guided methods take roughly7–8 times the
+reference’s per-decision latency despite the7x hardware-batching speedup.
+
+All86 CPU tests, actual trained-head/released-world GPU gates,292 frozen runtime
+file checks, unchanged weight/buffer fingerprints and12 finished online runs
+pass. The original four-task author-checkpoint study remains unavailable; this
+is a retained-model transfer on identical original cases, not native SOTA. Read
+[results](SELF_REFINE_SHARED_RESULTS_20261014.md) and [failure analysis](SELF_REFINE_SHARED_FAILURE_ANALYSIS_20261014.md). No additional run is authorized.
+
+Earlier progress follows.
+
 <!-- native-crossbench-current:start -->
 # October 13 native campaign checkpoint
 

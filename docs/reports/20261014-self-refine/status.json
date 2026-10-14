@@ -2,40 +2,28 @@
   "failed": false,
   "lanes": {
     "0": {
-      "method": "guidance_only",
-      "state": "running",
-      "task": "cube"
+      "state": "completed"
     },
     "1": {
       "state": "completed"
     },
     "2": {
-      "method": "guidance_only",
-      "state": "running",
-      "task": "pusht"
+      "state": "completed"
     },
     "3": {
-      "method": "guided_pnp",
-      "state": "running",
-      "task": "cube"
+      "state": "completed"
     },
     "4": {
-      "method": "guided_pnp",
-      "state": "running",
-      "task": "pusht"
+      "state": "completed"
     },
     "5": {
       "state": "completed"
     },
     "6": {
-      "method": "pnp",
-      "state": "running",
-      "task": "pusht"
+      "state": "completed"
     },
     "7": {
-      "method": "pnp",
-      "state": "running",
-      "task": "cube"
+      "state": "completed"
     }
   },
   "optimizer_updates": 0,
@@ -100,8 +88,68 @@
       "returncode": 0,
       "successes": 37,
       "task": "cube"
+    },
+    {
+      "completed": "2026-10-14T06:29:39.027090+00:00",
+      "evaluation_wall_seconds": 194.28820976242423,
+      "gpu": "2",
+      "job_wall_seconds": 223.14411401748657,
+      "method": "guidance_only",
+      "returncode": 0,
+      "successes": 12,
+      "task": "pusht"
+    },
+    {
+      "completed": "2026-10-14T06:30:00.741525+00:00",
+      "evaluation_wall_seconds": 201.40858662128448,
+      "gpu": "4",
+      "job_wall_seconds": 237.1771538257599,
+      "method": "guided_pnp",
+      "returncode": 0,
+      "successes": 4,
+      "task": "pusht"
+    },
+    {
+      "completed": "2026-10-14T06:30:29.183764+00:00",
+      "evaluation_wall_seconds": 41.69013329222798,
+      "gpu": "6",
+      "job_wall_seconds": 338.46183347702026,
+      "method": "pnp",
+      "returncode": 0,
+      "successes": 7,
+      "task": "pusht"
+    },
+    {
+      "completed": "2026-10-14T06:30:52.786220+00:00",
+      "evaluation_wall_seconds": 247.50818682461977,
+      "gpu": "0",
+      "job_wall_seconds": 294.8638792037964,
+      "method": "guidance_only",
+      "returncode": 0,
+      "successes": 36,
+      "task": "cube"
+    },
+    {
+      "completed": "2026-10-14T06:32:38.387662+00:00",
+      "evaluation_wall_seconds": 226.38866113871336,
+      "gpu": "3",
+      "job_wall_seconds": 259.19645380973816,
+      "method": "guided_pnp",
+      "returncode": 0,
+      "successes": 37,
+      "task": "cube"
+    },
+    {
+      "completed": "2026-10-14T06:36:23.481544+00:00",
+      "evaluation_wall_seconds": 177.1372848469764,
+      "gpu": "7",
+      "job_wall_seconds": 692.7600076198578,
+      "method": "pnp",
+      "returncode": 0,
+      "successes": 38,
+      "task": "cube"
     }
   ],
   "source": "8693b459d0026812030a2abf734ee7ae4f404884",
-  "utc": "2026-10-14T06:28:32.329578+00:00"
+  "utc": "2026-10-14T06:36:23.496201+00:00"
 }

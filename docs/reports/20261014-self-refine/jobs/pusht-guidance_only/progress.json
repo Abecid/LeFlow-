@@ -1,8 +1,8 @@
 {
-  "completed": 39,
+  "completed": 50,
   "expected": 50,
   "metrics": {
-    "episodes": 39,
+    "episodes": 50,
     "failure_ids": [
       "pusht/val/0002481/000039",
       "pusht/val/0002980/000149",
@@ -32,17 +32,26 @@
       "pusht/val/0018618/000061",
       "pusht/val/0003831/000076",
       "pusht/val/0018271/000051",
-      "pusht/val/0012628/000013"
+      "pusht/val/0012628/000013",
+      "pusht/val/0010550/000017",
+      "pusht/val/0008047/000095",
+      "pusht/val/0003377/000057",
+      "pusht/val/0006104/000097",
+      "pusht/val/0002082/000053",
+      "pusht/val/0005467/000003",
+      "pusht/val/0017254/000000",
+      "pusht/val/0008980/000043",
+      "pusht/val/0007278/000101"
     ],
-    "mean_decision_ms": 395.584096360637,
-    "mean_steps": 46.56410256410256,
-    "success_rate": 0.2564102564102564,
-    "successes": 10,
+    "mean_decision_ms": 392.70789362092177,
+    "mean_steps": 46.34,
+    "success_rate": 0.24,
+    "successes": 12,
     "timeouts": 0,
     "wilson95": [
-      0.14568625843452188,
-      0.410819567678415
+      0.14297252401872207,
+      0.3741294937519236
     ],
-    "world_transitions": 1056960
+    "world_transitions": 1347840
   }
 }

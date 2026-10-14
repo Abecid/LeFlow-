@@ -1,0 +1,108 @@
+{
+  "passed": true,
+  "completed_runs": 12,
+  "physical_cases": 600,
+  "runtime_files_verified": 292,
+  "optimizer_updates": 0,
+  "source": "8693b459d0026812030a2abf734ee7ae4f404884",
+  "online": [
+    {
+      "task": "pusht",
+      "method": "leflow_more_samples",
+      "wandb_id": "yhghjhl5",
+      "wandb_state": "finished",
+      "report_sha256": "9c430e9eb9045eaa20751322d250ce4e470986aad5bec789afd9ec7d798003c0",
+      "successes": 16
+    },
+    {
+      "task": "pusht",
+      "method": "leflow",
+      "wandb_id": "wv3j1plb",
+      "wandb_state": "finished",
+      "report_sha256": "2cdb4b54ddcaab467bc0cc5d5a9d03ce5e459e72b8a0f978973f8c88bf5b572e",
+      "successes": 12
+    },
+    {
+      "task": "pusht",
+      "method": "leflow_more_steps",
+      "wandb_id": "iuzetsbp",
+      "wandb_state": "finished",
+      "report_sha256": "5b0ddd9d5a5c95a1c46e284f23be55a9026f681980a40ed134b10f5d12485026",
+      "successes": 11
+    },
+    {
+      "task": "cube",
+      "method": "leflow_more_samples",
+      "wandb_id": "62s6wup2",
+      "wandb_state": "finished",
+      "report_sha256": "380e0081ef6e48ff98d4bbfcd0c556b8221283f3d2ce0bbeb9dd68860dc380de",
+      "successes": 37
+    },
+    {
+      "task": "cube",
+      "method": "leflow",
+      "wandb_id": "i6q4z1vh",
+      "wandb_state": "finished",
+      "report_sha256": "91d0541e3d1df690753bc11af91320d46bab05d4847bdea0a5baa21d2b5554ba",
+      "successes": 40
+    },
+    {
+      "task": "cube",
+      "method": "leflow_more_steps",
+      "wandb_id": "n6nykfxr",
+      "wandb_state": "finished",
+      "report_sha256": "0869590ab7326976beabaf342b572135ec10652704f4f72a0195945ab90eec61",
+      "successes": 37
+    },
+    {
+      "task": "pusht",
+      "method": "guidance_only",
+      "wandb_id": "wexa1qfs",
+      "wandb_state": "finished",
+      "report_sha256": "dda3caa50344f1a6e24e5b2e0a6f243bb47469cd10a973a95fc054322ae9b0ca",
+      "successes": 12
+    },
+    {
+      "task": "pusht",
+      "method": "guided_pnp",
+      "wandb_id": "bn54psph",
+      "wandb_state": "finished",
+      "report_sha256": "e633adf3c71e7b85a5b49b5a2788275ccdd6a2f4e18a492c6e687bb9e95ee038",
+      "successes": 4
+    },
+    {
+      "task": "pusht",
+      "method": "pnp",
+      "wandb_id": "n11isf8e",
+      "wandb_state": "finished",
+      "report_sha256": "2d98765b57ad2e4a34572c72428bb73323b679a4a0dcf41889e9fa312198ffd0",
+      "successes": 7
+    },
+    {
+      "task": "cube",
+      "method": "guidance_only",
+      "wandb_id": "8djso7o9",
+      "wandb_state": "finished",
+      "report_sha256": "a7564286d44bf76622a4df498b6aa8cf2ae7c2dda9dbba835545c31ade6d7370",
+      "successes": 36
+    },
+    {
+      "task": "cube",
+      "method": "guided_pnp",
+      "wandb_id": "oj3ax8nh",
+      "wandb_state": "finished",
+      "report_sha256": "43919d44bef03b4ab29472183b7ca3eda6301586e00c9a66ac74f3dee5d3f71f",
+      "successes": 37
+    },
+    {
+      "task": "cube",
+      "method": "pnp",
+      "wandb_id": "iqkyp1q7",
+      "wandb_state": "finished",
+      "report_sha256": "eeed74cace5982f6abcf988df4ab259964c6960170efe24a11690abcb94900dc",
+      "successes": 38
+    }
+  ],
+  "owned_gpu_jobs_remaining": false,
+  "final_tests_read": false
+}
