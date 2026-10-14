@@ -1,0 +1,11 @@
+{
+  "pid": 262182,
+  "start_ticks": "1027953346",
+  "utc": "2026-10-14T06:23:47.345762+00:00",
+  "source": "8693b459d0026812030a2abf734ee7ae4f404884",
+  "runtime_files": 292,
+  "jobs": 12,
+  "optimizer_updates": 0,
+  "gpus_requested": 8,
+  "script_sha256": "a9529c0a289ea539d8862210480a6f13fb79e1ec583bdeb3d0089d9dcc4f407d"
+}

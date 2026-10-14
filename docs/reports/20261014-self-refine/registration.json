@@ -1,0 +1,160 @@
+{
+  "author_checkpoint_comparison_pending": [
+    "reacher",
+    "tworoom"
+  ],
+  "baseline_workspace": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines",
+  "config": {
+    "batch_size": 1,
+    "benchmark_family": "retained_crossbench_leflow",
+    "controller_seconds": 10.0,
+    "job_timeout_seconds": 900,
+    "methods": [
+      {
+        "flow_steps": 16,
+        "name": "leflow",
+        "num_samples": 64,
+        "refinement": {
+          "mode": "native"
+        }
+      },
+      {
+        "flow_steps": 16,
+        "name": "leflow_more_samples",
+        "num_samples": 96,
+        "refinement": {
+          "mode": "native"
+        }
+      },
+      {
+        "flow_steps": 24,
+        "name": "leflow_more_steps",
+        "num_samples": 64,
+        "refinement": {
+          "mode": "native"
+        }
+      },
+      {
+        "flow_steps": 16,
+        "name": "pnp",
+        "num_samples": 64,
+        "refinement": {
+          "indices": [
+            4,
+            8,
+            12,
+            14
+          ],
+          "mode": "pnp",
+          "rounds": 2
+        }
+      },
+      {
+        "flow_steps": 16,
+        "name": "guidance_only",
+        "num_samples": 64,
+        "refinement": {
+          "consistency_weight": 0.1,
+          "guidance_batch_size": 64,
+          "indices": [
+            4,
+            8,
+            12,
+            14
+          ],
+          "mode": "guidance",
+          "radius": 0.05,
+          "rounds": 2
+        }
+      },
+      {
+        "flow_steps": 16,
+        "name": "guided_pnp",
+        "num_samples": 64,
+        "refinement": {
+          "consistency_weight": 0.1,
+          "guidance_batch_size": 64,
+          "indices": [
+            4,
+            8,
+            12,
+            14
+          ],
+          "mode": "guided_pnp",
+          "radius": 0.05,
+          "rounds": 2
+        }
+      }
+    ],
+    "num_eval": 50,
+    "numerical_precision": {
+      "NVIDIA_TF32_OVERRIDE": "0",
+      "applies_to": "all six reference/refinement variants on both datasets",
+      "dtype": "float32",
+      "prior_PushT_reference_precision": "default cuDNN TF32 permitted; preserved as historical evidence"
+    },
+    "policy_seed": 3072,
+    "primitive_actions": 50,
+    "schema_version": 1,
+    "seeds": [
+      3072
+    ],
+    "tasks": [
+      "pusht",
+      "cube"
+    ],
+    "training_updates": 0
+  },
+  "jobs": [
+    [
+      "pusht",
+      "leflow"
+    ],
+    [
+      "cube",
+      "leflow"
+    ],
+    [
+      "pusht",
+      "leflow_more_samples"
+    ],
+    [
+      "cube",
+      "leflow_more_samples"
+    ],
+    [
+      "pusht",
+      "leflow_more_steps"
+    ],
+    [
+      "cube",
+      "leflow_more_steps"
+    ],
+    [
+      "pusht",
+      "pnp"
+    ],
+    [
+      "cube",
+      "pnp"
+    ],
+    [
+      "pusht",
+      "guidance_only"
+    ],
+    [
+      "cube",
+      "guidance_only"
+    ],
+    [
+      "pusht",
+      "guided_pnp"
+    ],
+    [
+      "cube",
+      "guided_pnp"
+    ]
+  ],
+  "optimizer_updates": 0,
+  "source": "8693b459d0026812030a2abf734ee7ae4f404884"
+}

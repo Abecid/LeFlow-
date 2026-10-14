@@ -1,0 +1,38 @@
+[
+  {
+    "method": "guidance_only",
+    "micro8": {
+      "seconds": 2.66177199408412,
+      "peak_memory_bytes": 175166976
+    },
+    "batch64": {
+      "seconds": 0.35165756940841675,
+      "peak_memory_bytes": 358672384
+    },
+    "candidate_action_max_abs": 1.0728836059570312e-06,
+    "candidate_score_max_abs": 2.5331974029541016e-07,
+    "selected_same": true,
+    "TRAIN_episode": 9947,
+    "optimizer_updates": 0,
+    "validation_cases": 0,
+    "test_cases": 0
+  },
+  {
+    "method": "guided_pnp",
+    "micro8": {
+      "seconds": 2.495146207511425,
+      "peak_memory_bytes": 175433216
+    },
+    "batch64": {
+      "seconds": 0.3545367605984211,
+      "peak_memory_bytes": 358414336
+    },
+    "candidate_action_max_abs": 1.0728836059570312e-06,
+    "candidate_score_max_abs": 6.388872861862183e-07,
+    "selected_same": true,
+    "TRAIN_episode": 9947,
+    "optimizer_updates": 0,
+    "validation_cases": 0,
+    "test_cases": 0
+  }
+]

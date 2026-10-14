@@ -1,0 +1,107 @@
+{
+  "failed": false,
+  "lanes": {
+    "0": {
+      "method": "guidance_only",
+      "state": "running",
+      "task": "cube"
+    },
+    "1": {
+      "state": "completed"
+    },
+    "2": {
+      "method": "guidance_only",
+      "state": "running",
+      "task": "pusht"
+    },
+    "3": {
+      "method": "guided_pnp",
+      "state": "running",
+      "task": "cube"
+    },
+    "4": {
+      "method": "guided_pnp",
+      "state": "running",
+      "task": "pusht"
+    },
+    "5": {
+      "state": "completed"
+    },
+    "6": {
+      "method": "pnp",
+      "state": "running",
+      "task": "pusht"
+    },
+    "7": {
+      "method": "pnp",
+      "state": "running",
+      "task": "cube"
+    }
+  },
+  "optimizer_updates": 0,
+  "pending": [],
+  "results": [
+    {
+      "completed": "2026-10-14T06:25:55.320336+00:00",
+      "evaluation_wall_seconds": 33.30019747465849,
+      "gpu": "2",
+      "job_wall_seconds": 64.5989282131195,
+      "method": "leflow_more_samples",
+      "returncode": 0,
+      "successes": 16,
+      "task": "pusht"
+    },
+    {
+      "completed": "2026-10-14T06:25:57.522375+00:00",
+      "evaluation_wall_seconds": 33.3309153560549,
+      "gpu": "0",
+      "job_wall_seconds": 66.80068016052246,
+      "method": "leflow",
+      "returncode": 0,
+      "successes": 12,
+      "task": "pusht"
+    },
+    {
+      "completed": "2026-10-14T06:26:03.080026+00:00",
+      "evaluation_wall_seconds": 40.95129615999758,
+      "gpu": "4",
+      "job_wall_seconds": 72.35804653167725,
+      "method": "leflow_more_steps",
+      "returncode": 0,
+      "successes": 11,
+      "task": "pusht"
+    },
+    {
+      "completed": "2026-10-14T06:28:18.644256+00:00",
+      "evaluation_wall_seconds": 175.36096223071218,
+      "gpu": "3",
+      "job_wall_seconds": 207.92277765274048,
+      "method": "leflow_more_samples",
+      "returncode": 0,
+      "successes": 37,
+      "task": "cube"
+    },
+    {
+      "completed": "2026-10-14T06:28:19.242013+00:00",
+      "evaluation_wall_seconds": 172.70066857896745,
+      "gpu": "1",
+      "job_wall_seconds": 208.52015089988708,
+      "method": "leflow",
+      "returncode": 0,
+      "successes": 40,
+      "task": "cube"
+    },
+    {
+      "completed": "2026-10-14T06:28:32.314579+00:00",
+      "evaluation_wall_seconds": 179.94683779217303,
+      "gpu": "5",
+      "job_wall_seconds": 221.59254670143127,
+      "method": "leflow_more_steps",
+      "returncode": 0,
+      "successes": 37,
+      "task": "cube"
+    }
+  ],
+  "source": "8693b459d0026812030a2abf734ee7ae4f404884",
+  "utc": "2026-10-14T06:28:32.329578+00:00"
+}

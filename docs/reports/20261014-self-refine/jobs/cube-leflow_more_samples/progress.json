@@ -1,0 +1,32 @@
+{
+  "completed": 50,
+  "expected": 50,
+  "metrics": {
+    "episodes": 50,
+    "failure_ids": [
+      "cube/val/0007213/000112",
+      "cube/val/0005033/000124",
+      "cube/val/0004519/000037",
+      "cube/val/0008782/000106",
+      "cube/val/0008504/000021",
+      "cube/val/0004293/000051",
+      "cube/val/0001968/000118",
+      "cube/val/0007447/000118",
+      "cube/val/0008908/000033",
+      "cube/val/0000560/000032",
+      "cube/val/0002985/000041",
+      "cube/val/0003396/000018",
+      "cube/val/0009070/000039"
+    ],
+    "mean_decision_ms": 61.23742015270764,
+    "mean_steps": 17.88,
+    "success_rate": 0.74,
+    "successes": 37,
+    "timeouts": 0,
+    "wilson95": [
+      0.6044657801100008,
+      0.8412862034863262
+    ],
+    "world_transitions": 97440
+  }
+}

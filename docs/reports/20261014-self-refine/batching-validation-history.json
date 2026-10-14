@@ -1,0 +1,13 @@
+{
+  "earlier_TF32_batching_checks_failed": true,
+  "first_action_max_abs": 9.417533874511719e-06,
+  "TF32_score_max_abs": 5.519390106201172e-05,
+  "strict_FP32_actions_max_abs": 1.0728836059570312e-06,
+  "strict_FP32_scores_max_abs": 6.556510925292969e-07,
+  "strict_FP32_selected_candidates_match": true,
+  "applies_all_variants": true,
+  "bitwise_across_microbatches_claimed": false,
+  "failed_probe_gpu_time": "not measured; not zero",
+  "optimizer_updates": 0,
+  "validation_or_test_cases_read": 0
+}

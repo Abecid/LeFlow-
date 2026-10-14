@@ -1,0 +1,1351 @@
+{
+  "utc": "2026-10-14T06:28:56.794216+00:00",
+  "files": {
+    "launcher.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/launcher.json",
+      "original_sha256": "dc293304bd12dd00e0024d03dd02a408ccaf6f4968f8a7c7c72eb02cb9a7381a",
+      "stored_sha256": "dc293304bd12dd00e0024d03dd02a408ccaf6f4968f8a7c7c72eb02cb9a7381a"
+    },
+    "registration.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/registration.json",
+      "original_sha256": "fefe1935afdbb94990be9757d4a77d20b12dede63f4e23b4acbad67d1bdbe6fb",
+      "stored_sha256": "fefe1935afdbb94990be9757d4a77d20b12dede63f4e23b4acbad67d1bdbe6fb"
+    },
+    "status.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/status.json",
+      "original_sha256": "9b151f56dcd621e74b36d8b516a4088dd4a09463da910b15e83c4f12279a4a20",
+      "stored_sha256": "9b151f56dcd621e74b36d8b516a4088dd4a09463da910b15e83c4f12279a4a20"
+    },
+    "runtime-files.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/runtime-files.json",
+      "original_sha256": "6bc18830dd63f8d2f23195393b5c69f3d854bc28b8ae52423c9c847e19544043",
+      "stored_sha256": "6bc18830dd63f8d2f23195393b5c69f3d854bc28b8ae52423c9c847e19544043"
+    },
+    "allocation.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/allocation.json",
+      "original_sha256": "bf2b0d5227d0d0ee1ffb475a3fa01d577376f6ef75cde54fa4ae254f975de5f5",
+      "stored_sha256": "bf2b0d5227d0d0ee1ffb475a3fa01d577376f6ef75cde54fa4ae254f975de5f5"
+    },
+    "batching-pusht.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/batching-pusht.json",
+      "original_sha256": "c5e156364f57bf45a0f8423cfb5c2ee118d5f81e77242b045ca631e700d7e995",
+      "stored_sha256": "c5e156364f57bf45a0f8423cfb5c2ee118d5f81e77242b045ca631e700d7e995"
+    },
+    "batching-cube.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/batching-cube.json",
+      "original_sha256": "d3df202a11aec4811eacc42c2f9003fcad56824c1a488c31d56479074385bdd6",
+      "stored_sha256": "d3df202a11aec4811eacc42c2f9003fcad56824c1a488c31d56479074385bdd6"
+    },
+    "batching-validation-history.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/batching-validation-history.json",
+      "original_sha256": "38b4477039bcb42a32a58cf6bab545039bdfe4838cc62d4034a75f9475f0b6fa",
+      "stored_sha256": "38b4477039bcb42a32a58cf6bab545039bdfe4838cc62d4034a75f9475f0b6fa"
+    },
+    "preflight/cube.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/preflight/cube.json",
+      "original_sha256": "b17eabdd44b1531e2e0ecceaab1c5dee266979b9f3b508a1ec722be3aacf6a58",
+      "stored_sha256": "b17eabdd44b1531e2e0ecceaab1c5dee266979b9f3b508a1ec722be3aacf6a58"
+    },
+    "preflight/pusht.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/preflight/pusht.json",
+      "original_sha256": "3613e9a1d4df58e20c418ce2132f4e28144ab2fc2d4182b5273158f15d648b2a",
+      "stored_sha256": "3613e9a1d4df58e20c418ce2132f4e28144ab2fc2d4182b5273158f15d648b2a"
+    },
+    "logs/cpu-tests-final.log.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/logs/cpu-tests-final.log",
+      "original_sha256": "ccde9274b6cd4392a24309a70f5dcc1716c973e13f3e5ed3fdddbb4baa743389",
+      "stored_sha256": "3737180424b38eb5bc72a78232bb4a34f2627d3a0e65475f7affcf4fef6bcba2"
+    },
+    "logs/cpu-tests.log.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/logs/cpu-tests.log",
+      "original_sha256": "3cbc14292491c0616fa803ffb05ebff81396a9320ee56c846f49c56457a2b5de",
+      "stored_sha256": "0d8794a1dccbf7868cc5e0c8ef83ad8291ffa0cc95d9c334d47226802e3a1a4e"
+    },
+    "logs/cube-batching.log.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/logs/cube-batching.log",
+      "original_sha256": "91c2907fa9a76b5c6d15dcb68333168725daa6e14f4bb259084a901a77cdfdff",
+      "stored_sha256": "0d7c3c72d8022ba0195250924c6f2433b5e44c5f65c3cff75aee05e2c8d13eaf"
+    },
+    "logs/cube-guidance_only.log.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/logs/cube-guidance_only.log",
+      "original_sha256": "3fc402989d6c7fbae16be5b4045029b8bd497a239511a654b678e341315cd68f",
+      "stored_sha256": "15ef239653663401f747017b6fb4e41ea6532d80d7eaf12baba7f2085cdbaf44"
+    },
+    "logs/cube-guided_pnp.log.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/logs/cube-guided_pnp.log",
+      "original_sha256": "be050cd4a5dac728e2435dbaa3da960d682361d25d4160830e272c970d6af126",
+      "stored_sha256": "31f8cac594e4eed210105d9c78814b384d49c0414031625d18aa20e3019fd8ad"
+    },
+    "logs/cube-leflow.log.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/logs/cube-leflow.log",
+      "original_sha256": "7fb9714b72e82831985c20ffe61ea7a5c90ad94d494879fd927149185161cef5",
+      "stored_sha256": "fe0d89a0ac469115193707913be495636b128d628f95fa8d7bdf904497da8a93"
+    },
+    "logs/cube-leflow_more_samples.log.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/logs/cube-leflow_more_samples.log",
+      "original_sha256": "e6654baa8c1c18482f8468dd89504762a219aa20a9302c0acbb6fafd169065b1",
+      "stored_sha256": "de7385a1349bb93ef851b7e058e7c37670dc05ef331debca978ac089498f1972"
+    },
+    "logs/cube-leflow_more_steps.log.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/logs/cube-leflow_more_steps.log",
+      "original_sha256": "1c2360bb87ddaa04a3876159b5577eb9477ff10635f515590c022f309b08cf45",
+      "stored_sha256": "43f741a0ee70e9e49a42166cb5f1356978a7c890ee71a6b2431be55c159a39ca"
+    },
+    "logs/cube-pnp.log.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/logs/cube-pnp.log",
+      "original_sha256": "cb32578b55595edb550456b718b3a6315d8025de589946e79c4b588680b35bb5",
+      "stored_sha256": "73c0c19cbaf8e0f4564f1f38f8927dd3418661a962a89489acc2dc253edeb706"
+    },
+    "logs/cube-preflight-final.log.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/logs/cube-preflight-final.log",
+      "original_sha256": "8a78f25afcef24c925d333b23603c583065fb75c383c275f296b94623dd0fb74",
+      "stored_sha256": "3c8c679c67c61585325b4bd7198553e8fafefde6fa5cbc21cc6ea8cb065fec4e"
+    },
+    "logs/cube-preflight.log.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/logs/cube-preflight.log",
+      "original_sha256": "972705a406c1dac12fdfed5e38a1d84f23abffa2af03204757549a9b392324a6",
+      "stored_sha256": "81475ab74340ac177f87b72f2c6fbb0c6b827170103063280c28e9bf7cee9b12"
+    },
+    "logs/master.log.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/logs/master.log",
+      "original_sha256": "9ccd893197ba64d8ef439e6f4eb4be8ec21005b69b9427f2e9d8511fb4504703",
+      "stored_sha256": "88ee6966828f92a049cd5969c44b0689347c0a439f234aeb404ec1edaddde857"
+    },
+    "logs/pusht-batching.log.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/logs/pusht-batching.log",
+      "original_sha256": "e4b18a6f8039b08e7a81976924dbb21cc9e5aa0dfc6ec17f19b4ac27e71f22b7",
+      "stored_sha256": "3aa5338472d5a9eff5ec6140b2ad407c6f64cb4575b13652930de19ef72cf00e"
+    },
+    "logs/pusht-guidance_only.log.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/logs/pusht-guidance_only.log",
+      "original_sha256": "b4dc7d207823ea0910ac682adfcc8ac05915cab869f192b04e1fdcc43b49a5b3",
+      "stored_sha256": "825bbb11289fbdb224284ccf90450ea760ec692e74dbb9789cd9b83d9054997f"
+    },
+    "logs/pusht-guided_pnp.log.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/logs/pusht-guided_pnp.log",
+      "original_sha256": "5ef468aa4a8611f83ce0008acd83b2811e70a70770632de1d70a47453d037a1f",
+      "stored_sha256": "ce319de09a9fa6cdbd01dc56c1fe9f0325d4eaee4f399ed547e10607495a7f29"
+    },
+    "logs/pusht-leflow.log.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/logs/pusht-leflow.log",
+      "original_sha256": "b5845a34a32e8835ea32fe0059e0f250ba8260a39aa56463adb4d2b519f60a43",
+      "stored_sha256": "72cb6387f7875560336072c20c41c289933c0a13e09c04eade9b07a71f9a4ba3"
+    },
+    "logs/pusht-leflow_more_samples.log.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/logs/pusht-leflow_more_samples.log",
+      "original_sha256": "9ea74475e4d7b0943edf61b5e29603361b81b4de7df61f330c34831cdb1f1e05",
+      "stored_sha256": "1448f5e5af971a256d9593c17c0eb18359577bd61e378d3d9100632dea5f3c22"
+    },
+    "logs/pusht-leflow_more_steps.log.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/logs/pusht-leflow_more_steps.log",
+      "original_sha256": "93aaca0f52977f800341e19559bb9752a213e551f8163a7b3e87fd97cd613947",
+      "stored_sha256": "5a4b921862f82f6a3aeb593f0d3ee2449041225bcbf760d0362241439ea61824"
+    },
+    "logs/pusht-pnp.log.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/logs/pusht-pnp.log",
+      "original_sha256": "978075abf0fe5d0cacd21aaa820ac31b0dcc00915fa4a26b2d6907232a8bc87b",
+      "stored_sha256": "61ab32dddd562bddd3cf75b9e56d15858bfd7dd848271728fbffdbef68305828"
+    },
+    "logs/pusht-preflight-final.log.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/logs/pusht-preflight-final.log",
+      "original_sha256": "a3e34d01fdfcaaafdb39893410ce573068f3f2c071ab972612b634f914490ecf",
+      "stored_sha256": "eb0dde2c5b98fe7f980c42d2c89474d15aff9a52fb32e140caddfbfb3875d102"
+    },
+    "logs/pusht-preflight.log.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/logs/pusht-preflight.log",
+      "original_sha256": "045882e757089ffabb05a8b400df661cb4bdfcb893349c70168966c54cf21df5",
+      "stored_sha256": "b83d508b70729009865fc914b82dbdf2a4b9b5e9358d723b8be35182885b79a9"
+    },
+    "jobs/cube-guidance_only/identity.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guidance_only/identity.json",
+      "original_sha256": "c97a799d62cb0bb525ea40d2d9b07a3429d5a8d5b7b0406929a4bdbc29b2f7b1",
+      "stored_sha256": "c97a799d62cb0bb525ea40d2d9b07a3429d5a8d5b7b0406929a4bdbc29b2f7b1"
+    },
+    "jobs/cube-guidance_only/cases.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guidance_only/cases.json",
+      "original_sha256": "2ee9a46307da0216f41b5d92b0709ca37f36be7b6c215db0627d1208183f6bca",
+      "stored_sha256": "e6a561baedb2664c11167aa4ff97ae653c2993d12e476c8c2505baca9eb484b8"
+    },
+    "jobs/cube-guidance_only/progress.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guidance_only/progress.json",
+      "original_sha256": "e4541878b68e7dbf55a9069b31a5ea610aa6febb85461c2fdefd4d9e40a11f30",
+      "stored_sha256": "e4541878b68e7dbf55a9069b31a5ea610aa6febb85461c2fdefd4d9e40a11f30"
+    },
+    "jobs/cube-guidance_only/wandb.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guidance_only/wandb.json",
+      "original_sha256": "3ff9da89442530798d73838f0bb1ce2b09d23318fd4299608d8e071ad8e2da9a",
+      "stored_sha256": "3ff9da89442530798d73838f0bb1ce2b09d23318fd4299608d8e071ad8e2da9a"
+    },
+    "jobs/cube-guidance_only/partial-outcomes/00000.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guidance_only/outcomes/00000.json",
+      "original_sha256": "52a3be5567ea923cf7e3974287086b726c2c1130ea7f845ad3cf3185fc75c2c8",
+      "stored_sha256": "709e9d5b36bc333df25031cb5a948013ebf618034d63088123b64ad21d7ce085"
+    },
+    "jobs/cube-guidance_only/partial-outcomes/00001.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guidance_only/outcomes/00001.json",
+      "original_sha256": "e3903952c6e967e9539d419b03c6a877294e7dac1a860fe79ebb27314ccee4eb",
+      "stored_sha256": "7c120a948ac875d9c99dcc459bb1875587199cac225961ee28a54f884adb2d19"
+    },
+    "jobs/cube-guidance_only/partial-outcomes/00002.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guidance_only/outcomes/00002.json",
+      "original_sha256": "1f19f2140571c8d794fd840d128d32f29b4a6ff9a4c80e81a3cceabc5f9bba08",
+      "stored_sha256": "512dad1e4b6c91a56a6599db154bf4bd9e28a6e7acafd78676cd11e9894df61f"
+    },
+    "jobs/cube-guidance_only/partial-outcomes/00003.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guidance_only/outcomes/00003.json",
+      "original_sha256": "aa7e100eea4c343a1ac72e0bc7094f529689b516603ab2ede9b1bd4355d79a2c",
+      "stored_sha256": "565caf5d78d28dc6c126f2f34d329130a8dba25274f604538045cc2aaf088f8e"
+    },
+    "jobs/cube-guidance_only/partial-outcomes/00004.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guidance_only/outcomes/00004.json",
+      "original_sha256": "141c14000b90ec36573ab6e8a5f9e1faeb221d74ae0e7835af4d81a802e5eeac",
+      "stored_sha256": "4f3047401810014744f5c4323b62aa8d725dd5caf20a183f6127a9ead4fcbc89"
+    },
+    "jobs/cube-guidance_only/partial-outcomes/00005.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guidance_only/outcomes/00005.json",
+      "original_sha256": "734cf83762de9aca12553cdc305a70a3e30bbbb220868d8d5b93d1119366e6f7",
+      "stored_sha256": "576703d742a20237a882a9d96b9d67eb785ba7c87caf4cf3a15f5a9de0666998"
+    },
+    "jobs/cube-guidance_only/partial-outcomes/00006.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guidance_only/outcomes/00006.json",
+      "original_sha256": "e4fc83ac0641c4baa33d51753a6a69ef69fc0f49c4c9382b90d757147991f4f9",
+      "stored_sha256": "269dcdfddeb3867cebad4caf3ea5d40899a584f312089e78737f17a7ebfb9135"
+    },
+    "jobs/cube-guidance_only/partial-outcomes/00007.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guidance_only/outcomes/00007.json",
+      "original_sha256": "9af5ded53ebecee7d1b0d7eeea7b7a9f53c372ceeda01d7ef4928bbaa8711155",
+      "stored_sha256": "1e6fd4ef6fbe6302a7ca55476c6dda886dc9a82d014c0b9d6e2924bfeb0cf823"
+    },
+    "jobs/cube-guidance_only/partial-outcomes/00008.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guidance_only/outcomes/00008.json",
+      "original_sha256": "f0078aadb896e2bf122a62f4b91796de502cb2664c8ab456b0000de8c8c7f45b",
+      "stored_sha256": "9500e2c9c8779198a55dcf7784324ecabefaec16282979d141b1d8a10d356ea3"
+    },
+    "jobs/cube-guidance_only/partial-outcomes/00009.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guidance_only/outcomes/00009.json",
+      "original_sha256": "f71debc26ef2adca9e91785e36387a25153a5998c68a9cbbc1c53ff08819ce02",
+      "stored_sha256": "2499a0c44138242f988f76166c34ee8ae477d1dcb22195283200923af44c4464"
+    },
+    "jobs/cube-guidance_only/partial-outcomes/00010.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guidance_only/outcomes/00010.json",
+      "original_sha256": "28e8f7514b35795587dd6d92ce2762884aa635c06fba495b4298a50e833280d2",
+      "stored_sha256": "aad212b44fe701d374cdaa391d9a2faed9764fdb7795374dda7bbf0ed624fb37"
+    },
+    "jobs/cube-guidance_only/partial-outcomes/00011.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guidance_only/outcomes/00011.json",
+      "original_sha256": "1a570618b0ed09b8a34561189e25bb69e368a2dea74535b99d92b8d19ce523d4",
+      "stored_sha256": "54a2f3f1c38bfdfa5fc205f385181b7fbe6d4e555fe34e0fc53269d8fde5cff2"
+    },
+    "jobs/cube-guidance_only/partial-outcomes/00012.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guidance_only/outcomes/00012.json",
+      "original_sha256": "d729c8d003c7fb10676e9a7430cb2bc53c1191050e9953c7d7f8ec3e26cbc52a",
+      "stored_sha256": "4dd34f7c000a53d3833eb4b0da718c01bc2731d8c8af26355fa8dbbdad3cc315"
+    },
+    "jobs/cube-guidance_only/partial-outcomes/00013.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guidance_only/outcomes/00013.json",
+      "original_sha256": "1f6108599e63a16bd7dc50639d89fec938b0bfef85420fbeaa3f50a0939bce8f",
+      "stored_sha256": "002773d5507c3a2579656ba3f3805f8bb32495261b7e7a831fae57f1a6a81fd9"
+    },
+    "jobs/cube-guidance_only/partial-outcomes/00014.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guidance_only/outcomes/00014.json",
+      "original_sha256": "4d799a73c6caf145af2cfd3fdac07ae3d5bb307e1f88e8e0ae21124a61876cbe",
+      "stored_sha256": "ccf182281034aa190774fb3816b8dd63f17e84a9393d83548d6a813b937a0225"
+    },
+    "jobs/cube-guidance_only/partial-outcomes/00015.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guidance_only/outcomes/00015.json",
+      "original_sha256": "12107d5659c284cf13a0f052e3f801bfc6aad294ee31828fffdf77c35106f390",
+      "stored_sha256": "13feeb67833cde9a2cce5c0f5888276199092d5549274b573927c59ac9f6f8f8"
+    },
+    "jobs/cube-guidance_only/partial-outcomes/00016.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guidance_only/outcomes/00016.json",
+      "original_sha256": "d2d0c33d4a178730beb5cd68790577ccc3f1bf4a5383109a6b1af3d0d691a8c9",
+      "stored_sha256": "26265614f4772ad977d1135df74f4669ab00268b44bb316460743f41e42cd6ba"
+    },
+    "jobs/cube-guidance_only/partial-outcomes/00017.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guidance_only/outcomes/00017.json",
+      "original_sha256": "5e0e57a7a9d0a78ed764d5f8e90c2962f320df576f050533ee39b3fa7abe919e",
+      "stored_sha256": "b0b77a9aa11b8eba2e0854f0f2113982fbe5022b60018091e82856b36bd7fb27"
+    },
+    "jobs/cube-guidance_only/partial-outcomes/00018.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guidance_only/outcomes/00018.json",
+      "original_sha256": "fe9543c34e1af0e2a6e8bd43dd8845271322a69e628bf0f6279f8143b5067d46",
+      "stored_sha256": "47b8e29bdbbbb551577d30742853494bffd6d047375c8cfb983f9d1112cc1f9d"
+    },
+    "jobs/cube-guidance_only/partial-outcomes/00019.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guidance_only/outcomes/00019.json",
+      "original_sha256": "dd0ed5d91f01a6277efbcd82530b7a1b5b09a11fdbc8e7b1b7ca0c7f21fe0c66",
+      "stored_sha256": "4b8e58986a6e229c31c51a2e90d390b598063d07ca3a38daa74774151dfc7ce8"
+    },
+    "jobs/cube-guidance_only/partial-outcomes/00020.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guidance_only/outcomes/00020.json",
+      "original_sha256": "1b1b3d1d4c3f0adc088eefaa9d0a7209dd80cb0dc2bb521aa3cc09af1bc0f6c6",
+      "stored_sha256": "41a3fba4e82b9e62738fd42709b2443a3a62d8f1a4b4c62416f57efefbfca4e4"
+    },
+    "jobs/cube-guidance_only/partial-outcomes/00021.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guidance_only/outcomes/00021.json",
+      "original_sha256": "e20abc9ede704a8db13e179f8099e11fd03bae4a2697b8477bd6a51c48e32201",
+      "stored_sha256": "34338befee10649ce1c4ec14fc5447b9125bad7b815e16877fdeab959605889a"
+    },
+    "jobs/cube-guided_pnp/identity.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guided_pnp/identity.json",
+      "original_sha256": "97303bb49ee5829f8fffc8d4192a06f7662ee30609635da8b1d2429e3052b887",
+      "stored_sha256": "97303bb49ee5829f8fffc8d4192a06f7662ee30609635da8b1d2429e3052b887"
+    },
+    "jobs/cube-guided_pnp/cases.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guided_pnp/cases.json",
+      "original_sha256": "2ee9a46307da0216f41b5d92b0709ca37f36be7b6c215db0627d1208183f6bca",
+      "stored_sha256": "e6a561baedb2664c11167aa4ff97ae653c2993d12e476c8c2505baca9eb484b8"
+    },
+    "jobs/cube-guided_pnp/progress.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guided_pnp/progress.json",
+      "original_sha256": "f30c1dd62625cd2e3119af5dccc7e73b030138f8b57c07b69ff609befdf313d8",
+      "stored_sha256": "f30c1dd62625cd2e3119af5dccc7e73b030138f8b57c07b69ff609befdf313d8"
+    },
+    "jobs/cube-guided_pnp/wandb.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guided_pnp/wandb.json",
+      "original_sha256": "95349ba0968b8308250ef71a57a1e97c4db89e400ff91bd5c82da58d41883892",
+      "stored_sha256": "95349ba0968b8308250ef71a57a1e97c4db89e400ff91bd5c82da58d41883892"
+    },
+    "jobs/cube-guided_pnp/partial-outcomes/00000.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guided_pnp/outcomes/00000.json",
+      "original_sha256": "663b8216f2ea96070f0c92588d0250fff3612545abb803da322b2c617cc201d3",
+      "stored_sha256": "7feb95cf456bb85025035deb677bb9e5c1da717886f711928e9157878a728fcd"
+    },
+    "jobs/cube-guided_pnp/partial-outcomes/00001.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guided_pnp/outcomes/00001.json",
+      "original_sha256": "084177adec6f41d5d3bf0c021ca31721586dd9f9c316e36a6d3f4e4632b6e9d4",
+      "stored_sha256": "68a37fa10329512129a73d60b6ddd3984c015771206b0372298855c43df23f94"
+    },
+    "jobs/cube-guided_pnp/partial-outcomes/00002.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-guided_pnp/outcomes/00002.json",
+      "original_sha256": "c5e4f513fe8bf3e45676e12c0057b190f4c110adb325fa8008440d0a2b43e42a",
+      "stored_sha256": "35ed3b5e323b5287329676fabbe3ff89cb7cf4e0200df53be01e8c98abdc835b"
+    },
+    "jobs/cube-leflow/identity.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-leflow/identity.json",
+      "original_sha256": "b7cf68c85d3177624662b7155962ecb20b8df6637f38bea011e80b9f75af5911",
+      "stored_sha256": "b7cf68c85d3177624662b7155962ecb20b8df6637f38bea011e80b9f75af5911"
+    },
+    "jobs/cube-leflow/cases.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-leflow/cases.json",
+      "original_sha256": "2ee9a46307da0216f41b5d92b0709ca37f36be7b6c215db0627d1208183f6bca",
+      "stored_sha256": "e6a561baedb2664c11167aa4ff97ae653c2993d12e476c8c2505baca9eb484b8"
+    },
+    "jobs/cube-leflow/progress.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-leflow/progress.json",
+      "original_sha256": "9a772e9d5ae4d85d39ebca1929bbd239e5d44e78211ece0d3e4d843d703edbb8",
+      "stored_sha256": "9a772e9d5ae4d85d39ebca1929bbd239e5d44e78211ece0d3e4d843d703edbb8"
+    },
+    "jobs/cube-leflow/report.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-leflow/report.json",
+      "original_sha256": "91d0541e3d1df690753bc11af91320d46bab05d4847bdea0a5baa21d2b5554ba",
+      "stored_sha256": "b936fd6de07d55b33bd5ad045f68dc20d8702583ee1a0e66e3143c13be5c247c"
+    },
+    "jobs/cube-leflow/wandb.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-leflow/wandb.json",
+      "original_sha256": "1f036d131f8d4d16de428cb3c676a8c2b5181fe792066b4f92ecc8a3f9301600",
+      "stored_sha256": "1f036d131f8d4d16de428cb3c676a8c2b5181fe792066b4f92ecc8a3f9301600"
+    },
+    "jobs/cube-leflow/selected-trajectories/00000.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-leflow/trajectories/00000.npz",
+      "original_sha256": "de62de73f2554fb8b63badc681b7ed982003b498d1caa50eae7dc11d5f2f86d3",
+      "stored_sha256": "de62de73f2554fb8b63badc681b7ed982003b498d1caa50eae7dc11d5f2f86d3"
+    },
+    "jobs/cube-leflow/selected-trajectories/00001.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-leflow/trajectories/00001.npz",
+      "original_sha256": "7e7ef3073f4c7204ae9dddb58464c7f67caeca4db372a044e0598842d5f16fff",
+      "stored_sha256": "7e7ef3073f4c7204ae9dddb58464c7f67caeca4db372a044e0598842d5f16fff"
+    },
+    "jobs/cube-leflow/selected-trajectories/00002.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-leflow/trajectories/00002.npz",
+      "original_sha256": "2ef9cd8a86c4a5f0d6584e48b9052dcb4e26262ca4b668609081f31fff303045",
+      "stored_sha256": "2ef9cd8a86c4a5f0d6584e48b9052dcb4e26262ca4b668609081f31fff303045"
+    },
+    "jobs/cube-leflow/selected-trajectories/00003.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-leflow/trajectories/00003.npz",
+      "original_sha256": "97ce4b937786265c68aa708bf29b3f23c8de376a2b2dab6568b7125985bcdb8c",
+      "stored_sha256": "97ce4b937786265c68aa708bf29b3f23c8de376a2b2dab6568b7125985bcdb8c"
+    },
+    "jobs/cube-leflow/selected-trajectories/00004.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-leflow/trajectories/00004.npz",
+      "original_sha256": "85bd3a5c79f122fea4b849252592ce5f015148ed11b8493f40728ae5600cd371",
+      "stored_sha256": "85bd3a5c79f122fea4b849252592ce5f015148ed11b8493f40728ae5600cd371"
+    },
+    "jobs/cube-leflow/selected-trajectories/00005.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-leflow/trajectories/00005.npz",
+      "original_sha256": "94f48a0126274ab0acff364b3be17e004bb7136d57f77cb5085c5d5cec49444e",
+      "stored_sha256": "94f48a0126274ab0acff364b3be17e004bb7136d57f77cb5085c5d5cec49444e"
+    },
+    "jobs/cube-leflow/selected-trajectories/00006.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-leflow/trajectories/00006.npz",
+      "original_sha256": "3f8623ab8048703a4b59865d3937b0c076be2860cad5aea9d872966c6d43f0db",
+      "stored_sha256": "3f8623ab8048703a4b59865d3937b0c076be2860cad5aea9d872966c6d43f0db"
+    },
+    "jobs/cube-leflow/selected-trajectories/00007.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-leflow/trajectories/00007.npz",
+      "original_sha256": "e06df6b04a454baeb6e2c4eb150f4b5602a47e3a9fb8321826b4c8140554423e",
+      "stored_sha256": "e06df6b04a454baeb6e2c4eb150f4b5602a47e3a9fb8321826b4c8140554423e"
+    },
+    "jobs/cube-leflow/selected-trajectories/00008.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-leflow/trajectories/00008.npz",
+      "original_sha256": "2f933346040d864cb18b108d65b0de36649b888eefbe110b8e9a31f3bf51699b",
+      "stored_sha256": "2f933346040d864cb18b108d65b0de36649b888eefbe110b8e9a31f3bf51699b"
+    },
+    "jobs/cube-leflow/selected-trajectories/00009.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-leflow/trajectories/00009.npz",
+      "original_sha256": "57be5514245e7101841215b439ceaa290c46dc6edcdd0d78c62a9493cb8d1c0b",
+      "stored_sha256": "57be5514245e7101841215b439ceaa290c46dc6edcdd0d78c62a9493cb8d1c0b"
+    },
+    "jobs/cube-leflow_more_samples/identity.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-leflow_more_samples/identity.json",
+      "original_sha256": "5381a7d67e6a2da89f83428b09558a1587bed8b8afe17f74c2aa4642e476e9ab",
+      "stored_sha256": "5381a7d67e6a2da89f83428b09558a1587bed8b8afe17f74c2aa4642e476e9ab"
+    },
+    "jobs/cube-leflow_more_samples/cases.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-leflow_more_samples/cases.json",
+      "original_sha256": "2ee9a46307da0216f41b5d92b0709ca37f36be7b6c215db0627d1208183f6bca",
+      "stored_sha256": "e6a561baedb2664c11167aa4ff97ae653c2993d12e476c8c2505baca9eb484b8"
+    },
+    "jobs/cube-leflow_more_samples/progress.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-leflow_more_samples/progress.json",
+      "original_sha256": "be33e2142efa0681610ec666563294db0fecd3e56b9de917af04a38e556a3861",
+      "stored_sha256": "be33e2142efa0681610ec666563294db0fecd3e56b9de917af04a38e556a3861"
+    },
+    "jobs/cube-leflow_more_samples/report.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-leflow_more_samples/report.json",
+      "original_sha256": "380e0081ef6e48ff98d4bbfcd0c556b8221283f3d2ce0bbeb9dd68860dc380de",
+      "stored_sha256": "90387b8efb2cb4f33b6cce3d50d8e2b44245d01ff91df26ca83ab2e4769f6596"
+    },
+    "jobs/cube-leflow_more_samples/wandb.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-leflow_more_samples/wandb.json",
+      "original_sha256": "62081990f9864cc9c56861afba758a3bb2c577d6b910059860975fe569c8be4d",
+      "stored_sha256": "62081990f9864cc9c56861afba758a3bb2c577d6b910059860975fe569c8be4d"
+    },
+    "jobs/cube-leflow_more_samples/selected-trajectories/00000.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-leflow_more_samples/trajectories/00000.npz",
+      "original_sha256": "cf47d1d17651ed741fad3ee2eb5ccba23d727cfc96770e78fab1baf5611ea011",
+      "stored_sha256": "cf47d1d17651ed741fad3ee2eb5ccba23d727cfc96770e78fab1baf5611ea011"
+    },
+    "jobs/cube-leflow_more_samples/selected-trajectories/00001.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-leflow_more_samples/trajectories/00001.npz",
+      "original_sha256": "2314fbe0aa967a16ded6486897853372728675940f9958520d726577255a9d6e",
+      "stored_sha256": "2314fbe0aa967a16ded6486897853372728675940f9958520d726577255a9d6e"
+    },
+    "jobs/cube-leflow_more_samples/selected-trajectories/00002.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-leflow_more_samples/trajectories/00002.npz",
+      "original_sha256": "e4f320e73505ed199dc531d8fd4f211eeb45b810fe5f643c8a0e5a49db8cfac5",
+      "stored_sha256": "e4f320e73505ed199dc531d8fd4f211eeb45b810fe5f643c8a0e5a49db8cfac5"
+    },
+    "jobs/cube-leflow_more_samples/selected-trajectories/00003.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-leflow_more_samples/trajectories/00003.npz",
+      "original_sha256": "e3cf2d451bafb817677008581c0fc377a1d2ca9258c8f0cfcf54de33eddaedde",
+      "stored_sha256": "e3cf2d451bafb817677008581c0fc377a1d2ca9258c8f0cfcf54de33eddaedde"
+    },
+    "jobs/cube-leflow_more_samples/selected-trajectories/00004.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-leflow_more_samples/trajectories/00004.npz",
+      "original_sha256": "85bd3a5c79f122fea4b849252592ce5f015148ed11b8493f40728ae5600cd371",
+      "stored_sha256": "85bd3a5c79f122fea4b849252592ce5f015148ed11b8493f40728ae5600cd371"
+    },
+    "jobs/cube-leflow_more_samples/selected-trajectories/00005.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-leflow_more_samples/trajectories/00005.npz",
+      "original_sha256": "7e401503f93495e2b1c0502912677d86a4bd80b55257ddaab7613b958f92d4bb",
+      "stored_sha256": "7e401503f93495e2b1c0502912677d86a4bd80b55257ddaab7613b958f92d4bb"
+    },
+    "jobs/cube-leflow_more_samples/selected-trajectories/00006.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-leflow_more_samples/trajectories/00006.npz",
+      "original_sha256": "8706c685d3face14c2bcc3c07166c237b6c8849a5345952a7ae6593181dd1a53",
+      "stored_sha256": "8706c685d3face14c2bcc3c07166c237b6c8849a5345952a7ae6593181dd1a53"
+    },
+    "jobs/cube-leflow_more_samples/selected-trajectories/00007.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-leflow_more_samples/trajectories/00007.npz",
+      "original_sha256": "095efc87801e18d3ce16c85c99f74b64ea0c4ad1deedf129bb01cb820728adb8",
+      "stored_sha256": "095efc87801e18d3ce16c85c99f74b64ea0c4ad1deedf129bb01cb820728adb8"
+    },
+    "jobs/cube-leflow_more_samples/selected-trajectories/00008.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-leflow_more_samples/trajectories/00008.npz",
+      "original_sha256": "a8f47280330957b850eaa60304771b0a87bb0e1386cbf5dacbc756aa0b56eb12",
+      "stored_sha256": "a8f47280330957b850eaa60304771b0a87bb0e1386cbf5dacbc756aa0b56eb12"
+    },
+    "jobs/cube-leflow_more_samples/selected-trajectories/00009.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-leflow_more_samples/trajectories/00009.npz",
+      "original_sha256": "dcd5cf854fb3a162e890c0478c8d5f4b4f6bd09523d10e9b164649e0d9b4182a",
+      "stored_sha256": "dcd5cf854fb3a162e890c0478c8d5f4b4f6bd09523d10e9b164649e0d9b4182a"
+    },
+    "jobs/cube-leflow_more_steps/identity.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-leflow_more_steps/identity.json",
+      "original_sha256": "5a6115cb01d5f6f11f43c663c0c136feffdc7e164e25db28f1b00680e3949269",
+      "stored_sha256": "5a6115cb01d5f6f11f43c663c0c136feffdc7e164e25db28f1b00680e3949269"
+    },
+    "jobs/cube-leflow_more_steps/cases.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-leflow_more_steps/cases.json",
+      "original_sha256": "2ee9a46307da0216f41b5d92b0709ca37f36be7b6c215db0627d1208183f6bca",
+      "stored_sha256": "e6a561baedb2664c11167aa4ff97ae653c2993d12e476c8c2505baca9eb484b8"
+    },
+    "jobs/cube-leflow_more_steps/progress.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-leflow_more_steps/progress.json",
+      "original_sha256": "62bd15dfa2aaa6145974de669e15b3c8c283fc72c0dac9a9e802273daee6cbff",
+      "stored_sha256": "62bd15dfa2aaa6145974de669e15b3c8c283fc72c0dac9a9e802273daee6cbff"
+    },
+    "jobs/cube-leflow_more_steps/report.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-leflow_more_steps/report.json",
+      "original_sha256": "0869590ab7326976beabaf342b572135ec10652704f4f72a0195945ab90eec61",
+      "stored_sha256": "1920372747da88b1650cc6f34ddda5f002a021b0f95ee6570873db9331878369"
+    },
+    "jobs/cube-leflow_more_steps/wandb.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-leflow_more_steps/wandb.json",
+      "original_sha256": "b097853da2a6237343faf05ca883b4191cd6871625f1369916c869c52cf7b23b",
+      "stored_sha256": "b097853da2a6237343faf05ca883b4191cd6871625f1369916c869c52cf7b23b"
+    },
+    "jobs/cube-leflow_more_steps/selected-trajectories/00000.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-leflow_more_steps/trajectories/00000.npz",
+      "original_sha256": "3d7159f2d622e5727caddc1f88853a4ec10237cff221f7c8c8a57ad9cc46b19b",
+      "stored_sha256": "3d7159f2d622e5727caddc1f88853a4ec10237cff221f7c8c8a57ad9cc46b19b"
+    },
+    "jobs/cube-leflow_more_steps/selected-trajectories/00001.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-leflow_more_steps/trajectories/00001.npz",
+      "original_sha256": "eef5d63fa1bff51107ced86fe6e344bad3db59725dca2ddfb1160faddcc7bd91",
+      "stored_sha256": "eef5d63fa1bff51107ced86fe6e344bad3db59725dca2ddfb1160faddcc7bd91"
+    },
+    "jobs/cube-leflow_more_steps/selected-trajectories/00002.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-leflow_more_steps/trajectories/00002.npz",
+      "original_sha256": "a76e2a9635d248b4741ff0f8162c17bcc2be49e4e2722c6adf95028ebb34343d",
+      "stored_sha256": "a76e2a9635d248b4741ff0f8162c17bcc2be49e4e2722c6adf95028ebb34343d"
+    },
+    "jobs/cube-leflow_more_steps/selected-trajectories/00003.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-leflow_more_steps/trajectories/00003.npz",
+      "original_sha256": "d8683f08ff89dd8f12c1149b2b355c10661ac62a0db5f1891b01b231eaa9975b",
+      "stored_sha256": "d8683f08ff89dd8f12c1149b2b355c10661ac62a0db5f1891b01b231eaa9975b"
+    },
+    "jobs/cube-leflow_more_steps/selected-trajectories/00004.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-leflow_more_steps/trajectories/00004.npz",
+      "original_sha256": "2c7f4f340af7938bf8e4f22176aa60e288a5700cf6f7af134a4b2c32e12b6398",
+      "stored_sha256": "2c7f4f340af7938bf8e4f22176aa60e288a5700cf6f7af134a4b2c32e12b6398"
+    },
+    "jobs/cube-leflow_more_steps/selected-trajectories/00005.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-leflow_more_steps/trajectories/00005.npz",
+      "original_sha256": "e3c366952a26bdc3dbd8303270191313d56aa813fb5a2e16c3813a99ad7d5325",
+      "stored_sha256": "e3c366952a26bdc3dbd8303270191313d56aa813fb5a2e16c3813a99ad7d5325"
+    },
+    "jobs/cube-leflow_more_steps/selected-trajectories/00006.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-leflow_more_steps/trajectories/00006.npz",
+      "original_sha256": "71f1d0e68e7685d22cf0bfd3721f618defddaa8ff0509437fe98212f3aa5b59b",
+      "stored_sha256": "71f1d0e68e7685d22cf0bfd3721f618defddaa8ff0509437fe98212f3aa5b59b"
+    },
+    "jobs/cube-leflow_more_steps/selected-trajectories/00007.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-leflow_more_steps/trajectories/00007.npz",
+      "original_sha256": "78e80be88777f2b2dd2c6fc3e0ea923e3c2551157d3c93e11c84986482fdf1a4",
+      "stored_sha256": "78e80be88777f2b2dd2c6fc3e0ea923e3c2551157d3c93e11c84986482fdf1a4"
+    },
+    "jobs/cube-leflow_more_steps/selected-trajectories/00008.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-leflow_more_steps/trajectories/00008.npz",
+      "original_sha256": "d0449d15b9458e2ff67c561637298d1c48373e138dd186b924dc868cf1e7ef09",
+      "stored_sha256": "d0449d15b9458e2ff67c561637298d1c48373e138dd186b924dc868cf1e7ef09"
+    },
+    "jobs/cube-leflow_more_steps/selected-trajectories/00009.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-leflow_more_steps/trajectories/00009.npz",
+      "original_sha256": "92402adbe50ab178bd70b7909cdea8b850ee44309aeabaa0adf5c8cb72160c3d",
+      "stored_sha256": "92402adbe50ab178bd70b7909cdea8b850ee44309aeabaa0adf5c8cb72160c3d"
+    },
+    "jobs/cube-pnp/identity.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-pnp/identity.json",
+      "original_sha256": "db56eea2bfb47af673586026c017978816ea0c7d9836b49f5d03f0249ead68cb",
+      "stored_sha256": "db56eea2bfb47af673586026c017978816ea0c7d9836b49f5d03f0249ead68cb"
+    },
+    "jobs/cube-pnp/cases.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-pnp/cases.json",
+      "original_sha256": "2ee9a46307da0216f41b5d92b0709ca37f36be7b6c215db0627d1208183f6bca",
+      "stored_sha256": "e6a561baedb2664c11167aa4ff97ae653c2993d12e476c8c2505baca9eb484b8"
+    },
+    "jobs/cube-pnp/progress.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-pnp/progress.json",
+      "original_sha256": "3873225e4392c13fdd223ad82b1b4d651aa6ebd0f0a271c1a2580707df7402d5",
+      "stored_sha256": "3873225e4392c13fdd223ad82b1b4d651aa6ebd0f0a271c1a2580707df7402d5"
+    },
+    "jobs/cube-pnp/report.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-pnp/report.json",
+      "original_sha256": "eeed74cace5982f6abcf988df4ab259964c6960170efe24a11690abcb94900dc",
+      "stored_sha256": "8e493733f7b288ac163de67fae0862815e0847e023ab3a3fde96827874c2dcb4"
+    },
+    "jobs/cube-pnp/wandb.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-pnp/wandb.json",
+      "original_sha256": "796fb4a45396c3fcba1cc6e55386db5c4fbbc8b49020972cb9a0d130fafdc9f5",
+      "stored_sha256": "796fb4a45396c3fcba1cc6e55386db5c4fbbc8b49020972cb9a0d130fafdc9f5"
+    },
+    "jobs/cube-pnp/selected-trajectories/00000.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-pnp/trajectories/00000.npz",
+      "original_sha256": "bc7043f9a879f2d75a5bb85d7e36e723081d3c6b1daed5194b3ced6d3ddd5ce8",
+      "stored_sha256": "bc7043f9a879f2d75a5bb85d7e36e723081d3c6b1daed5194b3ced6d3ddd5ce8"
+    },
+    "jobs/cube-pnp/selected-trajectories/00001.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-pnp/trajectories/00001.npz",
+      "original_sha256": "9907206744c7b9b278ed93c4164d14c3864557d8762949699f51343e49902c52",
+      "stored_sha256": "9907206744c7b9b278ed93c4164d14c3864557d8762949699f51343e49902c52"
+    },
+    "jobs/cube-pnp/selected-trajectories/00002.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-pnp/trajectories/00002.npz",
+      "original_sha256": "3df22921166933a88ae1624e5739934ee2721a53d6021904dfa2c72ccd332638",
+      "stored_sha256": "3df22921166933a88ae1624e5739934ee2721a53d6021904dfa2c72ccd332638"
+    },
+    "jobs/cube-pnp/selected-trajectories/00003.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-pnp/trajectories/00003.npz",
+      "original_sha256": "9cd0099b316a7cc44849e8853f75daf0c1439efecf6bf6b3e89fa351101ee380",
+      "stored_sha256": "9cd0099b316a7cc44849e8853f75daf0c1439efecf6bf6b3e89fa351101ee380"
+    },
+    "jobs/cube-pnp/selected-trajectories/00004.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-pnp/trajectories/00004.npz",
+      "original_sha256": "47aed92bf24c23f54595ed7effe75b43de47309179bdaa2fd8e5e6f1d1c013f2",
+      "stored_sha256": "47aed92bf24c23f54595ed7effe75b43de47309179bdaa2fd8e5e6f1d1c013f2"
+    },
+    "jobs/cube-pnp/selected-trajectories/00005.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-pnp/trajectories/00005.npz",
+      "original_sha256": "a027f7d63a476defad9ebe31c5a796f64bb2a8cf71f171548b54ed4a549c8acb",
+      "stored_sha256": "a027f7d63a476defad9ebe31c5a796f64bb2a8cf71f171548b54ed4a549c8acb"
+    },
+    "jobs/cube-pnp/selected-trajectories/00006.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-pnp/trajectories/00006.npz",
+      "original_sha256": "ee06f8d47771db8fa3cd990f38c268a49699bbe608e7cd02ea04009300eb504d",
+      "stored_sha256": "ee06f8d47771db8fa3cd990f38c268a49699bbe608e7cd02ea04009300eb504d"
+    },
+    "jobs/cube-pnp/selected-trajectories/00007.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-pnp/trajectories/00007.npz",
+      "original_sha256": "7e59076a8bac08e54c376af439a7bba694ed5ddb3b5ddb01763987c585c04443",
+      "stored_sha256": "7e59076a8bac08e54c376af439a7bba694ed5ddb3b5ddb01763987c585c04443"
+    },
+    "jobs/cube-pnp/selected-trajectories/00008.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-pnp/trajectories/00008.npz",
+      "original_sha256": "8822fb4f613cc056fe8daf8d927a88d14bd7ee2685c7ee39aa54bc208d09e270",
+      "stored_sha256": "8822fb4f613cc056fe8daf8d927a88d14bd7ee2685c7ee39aa54bc208d09e270"
+    },
+    "jobs/cube-pnp/selected-trajectories/00009.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/cube-pnp/trajectories/00009.npz",
+      "original_sha256": "347d02392fd97adb77e3c5489625ed230ce24626e9a8d7213a870b4d53165405",
+      "stored_sha256": "347d02392fd97adb77e3c5489625ed230ce24626e9a8d7213a870b4d53165405"
+    },
+    "jobs/pusht-guidance_only/identity.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/identity.json",
+      "original_sha256": "5ead893277748d1cb19ecb425667f66308c4268e22e2b1c4803e022b677973ad",
+      "stored_sha256": "5ead893277748d1cb19ecb425667f66308c4268e22e2b1c4803e022b677973ad"
+    },
+    "jobs/pusht-guidance_only/cases.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/cases.json",
+      "original_sha256": "782e731279a661ba1b2e39e296aeb4dab60c4bbb170f16aca7248d55baa5562e",
+      "stored_sha256": "c669edc572e9249f3a2f304b1f65dc959576dd646aea500b2b8abc4b8e733070"
+    },
+    "jobs/pusht-guidance_only/progress.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/progress.json",
+      "original_sha256": "625eef6d41c3360087d81a3436ac9c8b2231333520ab53646d4911b133227151",
+      "stored_sha256": "625eef6d41c3360087d81a3436ac9c8b2231333520ab53646d4911b133227151"
+    },
+    "jobs/pusht-guidance_only/wandb.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/wandb.json",
+      "original_sha256": "3f075846513263af801911fe288c8b29c72edee3e7057257917d8fa076599398",
+      "stored_sha256": "3f075846513263af801911fe288c8b29c72edee3e7057257917d8fa076599398"
+    },
+    "jobs/pusht-guidance_only/partial-outcomes/00000.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00000.json",
+      "original_sha256": "245346e4aeaf952554a744a7da16fe70ea8df10c5718d147ed019aec19e42846",
+      "stored_sha256": "5fe96a4988856b42efb85fda862a025ccfbdf6f9dad444d36738910b42e000b5"
+    },
+    "jobs/pusht-guidance_only/partial-outcomes/00001.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00001.json",
+      "original_sha256": "e21b96262e412562aff2042f5c0eb0f7b007850c5952cf90cbeacfc5b79ceda3",
+      "stored_sha256": "683b487ee4b32b99e63d7ac6f36e98341ebb2c6f549af1391c2b1c9872c8ccd1"
+    },
+    "jobs/pusht-guidance_only/partial-outcomes/00002.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00002.json",
+      "original_sha256": "26219d86c6b6fdcbd6938beebb98122e7244dfd0cf307474449714d92a7c0e36",
+      "stored_sha256": "ff0724a086bb6895586a637da22f383d3e386916335ffa177e3560aa8d26aec2"
+    },
+    "jobs/pusht-guidance_only/partial-outcomes/00003.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00003.json",
+      "original_sha256": "7633c0b011f928472f5b7edd024207b3d743050b2f5085b2362b2027a8cb9f55",
+      "stored_sha256": "183c981c307e5e82b7809bc2330cd396a8fbd9b47ff51502e578c46c0448d6d8"
+    },
+    "jobs/pusht-guidance_only/partial-outcomes/00004.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00004.json",
+      "original_sha256": "2e2ffb14acfd4667a1834f327b825bf51d627dcc391527fb59105f3cac3a9e66",
+      "stored_sha256": "da880fc21810087d5b6ed3a931a228f22fc95769754b7061ac1499b06e9253a8"
+    },
+    "jobs/pusht-guidance_only/partial-outcomes/00005.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00005.json",
+      "original_sha256": "dff6bb3b75d78b3c6ad5c367411f38683031a5148db92002057d63dbe4eda7a5",
+      "stored_sha256": "4a6e1f6e60a0c6bc0a4fb1b42314b013fc018e29f0a711558334cf63260241e7"
+    },
+    "jobs/pusht-guidance_only/partial-outcomes/00006.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00006.json",
+      "original_sha256": "798dbedfa231b88da8494947ca664e7b3083d2709647d8c3015e3d07ca1c2c5a",
+      "stored_sha256": "bc042939a52e40e12df953fc952b0a71732d4674c93778c55bfbbfe0c1cfd6b3"
+    },
+    "jobs/pusht-guidance_only/partial-outcomes/00007.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00007.json",
+      "original_sha256": "4697fddbc40aae58b23200f48cd45a6302c922ef413dc50c58566eb7a17b4052",
+      "stored_sha256": "981431828c0089b3a496cb6472d1b447348a0548d6694da0160ce18bce4bd743"
+    },
+    "jobs/pusht-guidance_only/partial-outcomes/00008.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00008.json",
+      "original_sha256": "120409d90bcedefcb88f085224ebd9a8ee105a4c24c381bde359fcc1f1d66725",
+      "stored_sha256": "7e0a478a85297d05af4192f5ff2f6539e000ea07c0e6d0d454c759590ad287b0"
+    },
+    "jobs/pusht-guidance_only/partial-outcomes/00009.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00009.json",
+      "original_sha256": "03b1849e4f89c74edb013a174903fabc5ebd8b36ba85315837732ef62022aa3f",
+      "stored_sha256": "f59a46b71b28eac83dbecdb3352c51d1b5d15e8f323ef1818b400406eb0b6d6c"
+    },
+    "jobs/pusht-guidance_only/partial-outcomes/00010.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00010.json",
+      "original_sha256": "1b5b9a38a6ef23b5a0d14a06b65f5b0a644c2827138f93cd9da2bcbe77788959",
+      "stored_sha256": "cf195b3dbdaa98023b3898742b1b7f0d2251c26562030874357a5706452703b0"
+    },
+    "jobs/pusht-guidance_only/partial-outcomes/00011.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00011.json",
+      "original_sha256": "201eb2e3096fb9d8c6592dcbd1998c1c67e1c778ab1119a2d1c2598041c0559d",
+      "stored_sha256": "2247a216563dd70bee0fbccb189446cadfa2dd0f6b5ec0fcf6a6da0536320280"
+    },
+    "jobs/pusht-guidance_only/partial-outcomes/00012.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00012.json",
+      "original_sha256": "08ddc4f0363e35c42574724cc178296854edcf6c04c0f67c32539b2bb1f4ae50",
+      "stored_sha256": "9086bd0fc9c8ee8b866793bfac9221fecb6ec6faee1984229279c1311bcd97a8"
+    },
+    "jobs/pusht-guidance_only/partial-outcomes/00013.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00013.json",
+      "original_sha256": "81e4b08a5c70976772b894cdbbfbb8aae5f20c2031f0cf8898185df64cfbce07",
+      "stored_sha256": "572168ace6f2e7b397ac0ada01fbd8a88f67ba3fad93ebd859d82a2064933b42"
+    },
+    "jobs/pusht-guidance_only/partial-outcomes/00014.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00014.json",
+      "original_sha256": "6ad6dbeecdfcfd251ff5d17944ea6589173f6c8df116d90c960e886baee1e361",
+      "stored_sha256": "984162a74e3953441c54c2e5603883aaa6db5d6a81633126c6e08aa193bb196e"
+    },
+    "jobs/pusht-guidance_only/partial-outcomes/00015.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00015.json",
+      "original_sha256": "42e8a92e0553198788f26d12bb43be720312749c5625235d7b9a6fe5e7421553",
+      "stored_sha256": "8a61404b33721508687689c7c3d977d5f0888c94183be0dd46ecbb2f3be18665"
+    },
+    "jobs/pusht-guidance_only/partial-outcomes/00016.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00016.json",
+      "original_sha256": "23e2f1c7d6606622d13fe1f17722f7f84e5358b2426ed60f8960461d5073b4d3",
+      "stored_sha256": "7768d07de948dbbc0d2e5cd0761b8324b4029280d8f6fec4ec53c16fec8a33cf"
+    },
+    "jobs/pusht-guidance_only/partial-outcomes/00017.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00017.json",
+      "original_sha256": "60d8dc00cf537b7f01fd0f445d283fd9e5123515f19c3d6740c30bba7614d01c",
+      "stored_sha256": "e7f9f7239e98abeb9e64ef9ade36c1e85e091e33937c08e03d11c6f3ba198247"
+    },
+    "jobs/pusht-guidance_only/partial-outcomes/00018.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00018.json",
+      "original_sha256": "d87b0b33b81ebdf2cee92f4e9a6609cafe54ad8e3c2cd40cdf07e116b5eec4f3",
+      "stored_sha256": "941d4e29e368e5e897c8423a445d94cf8329565266848708db0d55d4b2f6c2fc"
+    },
+    "jobs/pusht-guidance_only/partial-outcomes/00019.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00019.json",
+      "original_sha256": "2a54b0717c53947fe6da8ead26919192fa629c285975783870aa2fc207997496",
+      "stored_sha256": "41ab040cb57c08509a89331b8fa757d9abc0f99dcd9c3c27b15f7477b8d05f25"
+    },
+    "jobs/pusht-guidance_only/partial-outcomes/00020.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00020.json",
+      "original_sha256": "38fef9d8f8095d0a8fa1d2530b7c0bf069fe30b67033878c7c72bca6dcb98e31",
+      "stored_sha256": "85ea394731c7dd803400f4b2364782796914ae6d4db8016892937c7827103297"
+    },
+    "jobs/pusht-guidance_only/partial-outcomes/00021.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00021.json",
+      "original_sha256": "38afd632ef19d4cfdbafdf504d4d5d13e26258974f349090a347bcea8f3495ae",
+      "stored_sha256": "803eed04a5dfa8c6a4403a1329082d89e53f772cc5683629ac4b460eefbbcddb"
+    },
+    "jobs/pusht-guidance_only/partial-outcomes/00022.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00022.json",
+      "original_sha256": "123a483d0d8a861cf9222d8e0cc8a729a232649881be52deefcfe00f53159dc8",
+      "stored_sha256": "946fb7c2e490c6f11d7afe3d1b47b87730838652752041ede85b892d3506246d"
+    },
+    "jobs/pusht-guidance_only/partial-outcomes/00023.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00023.json",
+      "original_sha256": "251cc5cde02117aa1ea6fead5a6b1fe9181b76313941c20362c8665fd6a86838",
+      "stored_sha256": "ca485ff12da0323ed9d5048c73018cc9096f025a00149dbf5262296a9d62ba8d"
+    },
+    "jobs/pusht-guidance_only/partial-outcomes/00024.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00024.json",
+      "original_sha256": "4db7d8978f31111b18fa8d175e00915ce6d182a5f59bd5029f86774b38abecfd",
+      "stored_sha256": "74f244bfd630fa6cb88bcfbd00699632cdbc6d7fbfbb11cbe4f3b9f28b76d55f"
+    },
+    "jobs/pusht-guidance_only/partial-outcomes/00025.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00025.json",
+      "original_sha256": "76ddc07a79aba3cb244190fe8517127f2dbb52dc968ab5a885d68f655ec32a16",
+      "stored_sha256": "57c8c6e3484ad5f921a0f30fcc41c365ace02ca0224a6caae0ad8d282683cc60"
+    },
+    "jobs/pusht-guidance_only/partial-outcomes/00026.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00026.json",
+      "original_sha256": "c4c7eda646456697ba680c1b23cf854033d468c77ba250b1b6b4abb8648014b6",
+      "stored_sha256": "bfa4a9cb54b8acf900e0b83fa468e33508c7b2316ec7d34ba90f95f4948b9e5e"
+    },
+    "jobs/pusht-guidance_only/partial-outcomes/00027.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00027.json",
+      "original_sha256": "27e7ab95c48e3b2325acc9b0971e63776f3754677cd2bd9b80f467e0b08ff23a",
+      "stored_sha256": "a9fa05be3c1b32aa94fbf2ddaf75036688b131d1082ac0d404f4a5ef6438e539"
+    },
+    "jobs/pusht-guidance_only/partial-outcomes/00028.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00028.json",
+      "original_sha256": "850ff2cea8e816e4e367acefec93b00109d4b48bb2510f2a898155bad5ae08b6",
+      "stored_sha256": "9803c65f9e54ebfe3935a7c2d18fef9a36e700716810a80dae716331e38d5414"
+    },
+    "jobs/pusht-guidance_only/partial-outcomes/00029.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00029.json",
+      "original_sha256": "8c82c2aac092eab03f343e96b11538daa512c2638c32d2776b1fbd2e974ec843",
+      "stored_sha256": "f21bfad5610a5d62a7f9fbce5b09789a8e6eb631cad5413da64661ad6999e6df"
+    },
+    "jobs/pusht-guidance_only/partial-outcomes/00030.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00030.json",
+      "original_sha256": "53eb5d89bec319647eddfb434165021b3137e2c5b7cdb78af567adc208b4a838",
+      "stored_sha256": "a1401f67ceae75311d61e43f260850dd2244f626559f709de493503193cc4a4d"
+    },
+    "jobs/pusht-guidance_only/partial-outcomes/00031.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00031.json",
+      "original_sha256": "9b2c1232ec0b2ceab59f65a6b6dbae0bf87b60aa821ca97a44e4163acbf80a0c",
+      "stored_sha256": "3ea7bbb4084d0dbaa51c45b153c639fb82de5ad569dfcb2af200da0aee0484c5"
+    },
+    "jobs/pusht-guidance_only/partial-outcomes/00032.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00032.json",
+      "original_sha256": "bd9c7695ad0acbc84a4c9e5ecc5865d70cc0511779f799e0af99f62afdce31e4",
+      "stored_sha256": "28acff294f52cb543f8d7ec26f507739a371a7017d529a55e1bd045ae8e81b67"
+    },
+    "jobs/pusht-guidance_only/partial-outcomes/00033.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00033.json",
+      "original_sha256": "09124b672b1ed5f0e757ff79a28f2bf259e69f89c24e29180c6a11013cd4b7fa",
+      "stored_sha256": "9c065cabc1af3af61da7a6193d0d92e94480039c39e5336090229fdfcb7f64db"
+    },
+    "jobs/pusht-guidance_only/partial-outcomes/00034.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00034.json",
+      "original_sha256": "caf402fc0e3aa9768a76f6b5261182271b1d6154266a60b3c9d84df47cfcc2de",
+      "stored_sha256": "5bd915ff5cfdeb2e10f2b037835932ef39c757f5484c10557efe213de43a4396"
+    },
+    "jobs/pusht-guidance_only/partial-outcomes/00035.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00035.json",
+      "original_sha256": "6724f7ffb835a5b02ec3556ed67083ae6806d1bb42ff59b867ccf0162b2bd1fe",
+      "stored_sha256": "358227b0fdc420ccaeeba5a70a9e352e589bc8df767bef1dd0a99df43a742f0f"
+    },
+    "jobs/pusht-guidance_only/partial-outcomes/00036.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00036.json",
+      "original_sha256": "362e4a6054de7b02e85e74a31e212ed4981d03645ec12335d8941cff695ba5d9",
+      "stored_sha256": "e1f06ead3683d42794d06cc6532929fa7535ceb2a7ff16831e0420c7370add57"
+    },
+    "jobs/pusht-guidance_only/partial-outcomes/00037.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00037.json",
+      "original_sha256": "920e33177cd4b3e8c0d47ace780a69b6673deeb639e9d923f8204e49d99ac37a",
+      "stored_sha256": "016b7bcf93cfd9db99517dd1a5554fe24d8e804c6d12d08c3360a27d097ac2a9"
+    },
+    "jobs/pusht-guidance_only/partial-outcomes/00038.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guidance_only/outcomes/00038.json",
+      "original_sha256": "db86a2e035463b5e83b7871075c698f808049a3a4eb2f3e7a4173fbd879dc43c",
+      "stored_sha256": "72804ce7ccf2211af99d8dfe627622f8a87ae00a9c0b928e73cd47c8f982de10"
+    },
+    "jobs/pusht-guided_pnp/identity.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/identity.json",
+      "original_sha256": "a29e3820d65fc7dbae586c38b2fcc62ccda1daf052a4e1b0fae6978cd21ba652",
+      "stored_sha256": "a29e3820d65fc7dbae586c38b2fcc62ccda1daf052a4e1b0fae6978cd21ba652"
+    },
+    "jobs/pusht-guided_pnp/cases.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/cases.json",
+      "original_sha256": "782e731279a661ba1b2e39e296aeb4dab60c4bbb170f16aca7248d55baa5562e",
+      "stored_sha256": "c669edc572e9249f3a2f304b1f65dc959576dd646aea500b2b8abc4b8e733070"
+    },
+    "jobs/pusht-guided_pnp/progress.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/progress.json",
+      "original_sha256": "665ffa9497d81507e0e9c93de5cde675e1553ff38b6ef3d5fa86364ba693f76f",
+      "stored_sha256": "665ffa9497d81507e0e9c93de5cde675e1553ff38b6ef3d5fa86364ba693f76f"
+    },
+    "jobs/pusht-guided_pnp/wandb.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/wandb.json",
+      "original_sha256": "9a1ee5ad62f24f624b4a25ef85941fd89dc3696ace0be6f519ffe15e12bef985",
+      "stored_sha256": "9a1ee5ad62f24f624b4a25ef85941fd89dc3696ace0be6f519ffe15e12bef985"
+    },
+    "jobs/pusht-guided_pnp/partial-outcomes/00000.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00000.json",
+      "original_sha256": "c50f32b41c9be8c3b12545a60348fd56dc91f804fb3ae635be0a46c5cf9e7048",
+      "stored_sha256": "097af18e3bd27e221a9d911880936a55c4916da5792c5960972b72c570e79d6c"
+    },
+    "jobs/pusht-guided_pnp/partial-outcomes/00001.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00001.json",
+      "original_sha256": "809e3f9706374d6178ad7738388fa28f1f7b5fbb88aa84c293db718084d586aa",
+      "stored_sha256": "10f1eae5da8ea31ffbdfe40c8b15c590863380348d8d5de3bc5e620efb4a47e0"
+    },
+    "jobs/pusht-guided_pnp/partial-outcomes/00002.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00002.json",
+      "original_sha256": "8c289211daff23a43a4a62b9825eb28d232a3903269b071eef89396b2800adb0",
+      "stored_sha256": "650f35758107105a789e85cc9c6d3134763e04dc78dc18873bd06d395c6e0e36"
+    },
+    "jobs/pusht-guided_pnp/partial-outcomes/00003.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00003.json",
+      "original_sha256": "c72592c3de37c10e26a947c2a5fe35774ce7c76b9ca13336966cae181b1d8426",
+      "stored_sha256": "94528b4089c75f502e257874d22b26239f7b33f502f552b9960453b3e9f0eace"
+    },
+    "jobs/pusht-guided_pnp/partial-outcomes/00004.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00004.json",
+      "original_sha256": "840781380ded745735171ca1d2ba40d1835157dc2155e10aa06601466794deae",
+      "stored_sha256": "aa8e62213d67e0c8a8d8dfed8bcd169bacf4996286d0698f453a1c0c8d4d9ecc"
+    },
+    "jobs/pusht-guided_pnp/partial-outcomes/00005.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00005.json",
+      "original_sha256": "e368221fbf430128721f1dd61f3df0054f4f126b4214198003536fa211cf63fb",
+      "stored_sha256": "f93fb191f91bd131524c92883faafd8405933cd065165028315818bdcd605e5c"
+    },
+    "jobs/pusht-guided_pnp/partial-outcomes/00006.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00006.json",
+      "original_sha256": "2b29e2ed9c4d5f7cb698a14126fcd45e84020f60c87781111967bbfb2c6ddd5f",
+      "stored_sha256": "b27302e0ac6d2cb294af2438941f4364c8a96f3c7585601e067785993db5d1cc"
+    },
+    "jobs/pusht-guided_pnp/partial-outcomes/00007.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00007.json",
+      "original_sha256": "052a14db70432a350a2399e324d01b527176f694c84388fb1ea2738f620d5de4",
+      "stored_sha256": "007d44180a9aec3ecfd843081aa8630e89befed5abc1041e9885bbf7e2ba80f3"
+    },
+    "jobs/pusht-guided_pnp/partial-outcomes/00008.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00008.json",
+      "original_sha256": "2b8f47aece4476f3962df57a36bf591b531216b0cf38ea189872ba178674d293",
+      "stored_sha256": "d7ab67fb913681828f9f450f8d1dc9a1a3ce39e65ff65cecd0656c561aa25da6"
+    },
+    "jobs/pusht-guided_pnp/partial-outcomes/00009.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00009.json",
+      "original_sha256": "5853251205331c433bbd840c819d1139d889b8e4d69d2320d0ac23b5841da9fe",
+      "stored_sha256": "af8c0213e5f30100c7506289b8eb441aca1a6a72116484d61c94be957cbc7fb4"
+    },
+    "jobs/pusht-guided_pnp/partial-outcomes/00010.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00010.json",
+      "original_sha256": "e39712d9b38a26a701a40d0becaf90322dd3406bec12ccf1e3c9d848851dd35d",
+      "stored_sha256": "84be4b125bbb78680155daaac9d4dab5e915c6751012dee119eab7bd21dcf581"
+    },
+    "jobs/pusht-guided_pnp/partial-outcomes/00011.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00011.json",
+      "original_sha256": "4a2168e7272db372d6ca0aeea112e3e72260a876b0a7c289ddc31cc435beae52",
+      "stored_sha256": "e095ca841aa2385b7db2b603e5d7cae1c8d2473b3be1abc3cb606e968f2a0518"
+    },
+    "jobs/pusht-guided_pnp/partial-outcomes/00012.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00012.json",
+      "original_sha256": "d80be566e6ec40c53e20d14432ce585d6cd2cf28a89791bd410514f8b5d1d2e5",
+      "stored_sha256": "4605bd2a6706e74de74d6abc58463b0cac457bde9ac379f291c6e17818f4697b"
+    },
+    "jobs/pusht-guided_pnp/partial-outcomes/00013.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00013.json",
+      "original_sha256": "72752d31af9f9a71f4d78440ab06ae5dad8a5206d20499278484c3dfcd254e92",
+      "stored_sha256": "2a6f6ea467ddbf172e709dd844ab2d00745b3e6a52f91dc9d77d84fbd0246819"
+    },
+    "jobs/pusht-guided_pnp/partial-outcomes/00014.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00014.json",
+      "original_sha256": "bb734189a66d41b648101995ee8ffbf4796e55c076d06f8c11d61051f41c4dee",
+      "stored_sha256": "bff08915b28dd6093cfa0830f94785b94424737b1de7b371211e3b7919f10aca"
+    },
+    "jobs/pusht-guided_pnp/partial-outcomes/00015.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00015.json",
+      "original_sha256": "622fd46282632df5c0a78701ea8e567649efb68b6259feeafc8299857e66b057",
+      "stored_sha256": "bac64908173b0341dcbd7a69eb883dd75f75a35bf893d62f699601ec31180755"
+    },
+    "jobs/pusht-guided_pnp/partial-outcomes/00016.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00016.json",
+      "original_sha256": "89d9e92d374596a284ad0147d26ebd1189730a0c2487578fcbfb006ddf376e18",
+      "stored_sha256": "fb7eafc034300cdec3b3e9fc41fe7baf80ee28a9657b049ab44efc473b1fa546"
+    },
+    "jobs/pusht-guided_pnp/partial-outcomes/00017.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00017.json",
+      "original_sha256": "327ff90058cabf0af8a05658995b5ac7167c5ac5eb77fe2b421b9c8841c8d0bb",
+      "stored_sha256": "ef155f98b76e15f3661df73f6ca3c2967f4084a88f03aad2aeb307c17cddba55"
+    },
+    "jobs/pusht-guided_pnp/partial-outcomes/00018.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00018.json",
+      "original_sha256": "08a4077d14699bbe031150d99cb19be8df07f276d6bdbd38eb75b5eed81e50c4",
+      "stored_sha256": "4fe2047979ee4b15ac9b205cab9b7f01ac0381a3f736fe0b4b18767bdc5d5e6c"
+    },
+    "jobs/pusht-guided_pnp/partial-outcomes/00019.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00019.json",
+      "original_sha256": "22efbc5ce3b665620d423da2f3cd430d26c55e2ebcfd80b872cd9bdca0701b76",
+      "stored_sha256": "032210018d5a7f9ee21e3b8129df7aaacf5c794ce3484ae6b41a4bb3c8e015f1"
+    },
+    "jobs/pusht-guided_pnp/partial-outcomes/00020.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00020.json",
+      "original_sha256": "998d1d000d168eb44b5d674c82df8dca46ad4f0a458c1a194669db0997efc924",
+      "stored_sha256": "79b0fcda0d8e6a510f13e88bb52f6e65e3c28d6d57fed907ff93ca188bb36890"
+    },
+    "jobs/pusht-guided_pnp/partial-outcomes/00021.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00021.json",
+      "original_sha256": "04f18a937ed80810214557a0602b14841f7f57f3dee49eab4ae34b435d23d409",
+      "stored_sha256": "073e64da15c1b22aa597c56be51896bba044b91174d712c8de1f53580d340730"
+    },
+    "jobs/pusht-guided_pnp/partial-outcomes/00022.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00022.json",
+      "original_sha256": "94603efa8877b579585d5575c860ef4104cf9f0c5bbc25d83c8e64d41a22880a",
+      "stored_sha256": "4c6c449bdf575be9725e9750b917f14c5a552bf1fbc9af8f1c1a6cacb64cc9c0"
+    },
+    "jobs/pusht-guided_pnp/partial-outcomes/00023.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00023.json",
+      "original_sha256": "5136dbba74c89d826786e12f30ac677b2bd721663461c1cc6ea68c98e7cf4fe0",
+      "stored_sha256": "36c011ef24faa03c98ebaae9530a3191a42f3c0514b761ebe2ed74441fdd4317"
+    },
+    "jobs/pusht-guided_pnp/partial-outcomes/00024.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00024.json",
+      "original_sha256": "5deb437fb147232baafd6c9f21c012abbdc1763c1bcd464537365b793b5d8bcf",
+      "stored_sha256": "b34297a45064db1e15c81afc253d444de1de66a2abf53f7fa4591a809974cb68"
+    },
+    "jobs/pusht-guided_pnp/partial-outcomes/00025.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00025.json",
+      "original_sha256": "4fa0d2af71263e9a987b6f08a8d5d0f72830b9b3bb1e96b925672ffb6575a45f",
+      "stored_sha256": "94083635bcbfeedbad2fc971d72128659fff8abe107766c532df0994c8f3bc76"
+    },
+    "jobs/pusht-guided_pnp/partial-outcomes/00026.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00026.json",
+      "original_sha256": "d0d511d1ec32182b4c57a333d37c6ac59b3bd938ca0d756114ada679225ccdb8",
+      "stored_sha256": "ee51a12f5d6f978190ccb0e84a75a4c829b87909628ffa7bb150c4d202343152"
+    },
+    "jobs/pusht-guided_pnp/partial-outcomes/00027.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00027.json",
+      "original_sha256": "f87b3cd33efb11daace7d76e6e7c97bd5bc574730ec7c6dd9cb8695030040a6c",
+      "stored_sha256": "e8daf63ff02e0f381dfcef467966895318cae7e6a8538922c5ed56bb7f8fb033"
+    },
+    "jobs/pusht-guided_pnp/partial-outcomes/00028.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00028.json",
+      "original_sha256": "49196ea67060ab2fa9ab8c6387c2a2155e8aae8c67b3c01ba8d226bca186d88c",
+      "stored_sha256": "c8c7e7f9b930829f8eadfa43f30ba58789427061fccd9515555c3699b745b20d"
+    },
+    "jobs/pusht-guided_pnp/partial-outcomes/00029.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00029.json",
+      "original_sha256": "cd13054ef6daa3f7b1b88575de581263a595b302e12e965a5ed7dd867788ccb8",
+      "stored_sha256": "98e1531de351b0846b62208b838c11b862b23343f0dfedadfd6184399c5c2a73"
+    },
+    "jobs/pusht-guided_pnp/partial-outcomes/00030.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00030.json",
+      "original_sha256": "8d522fdf2ed43ccfa8bc1e7982e9f98e3a2c7dbf08ed63f3c4fde59f245cce47",
+      "stored_sha256": "982dd8532ff99072a5e24ddb0b04b4d067088f9123fe9d8753bb87f1f8b2420b"
+    },
+    "jobs/pusht-guided_pnp/partial-outcomes/00031.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00031.json",
+      "original_sha256": "d6b43ce9a8ac6dd8396b592f1dd4b4c4068bb9b4a8954f081da84d60cbe73482",
+      "stored_sha256": "26f800b0c057469365b1a218fa6682f38834c3fdb52051e6c2354341b2fe5d58"
+    },
+    "jobs/pusht-guided_pnp/partial-outcomes/00032.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00032.json",
+      "original_sha256": "2b62bdf4049341f845702eb536ed739869548557e5ca45442251df2541a1b10a",
+      "stored_sha256": "e16aa0572d548469df2b88b223d45855fcdffe7ac136793715e96ca7b1afbf96"
+    },
+    "jobs/pusht-guided_pnp/partial-outcomes/00033.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00033.json",
+      "original_sha256": "3c9e90071d1d1a3c24466f1c7d026378305659e8d12d491eb814d1403a272b32",
+      "stored_sha256": "7fe09b80d360574bb6fc5bc94d5bca5d4989692aa73a0a311905b15930fd1158"
+    },
+    "jobs/pusht-guided_pnp/partial-outcomes/00034.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-guided_pnp/outcomes/00034.json",
+      "original_sha256": "e84f5d809761aec937bc9aaf7e2c2dc0ca4d4bcb5b109a1596e6222c85e28633",
+      "stored_sha256": "90bdfea2f2414a5ddf5f90355751d84d79d4b2642a206ee453a32850c7ffef00"
+    },
+    "jobs/pusht-leflow/identity.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-leflow/identity.json",
+      "original_sha256": "4b320df4c3bdfcacc93a30b6bfdfb3fe57eb35b622c6108b6093a83571b7b124",
+      "stored_sha256": "4b320df4c3bdfcacc93a30b6bfdfb3fe57eb35b622c6108b6093a83571b7b124"
+    },
+    "jobs/pusht-leflow/cases.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-leflow/cases.json",
+      "original_sha256": "782e731279a661ba1b2e39e296aeb4dab60c4bbb170f16aca7248d55baa5562e",
+      "stored_sha256": "c669edc572e9249f3a2f304b1f65dc959576dd646aea500b2b8abc4b8e733070"
+    },
+    "jobs/pusht-leflow/progress.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-leflow/progress.json",
+      "original_sha256": "631941db927cd886372a2bb997f14921644f58110fce65584fa76d1fbf4a0131",
+      "stored_sha256": "631941db927cd886372a2bb997f14921644f58110fce65584fa76d1fbf4a0131"
+    },
+    "jobs/pusht-leflow/report.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-leflow/report.json",
+      "original_sha256": "2cdb4b54ddcaab467bc0cc5d5a9d03ce5e459e72b8a0f978973f8c88bf5b572e",
+      "stored_sha256": "67a477b8dd586d2c004a0ff7fcc9f2ab7abd2082193e8e5b34df6c9b4bc6c744"
+    },
+    "jobs/pusht-leflow/wandb.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-leflow/wandb.json",
+      "original_sha256": "4ba3bfc4bee4fe48dd145818cab0217fa7a11e4c046389416dadfe658f4a4dd5",
+      "stored_sha256": "4ba3bfc4bee4fe48dd145818cab0217fa7a11e4c046389416dadfe658f4a4dd5"
+    },
+    "jobs/pusht-leflow/selected-trajectories/00000.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-leflow/trajectories/00000.npz",
+      "original_sha256": "42624c5462f9b33434bc6fc1985c048e4af3b605956d2e5e63e814bab87deb95",
+      "stored_sha256": "42624c5462f9b33434bc6fc1985c048e4af3b605956d2e5e63e814bab87deb95"
+    },
+    "jobs/pusht-leflow/selected-trajectories/00001.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-leflow/trajectories/00001.npz",
+      "original_sha256": "236f682fdf2315ee679230ba46c352655918e7cb081a3aa7458084bc3d2807af",
+      "stored_sha256": "236f682fdf2315ee679230ba46c352655918e7cb081a3aa7458084bc3d2807af"
+    },
+    "jobs/pusht-leflow/selected-trajectories/00002.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-leflow/trajectories/00002.npz",
+      "original_sha256": "762ac215577b109d99e96394d45b0da25ba0b6a21eb21d84ad98c902b5b259dc",
+      "stored_sha256": "762ac215577b109d99e96394d45b0da25ba0b6a21eb21d84ad98c902b5b259dc"
+    },
+    "jobs/pusht-leflow/selected-trajectories/00003.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-leflow/trajectories/00003.npz",
+      "original_sha256": "09731ddabd9f419bf9050e74aa583440aa07e7fbc5d72e39f9325336b7a37ab6",
+      "stored_sha256": "09731ddabd9f419bf9050e74aa583440aa07e7fbc5d72e39f9325336b7a37ab6"
+    },
+    "jobs/pusht-leflow/selected-trajectories/00004.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-leflow/trajectories/00004.npz",
+      "original_sha256": "86a2f437bd73850ad16a5b22d013c3800c500188b5c0b3ea299f096d0a939da6",
+      "stored_sha256": "86a2f437bd73850ad16a5b22d013c3800c500188b5c0b3ea299f096d0a939da6"
+    },
+    "jobs/pusht-leflow/selected-trajectories/00005.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-leflow/trajectories/00005.npz",
+      "original_sha256": "c52fb1636a39edb6b1350264ef6a0ab07781c26ef1e873bac75762b220d97fe6",
+      "stored_sha256": "c52fb1636a39edb6b1350264ef6a0ab07781c26ef1e873bac75762b220d97fe6"
+    },
+    "jobs/pusht-leflow/selected-trajectories/00006.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-leflow/trajectories/00006.npz",
+      "original_sha256": "55264480442f18a9d17de666bc6351d027feffd52aea8e3c2f3f899578ccaeb9",
+      "stored_sha256": "55264480442f18a9d17de666bc6351d027feffd52aea8e3c2f3f899578ccaeb9"
+    },
+    "jobs/pusht-leflow/selected-trajectories/00007.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-leflow/trajectories/00007.npz",
+      "original_sha256": "a3131d77e7a09711ae6bfb0fe72a249084316942e58e6efc248d0bc2f58288f1",
+      "stored_sha256": "a3131d77e7a09711ae6bfb0fe72a249084316942e58e6efc248d0bc2f58288f1"
+    },
+    "jobs/pusht-leflow/selected-trajectories/00008.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-leflow/trajectories/00008.npz",
+      "original_sha256": "651be6bc9a96366fe2e60533ff2faa9489690a68e8badb4c8944ebc7f42b73d8",
+      "stored_sha256": "651be6bc9a96366fe2e60533ff2faa9489690a68e8badb4c8944ebc7f42b73d8"
+    },
+    "jobs/pusht-leflow/selected-trajectories/00009.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-leflow/trajectories/00009.npz",
+      "original_sha256": "89d97acace654bd3f6205595d44360597008e72c619e65d98033888ae5077e87",
+      "stored_sha256": "89d97acace654bd3f6205595d44360597008e72c619e65d98033888ae5077e87"
+    },
+    "jobs/pusht-leflow_more_samples/identity.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-leflow_more_samples/identity.json",
+      "original_sha256": "ecea16c79f1503198382e8ef788bd9bdaa8a59d36f142077fc09943ba1da88f6",
+      "stored_sha256": "ecea16c79f1503198382e8ef788bd9bdaa8a59d36f142077fc09943ba1da88f6"
+    },
+    "jobs/pusht-leflow_more_samples/cases.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-leflow_more_samples/cases.json",
+      "original_sha256": "782e731279a661ba1b2e39e296aeb4dab60c4bbb170f16aca7248d55baa5562e",
+      "stored_sha256": "c669edc572e9249f3a2f304b1f65dc959576dd646aea500b2b8abc4b8e733070"
+    },
+    "jobs/pusht-leflow_more_samples/progress.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-leflow_more_samples/progress.json",
+      "original_sha256": "8c08682634e17202dd82169f4af2f2cbbcdeb38a52ba2022a7f2a5fa9ed9fc87",
+      "stored_sha256": "8c08682634e17202dd82169f4af2f2cbbcdeb38a52ba2022a7f2a5fa9ed9fc87"
+    },
+    "jobs/pusht-leflow_more_samples/report.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-leflow_more_samples/report.json",
+      "original_sha256": "9c430e9eb9045eaa20751322d250ce4e470986aad5bec789afd9ec7d798003c0",
+      "stored_sha256": "c0ef82fa5a81537467a888c09a1f1f6dc0e64484a84664f57e54aef2c200503b"
+    },
+    "jobs/pusht-leflow_more_samples/wandb.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-leflow_more_samples/wandb.json",
+      "original_sha256": "6d99a46ae0c127ee3b605d8f445ce948d05636696fdfb255806d6cbf3a3c539a",
+      "stored_sha256": "6d99a46ae0c127ee3b605d8f445ce948d05636696fdfb255806d6cbf3a3c539a"
+    },
+    "jobs/pusht-leflow_more_samples/selected-trajectories/00000.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-leflow_more_samples/trajectories/00000.npz",
+      "original_sha256": "6d073e887c9d9161762741d69ca86bf6023729a38ae3e37650e8edddd1c16488",
+      "stored_sha256": "6d073e887c9d9161762741d69ca86bf6023729a38ae3e37650e8edddd1c16488"
+    },
+    "jobs/pusht-leflow_more_samples/selected-trajectories/00001.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-leflow_more_samples/trajectories/00001.npz",
+      "original_sha256": "6904410e13c4f673a75705f43a37b4a31cb9229cc83ba35d1dee3fb6e26f88a0",
+      "stored_sha256": "6904410e13c4f673a75705f43a37b4a31cb9229cc83ba35d1dee3fb6e26f88a0"
+    },
+    "jobs/pusht-leflow_more_samples/selected-trajectories/00002.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-leflow_more_samples/trajectories/00002.npz",
+      "original_sha256": "13db47fb6124a602296f51221fd39ee2d16f0bf63746de916ab9d1c5c8d11356",
+      "stored_sha256": "13db47fb6124a602296f51221fd39ee2d16f0bf63746de916ab9d1c5c8d11356"
+    },
+    "jobs/pusht-leflow_more_samples/selected-trajectories/00003.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-leflow_more_samples/trajectories/00003.npz",
+      "original_sha256": "43e7d9e0253e87332e1d07e6a01bc46634a27171055604c7a65ec33f33f89d45",
+      "stored_sha256": "43e7d9e0253e87332e1d07e6a01bc46634a27171055604c7a65ec33f33f89d45"
+    },
+    "jobs/pusht-leflow_more_samples/selected-trajectories/00004.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-leflow_more_samples/trajectories/00004.npz",
+      "original_sha256": "7c469607a0485c1208d735abcc3a5fa7d6494c20163aebb9f9ca04c0a650103d",
+      "stored_sha256": "7c469607a0485c1208d735abcc3a5fa7d6494c20163aebb9f9ca04c0a650103d"
+    },
+    "jobs/pusht-leflow_more_samples/selected-trajectories/00005.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-leflow_more_samples/trajectories/00005.npz",
+      "original_sha256": "35aad71711e57f3aeae4569ac253279aba235a604cb496d7534ef404828e6a3c",
+      "stored_sha256": "35aad71711e57f3aeae4569ac253279aba235a604cb496d7534ef404828e6a3c"
+    },
+    "jobs/pusht-leflow_more_samples/selected-trajectories/00006.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-leflow_more_samples/trajectories/00006.npz",
+      "original_sha256": "fc5bdeeea665bf88a88932f3f99d7a7f0bcc9849ea1be7e0bb9b941b1e47e1b4",
+      "stored_sha256": "fc5bdeeea665bf88a88932f3f99d7a7f0bcc9849ea1be7e0bb9b941b1e47e1b4"
+    },
+    "jobs/pusht-leflow_more_samples/selected-trajectories/00007.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-leflow_more_samples/trajectories/00007.npz",
+      "original_sha256": "65ceed98d977346cad8b731918516e4d859fbec61b944b73eb73611f4aca4e50",
+      "stored_sha256": "65ceed98d977346cad8b731918516e4d859fbec61b944b73eb73611f4aca4e50"
+    },
+    "jobs/pusht-leflow_more_samples/selected-trajectories/00008.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-leflow_more_samples/trajectories/00008.npz",
+      "original_sha256": "e094e42a4a66f0ff6e503a9ebafc1612fccd498d3f186055c5790225c80d4ee8",
+      "stored_sha256": "e094e42a4a66f0ff6e503a9ebafc1612fccd498d3f186055c5790225c80d4ee8"
+    },
+    "jobs/pusht-leflow_more_samples/selected-trajectories/00009.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-leflow_more_samples/trajectories/00009.npz",
+      "original_sha256": "784f9a88145a8f68965f44997b68e80361d2f4172c11185908656dff981314ca",
+      "stored_sha256": "784f9a88145a8f68965f44997b68e80361d2f4172c11185908656dff981314ca"
+    },
+    "jobs/pusht-leflow_more_steps/identity.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-leflow_more_steps/identity.json",
+      "original_sha256": "e3f34cbf3a44b7270780e0c8e8e1e02267bb3559e01a992b8a1e6a3a1eaaea51",
+      "stored_sha256": "e3f34cbf3a44b7270780e0c8e8e1e02267bb3559e01a992b8a1e6a3a1eaaea51"
+    },
+    "jobs/pusht-leflow_more_steps/cases.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-leflow_more_steps/cases.json",
+      "original_sha256": "782e731279a661ba1b2e39e296aeb4dab60c4bbb170f16aca7248d55baa5562e",
+      "stored_sha256": "c669edc572e9249f3a2f304b1f65dc959576dd646aea500b2b8abc4b8e733070"
+    },
+    "jobs/pusht-leflow_more_steps/progress.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-leflow_more_steps/progress.json",
+      "original_sha256": "ec833d0d4b23194e2d83c3308a788a9d09b9e1bb20352f6932d90b19ef9964db",
+      "stored_sha256": "ec833d0d4b23194e2d83c3308a788a9d09b9e1bb20352f6932d90b19ef9964db"
+    },
+    "jobs/pusht-leflow_more_steps/report.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-leflow_more_steps/report.json",
+      "original_sha256": "5b0ddd9d5a5c95a1c46e284f23be55a9026f681980a40ed134b10f5d12485026",
+      "stored_sha256": "d5ac032c29a16ffb0a46fbbbfd0c45f38e318d0c288c170941d95a307d0adf6b"
+    },
+    "jobs/pusht-leflow_more_steps/wandb.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-leflow_more_steps/wandb.json",
+      "original_sha256": "48eb0a38e47f6e3d7c8261de5106e7c2822162c8574e7dc15743c50f6f5fb067",
+      "stored_sha256": "48eb0a38e47f6e3d7c8261de5106e7c2822162c8574e7dc15743c50f6f5fb067"
+    },
+    "jobs/pusht-leflow_more_steps/selected-trajectories/00000.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-leflow_more_steps/trajectories/00000.npz",
+      "original_sha256": "4e9bb447402831b7d5964e45b90544df7e626dfff328e63b4632d1f11657a224",
+      "stored_sha256": "4e9bb447402831b7d5964e45b90544df7e626dfff328e63b4632d1f11657a224"
+    },
+    "jobs/pusht-leflow_more_steps/selected-trajectories/00001.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-leflow_more_steps/trajectories/00001.npz",
+      "original_sha256": "150646f7d6e1fbabcd4b940dd3fd183d6bfb5a48371e2f2df73344112e0d9be8",
+      "stored_sha256": "150646f7d6e1fbabcd4b940dd3fd183d6bfb5a48371e2f2df73344112e0d9be8"
+    },
+    "jobs/pusht-leflow_more_steps/selected-trajectories/00002.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-leflow_more_steps/trajectories/00002.npz",
+      "original_sha256": "c51e34e3ec3d48a49e7aee2b2b78aaecd84fbe5fc4f3e5fe5553d13bc2de0aba",
+      "stored_sha256": "c51e34e3ec3d48a49e7aee2b2b78aaecd84fbe5fc4f3e5fe5553d13bc2de0aba"
+    },
+    "jobs/pusht-leflow_more_steps/selected-trajectories/00003.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-leflow_more_steps/trajectories/00003.npz",
+      "original_sha256": "803211caf962c02066d09de0d43ee341e1087a8012dbbbae4ffbb078151d2e92",
+      "stored_sha256": "803211caf962c02066d09de0d43ee341e1087a8012dbbbae4ffbb078151d2e92"
+    },
+    "jobs/pusht-leflow_more_steps/selected-trajectories/00004.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-leflow_more_steps/trajectories/00004.npz",
+      "original_sha256": "2f14f044c9364b613e66f83baf45e61b642fb7fa79011c8a15f3314160ee2357",
+      "stored_sha256": "2f14f044c9364b613e66f83baf45e61b642fb7fa79011c8a15f3314160ee2357"
+    },
+    "jobs/pusht-leflow_more_steps/selected-trajectories/00005.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-leflow_more_steps/trajectories/00005.npz",
+      "original_sha256": "567ac80a21b23e7b9ae146a5ff772df1c546bbf9b1085792195fdbe55d10e426",
+      "stored_sha256": "567ac80a21b23e7b9ae146a5ff772df1c546bbf9b1085792195fdbe55d10e426"
+    },
+    "jobs/pusht-leflow_more_steps/selected-trajectories/00006.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-leflow_more_steps/trajectories/00006.npz",
+      "original_sha256": "b0c4c7e80431de96aafbba93c30057ddce15bc5ffbb1965022ac349b877965d8",
+      "stored_sha256": "b0c4c7e80431de96aafbba93c30057ddce15bc5ffbb1965022ac349b877965d8"
+    },
+    "jobs/pusht-leflow_more_steps/selected-trajectories/00007.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-leflow_more_steps/trajectories/00007.npz",
+      "original_sha256": "3f005b4a3cab40d322316e7cc5ad2a0d07c396181dcdd259c20d703ee3abc413",
+      "stored_sha256": "3f005b4a3cab40d322316e7cc5ad2a0d07c396181dcdd259c20d703ee3abc413"
+    },
+    "jobs/pusht-leflow_more_steps/selected-trajectories/00008.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-leflow_more_steps/trajectories/00008.npz",
+      "original_sha256": "dcde4138140d5745ca0c32b429766a2bd5975faf5d783729f72986bbb76dc16b",
+      "stored_sha256": "dcde4138140d5745ca0c32b429766a2bd5975faf5d783729f72986bbb76dc16b"
+    },
+    "jobs/pusht-leflow_more_steps/selected-trajectories/00009.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-leflow_more_steps/trajectories/00009.npz",
+      "original_sha256": "5a72d97e97c6b97b9d76860bc4d207fd8cc9ff51d6ec8715612514762e13f297",
+      "stored_sha256": "5a72d97e97c6b97b9d76860bc4d207fd8cc9ff51d6ec8715612514762e13f297"
+    },
+    "jobs/pusht-pnp/identity.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-pnp/identity.json",
+      "original_sha256": "5699d2fcacf48235ea13168bc141779559e0f36c2d9d37e863ad162566749307",
+      "stored_sha256": "5699d2fcacf48235ea13168bc141779559e0f36c2d9d37e863ad162566749307"
+    },
+    "jobs/pusht-pnp/cases.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-pnp/cases.json",
+      "original_sha256": "782e731279a661ba1b2e39e296aeb4dab60c4bbb170f16aca7248d55baa5562e",
+      "stored_sha256": "c669edc572e9249f3a2f304b1f65dc959576dd646aea500b2b8abc4b8e733070"
+    },
+    "jobs/pusht-pnp/progress.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-pnp/progress.json",
+      "original_sha256": "194088a84f6306a2de88064e914e250140f962b76485a7ebf8cb1701b5450cd3",
+      "stored_sha256": "194088a84f6306a2de88064e914e250140f962b76485a7ebf8cb1701b5450cd3"
+    },
+    "jobs/pusht-pnp/report.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-pnp/report.json",
+      "original_sha256": "2d98765b57ad2e4a34572c72428bb73323b679a4a0dcf41889e9fa312198ffd0",
+      "stored_sha256": "c2acb3ba5386a1f0e731b76f19b19cdb2f81e29d01e5e2978eaf94b2d3d94160"
+    },
+    "jobs/pusht-pnp/wandb.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-pnp/wandb.json",
+      "original_sha256": "a4f438b8d47ab87104d7fc4c79121d751db78dfc8643631e23418b7a806a7af6",
+      "stored_sha256": "a4f438b8d47ab87104d7fc4c79121d751db78dfc8643631e23418b7a806a7af6"
+    },
+    "jobs/pusht-pnp/selected-trajectories/00000.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-pnp/trajectories/00000.npz",
+      "original_sha256": "998307c7e14f1a528c68041713064b20007c26709884ed0accd12c96dc554de6",
+      "stored_sha256": "998307c7e14f1a528c68041713064b20007c26709884ed0accd12c96dc554de6"
+    },
+    "jobs/pusht-pnp/selected-trajectories/00001.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-pnp/trajectories/00001.npz",
+      "original_sha256": "cacc0d6486b52fd359af1b257a0b5c36fa8ee8d0b736961a7f0bc67bce1494ff",
+      "stored_sha256": "cacc0d6486b52fd359af1b257a0b5c36fa8ee8d0b736961a7f0bc67bce1494ff"
+    },
+    "jobs/pusht-pnp/selected-trajectories/00002.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-pnp/trajectories/00002.npz",
+      "original_sha256": "e72f65500e5a1fbc2feee9774318c837cc8d12391bc3fde0b00da28a974388e6",
+      "stored_sha256": "e72f65500e5a1fbc2feee9774318c837cc8d12391bc3fde0b00da28a974388e6"
+    },
+    "jobs/pusht-pnp/selected-trajectories/00003.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-pnp/trajectories/00003.npz",
+      "original_sha256": "a18f4cb3017843bfd7f9cdb779a30c214febf8829355c097f2dcb7078de6765e",
+      "stored_sha256": "a18f4cb3017843bfd7f9cdb779a30c214febf8829355c097f2dcb7078de6765e"
+    },
+    "jobs/pusht-pnp/selected-trajectories/00004.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-pnp/trajectories/00004.npz",
+      "original_sha256": "77ce4b4bc10e04af9617bace5cee39507199f0f8aa4287b7eac2ab60b9333d28",
+      "stored_sha256": "77ce4b4bc10e04af9617bace5cee39507199f0f8aa4287b7eac2ab60b9333d28"
+    },
+    "jobs/pusht-pnp/selected-trajectories/00005.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-pnp/trajectories/00005.npz",
+      "original_sha256": "2c1a39c46a00f63ac6af61048d8dfc62a3803358eea1c1270c5913f2483a85ba",
+      "stored_sha256": "2c1a39c46a00f63ac6af61048d8dfc62a3803358eea1c1270c5913f2483a85ba"
+    },
+    "jobs/pusht-pnp/selected-trajectories/00006.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-pnp/trajectories/00006.npz",
+      "original_sha256": "c7378d930e3040bf5e6a65ac9a76485588126292b21fafb075fca3d8b3f4cc4a",
+      "stored_sha256": "c7378d930e3040bf5e6a65ac9a76485588126292b21fafb075fca3d8b3f4cc4a"
+    },
+    "jobs/pusht-pnp/selected-trajectories/00007.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-pnp/trajectories/00007.npz",
+      "original_sha256": "fc68d96054e86d55db6ad808daae683a2d284ff01455d436938d6aa28e8245b2",
+      "stored_sha256": "fc68d96054e86d55db6ad808daae683a2d284ff01455d436938d6aa28e8245b2"
+    },
+    "jobs/pusht-pnp/selected-trajectories/00008.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-pnp/trajectories/00008.npz",
+      "original_sha256": "6e8d2dba3168ed172960e29a10f39e684adbb0a4bb4a74d16d3c8f516ec81601",
+      "stored_sha256": "6e8d2dba3168ed172960e29a10f39e684adbb0a4bb4a74d16d3c8f516ec81601"
+    },
+    "jobs/pusht-pnp/selected-trajectories/00009.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/jobs/pusht-pnp/trajectories/00009.npz",
+      "original_sha256": "541f2291c1fe48c87008827ea5f4ba91f05c3fe12da0a14c209ac77fcd6c40be",
+      "stored_sha256": "541f2291c1fe48c87008827ea5f4ba91f05c3fe12da0a14c209ac77fcd6c40be"
+    },
+    "operations/run_shared_campaign.py": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/run_shared_campaign.py",
+      "original_sha256": "a9529c0a289ea539d8862210480a6f13fb79e1ec583bdeb3d0089d9dcc4f407d",
+      "stored_sha256": "a9529c0a289ea539d8862210480a6f13fb79e1ec583bdeb3d0089d9dcc4f407d"
+    },
+    "operations/preflight_shared.py": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/preflight_shared.py",
+      "original_sha256": "cd5cfd3b450823e3a56311eb6f451c4556e9c9b3fe9d60d492900072028b44fb",
+      "stored_sha256": "cd5cfd3b450823e3a56311eb6f451c4556e9c9b3fe9d60d492900072028b44fb"
+    },
+    "operations/batching_probe.py": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-self-refine/batching_probe.py",
+      "original_sha256": "b95d9cc1056bd28fdd08880d83c6e9bd650f62ad51e18514e0be1deee1edcdfa",
+      "stored_sha256": "b95d9cc1056bd28fdd08880d83c6e9bd650f62ad51e18514e0be1deee1edcdfa"
+    }
+  },
+  "optimizer_updates": 0
+}
