@@ -12,9 +12,9 @@
       "task": "cube"
     },
     "2": {
-      "method": "noise_cem_shell",
+      "method": "noise_bon192",
       "state": "running",
-      "task": "pusht"
+      "task": "cube"
     },
     "3": {
       "method": "noise_cem_shell",
@@ -45,10 +45,6 @@
   "optimizer_updates": 0,
   "pending": [
     [
-      "cube",
-      "noise_bon192"
-    ],
-    [
       "pusht",
       "noise_bon192_shell"
     ],
@@ -67,8 +63,18 @@
       "returncode": 0,
       "successes": 15,
       "task": "pusht"
+    },
+    {
+      "completed": "2026-10-14T08:20:04.234182+00:00",
+      "evaluation_wall_seconds": 76.58948702923954,
+      "gpu": "2",
+      "job_wall_seconds": 165.87313032150269,
+      "method": "noise_cem_shell",
+      "returncode": 0,
+      "successes": 10,
+      "task": "pusht"
     }
   ],
   "source": "f75fb375a950f39cad2c51347d67230694cd2dea",
-  "utc": "2026-10-14T08:19:06.649144+00:00"
+  "utc": "2026-10-14T08:20:04.273388+00:00"
 }

@@ -1,17 +1,20 @@
 # Frozen LeFlow noise-space search — measured development results
 
-1/12 inference runs completed; zero training updates. These use retained PushT/Cube trained heads, not author checkpoints. Native Reacher/TwoRoom rows remain pending checkpoint access. All six new variants and the reused LeFlow reference share strict FP32, each task’s frozen checkpoint, original50 cases and50-action/10-controller-second allowance.
+2/12 inference runs completed; zero training updates. These use retained PushT/Cube trained heads, not author checkpoints. Native Reacher/TwoRoom rows remain pending checkpoint access. All six new variants and the reused LeFlow reference share strict FP32, each task’s frozen checkpoint, original50 cases and50-action/10-controller-second allowance.
 
 | Dataset | Method | Success /50 | Timeouts | Mean decision ms |
 | --- | --- | ---: | ---: | ---: |
+|pusht|noise_cem_shell|10|0|143.12|
 |pusht|noise_random_shell|15|0|144.93|
 
 | Dataset | Method versus current LeFlow reference | Additional successes | Lost successes |
 | --- | --- | ---: | ---: |
+|pusht|noise_cem_shell|5|7|
 |pusht|noise_random_shell|6|3|
 
 | Dataset | CEM vs matched random control | Additional successes | Lost successes |
 | --- | --- | ---: | ---: |
+|pusht|noise_cem_shell vs noise_random_shell|3|8|
 
 Queue failure hold: False. Complete case reports, prediction-error traces, deadlines, candidates, full measured calls and checkpoint/frozen-state hashes are preserved in [the archive](reports/20261014-noise-cem/).
 
