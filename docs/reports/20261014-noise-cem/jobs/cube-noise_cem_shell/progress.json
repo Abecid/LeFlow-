@@ -1,0 +1,23 @@
+{
+  "completed": 14,
+  "expected": 50,
+  "metrics": {
+    "episodes": 14,
+    "failure_ids": [
+      "cube/val/0007213/000112",
+      "cube/val/0005033/000124",
+      "cube/val/0004519/000037",
+      "cube/val/0008504/000021"
+    ],
+    "mean_decision_ms": 173.5908867361454,
+    "mean_steps": 20.928571428571427,
+    "success_rate": 0.7142857142857143,
+    "successes": 10,
+    "timeouts": 0,
+    "wilson95": [
+      0.4535045882751561,
+      0.882788120898909
+    ],
+    "world_transitions": 62400
+  }
+}

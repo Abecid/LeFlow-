@@ -1,0 +1,74 @@
+{
+  "failed": false,
+  "lanes": {
+    "0": {
+      "method": "noise_cem",
+      "state": "running",
+      "task": "pusht"
+    },
+    "1": {
+      "method": "noise_cem",
+      "state": "running",
+      "task": "cube"
+    },
+    "2": {
+      "method": "noise_cem_shell",
+      "state": "running",
+      "task": "pusht"
+    },
+    "3": {
+      "method": "noise_cem_shell",
+      "state": "running",
+      "task": "cube"
+    },
+    "4": {
+      "method": "noise_random",
+      "state": "running",
+      "task": "pusht"
+    },
+    "5": {
+      "method": "noise_random",
+      "state": "running",
+      "task": "cube"
+    },
+    "6": {
+      "method": "noise_bon192",
+      "state": "running",
+      "task": "pusht"
+    },
+    "7": {
+      "method": "noise_random_shell",
+      "state": "running",
+      "task": "cube"
+    }
+  },
+  "optimizer_updates": 0,
+  "pending": [
+    [
+      "cube",
+      "noise_bon192"
+    ],
+    [
+      "pusht",
+      "noise_bon192_shell"
+    ],
+    [
+      "cube",
+      "noise_bon192_shell"
+    ]
+  ],
+  "results": [
+    {
+      "completed": "2026-10-14T08:19:06.636596+00:00",
+      "evaluation_wall_seconds": 73.40608007088304,
+      "gpu": "6",
+      "job_wall_seconds": 108.27580571174622,
+      "method": "noise_random_shell",
+      "returncode": 0,
+      "successes": 15,
+      "task": "pusht"
+    }
+  ],
+  "source": "f75fb375a950f39cad2c51347d67230694cd2dea",
+  "utc": "2026-10-14T08:19:06.649144+00:00"
+}

@@ -1,0 +1,86 @@
+{
+  "author_checkpoint_comparison_pending": [
+    "reacher",
+    "tworoom"
+  ],
+  "baseline_workspace": "/home/mtxu/adam/LeFlow-experiments/20261013-crossbench-baselines",
+  "config": {
+    "author_native_checkpoint": false,
+    "baseline_reference": "20261014-self-refine/leflow (12/50 PushT;40/50 Cube)",
+    "candidate_flow_evaluations": 3072,
+    "cases_per_task": 50,
+    "controller_seconds": 10,
+    "flow_steps": 16,
+    "horizon": 5,
+    "job_timeout_seconds": 900,
+    "precision": "float32; NVIDIA_TF32_OVERRIDE=0",
+    "primitive_action_limit": 50,
+    "seed": 3072,
+    "tasks": [
+      "pusht",
+      "cube"
+    ],
+    "training_updates": 0,
+    "variants": [
+      "noise_cem",
+      "noise_cem_shell",
+      "noise_random",
+      "noise_random_shell",
+      "noise_bon192",
+      "noise_bon192_shell"
+    ],
+    "world_transitions_per_decision": 960
+  },
+  "jobs": [
+    [
+      "pusht",
+      "noise_cem"
+    ],
+    [
+      "cube",
+      "noise_cem"
+    ],
+    [
+      "pusht",
+      "noise_cem_shell"
+    ],
+    [
+      "cube",
+      "noise_cem_shell"
+    ],
+    [
+      "pusht",
+      "noise_random"
+    ],
+    [
+      "cube",
+      "noise_random"
+    ],
+    [
+      "pusht",
+      "noise_random_shell"
+    ],
+    [
+      "cube",
+      "noise_random_shell"
+    ],
+    [
+      "pusht",
+      "noise_bon192"
+    ],
+    [
+      "cube",
+      "noise_bon192"
+    ],
+    [
+      "pusht",
+      "noise_bon192_shell"
+    ],
+    [
+      "cube",
+      "noise_bon192_shell"
+    ]
+  ],
+  "optimizer_updates": 0,
+  "source": "f75fb375a950f39cad2c51347d67230694cd2dea"
+}

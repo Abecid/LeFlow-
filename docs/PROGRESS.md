@@ -1,3 +1,14 @@
+## October14 — requested noise-search inference comparison launched
+
+Source f75fb375a950f39cad2c51347d67230694cd2dea.185 CPU checks and both
+TRAIN-only real-checkpoint gates passed. Coordinator381032/start1028628113
+runs12 explicit noise variants on frozen PushT/Cube LeFlow heads, all8 GPUs,
+original50-case development sets/50 actions/10 controller seconds, strictFP32,
+zero optimizer updates. Reuse reference12/40 and preserve all prior training.
+See [registered run](NOISE_CEM_SHARED_RUN_20261014.md), [live measured results](NOISE_CEM_SHARED_RESULTS_20261014.md)
+and [new ledger](noise-cem-shared-ledger.json). Original author-native comparison
+remains pending checkpoint access; no missing-baseline training is authorized.
+
 # October14: completed self-refinement inference transfer
 
 All12 comparisons completed600 physical cases with no model training. Frozen

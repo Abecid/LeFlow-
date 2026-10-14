@@ -1,0 +1,67 @@
+{
+  "benchmark_family": "retained_crossbench_leflow_noise_search",
+  "case_sha256": "a62c270d5eacc70298036457d85a025d9fd46a566dca12204f0bd53dda4c493a",
+  "checkpoint_sha256": "58dbf57a03672617ad1c55473d16fbf28f91e7826455af8d0de41b62d23eb310",
+  "checkpoint_step": 5000,
+  "inference_source_sha256": "25219ab0f4ba5fa06b89fb27649070febf3a751c2ed9f95e51c4a8ae5464ffce",
+  "noise_search": {
+    "elites": 8,
+    "horizon": 5,
+    "min_std": 0.1,
+    "mode": "noise_random",
+    "project_shell": true,
+    "rounds": 3,
+    "samples": 64,
+    "smoothing": 0.25,
+    "steps": 16
+  },
+  "numerical_precision": {
+    "NVIDIA_TF32_OVERRIDE": "0",
+    "dtype": "float32"
+  },
+  "optimizer_updates": 0,
+  "retained_action_and_controller_limits": true,
+  "training_identity": {
+    "cache": "bd363bb3cb3900cf7bf855b6a2038f31b8f9734b2786ccbc999fc828c5cba09c",
+    "fixture": false,
+    "ranks": 4,
+    "source": "50bd3c4cd056676a963a1ecbc0ba0e2d8a83fd1901190c8e815cc80635fcdf68",
+    "spec": {
+      "action_block": 5,
+      "action_budget": 50,
+      "candidates": 4,
+      "controller_seconds": 10.0,
+      "dataset": "pusht",
+      "dim": 192,
+      "eval_episodes": 50,
+      "flow_steps": 8,
+      "global_batch": 64,
+      "goal_offset": 25,
+      "history": 4,
+      "horizon": 5,
+      "learning_rate": 0.0001,
+      "method": "leflow",
+      "optimization_gpu_seconds": 28800.0,
+      "patches": 1,
+      "primitive_dim": 2,
+      "protocol": "crossbench-shared-lewm-v2",
+      "repair_radius": 0.25,
+      "repair_steps": 4,
+      "rounds": 3,
+      "seed": 3072,
+      "targets": 8,
+      "updates": 20000,
+      "weight_decay": 0.05,
+      "width": 256
+    },
+    "window_sampling": {
+      "eligible_episodes": 14948,
+      "eligible_starts": 1439235,
+      "native_safe_factual_history_and_goals": true,
+      "nominal_episodes": 14948,
+      "nominal_starts": 1496570
+    },
+    "world": "48938400ae3464c9680731287f583a9cb516f55a8ec64ea13a91be47fb15b607"
+  },
+  "variant": "noise_random_shell"
+}
