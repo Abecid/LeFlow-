@@ -7,52 +7,33 @@
       "task": "pusht"
     },
     "1": {
-      "method": "noise_cem",
-      "state": "running",
-      "task": "cube"
-    },
-    "2": {
-      "method": "noise_bon192",
-      "state": "running",
-      "task": "cube"
-    },
-    "3": {
-      "method": "noise_cem_shell",
-      "state": "running",
-      "task": "cube"
-    },
-    "4": {
-      "method": "noise_random",
+      "method": "noise_bon192_shell",
       "state": "running",
       "task": "pusht"
     },
+    "2": {
+      "state": "completed"
+    },
+    "3": {
+      "state": "completed"
+    },
+    "4": {
+      "state": "completed"
+    },
     "5": {
-      "method": "noise_random",
+      "method": "noise_bon192_shell",
       "state": "running",
       "task": "cube"
     },
     "6": {
-      "method": "noise_bon192",
-      "state": "running",
-      "task": "pusht"
+      "state": "completed"
     },
     "7": {
-      "method": "noise_random_shell",
-      "state": "running",
-      "task": "cube"
+      "state": "completed"
     }
   },
   "optimizer_updates": 0,
-  "pending": [
-    [
-      "pusht",
-      "noise_bon192_shell"
-    ],
-    [
-      "cube",
-      "noise_bon192_shell"
-    ]
-  ],
+  "pending": [],
   "results": [
     {
       "completed": "2026-10-14T08:19:06.636596+00:00",
@@ -73,8 +54,78 @@
       "returncode": 0,
       "successes": 10,
       "task": "pusht"
+    },
+    {
+      "completed": "2026-10-14T08:21:53.628756+00:00",
+      "evaluation_wall_seconds": 236.2206026110798,
+      "gpu": "1",
+      "job_wall_seconds": 275.2680253982544,
+      "method": "noise_cem",
+      "returncode": 0,
+      "successes": 41,
+      "task": "cube"
+    },
+    {
+      "completed": "2026-10-14T08:21:56.085364+00:00",
+      "evaluation_wall_seconds": 242.86155165731907,
+      "gpu": "5",
+      "job_wall_seconds": 277.72451615333557,
+      "method": "noise_random",
+      "returncode": 0,
+      "successes": 40,
+      "task": "cube"
+    },
+    {
+      "completed": "2026-10-14T08:22:03.499100+00:00",
+      "evaluation_wall_seconds": 244.9082598350942,
+      "gpu": "7",
+      "job_wall_seconds": 285.1385178565979,
+      "method": "noise_random_shell",
+      "returncode": 0,
+      "successes": 39,
+      "task": "cube"
+    },
+    {
+      "completed": "2026-10-14T08:22:13.058129+00:00",
+      "evaluation_wall_seconds": 72.40150821208954,
+      "gpu": "4",
+      "job_wall_seconds": 294.69712376594543,
+      "method": "noise_random",
+      "returncode": 0,
+      "successes": 12,
+      "task": "pusht"
+    },
+    {
+      "completed": "2026-10-14T08:22:35.335474+00:00",
+      "evaluation_wall_seconds": 40.81722734682262,
+      "gpu": "6",
+      "job_wall_seconds": 208.23572659492493,
+      "method": "noise_bon192",
+      "returncode": 0,
+      "successes": 13,
+      "task": "pusht"
+    },
+    {
+      "completed": "2026-10-14T08:24:14.472169+00:00",
+      "evaluation_wall_seconds": 247.08864920586348,
+      "gpu": "3",
+      "job_wall_seconds": 416.11120557785034,
+      "method": "noise_cem_shell",
+      "returncode": 0,
+      "successes": 39,
+      "task": "cube"
+    },
+    {
+      "completed": "2026-10-14T08:24:44.427363+00:00",
+      "evaluation_wall_seconds": 247.94240630976856,
+      "gpu": "2",
+      "job_wall_seconds": 279.69544887542725,
+      "method": "noise_bon192",
+      "returncode": 0,
+      "successes": 36,
+      "task": "cube"
     }
   ],
   "source": "f75fb375a950f39cad2c51347d67230694cd2dea",
-  "utc": "2026-10-14T08:20:04.273388+00:00"
+  "utc": "2026-10-14T08:24:44.448186+00:00"
 }

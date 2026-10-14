@@ -1,5 +1,5 @@
 {
-  "utc": "2026-10-14T08:20:51.177932+00:00",
+  "utc": "2026-10-14T08:25:17.266375+00:00",
   "files": {
     "launcher.json": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/launcher.json",
@@ -18,8 +18,8 @@
     },
     "status.json": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/status.json",
-      "original_sha256": "0d1cf4ce7d5a357b10043db66ca82d25cfff01f413690cc3d49fce692e35e656",
-      "stored_sha256": "0d1cf4ce7d5a357b10043db66ca82d25cfff01f413690cc3d49fce692e35e656"
+      "original_sha256": "27a32b33ae31419afc3d3929593d10aa3516a568c43b919097454d790098cbfc",
+      "stored_sha256": "27a32b33ae31419afc3d3929593d10aa3516a568c43b919097454d790098cbfc"
     },
     "runtime-files.json": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/runtime-files.json",
@@ -58,28 +58,33 @@
     },
     "logs/cube-noise_bon192.log.gz": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/logs/cube-noise_bon192.log",
-      "original_sha256": "f871330de329ae61ff592600bb3924dd2ccce79c0b3bfb2d7bc20ab3bf548fec",
-      "stored_sha256": "d2da64fcfcfe5a35daa87eb9f574db4399cee340e1932becee729a3e481dc2c2"
+      "original_sha256": "f8a375987e006100a719507617fac8e997a637c1923badeb9e5f60d5cb7c4f11",
+      "stored_sha256": "384ccd652d376af212b1990c90d7fe1f9fd3a3fc00359b32ce6b9f76c270b3b5"
+    },
+    "logs/cube-noise_bon192_shell.log.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/logs/cube-noise_bon192_shell.log",
+      "original_sha256": "148747d8812d05db45aca41c18a2befa5af37ca0cd2bafd93c169c77f50bdf27",
+      "stored_sha256": "916495419f1ecb00973a42f29711c8fdcb36c92d15f2d59b46d3729398c83cd1"
     },
     "logs/cube-noise_cem.log.gz": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/logs/cube-noise_cem.log",
-      "original_sha256": "c47c9e635ec368291be3c24a3a8bee30e4f8808a70489921a45da9ed75eed1bb",
-      "stored_sha256": "e13b07cf50b49af16ef8a7cfb59583ccc1644f62e2f0d527d13fec40130e5293"
+      "original_sha256": "90a68384aad910b2abbe7dabf2ec512aaf7ec705f9e6c82db45acdd3856a3306",
+      "stored_sha256": "dd09289c6e339b3530fd2dcdcbf0cae74d90ed66839f6ebe1d9ac178ea112a5b"
     },
     "logs/cube-noise_cem_shell.log.gz": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/logs/cube-noise_cem_shell.log",
-      "original_sha256": "74a1635d00bb392859c9b96e9d15283dd605cf0f110221e53d9729108e930b7a",
-      "stored_sha256": "80170c5e2c337019d24d39fe38813fc969bf0dda4aaef8dd83454debd3ebd7cd"
+      "original_sha256": "ba14f31c7ce65dd34cd006b7d22fbb19597ff762b25c00e00a274e1119676350",
+      "stored_sha256": "7e39cbac34380f58e17c29421e610c4500a3d5d112c07439e83d2cdecb685da7"
     },
     "logs/cube-noise_random.log.gz": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/logs/cube-noise_random.log",
-      "original_sha256": "066f3126e5070a561eb042f2cf3428f5e97ec41e3bc2ed67c65891564504bf69",
-      "stored_sha256": "e791b265334bb78d8eb41b3c8f3c706700b14a853c6dfc173aaf0e95bc8a175a"
+      "original_sha256": "bd7c7ed30dcf3761b5e1d10dc5233681abf80d4c281ed27df5326f6359a011bb",
+      "stored_sha256": "d66359c3493d989e0a8b5e753f59c6fbcb3e5ff3c2d85610b11369d4c078c7be"
     },
     "logs/cube-noise_random_shell.log.gz": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/logs/cube-noise_random_shell.log",
-      "original_sha256": "c055dbb54cbdae38d522f50cc7b38abcacc90bf3f7c5caa326c8ff609b247a04",
-      "stored_sha256": "20bd84c5a95e2cd10f0fc23a5d0809e5fe9422684efe8983d38257eb6ac301cf"
+      "original_sha256": "19632228fe74589d9933516082cb98fe1edecf2f5b6fe6a729a39a4980f85e9a",
+      "stored_sha256": "26bf01a814fce39507982d2dea600f9c3af61de4245dda45683acd918c8d109d"
     },
     "logs/preflight-cube.log.gz": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/logs/preflight-cube.log",
@@ -93,13 +98,18 @@
     },
     "logs/pusht-noise_bon192.log.gz": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/logs/pusht-noise_bon192.log",
-      "original_sha256": "95734afdd9ef5890ae5a28015f9b5bf41f61cf285efc61729648b6a24b0648c3",
-      "stored_sha256": "5aa44c6135aea77c9dfd3770b3608ede083b031a6ee3b04380b972beb7bfd17b"
+      "original_sha256": "1ac444e6dfe2d0c000faec9d4d3f5387427732591e547b44a35605f78ad07e74",
+      "stored_sha256": "0949e0a8026b751685c1d3a9afe35f3aac2cef24f3a1dae03b7dd366080c4e5e"
+    },
+    "logs/pusht-noise_bon192_shell.log.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/logs/pusht-noise_bon192_shell.log",
+      "original_sha256": "48d6a74fa6ad627a645ca8104fcaad7bea61aa0e3a6672b27a59cea6acdd9518",
+      "stored_sha256": "02e5e5e20306797021525172e970ae64615d741d47c7a4d14ed0edc94cda2c96"
     },
     "logs/pusht-noise_cem.log.gz": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/logs/pusht-noise_cem.log",
-      "original_sha256": "ee3f8af79a73c3fe56bb31a6a276f3d96af5af5ed9cfd4cf4ef71400cdfe8852",
-      "stored_sha256": "2c3b3c53278ac4b59159f22b1ac6bb38deca665a63ece6b9930aa560b2b0426d"
+      "original_sha256": "98ddf69177d4d2b193a5a257ab70921a3c29b0bb4793a807c945da29dd17cf7b",
+      "stored_sha256": "edc927454673c722aa4703aaaad184109938c319f3fddfba72ff0761e86e1d8d"
     },
     "logs/pusht-noise_cem_shell.log.gz": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/logs/pusht-noise_cem_shell.log",
@@ -108,8 +118,8 @@
     },
     "logs/pusht-noise_random.log.gz": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/logs/pusht-noise_random.log",
-      "original_sha256": "d3df0c162506da346b9a97ab28aa25de7dc433a29b29dbfc16ef704043d705eb",
-      "stored_sha256": "af1bfe9b62091530a8433c2227c8f7544ea4be07477a6d8bb64f12d635b6f10e"
+      "original_sha256": "2a25da49680f5636a4b174268b31baba61009def1089508edcf010ca94038528",
+      "stored_sha256": "06260d34a214df0e2d9fa56d4b9e5b294ba368becc13ef960ec5c95a3d1cda78"
     },
     "logs/pusht-noise_random_shell.log.gz": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/logs/pusht-noise_random_shell.log",
@@ -128,28 +138,238 @@
     },
     "jobs/cube-noise_bon192/progress.json": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_bon192/progress.json",
-      "original_sha256": "adc9539787ff95c1a381d2abbfac77d9618d92e9135b47bd9448dc5f4f95245e",
-      "stored_sha256": "adc9539787ff95c1a381d2abbfac77d9618d92e9135b47bd9448dc5f4f95245e"
+      "original_sha256": "d1d9b36225f22725439465183bb8706a5727c8f093c6e8f1b04af777c81ec5ce",
+      "stored_sha256": "d1d9b36225f22725439465183bb8706a5727c8f093c6e8f1b04af777c81ec5ce"
+    },
+    "jobs/cube-noise_bon192/report.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_bon192/report.json",
+      "original_sha256": "25f96cf4ad2b6e2430fce441422e6cc86cd8b34d5fa7508c18fbb707b3847909",
+      "stored_sha256": "205688b99351a16cfe8060c032c00eb74ab903be5977de020a0baf7334a1b9c8"
     },
     "jobs/cube-noise_bon192/wandb.json": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_bon192/wandb.json",
       "original_sha256": "41094d3062d44538b91703f41757ce334eae96f23b5d67677269349cb57cc5fe",
       "stored_sha256": "41094d3062d44538b91703f41757ce334eae96f23b5d67677269349cb57cc5fe"
     },
-    "jobs/cube-noise_bon192/partial-outcomes/00000.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_bon192/outcomes/00000.json",
-      "original_sha256": "0586ca563d9e8973c43aea4e0bef6ab9c74f8eeefb1ad1e50709ae3877922c8b",
-      "stored_sha256": "8902ff169bbd62ac6c719f3534dda2155ccc62857c63f5fdb84000c2fd3a3de1"
+    "jobs/cube-noise_bon192/selected-trajectories/00000.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_bon192/trajectories/00000.npz",
+      "original_sha256": "de62de73f2554fb8b63badc681b7ed982003b498d1caa50eae7dc11d5f2f86d3",
+      "stored_sha256": "de62de73f2554fb8b63badc681b7ed982003b498d1caa50eae7dc11d5f2f86d3"
     },
-    "jobs/cube-noise_bon192/partial-outcomes/00001.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_bon192/outcomes/00001.json",
-      "original_sha256": "ee0ca59d2701575a33966a7e06e8cd55f90a925eaf253172c2618fba7e743891",
-      "stored_sha256": "67d066b70504134faa43f13dfd1f293227a201b36df7210dfcc0dd5284acbd28"
+    "jobs/cube-noise_bon192/selected-trajectories/00001.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_bon192/trajectories/00001.npz",
+      "original_sha256": "852566a2f976e4c29d10cbc04b0e05894d2390484c917d8f91dcd9ecaee85639",
+      "stored_sha256": "852566a2f976e4c29d10cbc04b0e05894d2390484c917d8f91dcd9ecaee85639"
     },
-    "jobs/cube-noise_bon192/partial-outcomes/00002.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_bon192/outcomes/00002.json",
-      "original_sha256": "7142e0bc6861f0fb7cd091677413fc445b672a421e2118b1e6a3f2a7c37a48b4",
-      "stored_sha256": "12d4166bd2d87d8797c3550b629b9c7f08c49c8c0d5cb8b7e7af371017c2f18d"
+    "jobs/cube-noise_bon192/selected-trajectories/00002.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_bon192/trajectories/00002.npz",
+      "original_sha256": "83dddc1067a19ea760d9c8834acf7edcf1bd3869d8f3520e10e90d91c82b1920",
+      "stored_sha256": "83dddc1067a19ea760d9c8834acf7edcf1bd3869d8f3520e10e90d91c82b1920"
+    },
+    "jobs/cube-noise_bon192/selected-trajectories/00003.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_bon192/trajectories/00003.npz",
+      "original_sha256": "417573023a4db971e82595f32a1107a78df65fd3a362829531011e26b8840f37",
+      "stored_sha256": "417573023a4db971e82595f32a1107a78df65fd3a362829531011e26b8840f37"
+    },
+    "jobs/cube-noise_bon192/selected-trajectories/00004.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_bon192/trajectories/00004.npz",
+      "original_sha256": "5129c5074557f039e6a1d69623e372f172d6481d2523857e3943ae0b4cfc018d",
+      "stored_sha256": "5129c5074557f039e6a1d69623e372f172d6481d2523857e3943ae0b4cfc018d"
+    },
+    "jobs/cube-noise_bon192/selected-trajectories/00005.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_bon192/trajectories/00005.npz",
+      "original_sha256": "faaccb851fa653fd23913140f28391a840ac0ab4a4afa4d0c3d03c489a5d26f9",
+      "stored_sha256": "faaccb851fa653fd23913140f28391a840ac0ab4a4afa4d0c3d03c489a5d26f9"
+    },
+    "jobs/cube-noise_bon192/selected-trajectories/00006.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_bon192/trajectories/00006.npz",
+      "original_sha256": "29e76c9b7cc2483d9f8c55b573a4c829d108fc06ad544c78b1f8f069c90cee49",
+      "stored_sha256": "29e76c9b7cc2483d9f8c55b573a4c829d108fc06ad544c78b1f8f069c90cee49"
+    },
+    "jobs/cube-noise_bon192/selected-trajectories/00007.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_bon192/trajectories/00007.npz",
+      "original_sha256": "23bc51d91f7494a45736b01b9e97f01944783e0e1b897ebf5c050756d019ca6b",
+      "stored_sha256": "23bc51d91f7494a45736b01b9e97f01944783e0e1b897ebf5c050756d019ca6b"
+    },
+    "jobs/cube-noise_bon192/selected-trajectories/00008.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_bon192/trajectories/00008.npz",
+      "original_sha256": "8d2939a3cf5b16d1fbb79e464f201311c391d4473ea0bd52786af3a0ba8e96fe",
+      "stored_sha256": "8d2939a3cf5b16d1fbb79e464f201311c391d4473ea0bd52786af3a0ba8e96fe"
+    },
+    "jobs/cube-noise_bon192/selected-trajectories/00009.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_bon192/trajectories/00009.npz",
+      "original_sha256": "cae73637cf67fffd94e39e8d83529900659803cc8a2f2e7c9a714da1c3442e1d",
+      "stored_sha256": "cae73637cf67fffd94e39e8d83529900659803cc8a2f2e7c9a714da1c3442e1d"
+    },
+    "jobs/cube-noise_bon192_shell/identity.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_bon192_shell/identity.json",
+      "original_sha256": "de054da832ff56db215ab3fb546c6cd5ae2883438a6d7fce8fa2e3f3324f297f",
+      "stored_sha256": "de054da832ff56db215ab3fb546c6cd5ae2883438a6d7fce8fa2e3f3324f297f"
+    },
+    "jobs/cube-noise_bon192_shell/cases.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_bon192_shell/cases.json",
+      "original_sha256": "2ee9a46307da0216f41b5d92b0709ca37f36be7b6c215db0627d1208183f6bca",
+      "stored_sha256": "e6a561baedb2664c11167aa4ff97ae653c2993d12e476c8c2505baca9eb484b8"
+    },
+    "jobs/cube-noise_bon192_shell/progress.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_bon192_shell/progress.json",
+      "original_sha256": "7715ad1872e56bf6c5c7f9858aaf52932757f303b0a9a45d40d976476b8e2f31",
+      "stored_sha256": "7715ad1872e56bf6c5c7f9858aaf52932757f303b0a9a45d40d976476b8e2f31"
+    },
+    "jobs/cube-noise_bon192_shell/wandb.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_bon192_shell/wandb.json",
+      "original_sha256": "edb842944c46b39c03ba72a1416ad9d40fbca78b371df6f5cd7e7d36d66bcec5",
+      "stored_sha256": "edb842944c46b39c03ba72a1416ad9d40fbca78b371df6f5cd7e7d36d66bcec5"
+    },
+    "jobs/cube-noise_bon192_shell/partial-outcomes/00000.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_bon192_shell/outcomes/00000.json",
+      "original_sha256": "c4ac29c1d17d9731716c5e21193d018a01e1d8333b20c3ebcf937f6f48f42bf6",
+      "stored_sha256": "19b8298ac78c44436970fb233ef05c9212b5921e77133445cb00eaac817ebae1"
+    },
+    "jobs/cube-noise_bon192_shell/partial-outcomes/00001.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_bon192_shell/outcomes/00001.json",
+      "original_sha256": "9ee0461f049b764cd6a6ae6c1c71e23b35c3b124789823becc595092af29bca8",
+      "stored_sha256": "16f9a4820cfb619e146088d47f94e108466926806c7e8332bda5fe139ef7880b"
+    },
+    "jobs/cube-noise_bon192_shell/partial-outcomes/00002.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_bon192_shell/outcomes/00002.json",
+      "original_sha256": "dee4d09c978adda247650ff7a01160aabc3a1b42cc2b4c5a19bfa7bbd9d66d7d",
+      "stored_sha256": "4197da4bb8a754474e045e364187ad9d540b5fc034048fd8fc6456c212fc4aeb"
+    },
+    "jobs/cube-noise_bon192_shell/partial-outcomes/00003.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_bon192_shell/outcomes/00003.json",
+      "original_sha256": "769bd27ad70b530086368fd755deb30026eafdb2225fd2f87971218dfe196c97",
+      "stored_sha256": "1462df00052197d6fa874be179f4aab8d1e320d1aa4ef03c9f31f107aa781222"
+    },
+    "jobs/cube-noise_bon192_shell/partial-outcomes/00004.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_bon192_shell/outcomes/00004.json",
+      "original_sha256": "ca1c447130e4634d1f7f30f7d38610b4cfadca8e9d4aef1007c3139f2fe68282",
+      "stored_sha256": "83edf6f51c885375293332b37e3aeece2b570cfcf1f9196b9acb1a22931810f2"
+    },
+    "jobs/cube-noise_bon192_shell/partial-outcomes/00005.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_bon192_shell/outcomes/00005.json",
+      "original_sha256": "691d49536dc858228e7a473211d0de46847ce14c901892a3037eb92fd1f38e59",
+      "stored_sha256": "3c8987e4f059578438aa449980711bbaa90ae954a2962c420f39a6e66d43ea56"
+    },
+    "jobs/cube-noise_bon192_shell/partial-outcomes/00006.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_bon192_shell/outcomes/00006.json",
+      "original_sha256": "3f0abb7ac594d760fc946065d6c3497a43a6f066b5fec99b7bb1d88e230536e1",
+      "stored_sha256": "14bc7444047d8aa3a6585d0fe8a549bf727ac5d87c2a3a39d349dad316add8a0"
+    },
+    "jobs/cube-noise_bon192_shell/partial-outcomes/00007.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_bon192_shell/outcomes/00007.json",
+      "original_sha256": "273207225ca26e6945b20ef571ca028f7e5f13d9084ca73444c220d3146ac296",
+      "stored_sha256": "b150d476534a45902a8f8f6dbacb646ef72d2864ddfb1210d558c019cbad9cf8"
+    },
+    "jobs/cube-noise_bon192_shell/partial-outcomes/00008.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_bon192_shell/outcomes/00008.json",
+      "original_sha256": "cbb6e35425afd612931b8397b6a8a84121ff63df2f1c80b720c8fc80a88eec4c",
+      "stored_sha256": "477a05b69a508270610f1df7995920a1ad706a821c5bc3a8f2f32f4ca7a4cfcf"
+    },
+    "jobs/cube-noise_bon192_shell/partial-outcomes/00009.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_bon192_shell/outcomes/00009.json",
+      "original_sha256": "b750db7775c4d915577539f7676cbc832bcce62f110375c32c07af5371d96fff",
+      "stored_sha256": "961dc18e25b0d5945e0967ba7ad705038defd71cadf3a971d42df7d547c6b520"
+    },
+    "jobs/cube-noise_bon192_shell/partial-outcomes/00010.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_bon192_shell/outcomes/00010.json",
+      "original_sha256": "95abab877f4345f8d5fc302a6ff16213dfcf0e701552006ffa47a8aca5c2d11e",
+      "stored_sha256": "3b0e5ae70803a3a9c1cf343f649614b45d6d0f879ca87e8645fc6f5d5af4be9d"
+    },
+    "jobs/cube-noise_bon192_shell/partial-outcomes/00011.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_bon192_shell/outcomes/00011.json",
+      "original_sha256": "acc35043c3069c1e3a95165fab5e2fc660baab193d8c2dcd7da0810b5c14a0b5",
+      "stored_sha256": "504aac4f7f7b8ff18821b684d46eab37485d6651af61b27557319b7f55d5ea3a"
+    },
+    "jobs/cube-noise_bon192_shell/partial-outcomes/00012.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_bon192_shell/outcomes/00012.json",
+      "original_sha256": "91e7c91fe670c08e65ace5b8f435b07110ff2cdfcee65cb0e9a71553f61c02fe",
+      "stored_sha256": "69fe1dbcbf9a05199f000e7a6a48401851e556040f2d5fa9a67547ac5a202d70"
+    },
+    "jobs/cube-noise_bon192_shell/partial-outcomes/00013.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_bon192_shell/outcomes/00013.json",
+      "original_sha256": "c0395919df0406b10e81e92f554221e8fd8c6643fc2121daeffd0404a31e4891",
+      "stored_sha256": "5233e43938db9d3b6cfdfafbf61f1c68048938e290e060ea23bb43b357d62e86"
+    },
+    "jobs/cube-noise_bon192_shell/partial-outcomes/00014.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_bon192_shell/outcomes/00014.json",
+      "original_sha256": "e019bfee31d06786ce4e7ff67b234b5d8fc1b2a8cb5fd2b9748d2fe9045e5d15",
+      "stored_sha256": "714005fe250df11737e8ad10b705a586cf9e8fba9c3304afc36d0cdcc0c4011c"
+    },
+    "jobs/cube-noise_bon192_shell/partial-outcomes/00015.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_bon192_shell/outcomes/00015.json",
+      "original_sha256": "08522cf16997e71104038ee5f616fc311782c6d04fb0de97753066a53d876058",
+      "stored_sha256": "b2ceb66d92650d469904c7d74700e7b4a2b37649aaa97bb24024101419e352bb"
+    },
+    "jobs/cube-noise_bon192_shell/partial-outcomes/00016.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_bon192_shell/outcomes/00016.json",
+      "original_sha256": "63401706f00ef2b334617ef8be62c8ea2311460cceeb3c2b11d1051c87610e0c",
+      "stored_sha256": "7dded4f0370e452580e03e858fa6abf0ebbc496ceaf3003bd79d522bb2da524b"
+    },
+    "jobs/cube-noise_bon192_shell/partial-outcomes/00017.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_bon192_shell/outcomes/00017.json",
+      "original_sha256": "811cbfcb9a01e3337112e56b6977b023bd38979c1cfe80cd81b1e5f9315e5eee",
+      "stored_sha256": "160e667570904477d286586ed3a8685c7199656523a8f83e2a5e31e33ba38703"
+    },
+    "jobs/cube-noise_bon192_shell/partial-outcomes/00018.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_bon192_shell/outcomes/00018.json",
+      "original_sha256": "7fc2c8c35086eabc71921b4d6b2ea710172ec32add2d8aacb2a223d20dee0656",
+      "stored_sha256": "3fc52a960186634e13194c21550161f590d16089c67721f1c54998b017dc201c"
+    },
+    "jobs/cube-noise_bon192_shell/partial-outcomes/00019.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_bon192_shell/outcomes/00019.json",
+      "original_sha256": "3f2b92cd353b570331dda0c7bc2a742962104c74f75b73d39b5f500c5eeb4dd6",
+      "stored_sha256": "f5b240e3519d3c6959922467b78686bbfafd04d5f887a5bed265c011f400ba39"
+    },
+    "jobs/cube-noise_bon192_shell/partial-outcomes/00020.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_bon192_shell/outcomes/00020.json",
+      "original_sha256": "cfc6e9374500ce45e2bd1ac2e2ee5b4c5f320be1d93e98085a13d8270dd58af2",
+      "stored_sha256": "209bce2b0356595c4247018f8ff89ef5bd922b2ce26196997e743adc5b6deed4"
+    },
+    "jobs/cube-noise_bon192_shell/partial-outcomes/00021.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_bon192_shell/outcomes/00021.json",
+      "original_sha256": "9c9e2102c0fb59de9f016f8b25d820970139e32eb8ce99f01d152a06f5b28c2e",
+      "stored_sha256": "210566ebbca596bf6a4a6c6061fbdb3995f0329cbe50a2cbafb8fa1d9e0b3905"
+    },
+    "jobs/cube-noise_bon192_shell/partial-outcomes/00022.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_bon192_shell/outcomes/00022.json",
+      "original_sha256": "4a0da92835d582ca877d9e2c38a3ebd1700d805fa6b8e4bef6e22f0d8f5955fd",
+      "stored_sha256": "6dd11a3b2db0a2511bf89016c98f3aab189f6f69a035443cb86f4b4fc33e4067"
+    },
+    "jobs/cube-noise_bon192_shell/partial-outcomes/00023.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_bon192_shell/outcomes/00023.json",
+      "original_sha256": "5476f5b7800b65612878d0d926d7ff607c34459ea41db55928bdda3e324ce9c1",
+      "stored_sha256": "602402bc99f091d232156721a3eb5eeec3050ae0e2256271ff36556d62da812d"
+    },
+    "jobs/cube-noise_bon192_shell/partial-outcomes/00024.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_bon192_shell/outcomes/00024.json",
+      "original_sha256": "198dce2bc125cc9070a9de6ae6ae87a0a9de1e784c086fd7df918a8fe3b6c6a1",
+      "stored_sha256": "e53981d261de2aa12f04ec7c80f37229ab24e4c095ca780813fa7c172733e558"
+    },
+    "jobs/cube-noise_bon192_shell/partial-outcomes/00025.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_bon192_shell/outcomes/00025.json",
+      "original_sha256": "4e2893c66e52cbecc3ffeea5ba6dcb3619d4fb9f0063f84a9d2fb5737a56935c",
+      "stored_sha256": "5349cf91a73e0701a3bcb35116e1ada5ab68dfd4a656cb3f6984c10bb524ed9c"
+    },
+    "jobs/cube-noise_bon192_shell/partial-outcomes/00026.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_bon192_shell/outcomes/00026.json",
+      "original_sha256": "803f1775463d04c99c19fc979fd25116d86555d9c0eb1553e5399b2d8ecca7cd",
+      "stored_sha256": "07e4d08b9db382a802b6fa58c6faaca17edba70a1864bd07d8aacc53c6474d30"
+    },
+    "jobs/cube-noise_bon192_shell/partial-outcomes/00027.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_bon192_shell/outcomes/00027.json",
+      "original_sha256": "b35c8a061999f7f1206cbacf8bfc68ab74b1b1a92c0bf5d8f19ffcd30e854d40",
+      "stored_sha256": "6ceec7d3e767930cbaeefda71c6bcee428109f3cd974dd30d5a468759c40cb4c"
+    },
+    "jobs/cube-noise_bon192_shell/partial-outcomes/00028.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_bon192_shell/outcomes/00028.json",
+      "original_sha256": "282d2c7e2dbc9371f0401e600b933cce33f9e620174d1fed0c3a2f097c47e138",
+      "stored_sha256": "d45d091955109dbfd890249ebabd0e362d8c58d818f92fbd8d22accd15feeb0c"
+    },
+    "jobs/cube-noise_bon192_shell/partial-outcomes/00029.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_bon192_shell/outcomes/00029.json",
+      "original_sha256": "ffd38e0149cf6c6059f25f9beddc81dc172be15ff24eda74d7cf18f86bfd3a05",
+      "stored_sha256": "8a45effab7079c13826685bf13e5d5ddb766199da7951bb366be12122a8f9d5b"
     },
     "jobs/cube-noise_cem/identity.json": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem/identity.json",
@@ -163,173 +383,68 @@
     },
     "jobs/cube-noise_cem/progress.json": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem/progress.json",
-      "original_sha256": "ae9d2c495197d2f1544ec78bf45f35f34648bf1f8a4372ee19888ade4c9812bc",
-      "stored_sha256": "ae9d2c495197d2f1544ec78bf45f35f34648bf1f8a4372ee19888ade4c9812bc"
+      "original_sha256": "fde5bcdaa22a6cac1455a7a41f1f81680876e54fdb5e22e0cf156ba874ef092e",
+      "stored_sha256": "fde5bcdaa22a6cac1455a7a41f1f81680876e54fdb5e22e0cf156ba874ef092e"
+    },
+    "jobs/cube-noise_cem/report.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem/report.json",
+      "original_sha256": "dc29281cdc6afd74f325748036255d34a4d79ad6cc2ca1fe0fcc37cdaef1c5fe",
+      "stored_sha256": "d60ef9b8a6bc247971da2a1fb1135a0f7a184f4c9501acc4b413cf718e0278dd"
     },
     "jobs/cube-noise_cem/wandb.json": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem/wandb.json",
       "original_sha256": "7b966b07ddf9c65ab6fd2080bfaea1ec5097dfb4bdea68a1ae21c269fb701dfc",
       "stored_sha256": "7b966b07ddf9c65ab6fd2080bfaea1ec5097dfb4bdea68a1ae21c269fb701dfc"
     },
-    "jobs/cube-noise_cem/partial-outcomes/00000.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem/outcomes/00000.json",
-      "original_sha256": "a9d19f349f1047ffc40a506a124ced007c3a5cb4289cc0269687003e8cdcb2e3",
-      "stored_sha256": "06d8cc0b3d9d11ba60cc0d56e2a28a9c506df325f48358faae8b76dbc5e70161"
+    "jobs/cube-noise_cem/selected-trajectories/00000.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem/trajectories/00000.npz",
+      "original_sha256": "c3f25589a2ba7b2c2d3d85001c960f854de6ba2f608b16a8fb0c2139a58f5af8",
+      "stored_sha256": "c3f25589a2ba7b2c2d3d85001c960f854de6ba2f608b16a8fb0c2139a58f5af8"
     },
-    "jobs/cube-noise_cem/partial-outcomes/00001.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem/outcomes/00001.json",
-      "original_sha256": "ff25972ed562585df0fb5e8fb2b0f35ae5fbb8f32e94e21a4100c577ec0a0d8b",
-      "stored_sha256": "b69c461cbbed0587bf6d2939d5eef078d0140b80a35d09ff08c9571bfd2e9c73"
+    "jobs/cube-noise_cem/selected-trajectories/00001.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem/trajectories/00001.npz",
+      "original_sha256": "41d668c3d026d3e1708c0c2984c5d28ff5c89602680e611ffb03467ea1d34142",
+      "stored_sha256": "41d668c3d026d3e1708c0c2984c5d28ff5c89602680e611ffb03467ea1d34142"
     },
-    "jobs/cube-noise_cem/partial-outcomes/00002.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem/outcomes/00002.json",
-      "original_sha256": "5433348d0c50c6a86ee54622c9e98f83865cd953e19e84767de8d30e695ccaed",
-      "stored_sha256": "864adfc36a615ea1dc3ef07c596e1d3296ffbf9cf03f46985addceea60b2fdc7"
+    "jobs/cube-noise_cem/selected-trajectories/00002.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem/trajectories/00002.npz",
+      "original_sha256": "9f582f11d05321ef7a072f70e02841b21ef7720645f037bf5e779109613a3a58",
+      "stored_sha256": "9f582f11d05321ef7a072f70e02841b21ef7720645f037bf5e779109613a3a58"
     },
-    "jobs/cube-noise_cem/partial-outcomes/00003.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem/outcomes/00003.json",
-      "original_sha256": "389fe09b1095342293ec5d327eb61fef64c61d9744d7ff0a9598255a2a0f6824",
-      "stored_sha256": "ea2cba70d26da3f570a7fbe8b0774a5ff55021753b12b46bb1d553b029aaf2f0"
+    "jobs/cube-noise_cem/selected-trajectories/00003.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem/trajectories/00003.npz",
+      "original_sha256": "8136c1f67b1cd2afa9b4bc2922b524a6c3d75f92286e17bb9c2bd9867d3ad00d",
+      "stored_sha256": "8136c1f67b1cd2afa9b4bc2922b524a6c3d75f92286e17bb9c2bd9867d3ad00d"
     },
-    "jobs/cube-noise_cem/partial-outcomes/00004.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem/outcomes/00004.json",
-      "original_sha256": "eb0371f3f80cd9553bdbbb27d8bb3dd1172c925376512fbbd541309084ab8f12",
-      "stored_sha256": "2ffba8dda96a9e623346753464ac98e0bfca286bac43663820f155d8c50fb93f"
+    "jobs/cube-noise_cem/selected-trajectories/00004.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem/trajectories/00004.npz",
+      "original_sha256": "db610dcfc49c1825234094004565d4702ef89645f005a6a2f26795049f4fba16",
+      "stored_sha256": "db610dcfc49c1825234094004565d4702ef89645f005a6a2f26795049f4fba16"
     },
-    "jobs/cube-noise_cem/partial-outcomes/00005.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem/outcomes/00005.json",
-      "original_sha256": "18c23eede258a8a6899bbb2435b451a01eb85047776075190a0ac369edb64248",
-      "stored_sha256": "2115be387de16213d8c6c65879b215ad8ceeee083751fd58e21f9a13e01c672b"
+    "jobs/cube-noise_cem/selected-trajectories/00005.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem/trajectories/00005.npz",
+      "original_sha256": "5cd1ec35a8fab9e0b3c4d588d15b0ea49070e2c038df1128cf765e6b17125ecc",
+      "stored_sha256": "5cd1ec35a8fab9e0b3c4d588d15b0ea49070e2c038df1128cf765e6b17125ecc"
     },
-    "jobs/cube-noise_cem/partial-outcomes/00006.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem/outcomes/00006.json",
-      "original_sha256": "ead4f3948f7ed39e8823bf5e74b3e92bde7bfc9ad1ec76887914d285e498f75a",
-      "stored_sha256": "e5858ed7b1f358680de1d228bd18557aa3c0f01314d18c93015526a1b0cd7b35"
+    "jobs/cube-noise_cem/selected-trajectories/00006.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem/trajectories/00006.npz",
+      "original_sha256": "6bf9d5f212a4bf46dd72a49294d5b99aaee70962ed8a3e5b826fb21f535ed92e",
+      "stored_sha256": "6bf9d5f212a4bf46dd72a49294d5b99aaee70962ed8a3e5b826fb21f535ed92e"
     },
-    "jobs/cube-noise_cem/partial-outcomes/00007.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem/outcomes/00007.json",
-      "original_sha256": "01d9e51f4ebf58cb97b2b5787af8a1a14ec76b72a175f349e0c00678ec7b8429",
-      "stored_sha256": "94115f488989d847f9e6f340f323e17214b1374f5bac77d7d7a6236726335466"
+    "jobs/cube-noise_cem/selected-trajectories/00007.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem/trajectories/00007.npz",
+      "original_sha256": "a5ea674dc7d89ed03105b67a492c2986384296ef6b21f077bc1f076a5f5f5589",
+      "stored_sha256": "a5ea674dc7d89ed03105b67a492c2986384296ef6b21f077bc1f076a5f5f5589"
     },
-    "jobs/cube-noise_cem/partial-outcomes/00008.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem/outcomes/00008.json",
-      "original_sha256": "d6c26930f3b61b59eba877a70070cbe7ad29d92c0201c4cc0a1ec4dfd055ebec",
-      "stored_sha256": "e8badd5fa89eaaa8d70ae711998ca8e38ce57ba4fc49ab0032ea3316f93d1de2"
+    "jobs/cube-noise_cem/selected-trajectories/00008.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem/trajectories/00008.npz",
+      "original_sha256": "765aad3ff7bd94106d6b49ded157de657c84bfbe56930bfa36ef57e308b33637",
+      "stored_sha256": "765aad3ff7bd94106d6b49ded157de657c84bfbe56930bfa36ef57e308b33637"
     },
-    "jobs/cube-noise_cem/partial-outcomes/00009.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem/outcomes/00009.json",
-      "original_sha256": "d4076cc5c11c5bed60144361f77e0fc83c4f343633e471e25bea893d99cf1cd7",
-      "stored_sha256": "3a602bf7abcfce55d7da866d9ee7a452844ba7adc466bc2bc15a504d86f1062d"
-    },
-    "jobs/cube-noise_cem/partial-outcomes/00010.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem/outcomes/00010.json",
-      "original_sha256": "37b45b6378f4ce6b267d6d39020f55fc71006c328dbffb253d0ed629f3c49dde",
-      "stored_sha256": "51f9b618bbc059166ecb075b2033f5cce05cd350fa1ce58e136ba90116aebf60"
-    },
-    "jobs/cube-noise_cem/partial-outcomes/00011.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem/outcomes/00011.json",
-      "original_sha256": "955896c1e5fa9b1a35469914e73a8711599931f40bb0408496d123992d3bc014",
-      "stored_sha256": "8d7d18ec80868eee55da0ecff08a4a11e9e2b229a070c7d07eb655577fb26b3e"
-    },
-    "jobs/cube-noise_cem/partial-outcomes/00012.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem/outcomes/00012.json",
-      "original_sha256": "bb3178c43b359373d82a4268515ed25b2435cc830d9e37a9b4238d2a3801e7d7",
-      "stored_sha256": "69e1538925cbebea56add97b1bb65ebd09490d709058c56b2cd0b3b91a1834af"
-    },
-    "jobs/cube-noise_cem/partial-outcomes/00013.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem/outcomes/00013.json",
-      "original_sha256": "328a0b79c6b9f080d0b4ee7e848955e9f5ab57dea641fe581c5bd30256816067",
-      "stored_sha256": "94d062437422a55922f8bac36d1b4be4dbaaea655862a69285d3fed90fda4687"
-    },
-    "jobs/cube-noise_cem/partial-outcomes/00014.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem/outcomes/00014.json",
-      "original_sha256": "b5458ca38be56a14d9d4bc141ccfaa7d0a4c0c6ec3be10fea6a0e5c310a9c5cd",
-      "stored_sha256": "e4d1535629291bdbc915e132ad0139471b51000b81a2fde45b8a91ac27e77d6e"
-    },
-    "jobs/cube-noise_cem/partial-outcomes/00015.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem/outcomes/00015.json",
-      "original_sha256": "0aef126536f2f415c97e1243378438f038adfd6d005a190b5cf47f49be29d5e1",
-      "stored_sha256": "95028c947547f65c47c7dcb680c1811dadecab88e4cf8efa8c1c2defa0d6543f"
-    },
-    "jobs/cube-noise_cem/partial-outcomes/00016.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem/outcomes/00016.json",
-      "original_sha256": "db3907aaa98a0125e5b2d00d0fac9c5ccc12ad0ab35be12e0337c6de2a6fe4a5",
-      "stored_sha256": "ead7d7270ffd0d372fadc2f8739401fb5c8ac506b5b8b8a097653bbc39dbdb53"
-    },
-    "jobs/cube-noise_cem/partial-outcomes/00017.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem/outcomes/00017.json",
-      "original_sha256": "e20d67cd5989402b9ebc0ec92d6040f4372a2b49aa1895d3aaead39cd8ecf9ff",
-      "stored_sha256": "daf97a3d4a0aaae6eaba9398d4f65cf7864854f3cffed3320ee9453ec579a6d4"
-    },
-    "jobs/cube-noise_cem/partial-outcomes/00018.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem/outcomes/00018.json",
-      "original_sha256": "455bd62a11c0bc17020bd08960938e8db16cf649afe5d5505136b779513238d7",
-      "stored_sha256": "dc8e4f9c140a88c2cc1e31e91e43075d994800884f17caa602f193444e2c1510"
-    },
-    "jobs/cube-noise_cem/partial-outcomes/00019.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem/outcomes/00019.json",
-      "original_sha256": "716b44dc6d27e387fabd4b273ffb542e664191e2f925635a34cc9691f97345e3",
-      "stored_sha256": "a918b19b2d8768894d66586bff4bb9eeb9f1fe07094ed6f23894c6eebaa81b12"
-    },
-    "jobs/cube-noise_cem/partial-outcomes/00020.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem/outcomes/00020.json",
-      "original_sha256": "9c8572feaa8a0fe9174f55a7d69a212023751a24784f3110a69ce0dcf049372d",
-      "stored_sha256": "fe222990da03d71fc22452b1fdc53a6d96fa3d39aa934a3bbf029960ec8f3a88"
-    },
-    "jobs/cube-noise_cem/partial-outcomes/00021.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem/outcomes/00021.json",
-      "original_sha256": "7a18996cfda62202ebb709c05cf85d60967dcc0adca2cc181918945681a4a816",
-      "stored_sha256": "938c5eb5fe1a2d6179db2a3f8d6d96171a2e02d98f7fe9b80a5b7f93cdc31cc2"
-    },
-    "jobs/cube-noise_cem/partial-outcomes/00022.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem/outcomes/00022.json",
-      "original_sha256": "e5168ac777ec94f6c263249a63bf8eb48e0bd5d816ffedb630ea26b4e7674088",
-      "stored_sha256": "bfa2084e8d920ef84fc59237c07220568b20c6eee74822aaacd0c4843a9d21bd"
-    },
-    "jobs/cube-noise_cem/partial-outcomes/00023.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem/outcomes/00023.json",
-      "original_sha256": "57085547faea6246afce794a17fd9884f230316522b64c2a238891115a861261",
-      "stored_sha256": "fac076db9db853d97f69d5e4425821a9bf1c1a791be0309769bae8da47660ebc"
-    },
-    "jobs/cube-noise_cem/partial-outcomes/00024.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem/outcomes/00024.json",
-      "original_sha256": "3832bfe7b1403d63fa2736a2de32ba63a2cd5aea2fa804e9f2e707778fed5d19",
-      "stored_sha256": "25a150e780d079f526ccbc3bb3b14ea33f5d9cab9ce22f8e2a2f4191f6147857"
-    },
-    "jobs/cube-noise_cem/partial-outcomes/00025.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem/outcomes/00025.json",
-      "original_sha256": "e26d746c5efa431385a713596d29eaa5dd7a0b3ceed225ace3f91aa5f4d8e842",
-      "stored_sha256": "d210801cf043ddcb8b7ec03209ac1c41c7771105f01504777652807a6afdb4a8"
-    },
-    "jobs/cube-noise_cem/partial-outcomes/00026.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem/outcomes/00026.json",
-      "original_sha256": "681c4091112b470e38eec98722e67596ad3d6bcdcfad5aa3c65c6818ccf337e4",
-      "stored_sha256": "3774536347ca33c18c65e01e9cf11e630e0f50a43a38d11ce4ff9b64f4e76b9c"
-    },
-    "jobs/cube-noise_cem/partial-outcomes/00027.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem/outcomes/00027.json",
-      "original_sha256": "84687e0047cf282d93af953d59c130a34dac26a15c128a95b7a168971a01532f",
-      "stored_sha256": "3d7aeeb01311b159b6dd612376fd75720d9546a9925703eb67deaacdd2e6501e"
-    },
-    "jobs/cube-noise_cem/partial-outcomes/00028.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem/outcomes/00028.json",
-      "original_sha256": "7718427eb68ccd054be804f6f11013874a46e30a9db7a7dc3164eb31c413b177",
-      "stored_sha256": "9fcb87e6e090af211126694ccc29a307a2a0155ea863fc7db228298d321ac982"
-    },
-    "jobs/cube-noise_cem/partial-outcomes/00029.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem/outcomes/00029.json",
-      "original_sha256": "e954cab5d729065b03957b5eadcc378331cd701fe09ec2b30fd28ea656b22791",
-      "stored_sha256": "25506726b3a9b31052d6fac1bb517fcc325525c3700bcb46809280b95b063039"
-    },
-    "jobs/cube-noise_cem/partial-outcomes/00030.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem/outcomes/00030.json",
-      "original_sha256": "a29b1bd3241a083ede475907d83a6b18095c591ad4e5a61b6199b71500628cc1",
-      "stored_sha256": "a9dee712f5d68f420a3855e8d8fbf5c71eedafb03bb6da6d5b5d4adb54093bce"
-    },
-    "jobs/cube-noise_cem/partial-outcomes/00031.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem/outcomes/00031.json",
-      "original_sha256": "a427dab454d8c4c9269876281d4b3a8b0c5b11ef573de9f76a5fdc3e21afc678",
-      "stored_sha256": "158ab3601a17ed5941fb1e97cdc4018e06315f6181571219fb0b4fa0a84fcb24"
+    "jobs/cube-noise_cem/selected-trajectories/00009.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem/trajectories/00009.npz",
+      "original_sha256": "701e0bc74953cb708ac9e6f11c284d518c5811c7775ffcd8d4e9ca68d1891dc6",
+      "stored_sha256": "701e0bc74953cb708ac9e6f11c284d518c5811c7775ffcd8d4e9ca68d1891dc6"
     },
     "jobs/cube-noise_cem_shell/identity.json": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem_shell/identity.json",
@@ -343,163 +458,68 @@
     },
     "jobs/cube-noise_cem_shell/progress.json": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem_shell/progress.json",
-      "original_sha256": "cf68100101df4894d30bf12d4f348b9a584841adbc65596f9831e93dfc4732f1",
-      "stored_sha256": "cf68100101df4894d30bf12d4f348b9a584841adbc65596f9831e93dfc4732f1"
+      "original_sha256": "5a95f3ad3be4bcd75d09a49b8a43ef556d7e1ba4ffdab22823ad4738e4fd6c92",
+      "stored_sha256": "5a95f3ad3be4bcd75d09a49b8a43ef556d7e1ba4ffdab22823ad4738e4fd6c92"
+    },
+    "jobs/cube-noise_cem_shell/report.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem_shell/report.json",
+      "original_sha256": "18c647ba8ff261957ffc27826ebc420c89a2b5615fc8971f7586c9f8df65239b",
+      "stored_sha256": "716434cbe17df561c2445e8b9e7d27b5aa994bcb4d97ec8f583672324ca6533b"
     },
     "jobs/cube-noise_cem_shell/wandb.json": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem_shell/wandb.json",
       "original_sha256": "f2d419b8f592c0923ba60062b5df03f76a9398b4b7dd2a10470f92b18ca69566",
       "stored_sha256": "f2d419b8f592c0923ba60062b5df03f76a9398b4b7dd2a10470f92b18ca69566"
     },
-    "jobs/cube-noise_cem_shell/partial-outcomes/00000.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem_shell/outcomes/00000.json",
-      "original_sha256": "b1cec0bd3bcf158f2e4f2b2acde34b560c2e3147291efd0db4630689b3f712e6",
-      "stored_sha256": "04765c056029d14836428b769cbba435b04fa190ac09d57ff5df799fa9839c1f"
+    "jobs/cube-noise_cem_shell/selected-trajectories/00000.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem_shell/trajectories/00000.npz",
+      "original_sha256": "28daf552e47ff70b738407e24c5558c1a6896e279342e879347ba9d03fe89bd7",
+      "stored_sha256": "28daf552e47ff70b738407e24c5558c1a6896e279342e879347ba9d03fe89bd7"
     },
-    "jobs/cube-noise_cem_shell/partial-outcomes/00001.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem_shell/outcomes/00001.json",
-      "original_sha256": "613839c9a054cf87c5cd6859d8cc02bf6219254825af08ca43c1e9cad46f0642",
-      "stored_sha256": "ca25bce9257283c3736c6f9949f802c971df8aaa2d3788b001826a42017dc2a1"
+    "jobs/cube-noise_cem_shell/selected-trajectories/00001.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem_shell/trajectories/00001.npz",
+      "original_sha256": "76b068f1a5e24822785d1d88a31d143bf169593e6f1ab5cfda8003e53e082e54",
+      "stored_sha256": "76b068f1a5e24822785d1d88a31d143bf169593e6f1ab5cfda8003e53e082e54"
     },
-    "jobs/cube-noise_cem_shell/partial-outcomes/00002.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem_shell/outcomes/00002.json",
-      "original_sha256": "4332e9babd2799b057eaf5b0e26923347bee7e591edf38ebc290d7a96b84433a",
-      "stored_sha256": "eff2e839cc0790f2bea558dba7bb3f3b7269b09719701e54df83828238164dcb"
+    "jobs/cube-noise_cem_shell/selected-trajectories/00002.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem_shell/trajectories/00002.npz",
+      "original_sha256": "ad77bbecc60ca62f34719f29571ea00b839268ff7a5eff7031531072b0a34c2b",
+      "stored_sha256": "ad77bbecc60ca62f34719f29571ea00b839268ff7a5eff7031531072b0a34c2b"
     },
-    "jobs/cube-noise_cem_shell/partial-outcomes/00003.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem_shell/outcomes/00003.json",
-      "original_sha256": "fe2ab173822f466388a1ec36e3aad6fe424ba227f4e5880e5d693ad981032936",
-      "stored_sha256": "6a92a7f06978a517fa05b77cfe26b3d82a375c55b32ff21a5eccc3a59372e41e"
+    "jobs/cube-noise_cem_shell/selected-trajectories/00003.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem_shell/trajectories/00003.npz",
+      "original_sha256": "c9981e0b55904e1736b8f46b2272e64f150ad54346ae948be090a43fbc9261ab",
+      "stored_sha256": "c9981e0b55904e1736b8f46b2272e64f150ad54346ae948be090a43fbc9261ab"
     },
-    "jobs/cube-noise_cem_shell/partial-outcomes/00004.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem_shell/outcomes/00004.json",
-      "original_sha256": "cb3a8863d515645954e93d5ebd550c114fdeff40afe6d4dd5ad57f95f0dd8108",
-      "stored_sha256": "367cadece90c1eab5cb4a1b377391c548bda6d5b0fddc47db0cd26b777927d7f"
+    "jobs/cube-noise_cem_shell/selected-trajectories/00004.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem_shell/trajectories/00004.npz",
+      "original_sha256": "918db4cb97c38981250e003979ccbd9f30d5e3dc8709125c29da22de243adad9",
+      "stored_sha256": "918db4cb97c38981250e003979ccbd9f30d5e3dc8709125c29da22de243adad9"
     },
-    "jobs/cube-noise_cem_shell/partial-outcomes/00005.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem_shell/outcomes/00005.json",
-      "original_sha256": "dfa324db800b16c4342f4666d65e08882261520301e788a726075f4eda924419",
-      "stored_sha256": "223d1e73d5bbc6086e9bdf1a86230176033317f717122ad23796f49c057dbf05"
+    "jobs/cube-noise_cem_shell/selected-trajectories/00005.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem_shell/trajectories/00005.npz",
+      "original_sha256": "4f6641190c6591402ece4bd773d73a202292a76382e65287edae29e015bfd093",
+      "stored_sha256": "4f6641190c6591402ece4bd773d73a202292a76382e65287edae29e015bfd093"
     },
-    "jobs/cube-noise_cem_shell/partial-outcomes/00006.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem_shell/outcomes/00006.json",
-      "original_sha256": "bcb0294e8f793a52baebafae5c71e44638e6fad756c731f15ec24f9a6af13c85",
-      "stored_sha256": "4ef8811865bd7f5b9f3b0c6d8ebd9580b712637affaa211586bc22d696421c9a"
+    "jobs/cube-noise_cem_shell/selected-trajectories/00006.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem_shell/trajectories/00006.npz",
+      "original_sha256": "7105f96648d11d3f300aa1117d6b10a99e95ac8a04bc462dfc84b575df943759",
+      "stored_sha256": "7105f96648d11d3f300aa1117d6b10a99e95ac8a04bc462dfc84b575df943759"
     },
-    "jobs/cube-noise_cem_shell/partial-outcomes/00007.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem_shell/outcomes/00007.json",
-      "original_sha256": "cdaf21e1c633df4a4d7d05a374594ea9482d891ee551428b544650a121b5a6eb",
-      "stored_sha256": "3be443857a753339bb669ce830c4b76a968ef2c0238b67c3440dc8f058fd6bcb"
+    "jobs/cube-noise_cem_shell/selected-trajectories/00007.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem_shell/trajectories/00007.npz",
+      "original_sha256": "33ecde77bf37c2491f82417224848b3a8580cd024e2c6e825d59ee533282006a",
+      "stored_sha256": "33ecde77bf37c2491f82417224848b3a8580cd024e2c6e825d59ee533282006a"
     },
-    "jobs/cube-noise_cem_shell/partial-outcomes/00008.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem_shell/outcomes/00008.json",
-      "original_sha256": "b8e9624a673440943dad49c98b222ded80e3cb87b879ed24fe49dc4578d9d25a",
-      "stored_sha256": "1c2ccf03cacf7708fcafb6885060fedc5f76b93204b4bd386397658ec83e7257"
+    "jobs/cube-noise_cem_shell/selected-trajectories/00008.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem_shell/trajectories/00008.npz",
+      "original_sha256": "186f5aaf4cb1549c0759ad767102ef05f04955ff6cd659cf63f1f2cfdfd6977a",
+      "stored_sha256": "186f5aaf4cb1549c0759ad767102ef05f04955ff6cd659cf63f1f2cfdfd6977a"
     },
-    "jobs/cube-noise_cem_shell/partial-outcomes/00009.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem_shell/outcomes/00009.json",
-      "original_sha256": "3ac8c28ce2e70185b6bf6ef91f7eed0a44fb9c6d15d01debaba59eba1d947e5d",
-      "stored_sha256": "e1454ec54ccd16467bb2ed439ee0c7ef8b0768cf5c4e172bcaf5b53f8a3b7c76"
-    },
-    "jobs/cube-noise_cem_shell/partial-outcomes/00010.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem_shell/outcomes/00010.json",
-      "original_sha256": "69d4a8a11feece4fa1d67546009799bf84c93a43861b79791042133989b05480",
-      "stored_sha256": "bc014e854a2604e40afa37f0f4bd84943ba50e6b5d4fc3f33bf293f3a6d3078e"
-    },
-    "jobs/cube-noise_cem_shell/partial-outcomes/00011.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem_shell/outcomes/00011.json",
-      "original_sha256": "78e7390a55817c9214e2ff6283397dbc681aa09cd1b2a6b95f0744642ba1437f",
-      "stored_sha256": "7d943dd1cad4293523088142a7b65ec40e112a9d6305cd07360e38cbf08f0a64"
-    },
-    "jobs/cube-noise_cem_shell/partial-outcomes/00012.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem_shell/outcomes/00012.json",
-      "original_sha256": "b1f899936886c9aace7e48fed4220455acf2adcb13e4620e0af51d8ec6cd18af",
-      "stored_sha256": "4c58ec9d2d07e2e7ec8f646af960ec26895624fdd49ae5823ee0fe29d2b1efcf"
-    },
-    "jobs/cube-noise_cem_shell/partial-outcomes/00013.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem_shell/outcomes/00013.json",
-      "original_sha256": "74e58fe3cfb24dc9299560bbba909d8b52409116594854d63a4188db885343ab",
-      "stored_sha256": "c20cd2e5e7128db55ec1f73a58bc7cb259c67704cadf5d7dcb18d5d200f77cee"
-    },
-    "jobs/cube-noise_cem_shell/partial-outcomes/00014.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem_shell/outcomes/00014.json",
-      "original_sha256": "39a95bf311e5e07e0046735505defa555f2d2c8dfbb70c138beaaaef5c8801ea",
-      "stored_sha256": "c8a81ef572a64935a7a593f55ee02c99aa2a998d62680b6cfd191c906e67a460"
-    },
-    "jobs/cube-noise_cem_shell/partial-outcomes/00015.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem_shell/outcomes/00015.json",
-      "original_sha256": "384a7f91c3797b5944929ac5f1de8a66ff654d0025d20b80c46a5a644654ae2d",
-      "stored_sha256": "40a9fab48e232dda1edd3a5c5bc8e21bce0bdef06b955ee9684d474d59484dd2"
-    },
-    "jobs/cube-noise_cem_shell/partial-outcomes/00016.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem_shell/outcomes/00016.json",
-      "original_sha256": "ad4d14fc3d00af28a39738d2799aaf644ce5d304f8b26ea0697ad638066eb958",
-      "stored_sha256": "7e4cf37cfa47673897d848f4993775602fb7214b6bc54bb4c2ded99fbbf64175"
-    },
-    "jobs/cube-noise_cem_shell/partial-outcomes/00017.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem_shell/outcomes/00017.json",
-      "original_sha256": "1e83245a0ca91d748d5444ad57f4aa87e340c0f3fe7044d605f36ee6ecb9c83a",
-      "stored_sha256": "319ff73996df245abe30df17de5a171d9c57cc2788ff898c092de436e3d88d27"
-    },
-    "jobs/cube-noise_cem_shell/partial-outcomes/00018.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem_shell/outcomes/00018.json",
-      "original_sha256": "d651a4e297bfb4ff98022ffe7621cf00aa18df8b9fb597dcf6bad64a5fce071a",
-      "stored_sha256": "d691af430b6799301fa162ab54e07b8809703ac5e25203ac8606182035f9ef8b"
-    },
-    "jobs/cube-noise_cem_shell/partial-outcomes/00019.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem_shell/outcomes/00019.json",
-      "original_sha256": "83e5e6e1699b0ffa0369e7f36a4f6be21cfc4adc5e949230a0077e9b16c09809",
-      "stored_sha256": "b807ae232af38d79282144c2057abc7d1faa42d135be2561264aa21e149911f7"
-    },
-    "jobs/cube-noise_cem_shell/partial-outcomes/00020.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem_shell/outcomes/00020.json",
-      "original_sha256": "0026c4f3d947200990b29c29c1a3ac1e132f13ccbbe7f0fe7a0357e04ffe9c0c",
-      "stored_sha256": "b82faba3c1106f9556b39fe5527be7c31ddbb799c4e77e3740e7998953da7e8b"
-    },
-    "jobs/cube-noise_cem_shell/partial-outcomes/00021.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem_shell/outcomes/00021.json",
-      "original_sha256": "f401435fac69a5f2ce6fefcf11ee32d8036560c9ed98b10541539ee57aad4c7d",
-      "stored_sha256": "b5cd21c04b815967587ceac6126697cd9dca954d591cbedcd8a9adab0eacb35a"
-    },
-    "jobs/cube-noise_cem_shell/partial-outcomes/00022.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem_shell/outcomes/00022.json",
-      "original_sha256": "2524d8e7f449226a7382a799bf7a3a673975be33231de2b2bf25e33f783753fc",
-      "stored_sha256": "74bbe3bf93fccb753c19afa2744dd37d81ea242944178b28778470c1b5373e55"
-    },
-    "jobs/cube-noise_cem_shell/partial-outcomes/00023.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem_shell/outcomes/00023.json",
-      "original_sha256": "4d2e164b595bd8a153b456a3fea5a92ae44832e8acc174d144d49ff43dd86f97",
-      "stored_sha256": "e342638025c80ae1591b879b2bdefd19271b3bbfcbba0c725332a6619834fb9f"
-    },
-    "jobs/cube-noise_cem_shell/partial-outcomes/00024.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem_shell/outcomes/00024.json",
-      "original_sha256": "c9eaa98e8c4a12632123e6bacf10df2bac627ac88c8f159b5b85ce673139ac2c",
-      "stored_sha256": "01cff8dc890c955e5e293c082330af50745229895ec3b2122848e203ff41e71f"
-    },
-    "jobs/cube-noise_cem_shell/partial-outcomes/00025.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem_shell/outcomes/00025.json",
-      "original_sha256": "2904bf91fca424424b17f3277e94b99ab6255d0fffd1fa478b006b0c1dac1359",
-      "stored_sha256": "6aff6d09b3e4beb56bfb35b156e7122aefb737af6bea06d823c22d8d9c69ddbd"
-    },
-    "jobs/cube-noise_cem_shell/partial-outcomes/00026.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem_shell/outcomes/00026.json",
-      "original_sha256": "bc2d025e90a08200996c55d117ecb0673dd0dd6ff8f90f085a1fbe2b2c005053",
-      "stored_sha256": "b444e126ae7164c696be08b4b9303227dea312e3178664a676e8d60adab1711a"
-    },
-    "jobs/cube-noise_cem_shell/partial-outcomes/00027.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem_shell/outcomes/00027.json",
-      "original_sha256": "ceae29991c7accee1155a74c036b05e747cbbbe892c629d01b0b5e700b5bf1a3",
-      "stored_sha256": "a6fe6a830f6fda5570d4baa7117ffa5e378238024a59bba4c4c405af9684fad8"
-    },
-    "jobs/cube-noise_cem_shell/partial-outcomes/00028.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem_shell/outcomes/00028.json",
-      "original_sha256": "7bbddf77fcadeda078277680f2f48c3e6d6f25d2c3a035b056d345c5c5b1258b",
-      "stored_sha256": "9e56d4d3a30c9b5cb82d5d82bb96078d96989f9e098d6bd160d68be13d96f5a8"
-    },
-    "jobs/cube-noise_cem_shell/partial-outcomes/00029.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem_shell/outcomes/00029.json",
-      "original_sha256": "2bfc2062e8f17184328e986255b4acc057b837b14cd3a847783dae11952b1ac1",
-      "stored_sha256": "fe32b990b5a90c9746e932dd2cd3c0b10ab15ed3b825d214769889ccae3f8b4e"
+    "jobs/cube-noise_cem_shell/selected-trajectories/00009.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_cem_shell/trajectories/00009.npz",
+      "original_sha256": "852d70a137c2c07ea5ba75c158e0def9fea7cabc0d9bb6a3eae8e2f9d65b835c",
+      "stored_sha256": "852d70a137c2c07ea5ba75c158e0def9fea7cabc0d9bb6a3eae8e2f9d65b835c"
     },
     "jobs/cube-noise_random/identity.json": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random/identity.json",
@@ -513,168 +533,68 @@
     },
     "jobs/cube-noise_random/progress.json": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random/progress.json",
-      "original_sha256": "dea078bf26085f6be650c9dfcb3bff0246f2e97eaf8afad5686452e1755786bb",
-      "stored_sha256": "dea078bf26085f6be650c9dfcb3bff0246f2e97eaf8afad5686452e1755786bb"
+      "original_sha256": "4f97f27238d0ea69c61ec718432d6b17297f1f4170e81ff60992421a19d1d02f",
+      "stored_sha256": "4f97f27238d0ea69c61ec718432d6b17297f1f4170e81ff60992421a19d1d02f"
+    },
+    "jobs/cube-noise_random/report.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random/report.json",
+      "original_sha256": "6647c5fcf72e291072da68f7d146e751b977a69116d6faf4d371d5913cd3b4a4",
+      "stored_sha256": "8efc4dbbb9d4ad2805554c07c336bb5797b6e80e1684342244d56e389e579307"
     },
     "jobs/cube-noise_random/wandb.json": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random/wandb.json",
       "original_sha256": "4c1aff2d4fead35322cea44a082226187c003e34a0fce3117f7c6ecfa1f84b12",
       "stored_sha256": "4c1aff2d4fead35322cea44a082226187c003e34a0fce3117f7c6ecfa1f84b12"
     },
-    "jobs/cube-noise_random/partial-outcomes/00000.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random/outcomes/00000.json",
-      "original_sha256": "263025758413837784e59f66f201c44cca5f9476f02c83091e5424ee3411f1a1",
-      "stored_sha256": "5c52784358b175464d38c29db00ee5669a8ee239bebc1875dfdd4ea514e24ef2"
+    "jobs/cube-noise_random/selected-trajectories/00000.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random/trajectories/00000.npz",
+      "original_sha256": "de62de73f2554fb8b63badc681b7ed982003b498d1caa50eae7dc11d5f2f86d3",
+      "stored_sha256": "de62de73f2554fb8b63badc681b7ed982003b498d1caa50eae7dc11d5f2f86d3"
     },
-    "jobs/cube-noise_random/partial-outcomes/00001.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random/outcomes/00001.json",
-      "original_sha256": "9c8ee1c7fc4e7d0b99e609118efc9a0f953bcf1810721a9bf304bfe21eb9790f",
-      "stored_sha256": "3cfbf7962926001ad0fd20813f9527867dfc71cd151baeb3193f99ec6c8e8b93"
+    "jobs/cube-noise_random/selected-trajectories/00001.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random/trajectories/00001.npz",
+      "original_sha256": "5d7b36ff206b4466bef8f4d9ab34af9a9be2d7c25e180d66173b1cdf4e3b8184",
+      "stored_sha256": "5d7b36ff206b4466bef8f4d9ab34af9a9be2d7c25e180d66173b1cdf4e3b8184"
     },
-    "jobs/cube-noise_random/partial-outcomes/00002.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random/outcomes/00002.json",
-      "original_sha256": "f71ac7feb0b86af65ddafd00df37bb50ec6b1d348eceb17e82d0014bb68c178b",
-      "stored_sha256": "b78d912784fc9ca68b089180e2e32fe48be06b903da646864a2357b9b67b2bff"
+    "jobs/cube-noise_random/selected-trajectories/00002.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random/trajectories/00002.npz",
+      "original_sha256": "0584a3e8cbc8b6aa988d170333516722532fd6597bafc6ee6021914fadaed938",
+      "stored_sha256": "0584a3e8cbc8b6aa988d170333516722532fd6597bafc6ee6021914fadaed938"
     },
-    "jobs/cube-noise_random/partial-outcomes/00003.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random/outcomes/00003.json",
-      "original_sha256": "a088ea0b39c9ba4fc887659e0c624b0de23573a11865d4e7d12bea145a3de084",
-      "stored_sha256": "57cc7907e71f301195683eec7c098a4a4ad3573d0fa304a032ad146974844f1e"
+    "jobs/cube-noise_random/selected-trajectories/00003.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random/trajectories/00003.npz",
+      "original_sha256": "b4361e55df198f59d846e12bb368f32c279217ca347394ee7a9a3b0d72cb04a0",
+      "stored_sha256": "b4361e55df198f59d846e12bb368f32c279217ca347394ee7a9a3b0d72cb04a0"
     },
-    "jobs/cube-noise_random/partial-outcomes/00004.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random/outcomes/00004.json",
-      "original_sha256": "95fede6c56901f1c8700f3ec27182b87cd9b0a1e235f0b39c0eccaa6c45f8055",
-      "stored_sha256": "6224da88ff6e1db29f648f64257cd87791ee2f18d4bbe1676c5dbeb9bb26caa5"
+    "jobs/cube-noise_random/selected-trajectories/00004.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random/trajectories/00004.npz",
+      "original_sha256": "4c1df04e6df784f0ac2245bea1a77188a75c3b58af16fcd07f8c031e5b26f90e",
+      "stored_sha256": "4c1df04e6df784f0ac2245bea1a77188a75c3b58af16fcd07f8c031e5b26f90e"
     },
-    "jobs/cube-noise_random/partial-outcomes/00005.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random/outcomes/00005.json",
-      "original_sha256": "c299c1a4db2189e0cd4198565bbea6b95424980b3b3851ddb52f391d23a762ae",
-      "stored_sha256": "15e85349ac8b5343990a98af9c937ecb1f6b829a5903e0c3a92e21e7a400fe28"
+    "jobs/cube-noise_random/selected-trajectories/00005.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random/trajectories/00005.npz",
+      "original_sha256": "d862c1a475df265d02c80a43b870fdbe9993c29a586bcf752f4b5d8d62e70ad6",
+      "stored_sha256": "d862c1a475df265d02c80a43b870fdbe9993c29a586bcf752f4b5d8d62e70ad6"
     },
-    "jobs/cube-noise_random/partial-outcomes/00006.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random/outcomes/00006.json",
-      "original_sha256": "baab12309cd86bd43327df741379d376417b008f52979a2646da6379a0d783e8",
-      "stored_sha256": "3d8cf02776a0d9d4e3e494e34bf02bc07a89c9de48d6860fe6eb0e5ddb235e01"
+    "jobs/cube-noise_random/selected-trajectories/00006.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random/trajectories/00006.npz",
+      "original_sha256": "ce7680ba52927cc811ccc86a08688e2c2e81b3b9d78422274d047ec26e2c323e",
+      "stored_sha256": "ce7680ba52927cc811ccc86a08688e2c2e81b3b9d78422274d047ec26e2c323e"
     },
-    "jobs/cube-noise_random/partial-outcomes/00007.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random/outcomes/00007.json",
-      "original_sha256": "fb836fb11155bb14efb7a41ca92755000ebdd1f7c0431dfad645a0994555cb75",
-      "stored_sha256": "9e14d9db00d96d558e8c9a1bfaf6f84704b9ba8cb110df13ca517d8d3a14a145"
+    "jobs/cube-noise_random/selected-trajectories/00007.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random/trajectories/00007.npz",
+      "original_sha256": "534fd667d809e180521cd44d391bea21b4690a13cbea069775c504d497076895",
+      "stored_sha256": "534fd667d809e180521cd44d391bea21b4690a13cbea069775c504d497076895"
     },
-    "jobs/cube-noise_random/partial-outcomes/00008.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random/outcomes/00008.json",
-      "original_sha256": "e314a763d3dae8c6d02833afb5293c4229005dd4f5851c64219456f860411b76",
-      "stored_sha256": "48b7c69ff2ad2a160b5e9b240b1d223717efd82f6895e0e35a923299b7e989a9"
+    "jobs/cube-noise_random/selected-trajectories/00008.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random/trajectories/00008.npz",
+      "original_sha256": "021145020b23dfdfb50a5d462a872121da256ae7103a3d0658970706beedf2b2",
+      "stored_sha256": "021145020b23dfdfb50a5d462a872121da256ae7103a3d0658970706beedf2b2"
     },
-    "jobs/cube-noise_random/partial-outcomes/00009.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random/outcomes/00009.json",
-      "original_sha256": "27d4c05062c541e3f29e5c10605dfe9ce90b3969258a19bb6836d7c9bb8c81ae",
-      "stored_sha256": "3a551d81af7e1b4f8fceb9e0ee6958217635eab2515c564f4c84c446dd9d19db"
-    },
-    "jobs/cube-noise_random/partial-outcomes/00010.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random/outcomes/00010.json",
-      "original_sha256": "85f394b5c8c514f61dd43ac521fc1dd55601cd868437b56144fe9e788c3aa6fb",
-      "stored_sha256": "c192ab11f32d017f4183415574a0bf655534d92cf1e72140e2491bbd9738f512"
-    },
-    "jobs/cube-noise_random/partial-outcomes/00011.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random/outcomes/00011.json",
-      "original_sha256": "4b83b26be1cd70d8219d7fb8f40df0d154e5c1b18663007dddb2a1ace8904a53",
-      "stored_sha256": "db3c7a5e131e78b03912c458ed947745fad0f1c7f7bf61e86692f54807bec529"
-    },
-    "jobs/cube-noise_random/partial-outcomes/00012.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random/outcomes/00012.json",
-      "original_sha256": "bf68dd6b9d2027897d77bbd878c1ff3ce91d0f34080256bccba855a2fceb633f",
-      "stored_sha256": "ba8bfad98981e4582c9a764a6ec696ff33b4bd83eeb62b17ff0ed3ba628cfb00"
-    },
-    "jobs/cube-noise_random/partial-outcomes/00013.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random/outcomes/00013.json",
-      "original_sha256": "b081621097c28b4baaf084869389650cde0c58c2d61cca99558834a11bfa25ad",
-      "stored_sha256": "af051a94241546fbbcdd7dbf480600425cfc87bd3ffe6b65913adf1071e9d278"
-    },
-    "jobs/cube-noise_random/partial-outcomes/00014.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random/outcomes/00014.json",
-      "original_sha256": "9f8cbc2656f498afd569b7814670f1c95ffd8672b815a0835c38a1f8e305d460",
-      "stored_sha256": "cbbb6c5c6b725d59ba82c913e6854aa0410398a04cac1ff652cb3895861c5439"
-    },
-    "jobs/cube-noise_random/partial-outcomes/00015.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random/outcomes/00015.json",
-      "original_sha256": "4a159d5ed88271f0e0c65603f041a933f536347e4efd03e7faefbc4088813534",
-      "stored_sha256": "968902029f6a8136e4046b90f4a77a8f933e07aed12d959a28649cf26c67d5d1"
-    },
-    "jobs/cube-noise_random/partial-outcomes/00016.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random/outcomes/00016.json",
-      "original_sha256": "cff483b06895f82c1ab89dc2d071e3880c9d06a2b4ac01ee7571c29afa93922d",
-      "stored_sha256": "fc6abc21506bd5229c0dea689be51ceb34ba6ebfb034a3baa49c1d6759c7703a"
-    },
-    "jobs/cube-noise_random/partial-outcomes/00017.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random/outcomes/00017.json",
-      "original_sha256": "5169ba199cf328d79614c159eafbbca2e507b94572401ebcd7613f98f36cd915",
-      "stored_sha256": "589656eea6fa439b452f9ac01cba655506788ca477aab757f6064d05ff1e0f91"
-    },
-    "jobs/cube-noise_random/partial-outcomes/00018.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random/outcomes/00018.json",
-      "original_sha256": "c35d26976690da2fff935c3723f31db652ecbaa66a16b24188770bb9631a4244",
-      "stored_sha256": "a9524cac809152c0388a22f5f9686fb7e665ed25c04052455b9b5bb38ae5f013"
-    },
-    "jobs/cube-noise_random/partial-outcomes/00019.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random/outcomes/00019.json",
-      "original_sha256": "1d5deecfb5a88bdaf3eac5d0f420d273f9c8f8622140f9bc35cb8b0736a1ff4d",
-      "stored_sha256": "a62e6e82e606649bf8beffab191588959a601c49f6017daef6e647ff97a8a25f"
-    },
-    "jobs/cube-noise_random/partial-outcomes/00020.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random/outcomes/00020.json",
-      "original_sha256": "f7d69e5b9f6b72ab1d6617467a80f98fcb40bce0f10389e7c82aaa3cb67df377",
-      "stored_sha256": "dc31c30207e4bcd9a80aecb73faa7dd86dab754512a1b44ae110db276447ae4a"
-    },
-    "jobs/cube-noise_random/partial-outcomes/00021.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random/outcomes/00021.json",
-      "original_sha256": "47a89d530bbffcdba2c28cc2e802db2f1288ea0d2b84692d1a5eaf5202923ead",
-      "stored_sha256": "c047cbc4ac7eb2bad1a1128f0ba67d025e89dba2dced281d8c7b3a4278504232"
-    },
-    "jobs/cube-noise_random/partial-outcomes/00022.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random/outcomes/00022.json",
-      "original_sha256": "13e1ed47dcc9b1e0516a64411a5d894c0fac900e603d2572846463ddb75ff5b4",
-      "stored_sha256": "18636504d3b64f4f3ba43436d82c76ebf40b21d2b25f023bf091dcbd9befe4d5"
-    },
-    "jobs/cube-noise_random/partial-outcomes/00023.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random/outcomes/00023.json",
-      "original_sha256": "265834323bc209eeabbb836748f660d5a1b4a0e565d3cfb8949f4388495d07c2",
-      "stored_sha256": "e315fa978d1ae087d35ef15640016ec0393ebf779ecc6f8c25f7bb060911e167"
-    },
-    "jobs/cube-noise_random/partial-outcomes/00024.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random/outcomes/00024.json",
-      "original_sha256": "03f94e10638e291da5264981a12d8fdd457383992d7dde6b3f4a2d73bb38cbfe",
-      "stored_sha256": "d2b32e967a9c23f9b99a0a7f1e51886f5091cea8e4421db26a562b4add04aec3"
-    },
-    "jobs/cube-noise_random/partial-outcomes/00025.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random/outcomes/00025.json",
-      "original_sha256": "c86bb65643a2c153e77165e57c8ef45d61d0514fb909cb731b39e5a181793dbd",
-      "stored_sha256": "dbb2aeb8b0f3da4f2507bd73cfcacc76ab634164bde472cdf62122c8ede8163c"
-    },
-    "jobs/cube-noise_random/partial-outcomes/00026.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random/outcomes/00026.json",
-      "original_sha256": "c7285daa392225ec3fbf3674546d35f17ff193561d343ef2948133251d8e8847",
-      "stored_sha256": "261314ca42525aa62d2119d19c93e307f6eb02ccf54f5f91e6b3b9f16f94ecca"
-    },
-    "jobs/cube-noise_random/partial-outcomes/00027.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random/outcomes/00027.json",
-      "original_sha256": "dd04d0a92d5bdaedb7c3c867098a81abe560c941ee6866219be165fc23dceaac",
-      "stored_sha256": "466edb34c974558f336eb117fab180eea40fcc0cd00eac75dd9cde2dc8598f63"
-    },
-    "jobs/cube-noise_random/partial-outcomes/00028.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random/outcomes/00028.json",
-      "original_sha256": "fdc4e0c781b7d1af49dccd7a76319d2ead3e43b1aa8e69bc37fbaceebfe5125a",
-      "stored_sha256": "010261ace19d9b2695526595b81656b5ca88461a226b3df1b0e76e3fe0baf9dc"
-    },
-    "jobs/cube-noise_random/partial-outcomes/00029.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random/outcomes/00029.json",
-      "original_sha256": "756d89e167f1d454e7ff77f65c38a32ba988f3db7ff9f36febb1e28579983d88",
-      "stored_sha256": "1cb84b63e8f1ab9abc6c0d5f7e24cf326ff5068ee8f0c50c6a25f307c96989ab"
-    },
-    "jobs/cube-noise_random/partial-outcomes/00030.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random/outcomes/00030.json",
-      "original_sha256": "e64174a0537432217f30910155cc86171c59bba86dd9f69b692fdbbf35592a0d",
-      "stored_sha256": "722568963c10cb2d0e5b1ecb6fd19265612ff8532000f223f877465317d2f2f4"
+    "jobs/cube-noise_random/selected-trajectories/00009.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random/trajectories/00009.npz",
+      "original_sha256": "632f61668ab5fe2e2b0f0a20ce458b5bd8bb052b72a51bb7b62a78f807b470c9",
+      "stored_sha256": "632f61668ab5fe2e2b0f0a20ce458b5bd8bb052b72a51bb7b62a78f807b470c9"
     },
     "jobs/cube-noise_random_shell/identity.json": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random_shell/identity.json",
@@ -688,168 +608,68 @@
     },
     "jobs/cube-noise_random_shell/progress.json": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random_shell/progress.json",
-      "original_sha256": "47d0cd2294f2b02c19dcc67de8c151f0ee40670426ddb636c456ec340ba708dc",
-      "stored_sha256": "47d0cd2294f2b02c19dcc67de8c151f0ee40670426ddb636c456ec340ba708dc"
+      "original_sha256": "1734dc869dfbec51def42b9445f98b5a13568af1d356d4ce0a19d1af3f7b1b8d",
+      "stored_sha256": "1734dc869dfbec51def42b9445f98b5a13568af1d356d4ce0a19d1af3f7b1b8d"
+    },
+    "jobs/cube-noise_random_shell/report.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random_shell/report.json",
+      "original_sha256": "8ae6db2d9c7028e508f1136874c134080d54bb08a0717a8303ee9b0f7898f4a5",
+      "stored_sha256": "95f16f4e00322a473c0c817146cada0e5cdbe83f65ce0cb3a300056ad2775c71"
     },
     "jobs/cube-noise_random_shell/wandb.json": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random_shell/wandb.json",
       "original_sha256": "fe8169ef14a0dcbe20994e4f5ecbbb1edbc6de3fd39e7405bb4895bc7dda5664",
       "stored_sha256": "fe8169ef14a0dcbe20994e4f5ecbbb1edbc6de3fd39e7405bb4895bc7dda5664"
     },
-    "jobs/cube-noise_random_shell/partial-outcomes/00000.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random_shell/outcomes/00000.json",
-      "original_sha256": "7baa94e76fa7c3f7e2016b5acf43c80ddf74c0442779db138b8d92cee15412a5",
-      "stored_sha256": "ebeabbdef60f45e812995d7f28851a35cd22d2545cba9a216b4d95012a772913"
+    "jobs/cube-noise_random_shell/selected-trajectories/00000.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random_shell/trajectories/00000.npz",
+      "original_sha256": "28daf552e47ff70b738407e24c5558c1a6896e279342e879347ba9d03fe89bd7",
+      "stored_sha256": "28daf552e47ff70b738407e24c5558c1a6896e279342e879347ba9d03fe89bd7"
     },
-    "jobs/cube-noise_random_shell/partial-outcomes/00001.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random_shell/outcomes/00001.json",
-      "original_sha256": "82720ae36911f9b0f207d31d36264b776d5dc18f90843f078f796814e93f1136",
-      "stored_sha256": "da75d1daacf41a24c9937abf5b54a64d9df3b65f83da8d6493d01986f2bf57c4"
+    "jobs/cube-noise_random_shell/selected-trajectories/00001.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random_shell/trajectories/00001.npz",
+      "original_sha256": "44ccd7caeef20a1c0361a55d7501f4d2c3a56302aa5624f78eab3f2133a611f5",
+      "stored_sha256": "44ccd7caeef20a1c0361a55d7501f4d2c3a56302aa5624f78eab3f2133a611f5"
     },
-    "jobs/cube-noise_random_shell/partial-outcomes/00002.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random_shell/outcomes/00002.json",
-      "original_sha256": "6945ffb1607e5df5d62b5bcf47a824b321adf8eae28e0c113727739ae1108faf",
-      "stored_sha256": "391d7507a0da56eaf1f721cd367b7aeb04e45d79c81d99c404b8fd2812ff27a9"
+    "jobs/cube-noise_random_shell/selected-trajectories/00002.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random_shell/trajectories/00002.npz",
+      "original_sha256": "0b07ba4f7d80394cb5bdf06f9ea65a475d494e41e292167ae1b5bfd087dcd17d",
+      "stored_sha256": "0b07ba4f7d80394cb5bdf06f9ea65a475d494e41e292167ae1b5bfd087dcd17d"
     },
-    "jobs/cube-noise_random_shell/partial-outcomes/00003.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random_shell/outcomes/00003.json",
-      "original_sha256": "5e405d4f8cdfe1bbf5b7f6d667bd8df5b07e30b4d6cb9c5e461ed2a0b451ff9a",
-      "stored_sha256": "c00b5063531e64ead473fd27182016bbb41f1a64a41e5a1a80b80131f6516457"
+    "jobs/cube-noise_random_shell/selected-trajectories/00003.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random_shell/trajectories/00003.npz",
+      "original_sha256": "2e66f3915803c7a67a99cfccf0b8b25497a3302bd9f7759f33ac632db3238209",
+      "stored_sha256": "2e66f3915803c7a67a99cfccf0b8b25497a3302bd9f7759f33ac632db3238209"
     },
-    "jobs/cube-noise_random_shell/partial-outcomes/00004.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random_shell/outcomes/00004.json",
-      "original_sha256": "facddf2a7fc74d5cef10249b9d9854b546a08fb1fe41f7e4f7873ce3ee88bb70",
-      "stored_sha256": "177ac0270cf9a7e48e7b00e9cade8250e0fbca67f127aa5e1a0fca2272eac923"
+    "jobs/cube-noise_random_shell/selected-trajectories/00004.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random_shell/trajectories/00004.npz",
+      "original_sha256": "67b716d7af41170fd48f3062d2b7247e430526d0de67db72425c257e00b48c15",
+      "stored_sha256": "67b716d7af41170fd48f3062d2b7247e430526d0de67db72425c257e00b48c15"
     },
-    "jobs/cube-noise_random_shell/partial-outcomes/00005.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random_shell/outcomes/00005.json",
-      "original_sha256": "95cd875e4f717527d946b994aecb3c407060318ce23b82677e9840c95bcc4974",
-      "stored_sha256": "f4ba424758f2bf907a4e75c91fb4b7cefb789893a882480d9aaa7b4547b2f454"
+    "jobs/cube-noise_random_shell/selected-trajectories/00005.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random_shell/trajectories/00005.npz",
+      "original_sha256": "bae80d13bb4992d026e074a0f113be42fca97f99770173c6a340d654936945f6",
+      "stored_sha256": "bae80d13bb4992d026e074a0f113be42fca97f99770173c6a340d654936945f6"
     },
-    "jobs/cube-noise_random_shell/partial-outcomes/00006.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random_shell/outcomes/00006.json",
-      "original_sha256": "52e5a5b0411e768f0a5bf849886109d5a4dbf92bcbbfdbf8946684f552951f82",
-      "stored_sha256": "ca7f463e74ec502aa6e3bfa71d28d12d707e05100f5da25fbcb3c76371f83747"
+    "jobs/cube-noise_random_shell/selected-trajectories/00006.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random_shell/trajectories/00006.npz",
+      "original_sha256": "d7da58f972806a68b092fb7b0f944deee4f7f1d2dab8420b8771305f3156082a",
+      "stored_sha256": "d7da58f972806a68b092fb7b0f944deee4f7f1d2dab8420b8771305f3156082a"
     },
-    "jobs/cube-noise_random_shell/partial-outcomes/00007.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random_shell/outcomes/00007.json",
-      "original_sha256": "d9f343f444b92b6614b37ccf575c8e3e3e6c044a35b0810badc10e2afad04878",
-      "stored_sha256": "3a64835fa3fd1c1d84542f54333aa8d0792eb87802d5c1e0c7871d93c17b8147"
+    "jobs/cube-noise_random_shell/selected-trajectories/00007.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random_shell/trajectories/00007.npz",
+      "original_sha256": "72acea476ca620fc8cf5b20c879334731bef9af586aecec3ceaac7162ed5164d",
+      "stored_sha256": "72acea476ca620fc8cf5b20c879334731bef9af586aecec3ceaac7162ed5164d"
     },
-    "jobs/cube-noise_random_shell/partial-outcomes/00008.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random_shell/outcomes/00008.json",
-      "original_sha256": "bc63981e870d7577aa0b7827558037ce522758b2c1a532c6c45b9e191fdee346",
-      "stored_sha256": "99f199f1d043ef6337b60379a04d1cfc4b91740322db52766a575b7bc5dd680f"
+    "jobs/cube-noise_random_shell/selected-trajectories/00008.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random_shell/trajectories/00008.npz",
+      "original_sha256": "580eeb7c0d53dd475abe194ba2dcd74969ca87a1ec83d80d5c26f8702b3f963c",
+      "stored_sha256": "580eeb7c0d53dd475abe194ba2dcd74969ca87a1ec83d80d5c26f8702b3f963c"
     },
-    "jobs/cube-noise_random_shell/partial-outcomes/00009.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random_shell/outcomes/00009.json",
-      "original_sha256": "d2c9036125562281433ba19a03ed5f9b8bfdb0de069b05571eaecb865b2c437e",
-      "stored_sha256": "6e8a4f75a293823065c432f3e1cb984e0152259b0f93d03cc2e60f90737b116a"
-    },
-    "jobs/cube-noise_random_shell/partial-outcomes/00010.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random_shell/outcomes/00010.json",
-      "original_sha256": "a4d9d76387e55383ae6f58b987ef86387771555a2cf6110bf5d5869ce76c0ef7",
-      "stored_sha256": "d35bd1e066ae150bfff5e4a4dd228062a8d9b78682d3d4d36511a832e18f65e9"
-    },
-    "jobs/cube-noise_random_shell/partial-outcomes/00011.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random_shell/outcomes/00011.json",
-      "original_sha256": "c661317e440d156f855766a7e7ad05433b3f5fdfe6e73c33d3be0a1576f5f735",
-      "stored_sha256": "e15c0f933eaee9144e82210cef3d2ce4c58bae5a4126bf17da1a2f9d6ee42684"
-    },
-    "jobs/cube-noise_random_shell/partial-outcomes/00012.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random_shell/outcomes/00012.json",
-      "original_sha256": "4e57470e1cf719fb1f1d74fa7e0a4f7429789fd408e5c2cb24893865dbc6eedd",
-      "stored_sha256": "f587ff49f4fc1360602ff9f24adb02e914ff13605647516f021e999f0cb86202"
-    },
-    "jobs/cube-noise_random_shell/partial-outcomes/00013.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random_shell/outcomes/00013.json",
-      "original_sha256": "92e827d91261f98c35acdb25f26871bb5fb4d90319721de787f20d0ab74fbe90",
-      "stored_sha256": "1c77c66e0102f3f1a2c49700d389e277063ba971e7ed0ed9ce5b097d3cf0ae1d"
-    },
-    "jobs/cube-noise_random_shell/partial-outcomes/00014.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random_shell/outcomes/00014.json",
-      "original_sha256": "a61e42c2594aacd42cdcc98b62d4e842e883d2338fc0ce5bcb25a79e86dc35ac",
-      "stored_sha256": "4231aacacfe6876b4518a179be140e1daf158b57b7a3a071024b6d615db7ea0d"
-    },
-    "jobs/cube-noise_random_shell/partial-outcomes/00015.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random_shell/outcomes/00015.json",
-      "original_sha256": "c4beedab47dd5a7685126d479d5c06822d1f9ba6e628c4f98c1bd4a445ffd28e",
-      "stored_sha256": "e7903d198f790b8df68c564a5e734336f717574228167126a0014f78c78a91a1"
-    },
-    "jobs/cube-noise_random_shell/partial-outcomes/00016.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random_shell/outcomes/00016.json",
-      "original_sha256": "ed9d713ab64922f97d2950a05052ae6a20dd3e84f77ccda4a602faa6b397f79b",
-      "stored_sha256": "fb28728da2875f087a9a8d2b4f9694606d5ce44debcf5183e43bb1e2178a3564"
-    },
-    "jobs/cube-noise_random_shell/partial-outcomes/00017.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random_shell/outcomes/00017.json",
-      "original_sha256": "4bda8272da9cf3bfafa829d286739cf7c0b7d6747f112e655a199312ecd45f4c",
-      "stored_sha256": "cf3c08fbdd64b9dace8d25f6d8cc1371e0e9ec2339549c43921f6f676a0a21bb"
-    },
-    "jobs/cube-noise_random_shell/partial-outcomes/00018.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random_shell/outcomes/00018.json",
-      "original_sha256": "9e88e8868981f24a5c71609bf18976d9af7172eb873d6848183382127bbffbb1",
-      "stored_sha256": "27b6131182dfd2ba218fff21b587e63e09e17a9af7e3fc7da006d801c2cf441f"
-    },
-    "jobs/cube-noise_random_shell/partial-outcomes/00019.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random_shell/outcomes/00019.json",
-      "original_sha256": "d5eabe87a99a9be26875f35d368c792ca9f99116b3465f72e60c6b0f0906d9a7",
-      "stored_sha256": "0f9a55fa9241af53b7ae5815540f88433b4a5378a87e27164ebb3712d94738d8"
-    },
-    "jobs/cube-noise_random_shell/partial-outcomes/00020.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random_shell/outcomes/00020.json",
-      "original_sha256": "cb1255f9ba0419460707eb65ca32fed97c0d3432f32c365532973f27110e28a8",
-      "stored_sha256": "88ef58f8521d4ee1e1a0c8d36394638deae327628e1cd2ff860729d98f7e5b86"
-    },
-    "jobs/cube-noise_random_shell/partial-outcomes/00021.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random_shell/outcomes/00021.json",
-      "original_sha256": "6ee2feddc4b7a73365b0dd196cc0d3e112d913623214367625fc24fb9808762c",
-      "stored_sha256": "fd2a7161ab2ce68d7646f0a54033e66fe8dc6536c2917c0c507c7d517545a4aa"
-    },
-    "jobs/cube-noise_random_shell/partial-outcomes/00022.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random_shell/outcomes/00022.json",
-      "original_sha256": "c167a926f32fb8216d72e8c8e2338675b18e2988d91954b9a4b627115439111f",
-      "stored_sha256": "f18e13f94b1484ea6a387c0fa96305b4d0aa6ee5415b7c171181bdfdb6529ffa"
-    },
-    "jobs/cube-noise_random_shell/partial-outcomes/00023.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random_shell/outcomes/00023.json",
-      "original_sha256": "f6fa8e50480c6772b1985562f5e15cc01d137188eea13a8f9b90e4152a8a2c9b",
-      "stored_sha256": "118baa3ef6d4e9f377b7bb5e90dbb05d35e783a3288ba34156a6ae95a95bcc9d"
-    },
-    "jobs/cube-noise_random_shell/partial-outcomes/00024.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random_shell/outcomes/00024.json",
-      "original_sha256": "fdc2658a173330d0d36deb4aec8b0592783246585df94215c239f515ffe74530",
-      "stored_sha256": "d99ba540fbd892963e3ecb94fc2fb20678789b3a9532675583ba5786853cb49c"
-    },
-    "jobs/cube-noise_random_shell/partial-outcomes/00025.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random_shell/outcomes/00025.json",
-      "original_sha256": "9cad6a531460909d630a6b643483208a6a294f41b8a73b1e5dd7265001d357ce",
-      "stored_sha256": "a624cd30e2d27a70f1f48e1c7c48a7e8b514c2a35c4e9a03e1ce0b1adb9eba18"
-    },
-    "jobs/cube-noise_random_shell/partial-outcomes/00026.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random_shell/outcomes/00026.json",
-      "original_sha256": "b9e1da2683b7e1ba6eb2a34bede767deaa62424c4b34bade95547b74d07c72bc",
-      "stored_sha256": "603bd62bc0b2e614de987f1d266d8e7f272532e205f7d94dddb91dd2fef9d352"
-    },
-    "jobs/cube-noise_random_shell/partial-outcomes/00027.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random_shell/outcomes/00027.json",
-      "original_sha256": "c976fbf959baef4e3578da18d1739aca23161521befbd7aa12b1091e8ffcb429",
-      "stored_sha256": "b69147109491a355e46da512cf73169970db15f038b41dfad18a29bf348559eb"
-    },
-    "jobs/cube-noise_random_shell/partial-outcomes/00028.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random_shell/outcomes/00028.json",
-      "original_sha256": "aac6c26d41734f3421ac9cda474f317c7ef64500ca12f94f0ac66e819927dd56",
-      "stored_sha256": "622d009b901c1f9c1bbc8c95dbf1947419cbad5c93fd636d63d33dcc6c2ac2cf"
-    },
-    "jobs/cube-noise_random_shell/partial-outcomes/00029.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random_shell/outcomes/00029.json",
-      "original_sha256": "3e7dcdff2ca12dadf56afe44295fa7702669cdad05a2d896662c9c12f33d3700",
-      "stored_sha256": "2b45d1e699c3b09c2fd1998d5cc7727c1ecf04f93229a975a98a5e82f0f92fc3"
-    },
-    "jobs/cube-noise_random_shell/partial-outcomes/00030.json.gz": {
-      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random_shell/outcomes/00030.json",
-      "original_sha256": "46bc242f89969c4714f1b11e2b3f9af913fee5d05979516c94378efcc87ca951",
-      "stored_sha256": "1d183f94ef44e44d6b84eb56ff2bdfa207a049c093998b424ab6ebd49737a13d"
+    "jobs/cube-noise_random_shell/selected-trajectories/00009.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/cube-noise_random_shell/trajectories/00009.npz",
+      "original_sha256": "a1364de4b23dd9ef71a699124a60e480593a51ed919c4ebcfdf8696aea0ec7a8",
+      "stored_sha256": "a1364de4b23dd9ef71a699124a60e480593a51ed919c4ebcfdf8696aea0ec7a8"
     },
     "jobs/pusht-noise_bon192/identity.json": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/pusht-noise_bon192/identity.json",
@@ -925,6 +745,81 @@
       "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/pusht-noise_bon192/trajectories/00009.npz",
       "original_sha256": "e0cbba237e7e39904f1716af0a7dd7e999889549e589bc3ca86feca911aef942",
       "stored_sha256": "e0cbba237e7e39904f1716af0a7dd7e999889549e589bc3ca86feca911aef942"
+    },
+    "jobs/pusht-noise_bon192_shell/identity.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/pusht-noise_bon192_shell/identity.json",
+      "original_sha256": "4c9bed1190401ccc4d6c196f792721662a4339c600b3b7b0375eacbb473882a7",
+      "stored_sha256": "4c9bed1190401ccc4d6c196f792721662a4339c600b3b7b0375eacbb473882a7"
+    },
+    "jobs/pusht-noise_bon192_shell/cases.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/pusht-noise_bon192_shell/cases.json",
+      "original_sha256": "782e731279a661ba1b2e39e296aeb4dab60c4bbb170f16aca7248d55baa5562e",
+      "stored_sha256": "c669edc572e9249f3a2f304b1f65dc959576dd646aea500b2b8abc4b8e733070"
+    },
+    "jobs/pusht-noise_bon192_shell/progress.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/pusht-noise_bon192_shell/progress.json",
+      "original_sha256": "996ebcd85c3db5fd5552da85203d79c177e2e9ee0525d82e19aa8cdd0049fe79",
+      "stored_sha256": "996ebcd85c3db5fd5552da85203d79c177e2e9ee0525d82e19aa8cdd0049fe79"
+    },
+    "jobs/pusht-noise_bon192_shell/report.json.gz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/pusht-noise_bon192_shell/report.json",
+      "original_sha256": "522671be968423079d4f46382bed96d8decd827272538f4c2548d72832cb0d55",
+      "stored_sha256": "04e24e13ab1d3f3328a05fe0447c1efaba6a0f84fe5b813ffd4e710076a32f65"
+    },
+    "jobs/pusht-noise_bon192_shell/wandb.json": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/pusht-noise_bon192_shell/wandb.json",
+      "original_sha256": "c1281fdce5fa6f61b1532748dafabb7f3b5fce347d0a0604e88f87816ecd7996",
+      "stored_sha256": "c1281fdce5fa6f61b1532748dafabb7f3b5fce347d0a0604e88f87816ecd7996"
+    },
+    "jobs/pusht-noise_bon192_shell/selected-trajectories/00000.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/pusht-noise_bon192_shell/trajectories/00000.npz",
+      "original_sha256": "d60baebb9e35a9f102888223c66aa4318da4877002428e725aff560a0a5adc58",
+      "stored_sha256": "d60baebb9e35a9f102888223c66aa4318da4877002428e725aff560a0a5adc58"
+    },
+    "jobs/pusht-noise_bon192_shell/selected-trajectories/00001.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/pusht-noise_bon192_shell/trajectories/00001.npz",
+      "original_sha256": "d68648959058563db194109fb25c889a1a7b18cea86b5c9e4e1f50a8a25a97dc",
+      "stored_sha256": "d68648959058563db194109fb25c889a1a7b18cea86b5c9e4e1f50a8a25a97dc"
+    },
+    "jobs/pusht-noise_bon192_shell/selected-trajectories/00002.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/pusht-noise_bon192_shell/trajectories/00002.npz",
+      "original_sha256": "09c7592551fe53c54f35e4064a2f5839e1766e5f656a15440ee6b807bb4992d2",
+      "stored_sha256": "09c7592551fe53c54f35e4064a2f5839e1766e5f656a15440ee6b807bb4992d2"
+    },
+    "jobs/pusht-noise_bon192_shell/selected-trajectories/00003.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/pusht-noise_bon192_shell/trajectories/00003.npz",
+      "original_sha256": "eb5a581fe288e75497a8098195eb09df6d24bc20b7b05c087d92325ee67f9b45",
+      "stored_sha256": "eb5a581fe288e75497a8098195eb09df6d24bc20b7b05c087d92325ee67f9b45"
+    },
+    "jobs/pusht-noise_bon192_shell/selected-trajectories/00004.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/pusht-noise_bon192_shell/trajectories/00004.npz",
+      "original_sha256": "68ab8ae80eaab05bc8769f57b636292b467f6862cd585e92a82bc447be22b8ef",
+      "stored_sha256": "68ab8ae80eaab05bc8769f57b636292b467f6862cd585e92a82bc447be22b8ef"
+    },
+    "jobs/pusht-noise_bon192_shell/selected-trajectories/00005.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/pusht-noise_bon192_shell/trajectories/00005.npz",
+      "original_sha256": "68cd4235fdd23b40b3f119b8e9078bcfd955eb8e45e81d5aeb1c774fcfaedfef",
+      "stored_sha256": "68cd4235fdd23b40b3f119b8e9078bcfd955eb8e45e81d5aeb1c774fcfaedfef"
+    },
+    "jobs/pusht-noise_bon192_shell/selected-trajectories/00006.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/pusht-noise_bon192_shell/trajectories/00006.npz",
+      "original_sha256": "071caf6747ae8ffd5cb85e9a5f79893722234c3b5cb058b32cb111d5813221a6",
+      "stored_sha256": "071caf6747ae8ffd5cb85e9a5f79893722234c3b5cb058b32cb111d5813221a6"
+    },
+    "jobs/pusht-noise_bon192_shell/selected-trajectories/00007.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/pusht-noise_bon192_shell/trajectories/00007.npz",
+      "original_sha256": "4cac6589684d44184c92ca34c3f502a4f86c59fc556d6f13c44c3d511fd664f3",
+      "stored_sha256": "4cac6589684d44184c92ca34c3f502a4f86c59fc556d6f13c44c3d511fd664f3"
+    },
+    "jobs/pusht-noise_bon192_shell/selected-trajectories/00008.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/pusht-noise_bon192_shell/trajectories/00008.npz",
+      "original_sha256": "883e820e2535481e2722525dab9afcfa2d03a045d58ed934d80bfb87b25b08b9",
+      "stored_sha256": "883e820e2535481e2722525dab9afcfa2d03a045d58ed934d80bfb87b25b08b9"
+    },
+    "jobs/pusht-noise_bon192_shell/selected-trajectories/00009.npz": {
+      "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/pusht-noise_bon192_shell/trajectories/00009.npz",
+      "original_sha256": "cfb3eead4e7c62066e2b2761f2b00ab4144f4fc9d477eeef18b7152a3d8e53f1",
+      "stored_sha256": "cfb3eead4e7c62066e2b2761f2b00ab4144f4fc9d477eeef18b7152a3d8e53f1"
     },
     "jobs/pusht-noise_cem/identity.json": {
       "source": "/home/mtxu/adam/LeFlow-experiments/20261014-noise-cem/jobs/pusht-noise_cem/identity.json",

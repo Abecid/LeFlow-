@@ -1,8 +1,8 @@
 {
-  "completed": 30,
+  "completed": 50,
   "expected": 50,
   "metrics": {
-    "episodes": 30,
+    "episodes": 50,
     "failure_ids": [
       "cube/val/0007213/000112",
       "cube/val/0005033/000124",
@@ -11,17 +11,20 @@
       "cube/val/0004293/000051",
       "cube/val/0008908/000033",
       "cube/val/0000560/000032",
-      "cube/val/0008993/000025"
+      "cube/val/0008993/000025",
+      "cube/val/0002985/000041",
+      "cube/val/0003396/000018",
+      "cube/val/0009070/000039"
     ],
-    "mean_decision_ms": 160.05828454217408,
-    "mean_steps": 19.033333333333335,
-    "success_rate": 0.7333333333333333,
-    "successes": 22,
+    "mean_decision_ms": 156.6240786329696,
+    "mean_steps": 16.42,
+    "success_rate": 0.78,
+    "successes": 39,
     "timeouts": 0,
     "wilson95": [
-      0.5555169795568831,
-      0.8581750444608938
+      0.6475818431054045,
+      0.8724621377569771
     ],
-    "world_transitions": 122880
+    "world_transitions": 182400
   }
 }
