@@ -116,7 +116,10 @@ def test_shared_controller_returns_evaluated_bounded_prefix(ad, projected):
     assert (all_actions.abs() <= 1).all()
     assert controller.trace[-1]['noise_search']['rounds_completed'] == 3
     assert controller.trace[-1]['world_candidate_transitions'] == 3*8*5
+    expected_prefix = .1 * world.action_encoder(all_actions[index, 0])
     controller.observe(torch.ones(1, 1, 3))
+    assert controller.trace[-1]['observed_prefix_prediction_mse'] == pytest.approx(float((expected_prefix-1).square().mean()))
+    assert len(world.last_actions) == 3  # Diagnostic never rescores the incumbent.
     assert_unchanged(model, before)
     controller.begin_episode()
     assert not controller.trace and controller.decisions == 0

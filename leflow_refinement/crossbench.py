@@ -8,6 +8,7 @@ from __future__ import annotations
 import argparse
 from dataclasses import asdict
 import json
+import time
 from pathlib import Path
 
 import torch
@@ -22,38 +23,56 @@ class RefinementController:
         if spec.method != 'leflow' or cfg.horizon != spec.horizon:
             raise ValueError('Refinement requires a matching LeFlow checkpoint')
         self.model = model.eval().requires_grad_(False)
-        self.world, self.s, self.cfg = world, spec, cfg
+        self.world, self.s, self.cfg = world.eval().requires_grad_(False), spec, cfg
         self.begin_episode()
 
     def begin_episode(self):
         self.trace = []
         self.decisions = 0
+        self.previous_prediction = None
 
     def observe(self, actual):
-        pass  # Frozen inference only; no TTT or hidden adaptation.
+        # Factual diagnostics only: neither the scorer nor search is updated.
+        if self.previous_prediction is not None:
+            predicted, goal = self.previous_prediction
+            self.trace[-1]['observed_prefix_prediction_mse'] = float((predicted-actual[:, 0]).square().mean())
+            self.trace[-1]['observed_prefix_goal_mse'] = float((actual[:, 0]-goal).square().mean())
+            self.previous_prediction = None
 
     def plan(self, z, goal, *, budget=None):
         if z.shape[1] != 1 or goal.shape != z.shape:
             raise ValueError('Compact [B,1,D] LeWM features required')
+        prefixes = []
+        started = time.perf_counter()
         def decode(paths):
             raw = self.model.inverse(paths[:, :-1].flatten(0, 1), paths[:, 1:].flatten(0, 1))
             raw = raw.reshape(len(paths), self.s.horizon, self.s.ad)
             return self.world.from_world(raw)
         def rollout(start, actions):
             pred = self.world.rollout(start[:, None], actions, budget=budget)[:, :, 0]
+            prefixes.append(pred[:, 0].detach().clone())
             return torch.cat((start[:, None], pred), 1)
         ops = PlannerOps(self.model.flow, decode, rollout, budget.check if budget else None)
         # Match legacy LeFlow's GLOBAL initial-noise stream exactly. Dedicated
         # perturbation stream cannot consume the next decision's initial pool.
         perturb = torch.Generator(device=z.device).manual_seed(torch.initial_seed()+1000000007+self.decisions)
-        out = plan_candidates(z[:, 0], goal[:, 0], ops, self.cfg, perturb_generator=perturb)
-        self.trace.append(dict(**ops.compute.as_dict(), local_cost=float(out['costs'][0]),
-                               selected_index=int(out['selected_indices'][0]),
-                               refinement=asdict(self.cfg)))
-        if 'noise_search' in out:
-            self.trace[-1]['noise_search'] = out['noise_search']
-        self.decisions += 1
-        return out['actions'][0, 0]
+        trace = dict(local_cost=None, selected_index=None, plan_completed=False,
+                     refinement=asdict(self.cfg))
+        try:
+            out = plan_candidates(z[:, 0], goal[:, 0], ops, self.cfg, perturb_generator=perturb)
+            index = int(out['selected_indices'][0])
+            trace.update(local_cost=float(out['costs'][0]), selected_index=index,
+                         candidate_costs=out['all_costs'][0].cpu().tolist(), plan_completed=True)
+            if 'noise_search' in out:
+                trace['noise_search'] = out['noise_search']
+                # Noise search indices address the concatenated round-major pool.
+                # Reuse the selected first-prefix prediction; never rescore it.
+                self.previous_prediction = (torch.cat(prefixes)[index][None].clone(), goal[:, 0].detach().clone())
+            return out['actions'][0, 0]
+        finally:
+            trace.update(ops.compute.as_dict(), controller_ms=(time.perf_counter()-started)*1000)
+            self.trace.append(trace)
+            self.decisions += 1
 
 
 def source_hash():

@@ -1,0 +1,27 @@
+{
+  "tasks": [
+    "pusht",
+    "cube"
+  ],
+  "variants": [
+    "noise_cem",
+    "noise_cem_shell",
+    "noise_random",
+    "noise_random_shell",
+    "noise_bon192",
+    "noise_bon192_shell"
+  ],
+  "seed": 3072,
+  "training_updates": 0,
+  "cases_per_task": 50,
+  "primitive_action_limit": 50,
+  "controller_seconds": 10,
+  "flow_steps": 16,
+  "horizon": 5,
+  "candidate_flow_evaluations": 3072,
+  "world_transitions_per_decision": 960,
+  "job_timeout_seconds": 900,
+  "precision": "float32; NVIDIA_TF32_OVERRIDE=0",
+  "baseline_reference": "20261014-self-refine/leflow (12/50 PushT;40/50 Cube)",
+  "author_native_checkpoint": false
+}

@@ -1,3 +1,18 @@
+# October14: execute the explicitly requested noise-space CEM comparison
+
+The user now authorizes all six implemented noise-search variants on the retained
+PushT/Cube LeFlow heads: 12 inference-only jobs, original50 development cases,
+seed3072,50 primitive actions/10 cumulative controller seconds, strict FP32,
+zero optimizer updates. Use all8 idle GPUs, one job per GPU. Reuse the completed
+strict-FP32 LeFlow reference12/40; do not retrain or rerun consumed baselines.
+Read docs/NOISE_CEM_SHARED_RUN_20261014.md. Freeze the runtime; never silently
+replay incomplete cases. Publish completed and failed results with remote-byte
+verification. Original native-author planner checkpoints remain unavailable;
+no missing-head training, new methods, seeds, sweeps or sealed tests are authorized.
+All earlier16 baseline, MetaWorld and12 P&P results remain preserved.
+
+Earlier status follows, superseded only for the requested CEM inference scope.
+
 # October14 self-refinement transfer completed; further launches held
 
 All12 inference-only comparisons completed600 cases on frozen PushT/Cube LeFlow
