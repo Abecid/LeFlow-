@@ -364,6 +364,371 @@
     "action_limit_failures": 14,
     "timeouts": 0
   },
+  "cube-noise_bon192_shell": {
+    "completed_decisions": 203,
+    "observed_prefixes": 153,
+    "median_selected_terminal_mse": 0.007846115157008171,
+    "median_factual_prefix_prediction_mse": 0.007686804048717022,
+    "median_fractional_score_reduction_within_search": 0.0,
+    "selected_round_counts": {
+      "0": 203
+    },
+    "initial_pool_cost_bitwise_equal_to_reference": null,
+    "first_decisions": [
+      {
+        "case": "cube/val/0001371/000084",
+        "reference_cost": 0.0030559920705854893,
+        "new_cost": 0.0029595172964036465,
+        "reference_success": true,
+        "new_success": true
+      },
+      {
+        "case": "cube/val/0001514/000118",
+        "reference_cost": 0.006555184256285429,
+        "new_cost": 0.006127438507974148,
+        "reference_success": true,
+        "new_success": true
+      },
+      {
+        "case": "cube/val/0001645/000057",
+        "reference_cost": 0.005452380981296301,
+        "new_cost": 0.004573469050228596,
+        "reference_success": true,
+        "new_success": true
+      },
+      {
+        "case": "cube/val/0007213/000112",
+        "reference_cost": 0.00662603136152029,
+        "new_cost": 0.005303291138261557,
+        "reference_success": true,
+        "new_success": true
+      },
+      {
+        "case": "cube/val/0009965/000165",
+        "reference_cost": 0.005985601805150509,
+        "new_cost": 0.0038388515822589397,
+        "reference_success": true,
+        "new_success": true
+      },
+      {
+        "case": "cube/val/0005033/000124",
+        "reference_cost": 0.018423277884721756,
+        "new_cost": 0.006098109297454357,
+        "reference_success": false,
+        "new_success": false
+      },
+      {
+        "case": "cube/val/0004057/000053",
+        "reference_cost": 0.009837668389081955,
+        "new_cost": 0.005263264756649733,
+        "reference_success": true,
+        "new_success": true
+      },
+      {
+        "case": "cube/val/0002090/000115",
+        "reference_cost": 0.008553629741072655,
+        "new_cost": 0.0037216851487755775,
+        "reference_success": true,
+        "new_success": true
+      },
+      {
+        "case": "cube/val/0004519/000037",
+        "reference_cost": 0.06833082437515259,
+        "new_cost": 0.03767334669828415,
+        "reference_success": false,
+        "new_success": false
+      },
+      {
+        "case": "cube/val/0008782/000106",
+        "reference_cost": 0.005719341337680817,
+        "new_cost": 0.0032694977708160877,
+        "reference_success": true,
+        "new_success": true
+      },
+      {
+        "case": "cube/val/0002008/000149",
+        "reference_cost": 0.007908059284090996,
+        "new_cost": 0.003566042985767126,
+        "reference_success": true,
+        "new_success": true
+      },
+      {
+        "case": "cube/val/0003510/000063",
+        "reference_cost": 0.01676516979932785,
+        "new_cost": 0.01252245157957077,
+        "reference_success": true,
+        "new_success": true
+      },
+      {
+        "case": "cube/val/0001051/000163",
+        "reference_cost": 0.007236640900373459,
+        "new_cost": 0.005484392400830984,
+        "reference_success": true,
+        "new_success": true
+      },
+      {
+        "case": "cube/val/0008504/000021",
+        "reference_cost": 0.23866602778434753,
+        "new_cost": 0.09740503877401352,
+        "reference_success": false,
+        "new_success": false
+      },
+      {
+        "case": "cube/val/0004293/000051",
+        "reference_cost": 0.09875034540891647,
+        "new_cost": 0.08364611119031906,
+        "reference_success": false,
+        "new_success": false
+      },
+      {
+        "case": "cube/val/0005687/000165",
+        "reference_cost": 0.011459914967417717,
+        "new_cost": 0.007846115157008171,
+        "reference_success": true,
+        "new_success": true
+      },
+      {
+        "case": "cube/val/0000859/000100",
+        "reference_cost": 0.0029380489140748978,
+        "new_cost": 0.002753705717623234,
+        "reference_success": true,
+        "new_success": true
+      },
+      {
+        "case": "cube/val/0001968/000118",
+        "reference_cost": 0.010746238753199577,
+        "new_cost": 0.003210847033187747,
+        "reference_success": true,
+        "new_success": false
+      },
+      {
+        "case": "cube/val/0007447/000118",
+        "reference_cost": 0.007510882802307606,
+        "new_cost": 0.002873610472306609,
+        "reference_success": false,
+        "new_success": true
+      },
+      {
+        "case": "cube/val/0008426/000122",
+        "reference_cost": 0.034651193767786026,
+        "new_cost": 0.020414257422089577,
+        "reference_success": true,
+        "new_success": true
+      },
+      {
+        "case": "cube/val/0008908/000033",
+        "reference_cost": 0.061713021248579025,
+        "new_cost": 0.06542613357305527,
+        "reference_success": false,
+        "new_success": false
+      },
+      {
+        "case": "cube/val/0002397/000120",
+        "reference_cost": 0.014092916622757912,
+        "new_cost": 0.012921806424856186,
+        "reference_success": true,
+        "new_success": true
+      },
+      {
+        "case": "cube/val/0006817/000054",
+        "reference_cost": 0.00740562891587615,
+        "new_cost": 0.006476393900811672,
+        "reference_success": true,
+        "new_success": true
+      },
+      {
+        "case": "cube/val/0000560/000032",
+        "reference_cost": 0.0570957213640213,
+        "new_cost": 0.011454150080680847,
+        "reference_success": false,
+        "new_success": false
+      },
+      {
+        "case": "cube/val/0008135/000075",
+        "reference_cost": 0.009247668087482452,
+        "new_cost": 0.007309523411095142,
+        "reference_success": true,
+        "new_success": true
+      },
+      {
+        "case": "cube/val/0007821/000121",
+        "reference_cost": 0.006973875220865011,
+        "new_cost": 0.004558677319437265,
+        "reference_success": true,
+        "new_success": false
+      },
+      {
+        "case": "cube/val/0002640/000089",
+        "reference_cost": 0.063145712018013,
+        "new_cost": 0.05991881713271141,
+        "reference_success": true,
+        "new_success": true
+      },
+      {
+        "case": "cube/val/0008993/000025",
+        "reference_cost": 0.005538757890462875,
+        "new_cost": 0.002727928338572383,
+        "reference_success": true,
+        "new_success": true
+      },
+      {
+        "case": "cube/val/0007971/000052",
+        "reference_cost": 0.010015849024057388,
+        "new_cost": 0.00955895148217678,
+        "reference_success": true,
+        "new_success": true
+      },
+      {
+        "case": "cube/val/0009369/000091",
+        "reference_cost": 0.08046819269657135,
+        "new_cost": 0.07763256132602692,
+        "reference_success": true,
+        "new_success": true
+      },
+      {
+        "case": "cube/val/0002985/000041",
+        "reference_cost": 0.16104531288146973,
+        "new_cost": 0.13391302525997162,
+        "reference_success": false,
+        "new_success": false
+      },
+      {
+        "case": "cube/val/0003396/000018",
+        "reference_cost": 0.005021232180297375,
+        "new_cost": 0.004253220744431019,
+        "reference_success": true,
+        "new_success": false
+      },
+      {
+        "case": "cube/val/0009070/000039",
+        "reference_cost": 0.2822827100753784,
+        "new_cost": 0.18573300540447235,
+        "reference_success": false,
+        "new_success": false
+      },
+      {
+        "case": "cube/val/0004118/000026",
+        "reference_cost": 0.004216042812913656,
+        "new_cost": 0.004622824490070343,
+        "reference_success": false,
+        "new_success": true
+      },
+      {
+        "case": "cube/val/0008158/000123",
+        "reference_cost": 0.01525251753628254,
+        "new_cost": 0.010058358311653137,
+        "reference_success": true,
+        "new_success": true
+      },
+      {
+        "case": "cube/val/0002035/000120",
+        "reference_cost": 0.01503889262676239,
+        "new_cost": 0.004882856737822294,
+        "reference_success": true,
+        "new_success": true
+      },
+      {
+        "case": "cube/val/0009458/000118",
+        "reference_cost": 0.006424814462661743,
+        "new_cost": 0.00617377832531929,
+        "reference_success": true,
+        "new_success": true
+      },
+      {
+        "case": "cube/val/0006818/000071",
+        "reference_cost": 0.005379858892410994,
+        "new_cost": 0.0029340130276978016,
+        "reference_success": true,
+        "new_success": true
+      },
+      {
+        "case": "cube/val/0006836/000074",
+        "reference_cost": 0.0027480125427246094,
+        "new_cost": 0.0027586256619542837,
+        "reference_success": true,
+        "new_success": true
+      },
+      {
+        "case": "cube/val/0005592/000072",
+        "reference_cost": 0.006767849903553724,
+        "new_cost": 0.004375884309411049,
+        "reference_success": true,
+        "new_success": true
+      },
+      {
+        "case": "cube/val/0004273/000149",
+        "reference_cost": 0.04240676760673523,
+        "new_cost": 0.04240843281149864,
+        "reference_success": true,
+        "new_success": true
+      },
+      {
+        "case": "cube/val/0001710/000090",
+        "reference_cost": 0.11670035123825073,
+        "new_cost": 0.07428168505430222,
+        "reference_success": true,
+        "new_success": true
+      },
+      {
+        "case": "cube/val/0003106/000118",
+        "reference_cost": 0.016337888315320015,
+        "new_cost": 0.008499975316226482,
+        "reference_success": true,
+        "new_success": true
+      },
+      {
+        "case": "cube/val/0002136/000172",
+        "reference_cost": 0.015055669471621513,
+        "new_cost": 0.013487379066646099,
+        "reference_success": true,
+        "new_success": true
+      },
+      {
+        "case": "cube/val/0001145/000082",
+        "reference_cost": 0.020969649776816368,
+        "new_cost": 0.02123609185218811,
+        "reference_success": true,
+        "new_success": true
+      },
+      {
+        "case": "cube/val/0002777/000008",
+        "reference_cost": 0.004966189153492451,
+        "new_cost": 0.00439121900126338,
+        "reference_success": true,
+        "new_success": true
+      },
+      {
+        "case": "cube/val/0001329/000151",
+        "reference_cost": 0.011400235816836357,
+        "new_cost": 0.006116657517850399,
+        "reference_success": true,
+        "new_success": true
+      },
+      {
+        "case": "cube/val/0009109/000000",
+        "reference_cost": 0.14240297675132751,
+        "new_cost": 0.12569032609462738,
+        "reference_success": true,
+        "new_success": true
+      },
+      {
+        "case": "cube/val/0004754/000060",
+        "reference_cost": 0.020773030817508698,
+        "new_cost": 0.020759262144565582,
+        "reference_success": true,
+        "new_success": true
+      },
+      {
+        "case": "cube/val/0003805/000165",
+        "reference_cost": 0.005588889122009277,
+        "new_cost": 0.005605374462902546,
+        "reference_success": true,
+        "new_success": true
+      }
+    ],
+    "action_limit_failures": 11,
+    "timeouts": 0
+  },
   "cube-noise_cem": {
     "completed_decisions": 184,
     "observed_prefixes": 134,

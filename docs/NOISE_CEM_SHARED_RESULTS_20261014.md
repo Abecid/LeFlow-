@@ -1,10 +1,11 @@
 # Frozen LeFlow noise-space search — measured development results
 
-11/12 inference runs completed; zero training updates. These use retained PushT/Cube trained heads, not author checkpoints. Native Reacher/TwoRoom rows remain pending checkpoint access. All six new variants and the reused LeFlow reference share strict FP32, each task’s frozen checkpoint, original50 cases and50-action/10-controller-second allowance.
+12/12 inference runs completed; zero training updates. These use retained PushT/Cube trained heads, not author checkpoints. Native Reacher/TwoRoom rows remain pending checkpoint access. All six new variants and the reused LeFlow reference share strict FP32, each task’s frozen checkpoint, original50 cases and50-action/10-controller-second allowance.
 
 | Dataset | Method | Success /50 | Timeouts | Mean decision ms |
 | --- | --- | ---: | ---: | ---: |
 |cube|noise_bon192|36|0|81.57|
+|cube|noise_bon192_shell|39|0|81.99|
 |cube|noise_cem|41|0|156.87|
 |cube|noise_cem_shell|39|0|156.62|
 |cube|noise_random|40|0|158.13|
@@ -19,6 +20,7 @@
 | Dataset | Method versus current LeFlow reference | Additional successes | Lost successes |
 | --- | --- | ---: | ---: |
 |cube|noise_bon192|0|4|
+|cube|noise_bon192_shell|2|3|
 |cube|noise_cem|3|2|
 |cube|noise_cem_shell|2|3|
 |cube|noise_random|2|2|
@@ -39,8 +41,9 @@
 |cube|noise_cem vs noise_random|3|2|
 |cube|noise_cem_shell vs noise_random_shell|2|2|
 |cube|noise_cem vs noise_bon192|6|1|
+|cube|noise_cem_shell vs noise_bon192_shell|2|2|
 
-Queue failure hold: False; 9/12 processes have exited after online log synchronization. Complete case reports, prediction-error traces, deadlines, candidates, full measured calls and checkpoint/frozen-state hashes are preserved in [the archive](reports/20261014-noise-cem/).
+Queue failure hold: False; 11/12 processes have exited after online log synchronization. Complete case reports, prediction-error traces, deadlines, candidates, full measured calls and checkpoint/frozen-state hashes are preserved in [the archive](reports/20261014-noise-cem/).
 
 All scalar outcomes are actual native simulator success flags. Timings are measured, not flow-call counts presented as elapsed compute. Executed-prefix prediction errors are factual; rejected candidates have no known physical outcomes. Different sequential versus one-batch sampling does not promise identical pools across all later decisions. No claim of TTT, training improvement, original-checkpoint reproduction, SOTA or held-out final generalization is supported by this one-seed reused-development pilot. Strict-FP32 PushT is an explicit numerical setting versus prior default-TF32 records; old baseline files remain untouched. No stored trajectory is claimed visually reviewed until it is rendered and inspected.
 

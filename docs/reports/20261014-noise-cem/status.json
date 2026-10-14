@@ -2,9 +2,7 @@
   "failed": false,
   "lanes": {
     "0": {
-      "method": "noise_cem",
-      "state": "running",
-      "task": "pusht"
+      "state": "completed"
     },
     "1": {
       "method": "noise_bon192_shell",
@@ -21,9 +19,7 @@
       "state": "completed"
     },
     "5": {
-      "method": "noise_bon192_shell",
-      "state": "running",
-      "task": "cube"
+      "state": "completed"
     },
     "6": {
       "state": "completed"
@@ -124,8 +120,28 @@
       "returncode": 0,
       "successes": 36,
       "task": "cube"
+    },
+    {
+      "completed": "2026-10-14T08:25:46.115481+00:00",
+      "evaluation_wall_seconds": 77.54260839521885,
+      "gpu": "0",
+      "job_wall_seconds": 507.7545762062073,
+      "method": "noise_cem",
+      "returncode": 0,
+      "successes": 9,
+      "task": "pusht"
+    },
+    {
+      "completed": "2026-10-14T08:26:37.420743+00:00",
+      "evaluation_wall_seconds": 243.992327734828,
+      "gpu": "5",
+      "job_wall_seconds": 280.91910696029663,
+      "method": "noise_bon192_shell",
+      "returncode": 0,
+      "successes": 39,
+      "task": "cube"
     }
   ],
   "source": "f75fb375a950f39cad2c51347d67230694cd2dea",
-  "utc": "2026-10-14T08:24:44.448186+00:00"
+  "utc": "2026-10-14T08:26:37.436233+00:00"
 }

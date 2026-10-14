@@ -18,6 +18,20 @@
     },
     {
       "task": "cube",
+      "method": "noise_bon192_shell",
+      "successes": 39,
+      "timeouts": 0,
+      "mean_decision_ms": 81.98860336296957,
+      "world_transitions": 194880,
+      "checkpoint_sha256": "818fd66189f3dee7aa2c7cfbd402be01b0442b9cef745813ecda1b27df52cbe3",
+      "cases_sha256": "a7d559f5488f3468a5e396042fe43cd535938bcb893f5bc11557aabaaa76c00e",
+      "optimizer_updates": 0,
+      "report": "docs/reports/20261014-noise-cem/jobs/cube-noise_bon192_shell/report.json.gz",
+      "report_original_sha256": "97c9297a7e050532920782a819471ac2f6da2b10dfe54f3b3a91c2b7d68fa23f",
+      "wall_seconds": 243.992327734828
+    },
+    {
+      "task": "cube",
       "method": "noise_cem",
       "successes": 41,
       "timeouts": 0,
@@ -166,6 +180,19 @@
         "cube/val/0007213/000112",
         "cube/val/0007821/000121",
         "cube/val/0008993/000025",
+        "cube/val/0003396/000018"
+      ]
+    },
+    {
+      "task": "cube",
+      "method": "noise_bon192_shell",
+      "wins": [
+        "cube/val/0007447/000118",
+        "cube/val/0004118/000026"
+      ],
+      "regressions": [
+        "cube/val/0001968/000118",
+        "cube/val/0007821/000121",
         "cube/val/0003396/000018"
       ]
     },
@@ -445,28 +472,42 @@
       "regressions": [
         "cube/val/0003106/000118"
       ]
+    },
+    {
+      "task": "cube",
+      "candidate": "noise_cem_shell",
+      "control": "noise_bon192_shell",
+      "wins": [
+        "cube/val/0001968/000118",
+        "cube/val/0007821/000121"
+      ],
+      "regressions": [
+        "cube/val/0007213/000112",
+        "cube/val/0008993/000025"
+      ]
     }
   ],
   "optimizer_updates": 0,
   "expected_runs": 12,
-  "processes_exited_after_logging": 9,
+  "processes_exited_after_logging": 11,
   "native_author_rows_pending": [
     "reacher",
     "tworoom"
   ],
   "artifact_sha256": {
-    "docs/reports/20261014-noise-cem/behavior-analysis.json": "7b9fd5db236616bd6f2a6f34b2a1f4b4082fd6554ff694bb2c9d68ba69a3f6fa",
+    "docs/reports/20261014-noise-cem/behavior-analysis.json": "f14701d827157ad81bf9604e71799f2948048c18f2c1c883de001c7e2d92ea2c",
     "docs/reports/20261014-noise-cem/launcher.json": "4c2b5c59e0c6cb75a9b72bfc55e9fb04fdb08b36a87e1872db3a148919b50778",
     "docs/reports/20261014-noise-cem/runtime-files.json": "c8ac1399de3d5a7dbe3b684274685c264be16d3bb28d883ad8ba8df37a48e2bb",
     "docs/reports/20261014-noise-cem/registration.json": "2e5b2de05576bda75688a3fc38e87060f84c0f56838c6115acb702213406c182",
     "docs/reports/20261014-noise-cem/queue.json": "5df31302d74fba8f64319162307b5f8f7c8ed030ecb754072ec1307116417d38",
     "docs/reports/20261014-noise-cem/allocation.json": "bf2b0d5227d0d0ee1ffb475a3fa01d577376f6ef75cde54fa4ae254f975de5f5",
-    "docs/reports/20261014-noise-cem/status.json": "27a32b33ae31419afc3d3929593d10aa3516a568c43b919097454d790098cbfc",
-    "docs/reports/20261014-noise-cem/capture-receipt.json": "608ba97c04987660c7376caa4e405a1f015beb590608d804930f609bf2ae04eb",
+    "docs/reports/20261014-noise-cem/status.json": "3de7791cb7e94e1fff77da29d7b6bbf624d290c01abde43c0447542b9c44e080",
+    "docs/reports/20261014-noise-cem/capture-receipt.json": "ff8bb4fda91494e0a4066d30f5a073034f0a2b3107f12a020befff86a676c641",
     "docs/reports/20261014-noise-cem/operations/preflight_noise.py": "9e2222e703936aa908859276dc365d7d34e6a5288a732b7c9f44389f96f15e01",
     "docs/reports/20261014-noise-cem/operations/validate.sh": "af6a5cfab0e61d62d78a3a523e0d2301b9adb3230c8a63864ba8d8619ac2ae3d",
+    "docs/reports/20261014-noise-cem/operations/final_audit.py": "c80cee67dfa27ef81b5d46cbf567d13e679f8c9e47f77cc537e484d6104f2835",
     "docs/reports/20261014-noise-cem/operations/run_noise_campaign.py": "3c912dc323bf9e2e78daca4f8ee066376201556969fd1529fb5873ced515a963",
-    "docs/reports/20261014-noise-cem/operations/analyze.py": "812e15599ebd708e00df6dd79374844e6ae669f69378b3e9ade495d485517609",
+    "docs/reports/20261014-noise-cem/operations/analyze.py": "4f0728763ece205dcbc1b71323ff9d6e1c8558b32df94753721c7b5bd2ccf86a",
     "docs/reports/20261014-noise-cem/operations/publish.py": "4147888e0f85ff58a5d36910e6aab5d0d5861a022dcadc86bf2f14c0323ea54f",
     "docs/reports/20261014-noise-cem/logs/preflight-pusht.log.gz": "262b7e38344960b0a9e9b57a607915f4ae9f2dd4f06e31c939aad50504723d7f",
     "docs/reports/20261014-noise-cem/logs/cube-noise_random_shell.log.gz": "26bf01a814fce39507982d2dea600f9c3af61de4245dda45683acd918c8d109d",
@@ -475,10 +516,10 @@
     "docs/reports/20261014-noise-cem/logs/cube-noise_cem_shell.log.gz": "7e39cbac34380f58e17c29421e610c4500a3d5d112c07439e83d2cdecb685da7",
     "docs/reports/20261014-noise-cem/logs/cpu-tests.log.gz": "57e079fefb71d1315e0948ff3b1227b9cd47a723251f97d4fb35bf55c7d21e6c",
     "docs/reports/20261014-noise-cem/logs/pusht-noise_random.log.gz": "06260d34a214df0e2d9fa56d4b9e5b294ba368becc13ef960ec5c95a3d1cda78",
-    "docs/reports/20261014-noise-cem/logs/pusht-noise_cem.log.gz": "edc927454673c722aa4703aaaad184109938c319f3fddfba72ff0761e86e1d8d",
+    "docs/reports/20261014-noise-cem/logs/pusht-noise_cem.log.gz": "5014535437f9b642179eec692fc6adece7219c7ff25ddce133caac41660c6bf9",
     "docs/reports/20261014-noise-cem/logs/coordinator.log.gz": "88ee6966828f92a049cd5969c44b0689347c0a439f234aeb404ec1edaddde857",
-    "docs/reports/20261014-noise-cem/logs/pusht-noise_bon192_shell.log.gz": "02e5e5e20306797021525172e970ae64615d741d47c7a4d14ed0edc94cda2c96",
-    "docs/reports/20261014-noise-cem/logs/cube-noise_bon192_shell.log.gz": "916495419f1ecb00973a42f29711c8fdcb36c92d15f2d59b46d3729398c83cd1",
+    "docs/reports/20261014-noise-cem/logs/pusht-noise_bon192_shell.log.gz": "4c4ca88d55ca18c5b88b7d58e476721ff1584d1a2f1ef982e13abee0dd4ffb17",
+    "docs/reports/20261014-noise-cem/logs/cube-noise_bon192_shell.log.gz": "b5da8623120a22cbea4ed705d657ca3c27bf899f476b241d969b1d4a15f65b3c",
     "docs/reports/20261014-noise-cem/logs/cpu-tests.xml": "8b13a111eaf8145154795cd0e653fd12777bba0bb2cb7dcddb4218fa3d542467",
     "docs/reports/20261014-noise-cem/logs/cube-noise_random.log.gz": "d66359c3493d989e0a8b5e753f59c6fbcb3e5ff3c2d85610b11369d4c078c7be",
     "docs/reports/20261014-noise-cem/logs/pusht-noise_bon192.log.gz": "0949e0a8026b751685c1d3a9afe35f3aac2cef24f3a1dae03b7dd366080c4e5e",
@@ -544,8 +585,9 @@
     "docs/reports/20261014-noise-cem/jobs/pusht-noise_cem_shell/progress.json": "837afe6429656e1356b8b2df51c261245a42289982f945f3df3ed32259980e0b",
     "docs/reports/20261014-noise-cem/jobs/cube-noise_bon192_shell/identity.json": "de054da832ff56db215ab3fb546c6cd5ae2883438a6d7fce8fa2e3f3324f297f",
     "docs/reports/20261014-noise-cem/jobs/cube-noise_bon192_shell/cases.json.gz": "e6a561baedb2664c11167aa4ff97ae653c2993d12e476c8c2505baca9eb484b8",
+    "docs/reports/20261014-noise-cem/jobs/cube-noise_bon192_shell/report.json.gz": "3bfb94d37e147d81db53f9ec483af84578b03647129ae2703e0727dcc0535192",
     "docs/reports/20261014-noise-cem/jobs/cube-noise_bon192_shell/wandb.json": "edb842944c46b39c03ba72a1416ad9d40fbca78b371df6f5cd7e7d36d66bcec5",
-    "docs/reports/20261014-noise-cem/jobs/cube-noise_bon192_shell/progress.json": "7715ad1872e56bf6c5c7f9858aaf52932757f303b0a9a45d40d976476b8e2f31",
+    "docs/reports/20261014-noise-cem/jobs/cube-noise_bon192_shell/progress.json": "a40af0a890864cc93316ea2a65c4a893f8aa819e77f712d5e6719d82a554e519",
     "docs/reports/20261014-noise-cem/jobs/cube-noise_bon192_shell/partial-outcomes/00005.json.gz": "3c8987e4f059578438aa449980711bbaa90ae954a2962c420f39a6e66d43ea56",
     "docs/reports/20261014-noise-cem/jobs/cube-noise_bon192_shell/partial-outcomes/00015.json.gz": "b2ceb66d92650d469904c7d74700e7b4a2b37649aaa97bb24024101419e352bb",
     "docs/reports/20261014-noise-cem/jobs/cube-noise_bon192_shell/partial-outcomes/00023.json.gz": "602402bc99f091d232156721a3eb5eeec3050ae0e2256271ff36556d62da812d",
@@ -576,6 +618,16 @@
     "docs/reports/20261014-noise-cem/jobs/cube-noise_bon192_shell/partial-outcomes/00019.json.gz": "f5b240e3519d3c6959922467b78686bbfafd04d5f887a5bed265c011f400ba39",
     "docs/reports/20261014-noise-cem/jobs/cube-noise_bon192_shell/partial-outcomes/00010.json.gz": "3b0e5ae70803a3a9c1cf343f649614b45d6d0f879ca87e8645fc6f5d5af4be9d",
     "docs/reports/20261014-noise-cem/jobs/cube-noise_bon192_shell/partial-outcomes/00000.json.gz": "19b8298ac78c44436970fb233ef05c9212b5921e77133445cb00eaac817ebae1",
+    "docs/reports/20261014-noise-cem/jobs/cube-noise_bon192_shell/selected-trajectories/00008.npz": "7652864fa3a499248cd5bba3e797ac43c517d6847106eb89a7c2cbd1d082b701",
+    "docs/reports/20261014-noise-cem/jobs/cube-noise_bon192_shell/selected-trajectories/00009.npz": "e855c4b32fdd3057132434005dfeea485e29f2d397721ce570aadce0e044ee75",
+    "docs/reports/20261014-noise-cem/jobs/cube-noise_bon192_shell/selected-trajectories/00004.npz": "a529cc8b4f58de71ffe8ebfac8795a3bc3390bdd92fdf94dd3658ef6fb54049a",
+    "docs/reports/20261014-noise-cem/jobs/cube-noise_bon192_shell/selected-trajectories/00005.npz": "42e2eb2b20730f4b767b03846199f743e0ef2c01bb4aabf91ffe016de1eccff3",
+    "docs/reports/20261014-noise-cem/jobs/cube-noise_bon192_shell/selected-trajectories/00007.npz": "bc760a67a5220b5162488fe50e4492882fb0c98100d0e6440590fcd95da7a5d2",
+    "docs/reports/20261014-noise-cem/jobs/cube-noise_bon192_shell/selected-trajectories/00006.npz": "3888ea238ea54487bf6f3c35a97199cfcc048ce524608df88df16b077412e0e7",
+    "docs/reports/20261014-noise-cem/jobs/cube-noise_bon192_shell/selected-trajectories/00002.npz": "b31a9dd9de4bae7d3899b9d44e3bc23c30533d9673a4b07740a8207ca0fdd29f",
+    "docs/reports/20261014-noise-cem/jobs/cube-noise_bon192_shell/selected-trajectories/00003.npz": "fc205424716f10ac539d2e0d94591b16c367073794e28922b5834c1da9fa460f",
+    "docs/reports/20261014-noise-cem/jobs/cube-noise_bon192_shell/selected-trajectories/00001.npz": "a62cf8c3ce71e18e2e106361690f7efecaba36022207f924b9604ab8b60be3cb",
+    "docs/reports/20261014-noise-cem/jobs/cube-noise_bon192_shell/selected-trajectories/00000.npz": "28daf552e47ff70b738407e24c5558c1a6896e279342e879347ba9d03fe89bd7",
     "docs/reports/20261014-noise-cem/jobs/pusht-noise_cem_shell/selected-trajectories/00008.npz": "e84d3f6a9a4336986ba3ee00064eb9821c9485f15b6985645277076ba5716a7d",
     "docs/reports/20261014-noise-cem/jobs/pusht-noise_cem_shell/selected-trajectories/00009.npz": "e8ca02b7354517faec091845134fc43e67ad8b5dc1a514943ab8fcbc7eab75b0",
     "docs/reports/20261014-noise-cem/jobs/pusht-noise_cem_shell/selected-trajectories/00004.npz": "305d1facbd2159d9b7bdb8cc6291d6294f969dc4523b1d20f040406dcf76303b",
