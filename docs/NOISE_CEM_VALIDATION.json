@@ -1,0 +1,36 @@
+{
+  "status": "implemented_published_and_software_checks_passed",
+  "repository": "Abecid/LeFlow-",
+  "branch": "main",
+  "inspected_base_commit": "e8655ca42c06779289f5e61a1e26c184a3bb641a",
+  "tested_commit": "c88923df2433cc8f70a27fe1a09c99c2c5629c41",
+  "local": {
+    "command": "OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 python -m pytest -q tests/test_noise_cem*.py",
+    "passed": 66,
+    "failed": 0,
+    "python": "3.13.5",
+    "torch": "2.10.0+cpu",
+    "pytest": "9.0.2",
+    "cuda_available": false
+  },
+  "github_actions": {
+    "run_id": 38525474899,
+    "numerical_job_id": 115724701762,
+    "numerical_conclusion": "success",
+    "released_interface_job_id": 115724701979,
+    "released_interface_conclusion": "success"
+  },
+  "verified_remote_git_blobs": {
+    "leflow_refinement/noise_search.py": "4a882d1eb32898957d091f1c4e258c09ec7d5530",
+    "leflow_refinement/runtime.py": "dca7f428deab1bd1e3e14e872392fab9c6434929",
+    "leflow_refinement/crossbench.py": "e34d423bbfa42323423cdde4fd444ae5e87c4ae1",
+    "leflow_refinement/native_eval.py": "91bdf969ad50931620265e045cb63867937e3854",
+    "tests/test_noise_cem.py": "1fdd528de82ff962a25e9070fb00d06be9770d17",
+    "tests/test_noise_cem_adapters.py": "8340e93210586d80dc487eed4125e49776a6bbb1"
+  },
+  "benchmark_jobs_launched_in_this_implementation_session": 0,
+  "optimizer_updates": 0,
+  "new_task_success_results": false,
+  "validation_scope": "CPU numerical and adapter tests, existing regression and released-model interface CI; not a CEM robot benchmark",
+  "preserved": "Base sampler, baseline training code/checkpoints, registered six-variant defaults, immutable runs and result archives"
+}
