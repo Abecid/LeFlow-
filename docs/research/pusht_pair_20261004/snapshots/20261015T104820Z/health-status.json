@@ -1,0 +1,611 @@
+{
+  "report_timestamp_utc": "2026-10-15T10:48:20+00:00",
+  "scheduled_heartbeat_utc": "2026-10-15T10:47:00.198Z",
+  "finding": "New high GPU 3 load; workload attribution unresolved; campaign records unchanged and incomplete",
+  "collection_started_utc": "2026-10-15T10:47:30+00:00",
+  "collection_finished_utc": "2026-10-15T10:47:34+00:00",
+  "source_sha256": {
+    "campaign-heartbeat-20261015-1031.json": "663893d792209f3b5f8eed2d1de9f473fa2ca063754270138d96f137e2651b3b",
+    "campaign-heartbeat-20261015-1047.json": "51bfbbfda92cc328bc0a541c1f38f701e6a6367c1862e1a4c8dfa6d6605ee0c2",
+    "online-heartbeat-20261015-1031.json": "4fa90435319b06435aded5f681887999b1e3480ecc9e27a4e39039878effd451",
+    "online-heartbeat-20261015-1047.json": "a91f386b60e2099363edf1a1decf35e32e2105ac200496f074390c85444e2687",
+    "gpu-process-map-20261015-1031.json": "a10270f56fb5c3562fe67fc6335aa33ddd63b51ad704bfe923aec98a987a8a38",
+    "gpu-process-map-20261015-1047.json": "19ba0a6fe521d4d27a450be947eea0e0d98e7f26c653bfda3ce648d95998ad3c",
+    "gpu-health-followup-20261015-1047.json": "a40442f19ba910e04cd796429c54934724f9be83f2290b272d8368e7ab684199"
+  },
+  "source_bytes": {
+    "campaign-heartbeat-20261015-1031.json": 4122104,
+    "campaign-heartbeat-20261015-1047.json": 4122111,
+    "online-heartbeat-20261015-1031.json": 775,
+    "online-heartbeat-20261015-1047.json": 775,
+    "gpu-process-map-20261015-1031.json": 844,
+    "gpu-process-map-20261015-1047.json": 1027,
+    "gpu-health-followup-20261015-1047.json": 2009
+  },
+  "read_attempts": {
+    "campaign": {
+      "attempts": 1,
+      "exit_codes": [
+        0
+      ],
+      "stderr_empty": true
+    },
+    "online": {
+      "attempts": 1,
+      "exit_codes": [
+        0
+      ],
+      "stderr_empty": true
+    },
+    "gpu": {
+      "attempts": 1,
+      "exit_codes": [
+        0
+      ],
+      "stderr_empty": true
+    },
+    "gpu_health_followup": {
+      "attempts": 1,
+      "exit_codes": [
+        0
+      ],
+      "stderr_empty": true
+    }
+  },
+  "full_recursive_comparison": {
+    "baseline_heartbeat": "20261015-1031",
+    "errors": [],
+    "changed_paths": {
+      "campaign": [
+        ".collection_finished_utc",
+        ".collection_started_utc",
+        ".hardware.gpus.1.power.draw",
+        ".hardware.gpus.2.power.draw",
+        ".hardware.gpus.3.memory.used",
+        ".hardware.gpus.3.power.draw",
+        ".hardware.gpus.3.utilization.gpu",
+        ".hardware.gpus.5.power.draw",
+        ".hardware.observed_utc",
+        ".processes.0.elapsed_seconds",
+        ".processes.1.elapsed_seconds",
+        ".processes.2.elapsed_seconds",
+        ".runs.btm_3072.wandb_sessions.0.elapsed_seconds",
+        ".runs.flow_3072.wandb_sessions.0.elapsed_seconds"
+      ],
+      "online": [
+        ".observed_utc",
+        ".wandb.btm.checked_utc",
+        ".wandb.flow.checked_utc"
+      ],
+      "gpu": [
+        ".finished_utc",
+        ".gpus.3.memory_mib",
+        ".gpus.3.utilization_percent",
+        ".observed_utc",
+        ".processes.length",
+        ".processes.records_when_length_differs"
+      ]
+    },
+    "all_nonhardware_campaign_data_unchanged_except_timestamps_and_elapsed": true,
+    "online_unchanged_except_timestamps": true
+  },
+  "gpu_initial": {
+    "observed_utc": "2026-10-15T10:47:29+00:00",
+    "gpus": [
+      {
+        "index": 0,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 1,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 2,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 3,
+        "utilization_percent": 100.0,
+        "memory_mib": 41961.0
+      },
+      {
+        "index": 4,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 5,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 6,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 7,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      }
+    ],
+    "processes": [
+      {
+        "gpu_index": 3,
+        "process_name_available": false,
+        "memory_mib": 41958,
+        "process_directory_accessible": false,
+        "directory_lookup_result": "FileNotFoundError"
+      }
+    ],
+    "finished_utc": "2026-10-15T10:47:29+00:00"
+  },
+  "collector_hardware": {
+    "observed_utc": "2026-10-15T10:47:34+00:00",
+    "units": {
+      "utilization.gpu": "%",
+      "memory.used": "MiB",
+      "memory.total": "MiB",
+      "power.draw": "W"
+    },
+    "gpus": [
+      {
+        "index": "0",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "0",
+        "memory.used": "0",
+        "memory.total": "81920",
+        "power.draw": "55.65"
+      },
+      {
+        "index": "1",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "0",
+        "memory.used": "0",
+        "memory.total": "81920",
+        "power.draw": "53.42"
+      },
+      {
+        "index": "2",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "0",
+        "memory.used": "0",
+        "memory.total": "81920",
+        "power.draw": "59.71"
+      },
+      {
+        "index": "3",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "100",
+        "memory.used": "41961",
+        "memory.total": "81920",
+        "power.draw": "416.96"
+      },
+      {
+        "index": "4",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "0",
+        "memory.used": "0",
+        "memory.total": "81920",
+        "power.draw": "58.13"
+      },
+      {
+        "index": "5",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "0",
+        "memory.used": "0",
+        "memory.total": "81920",
+        "power.draw": "56.91"
+      },
+      {
+        "index": "6",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "0",
+        "memory.used": "0",
+        "memory.total": "81920",
+        "power.draw": "54.56"
+      },
+      {
+        "index": "7",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "0",
+        "memory.used": "0",
+        "memory.total": "81920",
+        "power.draw": "56.31"
+      }
+    ]
+  },
+  "gpu_followup": {
+    "observed_utc": "2026-10-15T10:48:20+00:00",
+    "gpus": [
+      {
+        "index": 0,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 1,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 2,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 3,
+        "utilization_percent": 98.0,
+        "memory_mib": 41961.0
+      },
+      {
+        "index": 4,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 5,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 6,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 7,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      }
+    ],
+    "processes": [
+      {
+        "gpu_index": 3,
+        "process_name_available": false,
+        "memory_mib": 41958,
+        "process_directory_accessible": false,
+        "directory_lookup_result": "FileNotFoundError"
+      }
+    ],
+    "finished_utc": "2026-10-15T10:48:20+00:00",
+    "hardware_health_fields": [
+      "index",
+      "utilization_percent",
+      "memory_mib",
+      "power_watts",
+      "temperature_c",
+      "pstate",
+      "uncorrected_volatile_ecc_errors"
+    ],
+    "hardware_health_rows": [
+      [
+        "0",
+        "0",
+        "0",
+        "55.65",
+        "28",
+        "P0",
+        "0"
+      ],
+      [
+        "1",
+        "0",
+        "0",
+        "53.42",
+        "30",
+        "P0",
+        "0"
+      ],
+      [
+        "2",
+        "0",
+        "0",
+        "60.31",
+        "42",
+        "P0",
+        "0"
+      ],
+      [
+        "3",
+        "99",
+        "41961",
+        "374.08",
+        "65",
+        "P0",
+        "0"
+      ],
+      [
+        "4",
+        "0",
+        "0",
+        "58.13",
+        "27",
+        "P0",
+        "0"
+      ],
+      [
+        "5",
+        "0",
+        "0",
+        "56.91",
+        "29",
+        "P0",
+        "0"
+      ],
+      [
+        "6",
+        "0",
+        "0",
+        "54.56",
+        "29",
+        "P0",
+        "0"
+      ],
+      [
+        "7",
+        "0",
+        "0",
+        "56.58",
+        "27",
+        "P0",
+        "0"
+      ]
+    ]
+  },
+  "hardware_interpretation": {
+    "same_private_driver_identity_in_both_queries": true,
+    "attribution": "unknown",
+    "attributable_campaign_recovery": false,
+    "visibility_hypothesis": "A process-namespace visibility difference is possible, not established.",
+    "next_measurement": "Permitted workload identity mapping plus evidence of advancing campaign records; do not bypass visibility.",
+    "limits": "Sequential point samples; zero uncorrected volatile ECC counter does not establish comprehensive hardware health."
+  },
+  "campaign_status": "interrupted/incomplete",
+  "runs": {
+    "btm_3072": {
+      "saved_step": 23830,
+      "logged_step": 23830,
+      "selected_step": 1000,
+      "metric_rows": 2465,
+      "evaluation_records": 99,
+      "completion_marker": null
+    },
+    "flow_3072": {
+      "saved_step": 23000,
+      "logged_step": 23040,
+      "selected_step": 1000,
+      "metric_rows": 2383,
+      "evaluation_records": 96,
+      "completion_marker": null
+    }
+  },
+  "complete_evaluation_cycles": {
+    "btm": 33,
+    "flow": 32
+  },
+  "fresh_checkpoint_metadata": {
+    "btm_3072": {
+      "last.pt": {
+        "bytes": 167326311,
+        "mtime_utc": "2026-10-05T02:00:36+00:00",
+        "step": 23830,
+        "epoch": 10,
+        "next_batch": 0,
+        "best_success": 0.35000000000000003,
+        "wandb_id": "z78m0zk6",
+        "world_size": 4,
+        "manifest_sha256": "6410f2f196e6fd50a84ae82a192edc718ce169885144195cc63693faaa7f7f26",
+        "method": "btm",
+        "seed": 3072
+      },
+      "best.pt": {
+        "bytes": 167322983,
+        "mtime_utc": "2026-10-04T23:46:48+00:00",
+        "step": 1000,
+        "epoch": 0,
+        "next_batch": 1000,
+        "best_success": 0.35000000000000003,
+        "wandb_id": "z78m0zk6",
+        "world_size": 4,
+        "manifest_sha256": "6410f2f196e6fd50a84ae82a192edc718ce169885144195cc63693faaa7f7f26",
+        "method": "btm",
+        "seed": 3072
+      }
+    },
+    "flow_3072": {
+      "last.pt": {
+        "bytes": 170495175,
+        "mtime_utc": "2026-10-05T02:59:06+00:00",
+        "step": 23000,
+        "epoch": 9,
+        "next_batch": 1553,
+        "best_success": 0.3333333333333333,
+        "wandb_id": "g0u3w723",
+        "world_size": 4,
+        "manifest_sha256": "6410f2f196e6fd50a84ae82a192edc718ce169885144195cc63693faaa7f7f26",
+        "method": "flow",
+        "seed": 3072
+      },
+      "best.pt": {
+        "bytes": 170491719,
+        "mtime_utc": "2026-10-05T00:34:28+00:00",
+        "step": 1000,
+        "epoch": 0,
+        "next_batch": 1000,
+        "best_success": 0.3333333333333333,
+        "wandb_id": "g0u3w723",
+        "world_size": 4,
+        "manifest_sha256": "6410f2f196e6fd50a84ae82a192edc718ce169885144195cc63693faaa7f7f26",
+        "method": "flow",
+        "seed": 3072
+      }
+    }
+  },
+  "checkpoint_bytes_rehashed_this_check": false,
+  "historical_checkpoint_sha256": {
+    "source": "20261006T050931Z/assessment.json",
+    "observed_utc": "2026-10-06T05:10:41+00:00",
+    "checkpoints": {
+      "btm/best.pt": {
+        "sha256": "89036ff00fdecd54f6abebb7fef4e7b937176431add6880a3da60076b120ac15",
+        "bytes": 167322983
+      },
+      "btm/last.pt": {
+        "sha256": "f71611f2699347df2c44c23c821197d730cae86f1e0f72d6edaa8c502afb6096",
+        "bytes": 167326311
+      },
+      "flow/best.pt": {
+        "sha256": "97532e69c6709f0c802585bb69e8cea5208532d415f9c6dca5f10e0941b49da8",
+        "bytes": 170491719
+      },
+      "flow/last.pt": {
+        "sha256": "f2c4b3044591426d57d91f136f5353ac0aa14bfd14c4f88db20a1dd1f694364b",
+        "bytes": 170495175
+      }
+    }
+  },
+  "process_scope": {
+    "known_campaign_trainer_or_flow_controller_observed": false,
+    "original_supervisor_intentionally_stopped": true,
+    "identities_and_states_unchanged": true,
+    "limit": "Collector name/path filters and accessible process view only."
+  },
+  "online_readback": {
+    "observed_utc": "2026-10-15T10:47:32+00:00",
+    "manifest_sha256": "6410f2f196e6fd50a84ae82a192edc718ce169885144195cc63693faaa7f7f26",
+    "probe": {
+      "source": "Actual frozen LatentSegments.__getitem__ reads on CPU",
+      "clips": 32,
+      "episode_ids": [
+        4,
+        5
+      ],
+      "spacing_counts": {
+        "1": 20,
+        "2": 11,
+        "4": 1
+      },
+      "loss_probe_512_unique_episodes": 28
+    },
+    "wandb": {
+      "btm": {
+        "run_id": "z78m0zk6",
+        "state": "finished",
+        "step": 23830,
+        "runtime_seconds": 8304,
+        "checked_utc": "2026-10-15T10:47:39+00:00"
+      },
+      "flow": {
+        "run_id": "g0u3w723",
+        "state": "finished",
+        "step": 23040,
+        "runtime_seconds": 9240,
+        "checked_utc": "2026-10-15T10:47:43+00:00"
+      }
+    }
+  },
+  "current_eta": null,
+  "eta_reason": "No verified active recovery; complete evaluation-cycle history unchanged. Flow needs 830 updates from its recoverable checkpoint including 40 replayed updates, then final validation.",
+  "historical_science": {
+    "source": "20261006T050931Z/assessment.json",
+    "unchanged_in_current_full_histories": true,
+    "selected_and_latest_matched_comparisons": [
+      {
+        "step": 1000,
+        "offset": 25,
+        "btm_success_rate": 0.4,
+        "flow_success_rate": 0.5,
+        "delta_pp": -10.0,
+        "paired_ci95_low_pp": -35.0,
+        "paired_ci95_high_pp": 15.0,
+        "btm_only_successes": 2,
+        "flow_only_successes": 4,
+        "both_successes": 6,
+        "neither_successes": 8
+      },
+      {
+        "step": 1000,
+        "offset": 50,
+        "btm_success_rate": 0.4,
+        "flow_success_rate": 0.3,
+        "delta_pp": 10.0,
+        "paired_ci95_low_pp": -10.0,
+        "paired_ci95_high_pp": 30.0,
+        "btm_only_successes": 3,
+        "flow_only_successes": 1,
+        "both_successes": 5,
+        "neither_successes": 11
+      },
+      {
+        "step": 1000,
+        "offset": 100,
+        "btm_success_rate": 0.25,
+        "flow_success_rate": 0.2,
+        "delta_pp": 5.0,
+        "paired_ci95_low_pp": -15.0,
+        "paired_ci95_high_pp": 25.0,
+        "btm_only_successes": 3,
+        "flow_only_successes": 2,
+        "both_successes": 2,
+        "neither_successes": 13
+      },
+      {
+        "step": 23000,
+        "offset": 25,
+        "btm_success_rate": 0.05,
+        "flow_success_rate": 0.45,
+        "delta_pp": -40.0,
+        "paired_ci95_low_pp": -60.0,
+        "paired_ci95_high_pp": -20.0,
+        "btm_only_successes": 0,
+        "flow_only_successes": 8,
+        "both_successes": 1,
+        "neither_successes": 11
+      },
+      {
+        "step": 23000,
+        "offset": 50,
+        "btm_success_rate": 0.0,
+        "flow_success_rate": 0.15,
+        "delta_pp": -15.0,
+        "paired_ci95_low_pp": -30.0,
+        "paired_ci95_high_pp": 0.0,
+        "btm_only_successes": 0,
+        "flow_only_successes": 3,
+        "both_successes": 0,
+        "neither_successes": 17
+      },
+      {
+        "step": 23000,
+        "offset": 100,
+        "btm_success_rate": 0.1,
+        "flow_success_rate": 0.05,
+        "delta_pp": 5.0,
+        "paired_ci95_low_pp": -10.0,
+        "paired_ci95_high_pp": 20.0,
+        "btm_only_successes": 2,
+        "flow_only_successes": 1,
+        "both_successes": 0,
+        "neither_successes": 17
+      }
+    ],
+    "success_goal_demonstrated": false,
+    "controlled_efficiency_goal_demonstrated": false
+  },
+  "monitor_action": "keep_active",
+  "gpu_jobs_changed": false,
+  "test_split_used": false,
+  "outstanding": [
+    "Both genuine completion markers and valid final checkpoints at 23830 steps",
+    "Aligned post-CEM prediction/execution and physical subgoal reach rates",
+    "Failure videos and ground-truth-waypoint/shared-inverse controls",
+    "Controlled same-GPU full-controller timing",
+    "Held-out testing",
+    "Multi-seed confirmation"
+  ]
+}
