@@ -1,27 +1,25 @@
 # LeFlow BTM-JEPA training: experiment status and results
 
-**Latest check: October 18, 16:04 UTC — monitoring access blocked.**
-Campaign collection, authenticated W&B/CPU-probe readback and the GPU-process
-query each failed on the first attempt and single retry (all exit 255, zero
-output bytes). The first campaign connection stopped responding; the other five
-attempts timed out during SSH banner exchange. Current remote state and completion
-ETA are unverified. GitHub access succeeded. See the
-[access-failure report](reports/20261018T160420Z.md) and
-[compact evidence](snapshots/20261018T160420Z/health-status.json).
+**Latest check: October 18, 16:16–16:17 UTC — monitoring access restored; campaign remains incomplete.**
+The campaign collection and authenticated W&B/CPU readback succeeded; the separate
+GPU query succeeded on one retry after a banner timeout. Fresh full records are
+unchanged from the last complete 15:46–15:47 check: BTM saved/logged 23,830
+updates, flow saved 23,000 / logged 23,040, and both completion markers are absent.
+No new training metrics or evaluations were found. All eight GPUs report zero
+memory use and utilization in the point samples, with no compute-process entries.
 
-The last successful campaign check was **October 18, 15:46:58–15:47:02 UTC**:
-BTM saved 23,830 updates; flow saved 23,000 / logged 23,040; both completion
-markers were absent. W&B readback at 15:47:10 UTC agreed with those logged steps.
-All eight GPUs were idle in the 15:46:59/15:47:02 samples. These are cached
-observations, not evidence of current inactivity or recovery. Full histories and
-paired protocol were unchanged, and neither research target was demonstrated.
-Monitoring stays active; no GPU jobs were changed.
+**There is no reliable active completion ETA.** Restored monitoring access does
+not establish training recovery. Neither primary-success nor controlled-efficiency
+goals are demonstrated. No GPU jobs were changed, and monitoring stays active.
+See the [access-recovery report](reports/20261018T161803Z.md) and
+[compact evidence](snapshots/20261018T161803Z/health-status.json).
+The [preceding access-failure report](reports/20261018T160420Z.md) is preserved.
 
 ## Prior validated assessment and observations
 
 The assessment below preserves the previously published scientific findings and
-October 15 health narrative. Those dated observations are historical; the current
-access limitation and latest cached evidence are stated above.
+October 15 health narrative. Those dated observations are historical; the fresh
+October 18 access and campaign state are stated above.
 
 **Verified October 6, 2026, 1:09–1:11 AM EDT (05:09–05:11 UTC).**
 

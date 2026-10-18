@@ -1,0 +1,361 @@
+{
+  "recorded_utc": "2026-10-18T16:18:03+00:00",
+  "scheduled_heartbeat_utc": "2026-10-18T16:16:35.753Z",
+  "status": "monitoring_access_restored_campaign_incomplete",
+  "previous_access_failure_report": "20261018T160420Z",
+  "monitoring_access_recovered": true,
+  "campaign_training_recovered": false,
+  "collection_started_utc": "2026-10-18T16:16:58+00:00",
+  "collection_finished_utc": "2026-10-18T16:17:01+00:00",
+  "fresh_campaign_records_verified": true,
+  "fresh_online_state_verified": true,
+  "fresh_cpu_probe_verified": true,
+  "fresh_gpu_state_verified": true,
+  "attempts": {
+    "campaign_collector": {
+      "count": 1,
+      "exit_codes": [
+        0
+      ],
+      "output_bytes": [
+        4122109
+      ],
+      "stderr_by_attempt": [
+        ""
+      ]
+    },
+    "online_readback": {
+      "count": 1,
+      "exit_codes": [
+        0
+      ],
+      "output_bytes": [
+        775
+      ],
+      "stderr_by_attempt": [
+        ""
+      ]
+    },
+    "gpu_process_query": {
+      "count": 2,
+      "exit_codes": [
+        255,
+        0
+      ],
+      "output_bytes": [
+        0,
+        844
+      ],
+      "stderr_by_attempt": [
+        "Connection timed out during banner exchange\nConnection to UNKNOWN port 65535 timed out\n",
+        ""
+      ]
+    }
+  },
+  "current_access_blocker": null,
+  "access_failure_cause": "unknown; a successful retry does not diagnose the earlier failures",
+  "campaign_state": "interrupted/incomplete",
+  "campaign_complete": false,
+  "current_eta": null,
+  "known_campaign_trainer_or_flow_controller_visible": false,
+  "process_scope": "Campaign name/path filters in accessible process namespace; original supervisor intentionally stopped.",
+  "runs": {
+    "btm_3072": {
+      "saved_step": 23830,
+      "logged_step": 23830,
+      "selected_step": 1000,
+      "metric_rows": 2465,
+      "evaluation_records": 99,
+      "completion_marker": null,
+      "complete_three_offset_cycles": 33
+    },
+    "flow_3072": {
+      "saved_step": 23000,
+      "logged_step": 23040,
+      "selected_step": 1000,
+      "metric_rows": 2383,
+      "evaluation_records": 96,
+      "completion_marker": null,
+      "complete_three_offset_cycles": 32
+    }
+  },
+  "flow_updates_needed_from_saved_checkpoint": 830,
+  "checkpoint_metadata_reread": true,
+  "checkpoint_bytes_rehashed_in_this_check": false,
+  "historical_checkpoint_hashes_and_exit_evidence": "October 6 assessment; not freshly rehashed here",
+  "frozen_source_commit": "69babde283f504120dae3dfc6e9188a0e2242be4",
+  "manifest_sha256": "6410f2f196e6fd50a84ae82a192edc718ce169885144195cc63693faaa7f7f26",
+  "encoder_sha256": "48938400ae3464c9680731287f583a9cb516f55a8ec64ea13a91be47fb15b607",
+  "online": {
+    "observed_utc": "2026-10-18T16:17:00+00:00",
+    "manifest_sha256": "6410f2f196e6fd50a84ae82a192edc718ce169885144195cc63693faaa7f7f26",
+    "probe": {
+      "source": "Actual frozen LatentSegments.__getitem__ reads on CPU",
+      "clips": 32,
+      "episode_ids": [
+        4,
+        5
+      ],
+      "spacing_counts": {
+        "1": 20,
+        "2": 11,
+        "4": 1
+      },
+      "loss_probe_512_unique_episodes": 28
+    },
+    "wandb": {
+      "btm": {
+        "run_id": "z78m0zk6",
+        "state": "finished",
+        "step": 23830,
+        "runtime_seconds": 8304,
+        "checked_utc": "2026-10-18T16:17:37+00:00"
+      },
+      "flow": {
+        "run_id": "g0u3w723",
+        "state": "finished",
+        "step": 23040,
+        "runtime_seconds": 9240,
+        "checked_utc": "2026-10-18T16:17:39+00:00"
+      }
+    }
+  },
+  "collector_hardware": {
+    "observed_utc": "2026-10-18T16:17:01+00:00",
+    "units": {
+      "utilization.gpu": "%",
+      "memory.used": "MiB",
+      "memory.total": "MiB",
+      "power.draw": "W"
+    },
+    "gpus": [
+      {
+        "index": "0",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "0",
+        "memory.used": "0",
+        "memory.total": "81920",
+        "power.draw": "55.65"
+      },
+      {
+        "index": "1",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "0",
+        "memory.used": "0",
+        "memory.total": "81920",
+        "power.draw": "53.15"
+      },
+      {
+        "index": "2",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "0",
+        "memory.used": "0",
+        "memory.total": "81920",
+        "power.draw": "56.46"
+      },
+      {
+        "index": "3",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "0",
+        "memory.used": "0",
+        "memory.total": "81920",
+        "power.draw": "54.83"
+      },
+      {
+        "index": "4",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "0",
+        "memory.used": "0",
+        "memory.total": "81920",
+        "power.draw": "58.13"
+      },
+      {
+        "index": "5",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "0",
+        "memory.used": "0",
+        "memory.total": "81920",
+        "power.draw": "56.97"
+      },
+      {
+        "index": "6",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "0",
+        "memory.used": "0",
+        "memory.total": "81920",
+        "power.draw": "54.29"
+      },
+      {
+        "index": "7",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "0",
+        "memory.used": "0",
+        "memory.total": "81920",
+        "power.draw": "56.31"
+      }
+    ]
+  },
+  "gpu_process_query": {
+    "observed_utc": "2026-10-18T16:17:31+00:00",
+    "gpus": [
+      {
+        "index": 0,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 1,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 2,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 3,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 4,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 5,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 6,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 7,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      }
+    ],
+    "processes": [],
+    "finished_utc": "2026-10-18T16:17:31+00:00"
+  },
+  "hardware_limits": "Point samples only; no current temperatures or ECC counters collected.",
+  "comparison": {
+    "last_complete_snapshot": "20261018-1546",
+    "intervening_failed_check": "20261018-1601",
+    "new_training_metric_rows": 0,
+    "new_evaluation_records": 0,
+    "full_science_protocol_checkpoints_markers_and_scoped_processes_unchanged": true,
+    "changed_paths": {
+      "campaign": [
+        ".collection_finished_utc",
+        ".collection_started_utc",
+        ".hardware.gpus.2.power.draw",
+        ".hardware.gpus.3.power.draw",
+        ".hardware.gpus.4.power.draw",
+        ".hardware.gpus.5.power.draw",
+        ".hardware.observed_utc",
+        ".processes.0.elapsed_seconds",
+        ".processes.1.elapsed_seconds",
+        ".processes.2.elapsed_seconds",
+        ".runs.btm_3072.wandb_sessions.0.elapsed_seconds",
+        ".runs.flow_3072.wandb_sessions.0.elapsed_seconds"
+      ],
+      "online": [
+        ".observed_utc",
+        ".wandb.btm.checked_utc",
+        ".wandb.flow.checked_utc"
+      ],
+      "gpu": [
+        ".finished_utc",
+        ".observed_utc"
+      ]
+    },
+    "comparison_sha256": "9f153bb54a1af381fb9c9cf81433e66a482289173d64b50b938f6291751fc218",
+    "errors": []
+  },
+  "validation_results_unchanged": {
+    "selection_rule": "Highest mean success across offsets, earliest tie",
+    "selected": {
+      "step_btm": 1000,
+      "step_flow": 1000,
+      "btm_success_percent": [
+        40,
+        40,
+        25
+      ],
+      "flow_success_percent": [
+        50,
+        30,
+        20
+      ],
+      "offset_order": [
+        25,
+        50,
+        100
+      ],
+      "mean_btm_percent": 35,
+      "mean_flow_percent": 33.333333333333336,
+      "offset100_difference_pp": 5,
+      "paired_bootstrap_95_percent_interval_pp": [
+        -15,
+        25
+      ]
+    },
+    "matched_23000": {
+      "btm_success_percent": [
+        5,
+        0,
+        10
+      ],
+      "flow_success_percent": [
+        45,
+        15,
+        5
+      ],
+      "offset_order": [
+        25,
+        50,
+        100
+      ],
+      "offset100_difference_pp": 5,
+      "paired_bootstrap_95_percent_interval_pp": [
+        -10,
+        20
+      ]
+    },
+    "unmatched_btm_23830": {
+      "success_percent": [
+        35,
+        20,
+        5
+      ],
+      "offset_order": [
+        25,
+        50,
+        100
+      ],
+      "mean_percent": 20
+    },
+    "primary_success_goal_demonstrated": false,
+    "controlled_efficiency_goal_demonstrated": false,
+    "held_out_test_and_multiseed_confirmation": "outstanding"
+  },
+  "source_sha256": {
+    "campaign-heartbeat-20261018-1546.json": "1e129044de2f519036a2050173059348bc957d733eae7136ae3f8a9ce3ef3e56",
+    "campaign-heartbeat-20261018-1616.json": "712f018f81334de45fef7ca118718e27eb55031b9c0c48370f7ee2c7bef50d50",
+    "online-heartbeat-20261018-1546.json": "4b0265fe03b9586d4380c8e1b5ef0660158ba6185e11f29e4726e80176f69839",
+    "online-heartbeat-20261018-1616.json": "374270dea362565db93672e0f911cf7a52f2b7f6a5bb7c23e6c0cc670373b692",
+    "gpu-process-map-20261018-1546.json": "ec6b9ce0723ff9df970ae2a91410f636fbd46b3305f5291b4909547e3147a4ac",
+    "gpu-process-map-20261018-1616.json": "7b9d8dea21d97577e71a1adf39a10e8c98daa03bd05c03d95773816a53ceaeb9",
+    "gpu-process-map-20261018-1616-attempt1.json": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "gpu-process-map-20261018-1616-attempt1.stderr": "5cb0c1231d33323ce235f9f008691e9d3289a9f68bba908efbb9e27d3d565890"
+  },
+  "results_report": "20261006T050931Z",
+  "gpu_jobs_changed_by_monitor": false,
+  "test_split_used_by_monitor": false,
+  "monitor_action": "keep_active"
+}
