@@ -1,13 +1,27 @@
 # LeFlow BTM-JEPA training: experiment status and results
 
-**Latest check: October 15, 11:02–11:03 UTC — GPUs idle in current samples; campaign unchanged.**
-All eight devices report zero memory and utilization, with no driver
-compute-process entries. The earlier GPU 3 workload is no longer visible;
-its identity and reason for ending remain unknown. Full histories and checkpoint
-metadata are unchanged: BTM saved 23,830 updates; flow saved 23,000 / logged 23,040;
-both completion markers are absent. No campaign recovery or active completion
-ETA was verified. See the [return-to-idle report](reports/20261015T110301Z.md);
-the [earlier high-load report](reports/20261015T104820Z.md) remains preserved.
+**Latest check: October 18, 16:04 UTC — monitoring access blocked.**
+Campaign collection, authenticated W&B/CPU-probe readback and the GPU-process
+query each failed on the first attempt and single retry (all exit 255, zero
+output bytes). The first campaign connection stopped responding; the other five
+attempts timed out during SSH banner exchange. Current remote state and completion
+ETA are unverified. GitHub access succeeded. See the
+[access-failure report](reports/20261018T160420Z.md) and
+[compact evidence](snapshots/20261018T160420Z/health-status.json).
+
+The last successful campaign check was **October 18, 15:46:58–15:47:02 UTC**:
+BTM saved 23,830 updates; flow saved 23,000 / logged 23,040; both completion
+markers were absent. W&B readback at 15:47:10 UTC agreed with those logged steps.
+All eight GPUs were idle in the 15:46:59/15:47:02 samples. These are cached
+observations, not evidence of current inactivity or recovery. Full histories and
+paired protocol were unchanged, and neither research target was demonstrated.
+Monitoring stays active; no GPU jobs were changed.
+
+## Prior validated assessment and observations
+
+The assessment below preserves the previously published scientific findings and
+October 15 health narrative. Those dated observations are historical; the current
+access limitation and latest cached evidence are stated above.
 
 **Verified October 6, 2026, 1:09–1:11 AM EDT (05:09–05:11 UTC).**
 
