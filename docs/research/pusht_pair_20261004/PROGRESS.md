@@ -1,25 +1,28 @@
 # LeFlow BTM-JEPA training: experiment status and results
 
-**Latest check: October 18, 16:16–16:17 UTC — monitoring access restored; campaign remains incomplete.**
-The campaign collection and authenticated W&B/CPU readback succeeded; the separate
-GPU query succeeded on one retry after a banner timeout. Fresh full records are
-unchanged from the last complete 15:46–15:47 check: BTM saved/logged 23,830
-updates, flow saved 23,000 / logged 23,040, and both completion markers are absent.
-No new training metrics or evaluations were found. All eight GPUs report zero
-memory use and utilization in the point samples, with no compute-process entries.
+**Latest check: October 20, 03:02 UTC — new compute allocations on seven GPUs; campaign remains incomplete.**
+Fourteen compute-process entries now appear across GPUs 1–7, two per device,
+with 3,381–3,477 MiB total used per GPU. GPU 0 retains a graphics allocation.
+Process identities and owners are unavailable. Sampled utilization is zero;
+temperatures are 27–30°C and uncorrected volatile ECC counters are zero.
 
-**There is no reliable active completion ETA.** Restored monitoring access does
-not establish training recovery. Neither primary-success nor controlled-efficiency
-goals are demonstrated. No GPU jobs were changed, and monitoring stays active.
-See the [access-recovery report](reports/20261018T161803Z.md) and
-[compact evidence](snapshots/20261018T161803Z/health-status.json).
-The [preceding access-failure report](reports/20261018T160420Z.md) is preserved.
+Fresh full campaign records and authenticated W&B readback are unchanged:
+BTM saved/logged 23,830 updates, flow saved 23,000 / logged 23,040, and both
+completion markers are absent. No new training metrics or evaluations were found.
+**The GPU allocations do not establish training recovery; there is no reliable
+active completion ETA.** Neither primary-success nor controlled-efficiency goals
+are demonstrated. No GPU jobs were changed, and monitoring stays active.
+
+See the [allocation-change report](reports/20261020T030331Z.md) and
+[compact evidence](snapshots/20261020T030331Z/health-status.json).
+The [October 18 access-recovery report](reports/20261018T161803Z.md) and
+[preceding access-failure report](reports/20261018T160420Z.md) are preserved.
 
 ## Prior validated assessment and observations
 
 The assessment below preserves the previously published scientific findings and
 October 15 health narrative. Those dated observations are historical; the fresh
-October 18 access and campaign state are stated above.
+October 20 allocation and campaign state are stated above.
 
 **Verified October 6, 2026, 1:09–1:11 AM EDT (05:09–05:11 UTC).**
 

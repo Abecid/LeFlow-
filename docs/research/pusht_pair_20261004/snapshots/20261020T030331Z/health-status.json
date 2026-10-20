@@ -1,0 +1,807 @@
+{
+  "recorded_utc": "2026-10-20T03:03:31+00:00",
+  "scheduled_heartbeat_utc": "2026-10-20T03:01:46.545Z",
+  "status": "new_unattributed_gpu_compute_allocations_campaign_incomplete",
+  "campaign_training_recovered": false,
+  "collection_started_utc": "2026-10-20T03:02:18+00:00",
+  "collection_finished_utc": "2026-10-20T03:02:22+00:00",
+  "fresh_campaign_records_verified": true,
+  "fresh_online_state_verified": true,
+  "fresh_cpu_probe_verified": true,
+  "fresh_gpu_state_verified": true,
+  "attempts": {
+    "campaign_collector": {
+      "count": 1,
+      "exit_codes": [
+        0
+      ],
+      "output_bytes": [
+        4122130
+      ],
+      "stderr_by_attempt": [
+        ""
+      ]
+    },
+    "online_readback": {
+      "count": 1,
+      "exit_codes": [
+        0
+      ],
+      "output_bytes": [
+        775
+      ],
+      "stderr_by_attempt": [
+        ""
+      ]
+    },
+    "gpu_process_query": {
+      "count": 1,
+      "exit_codes": [
+        0
+      ],
+      "output_bytes": [
+        3298
+      ],
+      "stderr_by_attempt": [
+        ""
+      ]
+    },
+    "gpu_health_probe": {
+      "count": 1,
+      "exit_codes": [
+        0
+      ],
+      "output_bytes": [
+        6358
+      ],
+      "stderr_by_attempt": [
+        ""
+      ]
+    }
+  },
+  "current_access_blocker": null,
+  "campaign_state": "interrupted/incomplete",
+  "campaign_complete": false,
+  "current_eta": null,
+  "known_campaign_trainer_or_flow_controller_visible": false,
+  "process_scope": "Campaign name/path filters in accessible process namespace; original supervisor intentionally stopped. New GPU compute entries cannot be attributed: names unavailable and corresponding process directories not visible.",
+  "runs": {
+    "btm_3072": {
+      "saved_step": 23830,
+      "logged_step": 23830,
+      "selected_step": 1000,
+      "metric_rows": 2465,
+      "evaluation_records": 99,
+      "completion_marker": null,
+      "complete_three_offset_cycles": 33
+    },
+    "flow_3072": {
+      "saved_step": 23000,
+      "logged_step": 23040,
+      "selected_step": 1000,
+      "metric_rows": 2383,
+      "evaluation_records": 96,
+      "completion_marker": null,
+      "complete_three_offset_cycles": 32
+    }
+  },
+  "flow_updates_needed_from_saved_checkpoint": 830,
+  "checkpoint_metadata_reread": true,
+  "checkpoint_bytes_rehashed_in_this_check": false,
+  "historical_checkpoint_hashes_and_exit_evidence": "October 6 assessment; not freshly rehashed here",
+  "frozen_source_commit": "69babde283f504120dae3dfc6e9188a0e2242be4",
+  "manifest_sha256": "6410f2f196e6fd50a84ae82a192edc718ce169885144195cc63693faaa7f7f26",
+  "encoder_sha256": "48938400ae3464c9680731287f583a9cb516f55a8ec64ea13a91be47fb15b607",
+  "online": {
+    "observed_utc": "2026-10-20T03:02:20+00:00",
+    "manifest_sha256": "6410f2f196e6fd50a84ae82a192edc718ce169885144195cc63693faaa7f7f26",
+    "probe": {
+      "source": "Actual frozen LatentSegments.__getitem__ reads on CPU",
+      "clips": 32,
+      "episode_ids": [
+        4,
+        5
+      ],
+      "spacing_counts": {
+        "1": 20,
+        "2": 11,
+        "4": 1
+      },
+      "loss_probe_512_unique_episodes": 28
+    },
+    "wandb": {
+      "btm": {
+        "run_id": "z78m0zk6",
+        "state": "finished",
+        "step": 23830,
+        "runtime_seconds": 8304,
+        "checked_utc": "2026-10-20T03:02:27+00:00"
+      },
+      "flow": {
+        "run_id": "g0u3w723",
+        "state": "finished",
+        "step": 23040,
+        "runtime_seconds": 9240,
+        "checked_utc": "2026-10-20T03:02:28+00:00"
+      }
+    }
+  },
+  "collector_hardware": {
+    "observed_utc": "2026-10-20T03:02:22+00:00",
+    "units": {
+      "utilization.gpu": "%",
+      "memory.used": "MiB",
+      "memory.total": "MiB",
+      "power.draw": "W"
+    },
+    "gpus": [
+      {
+        "index": "0",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "0",
+        "memory.used": "452",
+        "memory.total": "81920",
+        "power.draw": "55.98"
+      },
+      {
+        "index": "1",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "0",
+        "memory.used": "3381",
+        "memory.total": "81920",
+        "power.draw": "63.40"
+      },
+      {
+        "index": "2",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "0",
+        "memory.used": "3477",
+        "memory.total": "81920",
+        "power.draw": "66.71"
+      },
+      {
+        "index": "3",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "0",
+        "memory.used": "3477",
+        "memory.total": "81920",
+        "power.draw": "64.79"
+      },
+      {
+        "index": "4",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "0",
+        "memory.used": "3477",
+        "memory.total": "81920",
+        "power.draw": "67.76"
+      },
+      {
+        "index": "5",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "0",
+        "memory.used": "3477",
+        "memory.total": "81920",
+        "power.draw": "66.92"
+      },
+      {
+        "index": "6",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "0",
+        "memory.used": "3477",
+        "memory.total": "81920",
+        "power.draw": "64.25"
+      },
+      {
+        "index": "7",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "0",
+        "memory.used": "3381",
+        "memory.total": "81920",
+        "power.draw": "65.72"
+      }
+    ]
+  },
+  "gpu_process_query": {
+    "observed_utc": "2026-10-20T03:02:18+00:00",
+    "gpus": [
+      {
+        "index": 0,
+        "utilization_percent": 0.0,
+        "memory_mib": 452.0
+      },
+      {
+        "index": 1,
+        "utilization_percent": 0.0,
+        "memory_mib": 3381.0
+      },
+      {
+        "index": 2,
+        "utilization_percent": 0.0,
+        "memory_mib": 3477.0
+      },
+      {
+        "index": 3,
+        "utilization_percent": 0.0,
+        "memory_mib": 3477.0
+      },
+      {
+        "index": 4,
+        "utilization_percent": 0.0,
+        "memory_mib": 3477.0
+      },
+      {
+        "index": 5,
+        "utilization_percent": 0.0,
+        "memory_mib": 3477.0
+      },
+      {
+        "index": 6,
+        "utilization_percent": 0.0,
+        "memory_mib": 3477.0
+      },
+      {
+        "index": 7,
+        "utilization_percent": 0.0,
+        "memory_mib": 3381.0
+      }
+    ],
+    "processes": [
+      {
+        "gpu_index": 1,
+        "process_name_basename": "[Not Found]",
+        "memory_mib": "1038",
+        "pid_directory": "FileNotFoundError"
+      },
+      {
+        "gpu_index": 1,
+        "process_name_basename": "[Not Found]",
+        "memory_mib": "2330",
+        "pid_directory": "FileNotFoundError"
+      },
+      {
+        "gpu_index": 2,
+        "process_name_basename": "[Not Found]",
+        "memory_mib": "1134",
+        "pid_directory": "FileNotFoundError"
+      },
+      {
+        "gpu_index": 2,
+        "process_name_basename": "[Not Found]",
+        "memory_mib": "2330",
+        "pid_directory": "FileNotFoundError"
+      },
+      {
+        "gpu_index": 3,
+        "process_name_basename": "[Not Found]",
+        "memory_mib": "1134",
+        "pid_directory": "FileNotFoundError"
+      },
+      {
+        "gpu_index": 3,
+        "process_name_basename": "[Not Found]",
+        "memory_mib": "2330",
+        "pid_directory": "FileNotFoundError"
+      },
+      {
+        "gpu_index": 4,
+        "process_name_basename": "[Not Found]",
+        "memory_mib": "1134",
+        "pid_directory": "FileNotFoundError"
+      },
+      {
+        "gpu_index": 4,
+        "process_name_basename": "[Not Found]",
+        "memory_mib": "2330",
+        "pid_directory": "FileNotFoundError"
+      },
+      {
+        "gpu_index": 5,
+        "process_name_basename": "[Not Found]",
+        "memory_mib": "1134",
+        "pid_directory": "FileNotFoundError"
+      },
+      {
+        "gpu_index": 5,
+        "process_name_basename": "[Not Found]",
+        "memory_mib": "2330",
+        "pid_directory": "FileNotFoundError"
+      },
+      {
+        "gpu_index": 6,
+        "process_name_basename": "[Not Found]",
+        "memory_mib": "1134",
+        "pid_directory": "FileNotFoundError"
+      },
+      {
+        "gpu_index": 6,
+        "process_name_basename": "[Not Found]",
+        "memory_mib": "2330",
+        "pid_directory": "FileNotFoundError"
+      },
+      {
+        "gpu_index": 7,
+        "process_name_basename": "[Not Found]",
+        "memory_mib": "1038",
+        "pid_directory": "FileNotFoundError"
+      },
+      {
+        "gpu_index": 7,
+        "process_name_basename": "[Not Found]",
+        "memory_mib": "2330",
+        "pid_directory": "FileNotFoundError"
+      }
+    ],
+    "finished_utc": "2026-10-20T03:02:18+00:00"
+  },
+  "gpu_health_probe": {
+    "observed_utc": "2026-10-20T03:02:18+00:00",
+    "gpus": [
+      {
+        "index": 0,
+        "utilization_percent": 0.0,
+        "memory_mib": 452.0
+      },
+      {
+        "index": 1,
+        "utilization_percent": 0.0,
+        "memory_mib": 3381.0
+      },
+      {
+        "index": 2,
+        "utilization_percent": 0.0,
+        "memory_mib": 3477.0
+      },
+      {
+        "index": 3,
+        "utilization_percent": 0.0,
+        "memory_mib": 3477.0
+      },
+      {
+        "index": 4,
+        "utilization_percent": 0.0,
+        "memory_mib": 3477.0
+      },
+      {
+        "index": 5,
+        "utilization_percent": 0.0,
+        "memory_mib": 3477.0
+      },
+      {
+        "index": 6,
+        "utilization_percent": 0.0,
+        "memory_mib": 3477.0
+      },
+      {
+        "index": 7,
+        "utilization_percent": 0.0,
+        "memory_mib": 3381.0
+      }
+    ],
+    "processes": [
+      {
+        "gpu_index": 1,
+        "process_name_basename": "[Not Found]",
+        "memory_mib": "1038",
+        "pid_directory": "FileNotFoundError"
+      },
+      {
+        "gpu_index": 1,
+        "process_name_basename": "[Not Found]",
+        "memory_mib": "2330",
+        "pid_directory": "FileNotFoundError"
+      },
+      {
+        "gpu_index": 2,
+        "process_name_basename": "[Not Found]",
+        "memory_mib": "1134",
+        "pid_directory": "FileNotFoundError"
+      },
+      {
+        "gpu_index": 2,
+        "process_name_basename": "[Not Found]",
+        "memory_mib": "2330",
+        "pid_directory": "FileNotFoundError"
+      },
+      {
+        "gpu_index": 3,
+        "process_name_basename": "[Not Found]",
+        "memory_mib": "1134",
+        "pid_directory": "FileNotFoundError"
+      },
+      {
+        "gpu_index": 3,
+        "process_name_basename": "[Not Found]",
+        "memory_mib": "2330",
+        "pid_directory": "FileNotFoundError"
+      },
+      {
+        "gpu_index": 4,
+        "process_name_basename": "[Not Found]",
+        "memory_mib": "1134",
+        "pid_directory": "FileNotFoundError"
+      },
+      {
+        "gpu_index": 4,
+        "process_name_basename": "[Not Found]",
+        "memory_mib": "2330",
+        "pid_directory": "FileNotFoundError"
+      },
+      {
+        "gpu_index": 5,
+        "process_name_basename": "[Not Found]",
+        "memory_mib": "1134",
+        "pid_directory": "FileNotFoundError"
+      },
+      {
+        "gpu_index": 5,
+        "process_name_basename": "[Not Found]",
+        "memory_mib": "2330",
+        "pid_directory": "FileNotFoundError"
+      },
+      {
+        "gpu_index": 6,
+        "process_name_basename": "[Not Found]",
+        "memory_mib": "1134",
+        "pid_directory": "FileNotFoundError"
+      },
+      {
+        "gpu_index": 6,
+        "process_name_basename": "[Not Found]",
+        "memory_mib": "2330",
+        "pid_directory": "FileNotFoundError"
+      },
+      {
+        "gpu_index": 7,
+        "process_name_basename": "[Not Found]",
+        "memory_mib": "1038",
+        "pid_directory": "FileNotFoundError"
+      },
+      {
+        "gpu_index": 7,
+        "process_name_basename": "[Not Found]",
+        "memory_mib": "2330",
+        "pid_directory": "FileNotFoundError"
+      }
+    ],
+    "finished_utc": "2026-10-20T03:02:20+00:00",
+    "hardware_health_fields": [
+      "index",
+      "utilization_percent",
+      "memory_mib",
+      "power_watts",
+      "temperature_c",
+      "pstate",
+      "uncorrected_volatile_ecc_errors"
+    ],
+    "hardware_health_rows": [
+      [
+        "0",
+        "0",
+        "452",
+        "55.98",
+        "27",
+        "P0",
+        "0"
+      ],
+      [
+        "1",
+        "0",
+        "3381",
+        "63.67",
+        "30",
+        "P0",
+        "0"
+      ],
+      [
+        "2",
+        "0",
+        "3477",
+        "66.71",
+        "30",
+        "P0",
+        "0"
+      ],
+      [
+        "3",
+        "0",
+        "3477",
+        "64.79",
+        "27",
+        "P0",
+        "0"
+      ],
+      [
+        "4",
+        "0",
+        "3477",
+        "67.76",
+        "28",
+        "P0",
+        "0"
+      ],
+      [
+        "5",
+        "0",
+        "3477",
+        "66.99",
+        "30",
+        "P0",
+        "0"
+      ],
+      [
+        "6",
+        "0",
+        "3477",
+        "64.25",
+        "30",
+        "P0",
+        "0"
+      ],
+      [
+        "7",
+        "0",
+        "3381",
+        "65.72",
+        "27",
+        "P0",
+        "0"
+      ]
+    ],
+    "all_gpu_processes": [
+      {
+        "gpu_index": 0,
+        "type": "G",
+        "process_name": "",
+        "used_memory": "447 MiB"
+      },
+      {
+        "gpu_index": 1,
+        "type": "C",
+        "process_name": "",
+        "used_memory": "1038 MiB"
+      },
+      {
+        "gpu_index": 1,
+        "type": "C",
+        "process_name": "",
+        "used_memory": "2330 MiB"
+      },
+      {
+        "gpu_index": 2,
+        "type": "C",
+        "process_name": "",
+        "used_memory": "1134 MiB"
+      },
+      {
+        "gpu_index": 2,
+        "type": "C",
+        "process_name": "",
+        "used_memory": "2330 MiB"
+      },
+      {
+        "gpu_index": 3,
+        "type": "C",
+        "process_name": "",
+        "used_memory": "1134 MiB"
+      },
+      {
+        "gpu_index": 3,
+        "type": "C",
+        "process_name": "",
+        "used_memory": "2330 MiB"
+      },
+      {
+        "gpu_index": 4,
+        "type": "C",
+        "process_name": "",
+        "used_memory": "1134 MiB"
+      },
+      {
+        "gpu_index": 4,
+        "type": "C",
+        "process_name": "",
+        "used_memory": "2330 MiB"
+      },
+      {
+        "gpu_index": 5,
+        "type": "C",
+        "process_name": "",
+        "used_memory": "1134 MiB"
+      },
+      {
+        "gpu_index": 5,
+        "type": "C",
+        "process_name": "",
+        "used_memory": "2330 MiB"
+      },
+      {
+        "gpu_index": 6,
+        "type": "C",
+        "process_name": "",
+        "used_memory": "1134 MiB"
+      },
+      {
+        "gpu_index": 6,
+        "type": "C",
+        "process_name": "",
+        "used_memory": "2330 MiB"
+      },
+      {
+        "gpu_index": 7,
+        "type": "C",
+        "process_name": "",
+        "used_memory": "1038 MiB"
+      },
+      {
+        "gpu_index": 7,
+        "type": "C",
+        "process_name": "",
+        "used_memory": "2330 MiB"
+      }
+    ]
+  },
+  "hardware_limits": "Point samples, not continuous monitoring. Zero sampled utilization does not establish continuous inactivity. Process identities, owners and start times remain unknown; GPU allocation alone establishes neither campaign recovery nor a hardware fault.",
+  "comparison": {
+    "last_complete_snapshot": "20261020-0246",
+    "baseline_collection_started_utc": "2026-10-20T02:47:29+00:00",
+    "baseline_collection_finished_utc": "2026-10-20T02:47:34+00:00",
+    "baseline_gpu_memory_mib": [
+      452,
+      3,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "current_gpu_memory_mib": [
+      452,
+      3381,
+      3477,
+      3477,
+      3477,
+      3477,
+      3477,
+      3381
+    ],
+    "baseline_compute_process_entries": 0,
+    "current_compute_process_entries": 14,
+    "new_training_metric_rows": 0,
+    "new_evaluation_records": 0,
+    "full_science_protocol_checkpoints_markers_and_scoped_processes_unchanged": true,
+    "changed_paths": {
+      "campaign": [
+        ".collection_finished_utc",
+        ".collection_started_utc",
+        ".hardware.gpus.0.power.draw",
+        ".hardware.gpus.1.memory.used",
+        ".hardware.gpus.1.power.draw",
+        ".hardware.gpus.2.memory.used",
+        ".hardware.gpus.2.power.draw",
+        ".hardware.gpus.3.memory.used",
+        ".hardware.gpus.3.power.draw",
+        ".hardware.gpus.4.memory.used",
+        ".hardware.gpus.4.power.draw",
+        ".hardware.gpus.5.memory.used",
+        ".hardware.gpus.5.power.draw",
+        ".hardware.gpus.6.memory.used",
+        ".hardware.gpus.6.power.draw",
+        ".hardware.gpus.7.memory.used",
+        ".hardware.gpus.7.power.draw",
+        ".hardware.observed_utc",
+        ".processes.0.elapsed_seconds",
+        ".processes.1.elapsed_seconds",
+        ".processes.2.elapsed_seconds",
+        ".runs.btm_3072.wandb_sessions.0.elapsed_seconds",
+        ".runs.flow_3072.wandb_sessions.0.elapsed_seconds"
+      ],
+      "online": [
+        ".observed_utc",
+        ".wandb.btm.checked_utc",
+        ".wandb.flow.checked_utc"
+      ],
+      "gpu": [
+        ".finished_utc",
+        ".gpus.1.memory_mib",
+        ".gpus.2.memory_mib",
+        ".gpus.3.memory_mib",
+        ".gpus.4.memory_mib",
+        ".gpus.5.memory_mib",
+        ".gpus.6.memory_mib",
+        ".gpus.7.memory_mib",
+        ".observed_utc",
+        ".processes.length",
+        ".processes.records_when_length_differs"
+      ]
+    },
+    "comparison_sha256": "55cb77b0bb3d883e8e7f256ab317341e20944493555bf54639796c721a5f9030",
+    "errors": []
+  },
+  "validation_results_unchanged": {
+    "selection_rule": "Highest mean success across offsets, earliest tie",
+    "selected": {
+      "step_btm": 1000,
+      "step_flow": 1000,
+      "btm_success_percent": [
+        40,
+        40,
+        25
+      ],
+      "flow_success_percent": [
+        50,
+        30,
+        20
+      ],
+      "offset_order": [
+        25,
+        50,
+        100
+      ],
+      "mean_btm_percent": 35,
+      "mean_flow_percent": 33.333333333333336,
+      "offset100_difference_pp": 5,
+      "paired_bootstrap_95_percent_interval_pp": [
+        -15,
+        25
+      ]
+    },
+    "matched_23000": {
+      "btm_success_percent": [
+        5,
+        0,
+        10
+      ],
+      "flow_success_percent": [
+        45,
+        15,
+        5
+      ],
+      "offset_order": [
+        25,
+        50,
+        100
+      ],
+      "offset100_difference_pp": 5,
+      "paired_bootstrap_95_percent_interval_pp": [
+        -10,
+        20
+      ]
+    },
+    "unmatched_btm_23830": {
+      "success_percent": [
+        35,
+        20,
+        5
+      ],
+      "offset_order": [
+        25,
+        50,
+        100
+      ],
+      "mean_percent": 20
+    },
+    "primary_success_goal_demonstrated": false,
+    "controlled_efficiency_goal_demonstrated": false,
+    "held_out_test_and_multiseed_confirmation": "outstanding"
+  },
+  "source_sha256": {
+    "campaign-heartbeat-20261020-0246.json": "972ac21bd1bd28d60b4a3e60417c8aaf1d5b347114ee58b8c3f2ce24a5cc2270",
+    "campaign-heartbeat-20261020-0301.json": "7baa96eb4f8865e851bc9b28d602956d6a30d0c532671b42d822e439b8e6ac0f",
+    "online-heartbeat-20261020-0246.json": "735a007ad2f6a0bf6652e00bc88027482f9db2fb9df81a1de9f541af9b20f231",
+    "online-heartbeat-20261020-0301.json": "c2b6a41f2282687a74699aab05c27c7796efe6001518d23070bf71120fa7cc8d",
+    "gpu-process-map-20261020-0246.json": "1ccb1db08e39579764af0da22f0a1f9c04c22cbf6923cb572686ad000f9b6249",
+    "gpu-process-map-20261020-0301.json": "856d3b2c4eb35ccebe36b7f8c9cb5dc130e19c6edb9467dd2aed72cf67f235d6",
+    "gpu-health-followup-20261020-0246.json": "c0701b6d76916ca2e1f3dd397665a614282e939cdd215fc7af951b928f3227f0",
+    "gpu-health-followup-20261020-0301.json": "602fa87c554487c2c063c2671d35239d8e46364f838a0dfd96e451cf4d22ab07"
+  },
+  "results_report": "20261006T050931Z",
+  "gpu_jobs_changed_by_monitor": false,
+  "test_split_used_by_monitor": false,
+  "monitor_action": "keep_active",
+  "next_discriminating_measurements": [
+    "Recheck allocation, utilization and process visibility on the next poll; attribute only with matching campaign process/run evidence.",
+    "Verify recovery with a matching active trainer and advancing campaign metrics/checkpoints; declare completion only after both completion markers and valid final 23830-step checkpoints.",
+    "If separately authorized, collect aligned post-CEM and execution traces, physical subgoal reach rates and failure videos; then ground-truth waypoint/shared inverse-head controls before horizon/few-step/isolated timing ablations."
+  ]
+}
