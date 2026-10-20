@@ -1,21 +1,22 @@
 # LeFlow BTM-JEPA training: experiment status and results
 
-**Latest check: October 20, 03:02 UTC — new compute allocations on seven GPUs; campaign remains incomplete.**
-Fourteen compute-process entries now appear across GPUs 1–7, two per device,
-with 3,381–3,477 MiB total used per GPU. GPU 0 retains a graphics allocation.
-Process identities and owners are unavailable. Sampled utilization is zero;
-temperatures are 27–30°C and uncorrected volatile ECC counters are zero.
+**Latest check: October 20, 03:17 UTC — GPU allocations grew sharply; campaign remains incomplete.**
+GPUs 1–7 now show 54,183–66,237 MiB used per device, up from 3,381–3,477 MiB.
+Compute-process entries increased from 14 to 21; owners and job identities
+remain unavailable. Separate samples captured GPU 3 at 94% utilization and
+GPU 7 at 25% / 455.37 W. These were not simultaneous readings or sustained-load
+measurements. Temperatures were 28–39°C with zero uncorrected volatile ECC errors.
 
-Fresh full campaign records and authenticated W&B readback are unchanged:
-BTM saved/logged 23,830 updates, flow saved 23,000 / logged 23,040, and both
-completion markers are absent. No new training metrics or evaluations were found.
-**The GPU allocations do not establish training recovery; there is no reliable
-active completion ETA.** Neither primary-success nor controlled-efficiency goals
-are demonstrated. No GPU jobs were changed, and monitoring stays active.
+Full campaign records and authenticated W&B readback show no new training or
+evaluations: BTM saved/logged 23,830 updates; flow saved 23,000 / logged 23,040.
+Both completion markers remain absent. **There is no verified campaign recovery
+and no reliable active completion ETA.** Neither primary-success nor controlled-
+efficiency goals are demonstrated. No GPU jobs were changed; monitoring continues.
 
-See the [allocation-change report](reports/20261020T030331Z.md) and
-[compact evidence](snapshots/20261020T030331Z/health-status.json).
-The [October 18 access-recovery report](reports/20261018T161803Z.md) and
+See the [resource-growth report](reports/20261020T032020Z.md) and
+[compact evidence](snapshots/20261020T032020Z/health-status.json).
+The [preceding allocation report](reports/20261020T030331Z.md),
+[October 18 access-recovery report](reports/20261018T161803Z.md) and
 [preceding access-failure report](reports/20261018T160420Z.md) are preserved.
 
 ## Prior validated assessment and observations
