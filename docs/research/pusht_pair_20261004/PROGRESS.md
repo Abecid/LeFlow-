@@ -10,8 +10,8 @@ measurements. Temperatures were 28–39°C with zero uncorrected volatile ECC er
 Full campaign records and authenticated W&B readback show no new training or
 evaluations: BTM saved/logged 23,830 updates; flow saved 23,000 / logged 23,040.
 Both completion markers remain absent. **There is no verified campaign recovery
-and no reliable active completion ETA.** Neither primary-success nor controlled-
-efficiency goals are demonstrated. No GPU jobs were changed; monitoring continues.
+and no reliable active completion ETA.** Neither the primary success goal nor the controlled efficiency goal
+is demonstrated. No GPU jobs were changed; monitoring continues.
 
 See the [resource-growth report](reports/20261020T032020Z.md) and
 [compact evidence](snapshots/20261020T032020Z/health-status.json).
