@@ -1,0 +1,637 @@
+{
+  "recorded_utc": "2026-10-20T12:36:31+00:00",
+  "scheduled_heartbeat_utc": "2026-10-20T12:31:49.551Z",
+  "status": "gpu_telemetry_partially_recovers_gpu5_fields_unavailable",
+  "campaign_training_recovered": false,
+  "collection_started_utc": "2026-10-20T12:33:33+00:00",
+  "collection_finished_utc": "2026-10-20T12:33:37+00:00",
+  "fresh_campaign_records_verified": true,
+  "fresh_online_state_verified": true,
+  "fresh_cpu_probe_verified": true,
+  "fresh_gpu_state_verified": false,
+  "attempts": {
+    "campaign_collector": {
+      "count": 1,
+      "exit_codes": [
+        0
+      ],
+      "output_bytes": [
+        4122119
+      ]
+    },
+    "online_readback": {
+      "count": 1,
+      "exit_codes": [
+        0
+      ],
+      "output_bytes": [
+        775
+      ]
+    },
+    "cpu_only_preflight": {
+      "count": 1,
+      "exit_codes": [
+        0
+      ],
+      "output_bytes": [
+        389
+      ]
+    },
+    "gpu_health_probe": {
+      "count": 1,
+      "exit_codes": [
+        0
+      ],
+      "output_bytes": [
+        1858
+      ]
+    },
+    "kernel_log_read": {
+      "count": 1,
+      "exit_codes": [
+        0
+      ],
+      "output_bytes": [
+        4321
+      ]
+    },
+    "gpu5_diagnostic": {
+      "count": 1,
+      "exit_codes": [
+        0
+      ],
+      "output_bytes": [
+        1024
+      ]
+    }
+  },
+  "current_access_blocker": "GPU 5 power and throttling status return Unknown Error; memory temperature is N/A. General GPU queries, SSH, campaign records and W&B are readable.",
+  "campaign_state": "interrupted/incomplete",
+  "campaign_complete": false,
+  "current_eta": null,
+  "known_campaign_trainer_or_flow_controller_visible": false,
+  "process_scope": "No known campaign trainer or flow controller appears through accessible name/path filters. Original supervisor remains intentionally stopped. Current GPU process queries return no compute or graphics entries.",
+  "runs": {
+    "btm_3072": {
+      "saved_step": 23830,
+      "logged_step": 23830,
+      "selected_step": 1000,
+      "metric_rows": 2465,
+      "evaluation_records": 99,
+      "completion_marker": null,
+      "complete_three_offset_cycles": 33
+    },
+    "flow_3072": {
+      "saved_step": 23000,
+      "logged_step": 23040,
+      "selected_step": 1000,
+      "metric_rows": 2383,
+      "evaluation_records": 96,
+      "completion_marker": null,
+      "complete_three_offset_cycles": 32
+    }
+  },
+  "flow_updates_needed_from_saved_checkpoint": 830,
+  "checkpoint_metadata_reread": true,
+  "checkpoint_bytes_rehashed_in_this_check": false,
+  "historical_checkpoint_hashes_and_exit_evidence": "October 6 assessment; not freshly rehashed here",
+  "frozen_source_commit": "69babde283f504120dae3dfc6e9188a0e2242be4",
+  "manifest_sha256": "6410f2f196e6fd50a84ae82a192edc718ce169885144195cc63693faaa7f7f26",
+  "encoder_sha256": "48938400ae3464c9680731287f583a9cb516f55a8ec64ea13a91be47fb15b607",
+  "online": {
+    "observed_utc": "2026-10-20T12:32:20+00:00",
+    "manifest_sha256": "6410f2f196e6fd50a84ae82a192edc718ce169885144195cc63693faaa7f7f26",
+    "probe": {
+      "source": "Actual frozen LatentSegments.__getitem__ reads on CPU",
+      "clips": 32,
+      "episode_ids": [
+        4,
+        5
+      ],
+      "spacing_counts": {
+        "1": 20,
+        "2": 11,
+        "4": 1
+      },
+      "loss_probe_512_unique_episodes": 28
+    },
+    "wandb": {
+      "btm": {
+        "run_id": "z78m0zk6",
+        "state": "finished",
+        "step": 23830,
+        "runtime_seconds": 8304,
+        "checked_utc": "2026-10-20T12:32:28+00:00"
+      },
+      "flow": {
+        "run_id": "g0u3w723",
+        "state": "finished",
+        "step": 23040,
+        "runtime_seconds": 9240,
+        "checked_utc": "2026-10-20T12:32:29+00:00"
+      }
+    }
+  },
+  "hardware_limits": "Zero reported memory/utilization and empty process inventories are separate point readings, not continuous inactivity, a cause of workload departure, driver reset evidence or campaign completion. GPU 5 power/throttling are unknown; zero ECC counters do not establish full hardware health.",
+  "comparison": {
+    "campaign_baseline": "20261020-1216",
+    "hardware_baseline": "20261020-1201",
+    "new_training_metric_rows": 0,
+    "new_evaluation_records": 0,
+    "full_science_protocol_checkpoints_markers_and_scoped_processes_unchanged": true,
+    "changed_paths": {
+      "campaign": [
+        ".collection_finished_utc",
+        ".collection_started_utc",
+        ".hardware.error",
+        ".hardware.gpus",
+        ".hardware.observed_utc",
+        ".hardware.units",
+        ".processes.0.elapsed_seconds",
+        ".processes.1.elapsed_seconds",
+        ".processes.2.elapsed_seconds",
+        ".runs.btm_3072.wandb_sessions.0.elapsed_seconds",
+        ".runs.flow_3072.wandb_sessions.0.elapsed_seconds"
+      ],
+      "online": [
+        ".observed_utc",
+        ".wandb.btm.checked_utc",
+        ".wandb.flow.checked_utc"
+      ],
+      "health_since_last_good": [
+        ".all_gpu_processes.length",
+        ".all_gpu_processes.records_when_length_differs",
+        ".finished_utc",
+        ".gpus.0.memory_mib",
+        ".gpus.1.memory_mib",
+        ".gpus.1.utilization_percent",
+        ".gpus.2.memory_mib",
+        ".gpus.2.utilization_percent",
+        ".gpus.3.memory_mib",
+        ".gpus.4.memory_mib",
+        ".gpus.5.memory_mib",
+        ".gpus.6.memory_mib",
+        ".gpus.6.utilization_percent",
+        ".gpus.7.memory_mib",
+        ".hardware_health_rows.0.1",
+        ".hardware_health_rows.0.2",
+        ".hardware_health_rows.0.3",
+        ".hardware_health_rows.0.4",
+        ".hardware_health_rows.1.1",
+        ".hardware_health_rows.1.2",
+        ".hardware_health_rows.1.3",
+        ".hardware_health_rows.1.4",
+        ".hardware_health_rows.2.1",
+        ".hardware_health_rows.2.2",
+        ".hardware_health_rows.2.3",
+        ".hardware_health_rows.2.4",
+        ".hardware_health_rows.3.2",
+        ".hardware_health_rows.3.3",
+        ".hardware_health_rows.3.4",
+        ".hardware_health_rows.4.2",
+        ".hardware_health_rows.4.3",
+        ".hardware_health_rows.4.4",
+        ".hardware_health_rows.5.1",
+        ".hardware_health_rows.5.2",
+        ".hardware_health_rows.5.3",
+        ".hardware_health_rows.5.4",
+        ".hardware_health_rows.6.1",
+        ".hardware_health_rows.6.2",
+        ".hardware_health_rows.6.3",
+        ".hardware_health_rows.6.4",
+        ".hardware_health_rows.7.1",
+        ".hardware_health_rows.7.2",
+        ".hardware_health_rows.7.3",
+        ".hardware_health_rows.7.4",
+        ".observed_utc",
+        ".processes.length",
+        ".processes.records_when_length_differs"
+      ],
+      "diagnostic": [
+        ".finished_utc",
+        ".gpu_query_processes.length",
+        ".gpu_query_processes.records_when_length_differs",
+        ".kernel_log_probe.error_line_count",
+        ".kernel_log_probe.nvidia_line_count",
+        ".load_average.0",
+        ".load_average.1",
+        ".load_average.2",
+        ".observed_utc",
+        ".uptime_seconds"
+      ]
+    },
+    "comparison_sha256": "56cef89b51b710fd407510e7661ada35bfc8c7ac546a0f953b4fcc70fa80d9c4",
+    "section_errors": [],
+    "telemetry_anomalies": [
+      {
+        "field": "gpu_5.power_draw",
+        "health_query": "[Unknown Error]",
+        "collector": "[Unknown Error]",
+        "isolated_gpu5_xml": "Unknown Error",
+        "numeric_value": null
+      },
+      {
+        "field": "gpu_5.clocks_throttle_reasons",
+        "isolated_gpu5_xml": "Unknown Error",
+        "active_flags": null
+      },
+      {
+        "field": "gpu_5.memory_temperature",
+        "isolated_gpu5_xml": "N/A",
+        "numeric_value": null
+      }
+    ]
+  },
+  "validation_results_unchanged": {
+    "selection_rule": "Highest mean success across offsets, earliest tie",
+    "selected": {
+      "step_btm": 1000,
+      "step_flow": 1000,
+      "btm_success_percent": [
+        40,
+        40,
+        25
+      ],
+      "flow_success_percent": [
+        50,
+        30,
+        20
+      ],
+      "offset_order": [
+        25,
+        50,
+        100
+      ],
+      "mean_btm_percent": 35,
+      "mean_flow_percent": 33.333333333333336,
+      "offset100_difference_pp": 5,
+      "paired_bootstrap_95_percent_interval_pp": [
+        -15,
+        25
+      ]
+    },
+    "matched_23000": {
+      "btm_success_percent": [
+        5,
+        0,
+        10
+      ],
+      "flow_success_percent": [
+        45,
+        15,
+        5
+      ],
+      "offset_order": [
+        25,
+        50,
+        100
+      ],
+      "offset100_difference_pp": 5,
+      "paired_bootstrap_95_percent_interval_pp": [
+        -10,
+        20
+      ]
+    },
+    "unmatched_btm_23830": {
+      "success_percent": [
+        35,
+        20,
+        5
+      ],
+      "offset_order": [
+        25,
+        50,
+        100
+      ],
+      "mean_percent": 20
+    },
+    "primary_success_goal_demonstrated": false,
+    "controlled_efficiency_goal_demonstrated": false,
+    "held_out_test_and_multiseed_confirmation": "outstanding"
+  },
+  "source_sha256": {
+    "campaign-heartbeat-20261020-1216.json": "5acf30882714c6840ec92ff89de76f4cb534dd9ff5d72db9c02a49f765d328f8",
+    "campaign-heartbeat-20261020-1231.json": "704fcf8323bab7fbda10a7500c52c6751fe9996567d98fef7758ffacca6f15a1",
+    "online-heartbeat-20261020-1216.json": "a62c659226e120d77ea69a75779b74f36d6179fdd00fee49980538179da6390a",
+    "online-heartbeat-20261020-1231.json": "a48489355ad5194319c2507eba8d37e28c34f422d45377c20e57e47284c00ae7",
+    "gpu-health-followup-20261020-1201.json": "35ddbc55281c0027152a3f4ead16674386c88309817e7c95113fe2cdb28fe5a3",
+    "gpu-health-followup-20261020-1231.json": "f91d64bb59af2cac126811559c61a46ba9f972efc4bd0b5d18f81b451571fbfa",
+    "gpu-query-diagnostic-20261020-1216.json": "060e3356cfa24c27297093781b6405c446e4fdfc2779c95124f82149c6be0856",
+    "gpu-query-diagnostic-20261020-1231.json": "7840f1200b5c7ab98537fa2410401dde5649cea7295362774550a33305120402",
+    "gpu-kernel-diagnostic-20261020-1231.json": "bb11450b7bbd9a73e185df9e55f524b08f3e3e9e549a5f43178e49d915176cfa",
+    "gpu-kernel-summary-20261020-1231.json": "12b0c8af7cd2cf391978221a6e49340fa94cdff6b06e455422123920355d87af",
+    "gpu5-power-followup-20261020-1231.json": "5cd617361e470a95bc80a4c868e0388c7ba5fe59349409dfba6aa4aeaade637f"
+  },
+  "results_report": "20261006T050931Z",
+  "gpu_jobs_changed_by_monitor": false,
+  "test_split_used_by_monitor": false,
+  "monitor_action": "keep_active",
+  "next_discriminating_measurements": [
+    "Continue checking for waiting diagnostic processes before serialized bounded GPU probes; record persistence or recovery of GPU 5 power/throttling errors.",
+    "Correlate any recurrence with query wait states and fuller driver/kernel records, retaining exact times and field errors. Kernel blocked-task reports confirm query waiting but do not distinguish transient contention, driver fault or other causes.",
+    "Require matching active campaign trainer plus advancing records for training recovery; both completion markers and valid final 23830-step checkpoints for completion.",
+    "Scientific diagnostics remain aligned post-CEM/execution traces, physical subgoal reach rates, failure videos and ground-truth/shared inverse controls before horizon/few-step/isolated timing experiments."
+  ],
+  "cpu_only_diagnostic": {
+    "observed_utc": "2026-10-20T12:32:25+00:00",
+    "load_average": [
+      "33.72",
+      "70.67",
+      "55.91"
+    ],
+    "uptime_seconds": 10820052.09,
+    "gpu_query_processes": [],
+    "driver_version_readable": true,
+    "kernel_log_probe": {
+      "exit_code": 0,
+      "error_line_count": 46,
+      "nvidia_xid_count": 0,
+      "nvidia_line_count": 14
+    },
+    "finished_utc": "2026-10-20T12:32:25+00:00"
+  },
+  "fresh_readable_gpu_fields_verified": true,
+  "gpu_telemetry_complete": false,
+  "fresh_gpu_verification_scope": "Fresh reported memory/utilization, empty compute and graphics inventories, GPU temperatures, ECC and powers excluding GPU 5 are verified. GPU 5 power and throttling status remain unavailable; its memory temperature is N/A.",
+  "collector_hardware": {
+    "observed_utc": "2026-10-20T12:33:37+00:00",
+    "units": {
+      "utilization.gpu": "%",
+      "memory.used": "MiB",
+      "memory.total": "MiB",
+      "power.draw": "W"
+    },
+    "gpus": [
+      {
+        "index": "0",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "0",
+        "memory.used": "0",
+        "memory.total": "81920",
+        "power.draw": "55.71"
+      },
+      {
+        "index": "1",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "0",
+        "memory.used": "0",
+        "memory.total": "81920",
+        "power.draw": "53.42"
+      },
+      {
+        "index": "2",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "0",
+        "memory.used": "0",
+        "memory.total": "81920",
+        "power.draw": "56.19"
+      },
+      {
+        "index": "3",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "0",
+        "memory.used": "0",
+        "memory.total": "81920",
+        "power.draw": "54.50"
+      },
+      {
+        "index": "4",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "0",
+        "memory.used": "0",
+        "memory.total": "81920",
+        "power.draw": "57.86"
+      },
+      {
+        "index": "5",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "0",
+        "memory.used": "0",
+        "memory.total": "81920",
+        "power.draw": "[Unknown Error]"
+      },
+      {
+        "index": "6",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "0",
+        "memory.used": "0",
+        "memory.total": "81920",
+        "power.draw": "53.96"
+      },
+      {
+        "index": "7",
+        "name": "NVIDIA A800-SXM4-80GB",
+        "utilization.gpu": "0",
+        "memory.used": "0",
+        "memory.total": "81920",
+        "power.draw": "56.31"
+      }
+    ]
+  },
+  "gpu_health_probe": {
+    "observed_utc": "2026-10-20T12:33:07+00:00",
+    "gpus": [
+      {
+        "index": 0,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 1,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 2,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 3,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 4,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 5,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 6,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      },
+      {
+        "index": 7,
+        "utilization_percent": 0.0,
+        "memory_mib": 0.0
+      }
+    ],
+    "processes": [],
+    "finished_utc": "2026-10-20T12:33:09+00:00",
+    "hardware_health_fields": [
+      "index",
+      "utilization_percent",
+      "memory_mib",
+      "power_watts",
+      "temperature_c",
+      "pstate",
+      "uncorrected_volatile_ecc_errors"
+    ],
+    "hardware_health_rows": [
+      [
+        "0",
+        "0",
+        "0",
+        "55.71",
+        "27",
+        "P0",
+        "0"
+      ],
+      [
+        "1",
+        "0",
+        "0",
+        "53.42",
+        "28",
+        "P0",
+        "0"
+      ],
+      [
+        "2",
+        "0",
+        "0",
+        "56.19",
+        "28",
+        "P0",
+        "0"
+      ],
+      [
+        "3",
+        "0",
+        "0",
+        "54.50",
+        "26",
+        "P0",
+        "0"
+      ],
+      [
+        "4",
+        "0",
+        "0",
+        "57.86",
+        "26",
+        "P0",
+        "0"
+      ],
+      [
+        "5",
+        "0",
+        "0",
+        "[Unknown Error]",
+        "29",
+        "P0",
+        "0"
+      ],
+      [
+        "6",
+        "0",
+        "0",
+        "54.29",
+        "28",
+        "P0",
+        "0"
+      ],
+      [
+        "7",
+        "0",
+        "0",
+        "56.31",
+        "27",
+        "P0",
+        "0"
+      ]
+    ],
+    "all_gpu_processes": []
+  },
+  "kernel_log_summary": {
+    "observed_utc": "2026-10-20T12:33:08+00:00",
+    "server_local_time": "2026-10-20T12:33:08+00:00",
+    "query_exit_code": 0,
+    "error_lines": 46,
+    "nvidia_smi_hung_task_messages": 14,
+    "distinct_query_process_identifiers": 12,
+    "reported_blocked_threshold_seconds": [
+      120
+    ],
+    "approximate_first_event_utc": "2026-10-20T12:24:34+00:00",
+    "approximate_last_event_utc": "2026-10-20T12:28:40+00:00",
+    "event_time_method": "Kernel uptime timestamp mapped to UTC using preceding CPU diagnostic uptime; approximate, not exact wall-clock event times.",
+    "xid_matches": 0,
+    "other_error_messages": {
+      "network_module_type_unrecognized": 4
+    },
+    "raw_log_sha256": "bb11450b7bbd9a73e185df9e55f524b08f3e3e9e549a5f43178e49d915176cfa",
+    "limits": "Error-level records from a limited window; warning and informational levels excluded. Query identifiers are not attributed to monitor attempts or workload owners. No root cause established."
+  },
+  "gpu5_diagnostic": {
+    "observed_utc": "2026-10-20T12:34:32+00:00",
+    "gpus": [
+      {
+        "index": 5,
+        "performance_state": "P0",
+        "clocks_throttle_reasons": "Unknown Error",
+        "utilization": {
+          "gpu_util": "0 %",
+          "memory_util": "0 %",
+          "encoder_util": "0 %",
+          "decoder_util": "0 %"
+        },
+        "temperature": {
+          "gpu_temp": "29 C",
+          "gpu_temp_max_threshold": "N/A",
+          "gpu_temp_slow_threshold": "N/A",
+          "gpu_temp_max_gpu_threshold": "85 C",
+          "gpu_target_temperature": "N/A",
+          "memory_temp": "N/A",
+          "gpu_temp_max_mem_threshold": "95 C"
+        },
+        "power_readings": {
+          "power_state": "P0",
+          "power_management": "Supported",
+          "power_draw": "Unknown Error",
+          "power_limit": "400.00 W",
+          "default_power_limit": "400.00 W",
+          "enforced_power_limit": "400.00 W",
+          "min_power_limit": "100.00 W",
+          "max_power_limit": "400.00 W"
+        }
+      }
+    ],
+    "finished_utc": "2026-10-20T12:34:32+00:00"
+  },
+  "telemetry_anomalies": [
+    {
+      "field": "gpu_5.power_draw",
+      "health_query": "[Unknown Error]",
+      "collector": "[Unknown Error]",
+      "isolated_gpu5_xml": "Unknown Error",
+      "numeric_value": null
+    },
+    {
+      "field": "gpu_5.clocks_throttle_reasons",
+      "isolated_gpu5_xml": "Unknown Error",
+      "active_flags": null
+    },
+    {
+      "field": "gpu_5.memory_temperature",
+      "isolated_gpu5_xml": "N/A",
+      "numeric_value": null
+    }
+  ]
+}

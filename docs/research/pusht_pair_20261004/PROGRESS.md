@@ -1,23 +1,24 @@
 # LeFlow BTM-JEPA training: experiment status and results
 
-**Latest check: October 20, 12:17–12:21 UTC — GPU telemetry unavailable; campaign remains incomplete.**
-GPU device queries timed out, and a single retry remained pending until
-interrupted in the monitoring tool. A CPU-only diagnostic found three
-GPU-query processes waiting in the kernel. The cause is unknown.
-Current GPU allocations, temperatures and ECC counters are unverified;
-the last successful hardware readings are from 12:02 UTC.
+**Latest check: October 20, 12:32–12:34 UTC — GPU visibility partly restored; campaign remains incomplete.**
+GPU queries respond again. All eight devices report zero memory and utilization,
+with no compute or graphics entries; temperatures are 26–29°C and uncorrected
+volatile ECC counters are zero. **GPU 5 power and throttling readings still return
+`Unknown Error`; full hardware health is unverified.** Kernel records confirm
+earlier GPU-query tasks were blocked for over 120 seconds, but do not identify
+the cause or workload owners.
 
-Campaign files and authenticated W&B remained readable and unchanged:
+Campaign files and authenticated W&B remain unchanged:
 BTM saved/logged 23,830 updates; flow saved 23,000 / logged 23,040.
 Both completion markers remain absent. **There is no verified campaign recovery
 and no reliable active completion ETA.** Neither the primary success goal nor
-the controlled efficiency goal is demonstrated. No training jobs or GPU settings
-were changed; monitoring continues.
+the controlled efficiency goal is demonstrated. No training jobs, GPU settings
+or driver state were changed by the monitor.
 
-See the [telemetry-failure report](reports/20261020T122601Z.md) and
-[compact evidence](snapshots/20261020T122601Z/health-status.json).
-The [preceding published resource report](reports/20261020T040354Z.md)
-and earlier reports are preserved.
+See the [partial telemetry-recovery report](reports/20261020T123631Z.md) and
+[compact evidence](snapshots/20261020T123631Z/health-status.json).
+The [preceding telemetry-failure report](reports/20261020T122601Z.md)
+and earlier reports are preserved. Read-only monitoring continues.
 
 ## Prior validated assessment and observations
 
